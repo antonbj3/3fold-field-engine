@@ -1,0 +1,54 @@
+{
+ "schema": "parts_manifest_v1",
+ "station": "utilities",
+ "parts": [
+  {
+   "part": "kabelstege_tak",
+   "subassembly": "el/strak",
+   "bbox": [
+    -2000.0,
+    0.0,
+    2105.0,
+    30000.0,
+    900.0,
+    2450.0
+   ]
+  },
+  {
+   "part": "tryckluftsror_tak",
+   "subassembly": "tryckluft/strak",
+   "bbox": [
+    -2000.0,
+    150.0,
+    2500.0,
+    30000.0,
+    700.0,
+    3200.0
+   ]
+  },
+  {
+   "part": "hallgolv",
+   "subassembly": "bim/rum",
+   "bbox": [
+    -3000.0,
+    -3000.0,
+    -200.0,
+    40000.0,
+    20000.0,
+    0.0
+   ]
+  },
+  {
+   "part": "yttervagg_syd",
+   "subassembly": "bim/rum",
+   "bbox": [
+    -3000.0,
+    -3200.0,
+    0.0,
+    40000.0,
+    -3000.0,
+    6000.0
+   ]
+  }
+ ]
+}

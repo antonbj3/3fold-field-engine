@@ -1,0 +1,64 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "gates": {
+    "coverage": true,
+    "exact": false,
+    "repeat": true,
+    "no_false_rejection": true
+  },
+  "rows": [
+    {
+      "leg": 0,
+      "differing_bytes": [
+        0,
+        0,
+        182805,
+        182793,
+        0,
+        0
+      ],
+      "hashes": [
+        "5ba2e037a20240e5e628516c6821788276d23ce3994a1c7b9ae7610f7e40da7f",
+        "dcb30d7a3459c866ea322b14990c790810e8be55f9ce500119fe21416648b850",
+        "0431541e5d7f63314f5385f6e75c7e955659544eacf5fb39a556ce29e71ad375",
+        "90991902d79deb718d6c2608a423e6e2181f9901bc392bbac4144f728d3ce295",
+        "3a19220b7a52c5c6207c3ce1d147bd0500ddb3b5e800393ac193ca31d6c04fd8",
+        "50f6e65885044b80f04efc2d5be67885c8f7aab1ea7450fed82c221d563ae49f"
+      ],
+      "no_false_rejection": true
+    },
+    {
+      "leg": 1,
+      "differing_bytes": [
+        0,
+        0,
+        182805,
+        182793,
+        0,
+        0
+      ],
+      "hashes": [
+        "5ba2e037a20240e5e628516c6821788276d23ce3994a1c7b9ae7610f7e40da7f",
+        "dcb30d7a3459c866ea322b14990c790810e8be55f9ce500119fe21416648b850",
+        "0431541e5d7f63314f5385f6e75c7e955659544eacf5fb39a556ce29e71ad375",
+        "90991902d79deb718d6c2608a423e6e2181f9901bc392bbac4144f728d3ce295",
+        "3a19220b7a52c5c6207c3ce1d147bd0500ddb3b5e800393ac193ca31d6c04fd8",
+        "50f6e65885044b80f04efc2d5be67885c8f7aab1ea7450fed82c221d563ae49f"
+      ],
+      "no_false_rejection": true
+    }
+  ],
+  "cases": 120016,
+  "rejected": 65738,
+  "input_sha256": {
+    "triangles": "c288c398365d299a2807f015ccb7f63bc4e9de96a3278c78e5b25856f9ef5f76",
+    "queries": "3464fb594351022e5e7dfd7d9c4d795f0a6af994f1011dd75688313aabfaf69b",
+    "anchors": "d9e75da201a103de29358af3c55d54ec7b89374263d625fab6e4fa3c0e580be7"
+  },
+  "source_sha256": {
+    "host_bounds.hpp": "7c55ac8d994faec1916f78fa6a84533c1b750714ab8464ac9ff32eae4aef0feb",
+    "filter.cuh": "cfc1facd7b2a86eb126d9e53e9d883e193bcf1be31c5e8cb8d0ac73b9223e29e",
+    "probe.cu": "68d768a3cc1faff7a59746f0894cd4b841d47607490befdaab6c081fe9b7b5de"
+  },
+  "scope": "Complete native preparation and CUDA predicate arrays compared to CPU. Portable geometry/query/anchor inputs retained. No RT traversal or service speed claim."
+}

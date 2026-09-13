@@ -1,0 +1,51 @@
+{
+  "functions": {
+    "lbm_domare_v1.py": {
+      "unchanged_functions": [
+        "feq3d",
+        "guo_force",
+        "lbm_step",
+        "run_lbm",
+        "unit_scale",
+        "straight_duct_case",
+        "bent_duct_case",
+        "plenum_case",
+        "stage_plenum",
+        "kcand_dp",
+        "stage_kcands_one",
+        "stage_kcands",
+        "lbm_domare",
+        "stage_report",
+        "stage_selftest",
+        "main"
+      ],
+      "current_sha256": "fe5d666be621327af77b403ef460218608dff14b375a85e8fb11cacbcdd1cb6e"
+    },
+    "opt/duct_growth_diff_v1.py": {
+      "unchanged_functions": [
+        "reference_case_L90",
+        "_obstacle_node",
+        "synth_case",
+        "control_points",
+        "_friction_dp",
+        "loss_and_terms",
+        "central_diff_grad",
+        "adam_descent",
+        "lbm_judge_two_leg",
+        "all_cases",
+        "stage_descend",
+        "stage_judge",
+        "stage_report",
+        "stage_selftest",
+        "main"
+      ],
+      "current_sha256": "98ed54b77a85ac7587be76517d04e489a90e6ffef92b038de26f7f58ed4d8565"
+    }
+  },
+  "cache_controls": 2,
+  "original_lbm_selftest": "PASS",
+  "local_lbm_selftest_seconds": 41.23,
+  "scope": "Arithmetic function ASTs unchanged; cached reports have full parity on the captured Modal CPU runs. File-backed explicit reuse; first-use calibration retained.",
+  "cross_process_all_arrays_exact": true,
+  "cross_process_array_bytes": 32823176
+}

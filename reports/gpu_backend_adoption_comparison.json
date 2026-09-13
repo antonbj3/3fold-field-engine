@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "gate": 2.0,
+  "speedup": 6.972047390628807,
+  "full_chain_seconds": {
+    "native": 27.762182509,
+    "warp": 3.9819268220000055
+  },
+  "fresh_cli_seconds": {
+    "native": 4.353117905999994,
+    "warp": 2.0527874439999962
+  },
+  "stored_bytes": 28733872,
+  "all_state_and_radius_bytes_exact_against_prior_numpy_and_preintegration": true,
+  "full_reports_histories_and_stops_exact_between_backends": true,
+  "fresh_cli_cache_bytes_unchanged": true,
+  "targeted_h100_tests": 6,
+  "targeted_local_cpu_tests": 5,
+  "targeted_local_gpu_skips": 1,
+  "source_sha256": {
+    "src/field_engine/lbm_domare_v1.py": "ac049da26f960759eb0a4cc25154e04c131bb64073b4284be5184b00d8e9b6cc",
+    "src/field_engine/lbm_collision_native_v1.py": "26d2ccd68031b8f7017a2e4474fdd04d9c00c1995a8c04d1d4fe81018c697a16",
+    "src/field_engine/lbm_collision_native_v1/collision.cpp": "b65576fdb8fab9e928e22b238cd93ff145ec28eb423c7e21492218465cd4cf07",
+    "src/field_engine/lbm_warp_v1.py": "a363b0213711f810243646b1a6e207696323817b6da90ae4ccf8944ed2afb93f",
+    "src/field_engine/opt/duct_growth_diff_v1.py": "98ed54b77a85ac7587be76517d04e489a90e6ffef92b038de26f7f58ed4d8565",
+    "tests/test_selftests.py": "3f0f143b3e790f485a74156011a2d9fa2371bae76753af67de0761dbc7671815"
+  },
+  "scope": "Explicit FIELD_ENGINE_LBM_BACKEND=warp, real source/runtime-bound cache and fresh public duct CLI. Existing numerical kernels unchanged. Full CPU suite71pass/5skips preceded this integration; current targeted tests cover backend/cache controls on CPU and H100. Initial test subprocess environment leak retained separately; fixed only private launch environment and repeated tests, no numerical rerun. Earlier L4 subsecond failure remains."
+}

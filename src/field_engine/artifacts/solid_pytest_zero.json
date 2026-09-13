@@ -1,0 +1,10 @@
+{
+ "tag": "pytest_zero",
+ "G0_degenererad_last": {
+  "gate": "G0_degenererad_last",
+  "total_load_mag_abs_sum_N": 0.0,
+  "troskel": "> 1.0 N (summed absolute nodal force)",
+  "pass": false
+ },
+ "STOPPAD": "the load magnitude is degenerate, so the optimiser has no driving gradient (compliance = f^T u = 0 identically) and the density field is a move-limit artefact rather than a shaped body. Marching cubes and STEP export are deliberately skipped: the gate falls before the geometry gets a name."
+}

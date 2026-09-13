@@ -1,0 +1,57 @@
+{
+  "legs": [
+    {
+      "fine_active_voxels": 718848,
+      "active_voxels": 277326,
+      "ratio": 0.3857922676282051,
+      "stored_bytes": 1253511,
+      "fine_stored_bytes": 2886624,
+      "node_count": 512444,
+      "leaf_histogram": {
+        "side4_kind0": 2402,
+        "side2_kind0": 2039,
+        "side2_kind1": 14955,
+        "side1_kind0": 75966,
+        "side1_kind3": 277326,
+        "side1_kind1": 75876
+      },
+      "sign_mismatches": 0,
+      "narrow_band_samples": 126056,
+      "narrow_band_byte_identity": true,
+      "finite": true,
+      "tree_sha256": "bceae26a8084e443bfe86f394d06cf7ed8e84badb39fdbabe6079ee01fa282ff",
+      "reconstruction_sha256": "f76f04847cd2639c8b94d8984abbd336985b8a96aa4c25df32bc9c09c8ad5bee"
+    },
+    {
+      "fine_active_voxels": 718848,
+      "active_voxels": 277326,
+      "ratio": 0.3857922676282051,
+      "stored_bytes": 1253511,
+      "fine_stored_bytes": 2886624,
+      "node_count": 512444,
+      "leaf_histogram": {
+        "side4_kind0": 2402,
+        "side2_kind0": 2039,
+        "side2_kind1": 14955,
+        "side1_kind0": 75966,
+        "side1_kind3": 277326,
+        "side1_kind1": 75876
+      },
+      "sign_mismatches": 0,
+      "narrow_band_samples": 126056,
+      "narrow_band_byte_identity": true,
+      "finite": true,
+      "tree_sha256": "bceae26a8084e443bfe86f394d06cf7ed8e84badb39fdbabe6079ee01fa282ff",
+      "reconstruction_sha256": "f76f04847cd2639c8b94d8984abbd336985b8a96aa4c25df32bc9c09c8ad5bee"
+    }
+  ],
+  "gates": {
+    "two_run_identity": true,
+    "half_fine_voxels": true,
+    "storage_no_larger": true,
+    "exact_sign": true,
+    "exact_narrow_band": true,
+    "finite": true
+  },
+  "timing_measured": false
+}

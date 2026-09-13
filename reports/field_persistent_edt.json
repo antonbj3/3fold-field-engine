@@ -1,0 +1,376 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "coverage": true,
+    "exact": true,
+    "repeat": true,
+    "lifecycle": true,
+    "plate_speedup_2": true
+  },
+  "rows": [
+    {
+      "case": "random_(1, 1, 2)",
+      "leg": 0,
+      "shape": [
+        1,
+        1,
+        2
+      ],
+      "setup_ms": 196.604066,
+      "first_query_ms": 2.242102,
+      "warm_ms": {
+        "old": 2.955913,
+        "persistent": 0.09436399999999999
+      },
+      "exact": true,
+      "hash": "d5c86aaabcf6420ce8c35f480ad3fc9dda411fb3455a0bc71119a817600618ae"
+    },
+    {
+      "case": "random_(1, 1, 2)",
+      "leg": 1,
+      "shape": [
+        1,
+        1,
+        2
+      ],
+      "setup_ms": 0.42858799999999997,
+      "first_query_ms": 0.108761,
+      "warm_ms": {
+        "persistent": 0.059786,
+        "old": 0.191906
+      },
+      "exact": true,
+      "hash": "d5c86aaabcf6420ce8c35f480ad3fc9dda411fb3455a0bc71119a817600618ae"
+    },
+    {
+      "case": "random_(512, 1, 7)",
+      "leg": 0,
+      "shape": [
+        512,
+        1,
+        7
+      ],
+      "setup_ms": 0.43372,
+      "first_query_ms": 0.6730459999999999,
+      "warm_ms": {
+        "old": 0.29709199999999997,
+        "persistent": 0.5992379999999999
+      },
+      "exact": true,
+      "hash": "6fa11cedbd937c606baf1d94a95e65e0c977ee040d64590933a6cb35ac46cd64"
+    },
+    {
+      "case": "random_(512, 1, 7)",
+      "leg": 1,
+      "shape": [
+        512,
+        1,
+        7
+      ],
+      "setup_ms": 0.354744,
+      "first_query_ms": 0.577934,
+      "warm_ms": {
+        "persistent": 0.54027,
+        "old": 0.271325
+      },
+      "exact": true,
+      "hash": "6fa11cedbd937c606baf1d94a95e65e0c977ee040d64590933a6cb35ac46cd64"
+    },
+    {
+      "case": "random_(1, 512, 7)",
+      "leg": 0,
+      "shape": [
+        1,
+        512,
+        7
+      ],
+      "setup_ms": 0.45974699999999996,
+      "first_query_ms": 0.5842379999999999,
+      "warm_ms": {
+        "old": 0.30202799999999996,
+        "persistent": 0.56963
+      },
+      "exact": true,
+      "hash": "0f8ff9cbf8865889fd72e59f0032446fa618534e01aff7bf8dad988f090b4542"
+    },
+    {
+      "case": "random_(1, 512, 7)",
+      "leg": 1,
+      "shape": [
+        1,
+        512,
+        7
+      ],
+      "setup_ms": 0.356658,
+      "first_query_ms": 0.591201,
+      "warm_ms": {
+        "persistent": 0.525277,
+        "old": 0.27929699999999996
+      },
+      "exact": true,
+      "hash": "0f8ff9cbf8865889fd72e59f0032446fa618534e01aff7bf8dad988f090b4542"
+    },
+    {
+      "case": "random_(7, 1, 512)",
+      "leg": 0,
+      "shape": [
+        7,
+        1,
+        512
+      ],
+      "setup_ms": 0.362056,
+      "first_query_ms": 0.557325,
+      "warm_ms": {
+        "old": 0.272028,
+        "persistent": 0.512143
+      },
+      "exact": true,
+      "hash": "ba1370a5617c0dfd50af607cf2154174f190cf10779d4af9f9ab74f1bec945f2"
+    },
+    {
+      "case": "random_(7, 1, 512)",
+      "leg": 1,
+      "shape": [
+        7,
+        1,
+        512
+      ],
+      "setup_ms": 0.34674699999999997,
+      "first_query_ms": 0.525233,
+      "warm_ms": {
+        "persistent": 0.500181,
+        "old": 0.26545399999999997
+      },
+      "exact": true,
+      "hash": "ba1370a5617c0dfd50af607cf2154174f190cf10779d4af9f9ab74f1bec945f2"
+    },
+    {
+      "case": "random_(31, 27, 19)",
+      "leg": 0,
+      "shape": [
+        31,
+        27,
+        19
+      ],
+      "setup_ms": 0.45663,
+      "first_query_ms": 0.19878099999999999,
+      "warm_ms": {
+        "old": 0.42802399999999996,
+        "persistent": 0.160437
+      },
+      "exact": true,
+      "hash": "ebed03ca86f22cf8e8c03e6e53e5d970323dadca23c149fd109bd0d6a6dc321f"
+    },
+    {
+      "case": "random_(31, 27, 19)",
+      "leg": 1,
+      "shape": [
+        31,
+        27,
+        19
+      ],
+      "setup_ms": 1.043032,
+      "first_query_ms": 0.198855,
+      "warm_ms": {
+        "persistent": 0.15737299999999999,
+        "old": 0.436479
+      },
+      "exact": true,
+      "hash": "ebed03ca86f22cf8e8c03e6e53e5d970323dadca23c149fd109bd0d6a6dc321f"
+    },
+    {
+      "case": "random_(97, 65, 89)",
+      "leg": 0,
+      "shape": [
+        97,
+        65,
+        89
+      ],
+      "setup_ms": 1.4375419999999999,
+      "first_query_ms": 1.827087,
+      "warm_ms": {
+        "old": 13.665206,
+        "persistent": 1.5992169999999999
+      },
+      "exact": true,
+      "hash": "b88d027179152a5cc94b18ac5b47991f2683f5f62a151ce8508c671ad191eeda"
+    },
+    {
+      "case": "random_(97, 65, 89)",
+      "leg": 1,
+      "shape": [
+        97,
+        65,
+        89
+      ],
+      "setup_ms": 1.060824,
+      "first_query_ms": 1.592933,
+      "warm_ms": {
+        "persistent": 1.747121,
+        "old": 13.66161
+      },
+      "exact": true,
+      "hash": "b88d027179152a5cc94b18ac5b47991f2683f5f62a151ce8508c671ad191eeda"
+    },
+    {
+      "case": "single_zero",
+      "leg": 0,
+      "shape": [
+        37,
+        41,
+        43
+      ],
+      "setup_ms": 0.7352409999999999,
+      "first_query_ms": 0.400625,
+      "warm_ms": {
+        "old": 1.458944,
+        "persistent": 0.350727
+      },
+      "exact": true,
+      "hash": "ac469b45a758403fefdd6d2c76485bdc451fe5def47d9cc3a627f360f0b75dc5"
+    },
+    {
+      "case": "single_zero",
+      "leg": 1,
+      "shape": [
+        37,
+        41,
+        43
+      ],
+      "setup_ms": 0.46666799999999997,
+      "first_query_ms": 0.351837,
+      "warm_ms": {
+        "persistent": 0.23548999999999998,
+        "old": 1.183729
+      },
+      "exact": true,
+      "hash": "ac469b45a758403fefdd6d2c76485bdc451fe5def47d9cc3a627f360f0b75dc5"
+    },
+    {
+      "case": "single_one",
+      "leg": 0,
+      "shape": [
+        37,
+        41,
+        43
+      ],
+      "setup_ms": 0.54484,
+      "first_query_ms": 0.34457699999999997,
+      "warm_ms": {
+        "old": 1.184183,
+        "persistent": 0.321857
+      },
+      "exact": true,
+      "hash": "ea50122c6433c62c6f207517e4f6c5a4a3abb141440068909650a2754e1e1d28"
+    },
+    {
+      "case": "single_one",
+      "leg": 1,
+      "shape": [
+        37,
+        41,
+        43
+      ],
+      "setup_ms": 0.478848,
+      "first_query_ms": 0.314768,
+      "warm_ms": {
+        "persistent": 0.284985,
+        "old": 1.160318
+      },
+      "exact": true,
+      "hash": "ea50122c6433c62c6f207517e4f6c5a4a3abb141440068909650a2754e1e1d28"
+    },
+    {
+      "case": "plate_L",
+      "leg": 0,
+      "shape": [
+        249,
+        109,
+        17
+      ],
+      "setup_ms": 18.510754,
+      "first_query_ms": 1.6177979999999998,
+      "warm_ms": {
+        "old": 9.909274,
+        "persistent": 1.515333
+      },
+      "exact": true,
+      "hash": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+    },
+    {
+      "case": "plate_L",
+      "leg": 1,
+      "shape": [
+        249,
+        109,
+        17
+      ],
+      "setup_ms": 0.912773,
+      "first_query_ms": 1.3856629999999999,
+      "warm_ms": {
+        "persistent": 1.414533,
+        "old": 9.197087
+      },
+      "exact": true,
+      "hash": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+    }
+  ],
+  "controls": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "source_sha256": "cd43d85630f0528257d42c32b7a4900971e2eff164d8da4efc47c87a3d7fa0ba",
+  "scope": "Persistent buffers and paired envelope plus correctly rounded GPU signed output. Warm calls include mask validation/upload/full signed-field download. Setup and first query separate. Five pitches include contract endpoints. Full masks recomputed after change, thread/close controls. No full mesh-stage or 2 ms service claim."
+}

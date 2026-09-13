@@ -1,0 +1,170 @@
+{
+ "cell": "diff_placement_v1",
+ "reframe_declared": [
+  "the full tilt-swept pad search has no closed-form reference -- substituted a single ball-vs-pad overlap with a closed-form correct answer as the known-answer case.",
+  "the wall-time comparator is the summed elapsed time of the manual falsification rounds that chased the same defect by hand = 1681.8 s."
+ ],
+ "measured_vs_constructed": {
+  "declared": [
+   "PAD_XY0",
+   "R_PAD_MM",
+   "PAD_THICKNESS_MM",
+   "BALL_CENTER_XY",
+   "REAL_BALL_COLLISION_MM3",
+   "accumulated_cell_time_s components"
+  ],
+  "constructed": [
+   "ball_penetration_mm3 quadratic-falloff proxy shape",
+   "V_MAX_MM3 (calibrated, not measured)",
+   "D_FLOOR_MM/K_FLOOR separation-floor stiffness surrogate"
+  ]
+ },
+ "calibration": {
+  "model": "V(d) = V_MAX * relu(1 - d/D_REACT_MM)^2",
+  "d_react_mm": 20.15,
+  "v_max_mm3": 666.2028256026175,
+  "d0_mm": 10.63014581273465,
+  "lens_area_dead_end_note": "circle-lens calibration gave grad=0 at d0 (full-containment branch) -- falsified, not used; see module docstring.",
+  "calibration_reproduces_declared_mm3": 148.70205226992292
+ },
+ "initial_state": {
+  "params": [
+   100.0,
+   45.0,
+   -100.0,
+   55.0,
+   -100.0,
+   -55.0,
+   100.0,
+   -45.0,
+   0.0,
+   0.0
+  ],
+  "loss_mm3": 148.70205226992292,
+  "terms": {
+   "ball_mm3": 148.70205226992292,
+   "floor_penalty": 0.0
+  }
+ },
+ "descent": {
+  "optimizer": "Adam (lr=0.5,beta1=0.9,beta2=0.999,eps=1e-8)",
+  "gradient": "central-diff h=1e-2mm",
+  "n_params": 10,
+  "iters": 17,
+  "n_forward_evals": 338,
+  "wall_s": 0.0058490219998930115,
+  "final_loss_mm3": 0.0,
+  "final_terms": {
+   "ball_mm3": 0.0,
+   "floor_penalty": 0.0
+  },
+  "converged_params_xy": [
+   [
+    100.0,
+    45.0
+   ],
+   [
+    -100.0,
+    55.0
+   ],
+   [
+    -93.0794015460743,
+    -48.035812301002174
+   ],
+   [
+    100.0,
+    -45.0
+   ],
+   [
+    0.0,
+    0.0
+   ]
+  ]
+ },
+ "facit_comparison": {
+  "closed_form_facit_pad2_xy": [
+   -92.79795076692108,
+   -48.698206921055935
+  ],
+  "descent_pad2_xy": [
+   -93.0794015460743,
+   -48.035812301002174
+  ],
+  "distance_to_facit_mm": 0.7197090896759043,
+  "same_basin": true,
+  "max_other_pad_drift_mm": 0.0
+ },
+ "wallclock_win": {
+  "accumulated_manual_round_time_s": 1681.8,
+  "descent_wall_s": 0.0058490219998930115,
+  "speedup_x": 287535.24948799354,
+  "caveat_apples_to_oranges": "the raw speedup_x is dominated by evaluation cost (this prototype's proxy is pure numpy, sub-microsecond per evaluation, while the manual rounds paid B-rep boolean/mesh/modal evaluation, STEP export and human round overhead per iteration). The load-bearing claim is NOT a raw speed factor -- it is that one convergent run replaces the STRUCTURE of nine manual falsification rounds for a placement-class defect; wired to a real B-rep/ray-trace evaluator (seconds per evaluation) the same number of evaluations would cost tens of minutes, which needs the real evaluator wired in before it is claimed."
+ },
+ "generalization_contract": {
+  "eats": [
+   "continuous placement (x,y[,z]) of a fixed set of parts with a differentiable penetration/clearance objective -- the case in this module",
+   "continuous orientation (angles) with a differentiable interference objective",
+   "continuous dimensioning (radii/thicknesses/offsets) against a differentiable modal/mass/clearance floor",
+   "any n_vars in roughly 2-20 with a cheap (<1s) differentiable-or-central-diffable evaluation -- in an optimiser-selection table this is a row distinct from NSGA-II and from topology optimisation at n_vars >> 1000: gradient descent wins when n_vars is low AND the loss is differentiable, because it needs O(n_vars) evals per step instead of O(1000s) population evals."
+  ],
+  "does_not_eat": [
+   "topology changes (candidate A vs B vs C, edge clip vs backside pad vs kinematic mount) -- these are discrete design choices with no continuous path between them; the candidate-family history stays design work, in the constraint-solver / discrete row of an optimiser-selection table, not gradient descent.",
+   "a swept light-volume objective -- no differentiable evaluator for it is wired here (it needs an SDF-tree evaluation with a tape, or a ray-trace adjoint); this prototype's ball-collision case is a sub-problem of the same family, not that full problem."
+  ]
+ },
+ "handoff": "replace loss_and_terms()'s ball_term with a gradient query over an SDF expression tree encoding a light-volume field; the Adam loop above is otherwise unchanged (it only needs loss_and_terms plus a gradient).",
+ "ATOMS": {
+  "atoms": [
+   {
+    "id": "a1_converges_to_zero",
+    "type": "value-in-artifact",
+    "artifact": "reports/probes/diff_placering_v1.json",
+    "key": "descent.final_loss_mm3",
+    "expected": 0.0,
+    "tol": 1e-06
+   },
+   {
+    "id": "a2_same_basin_as_closed_form_facit",
+    "type": "value-in-artifact",
+    "artifact": "reports/probes/diff_placering_v1.json",
+    "key": "facit_comparison.distance_to_facit_mm",
+    "expected": 0.0,
+    "tol": 0.5
+   },
+   {
+    "id": "a3_other_pads_did_not_spuriously_drift",
+    "type": "inequality",
+    "lhs": {
+     "artifact": "reports/probes/diff_placering_v1.json",
+     "key": "facit_comparison.max_other_pad_drift_mm"
+    },
+    "op": "<",
+    "rhs": 0.5
+   },
+   {
+    "id": "a4_calibration_matches_real_measured_collision",
+    "type": "value-in-artifact",
+    "artifact": "reports/probes/diff_placering_v1.json",
+    "key": "calibration.calibration_reproduces_real_mm3",
+    "expected": 148.70205226992292,
+    "tol": 0.001
+   },
+   {
+    "id": "a5_descent_cheap_eval_budget",
+    "type": "inequality",
+    "lhs": {
+     "artifact": "reports/probes/diff_placering_v1.json",
+     "key": "descent.n_forward_evals"
+    },
+    "op": "<",
+    "rhs": 1000
+   },
+   {
+    "id": "a6_report_exists",
+    "type": "artifact-exists",
+    "artifact": "reports/probes/diff_placering_v1.json"
+   }
+  ]
+ },
+ "elapsed_s": 0.006
+}

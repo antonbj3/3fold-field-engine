@@ -1,0 +1,9 @@
+{
+  "reservation": "D-TAIL-GRAPH-114807",
+  "start": "2026-09-13T11:48:07.553957+00:00",
+  "exit": 1,
+  "gpu": "NVIDIA GeForce RTX 5070, 580.178.04, 5 %, 1614 MiB",
+  "contexts": "",
+  "end": "2026-09-13T11:48:36.043030+00:00",
+  "scope": "Bounded shared-lock window; seven synthetic fixtures each for borrowed and owned services. No compute contexts, desktop background recorded. Before/between/after journal guards pass. Both children ended and lock released; no settings changes."
+}

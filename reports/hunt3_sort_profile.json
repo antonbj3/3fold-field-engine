@@ -1,0 +1,126 @@
+{
+  "rows": [
+    {
+      "rows": 2046,
+      "width": 2,
+      "hits": 2658,
+      "sort_ms": 0.252245
+    },
+    {
+      "rows": 2046,
+      "width": 2,
+      "hits": 2658,
+      "sort_ms": 0.21845299999999998
+    },
+    {
+      "rows": 2046,
+      "width": 2,
+      "hits": 2658,
+      "sort_ms": 0.21625699999999998
+    },
+    {
+      "rows": 2046,
+      "width": 2,
+      "hits": 2658,
+      "sort_ms": 0.225099
+    },
+    {
+      "rows": 7239,
+      "width": 2,
+      "hits": 10586,
+      "sort_ms": 0.49859499999999995
+    },
+    {
+      "rows": 7239,
+      "width": 2,
+      "hits": 10586,
+      "sort_ms": 0.501842
+    },
+    {
+      "rows": 7239,
+      "width": 2,
+      "hits": 10586,
+      "sort_ms": 0.49847899999999995
+    },
+    {
+      "rows": 7239,
+      "width": 2,
+      "hits": 10586,
+      "sort_ms": 0.502273
+    },
+    {
+      "rows": 27141,
+      "width": 2,
+      "hits": 42242,
+      "sort_ms": 1.561475
+    },
+    {
+      "rows": 27141,
+      "width": 2,
+      "hits": 42242,
+      "sort_ms": 1.56094
+    },
+    {
+      "rows": 27141,
+      "width": 2,
+      "hits": 42242,
+      "sort_ms": 1.7189999999999999
+    },
+    {
+      "rows": 27141,
+      "width": 2,
+      "hits": 42242,
+      "sort_ms": 1.6475849999999999
+    },
+    {
+      "rows": 572,
+      "width": 2,
+      "hits": 440,
+      "sort_ms": 0.16077
+    },
+    {
+      "rows": 572,
+      "width": 2,
+      "hits": 440,
+      "sort_ms": 0.117785
+    },
+    {
+      "rows": 572,
+      "width": 2,
+      "hits": 440,
+      "sort_ms": 0.143481
+    },
+    {
+      "rows": 572,
+      "width": 2,
+      "hits": 440,
+      "sort_ms": 0.14164
+    },
+    {
+      "rows": 572,
+      "width": 2,
+      "hits": 440,
+      "sort_ms": 0.164291
+    },
+    {
+      "rows": 572,
+      "width": 2,
+      "hits": 440,
+      "sort_ms": 0.12747899999999998
+    },
+    {
+      "rows": 572,
+      "width": 2,
+      "hits": 440,
+      "sort_ms": 0.125323
+    },
+    {
+      "rows": 572,
+      "width": 2,
+      "hits": 440,
+      "sort_ms": 0.156694
+    }
+  ],
+  "probe_exit": 1,
+  "scope": "Actual complete original two-hit stage, sorting observer only; no additional GPU synchronization, captured arrays after timing."
+}

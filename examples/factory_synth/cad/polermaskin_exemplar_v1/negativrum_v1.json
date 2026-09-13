@@ -1,0 +1,56 @@
+{
+ "schema": "negativrum_v1",
+ "maskin": "polering",
+ "rum": [
+  {
+   "namn": "service_bakre_lucka",
+   "klass": "service",
+   "kalla": {
+    "typ": "krav",
+    "krav_id": "service_access"
+   },
+   "motiv": "tool access in front of the rear service hatch",
+   "primitiver": [
+    {
+     "typ": "lada",
+     "center": [
+      1200.0,
+      2230.0,
+      1000.0
+     ],
+     "half": [
+      480.0,
+      300.0,
+      600.0
+     ],
+     "namn": "service_box"
+    }
+   ]
+  },
+  {
+   "namn": "kylluft_utblas",
+   "klass": "kyl",
+   "kalla": {
+    "typ": "krav",
+    "krav_id": "cooling_outlet"
+   },
+   "motiv": "cooling-air outlet path that may not be walled in",
+   "primitiver": [
+    {
+     "typ": "lada",
+     "center": [
+      2650.0,
+      285.0,
+      1680.0
+     ],
+     "half": [
+      250.0,
+      200.0,
+      300.0
+     ],
+     "namn": "kyl_box"
+    }
+   ]
+  }
+ ]
+}

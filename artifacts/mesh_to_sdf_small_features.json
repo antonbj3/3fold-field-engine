@@ -1,0 +1,590 @@
+{
+ "part": {
+  "radier_mm": [
+   1.0,
+   2.0,
+   4.0,
+   8.0,
+   16.0
+  ],
+  "tjocklek_mm": 6.0,
+  "n_trianglar": 5072
+ },
+ "device": "cuda:0",
+ "n_vinklar": 64,
+ "gate": {
+  "radie_min_mm": 2.0,
+  "avvikelse_max": 0.05,
+  "rader": [
+   {
+    "R_mm": 2.0,
+    "pass_avvikelse": true,
+    "pass_ring": true,
+    "radiell_avvikelse": 0.03967011719942093
+   },
+   {
+    "R_mm": 4.0,
+    "pass_avvikelse": true,
+    "pass_ring": true,
+    "radiell_avvikelse": 0.020711135119199753
+   },
+   {
+    "R_mm": 8.0,
+    "pass_avvikelse": true,
+    "pass_ring": true,
+    "radiell_avvikelse": 0.00998862273991108
+   },
+   {
+    "R_mm": 16.0,
+    "pass_avvikelse": true,
+    "pass_ring": true,
+    "radiell_avvikelse": 0.005065405275672674
+   }
+  ]
+ },
+ "fore": [
+  {
+   "rader": [
+    {
+     "R_mm": 1.0,
+     "pitch_mm": 2.0,
+     "R_per_h": 0.5,
+     "radiell_avvikelse": 2.0110926628112793,
+     "radiell_avvikelse_nollgenomgang": 0.9999999999743889,
+     "n_radier_med_nollgenomgang": 21,
+     "n_teckenbyten": null,
+     "en_ring": null,
+     "ring_matbar": false,
+     "vol_rekonstruerad_mm3": 24.0,
+     "vol_facit_mm3": 18.84955592153876,
+     "volym_fel": 0.2732395447351627,
+     "n_lager": 2
+    },
+    {
+     "R_mm": 2.0,
+     "pitch_mm": 2.0,
+     "R_per_h": 1.0,
+     "radiell_avvikelse": 1.0115156173706055,
+     "radiell_avvikelse_nollgenomgang": 0.5941355895623565,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": null,
+     "en_ring": null,
+     "ring_matbar": false,
+     "vol_rekonstruerad_mm3": 72.0,
+     "vol_facit_mm3": 75.39822368615503,
+     "volym_fel": -0.04507034144862795,
+     "n_lager": 2
+    },
+    {
+     "R_mm": 4.0,
+     "pitch_mm": 2.0,
+     "R_per_h": 2.0,
+     "radiell_avvikelse": 0.5,
+     "radiell_avvikelse_nollgenomgang": 0.2500000001117587,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 264.0,
+     "vol_facit_mm3": 301.59289474462014,
+     "volym_fel": -0.12464781299457561,
+     "n_lager": 2
+    },
+    {
+     "R_mm": 8.0,
+     "pitch_mm": 2.0,
+     "R_per_h": 4.0,
+     "radiell_avvikelse": 0.25,
+     "radiell_avvikelse_nollgenomgang": 0.125,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 1128.0,
+     "vol_facit_mm3": 1206.3715789784806,
+     "volym_fel": -0.06496470933511486,
+     "n_lager": 2
+    },
+    {
+     "R_mm": 16.0,
+     "pitch_mm": 2.0,
+     "R_per_h": 8.0,
+     "radiell_avvikelse": 0.125,
+     "radiell_avvikelse_nollgenomgang": 0.0625,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 4680.0,
+     "vol_facit_mm3": 4825.486315913922,
+     "volym_fel": -0.03014956553376276,
+     "n_lager": 2
+    }
+   ],
+   "info": {
+    "pitch_begard": 2.0,
+    "pitch_effektiv": 2.0,
+    "feature_radius_min": null,
+    "ytkorrektion": false,
+    "feature": {
+     "begard": null,
+     "pitch_in": 2.0,
+     "faktor": 6.0,
+     "pitch_ut": 2.0,
+     "r_min_mm": null,
+     "klamd_av_kostnadstak": false
+    },
+    "shape_l": [
+     66,
+     31,
+     8
+    ],
+    "n_blocks": 36,
+    "n_active": 36,
+    "vattentathet": "OK",
+    "t_flood_s": 0.025581836700439453,
+    "t_gpu_classify_s": 0.08641338348388672
+   }
+  },
+  {
+   "rader": [
+    {
+     "R_mm": 1.0,
+     "pitch_mm": 1.0,
+     "R_per_h": 1.0,
+     "radiell_avvikelse": 1.0539422035217285,
+     "radiell_avvikelse_nollgenomgang": 0.6019712744839489,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": null,
+     "en_ring": null,
+     "ring_matbar": false,
+     "vol_rekonstruerad_mm3": 18.0,
+     "vol_facit_mm3": 18.84955592153876,
+     "volym_fel": -0.04507034144862795,
+     "n_lager": 5
+    },
+    {
+     "R_mm": 2.0,
+     "pitch_mm": 1.0,
+     "R_per_h": 2.0,
+     "radiell_avvikelse": 0.5,
+     "radiell_avvikelse_nollgenomgang": 0.2500000001117587,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 66.0,
+     "vol_facit_mm3": 75.39822368615503,
+     "volym_fel": -0.12464781299457561,
+     "n_lager": 5
+    },
+    {
+     "R_mm": 4.0,
+     "pitch_mm": 1.0,
+     "R_per_h": 4.0,
+     "radiell_avvikelse": 0.25,
+     "radiell_avvikelse_nollgenomgang": 0.125,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 282.0,
+     "vol_facit_mm3": 301.59289474462014,
+     "volym_fel": -0.06496470933511486,
+     "n_lager": 5
+    },
+    {
+     "R_mm": 8.0,
+     "pitch_mm": 1.0,
+     "R_per_h": 8.0,
+     "radiell_avvikelse": 0.125,
+     "radiell_avvikelse_nollgenomgang": 0.0625,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 1170.0,
+     "vol_facit_mm3": 1206.3715789784806,
+     "volym_fel": -0.03014956553376276,
+     "n_lager": 5
+    },
+    {
+     "R_mm": 16.0,
+     "pitch_mm": 1.0,
+     "R_per_h": 16.0,
+     "radiell_avvikelse": 0.0625,
+     "radiell_avvikelse_nollgenomgang": 0.03125,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 4770.0,
+     "vol_facit_mm3": 4825.486315913922,
+     "volym_fel": -0.011498595640181275,
+     "n_lager": 5
+    }
+   ],
+   "info": {
+    "pitch_begard": 1.0,
+    "pitch_effektiv": 1.0,
+    "feature_radius_min": null,
+    "ytkorrektion": false,
+    "feature": {
+     "begard": null,
+     "pitch_in": 1.0,
+     "faktor": 6.0,
+     "pitch_ut": 1.0,
+     "r_min_mm": null,
+     "klamd_av_kostnadstak": false
+    },
+    "shape_l": [
+     127,
+     57,
+     11
+    ],
+    "n_blocks": 256,
+    "n_active": 256,
+    "vattentathet": "OK",
+    "t_flood_s": 0.046327829360961914,
+    "t_gpu_classify_s": 0.0008180141448974609
+   }
+  },
+  {
+   "rader": [
+    {
+     "R_mm": 1.0,
+     "pitch_mm": 0.5,
+     "R_per_h": 2.0,
+     "radiell_avvikelse": 0.5,
+     "radiell_avvikelse_nollgenomgang": 0.2500000001117587,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 16.5,
+     "vol_facit_mm3": 18.84955592153876,
+     "volym_fel": -0.12464781299457561,
+     "n_lager": 11
+    },
+    {
+     "R_mm": 2.0,
+     "pitch_mm": 0.5,
+     "R_per_h": 4.0,
+     "radiell_avvikelse": 0.25,
+     "radiell_avvikelse_nollgenomgang": 0.125,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 70.5,
+     "vol_facit_mm3": 75.39822368615503,
+     "volym_fel": -0.06496470933511486,
+     "n_lager": 11
+    },
+    {
+     "R_mm": 4.0,
+     "pitch_mm": 0.5,
+     "R_per_h": 8.0,
+     "radiell_avvikelse": 0.125,
+     "radiell_avvikelse_nollgenomgang": 0.0625,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 292.5,
+     "vol_facit_mm3": 301.59289474462014,
+     "volym_fel": -0.03014956553376276,
+     "n_lager": 11
+    },
+    {
+     "R_mm": 8.0,
+     "pitch_mm": 0.5,
+     "R_per_h": 16.0,
+     "radiell_avvikelse": 0.0625,
+     "radiell_avvikelse_nollgenomgang": 0.03125,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 1192.5,
+     "vol_facit_mm3": 1206.3715789784806,
+     "volym_fel": -0.011498595640181275,
+     "n_lager": 11
+    },
+    {
+     "R_mm": 16.0,
+     "pitch_mm": 0.5,
+     "R_per_h": 32.0,
+     "radiell_avvikelse": 0.03125,
+     "radiell_avvikelse_nollgenomgang": 0.015625,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 4810.5,
+     "vol_facit_mm3": 4825.486315913922,
+     "volym_fel": -0.003105659188069606,
+     "n_lager": 11
+    }
+   ],
+   "info": {
+    "pitch_begard": 0.5,
+    "pitch_effektiv": 0.5,
+    "feature_radius_min": null,
+    "ytkorrektion": false,
+    "feature": {
+     "begard": null,
+     "pitch_in": 0.5,
+     "faktor": 6.0,
+     "pitch_ut": 0.5,
+     "r_min_mm": null,
+     "klamd_av_kostnadstak": false
+    },
+    "shape_l": [
+     249,
+     109,
+     17
+    ],
+    "n_blocks": 1344,
+    "n_active": 1320,
+    "vattentathet": "OK",
+    "t_flood_s": 0.20786309242248535,
+    "t_gpu_classify_s": 0.0012912750244140625
+   }
+  },
+  {
+   "rader": [
+    {
+     "R_mm": 1.0,
+     "pitch_mm": 0.25,
+     "R_per_h": 4.0,
+     "radiell_avvikelse": 0.25,
+     "radiell_avvikelse_nollgenomgang": 0.125,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 17.625,
+     "vol_facit_mm3": 18.84955592153876,
+     "volym_fel": -0.06496470933511486,
+     "n_lager": 23
+    },
+    {
+     "R_mm": 2.0,
+     "pitch_mm": 0.25,
+     "R_per_h": 8.0,
+     "radiell_avvikelse": 0.125,
+     "radiell_avvikelse_nollgenomgang": 0.0625,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 73.125,
+     "vol_facit_mm3": 75.39822368615503,
+     "volym_fel": -0.03014956553376276,
+     "n_lager": 23
+    },
+    {
+     "R_mm": 4.0,
+     "pitch_mm": 0.25,
+     "R_per_h": 16.0,
+     "radiell_avvikelse": 0.0625,
+     "radiell_avvikelse_nollgenomgang": 0.03125,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 298.125,
+     "vol_facit_mm3": 301.59289474462014,
+     "volym_fel": -0.011498595640181275,
+     "n_lager": 23
+    },
+    {
+     "R_mm": 8.0,
+     "pitch_mm": 0.25,
+     "R_per_h": 32.0,
+     "radiell_avvikelse": 0.03125,
+     "radiell_avvikelse_nollgenomgang": 0.015625,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 1202.625,
+     "vol_facit_mm3": 1206.3715789784806,
+     "volym_fel": -0.003105659188069606,
+     "n_lager": 23
+    },
+    {
+     "R_mm": 16.0,
+     "pitch_mm": 0.25,
+     "R_per_h": 64.0,
+     "radiell_avvikelse": 0.015625,
+     "radiell_avvikelse_nollgenomgang": 0.0078125,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 4819.125,
+     "vol_facit_mm3": 4825.486315913922,
+     "volym_fel": -0.001318274573268047,
+     "n_lager": 23
+    }
+   ],
+   "info": {
+    "pitch_begard": 0.25,
+    "pitch_effektiv": 0.25,
+    "feature_radius_min": null,
+    "ytkorrektion": false,
+    "feature": {
+     "begard": null,
+     "pitch_in": 0.25,
+     "faktor": 6.0,
+     "pitch_ut": 0.25,
+     "r_min_mm": null,
+     "klamd_av_kostnadstak": false
+    },
+    "shape_l": [
+     493,
+     213,
+     29
+    ],
+    "n_blocks": 6696,
+    "n_active": 6264,
+    "vattentathet": "OK",
+    "t_flood_s": 0.9827744960784912,
+    "t_gpu_classify_s": 0.003386259078979492
+   }
+  }
+ ],
+ "efter": [
+  {
+   "rader": [
+    {
+     "R_mm": 1.0,
+     "pitch_mm": 0.1666429687514592,
+     "R_per_h": 6.000853246268415,
+     "radiell_avvikelse": 0.08104648441076279,
+     "radiell_avvikelse_nollgenomgang": 0.08104648452715901,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 18.494739436843673,
+     "vol_facit_mm3": 18.84955592153876,
+     "volym_fel": -0.018823599143237557,
+     "n_lager": 34
+    },
+    {
+     "R_mm": 2.0,
+     "pitch_mm": 0.1666429687514592,
+     "R_per_h": 12.00170649253683,
+     "radiell_avvikelse": 0.03967011719942093,
+     "radiell_avvikelse_nollgenomgang": 0.03967011738244486,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 73.14586137634569,
+     "vol_facit_mm3": 75.39822368615503,
+     "volym_fel": -0.02987288293666965,
+     "n_lager": 34
+    },
+    {
+     "R_mm": 4.0,
+     "pitch_mm": 0.1666429687514592,
+     "R_per_h": 24.00341298507366,
+     "radiell_avvikelse": 0.020711135119199753,
+     "radiell_avvikelse_nollgenomgang": 0.019835058691222485,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 299.4148357478205,
+     "vol_facit_mm3": 301.59289474462014,
+     "volym_fel": -0.007221851160134048,
+     "n_lager": 34
+    },
+    {
+     "R_mm": 8.0,
+     "pitch_mm": 0.1666429687514592,
+     "R_per_h": 48.00682597014732,
+     "radiell_avvikelse": 0.00998862273991108,
+     "radiell_avvikelse_nollgenomgang": 0.009988623075359193,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 1203.9908754111025,
+     "vol_facit_mm3": 1206.3715789784806,
+     "volym_fel": -0.0019734413582538027,
+     "n_lager": 34
+    },
+    {
+     "R_mm": 16.0,
+     "pitch_mm": 0.1666429687514592,
+     "R_per_h": 96.01365194029464,
+     "radiell_avvikelse": 0.005065405275672674,
+     "radiell_avvikelse_nollgenomgang": 0.0050654052829474105,
+     "n_radier_med_nollgenomgang": 64,
+     "n_teckenbyten": 0,
+     "en_ring": true,
+     "ring_matbar": true,
+     "vol_rekonstruerad_mm3": 4822.628272612642,
+     "vol_facit_mm3": 4825.486315913922,
+     "volym_fel": -0.0005922808840747911,
+     "n_lager": 34
+    }
+   ],
+   "info": {
+    "pitch_begard": 2.0,
+    "pitch_effektiv": 0.1666429687514592,
+    "feature_radius_min": "auto",
+    "ytkorrektion": true,
+    "feature": {
+     "begard": "auto",
+     "pitch_in": 2.0,
+     "faktor": 6.0,
+     "pitch_ut": 0.1666429687514592,
+     "r_min_mm": 0.9998578125087553,
+     "klamd_av_kostnadstak": false,
+     "matning": {
+      "n_par": 7608,
+      "crease_grad": 30.0,
+      "percentil": 1.0,
+      "n_mjuka_par": 1260,
+      "r_min_mm": 0.9998556093919708,
+      "r_percentil_mm": 0.9998578125087553,
+      "r_median_mm": 3.999796793681248
+     },
+     "n_voxlar_uppskattat": 9582679.212665554
+    },
+    "shape_l": [
+     738,
+     318,
+     42
+    ],
+    "n_blocks": 22320,
+    "n_active": 20358,
+    "vattentathet": "OK",
+    "t_flood_s": 3.1511952877044678,
+    "t_gpu_classify_s": 0.026566743850708008
+   }
+  }
+ ],
+ "R1_rad_efter": {
+  "R_mm": 1.0,
+  "pitch_mm": 0.1666429687514592,
+  "R_per_h": 6.000853246268415,
+  "radiell_avvikelse": 0.08104648441076279,
+  "radiell_avvikelse_nollgenomgang": 0.08104648452715901,
+  "n_radier_med_nollgenomgang": 64,
+  "n_teckenbyten": 0,
+  "en_ring": true,
+  "ring_matbar": true,
+  "vol_rekonstruerad_mm3": 18.494739436843673,
+  "vol_facit_mm3": 18.84955592153876,
+  "volym_fel": -0.018823599143237557,
+  "n_lager": 34
+ },
+ "ALL_PASS": true
+}

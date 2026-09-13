@@ -1,0 +1,35 @@
+{
+  "gate": 1.5,
+  "passed": true,
+  "byte_exact_within_and_across_hosts": true,
+  "stored_bytes_per_host": 41050752,
+  "modal_app": "ap-FRnfgX83BWD513HKC9UUZC",
+  "modal_stamp": "20260913T184615Z-d-f33-radius-candidate",
+  "source_sha256": "7810c760e8911c978c617af3f583d36e1e0eaabfef3f825e7e32e7ced60b8d4f",
+  "speedups": {
+    "local": [
+      3.199707976815186,
+      3.0988276656443072
+    ],
+    "modal": [
+      3.761851511140851,
+      3.933052286176894
+    ]
+  },
+  "scope": "CPU arithmetic on local and Modal L4 host. Four complete original selftests per host, original four checks and full trajectory/report parity. Timing metadata excluded only; actual A* wall threshold retained.",
+  "selection": {
+    "old": "prepared Python objective and native LBM",
+    "new": "ordered native objective and same native LBM"
+  },
+  "native_source_sha256": {
+    "src/field_engine/opt/radius_objective_native_v1.py": "f79d71f263dc62ebee7a3f603b30ae3e4c54c72951ab11ee5c575e66e0ae5a84",
+    "src/field_engine/opt/radius_objective_native_v1/objective.cpp": "4b9aed0b2816a674ecbe089fd33e3af134f4cecb75ea4372be753e2926d40f24"
+  },
+  "compiler_flags": [
+    "-O3",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-fno-builtin-pow"
+  ],
+  "initial_pow_substitution_failure_retained": "radius_native_smoke_initial_failure.json"
+}

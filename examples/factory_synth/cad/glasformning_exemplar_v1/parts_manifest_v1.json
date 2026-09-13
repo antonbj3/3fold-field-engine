@@ -1,0 +1,78 @@
+{
+ "schema": "parts_manifest_v1",
+ "station": "formning_till_amne",
+ "parts": [
+  {
+   "part": "stativ",
+   "subassembly": "ram",
+   "bbox": [
+    0.0,
+    0.0,
+    0.0,
+    2600.0,
+    2000.0,
+    330.0
+   ]
+  },
+  {
+   "part": "hus",
+   "subassembly": "ram",
+   "bbox": [
+    0.0,
+    0.0,
+    330.0,
+    2600.0,
+    2000.0,
+    2200.0
+   ]
+  },
+  {
+   "part": "hmi_pendang",
+   "subassembly": "styr",
+   "bbox": [
+    909.9999999999999,
+    -320.0,
+    900.0,
+    1690.0,
+    0.0,
+    1700.0
+   ]
+  },
+  {
+   "part": "hmi_skarm",
+   "subassembly": "styr",
+   "bbox": [
+    1040.0,
+    -340.0,
+    1150.0,
+    1560.0,
+    -300.0,
+    1500.0
+   ]
+  },
+  {
+   "part": "elskap_huvud",
+   "subassembly": "el",
+   "bbox": [
+    2600.0,
+    600.0,
+    200.0,
+    3000.0,
+    1400.0,
+    2000.0
+   ]
+  },
+  {
+   "part": "servicelucka_bak",
+   "subassembly": "ram",
+   "bbox": [
+    780.0,
+    2000.0,
+    400.0,
+    1819.9999999999998,
+    2060.0,
+    1600.0
+   ]
+  }
+ ]
+}

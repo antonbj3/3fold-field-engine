@@ -1,0 +1,192 @@
+{
+  "records": [
+    {
+      "shape": [
+        1,
+        2,
+        3
+      ],
+      "kind": "positive",
+      "differences": {
+        "rho": 0,
+        "u": 0,
+        "cu": 0,
+        "usq": 0,
+        "ua": 0
+      }
+    },
+    {
+      "shape": [
+        1,
+        2,
+        3
+      ],
+      "kind": "signed",
+      "differences": {
+        "rho": 0,
+        "u": 0,
+        "cu": 0,
+        "usq": 0,
+        "ua": 0
+      }
+    },
+    {
+      "shape": [
+        1,
+        2,
+        3
+      ],
+      "kind": "equilibrium",
+      "differences": {
+        "rho": 0,
+        "u": 0,
+        "cu": 0,
+        "usq": 0,
+        "ua": 0
+      }
+    },
+    {
+      "shape": [
+        3,
+        4,
+        2
+      ],
+      "kind": "positive",
+      "differences": {
+        "rho": 0,
+        "u": 0,
+        "cu": 0,
+        "usq": 0,
+        "ua": 0
+      }
+    },
+    {
+      "shape": [
+        3,
+        4,
+        2
+      ],
+      "kind": "signed",
+      "differences": {
+        "rho": 0,
+        "u": 0,
+        "cu": 0,
+        "usq": 0,
+        "ua": 0
+      }
+    },
+    {
+      "shape": [
+        3,
+        4,
+        2
+      ],
+      "kind": "equilibrium",
+      "differences": {
+        "rho": 0,
+        "u": 0,
+        "cu": 0,
+        "usq": 0,
+        "ua": 0
+      }
+    },
+    {
+      "shape": [
+        8,
+        7,
+        6
+      ],
+      "kind": "positive",
+      "differences": {
+        "rho": 0,
+        "u": 0,
+        "cu": 0,
+        "usq": 0,
+        "ua": 0
+      }
+    },
+    {
+      "shape": [
+        8,
+        7,
+        6
+      ],
+      "kind": "signed",
+      "differences": {
+        "rho": 0,
+        "u": 0,
+        "cu": 0,
+        "usq": 0,
+        "ua": 0
+      }
+    },
+    {
+      "shape": [
+        8,
+        7,
+        6
+      ],
+      "kind": "equilibrium",
+      "differences": {
+        "rho": 0,
+        "u": 0,
+        "cu": 0,
+        "usq": 0,
+        "ua": 0
+      }
+    },
+    {
+      "shape": [
+        24,
+        26,
+        30
+      ],
+      "kind": "positive",
+      "differences": {
+        "rho": 0,
+        "u": 0,
+        "cu": 0,
+        "usq": 0,
+        "ua": 0
+      }
+    },
+    {
+      "shape": [
+        24,
+        26,
+        30
+      ],
+      "kind": "signed",
+      "differences": {
+        "rho": 0,
+        "u": 0,
+        "cu": 0,
+        "usq": 0,
+        "ua": 0
+      }
+    },
+    {
+      "shape": [
+        24,
+        26,
+        30
+      ],
+      "kind": "equilibrium",
+      "differences": {
+        "rho": 0,
+        "u": 0,
+        "cu": 0,
+        "usq": 0,
+        "ua": 0
+      }
+    }
+  ],
+  "source_sha256": "8a1905cc0bacec42007c2222996a9d4a8ed0ac48a1f7d60ed4dd593c6dcd07f4",
+  "source": "#pragma once\n#include <cmath>\n#include <cstdint>\n#include <limits>\n\nextern \"C\" int field_lbm_moments(std::int64_t cells, const double* f,\n        const std::uint8_t* solid, const double* force, const double* e,\n        double* rho, double* u, double* cu, double* usq, double* ua) {\n    if (cells<0 || cells>std::numeric_limits<std::int64_t>::max()/19 ||\n        (cells && (!f || !solid || !force || !e || !rho || !u || !cu || !usq || !ua))) return 1;\n    for (std::int64_t i=0; i<cells; ++i) {\n        const double* v=f+19*i;\n        // NumPy's contiguous nineteen-value pairwise sum: eight accumulators,\n        // the balanced reduction, then the three-element tail.\n        double r0=v[0]+v[8], r1=v[1]+v[9], r2=v[2]+v[10], r3=v[3]+v[11];\n        double r4=v[4]+v[12], r5=v[5]+v[13], r6=v[6]+v[14], r7=v[7]+v[15];\n        double r=((r0+r1)+(r2+r3))+((r4+r5)+(r6+r7));\n        r+=v[16];r+=v[17];r+=v[18];\n        r=r>1e-9 ? r : 1.0;rho[i]=r;\n        double m[3]={0.0,0.0,0.0};\n        for (int q=0; q<19; ++q) for (int a=0; a<3; ++a) m[a]+=v[q]*e[3*q+a];\n        for (int a=0; a<3; ++a) {\n            const double velocity=(m[a]+(0.5*r)*force[3*i+a])/r;\n            u[3*i+a]=solid[i] ? 0.0 : velocity;\n        }\n        for (int q=0; q<19; ++q) {\n            double value=0.0;\n            for (int a=0; a<3; ++a) value+=u[3*i+a]*e[3*q+a];\n            cu[19*i+q]=value;\n        }\n        double squared=0.0, forced=0.0;\n        for (int a=0; a<3; ++a) {\n            squared+=u[3*i+a]*u[3*i+a];\n            forced+=u[3*i+a]*force[3*i+a];\n        }\n        usq[i]=squared;ua[i]=forced;\n    }\n    return 0;\n}\n",
+  "compiler_flags": [
+    "-O3",
+    "-fno-fast-math",
+    "-ffp-contract=off"
+  ],
+  "scope": "Exact intermediate screening before adoption; fixed random positive/signed/equilibrium distributions and forces/solids across four shapes."
+}

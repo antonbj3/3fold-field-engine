@@ -1,0 +1,70 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "exact": true,
+    "repeat": true,
+    "frozen_fixture": true,
+    "tile_arithmetic": true,
+    "invalid_controls": true,
+    "speedup_1_25": true
+  },
+  "rows": [
+    {
+      "leg": 0,
+      "times_ms": {
+        "gathered": 134.528278,
+        "tiled": 27.680535
+      },
+      "speedup": 4.860031715427466,
+      "exact": true,
+      "hashes": [
+        "3be0f4342dcaf8be51eeb3617d1626a3d3920f8194f130c334befb65e748cefd",
+        "5b16e02cc06e59d35c627f00d9a53d3a1f75fd9dd31c51a2e21ed221edd40932",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    },
+    {
+      "leg": 1,
+      "times_ms": {
+        "tiled": 27.551696999999997,
+        "gathered": 134.323017
+      },
+      "speedup": 4.875308297706671,
+      "exact": true,
+      "hashes": [
+        "3be0f4342dcaf8be51eeb3617d1626a3d3920f8194f130c334befb65e748cefd",
+        "5b16e02cc06e59d35c627f00d9a53d3a1f75fd9dd31c51a2e21ed221edd40932",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    }
+  ],
+  "controls": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "invalid_rejections": 9,
+  "scope": "Direct leaf box intersections and broadcasting in tiles of at most 8192 samples. Same packed inputs and final pack as point-gather variant. Two reversed-order CPU observations, no isolated throughput claim. Dense output remains transient."
+}

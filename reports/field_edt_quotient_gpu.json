@@ -1,0 +1,136 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "coverage": true,
+    "exact": true,
+    "repeat": true,
+    "invalid": true
+  },
+  "rows": [
+    {
+      "case": "2",
+      "leg": 0,
+      "cases": 2097153,
+      "exact": true,
+      "hash": "28852beaa94c97e46036cb0ce8a9fd3d0a222bb85895d8154360667860edb9c4"
+    },
+    {
+      "case": "4",
+      "leg": 0,
+      "cases": 2097153,
+      "exact": true,
+      "hash": "a34db0ef45f69eba1a31bee566e40440921696c25bf7f6c91295f503a4ef9a8e"
+    },
+    {
+      "case": "6",
+      "leg": 0,
+      "cases": 2097153,
+      "exact": true,
+      "hash": "a9e70cc563dc89dedc7de8c467098530fc46cf74272ff2c56682d2a23ecd7261"
+    },
+    {
+      "case": "8",
+      "leg": 0,
+      "cases": 2097153,
+      "exact": true,
+      "hash": "fbadb6c1f47b2a9c60cd9a69cd3bda1c0c6969ddc937c61587b39e2a82729ebf"
+    },
+    {
+      "case": "10",
+      "leg": 0,
+      "cases": 2097153,
+      "exact": true,
+      "hash": "cb47418c79a3f120a3fe1932bf95e156eabd201a42607b7f78e0bebc2af9654b"
+    },
+    {
+      "case": "1020",
+      "leg": 0,
+      "cases": 2097153,
+      "exact": true,
+      "hash": "8ff0bb4b48538322b65b1b314201b9a68c725f10822e15ee60ee1156bf6075ef"
+    },
+    {
+      "case": "1022",
+      "leg": 0,
+      "cases": 2097153,
+      "exact": true,
+      "hash": "8bc0fe92af862c2aa65c8bb6bf1c27bda82cef8c7be9dced6701dfc7f3fc66cd"
+    },
+    {
+      "case": "boundaries",
+      "leg": 0,
+      "cases": 11557,
+      "exact": true,
+      "hash": "eba38f01893d77c63f7cd2b17e80e1eb0a62947bc4f312e41ad9a55155639736"
+    },
+    {
+      "case": "1022",
+      "leg": 1,
+      "cases": 2097153,
+      "exact": true,
+      "hash": "8bc0fe92af862c2aa65c8bb6bf1c27bda82cef8c7be9dced6701dfc7f3fc66cd"
+    },
+    {
+      "case": "1020",
+      "leg": 1,
+      "cases": 2097153,
+      "exact": true,
+      "hash": "8ff0bb4b48538322b65b1b314201b9a68c725f10822e15ee60ee1156bf6075ef"
+    },
+    {
+      "case": "10",
+      "leg": 1,
+      "cases": 2097153,
+      "exact": true,
+      "hash": "cb47418c79a3f120a3fe1932bf95e156eabd201a42607b7f78e0bebc2af9654b"
+    },
+    {
+      "case": "8",
+      "leg": 1,
+      "cases": 2097153,
+      "exact": true,
+      "hash": "fbadb6c1f47b2a9c60cd9a69cd3bda1c0c6969ddc937c61587b39e2a82729ebf"
+    },
+    {
+      "case": "6",
+      "leg": 1,
+      "cases": 2097153,
+      "exact": true,
+      "hash": "a9e70cc563dc89dedc7de8c467098530fc46cf74272ff2c56682d2a23ecd7261"
+    },
+    {
+      "case": "4",
+      "leg": 1,
+      "cases": 2097153,
+      "exact": true,
+      "hash": "a34db0ef45f69eba1a31bee566e40440921696c25bf7f6c91295f503a4ef9a8e"
+    },
+    {
+      "case": "2",
+      "leg": 1,
+      "cases": 2097153,
+      "exact": true,
+      "hash": "28852beaa94c97e46036cb0ce8a9fd3d0a222bb85895d8154360667860edb9c4"
+    },
+    {
+      "case": "boundaries",
+      "leg": 1,
+      "cases": 11557,
+      "exact": true,
+      "hash": "eba38f01893d77c63f7cd2b17e80e1eb0a62947bc4f312e41ad9a55155639736"
+    }
+  ],
+  "controls": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "source_sha256": {
+    "quotient.cuh": "d5eb08077d16a50ab9285a756cdf3244af8dfd535ba21114a62e5707c6ec30d6",
+    "probe.cu": "eaf5086f4ed4ed4d5069f4b7d9dbd073b638604d3ef72c94ba27b7141a97b46f"
+  },
+  "scope": "Two complete 14680071-case dense integer-floor proofs, plus all-denominator boundaries and invalid inputs. Corrected result compared to exact integer floor; float estimate accuracy is not an acceptance criterion. No EDT/service speed claim."
+}

@@ -1,0 +1,75 @@
+{
+  "status": "VERIFIED-FRESH",
+  "rows": [
+    {
+      "case": "adaptive_canonical",
+      "arrays_exact": true,
+      "bytes_compared": 5531960,
+      "report_exact": true
+    },
+    {
+      "case": "loft",
+      "leg": 0,
+      "file": "field_recipe_sections_probe.npy",
+      "exact": true,
+      "bytes_compared": 806528
+    },
+    {
+      "case": "loft",
+      "leg": 0,
+      "file": "field_recipe_sections_probe.json",
+      "exact": true,
+      "bytes_compared": 2019
+    },
+    {
+      "case": "loft",
+      "leg": 0,
+      "file": "field_to_recipe_loft_v1.json",
+      "exact": true,
+      "bytes_compared": 666
+    },
+    {
+      "case": "loft",
+      "leg": 0,
+      "file": "field_to_recipe_loft_v1_recipe.json",
+      "exact": true,
+      "bytes_compared": 273243
+    },
+    {
+      "case": "loft",
+      "leg": 1,
+      "file": "field_recipe_sections_probe.npy",
+      "exact": true,
+      "bytes_compared": 806528
+    },
+    {
+      "case": "loft",
+      "leg": 1,
+      "file": "field_recipe_sections_probe.json",
+      "exact": true,
+      "bytes_compared": 2019
+    },
+    {
+      "case": "loft",
+      "leg": 1,
+      "file": "field_to_recipe_loft_v1.json",
+      "exact": true,
+      "bytes_compared": 666
+    },
+    {
+      "case": "loft",
+      "leg": 1,
+      "file": "field_to_recipe_loft_v1_recipe.json",
+      "exact": true,
+      "bytes_compared": 273243
+    }
+  ],
+  "recipe_gates": {
+    "coverage": true,
+    "fresh": true,
+    "decisive": true,
+    "reports": true,
+    "source_hashes": true
+  },
+  "scope": "Canonical adaptive complete report/inputs/outputs, both complete optimizer/loft field and recipe legs, and four full recipe selftests on local CPU versus pinned Modal CPU. Original unordered adaptive negative retained."
+}

@@ -1,0 +1,16 @@
+{
+  "cross_host_arrays_exact": true,
+  "cross_host_array_bytes": 33492288,
+  "single_step_exact_transitions": 45,
+  "native_sanitizer_cases": 8,
+  "local_speedups": [
+    3.4556386400891705,
+    3.630110047156923
+  ],
+  "modal_cpu_speedups": [
+    3.1650091273977745,
+    3.302541189279904
+  ],
+  "modal_app": "ap-ewHOh7FmO6KZpSEHD37Aen",
+  "scope": "Prepared native CPU step; local and Modal L4 CPU original three physics gates, full report/state parity and unchanged preregistered1.25x gate pass in alternating order twice. Original default retained. No GPU numeric execution."
+}

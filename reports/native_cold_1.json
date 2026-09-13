@@ -1,0 +1,19 @@
+{
+  "leg": 1,
+  "idle": true,
+  "cpu_ms": 456.447393,
+  "native_ms": 380.996218,
+  "differences": {
+    "gmin": 0,
+    "surface": 0,
+    "solid": 0,
+    "distance": 0
+  },
+  "hashes": {
+    "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+    "surface": "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+    "solid": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+    "distance": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+  },
+  "shape_equal": true
+}

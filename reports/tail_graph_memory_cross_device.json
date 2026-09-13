@@ -1,0 +1,45 @@
+{
+  "status": "VERIFIED-FRESH",
+  "rows": [
+    {
+      "report": "field_tail_graph_service",
+      "arrays": 355,
+      "bytes_compared": 36115362,
+      "instrumented_exact": true,
+      "cross_device_exact": true,
+      "child_exit": 1,
+      "instrumented_status": "OWN-GATE-FAIL",
+      "instrumented_gates": {
+        "coverage": true,
+        "exact": true,
+        "repeats": true,
+        "lifecycle_capacity": true,
+        "warm_L_2ms": false
+      },
+      "errors": [
+        "ERROR SUMMARY: 0 errors"
+      ]
+    },
+    {
+      "report": "field_owned_gpu",
+      "arrays": 355,
+      "bytes_compared": 36115362,
+      "instrumented_exact": true,
+      "cross_device_exact": true,
+      "child_exit": 1,
+      "instrumented_status": "OWN-GATE-FAIL",
+      "instrumented_gates": {
+        "coverage": true,
+        "exact": true,
+        "repeats": true,
+        "lifecycle_capacity": true,
+        "warm_L_2ms": false
+      },
+      "errors": [
+        "ERROR SUMMARY: 0 errors"
+      ]
+    }
+  ],
+  "hardware": "NVIDIA L4, 580.95.05, 0 %, 3 MiB",
+  "scope": "Numerical and memory proof only; both sanitizer runs target all spawned processes. Instrumented latency failures and exits retained, no timing acceptance. Full OptiX capture failure is a separate rejected source variant."
+}

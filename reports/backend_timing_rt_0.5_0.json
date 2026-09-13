@@ -1,0 +1,183 @@
+{
+  "backend": "rt",
+  "pitch": 0.5,
+  "leg": 0,
+  "cpu_first_ms": 219.327419,
+  "cold_ms": 249.67958399999998,
+  "warm_one_shot_ms": 73.656317,
+  "prepared_setup_ms": 56.580669,
+  "prepared_close_ms": 7.878139999999999,
+  "cpu_ms": [
+    193.88509,
+    193.588696,
+    199.989668,
+    210.00966
+  ],
+  "prepared_ms": [
+    12.318534999999999,
+    12.09216,
+    12.259843,
+    12.159302
+  ],
+  "observations": [
+    {
+      "name": "cpu_first",
+      "hashes": {
+        "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "surface": "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "solid": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "distance": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      },
+      "exact": true,
+      "shape_equal": true
+    },
+    {
+      "name": "cold",
+      "hashes": {
+        "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "surface": "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "solid": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "distance": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      },
+      "exact": true,
+      "shape_equal": true
+    },
+    {
+      "name": "warm_one_shot",
+      "hashes": {
+        "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "surface": "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "solid": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "distance": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      },
+      "exact": true,
+      "shape_equal": true
+    },
+    {
+      "name": "cpu_0",
+      "hashes": {
+        "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "surface": "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "solid": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "distance": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      },
+      "exact": true,
+      "shape_equal": true
+    },
+    {
+      "name": "prepared_0",
+      "hashes": {
+        "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "surface": "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "solid": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "distance": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      },
+      "exact": true,
+      "shape_equal": true
+    },
+    {
+      "name": "cpu_1",
+      "hashes": {
+        "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "surface": "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "solid": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "distance": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      },
+      "exact": true,
+      "shape_equal": true
+    },
+    {
+      "name": "prepared_1",
+      "hashes": {
+        "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "surface": "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "solid": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "distance": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      },
+      "exact": true,
+      "shape_equal": true
+    },
+    {
+      "name": "cpu_2",
+      "hashes": {
+        "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "surface": "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "solid": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "distance": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      },
+      "exact": true,
+      "shape_equal": true
+    },
+    {
+      "name": "prepared_2",
+      "hashes": {
+        "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "surface": "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "solid": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "distance": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      },
+      "exact": true,
+      "shape_equal": true
+    },
+    {
+      "name": "cpu_3",
+      "hashes": {
+        "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "surface": "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "solid": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "distance": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      },
+      "exact": true,
+      "shape_equal": true
+    },
+    {
+      "name": "prepared_3",
+      "hashes": {
+        "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "surface": "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "solid": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "distance": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      },
+      "exact": true,
+      "shape_equal": true
+    }
+  ],
+  "cpu_before": {
+    "cpu_ticks": [
+      2385154,
+      518114,
+      594687,
+      98631969,
+      3570841,
+      0,
+      70967,
+      0
+    ],
+    "load_average": [
+      4.3701171875,
+      6.30810546875,
+      7.02001953125
+    ],
+    "cores": 20,
+    "ticks_per_second": 100
+  },
+  "cpu_after": {
+    "cpu_ticks": [
+      2385320,
+      518114,
+      594738,
+      98634201,
+      3571337,
+      0,
+      70967,
+      0
+    ],
+    "load_average": [
+      4.3701171875,
+      6.30810546875,
+      7.02001953125
+    ],
+    "cores": 20,
+    "ticks_per_second": 100
+  }
+}

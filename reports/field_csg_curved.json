@@ -1,0 +1,273 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "coverage": true,
+    "exact": true,
+    "repeats": true,
+    "watertight": true,
+    "analytic_brep": true,
+    "volume_1percent": true,
+    "envelope": true,
+    "refinement": true,
+    "missing_hole_control": true
+  },
+  "rows": [
+    {
+      "fixture": "bracket_plate_rectangular_holes",
+      "pitch": 0.5,
+      "leg": 0,
+      "operation_ms": {
+        "field": 27.227757999999998,
+        "brep": 33.713721
+      },
+      "field_prepare_ms": 50.717695,
+      "brep_prepare_ms": 4.229813,
+      "field_unpack_extract_ms": 35.392905999999996,
+      "retained_bytes": 136020,
+      "mesh_volume": 967.25,
+      "brep_volume": 960.0000000000001,
+      "analytic_volume": 960.0,
+      "relative_volume_error": 0.007552083333333333,
+      "volume_envelope": [
+        507.0,
+        1513.0
+      ],
+      "watertight": true,
+      "brep_valid": true,
+      "exact": true,
+      "missing_hole_changed_samples": 490,
+      "hashes": [
+        "93cd03976b4bb3f4516165f5749c6ef556209a1e5df368194a7392d82d2a8e1d",
+        "3be0f4342dcaf8be51eeb3617d1626a3d3920f8194f130c334befb65e748cefd",
+        "5b16e02cc06e59d35c627f00d9a53d3a1f75fd9dd31c51a2e21ed221edd40932",
+        "e5b7a6a667867b60945fa9b304c5b672d72280f00bf78c30188b2e24c218d1af",
+        "14aafed2fa2fc1a526e30e85fb0671ad0a6234a53f93e8bd22b120f317c200d2"
+      ]
+    },
+    {
+      "fixture": "bracket_plate_rectangular_holes",
+      "pitch": 0.5,
+      "leg": 1,
+      "operation_ms": {
+        "brep": 68.389932,
+        "field": 27.377148
+      },
+      "field_prepare_ms": 50.717695,
+      "brep_prepare_ms": 4.229813,
+      "field_unpack_extract_ms": 28.069917999999998,
+      "retained_bytes": 136020,
+      "mesh_volume": 967.25,
+      "brep_volume": 960.0000000000001,
+      "analytic_volume": 960.0,
+      "relative_volume_error": 0.007552083333333333,
+      "volume_envelope": [
+        507.0,
+        1513.0
+      ],
+      "watertight": true,
+      "brep_valid": true,
+      "exact": true,
+      "missing_hole_changed_samples": 490,
+      "hashes": [
+        "93cd03976b4bb3f4516165f5749c6ef556209a1e5df368194a7392d82d2a8e1d",
+        "3be0f4342dcaf8be51eeb3617d1626a3d3920f8194f130c334befb65e748cefd",
+        "5b16e02cc06e59d35c627f00d9a53d3a1f75fd9dd31c51a2e21ed221edd40932",
+        "e5b7a6a667867b60945fa9b304c5b672d72280f00bf78c30188b2e24c218d1af",
+        "14aafed2fa2fc1a526e30e85fb0671ad0a6234a53f93e8bd22b120f317c200d2"
+      ]
+    },
+    {
+      "fixture": "bracket_plate_rectangular_holes",
+      "pitch": 0.25,
+      "leg": 0,
+      "operation_ms": {
+        "field": 143.571871,
+        "brep": 25.734211
+      },
+      "field_prepare_ms": 310.064779,
+      "brep_prepare_ms": 2.865583,
+      "field_unpack_extract_ms": 227.416316,
+      "retained_bytes": 648688,
+      "mesh_volume": 961.8125,
+      "brep_volume": 960.0000000000001,
+      "analytic_volume": 960.0,
+      "relative_volume_error": 0.0018880208333333333,
+      "volume_envelope": [
+        720.625,
+        1224.375
+      ],
+      "watertight": true,
+      "brep_valid": true,
+      "exact": true,
+      "missing_hole_changed_samples": 3510,
+      "hashes": [
+        "e4dc28dced530d683a35af57851603d0aeced9d297d7615d42baaa2f24749ca3",
+        "491aa6105e17681292235dc64718f236089e8f5a9b8f60ff2bbd03060af49c7c",
+        "3b5e9ffb9a79d3626b027f107cd7762224aa24b712d184959dacac8316a22216",
+        "b2f1a72de71896a6920a963fdf8cc7c5498a41406156d78e15002aa85adf2be5",
+        "abbfc6bee1205f858776968f6b0efdce197c1d0d234182ce189eb1f2e1036219"
+      ]
+    },
+    {
+      "fixture": "bracket_plate_rectangular_holes",
+      "pitch": 0.25,
+      "leg": 1,
+      "operation_ms": {
+        "brep": 26.405956,
+        "field": 144.691681
+      },
+      "field_prepare_ms": 310.064779,
+      "brep_prepare_ms": 2.865583,
+      "field_unpack_extract_ms": 227.678981,
+      "retained_bytes": 648688,
+      "mesh_volume": 961.8125,
+      "brep_volume": 960.0000000000001,
+      "analytic_volume": 960.0,
+      "relative_volume_error": 0.0018880208333333333,
+      "volume_envelope": [
+        720.625,
+        1224.375
+      ],
+      "watertight": true,
+      "brep_valid": true,
+      "exact": true,
+      "missing_hole_changed_samples": 3510,
+      "hashes": [
+        "e4dc28dced530d683a35af57851603d0aeced9d297d7615d42baaa2f24749ca3",
+        "491aa6105e17681292235dc64718f236089e8f5a9b8f60ff2bbd03060af49c7c",
+        "3b5e9ffb9a79d3626b027f107cd7762224aa24b712d184959dacac8316a22216",
+        "b2f1a72de71896a6920a963fdf8cc7c5498a41406156d78e15002aa85adf2be5",
+        "abbfc6bee1205f858776968f6b0efdce197c1d0d234182ce189eb1f2e1036219"
+      ]
+    },
+    {
+      "fixture": "sphere_plate_round_hole",
+      "pitch": 0.5,
+      "leg": 0,
+      "operation_ms": {
+        "field": 17.290333,
+        "brep": 8.938664
+      },
+      "field_prepare_ms": 26.708759999999998,
+      "brep_prepare_ms": 1.6867159999999999,
+      "field_unpack_extract_ms": 18.176956,
+      "retained_bytes": 238224,
+      "mesh_volume": 1235.9490849185006,
+      "brep_volume": 1233.6047889592164,
+      "analytic_volume": 1233.6047889592141,
+      "relative_volume_error": 0.001900362239404344,
+      "volume_envelope": [
+        776.5,
+        1744.5
+      ],
+      "watertight": true,
+      "brep_valid": true,
+      "exact": true,
+      "missing_hole_changed_samples": 667,
+      "hashes": [
+        "950429997b2ffbcf7f16b11e3a31ddafe99ade7dd060c8af01209962046c965b",
+        "238a0882ddbf868bd7e495cf48acf5c33e99b627d2a698f05ff8f4d1e0256b6e",
+        "660c87e5debb9552b63470c063591929ad4416cb8daa70018d1472617283c01e",
+        "6ae78affc3e2e3bbfc0ce88e809b4b09966f182404f069fe157c49b20d2a60d4",
+        "b6acfdebf4949260e27b427605cfb753f08581e4fe29ef1f2484926827649644"
+      ]
+    },
+    {
+      "fixture": "sphere_plate_round_hole",
+      "pitch": 0.5,
+      "leg": 1,
+      "operation_ms": {
+        "brep": 8.358671,
+        "field": 17.359413
+      },
+      "field_prepare_ms": 26.708759999999998,
+      "brep_prepare_ms": 1.6867159999999999,
+      "field_unpack_extract_ms": 17.911109,
+      "retained_bytes": 238224,
+      "mesh_volume": 1235.9490849185006,
+      "brep_volume": 1233.6047889592164,
+      "analytic_volume": 1233.6047889592141,
+      "relative_volume_error": 0.001900362239404344,
+      "volume_envelope": [
+        776.5,
+        1744.5
+      ],
+      "watertight": true,
+      "brep_valid": true,
+      "exact": true,
+      "missing_hole_changed_samples": 667,
+      "hashes": [
+        "950429997b2ffbcf7f16b11e3a31ddafe99ade7dd060c8af01209962046c965b",
+        "238a0882ddbf868bd7e495cf48acf5c33e99b627d2a698f05ff8f4d1e0256b6e",
+        "660c87e5debb9552b63470c063591929ad4416cb8daa70018d1472617283c01e",
+        "6ae78affc3e2e3bbfc0ce88e809b4b09966f182404f069fe157c49b20d2a60d4",
+        "b6acfdebf4949260e27b427605cfb753f08581e4fe29ef1f2484926827649644"
+      ]
+    },
+    {
+      "fixture": "sphere_plate_round_hole",
+      "pitch": 0.25,
+      "leg": 0,
+      "operation_ms": {
+        "field": 97.06420399999999,
+        "brep": 9.107877
+      },
+      "field_prepare_ms": 192.05568,
+      "brep_prepare_ms": 1.6510669999999998,
+      "field_unpack_extract_ms": 186.537385,
+      "retained_bytes": 1622820,
+      "mesh_volume": 1234.2085874143456,
+      "brep_volume": 1233.6047889592164,
+      "analytic_volume": 1233.6047889592141,
+      "relative_volume_error": 0.0004894585855498369,
+      "volume_envelope": [
+        1003.4375,
+        1479.25
+      ],
+      "watertight": true,
+      "brep_valid": true,
+      "exact": true,
+      "missing_hole_changed_samples": 5311,
+      "hashes": [
+        "be4769541cc85755d6f2544ea33620de707a7fb876e04c542bb17fca3d9a2b0a",
+        "5cfb397dbd00418b1bee7d664ae1479ee0cb717df80d2bdfd259aec0bf40d143",
+        "e3792f302f8ef0c4093de1f8eeadba796791b63d415a46694ac38f050a0f6bca",
+        "fb5041c3aa73485d5a67c43cbc274ace69d5e66cc0ffe3e52582ef2fffee5840",
+        "60e0e180defcadc3bcee318768dc8f6d719c876b524f617e7ec08411156f8d16"
+      ]
+    },
+    {
+      "fixture": "sphere_plate_round_hole",
+      "pitch": 0.25,
+      "leg": 1,
+      "operation_ms": {
+        "brep": 8.040056,
+        "field": 97.516674
+      },
+      "field_prepare_ms": 192.05568,
+      "brep_prepare_ms": 1.6510669999999998,
+      "field_unpack_extract_ms": 187.621095,
+      "retained_bytes": 1622820,
+      "mesh_volume": 1234.2085874143456,
+      "brep_volume": 1233.6047889592164,
+      "analytic_volume": 1233.6047889592141,
+      "relative_volume_error": 0.0004894585855498369,
+      "volume_envelope": [
+        1003.4375,
+        1479.25
+      ],
+      "watertight": true,
+      "brep_valid": true,
+      "exact": true,
+      "missing_hole_changed_samples": 5311,
+      "hashes": [
+        "be4769541cc85755d6f2544ea33620de707a7fb876e04c542bb17fca3d9a2b0a",
+        "5cfb397dbd00418b1bee7d664ae1479ee0cb717df80d2bdfd259aec0bf40d143",
+        "e3792f302f8ef0c4093de1f8eeadba796791b63d415a46694ac38f050a0f6bca",
+        "fb5041c3aa73485d5a67c43cbc274ace69d5e66cc0ffe3e52582ef2fffee5840",
+        "60e0e180defcadc3bcee318768dc8f6d719c876b524f617e7ec08411156f8d16"
+      ]
+    }
+  ],
+  "scope": "Two synthetic fixtures and two pitches, two reversed CPU orders. Operations start from prepared operands on both paths. Field sampling/packing and B-rep primitive preparation reported separately. Field extraction includes unpacking; B-rep tessellation is excluded. Outputs differ in representation, no universal speed claim or isolated CPU timing."
+}

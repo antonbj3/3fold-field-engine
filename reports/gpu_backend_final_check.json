@@ -1,0 +1,16 @@
+{
+  "scrub_matches": 0,
+  "scope": "Changed source/tests/RUNNING and new JSON reports; complete report and array parity separately retained.",
+  "unique_running_rows": 290,
+  "status_counts": {
+    "VERIFIED-FRESH": 173,
+    "OWN-GATE-FAIL": 57,
+    "SYNTHETIC-ONLY": 60
+  },
+  "diagnostic_table_last": true,
+  "readme_unchanged": true,
+  "diff_check": true,
+  "targeted_cpu": "5 passed, 1 CUDA skip, 53 deselected in 1.47s",
+  "targeted_h100": "6 passed, 53 deselected in 3.03s",
+  "full_cpu_suite_scope": "Previous71passed/5skipped before this backend integration; not rerun after these edits."
+}

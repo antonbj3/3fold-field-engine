@@ -1,0 +1,20 @@
+{
+  "unique_status_rows": 290,
+  "status_counts": {
+    "VERIFIED-FRESH": 173,
+    "OWN-GATE-FAIL": 57,
+    "SYNTHETIC-ONLY": 60
+  },
+  "duplicate_rows": 0,
+  "diagnostic_table_last": true,
+  "scrub_scope": "Source, probes, scripts, tests, docs and new GPU JSON reports; file identifiers remain frozen",
+  "scrub_matches": 0,
+  "diff_check": true,
+  "readme_sha256": "e2e4ba84881acd53ea271cf50f41212c0d24219d8c269d667edf28fb05f97ef6",
+  "gpu_candidate_source_sha256": "825feff91b17beb104c81d39af5b079378dd6ab1f928b125479b49b8a4383de1",
+  "scrub_categories": [
+    "absolute home directory",
+    "private platform and project names",
+    "personal names"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "exit": 0,
+      "report_sha256": "ce5b30a501bd52460768888e793973475b165d11b65c449034d207cebbd037f3",
+      "all_pass": true,
+      "n_pass": 4,
+      "n_cases": 4
+    },
+    {
+      "exit": 0,
+      "report_sha256": "ce5b30a501bd52460768888e793973475b165d11b65c449034d207cebbd037f3",
+      "all_pass": true,
+      "n_pass": 4,
+      "n_cases": 4
+    }
+  ],
+  "exact": true
+}

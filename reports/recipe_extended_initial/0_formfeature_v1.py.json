@@ -1,0 +1,97 @@
+{
+  "cell": "formfeature_v1_selftest",
+  "checks": [
+    {
+      "id": "f1_aabb_identical",
+      "pass": true,
+      "size": [
+        200.0,
+        150.0,
+        100.0
+      ]
+    },
+    {
+      "id": "f1_volume_less_than_solid_box",
+      "pass": true,
+      "solid_box_volume": 3000000,
+      "volume": 605922.7433388231
+    },
+    {
+      "id": "f2_hollow_centerline_unchanged",
+      "mid_x": 250.0,
+      "pass": true
+    },
+    {
+      "id": "f2_hollow_volume_less_than_solid_bar",
+      "pass": true,
+      "solid_bar_volume": 1200000,
+      "volume": 448005.5108210457
+    },
+    {
+      "id": "f2_solid_builds",
+      "pass": true,
+      "volume": 747063.2021157435
+    },
+    {
+      "id": "f3_z_extent_within_bounds",
+      "pass": true,
+      "z_max": 600.0,
+      "z_min": -1e-07
+    },
+    {
+      "id": "f3_has_toroidal_surface_from_shoulder_fillet",
+      "n_toroidal_faces": 1,
+      "pass": true
+    },
+    {
+      "id": "f3_nonzero_z0_bolt_holes_actually_cut",
+      "n_cylinder_faces_with_bolts": 6,
+      "pass": true,
+      "volume_nobolts": 219411.62757108154,
+      "volume_with_4_bolts": 218991.0101524365
+    },
+    {
+      "id": "f4_countersunk_holes_add_real_cone_faces",
+      "n_cone_faces": 4,
+      "n_countersunk": 2,
+      "pass": true
+    },
+    {
+      "id": "guard_raises_on_zero_overlap_no_flip_hint",
+      "msg_head": "formfeature_v1 SILENT ZERO in AT_A_no_flip: a subtraction was requested but the measured volume delta=0 mm3 lies within tol=8e-06 mm3 (v_before=8000, v_after=80",
+      "pass": true,
+      "raised": true
+    },
+    {
+      "flip_axis_overlap_mm3": 999.9999999999998,
+      "flip_axis_would_cut": true,
+      "id": "guard_flip_test_measures_real_overlap_not_a_guess",
+      "pass": true
+    },
+    {
+      "flip_axis_would_cut": true,
+      "id": "wrong_sign_axis_dir_raises_structured_error",
+      "pass": true,
+      "raised": true,
+      "requested_axis_dir": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "right_sign_batch_equals_sequential_and_removes_material",
+      "n_countersunk_batch": 8,
+      "n_countersunk_sequential": 8,
+      "pass": true,
+      "rel_dev_batch_vs_sequential": 0.0,
+      "removed_mm3": 96978.87082119659,
+      "v_batch_mm3": 8086106.67961235,
+      "v_sequential_mm3": 8086106.67961235,
+      "v_uncut_mm3": 8183085.550433546
+    }
+  ],
+  "n_checks": 13,
+  "n_fail": 0,
+  "verdict": "PASS"
+}

@@ -1,0 +1,45 @@
+{
+  "tested": 420,
+  "differences": [
+    {
+      "case": "descent4",
+      "sample": 2745,
+      "old": [
+        1277.9830465800972,
+        0.29871331402693035,
+        67.65292852980879,
+        0.0,
+        1210.0314047362615,
+        67.95164184383572,
+        6.0,
+        15.01511359764778
+      ],
+      "new": [
+        1277.9830465800974,
+        0.29871331402693035,
+        67.65292852980879,
+        0.0,
+        1210.0314047362617,
+        67.95164184383572,
+        6.0,
+        15.01511359764778
+      ],
+      "columns": [
+        0,
+        4
+      ]
+    }
+  ],
+  "difference_count": 1,
+  "cpp_source": "#include <algorithm>\n#include <cmath>\n#include <cstdint>\n#include <cstring>\n\nnamespace {\nconstexpr int max_controls = 64;\nbool valid(int n, int corners, int obstacle, const double* lengths,\n           const std::int32_t* indices, const double* sdf,\n           const double* p, const double* r, double* out) {\n    if (n < 2 || n > max_controls || corners < 0 || corners > max_controls ||\n        (obstacle != 0 && obstacle != 1) || !lengths || !p || !r || !out ||\n        (corners && !indices) || (obstacle && !sdf)) return false;\n    for (int i = 0; i < n; ++i)\n        if (!std::isfinite(r[i]) || r[i] <= 0 ||\n            (obstacle && !std::isfinite(sdf[i]))) return false;\n    for (int i = 0; i < n - 1; ++i)\n        if (!std::isfinite(lengths[i]) || lengths[i] < 0) return false;\n    for (int i = 0; i < corners; ++i)\n        if (indices[i] < 0 || indices[i] >= n) return false;\n    for (int i = 0; i < 10; ++i) if (!std::isfinite(p[i])) return false;\n    return p[1] > 0 && p[2] > 0 && p[3] > 0 && p[7] > 0 && p[8] > 0;\n}\n\n// Keep each scalar operation and each accumulation in the Python reference order.\nvoid evaluate(int n, int corners, int obstacle, const double* lengths,\n              const std::int32_t* indices, const double* sdf,\n              const double* p, const double* r, double* out) {\n    const double kb=p[0], flow=p[1], rho=p[2], mu=p[3], ka=p[4], ki=p[5];\n    const double area_min=p[6], area_den=p[7], intrusion_den=p[8], pi=p[9];\n    double friction=0.0;\n    for (int i=0; i<n-1; ++i) {\n        const double avg=0.5*(r[i]+r[i+1]);\n        const double area=pi*std::pow(avg,2.0), dh=2*avg;\n        const double area_m2=area*1e-6, dh_m=dh*1e-3, ds_m=lengths[i]*1e-3;\n        const double v=flow/std::max(area_m2,1e-9);\n        const double re=rho*v*dh_m/mu;\n        const double fd=re<2300 ? 64.0/re : 0.316*std::pow(re,-0.25);\n        const double dp=fd*(ds_m/std::max(dh_m,1e-9))*0.5*rho*std::pow(v,2.0);\n        friction+=dp;\n    }\n    double bend=0.0;\n    for (int j=0; j<corners; ++j) {\n        const double area=pi*std::pow(r[indices[j]],2.0);\n        const double v=flow/std::max(area*1e-6,1e-9);\n        bend+=kb*0.5*rho*std::pow(v,2.0);\n    }\n    double pen_area=0.0;\n    for (int i=0; i<n; ++i) {\n        const double a=pi*std::pow(r[i],2.0);\n        const double viol=std::max(0.0,area_min-a);\n        pen_area+=ka*std::pow(viol/area_den,2.0);\n    }\n    double pen_intrude=0.0, max_viol=0.0;\n    if (obstacle) for (int i=0; i<n; ++i) {\n        const double viol=std::max(0.0,r[i]-sdf[i]);\n        max_viol=std::max(max_viol,viol);\n        pen_intrude+=ki*std::pow(viol/intrusion_den,2.0);\n    }\n    out[0]=friction+bend+pen_area+pen_intrude;\n    out[1]=friction;out[2]=bend;out[3]=pen_area;out[4]=pen_intrude;\n    out[5]=friction+bend;out[6]=corners;out[7]=max_viol;\n}\n}\n\nextern \"C\" int field_radius_evaluate(int n, int corners, int obstacle,\n        const double* lengths, const std::int32_t* indices, const double* sdf,\n        const double* params, const double* radii, double* output, std::int64_t capacity) {\n    if (capacity<8 || !valid(n,corners,obstacle,lengths,indices,sdf,params,radii,output)) return 1;\n    evaluate(n,corners,obstacle,lengths,indices,sdf,params,radii,output);\n    return 0;\n}\n\nextern \"C\" int field_radius_central(int n, int corners, int obstacle,\n        const double* lengths, const std::int32_t* indices, const double* sdf,\n        const double* params, const double* radii, double* output, std::int64_t capacity,\n        double h) {\n    if (!std::isfinite(h) || h==0 || n<2 || n>max_controls || capacity<16*n ||\n        !valid(n,corners,obstacle,lengths,indices,sdf,params,radii,output)) return 1;\n    double scratch[max_controls];\n    std::memcpy(scratch,radii,n*sizeof(double));\n    for (int k=0; k<n; ++k) {\n        scratch[k]=radii[k]+h;\n        evaluate(n,corners,obstacle,lengths,indices,sdf,params,scratch,output+16*k);\n        scratch[k]=std::max(1.0,radii[k]-h);\n        evaluate(n,corners,obstacle,lengths,indices,sdf,params,scratch,output+16*k+8);\n        scratch[k]=radii[k];\n    }\n    return 0;\n}\n",
+  "cpp_sha256": "fe9eb741f99475f197a3e9a10500e47bb82eee6040dce241ce7e4562f9e5bf79",
+  "compiler_flags": [
+    "-std=c++17",
+    "-O3",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-shared",
+    "-fPIC"
+  ],
+  "scope": "420 frozen measured optimizer iterates across seven obstacle geometries; direct full objective output bytes compared. Initial optimizer trajectories were not run on this prototype."
+}

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "3FOLD · Field Engine"
+message: "If you use this software, please cite it."
+type: software
+authors:
+  - family-names: "Björkegren"
+    given-names: "Anton"
+repository-code: "https://github.com/antonbj3/3fold-field-engine"
+license: Apache-2.0
+date-released: "2026-09-11"

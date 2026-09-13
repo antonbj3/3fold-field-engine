@@ -1,0 +1,394 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "gates": {
+    "coverage": true,
+    "exact": true,
+    "repeat": true,
+    "lifecycle": true,
+    "plate_speedup_1_25": false
+  },
+  "rows": [
+    {
+      "case": "random_(1, 1, 2)",
+      "leg": 0,
+      "shape": [
+        1,
+        1,
+        2
+      ],
+      "setup_ms": 3.6196629999999996,
+      "reference_setup_ms": 168.385268,
+      "first_query_ms": 0.691444,
+      "warm_ms": {
+        "reference": 0.148945,
+        "candidate": 0.06948399999999999
+      },
+      "exact": true,
+      "hash": "d5c86aaabcf6420ce8c35f480ad3fc9dda411fb3455a0bc71119a817600618ae"
+    },
+    {
+      "case": "random_(1, 1, 2)",
+      "leg": 1,
+      "shape": [
+        1,
+        1,
+        2
+      ],
+      "setup_ms": 0.13427799999999998,
+      "reference_setup_ms": 0.425251,
+      "first_query_ms": 0.067241,
+      "warm_ms": {
+        "candidate": 0.056623,
+        "reference": 0.053669999999999995
+      },
+      "exact": true,
+      "hash": "d5c86aaabcf6420ce8c35f480ad3fc9dda411fb3455a0bc71119a817600618ae"
+    },
+    {
+      "case": "random_(512, 1, 7)",
+      "leg": 0,
+      "shape": [
+        512,
+        1,
+        7
+      ],
+      "setup_ms": 0.116507,
+      "reference_setup_ms": 0.544577,
+      "first_query_ms": 0.563442,
+      "warm_ms": {
+        "reference": 0.6058049999999999,
+        "candidate": 0.5156029999999999
+      },
+      "exact": true,
+      "hash": "6fa11cedbd937c606baf1d94a95e65e0c977ee040d64590933a6cb35ac46cd64"
+    },
+    {
+      "case": "random_(512, 1, 7)",
+      "leg": 1,
+      "shape": [
+        512,
+        1,
+        7
+      ],
+      "setup_ms": 0.11101899999999999,
+      "reference_setup_ms": 0.391955,
+      "first_query_ms": 0.454771,
+      "warm_ms": {
+        "candidate": 0.459765,
+        "reference": 0.528774
+      },
+      "exact": true,
+      "hash": "6fa11cedbd937c606baf1d94a95e65e0c977ee040d64590933a6cb35ac46cd64"
+    },
+    {
+      "case": "random_(1, 512, 7)",
+      "leg": 0,
+      "shape": [
+        1,
+        512,
+        7
+      ],
+      "setup_ms": 0.105671,
+      "reference_setup_ms": 0.467004,
+      "first_query_ms": 0.500047,
+      "warm_ms": {
+        "reference": 0.540481,
+        "candidate": 0.474703
+      },
+      "exact": true,
+      "hash": "0f8ff9cbf8865889fd72e59f0032446fa618534e01aff7bf8dad988f090b4542"
+    },
+    {
+      "case": "random_(1, 512, 7)",
+      "leg": 1,
+      "shape": [
+        1,
+        512,
+        7
+      ],
+      "setup_ms": 0.092889,
+      "reference_setup_ms": 0.36200299999999996,
+      "first_query_ms": 0.47053399999999995,
+      "warm_ms": {
+        "candidate": 0.47788899999999995,
+        "reference": 0.516837
+      },
+      "exact": true,
+      "hash": "0f8ff9cbf8865889fd72e59f0032446fa618534e01aff7bf8dad988f090b4542"
+    },
+    {
+      "case": "random_(7, 1, 512)",
+      "leg": 0,
+      "shape": [
+        7,
+        1,
+        512
+      ],
+      "setup_ms": 0.099759,
+      "reference_setup_ms": 0.427378,
+      "first_query_ms": 0.493178,
+      "warm_ms": {
+        "reference": 0.50597,
+        "candidate": 0.470197
+      },
+      "exact": true,
+      "hash": "ba1370a5617c0dfd50af607cf2154174f190cf10779d4af9f9ab74f1bec945f2"
+    },
+    {
+      "case": "random_(7, 1, 512)",
+      "leg": 1,
+      "shape": [
+        7,
+        1,
+        512
+      ],
+      "setup_ms": 0.102821,
+      "reference_setup_ms": 0.425628,
+      "first_query_ms": 0.46680099999999997,
+      "warm_ms": {
+        "candidate": 0.444936,
+        "reference": 0.47174699999999997
+      },
+      "exact": true,
+      "hash": "ba1370a5617c0dfd50af607cf2154174f190cf10779d4af9f9ab74f1bec945f2"
+    },
+    {
+      "case": "random_(31, 27, 19)",
+      "leg": 0,
+      "shape": [
+        31,
+        27,
+        19
+      ],
+      "setup_ms": 0.113623,
+      "reference_setup_ms": 0.569728,
+      "first_query_ms": 0.162073,
+      "warm_ms": {
+        "reference": 0.17979,
+        "candidate": 0.139088
+      },
+      "exact": true,
+      "hash": "ebed03ca86f22cf8e8c03e6e53e5d970323dadca23c149fd109bd0d6a6dc321f"
+    },
+    {
+      "case": "random_(31, 27, 19)",
+      "leg": 1,
+      "shape": [
+        31,
+        27,
+        19
+      ],
+      "setup_ms": 0.13669699999999999,
+      "reference_setup_ms": 0.46710799999999997,
+      "first_query_ms": 0.15084999999999998,
+      "warm_ms": {
+        "candidate": 0.13655399999999998,
+        "reference": 0.142935
+      },
+      "exact": true,
+      "hash": "ebed03ca86f22cf8e8c03e6e53e5d970323dadca23c149fd109bd0d6a6dc321f"
+    },
+    {
+      "case": "random_(97, 65, 89)",
+      "leg": 0,
+      "shape": [
+        97,
+        65,
+        89
+      ],
+      "setup_ms": 0.790049,
+      "reference_setup_ms": 1.7629789999999999,
+      "first_query_ms": 1.736124,
+      "warm_ms": {
+        "reference": 1.6511099999999999,
+        "candidate": 1.690505
+      },
+      "exact": true,
+      "hash": "b88d027179152a5cc94b18ac5b47991f2683f5f62a151ce8508c671ad191eeda"
+    },
+    {
+      "case": "random_(97, 65, 89)",
+      "leg": 1,
+      "shape": [
+        97,
+        65,
+        89
+      ],
+      "setup_ms": 0.659173,
+      "reference_setup_ms": 1.036659,
+      "first_query_ms": 1.712648,
+      "warm_ms": {
+        "candidate": 1.656963,
+        "reference": 1.698882
+      },
+      "exact": true,
+      "hash": "b88d027179152a5cc94b18ac5b47991f2683f5f62a151ce8508c671ad191eeda"
+    },
+    {
+      "case": "single_zero",
+      "leg": 0,
+      "shape": [
+        37,
+        41,
+        43
+      ],
+      "setup_ms": 0.447588,
+      "reference_setup_ms": 0.767243,
+      "first_query_ms": 0.281844,
+      "warm_ms": {
+        "reference": 0.296806,
+        "candidate": 0.312397
+      },
+      "exact": true,
+      "hash": "ac469b45a758403fefdd6d2c76485bdc451fe5def47d9cc3a627f360f0b75dc5"
+    },
+    {
+      "case": "single_zero",
+      "leg": 1,
+      "shape": [
+        37,
+        41,
+        43
+      ],
+      "setup_ms": 0.56855,
+      "reference_setup_ms": 0.61853,
+      "first_query_ms": 0.31384999999999996,
+      "warm_ms": {
+        "candidate": 0.279622,
+        "reference": 0.272505
+      },
+      "exact": true,
+      "hash": "ac469b45a758403fefdd6d2c76485bdc451fe5def47d9cc3a627f360f0b75dc5"
+    },
+    {
+      "case": "single_one",
+      "leg": 0,
+      "shape": [
+        37,
+        41,
+        43
+      ],
+      "setup_ms": 0.38841,
+      "reference_setup_ms": 0.7231489999999999,
+      "first_query_ms": 0.296373,
+      "warm_ms": {
+        "reference": 0.274404,
+        "candidate": 0.25576699999999997
+      },
+      "exact": true,
+      "hash": "ea50122c6433c62c6f207517e4f6c5a4a3abb141440068909650a2754e1e1d28"
+    },
+    {
+      "case": "single_one",
+      "leg": 1,
+      "shape": [
+        37,
+        41,
+        43
+      ],
+      "setup_ms": 0.37936,
+      "reference_setup_ms": 0.521237,
+      "first_query_ms": 0.285339,
+      "warm_ms": {
+        "candidate": 0.25871299999999997,
+        "reference": 0.256865
+      },
+      "exact": true,
+      "hash": "ea50122c6433c62c6f207517e4f6c5a4a3abb141440068909650a2754e1e1d28"
+    },
+    {
+      "case": "plate_L",
+      "leg": 0,
+      "shape": [
+        249,
+        109,
+        17
+      ],
+      "setup_ms": 0.729387,
+      "reference_setup_ms": 1.239461,
+      "first_query_ms": 1.572557,
+      "warm_ms": {
+        "reference": 1.481318,
+        "candidate": 1.407694
+      },
+      "exact": true,
+      "hash": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+    },
+    {
+      "case": "plate_L",
+      "leg": 1,
+      "shape": [
+        249,
+        109,
+        17
+      ],
+      "setup_ms": 0.718228,
+      "reference_setup_ms": 0.987625,
+      "first_query_ms": 1.4722419999999998,
+      "warm_ms": {
+        "candidate": 1.480583,
+        "reference": 1.403942
+      },
+      "exact": true,
+      "hash": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+    }
+  ],
+  "controls": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "source_sha256": "42276842fa1eb75217fe32a9b2228b91b5092946ffc4b4ceac7b0328221f24ca",
+  "scope": "Paired frozen persistent EDT versus exact-corrected quotient EDT; both handles warmed, opposite timing orders. Warm calls include mask validation/upload/full signed-field download. Setup and first query separate. Five pitches include contract endpoints. Full masks recomputed after change, thread/close controls. No full mesh-stage or 2 ms service claim."
+}

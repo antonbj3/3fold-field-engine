@@ -1,0 +1,8 @@
+{
+  "fixture_sha256": "48e80292093e89707a70b0e2e00fd404fba4b0ce457422b2cbcdc83da180bef9",
+  "source_sha256": {
+    "lastfalt_v1_topopt.py": "5beb7aa97146a6fe5a103e4f82c9b27a6de820f2c2f294e70ab1ab21bb62bb8a",
+    "lastfalt_v1_fem.py": "6ed4f7f14afeaafd439cd3939184aa0e8f0ca1dae770da9bb872a28a932cae3c"
+  },
+  "origin": "Actual second-iteration density and exponent from the frozen 12-iteration topology fixture; first differing observed operation. Complete 5120-element operands and both outputs."
+}

@@ -1,0 +1,154 @@
+{
+  "rows": [
+    {
+      "case": "rotated",
+      "voxels": 10296,
+      "legs": [
+        {
+          "exit": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "winding_sha256": "6ad5e19c5519d9b6b3dae763f6c2b226f2769819b9dbf06168eb92fdc0f9dfcc",
+          "distance_sha256": "2d0873516d29e7ff85353ccb2bf3c3f123caf1a199bbcb6b95bec0e8afd602e4",
+          "baseline_occupied": 1541,
+          "candidate_occupied": 1541,
+          "occupancy_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_distance_difference": 0.0
+        },
+        {
+          "exit": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "winding_sha256": "6ad5e19c5519d9b6b3dae763f6c2b226f2769819b9dbf06168eb92fdc0f9dfcc",
+          "distance_sha256": "2d0873516d29e7ff85353ccb2bf3c3f123caf1a199bbcb6b95bec0e8afd602e4",
+          "baseline_occupied": 1541,
+          "candidate_occupied": 1541,
+          "occupancy_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_distance_difference": 0.0
+        }
+      ]
+    },
+    {
+      "case": "translated_100",
+      "voxels": 10296,
+      "legs": [
+        {
+          "exit": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "winding_sha256": "6ad5e19c5519d9b6b3dae763f6c2b226f2769819b9dbf06168eb92fdc0f9dfcc",
+          "distance_sha256": "2d0873516d29e7ff85353ccb2bf3c3f123caf1a199bbcb6b95bec0e8afd602e4",
+          "baseline_occupied": 1541,
+          "candidate_occupied": 1541,
+          "occupancy_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_distance_difference": 0.0
+        },
+        {
+          "exit": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "winding_sha256": "6ad5e19c5519d9b6b3dae763f6c2b226f2769819b9dbf06168eb92fdc0f9dfcc",
+          "distance_sha256": "2d0873516d29e7ff85353ccb2bf3c3f123caf1a199bbcb6b95bec0e8afd602e4",
+          "baseline_occupied": 1541,
+          "candidate_occupied": 1541,
+          "occupancy_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_distance_difference": 0.0
+        }
+      ]
+    },
+    {
+      "case": "translated_10000",
+      "voxels": 10296,
+      "legs": [
+        {
+          "exit": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "winding_sha256": "95a41b4ae54a18c1dfa26eb447b91e23eb2dac522e612e1bd8d27e81dd3348e1",
+          "distance_sha256": "117bf94eb465ddb0e9fa5840d80e4c0f8bea85b884b1f83f212be613b900b23e",
+          "baseline_occupied": 1541,
+          "candidate_occupied": 1542,
+          "occupancy_mismatches": 1,
+          "distance_mismatches": 36,
+          "max_distance_difference": 0.25
+        },
+        {
+          "exit": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "winding_sha256": "95a41b4ae54a18c1dfa26eb447b91e23eb2dac522e612e1bd8d27e81dd3348e1",
+          "distance_sha256": "117bf94eb465ddb0e9fa5840d80e4c0f8bea85b884b1f83f212be613b900b23e",
+          "baseline_occupied": 1541,
+          "candidate_occupied": 1542,
+          "occupancy_mismatches": 1,
+          "distance_mismatches": 36,
+          "max_distance_difference": 0.25
+        }
+      ]
+    },
+    {
+      "case": "translated_1000000",
+      "voxels": 10296,
+      "legs": [
+        {
+          "exit": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "winding_sha256": "343f41e3ab3c12334a36c55423af9cc4ff84bad45a29989b4f71a98ae49f7a91",
+          "distance_sha256": "7daf54f1644c5090d5a2ba1dbfcdfd7cba7b89925d7f9d0ba59d526144526125",
+          "baseline_occupied": 1541,
+          "candidate_occupied": 1534,
+          "occupancy_mismatches": 49,
+          "distance_mismatches": 2717,
+          "max_distance_difference": 0.25
+        },
+        {
+          "exit": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "winding_sha256": "343f41e3ab3c12334a36c55423af9cc4ff84bad45a29989b4f71a98ae49f7a91",
+          "distance_sha256": "7daf54f1644c5090d5a2ba1dbfcdfd7cba7b89925d7f9d0ba59d526144526125",
+          "baseline_occupied": 1541,
+          "candidate_occupied": 1534,
+          "occupancy_mismatches": 49,
+          "distance_mismatches": 2717,
+          "max_distance_difference": 0.25
+        }
+      ]
+    },
+    {
+      "case": "thin_rotated",
+      "voxels": 5808,
+      "legs": [
+        {
+          "exit": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "winding_sha256": "bbcb9b7e294a9a94639ad13d0f4f64ad3f6e03462b6583e7bfa953354eb9b9fe",
+          "distance_sha256": "794632e770bf1a430e5c96b59ee9b0b1ccf49b7cc43af68050ef7d6a7f7489d6",
+          "baseline_occupied": 233,
+          "candidate_occupied": 233,
+          "occupancy_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_distance_difference": 0.0
+        },
+        {
+          "exit": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "winding_sha256": "bbcb9b7e294a9a94639ad13d0f4f64ad3f6e03462b6583e7bfa953354eb9b9fe",
+          "distance_sha256": "794632e770bf1a430e5c96b59ee9b0b1ccf49b7cc43af68050ef7d6a7f7489d6",
+          "baseline_occupied": 233,
+          "candidate_occupied": 233,
+          "occupancy_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_distance_difference": 0.0
+        }
+      ]
+    }
+  ],
+  "gates": {
+    "runtime_success": true,
+    "full_winding_repeat": true,
+    "exact_occupancy": false,
+    "exact_distance": false,
+    "no_observed_current_boot_fault": true
+  },
+  "timing_measured": false,
+  "binary_sha256": "bfa7cea50849ae466cb957298dc0f37fbf188dfdcbbed91ab9c707a6b3594bcc",
+  "ptx_sha256": "e49cb5ab6eb7b09d8ad9cc5265a06f82b8026ca5e6b4f9768235e8703b9f554d"
+}

@@ -1,0 +1,134 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "coverage": true,
+    "fresh": true,
+    "decisive": true,
+    "reports": true,
+    "source_hashes": true
+  },
+  "rows": [
+    {
+      "module": "recipe/cad_op_schema_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {},
+      "report_sha256": "bee58c42ad9a85036811b742b80a7ce6227c125ec023fd575eb222270ca93c68",
+      "own_check_count": 9,
+      "error": null
+    },
+    {
+      "module": "recipe/iso_thread_table_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {},
+      "report_sha256": "4856b3a5055b7a7faf7b847b256b2a3a442dc54fe401a19aac90c6f0a083f35d",
+      "own_check_count": 4,
+      "error": null
+    },
+    {
+      "module": "recipe/formrib_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {},
+      "report_sha256": "f073d0dabe2d0ca2ef86237f1feafd5e00626dd9474cfc51fe52fc00c08eec67",
+      "own_check_count": 4,
+      "error": null
+    },
+    {
+      "module": "recipe/geometri_selektor_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {},
+      "report_sha256": "59ac18b51ce5fee5521d8cce3909df7ca50561084e2e42838c4a34cdec7958e6",
+      "own_check_count": 12,
+      "error": null
+    },
+    {
+      "module": "recipe/cad_op_exec_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {
+        "AT2b_tomcut_fallbevis.row.wall_ms": 1.8455429963069037
+      },
+      "report_sha256": "257b7049d339472430532ecbcbd5f4d8fe09d350c012d34f32ada7e4c2dc95b5",
+      "own_check_count": 15,
+      "error": null
+    },
+    {
+      "module": "recipe/recept_cache_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {
+        "AT5c_synthetic_full_hit.t_cold_s": 0.104,
+        "AT5c_synthetic_full_hit.t_warm_s": 0.0,
+        "AT5c_synthetic_full_hit.speedup_x": 816.4,
+        "AT6a_mem_hit_same_process.t_cold_s": 0.111,
+        "AT6a_mem_hit_same_process.t_mem_s": 0.0,
+        "AT6a_mem_hit_same_process.speedup_x": 845.2
+      },
+      "report_sha256": "5ae5d9fc98582992658812b4c6029938b8ccae2cdcacbcce2f0144ac726c6b54",
+      "own_check_count": 7,
+      "error": null
+    },
+    {
+      "module": "recipe/formfeature_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {},
+      "report_sha256": "c921309e106218498676a88ae8e6302bd4adc9a292fdd5212e6e350cbf97a3ce",
+      "own_check_count": 13,
+      "error": null
+    },
+    {
+      "module": "recipe/brep_recept_synth_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {},
+      "report_sha256": "b89d66fd0f51819fda3e4875822ad3b5962d2f0beb96da6c9e6d7ea70fd300c6",
+      "own_check_count": 5,
+      "error": null
+    },
+    {
+      "module": "recipe/_cad_op_exec_v1_populationsvakt_fallbevis.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {},
+      "report_sha256": "ce5b30a501bd52460768888e793973475b165d11b65c449034d207cebbd037f3",
+      "own_check_count": 4,
+      "error": null
+    }
+  ],
+  "source_sha256": {
+    "src/field_engine/recipe/_cad_op_exec_v1_formverb_test.py": "fdfc4a86408711566f4e53c17cd394e0d629116ede479e9feab138bb10f8587f",
+    "src/field_engine/recipe/_cad_op_exec_v1_populationsvakt_fallbevis.py": "66bd786b2e68ad2bcb41ea33fe2a05239b00bbf98782de70455e3e6b5f3e563d",
+    "src/field_engine/recipe/brep_recept_synth_v1.py": "6faf3414a1a46911f10ab78b09ff73fdaafbcfc5bec90266f75031ec2dc1fcf0",
+    "src/field_engine/recipe/cad_op_exec_v1.py": "808f572217884893ed1b76a344953f567c2dfbd0f01c9ff395720e9a9664f772",
+    "src/field_engine/recipe/cad_op_schema_v1.py": "d72ca140e58012c4a8562c20c631087cd8b915c98b49a2696232607a90da5f4f",
+    "src/field_engine/recipe/formfeature_v1.py": "243dc9aa3388faa2f47f3f072f2f7189b9c54723dedf2e243ead7353fc012062",
+    "src/field_engine/recipe/formrib_v1.py": "0070d8bab2b2ebe085344ebcaa5085a33e4b49ee31c0b01484738807827f0f9e",
+    "src/field_engine/recipe/geometri_selektor_v1.py": "c7a9f7c5efe94923714297e05e27cae5ada15996b19ce8ac2e17ca7ac7ae992d",
+    "src/field_engine/recipe/iso_thread_table_v1.py": "f23d4ae29d8b122afab3c6d883907faa7d0475fd75f716fa2e37b01b9eef5792",
+    "src/field_engine/recipe/recept_cache_v1.py": "83f4cfe5380db41bd9aee4db26ccea1e1b769109817f6bda977649fdd77321e9",
+    "src/field_engine/recipe/sketch_gcs_v1.py": "d999420f7eef60e69cdf4d2daa5fd70db9519085f8486150447d392405610d6d"
+  },
+  "scope": "Explicit executable recipe selftests; every own gate and all report fields except named clock observations/generated STEP directories. Raw reports retained; no imported-library coverage inferred."
+}

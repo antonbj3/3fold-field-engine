@@ -1,0 +1,6 @@
+{"label": "lock_acquired", "utc": "2026-09-13T04:59:30.555249+00:00", "monotonic_ns": 36427662432876}
+{"label": "child0_begin", "utc": "2026-09-13T04:59:30.566863+00:00", "monotonic_ns": 36427674046614}
+{"label": "child0_end", "utc": "2026-09-13T04:59:40.181754+00:00", "monotonic_ns": 36437288940378}
+{"label": "child1_begin", "utc": "2026-09-13T04:59:40.194290+00:00", "monotonic_ns": 36437301472450}
+{"label": "child1_end", "utc": "2026-09-13T04:59:49.715865+00:00", "monotonic_ns": 36446823051282}
+{"label": "lock_released", "utc": "2026-09-13T04:59:49.728408+00:00", "monotonic_ns": 36446835594592}

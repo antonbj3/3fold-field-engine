@@ -1,0 +1,97 @@
+{
+  "exact": true,
+  "controls": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "rows": [
+    {
+      "case": "(2046, 2)",
+      "leg": 0,
+      "times_ms": {
+        "numpy": 0.167598,
+        "native": 0.047816
+      },
+      "exact": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case": "(2046, 2)",
+      "leg": 1,
+      "times_ms": {
+        "native": 0.025188,
+        "numpy": 0.099379
+      },
+      "exact": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case": "(7239, 2)",
+      "leg": 0,
+      "times_ms": {
+        "numpy": 0.288857,
+        "native": 0.079677
+      },
+      "exact": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case": "(7239, 2)",
+      "leg": 1,
+      "times_ms": {
+        "native": 0.08133699999999999,
+        "numpy": 0.29833899999999997
+      },
+      "exact": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case": "(27141, 2)",
+      "leg": 0,
+      "times_ms": {
+        "numpy": 1.07544,
+        "native": 0.244644
+      },
+      "exact": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case": "(27141, 2)",
+      "leg": 1,
+      "times_ms": {
+        "native": 0.239781,
+        "numpy": 0.9736849999999999
+      },
+      "exact": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case": "(572, 2)",
+      "leg": 0,
+      "times_ms": {
+        "numpy": 0.076529,
+        "native": 0.025155999999999998
+      },
+      "exact": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case": "(572, 2)",
+      "leg": 1,
+      "times_ms": {
+        "native": 0.015567999999999999,
+        "numpy": 0.051347
+      },
+      "exact": true,
+      "inputs_unchanged": true
+    }
+  ],
+  "scope": "All actual captured original L4 raw rows versus complete stored outputs and NumPy, two orders; original sorting controls plus two native invalid counts."
+}

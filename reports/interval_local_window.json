@@ -1,0 +1,9 @@
+{
+  "reservation": "D-INTERVAL-RT-120657",
+  "start": "2026-09-13T12:06:57.465311+00:00",
+  "exit": 1,
+  "gpu": "NVIDIA GeForce RTX 5070, 580.178.04, 7 %, 1587 MiB",
+  "contexts": "",
+  "end": "2026-09-13T12:07:14.866677+00:00",
+  "scope": "User-authorized shared-lock window; interval helper, raw hits and complete owned fields. No compute contexts, desktop background recorded. Before/between/after journal guards pass; children ended and lock released, no settings changes."
+}

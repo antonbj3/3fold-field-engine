@@ -1,0 +1,19 @@
+{
+  "status": "VERIFIED-FRESH",
+  "controls": {
+    "valid_report": true,
+    "false_gate": true,
+    "missing_gate": true,
+    "empty_gates": true,
+    "nonboolean_gate": true,
+    "wrong_number": true,
+    "signed_zero_bytes": true,
+    "wrong_dtype": true,
+    "valid_manifest": true,
+    "stale_source": true,
+    "empty_sources": true,
+    "missing_artifact": true,
+    "corrupt_artifact": true
+  },
+  "scope": "Verifier controls only; synthetic artifacts are never loaded or executed."
+}

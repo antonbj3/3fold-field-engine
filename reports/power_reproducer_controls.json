@@ -1,0 +1,17 @@
+{
+  "status": "VERIFIED-FRESH",
+  "rows": [
+    {
+      "control": "corrupt_archive",
+      "exit": 1,
+      "expected_refusal": true,
+      "no_actual_output": true
+    },
+    {
+      "control": "empty_fixture",
+      "exit": 1,
+      "expected_refusal": true,
+      "no_actual_output": true
+    }
+  ]
+}

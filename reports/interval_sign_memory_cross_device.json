@@ -1,0 +1,59 @@
+{
+  "status": "VERIFIED-FRESH",
+  "rows": [
+    {
+      "report": "field_rt_interval_sign_gpu",
+      "arrays": 10,
+      "bytes_compared": 22322976,
+      "instrumented_exact": true,
+      "cross_device_exact": true,
+      "child_exit": 0,
+      "instrumented_gates": {
+        "coverage": true,
+        "exact": true,
+        "repeat": true,
+        "no_false_rejection": true
+      },
+      "errors": [
+        "ERROR SUMMARY: 0 errors"
+      ]
+    },
+    {
+      "report": "field_rt_interval_sign_hits",
+      "arrays": 72,
+      "bytes_compared": 8877760,
+      "instrumented_exact": true,
+      "cross_device_exact": true,
+      "child_exit": 0,
+      "instrumented_gates": {
+        "coverage": true,
+        "exact": true,
+        "repeat": true,
+        "capacity_lifecycle": true
+      },
+      "errors": [
+        "ERROR SUMMARY: 0 errors"
+      ]
+    },
+    {
+      "report": "field_interval_sign_service",
+      "arrays": 355,
+      "bytes_compared": 36115362,
+      "instrumented_exact": true,
+      "cross_device_exact": true,
+      "child_exit": 1,
+      "instrumented_gates": {
+        "coverage": true,
+        "exact": true,
+        "repeats": true,
+        "lifecycle_capacity": true,
+        "warm_L_2ms": false
+      },
+      "errors": [
+        "ERROR SUMMARY: 0 errors"
+      ]
+    }
+  ],
+  "hardware": "NVIDIA L4, 580.95.05, 0 %, 3 MiB",
+  "scope": "Full numerical/memory comparison, including explicit input arrays in the portable CUDA proof. All spawned processes targeted. Instrumented service latency failure retained; no performance acceptance claim."
+}

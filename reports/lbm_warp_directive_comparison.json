@@ -1,0 +1,49 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "directive": "22:00: one attempt, first measured no stops; duct judge under one second with parity",
+  "timings": {
+    "l4": {
+      "original0": 13.154522157999999,
+      "candidate0": 1.0838838640000006,
+      "candidate1": 1.0806534339999985,
+      "original1": 12.936776456000004
+    },
+    "h100": {
+      "original0": 6.3898574570000015,
+      "candidate0": 0.34852062800000283,
+      "candidate1": 0.3431096240000002,
+      "original1": 6.673160238000001
+    }
+  },
+  "speedups": {
+    "l4": [
+      12.13646830155227,
+      11.971253733137189
+    ],
+    "h100": [
+      18.33423029697958,
+      19.449061673653308
+    ]
+  },
+  "build_seconds": {
+    "l4": 2.535118013,
+    "h100": 2.370573575
+  },
+  "subsecond_after_build": {
+    "l4": false,
+    "h100": true
+  },
+  "full_states_exact_across_gpus_and_prior_numpy": true,
+  "full_reports_exact_across_gpus": true,
+  "step_controls": 55,
+  "step_controls_exact_across_gpus": true,
+  "stored_state_bytes": 33492288,
+  "model": "Existing three-dimensional float64 D3Q19 judge retained. Kernel-engine lbm_gpu_fast.py is two-dimensional float32 D2Q9 and is not a drop-in exact-parity backend.",
+  "scope": "Completed pre-directive GPU sibling attempt retained. H100 meets the after-build target; L4 misses it. One-time import/context/build separately measured; neither cold process startup nor calibration lifecycle claimed under one second. Default/public backend unchanged; no further attempt or polishing.",
+  "source_sha256": {
+    "src/field_engine/lbm_warp_v1.py": "825feff91b17beb104c81d39af5b079378dd6ab1f928b125479b49b8a4383de1",
+    "src/field_engine/lbm_collision_native_v1.py": "26d2ccd68031b8f7017a2e4474fdd04d9c00c1995a8c04d1d4fe81018c697a16",
+    "src/field_engine/lbm_collision_native_v1/collision.cpp": "b65576fdb8fab9e928e22b238cd93ff145ec28eb423c7e21492218465cd4cf07",
+    "src/field_engine/lbm_collision_native_v1/moments.hpp": "a17a19593a8f2f49ac2758383a51d2f31e47d69ff906736222800e26f27fe898"
+  }
+}

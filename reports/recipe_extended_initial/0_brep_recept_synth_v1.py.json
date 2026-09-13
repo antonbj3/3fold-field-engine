@@ -1,0 +1,909 @@
+{
+  "PASS": true,
+  "plate_combined": {
+    "PASS": true,
+    "chamfer_legs": [
+      [
+        2.0,
+        2.0
+      ],
+      [
+        2.0,
+        4.0
+      ]
+    ],
+    "face_count_match": false,
+    "face_mix_match": false,
+    "op_types": [
+      "sketch_2d",
+      "extrude",
+      "chamfer",
+      "fillet",
+      "hole",
+      "hole"
+    ],
+    "orig": {
+      "face_mix": {
+        "CYLINDER": 3,
+        "PLANE": 8
+      },
+      "n_faces": 11,
+      "volume": 149279.8009333734
+    },
+    "params_used": {
+      "cham_pl0_d": 2.0,
+      "fil_pt0_r": 3.0,
+      "h": 140.0,
+      "height": 12.0,
+      "hole0_d": 8.0,
+      "hole1_d": 8.0,
+      "w": 90.0
+    },
+    "rebuilt": {
+      "face_mix": {
+        "CYLINDER": 3,
+        "PLANE": 7
+      },
+      "n_faces": 10,
+      "volume": 149639.80093337342
+    },
+    "recipe": {
+      "ops": [
+        {
+          "id": "sk_base",
+          "op": "sketch_2d",
+          "plane": {
+            "origin": [
+              -0.0,
+              0.0,
+              -6.0
+            ],
+            "x_dir": [
+              -0.0,
+              1.0,
+              0.0
+            ],
+            "z_dir": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          "shapes": [
+            {
+              "center": [
+                0.0,
+                0.0
+              ],
+              "height": {
+                "expr": "h"
+              },
+              "type": "rectangle",
+              "width": {
+                "expr": "w"
+              }
+            }
+          ]
+        },
+        {
+          "amount": {
+            "expr": "height"
+          },
+          "id": "base",
+          "op": "extrude",
+          "sketch_ref": "sk_base"
+        },
+        {
+          "distance": {
+            "expr": "cham_pl0_d"
+          },
+          "id": "cham_pl0",
+          "op": "chamfer",
+          "selector": {
+            "entity": "edge",
+            "expected_count": 1,
+            "geometry_type": "LINE",
+            "near_point": [
+              70.0,
+              0.0,
+              6.0
+            ]
+          },
+          "target_ref": "base"
+        },
+        {
+          "id": "fil_pt0",
+          "op": "fillet",
+          "radius": {
+            "expr": "fil_pt0_r"
+          },
+          "selector": {
+            "entity": "edge",
+            "expected_count": 1,
+            "geometry_type": "LINE",
+            "near_point": [
+              70.0,
+              0.0,
+              -6.0
+            ]
+          },
+          "target_ref": "cham_pl0"
+        },
+        {
+          "axis": "Z",
+          "center": [
+            -55.0,
+            0.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole0_d"
+          },
+          "id": "hole0",
+          "op": "hole",
+          "target_ref": "fil_pt0",
+          "through": true
+        },
+        {
+          "axis": "Z",
+          "center": [
+            55.0,
+            0.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole1_d"
+          },
+          "id": "hole1",
+          "op": "hole",
+          "target_ref": "hole0",
+          "through": true
+        }
+      ],
+      "params": {
+        "cham_pl0_d": 2.0,
+        "fil_pt0_r": 3.0,
+        "h": 140.0,
+        "height": 12.0,
+        "hole0_d": 8.0,
+        "hole1_d": 8.0,
+        "w": 90.0
+      },
+      "result_ref": "hole1"
+    },
+    "step": "/tmp/tmpkcdbyld8/synthetic_bracket_combined_v1.step",
+    "vol_dev_pct": 0.241158,
+    "vol_excess_mm3": 360.0000000000291,
+    "vol_excess_vs_wedge_mm3": 2.9103830456733704e-11
+  },
+  "plate_with_asym_chamfer": {
+    "PASS": true,
+    "asym_features": [
+      {
+        "bisector_dev_deg": 18.434948822922017,
+        "distance": null,
+        "leg_a": 4.0,
+        "leg_b": 2.0,
+        "symmetric": false
+      }
+    ],
+    "face_count_match": false,
+    "face_mix_match": false,
+    "n_chamfer_ops": 0,
+    "orig": {
+      "face_mix": {
+        "CYLINDER": 4,
+        "PLANE": 7
+      },
+      "n_faces": 11,
+      "volume": 148427.2568420428
+    },
+    "params_used": {
+      "h": 140.0,
+      "height": 12.0,
+      "hole0_d": 8.0,
+      "hole1_d": 8.0,
+      "hole2_d": 8.0,
+      "hole3_d": 8.0,
+      "w": 90.0
+    },
+    "rebuilt": {
+      "face_mix": {
+        "CYLINDER": 4,
+        "PLANE": 6
+      },
+      "n_faces": 10,
+      "volume": 148787.256842043
+    },
+    "recipe": {
+      "ops": [
+        {
+          "id": "sk_base",
+          "op": "sketch_2d",
+          "plane": {
+            "origin": [
+              -0.0,
+              0.0,
+              -6.0
+            ],
+            "x_dir": [
+              -0.0,
+              1.0,
+              0.0
+            ],
+            "z_dir": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          "shapes": [
+            {
+              "center": [
+                0.0,
+                0.0
+              ],
+              "height": {
+                "expr": "h"
+              },
+              "type": "rectangle",
+              "width": {
+                "expr": "w"
+              }
+            }
+          ]
+        },
+        {
+          "amount": {
+            "expr": "height"
+          },
+          "id": "base",
+          "op": "extrude",
+          "sketch_ref": "sk_base"
+        },
+        {
+          "axis": "Z",
+          "center": [
+            -55.0,
+            -32.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole0_d"
+          },
+          "id": "hole0",
+          "op": "hole",
+          "target_ref": "base",
+          "through": true
+        },
+        {
+          "axis": "Z",
+          "center": [
+            55.0,
+            -32.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole1_d"
+          },
+          "id": "hole1",
+          "op": "hole",
+          "target_ref": "hole0",
+          "through": true
+        },
+        {
+          "axis": "Z",
+          "center": [
+            -55.0,
+            32.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole2_d"
+          },
+          "id": "hole2",
+          "op": "hole",
+          "target_ref": "hole1",
+          "through": true
+        },
+        {
+          "axis": "Z",
+          "center": [
+            55.0,
+            32.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole3_d"
+          },
+          "id": "hole3",
+          "op": "hole",
+          "target_ref": "hole2",
+          "through": true
+        }
+      ],
+      "params": {
+        "h": 140.0,
+        "height": 12.0,
+        "hole0_d": 8.0,
+        "hole1_d": 8.0,
+        "hole2_d": 8.0,
+        "hole3_d": 8.0,
+        "w": 90.0
+      },
+      "result_ref": "hole3"
+    },
+    "step": "/tmp/tmpgder2vd8/synthetic_bracket_asym_chamfer_v1.step",
+    "vol_dev_pct": 0.242543,
+    "vol_excess_mm3": 360.0000000001746,
+    "vol_excess_vs_wedge_mm3": 1.7462298274040222e-10
+  },
+  "plate_with_chamfer": {
+    "PASS": true,
+    "chamfer_distances": [
+      2.0,
+      2.0,
+      2.0,
+      2.0
+    ],
+    "face_count_match": true,
+    "face_mix_match": true,
+    "n_chamfer_ops": 4,
+    "orig": {
+      "face_mix": {
+        "CYLINDER": 4,
+        "PLANE": 10
+      },
+      "n_faces": 14,
+      "volume": 147877.92350870953
+    },
+    "params_used": {
+      "cham_pl0_d": 2.0,
+      "cham_pl1_d": 2.0,
+      "cham_pl2_d": 2.0,
+      "cham_pl3_d": 2.0,
+      "h": 90.0,
+      "height": 12.0,
+      "hole0_d": 8.0,
+      "hole1_d": 8.0,
+      "hole2_d": 8.0,
+      "hole3_d": 8.0,
+      "w": 140.0
+    },
+    "rebuilt": {
+      "face_mix": {
+        "CYLINDER": 4,
+        "PLANE": 10
+      },
+      "n_faces": 14,
+      "volume": 147877.92350870965
+    },
+    "recipe": {
+      "ops": [
+        {
+          "id": "sk_base",
+          "op": "sketch_2d",
+          "plane": {
+            "origin": [
+              0.0,
+              0.0,
+              -6.0
+            ],
+            "x_dir": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "z_dir": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          "shapes": [
+            {
+              "center": [
+                0.0,
+                0.0
+              ],
+              "height": {
+                "expr": "h"
+              },
+              "type": "rectangle",
+              "width": {
+                "expr": "w"
+              }
+            }
+          ]
+        },
+        {
+          "amount": {
+            "expr": "height"
+          },
+          "id": "base",
+          "op": "extrude",
+          "sketch_ref": "sk_base"
+        },
+        {
+          "distance": {
+            "expr": "cham_pl0_d"
+          },
+          "id": "cham_pl0",
+          "op": "chamfer",
+          "selector": {
+            "entity": "edge",
+            "expected_count": 1,
+            "geometry_type": "LINE",
+            "near_point": [
+              -70.0,
+              0.0,
+              6.0
+            ]
+          },
+          "target_ref": "base"
+        },
+        {
+          "distance": {
+            "expr": "cham_pl1_d"
+          },
+          "id": "cham_pl1",
+          "op": "chamfer",
+          "selector": {
+            "entity": "edge",
+            "expected_count": 1,
+            "geometry_type": "LINE",
+            "near_point": [
+              0.0,
+              -45.0,
+              6.0
+            ]
+          },
+          "target_ref": "cham_pl0"
+        },
+        {
+          "distance": {
+            "expr": "cham_pl2_d"
+          },
+          "id": "cham_pl2",
+          "op": "chamfer",
+          "selector": {
+            "entity": "edge",
+            "expected_count": 1,
+            "geometry_type": "LINE",
+            "near_point": [
+              0.0,
+              45.0,
+              6.0
+            ]
+          },
+          "target_ref": "cham_pl1"
+        },
+        {
+          "distance": {
+            "expr": "cham_pl3_d"
+          },
+          "id": "cham_pl3",
+          "op": "chamfer",
+          "selector": {
+            "entity": "edge",
+            "expected_count": 1,
+            "geometry_type": "LINE",
+            "near_point": [
+              70.0,
+              0.0,
+              6.0
+            ]
+          },
+          "target_ref": "cham_pl2"
+        },
+        {
+          "axis": "Z",
+          "center": [
+            -55.0,
+            -32.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole0_d"
+          },
+          "id": "hole0",
+          "op": "hole",
+          "target_ref": "cham_pl3",
+          "through": true
+        },
+        {
+          "axis": "Z",
+          "center": [
+            55.0,
+            -32.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole1_d"
+          },
+          "id": "hole1",
+          "op": "hole",
+          "target_ref": "hole0",
+          "through": true
+        },
+        {
+          "axis": "Z",
+          "center": [
+            -55.0,
+            32.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole2_d"
+          },
+          "id": "hole2",
+          "op": "hole",
+          "target_ref": "hole1",
+          "through": true
+        },
+        {
+          "axis": "Z",
+          "center": [
+            55.0,
+            32.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole3_d"
+          },
+          "id": "hole3",
+          "op": "hole",
+          "target_ref": "hole2",
+          "through": true
+        }
+      ],
+      "params": {
+        "cham_pl0_d": 2.0,
+        "cham_pl1_d": 2.0,
+        "cham_pl2_d": 2.0,
+        "cham_pl3_d": 2.0,
+        "h": 90.0,
+        "height": 12.0,
+        "hole0_d": 8.0,
+        "hole1_d": 8.0,
+        "hole2_d": 8.0,
+        "hole3_d": 8.0,
+        "w": 140.0
+      },
+      "result_ref": "hole3"
+    },
+    "step": "/tmp/tmpoyc8jv3g/synthetic_bracket_chamfered_v1.step",
+    "vol_dev_pct": 0.0
+  },
+  "plate_with_fillet": {
+    "PASS": true,
+    "face_count_match": true,
+    "face_mix_match": true,
+    "fillet_near_points": [
+      [
+        70.0,
+        0.0,
+        6.0
+      ]
+    ],
+    "fillet_radii": [
+      3.0
+    ],
+    "n_fillet_ops": 1,
+    "orig": {
+      "face_mix": {
+        "CYLINDER": 5,
+        "PLANE": 6
+      },
+      "n_faces": 11,
+      "volume": 148613.42935439534
+    },
+    "params_used": {
+      "fil_pt0_r": 3.0,
+      "h": 140.0,
+      "height": 12.0,
+      "hole0_d": 8.0,
+      "hole1_d": 8.0,
+      "hole2_d": 8.0,
+      "hole3_d": 8.0,
+      "w": 90.0
+    },
+    "rebuilt": {
+      "face_mix": {
+        "CYLINDER": 5,
+        "PLANE": 6
+      },
+      "n_faces": 11,
+      "volume": 148613.4293543949
+    },
+    "recipe": {
+      "ops": [
+        {
+          "id": "sk_base",
+          "op": "sketch_2d",
+          "plane": {
+            "origin": [
+              -0.0,
+              0.0,
+              -6.0
+            ],
+            "x_dir": [
+              -0.0,
+              1.0,
+              0.0
+            ],
+            "z_dir": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          "shapes": [
+            {
+              "center": [
+                0.0,
+                0.0
+              ],
+              "height": {
+                "expr": "h"
+              },
+              "type": "rectangle",
+              "width": {
+                "expr": "w"
+              }
+            }
+          ]
+        },
+        {
+          "amount": {
+            "expr": "height"
+          },
+          "id": "base",
+          "op": "extrude",
+          "sketch_ref": "sk_base"
+        },
+        {
+          "id": "fil_pt0",
+          "op": "fillet",
+          "radius": {
+            "expr": "fil_pt0_r"
+          },
+          "selector": {
+            "entity": "edge",
+            "expected_count": 1,
+            "geometry_type": "LINE",
+            "near_point": [
+              70.0,
+              0.0,
+              6.0
+            ]
+          },
+          "target_ref": "base"
+        },
+        {
+          "axis": "Z",
+          "center": [
+            -55.0,
+            -32.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole0_d"
+          },
+          "id": "hole0",
+          "op": "hole",
+          "target_ref": "fil_pt0",
+          "through": true
+        },
+        {
+          "axis": "Z",
+          "center": [
+            55.0,
+            -32.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole1_d"
+          },
+          "id": "hole1",
+          "op": "hole",
+          "target_ref": "hole0",
+          "through": true
+        },
+        {
+          "axis": "Z",
+          "center": [
+            -55.0,
+            32.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole2_d"
+          },
+          "id": "hole2",
+          "op": "hole",
+          "target_ref": "hole1",
+          "through": true
+        },
+        {
+          "axis": "Z",
+          "center": [
+            55.0,
+            32.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole3_d"
+          },
+          "id": "hole3",
+          "op": "hole",
+          "target_ref": "hole2",
+          "through": true
+        }
+      ],
+      "params": {
+        "fil_pt0_r": 3.0,
+        "h": 140.0,
+        "height": 12.0,
+        "hole0_d": 8.0,
+        "hole1_d": 8.0,
+        "hole2_d": 8.0,
+        "hole3_d": 8.0,
+        "w": 90.0
+      },
+      "result_ref": "hole3"
+    },
+    "step": "/tmp/tmpi33xcjqg/synthetic_bracket_filleted_v1.step",
+    "vol_dev_pct": 0.0
+  },
+  "plate_with_holes": {
+    "PASS": true,
+    "face_count_match": true,
+    "face_mix_match": true,
+    "orig": {
+      "face_mix": {
+        "CYLINDER": 4,
+        "PLANE": 6
+      },
+      "n_faces": 10,
+      "volume": 148787.256842043
+    },
+    "params_used": {
+      "h": 90.0,
+      "height": 12.0,
+      "hole0_d": 8.0,
+      "hole1_d": 8.0,
+      "hole2_d": 8.0,
+      "hole3_d": 8.0,
+      "w": 140.0
+    },
+    "rebuilt": {
+      "face_mix": {
+        "CYLINDER": 4,
+        "PLANE": 6
+      },
+      "n_faces": 10,
+      "volume": 148787.256842043
+    },
+    "recipe": {
+      "ops": [
+        {
+          "id": "sk_base",
+          "op": "sketch_2d",
+          "plane": {
+            "origin": [
+              0.0,
+              0.0,
+              -6.0
+            ],
+            "x_dir": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "z_dir": [
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          "shapes": [
+            {
+              "center": [
+                0.0,
+                0.0
+              ],
+              "height": {
+                "expr": "h"
+              },
+              "type": "rectangle",
+              "width": {
+                "expr": "w"
+              }
+            }
+          ]
+        },
+        {
+          "amount": {
+            "expr": "height"
+          },
+          "id": "base",
+          "op": "extrude",
+          "sketch_ref": "sk_base"
+        },
+        {
+          "axis": "Z",
+          "center": [
+            -55.0,
+            -32.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole0_d"
+          },
+          "id": "hole0",
+          "op": "hole",
+          "target_ref": "base",
+          "through": true
+        },
+        {
+          "axis": "Z",
+          "center": [
+            55.0,
+            -32.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole1_d"
+          },
+          "id": "hole1",
+          "op": "hole",
+          "target_ref": "hole0",
+          "through": true
+        },
+        {
+          "axis": "Z",
+          "center": [
+            -55.0,
+            32.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole2_d"
+          },
+          "id": "hole2",
+          "op": "hole",
+          "target_ref": "hole1",
+          "through": true
+        },
+        {
+          "axis": "Z",
+          "center": [
+            55.0,
+            32.0,
+            0.0
+          ],
+          "diameter": {
+            "expr": "hole3_d"
+          },
+          "id": "hole3",
+          "op": "hole",
+          "target_ref": "hole2",
+          "through": true
+        }
+      ],
+      "params": {
+        "h": 90.0,
+        "height": 12.0,
+        "hole0_d": 8.0,
+        "hole1_d": 8.0,
+        "hole2_d": 8.0,
+        "hole3_d": 8.0,
+        "w": 140.0
+      },
+      "result_ref": "hole3"
+    },
+    "step": "/tmp/tmpv99yt647/synthetic_bracket_v1.step",
+    "vol_dev_pct": 0.0
+  }
+}

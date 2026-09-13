@@ -1,0 +1,12 @@
+{
+  "returncode": 0,
+  "seconds": 318.29393382399576,
+  "command": "python -m pytest tests/ -q",
+  "cuda_visible_devices": "",
+  "passed": 71,
+  "skipped": 5,
+  "warnings": 4,
+  "pytest_seconds": 317.0,
+  "scope": "Full CPU pytest suite; five GPU-dependent skips, four Gaussian-process fit convergence warnings. GPU candidate parity and latency are separately measured on H100 and L4. Pytest does not establish every module internal gate.",
+  "generated_tracked_artifacts_restored": 15
+}

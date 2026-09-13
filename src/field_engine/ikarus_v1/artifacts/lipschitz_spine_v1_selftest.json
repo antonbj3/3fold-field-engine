@@ -1,0 +1,66 @@
+{
+ "module": "lipschitz_spine_v1_selftest",
+ "audit": {
+  "n_stations": 9,
+  "n_live": 8,
+  "n_dropped_below_r_min": 1,
+  "dropped_station_indices": [
+   4
+  ],
+  "n_shrunk": 2,
+  "shrink_fraction": 0.2222,
+  "r_desired_mm": [
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   10.0
+  ],
+  "r_used_mm": [
+   10.0,
+   10.0,
+   10.0,
+   10.0,
+   0.0,
+   10.0,
+   10.0,
+   4.5,
+   10.0
+  ],
+  "d_free_at_station_mm": [
+   40.0,
+   40.0,
+   40.0,
+   40.0,
+   3.0,
+   40.0,
+   40.0,
+   8.0,
+   40.0
+  ],
+  "margin_mm": 3.5,
+  "wall_mm": 2.5,
+  "safety_mm": 1.0,
+  "k_smooth": 0.0,
+  "r_min_mm": 1.0,
+  "max_shrink_mm": 10.0,
+  "genus_condition_per_station": "r_used(s) <= d_free(s) - (WALL+SAFETY+k_smooth) -- holds by construction (min(), not a threshold check after the fact)",
+  "min_margin_slack_mm": 0.0
+ },
+ "obstacle_station_index": 4,
+ "obstacle_station_dropped": true,
+ "soft_obstacle_station_index": 7,
+ "soft_station_shrunk_not_dropped": true,
+ "n_shrunk_ge_2": true,
+ "far_stations_not_shrunk": true,
+ "roundtrip_identical": true,
+ "node_count": 23,
+ "leaf_ops": [
+  "sphere"
+ ],
+ "eval_sdf_py_at_center_mm": -5.0
+}

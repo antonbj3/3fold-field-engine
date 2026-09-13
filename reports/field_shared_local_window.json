@@ -1,0 +1,9 @@
+{
+  "reservation": "D-SHARED-MESH-113615",
+  "start": "2026-09-13T11:36:15.992702+00:00",
+  "exit": 1,
+  "gpu": "NVIDIA GeForce RTX 5070, 580.178.04, 3 %, 1260 MiB",
+  "contexts": "",
+  "end": "2026-09-13T11:36:30.139005+00:00",
+  "scope": "User-authorized local shared-lock window. No compute contexts; desktop background recorded. Before/after kernel fault guards pass. Seven synthetic fixtures; initial reservation described only the plate subset. Full arrays retained separately. No settings changes."
+}

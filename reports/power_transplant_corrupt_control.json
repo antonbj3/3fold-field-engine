@@ -1,0 +1,5 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "mode": "replay",
+  "error": "Power archive integrity mismatch before execution"
+}

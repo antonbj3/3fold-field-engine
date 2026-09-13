@@ -1,0 +1,17 @@
+{
+  "status": "VERIFIED-FRESH",
+  "scope": "CPU fake stage; owned snapshot semantics only, no GPU timing claim",
+  "controls": {
+    "fresh_query": true,
+    "no_outstanding_lease": true,
+    "owned_writable": true,
+    "tuple_shape": true,
+    "independent_writes": true,
+    "replacement": true,
+    "original_masks_unchanged": true,
+    "after_close": true,
+    "worker_stopped": true
+  },
+  "passed": 9,
+  "total": 9
+}

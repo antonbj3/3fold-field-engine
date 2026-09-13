@@ -1,0 +1,1753 @@
+[
+  {
+    "name": "i1_power2_result",
+    "differing": 183,
+    "size": 5120,
+    "max_abs": 2.7755575615628914e-17,
+    "first_index": [
+      34
+    ],
+    "local": 0.1482813428237846,
+    "modal": 0.14828134282378458
+  },
+  {
+    "name": "i1_assembly_K_data",
+    "differing": 61846,
+    "size": 1354896,
+    "max_abs": 4.656612873077393e-10,
+    "first_index": [
+      5503
+    ],
+    "local": -1076.1913315457068,
+    "modal": -1076.1913315457077
+  },
+  {
+    "name": "i1_solve_u",
+    "differing": 19313,
+    "size": 19602,
+    "max_abs": 2.8768099014087056e-12,
+    "first_index": [
+      0
+    ],
+    "local": -0.024552917398211152,
+    "modal": -0.02455291739821074
+  },
+  {
+    "name": "i1_compliance_value",
+    "differing": 1,
+    "size": 1,
+    "max_abs": 4.006142262369394e-08,
+    "first_index": [],
+    "local": 116631.64249878496,
+    "modal": 116631.64249882502
+  },
+  {
+    "name": "i1_energy_left",
+    "differing": 120952,
+    "size": 122880,
+    "max_abs": 2.8768099014087056e-12,
+    "first_index": [
+      0,
+      0
+    ],
+    "local": -0.024552917398211152,
+    "modal": -0.02455291739821074
+  },
+  {
+    "name": "i1_energy_right",
+    "differing": 120952,
+    "size": 122880,
+    "max_abs": 2.8768099014087056e-12,
+    "first_index": [
+      0,
+      0
+    ],
+    "local": -0.024552917398211152,
+    "modal": -0.02455291739821074
+  },
+  {
+    "name": "i1_energy_result",
+    "differing": 4930,
+    "size": 5120,
+    "max_abs": 6.536993168992922e-13,
+    "first_index": [
+      1
+    ],
+    "local": 0.00015194815295088704,
+    "modal": 0.00015194815295144215
+  },
+  {
+    "name": "i1_sensitivity_dc",
+    "differing": 4930,
+    "size": 5120,
+    "max_abs": 3.632294465205632e-08,
+    "first_index": [
+      1
+    ],
+    "local": -0.7282115230171258,
+    "modal": -0.7282115230197861
+  },
+  {
+    "name": "i1_filtered_dc",
+    "differing": 5120,
+    "size": 5120,
+    "max_abs": 1.2476903066271916e-08,
+    "first_index": [
+      0,
+      0,
+      0
+    ],
+    "local": -3.07788459113804,
+    "modal": -3.0778845911393238
+  },
+  {
+    "name": "i1_clamped_dc",
+    "differing": 4988,
+    "size": 5120,
+    "max_abs": 1.2476903066271916e-08,
+    "first_index": [
+      0
+    ],
+    "local": -3.07788459113804,
+    "modal": -3.0778845911393238
+  },
+  {
+    "name": "i1_oc015_rho",
+    "differing": 6,
+    "size": 5120,
+    "max_abs": 5.139118297581291e-16,
+    "first_index": [
+      4353
+    ],
+    "local": 0.0010620851245577493,
+    "modal": 0.001062085124558168
+  },
+  {
+    "name": "i1_oc016_rho",
+    "differing": 142,
+    "size": 5120,
+    "max_abs": 2.7671007846175044e-15,
+    "first_index": [
+      47
+    ],
+    "local": 0.0011125787257193858,
+    "modal": 0.0011125787257191713
+  },
+  {
+    "name": "i1_oc017_rho",
+    "differing": 390,
+    "size": 5120,
+    "max_abs": 6.419344222852175e-15,
+    "first_index": [
+      41
+    ],
+    "local": 0.0013755202894073224,
+    "modal": 0.0013755202894071934
+  },
+  {
+    "name": "i1_oc017_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 2.2737367544323206e-13,
+    "first_index": [
+      1
+    ],
+    "local": 849.206358624479,
+    "modal": 849.2063586244792
+  },
+  {
+    "name": "i1_oc018_rho",
+    "differing": 504,
+    "size": 5120,
+    "max_abs": 9.078024790221129e-15,
+    "first_index": [
+      10
+    ],
+    "local": 0.0010802883943844275,
+    "modal": 0.0010802883943845725
+  },
+  {
+    "name": "i1_oc018_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.547473508864641e-13,
+    "first_index": [
+      1
+    ],
+    "local": 849.4541595210038,
+    "modal": 849.4541595210043
+  },
+  {
+    "name": "i1_oc019_rho",
+    "differing": 620,
+    "size": 5120,
+    "max_abs": 1.752677863953167e-14,
+    "first_index": [
+      10
+    ],
+    "local": 0.0015277584986127123,
+    "modal": 0.0015277584986129172
+  },
+  {
+    "name": "i1_oc019_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 7.958078640513122e-13,
+    "first_index": [
+      1
+    ],
+    "local": 849.8479324307167,
+    "modal": 849.8479324307175
+  },
+  {
+    "name": "i1_oc020_rho",
+    "differing": 802,
+    "size": 5120,
+    "max_abs": 3.430437357787586e-14,
+    "first_index": [
+      10
+    ],
+    "local": 0.002160576788768855,
+    "modal": 0.002160576788769145
+  },
+  {
+    "name": "i1_oc020_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 1.4779288903810084e-12,
+    "first_index": [
+      1
+    ],
+    "local": 850.473478395438,
+    "modal": 850.4734783954394
+  },
+  {
+    "name": "i1_oc021_rho",
+    "differing": 984,
+    "size": 5120,
+    "max_abs": 4.851371041003638e-14,
+    "first_index": [
+      5
+    ],
+    "local": 0.0012073976907299871,
+    "modal": 0.0012073976907301673
+  },
+  {
+    "name": "i1_oc021_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 2.2737367544323206e-12,
+    "first_index": [
+      1
+    ],
+    "local": 851.4457355751799,
+    "modal": 851.4457355751822
+  },
+  {
+    "name": "i1_oc022_rho",
+    "differing": 1176,
+    "size": 5120,
+    "max_abs": 6.860874715575171e-14,
+    "first_index": [
+      5
+    ],
+    "local": 0.0017075181894083038,
+    "modal": 0.0017075181894085588
+  },
+  {
+    "name": "i1_oc022_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 2.9558577807620168e-12,
+    "first_index": [
+      1
+    ],
+    "local": 852.9245290939607,
+    "modal": 852.9245290939637
+  },
+  {
+    "name": "i1_oc023_rho",
+    "differing": 1346,
+    "size": 5120,
+    "max_abs": 1.0684422097062551e-13,
+    "first_index": [
+      0
+    ],
+    "local": 0.0010778972718647067,
+    "modal": 0.0010778972718649316
+  },
+  {
+    "name": "i1_oc023_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.888534022029489e-12,
+    "first_index": [
+      1
+    ],
+    "local": 855.181431709581,
+    "modal": 855.1814317095859
+  },
+  {
+    "name": "i1_oc024_rho",
+    "differing": 1480,
+    "size": 5120,
+    "max_abs": 1.6664621071971197e-13,
+    "first_index": [
+      0
+    ],
+    "local": 0.0015243769407160272,
+    "modal": 0.0015243769407163453
+  },
+  {
+    "name": "i1_oc024_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 7.275957614183426e-12,
+    "first_index": [
+      1
+    ],
+    "local": 858.6280059479147,
+    "modal": 858.628005947922
+  },
+  {
+    "name": "i1_oc025_rho",
+    "differing": 1540,
+    "size": 5120,
+    "max_abs": 2.356725925523051e-13,
+    "first_index": [
+      0
+    ],
+    "local": 0.0021557945437294134,
+    "modal": 0.002155794543729863
+  },
+  {
+    "name": "i1_oc025_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 1.1027623258996755e-11,
+    "first_index": [
+      1
+    ],
+    "local": 863.770472713264,
+    "modal": 863.770472713275
+  },
+  {
+    "name": "i1_oc026_rho",
+    "differing": 1652,
+    "size": 5120,
+    "max_abs": 3.33288951992472e-13,
+    "first_index": [
+      0
+    ],
+    "local": 0.0030487538814320545,
+    "modal": 0.0030487538814326907
+  },
+  {
+    "name": "i1_oc026_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 1.7621459846850485e-11,
+    "first_index": [
+      1
+    ],
+    "local": 871.8262270699524,
+    "modal": 871.8262270699701
+  },
+  {
+    "name": "i1_oc027_rho",
+    "differing": 1810,
+    "size": 5120,
+    "max_abs": 4.713451851046102e-13,
+    "first_index": [
+      0
+    ],
+    "local": 0.004311589087458827,
+    "modal": 0.0043115890874597254
+  },
+  {
+    "name": "i1_oc027_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 3.0468072509393096e-11,
+    "first_index": [
+      1
+    ],
+    "local": 884.9576852219393,
+    "modal": 884.9576852219698
+  },
+  {
+    "name": "i1_oc028_rho",
+    "differing": 2082,
+    "size": 5120,
+    "max_abs": 2.5913160506263466e-12,
+    "first_index": [
+      0
+    ],
+    "local": 0.006097507762864108,
+    "modal": 0.0060975077628653805
+  },
+  {
+    "name": "i1_oc028_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 5.297806637827307e-11,
+    "first_index": [
+      1
+    ],
+    "local": 910.3480661646123,
+    "modal": 910.3480661646653
+  },
+  {
+    "name": "i1_oc029_rho",
+    "differing": 2622,
+    "size": 5120,
+    "max_abs": 3.664513137380254e-12,
+    "first_index": [
+      0
+    ],
+    "local": 0.00862317817491765,
+    "modal": 0.00862317817491945
+  },
+  {
+    "name": "i1_oc029_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 1.3574208423960954e-10,
+    "first_index": [
+      1
+    ],
+    "local": 973.9942839426617,
+    "modal": 973.9942839427974
+  },
+  {
+    "name": "i1_oc030_rho",
+    "differing": 3736,
+    "size": 5120,
+    "max_abs": 5.161704397238509e-12,
+    "first_index": [
+      0
+    ],
+    "local": 0.012195015525728208,
+    "modal": 0.01219501552573075
+  },
+  {
+    "name": "i1_oc030_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 2.3101165425032377e-10,
+    "first_index": [
+      1
+    ],
+    "local": 1131.4253438221258,
+    "modal": 1131.4253438223568
+  },
+  {
+    "name": "i1_oc031_rho",
+    "differing": 4668,
+    "size": 5120,
+    "max_abs": 8.831657627439427e-12,
+    "first_index": [
+      0
+    ],
+    "local": 0.01724635634983527,
+    "modal": 0.017246356349838867
+  },
+  {
+    "name": "i1_oc031_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.774847184307873e-12,
+    "first_index": [
+      1
+    ],
+    "local": 1454.7371420492798,
+    "modal": 1454.7371420492846
+  },
+  {
+    "name": "i1_oc032_rho",
+    "differing": 4344,
+    "size": 5120,
+    "max_abs": 1.2489786982428086e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.024390031051456332,
+    "modal": 0.02439003105146142
+  },
+  {
+    "name": "i1_oc032_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 8.117240213323385e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1883.045445388276,
+    "modal": 1883.0454453881948
+  },
+  {
+    "name": "i1_oc033_rho",
+    "differing": 4600,
+    "size": 5120,
+    "max_abs": 1.0197953592694375e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.019914376962235195,
+    "modal": 0.01991437696223935
+  },
+  {
+    "name": "i1_oc033_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.774847184307873e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1626.442512724712,
+    "modal": 1626.4425127246643
+  },
+  {
+    "name": "i1_oc034_rho",
+    "differing": 4512,
+    "size": 5120,
+    "max_abs": 1.1171175096080788e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.021815106961754833,
+    "modal": 0.02181510696175938
+  },
+  {
+    "name": "i1_oc034_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.8203219193965197e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1740.2817251448178,
+    "modal": 1740.2817251447696
+  },
+  {
+    "name": "i1_oc035_rho",
+    "differing": 4456,
+    "size": 5120,
+    "max_abs": 1.177546948838426e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022995141799780325,
+    "modal": 0.02299514179978512
+  },
+  {
+    "name": "i1_oc035_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 5.729816621169448e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1807.4563627393954,
+    "modal": 1807.4563627393381
+  },
+  {
+    "name": "i1_oc036_rho",
+    "differing": 4486,
+    "size": 5120,
+    "max_abs": 1.1461387394717804e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022381827491182595,
+    "modal": 0.02238182749118726
+  },
+  {
+    "name": "i1_oc036_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.729372449219227e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1772.8909531341696,
+    "modal": 1772.8909531341224
+  },
+  {
+    "name": "i1_oc037_rho",
+    "differing": 4472,
+    "size": 5120,
+    "max_abs": 1.161526430593085e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.02268226814896186,
+    "modal": 0.02268226814896659
+  },
+  {
+    "name": "i1_oc037_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.7975845518521965e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1789.9139466821578,
+    "modal": 1789.9139466821098
+  },
+  {
+    "name": "i1_oc038_rho",
+    "differing": 4462,
+    "size": 5120,
+    "max_abs": 1.1694534229889086e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022837097715293582,
+    "modal": 0.022837097715298346
+  },
+  {
+    "name": "i1_oc038_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 5.434230843093246e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1798.6210063000233,
+    "modal": 1798.621006299969
+  },
+  {
+    "name": "i1_oc039_rho",
+    "differing": 4466,
+    "size": 5120,
+    "max_abs": 1.1654899267909968e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022759287956840207,
+    "modal": 0.022759287956844954
+  },
+  {
+    "name": "i1_oc039_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 5.070432962384075e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1794.2529489217368,
+    "modal": 1794.252948921686
+  },
+  {
+    "name": "i1_oc040_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1635026275769178e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.0227206801462484,
+    "modal": 0.02272068014625314
+  },
+  {
+    "name": "i1_oc040_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.934008757118136e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.0791668174932,
+    "modal": 1792.0791668174438
+  },
+  {
+    "name": "i1_oc041_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1625145290850014e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022701449774503137,
+    "modal": 0.02270144977450787
+  },
+  {
+    "name": "i1_oc041_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.934008757118136e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1790.9957209412387,
+    "modal": 1790.9957209411893
+  },
+  {
+    "name": "i1_oc042_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1630141294460827e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022711058854203086,
+    "modal": 0.02271105885420782
+  },
+  {
+    "name": "i1_oc042_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.956746124662459e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1791.5370998554592,
+    "modal": 1791.5370998554097
+  },
+  {
+    "name": "i1_oc043_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1632583785115003e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.02271586797206624,
+    "modal": 0.022715867972070976
+  },
+  {
+    "name": "i1_oc043_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.934008757118136e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1791.8080472394347,
+    "modal": 1791.8080472393854
+  },
+  {
+    "name": "i1_oc044_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1633694008139628e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022718273676915143,
+    "modal": 0.02271827367691988
+  },
+  {
+    "name": "i1_oc044_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.934008757118136e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1791.9435854928056,
+    "modal": 1791.9435854927563
+  },
+  {
+    "name": "i1_oc045_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634471164256865e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719476815995926,
+    "modal": 0.022719476816000662
+  },
+  {
+    "name": "i1_oc045_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.9112713895738125e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.0113707698092,
+    "modal": 1792.01137076976
+  },
+  {
+    "name": "i1_oc046_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634027075047015e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022718875222562235,
+    "modal": 0.022718875222566975
+  },
+  {
+    "name": "i1_oc046_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.956746124662459e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1791.9774767851509,
+    "modal": 1791.9774767851013
+  },
+  {
+    "name": "i1_oc047_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634138097349478e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719176013305357,
+    "modal": 0.022719176013310093
+  },
+  {
+    "name": "i1_oc047_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.934008757118136e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1791.9944234409186,
+    "modal": 1791.9944234408692
+  },
+  {
+    "name": "i1_oc048_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634360141954403e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719326413157163,
+    "modal": 0.022719326413161902
+  },
+  {
+    "name": "i1_oc048_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.934008757118136e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.0028970212206,
+    "modal": 1792.0028970211713
+  },
+  {
+    "name": "i1_oc049_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.163424911965194e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719251212857897,
+    "modal": 0.022719251212862633
+  },
+  {
+    "name": "i1_oc049_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.888534022029489e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1791.9986602100341,
+    "modal": 1791.9986602099852
+  },
+  {
+    "name": "i1_oc050_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634138097349478e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719288812914188,
+    "modal": 0.022719288812918927
+  },
+  {
+    "name": "i1_oc050_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.956746124662459e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.0007786103688,
+    "modal": 1792.0007786103192
+  },
+  {
+    "name": "i1_oc051_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.163424911965194e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719270012862707,
+    "modal": 0.022719270012867446
+  },
+  {
+    "name": "i1_oc051_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.934008757118136e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1791.9997194088867,
+    "modal": 1791.9997194088373
+  },
+  {
+    "name": "i1_oc052_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634360141954403e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719279412882612,
+    "modal": 0.022719279412887348
+  },
+  {
+    "name": "i1_oc052_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.956746124662459e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.000249009299,
+    "modal": 1792.0002490092495
+  },
+  {
+    "name": "i1_oc053_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.163424911965194e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.0227192747128712,
+    "modal": 0.02271927471287594
+  },
+  {
+    "name": "i1_oc053_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.956746124662459e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1791.9999842090106,
+    "modal": 1791.999984208961
+  },
+  {
+    "name": "i1_oc054_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634360141954403e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719277062876544,
+    "modal": 0.02271927706288128
+  },
+  {
+    "name": "i1_oc054_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.956746124662459e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.0001166091342,
+    "modal": 1792.0001166090847
+  },
+  {
+    "name": "i1_oc055_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.163424911965194e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719275887873782,
+    "modal": 0.022719275887878518
+  },
+  {
+    "name": "i1_oc055_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.9112713895738125e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.0000504090672,
+    "modal": 1792.000050409018
+  },
+  {
+    "name": "i1_oc056_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634138097349478e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719275300372467,
+    "modal": 0.02271927530037721
+  },
+  {
+    "name": "i1_oc056_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.9112713895738125e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.0000173090377,
+    "modal": 1792.0000173089886
+  },
+  {
+    "name": "i1_oc057_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.163424911965194e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.02271927500662183,
+    "modal": 0.022719275006626568
+  },
+  {
+    "name": "i1_oc057_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.934008757118136e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.000000759024,
+    "modal": 1792.0000007589747
+  },
+  {
+    "name": "i1_oc058_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634138097349478e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274859746518,
+    "modal": 0.022719274859751257
+  },
+  {
+    "name": "i1_oc058_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.956746124662459e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1791.9999924840174,
+    "modal": 1791.9999924839678
+  },
+  {
+    "name": "i1_oc059_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634138097349478e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274933184173,
+    "modal": 0.022719274933188913
+  },
+  {
+    "name": "i1_oc059_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.934008757118136e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1791.9999966215205,
+    "modal": 1791.9999966214712
+  },
+  {
+    "name": "i1_oc060_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.163424911965194e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274969903003,
+    "modal": 0.02271927496990774
+  },
+  {
+    "name": "i1_oc060_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.9112713895738125e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1791.9999986902722,
+    "modal": 1791.999998690223
+  },
+  {
+    "name": "i1_oc061_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.163424911965194e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274988262417,
+    "modal": 0.022719274988267153
+  },
+  {
+    "name": "i1_oc061_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.934008757118136e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1791.9999997246482,
+    "modal": 1791.9999997245989
+  },
+  {
+    "name": "i1_oc062_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.163424911965194e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274997442123,
+    "modal": 0.022719274997446862
+  },
+  {
+    "name": "i1_oc062_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.934008757118136e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.000000241836,
+    "modal": 1792.0000002417867
+  },
+  {
+    "name": "i1_oc063_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634360141954403e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.02271927499285227,
+    "modal": 0.022719274992857006
+  },
+  {
+    "name": "i1_oc063_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.956746124662459e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1791.999999983242,
+    "modal": 1791.9999999831925
+  },
+  {
+    "name": "i1_oc064_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.163424911965194e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.02271927499514719,
+    "modal": 0.022719274995151934
+  },
+  {
+    "name": "i1_oc064_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.934008757118136e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.0000001125388,
+    "modal": 1792.0000001124895
+  },
+  {
+    "name": "i1_oc065_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634360141954403e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.02271927499399973,
+    "modal": 0.02271927499400447
+  },
+  {
+    "name": "i1_oc065_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.9112713895738125e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.0000000478904,
+    "modal": 1792.0000000478412
+  },
+  {
+    "name": "i1_oc066_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.163424911965194e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993426,
+    "modal": 0.022719274993430735
+  },
+  {
+    "name": "i1_oc066_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.9112713895738125e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.000000015566,
+    "modal": 1792.000000015517
+  },
+  {
+    "name": "i1_oc067_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634138097349478e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993139135,
+    "modal": 0.022719274993143874
+  },
+  {
+    "name": "i1_oc067_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.956746124662459e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1791.9999999994043,
+    "modal": 1791.9999999993547
+  },
+  {
+    "name": "i1_oc068_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634360141954403e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.02271927499328257,
+    "modal": 0.022719274993287304
+  },
+  {
+    "name": "i1_oc068_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.9112713895738125e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.0000000074851,
+    "modal": 1792.000000007436
+  },
+  {
+    "name": "i1_oc069_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634360141954403e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993210855,
+    "modal": 0.02271927499321559
+  },
+  {
+    "name": "i1_oc069_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.9112713895738125e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.0000000034447,
+    "modal": 1792.0000000033956
+  },
+  {
+    "name": "i1_oc070_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634138097349478e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.02271927499317499,
+    "modal": 0.022719274993179727
+  },
+  {
+    "name": "i1_oc070_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.9112713895738125e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.0000000014243,
+    "modal": 1792.0000000013752
+  },
+  {
+    "name": "i1_oc071_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634360141954403e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993157065,
+    "modal": 0.0227192749931618
+  },
+  {
+    "name": "i1_oc071_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.934008757118136e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.0000000004143,
+    "modal": 1792.000000000365
+  },
+  {
+    "name": "i1_oc072_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.163424911965194e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.0227192749931481,
+    "modal": 0.02271927499315284
+  },
+  {
+    "name": "i1_oc072_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.9112713895738125e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1791.999999999909,
+    "modal": 1791.99999999986
+  },
+  {
+    "name": "i1_oc073_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.163424911965194e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.02271927499315258,
+    "modal": 0.022719274993157318
+  },
+  {
+    "name": "i1_oc073_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.956746124662459e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.000000000162,
+    "modal": 1792.0000000001123
+  },
+  {
+    "name": "i1_oc074_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1634138097349478e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.02271927499315034,
+    "modal": 0.022719274993155077
+  },
+  {
+    "name": "i1_oc074_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 4.934008757118136e-11,
+    "first_index": [
+      1
+    ],
+    "local": 1792.0000000000352,
+    "modal": 1791.999999999986
+  },
+  {
+    "name": "i1_oc075_rho",
+    "differing": 4469,
+    "size": 5120,
+    "max_abs": 1.1576739566976357e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.02271927499314922,
+    "modal": 0.0227192749931562
+  },
+  {
+    "name": "i1_oc075_mid_volume",
+    "differing": 2,
+    "size": 2,
+    "max_abs": 7.685230229981244e-11,
+    "first_index": [
+      0
+    ],
+    "local": 134.16706303540218,
+    "modal": 134.1670630353757
+  },
+  {
+    "name": "i1_oc076_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1605383321011686e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993149782,
+    "modal": 0.02271927499315564
+  },
+  {
+    "name": "i1_oc076_mid_volume",
+    "differing": 2,
+    "size": 2,
+    "max_abs": 1.3869794202037156e-11,
+    "first_index": [
+      0
+    ],
+    "local": 134.16706303539556,
+    "modal": 134.1670630353823
+  },
+  {
+    "name": "i1_oc077_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1605383321011686e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993149498,
+    "modal": 0.02271927499315536
+  },
+  {
+    "name": "i1_oc077_mid_volume",
+    "differing": 2,
+    "size": 2,
+    "max_abs": 1.4097167877480388e-11,
+    "first_index": [
+      0
+    ],
+    "local": 134.16706303539888,
+    "modal": 134.16706303538564
+  },
+  {
+    "name": "i1_oc078_rho",
+    "differing": 4468,
+    "size": 5120,
+    "max_abs": 1.1612710792974212e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993149637,
+    "modal": 0.02271927499315522
+  },
+  {
+    "name": "i1_oc078_mid_volume",
+    "differing": 2,
+    "size": 2,
+    "max_abs": 9.947598300641403e-12,
+    "first_index": [
+      0
+    ],
+    "local": 134.16706303539723,
+    "modal": 134.1670630353873
+  },
+  {
+    "name": "i1_oc079_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.1612710792974212e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.02271927499314971,
+    "modal": 0.02271927499315529
+  },
+  {
+    "name": "i1_oc079_mid_volume",
+    "differing": 2,
+    "size": 2,
+    "max_abs": 9.919176591210999e-12,
+    "first_index": [
+      0
+    ],
+    "local": 134.16706303539638,
+    "modal": 134.16706303538646
+  },
+  {
+    "name": "i1_oc080_rho",
+    "differing": 4468,
+    "size": 5120,
+    "max_abs": 1.161259977067175e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993149744,
+    "modal": 0.022719274993155323
+  },
+  {
+    "name": "i1_oc080_mid_volume",
+    "differing": 2,
+    "size": 2,
+    "max_abs": 9.947598300641403e-12,
+    "first_index": [
+      0
+    ],
+    "local": 134.16706303539598,
+    "modal": 134.16706303538604
+  },
+  {
+    "name": "i1_oc081_rho",
+    "differing": 4469,
+    "size": 5120,
+    "max_abs": 1.161171159225205e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993149727,
+    "modal": 0.02271927499315534
+  },
+  {
+    "name": "i1_oc081_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 1.0345502232667059e-11,
+    "first_index": [
+      0
+    ],
+    "local": 134.16706303539618,
+    "modal": 134.16706303538584
+  },
+  {
+    "name": "i1_oc082_rho",
+    "differing": 4470,
+    "size": 5120,
+    "max_abs": 1.161171159225205e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.02271927499314972,
+    "modal": 0.022719274993155337
+  },
+  {
+    "name": "i1_oc082_mid_volume",
+    "differing": 2,
+    "size": 2,
+    "max_abs": 1.0345502232667059e-11,
+    "first_index": [
+      0
+    ],
+    "local": 134.16706303539627,
+    "modal": 134.16706303538592
+  },
+  {
+    "name": "i1_oc083_rho",
+    "differing": 4469,
+    "size": 5120,
+    "max_abs": 1.1611822614554512e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993149716,
+    "modal": 0.02271927499315533
+  },
+  {
+    "name": "i1_oc083_mid_volume",
+    "differing": 2,
+    "size": 2,
+    "max_abs": 1.0345502232667059e-11,
+    "first_index": [
+      0
+    ],
+    "local": 134.16706303539632,
+    "modal": 134.16706303538598
+  },
+  {
+    "name": "i1_oc084_rho",
+    "differing": 4469,
+    "size": 5120,
+    "max_abs": 1.161171159225205e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993149716,
+    "modal": 0.022719274993155326
+  },
+  {
+    "name": "i1_oc084_mid_volume",
+    "differing": 1,
+    "size": 2,
+    "max_abs": 1.0345502232667059e-11,
+    "first_index": [
+      0
+    ],
+    "local": 134.16706303539635,
+    "modal": 134.167063035386
+  },
+  {
+    "name": "i1_oc085_rho",
+    "differing": 4469,
+    "size": 5120,
+    "max_abs": 1.1611822614554512e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993149716,
+    "modal": 0.02271927499315533
+  },
+  {
+    "name": "i1_oc085_mid_volume",
+    "differing": 2,
+    "size": 2,
+    "max_abs": 1.0345502232667059e-11,
+    "first_index": [
+      0
+    ],
+    "local": 134.16706303539632,
+    "modal": 134.16706303538598
+  },
+  {
+    "name": "i1_oc086_rho",
+    "differing": 4469,
+    "size": 5120,
+    "max_abs": 1.1611822614554512e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993149716,
+    "modal": 0.02271927499315533
+  },
+  {
+    "name": "i1_oc086_mid_volume",
+    "differing": 2,
+    "size": 2,
+    "max_abs": 1.0345502232667059e-11,
+    "first_index": [
+      0
+    ],
+    "local": 134.16706303539632,
+    "modal": 134.16706303538598
+  },
+  {
+    "name": "i1_oc087_rho",
+    "differing": 4469,
+    "size": 5120,
+    "max_abs": 1.1611822614554512e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993149716,
+    "modal": 0.02271927499315533
+  },
+  {
+    "name": "i1_oc087_mid_volume",
+    "differing": 2,
+    "size": 2,
+    "max_abs": 1.0345502232667059e-11,
+    "first_index": [
+      0
+    ],
+    "local": 134.16706303539632,
+    "modal": 134.16706303538598
+  },
+  {
+    "name": "i1_oc088_rho",
+    "differing": 4469,
+    "size": 5120,
+    "max_abs": 1.1611822614554512e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993149716,
+    "modal": 0.02271927499315533
+  },
+  {
+    "name": "i1_oc088_mid_volume",
+    "differing": 2,
+    "size": 2,
+    "max_abs": 1.0345502232667059e-11,
+    "first_index": [
+      0
+    ],
+    "local": 134.16706303539632,
+    "modal": 134.16706303538598
+  },
+  {
+    "name": "i1_oc089_rho",
+    "differing": 4469,
+    "size": 5120,
+    "max_abs": 1.1611822614554512e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993149716,
+    "modal": 0.02271927499315533
+  },
+  {
+    "name": "i1_oc089_mid_volume",
+    "differing": 2,
+    "size": 2,
+    "max_abs": 1.0345502232667059e-11,
+    "first_index": [
+      0
+    ],
+    "local": 134.16706303539632,
+    "modal": 134.16706303538598
+  },
+  {
+    "name": "i1_final_rho",
+    "differing": 4469,
+    "size": 5120,
+    "max_abs": 1.1611822614554512e-11,
+    "first_index": [
+      0
+    ],
+    "local": 0.022719274993149716,
+    "modal": 0.02271927499315533
+  }
+]

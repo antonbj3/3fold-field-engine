@@ -1,0 +1,9 @@
+{
+  "source_sha256": {
+    "src/field_engine/lbm_warp_v1.py": "825feff91b17beb104c81d39af5b079378dd6ab1f928b125479b49b8a4383de1",
+    "src/field_engine/lbm_domare_v1.py": "d18e1827ccf32b8feae9da349321d8685d0f81cdde69c06a560822c09b3bd6f5",
+    "src/field_engine/opt/duct_growth_diff_v1.py": "98ed54b77a85ac7587be76517d04e489a90e6ffef92b038de26f7f58ed4d8565"
+  },
+  "gate": 2.0,
+  "scope": "Full original straight/bent calibration then original duct selftest, native CPU versus existing unmodified GPU sibling, twice. No cache reuse between legs. First GPU leg includes lazy import/context/build. Native library compilation and common imports precede timings; no cold process startup claim."
+}

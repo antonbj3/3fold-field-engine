@@ -1,0 +1,275 @@
+{
+  "rows": [
+    {
+      "case": "sphere",
+      "phase": 0,
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "triangles": 1280,
+      "rays": 50653,
+      "occupied": 17049,
+      "changed_vs_first": 0,
+      "hits": 1590,
+      "mask_sha256": "52ebf0b2c2e852775fa24e77f15bab78d9bc787bc18a69e54bc781f8ff314cb4",
+      "distance_sha256": "cefb482aafb80ac89cf8c69bb81a7c34c98f342d4531ec997af1b06502421925",
+      "rays_sha256": "b6caeab8025565ebe01397e51c4cc4699294740fa4744419315db5cb58c3d916"
+    },
+    {
+      "case": "sphere",
+      "phase": 1,
+      "offset": [
+        0.03125,
+        0.0625,
+        0.09375
+      ],
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "triangles": 1280,
+      "rays": 50653,
+      "occupied": 17026,
+      "changed_vs_first": 1477,
+      "hits": 1604,
+      "mask_sha256": "090555f528eb4a16128a00de47091d2b6da6960151a92cebd724ec1d182e89e6",
+      "distance_sha256": "81a050a15c35d99f0847e1d1d30dd8c55ccfa11da060d1a90e640f3cb82ab431",
+      "rays_sha256": "7a1df6ffc1043f1f5372b3dde36f7bb8a15d6fedde0628d658ac4a7c5d3e64a9"
+    },
+    {
+      "case": "sphere",
+      "phase": 2,
+      "offset": [
+        -0.0625,
+        0.03125,
+        -0.03125
+      ],
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "triangles": 1280,
+      "rays": 50653,
+      "occupied": 17026,
+      "changed_vs_first": 995,
+      "hits": 1608,
+      "mask_sha256": "e5d404e9cfe69dfff39ddfd92794274b3d432e2cc39521465bf99d9377c70a9b",
+      "distance_sha256": "f5e0937e923601a0d3190114bad24d97bac20630ac23fd5c7408ca0110675bcc",
+      "rays_sha256": "37c34aa573ce5d0de60ba5010f09346757b91f865ff35551d083c80e956fc47c"
+    },
+    {
+      "case": "sphere_fine",
+      "phase": 0,
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "triangles": 5120,
+      "rays": 50653,
+      "occupied": 17073,
+      "changed_vs_first": 0,
+      "hits": 1590,
+      "mask_sha256": "71923e461e2efcde74468fef323a093d73a80b958c5d8824e8635b03cef03cb4",
+      "distance_sha256": "16421537f71ab42b0aceaeba8e2b1765a4a1a4a9b621e7127f2d0b8d2d44cf48",
+      "rays_sha256": "b6caeab8025565ebe01397e51c4cc4699294740fa4744419315db5cb58c3d916"
+    },
+    {
+      "case": "sphere_fine",
+      "phase": 1,
+      "offset": [
+        0.03125,
+        0.0625,
+        0.09375
+      ],
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "triangles": 5120,
+      "rays": 50653,
+      "occupied": 17138,
+      "changed_vs_first": 1483,
+      "hits": 1608,
+      "mask_sha256": "da2ff16100a8f86551d61d15cebbfe4db63c1a2a9dd6acbe82dd049b40f2fba9",
+      "distance_sha256": "1a17d641b2bb6711c4be3aa8fa44ed4b55670cbdee10dd72dbbc7d54056f08bc",
+      "rays_sha256": "7a1df6ffc1043f1f5372b3dde36f7bb8a15d6fedde0628d658ac4a7c5d3e64a9"
+    },
+    {
+      "case": "sphere_fine",
+      "phase": 2,
+      "offset": [
+        -0.0625,
+        0.03125,
+        -0.03125
+      ],
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "triangles": 5120,
+      "rays": 50653,
+      "occupied": 17138,
+      "changed_vs_first": 985,
+      "hits": 1608,
+      "mask_sha256": "94a717a11619e76107991b018d2da30f0a1b987185b62f95abd93dd152bb425d",
+      "distance_sha256": "7fdbdc047b0825007b732be9186a6af2c9f2603f881671db7bca3712883fcf1c",
+      "rays_sha256": "37c34aa573ce5d0de60ba5010f09346757b91f865ff35551d083c80e956fc47c"
+    },
+    {
+      "case": "sphere_overlap",
+      "phase": 0,
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "shape": [
+        45,
+        39,
+        38
+      ],
+      "triangles": 2560,
+      "rays": 66690,
+      "occupied": 23547,
+      "changed_vs_first": 0,
+      "hits": 3180,
+      "mask_sha256": "807a829541ccca2cfaf1a70de100fbee9e612cd90bbab5302956ecef22968e89",
+      "distance_sha256": "fe08d78ce566ecadf25a0471ddb0e8bea02fd2b2c786f265453bc5e41d99cd34",
+      "rays_sha256": "0dfa57cdeddef7f9ff7c6fbf76d546c762b86a912b912d2a5251158f2567fbb9"
+    },
+    {
+      "case": "sphere_overlap",
+      "phase": 1,
+      "offset": [
+        0.03125,
+        0.0625,
+        0.09375
+      ],
+      "shape": [
+        45,
+        39,
+        38
+      ],
+      "triangles": 2560,
+      "rays": 66690,
+      "occupied": 23531,
+      "changed_vs_first": 1904,
+      "hits": 3208,
+      "mask_sha256": "ac4d66b8495e88be004ee23367d1a18221dd27632ea960a42a73cfd6b86857f7",
+      "distance_sha256": "d3a91d4c02e0c47df01d553860e18ace21996f5feda82db5786fc47186de6dce",
+      "rays_sha256": "863f8800c7201d6ab2cdd727932bb74dd0ed7fbd577b8b25c9de0c312987f56e"
+    },
+    {
+      "case": "sphere_overlap",
+      "phase": 2,
+      "offset": [
+        -0.0625,
+        0.03125,
+        -0.03125
+      ],
+      "shape": [
+        45,
+        39,
+        38
+      ],
+      "triangles": 2560,
+      "rays": 66690,
+      "occupied": 23509,
+      "changed_vs_first": 1224,
+      "hits": 3216,
+      "mask_sha256": "d2b67322a3d387891f86f25c86b83467a844835090f2d7ce2ff2e3853b351146",
+      "distance_sha256": "54d8ec8ee0bee24d8025830e3643def603c387d1204d656ab1e71ba38755a15d",
+      "rays_sha256": "6f7cf3ac2eb2bf7e37fb438f241c8aa14567e1379769437ca8bfdea04f5ffcdf"
+    },
+    {
+      "case": "subdivided_rotated_box",
+      "phase": 0,
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "shape": [
+        46,
+        39,
+        30
+      ],
+      "triangles": 768,
+      "rays": 53820,
+      "occupied": 12288,
+      "changed_vs_first": 0,
+      "hits": 1764,
+      "mask_sha256": "43ec8699ae37a44622dab5bd3674eb82e536b5ded4f8a36459bdec0e21182e30",
+      "distance_sha256": "ff29f605c074e5287395b3e70b3a7545a6741a9b9bab6e43e4f88673181895a5",
+      "rays_sha256": "c036127d722ff7e45ae611b75d4811f246b30cd583aad284ea83c14dc553b7b7"
+    },
+    {
+      "case": "subdivided_rotated_box",
+      "phase": 1,
+      "offset": [
+        0.03125,
+        0.0625,
+        0.09375
+      ],
+      "shape": [
+        46,
+        39,
+        30
+      ],
+      "triangles": 768,
+      "rays": 53820,
+      "occupied": 12281,
+      "changed_vs_first": 1821,
+      "hits": 1764,
+      "mask_sha256": "8cea1d1644cf49f0426d89129471585fc2236b300051793d89374e71ec8a1465",
+      "distance_sha256": "33edef0d1ca5549a277bc8481ceb366968a152c21cdcb93931050c0e3716bdc7",
+      "rays_sha256": "0a9a23da80d41963fa2138cde5030974dbcb4b1b20c2ec7876d03571d9eb5a95"
+    },
+    {
+      "case": "subdivided_rotated_box",
+      "phase": 2,
+      "offset": [
+        -0.0625,
+        0.03125,
+        -0.03125
+      ],
+      "shape": [
+        46,
+        39,
+        30
+      ],
+      "triangles": 768,
+      "rays": 53820,
+      "occupied": 12286,
+      "changed_vs_first": 1170,
+      "hits": 1768,
+      "mask_sha256": "df969c1a7390415ea1ac15ada92d5c920c91e3a1ba23af2ca336cb636298ab0a",
+      "distance_sha256": "7673d6d62b211c16120508d68d7efbd93312febb66381bc5c961a010709963c0",
+      "rays_sha256": "e4b3b74d3ee9ebd2990181ac6b067c811c04680ff72a0006299e90fbfb922102"
+    }
+  ],
+  "gates": {
+    "full_arrays_repeat": true,
+    "full_tables_repeat": true,
+    "finite": true,
+    "changed_queries_observable": true
+  },
+  "timing_measured": false
+}

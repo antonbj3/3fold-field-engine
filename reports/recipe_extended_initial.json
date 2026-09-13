@@ -1,0 +1,92 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "rows": [
+    {
+      "module": "cad_op_exec_v1.py",
+      "leg": 0,
+      "exit": 0,
+      "gates": true,
+      "count": 15,
+      "report_sha256": "235f140be45c24b7664460813db4250a2dd04997e1eda88ff1a8eb98792c43bf",
+      "observational_timing": {}
+    },
+    {
+      "module": "recept_cache_v1.py",
+      "leg": 0,
+      "exit": 0,
+      "gates": true,
+      "count": 7,
+      "report_sha256": "5ae5d9fc98582992658812b4c6029938b8ccae2cdcacbcce2f0144ac726c6b54",
+      "observational_timing": {
+        "AT5c_synthetic_full_hit.t_cold_s": 0.108,
+        "AT5c_synthetic_full_hit.t_warm_s": 0.0,
+        "AT5c_synthetic_full_hit.speedup_x": 870.7,
+        "AT6a_mem_hit_same_process.t_cold_s": 0.102,
+        "AT6a_mem_hit_same_process.t_mem_s": 0.0,
+        "AT6a_mem_hit_same_process.speedup_x": 790.0
+      }
+    },
+    {
+      "module": "formfeature_v1.py",
+      "leg": 0,
+      "exit": 0,
+      "gates": true,
+      "count": 13,
+      "report_sha256": "c921309e106218498676a88ae8e6302bd4adc9a292fdd5212e6e350cbf97a3ce",
+      "observational_timing": {}
+    },
+    {
+      "module": "brep_recept_synth_v1.py",
+      "leg": 0,
+      "exit": 0,
+      "gates": true,
+      "count": 5,
+      "report_sha256": "aa1102a93450d601161f760a6e0ed469b6bd26400893e568881233cc54df11e7",
+      "observational_timing": {}
+    },
+    {
+      "module": "cad_op_exec_v1.py",
+      "leg": 1,
+      "exit": 0,
+      "gates": true,
+      "count": 15,
+      "report_sha256": "dfd36717ad59e9d1b8d7bff8b3cb05d230003962bd1953c6b4bc0e7586d8885c",
+      "observational_timing": {}
+    },
+    {
+      "module": "recept_cache_v1.py",
+      "leg": 1,
+      "exit": 0,
+      "gates": true,
+      "count": 7,
+      "report_sha256": "5ae5d9fc98582992658812b4c6029938b8ccae2cdcacbcce2f0144ac726c6b54",
+      "observational_timing": {
+        "AT5c_synthetic_full_hit.t_cold_s": 0.125,
+        "AT5c_synthetic_full_hit.t_warm_s": 0.0,
+        "AT5c_synthetic_full_hit.speedup_x": 939.3,
+        "AT6a_mem_hit_same_process.t_cold_s": 0.108,
+        "AT6a_mem_hit_same_process.t_mem_s": 0.0,
+        "AT6a_mem_hit_same_process.speedup_x": 801.0
+      }
+    },
+    {
+      "module": "formfeature_v1.py",
+      "leg": 1,
+      "exit": 0,
+      "gates": true,
+      "count": 13,
+      "report_sha256": "c921309e106218498676a88ae8e6302bd4adc9a292fdd5212e6e350cbf97a3ce",
+      "observational_timing": {}
+    },
+    {
+      "module": "brep_recept_synth_v1.py",
+      "leg": 1,
+      "exit": 0,
+      "gates": true,
+      "count": 5,
+      "report_sha256": "0725944e72290fe9cf955101864d637a86d6eb2c20298b2dba9c5d2d34493b78",
+      "observational_timing": {}
+    }
+  ],
+  "scope": "All own gates pass twice. Initial complete-report identity fails for executor and synthesizer; one clock observation and five temporary STEP directories are the only differences. Cache uses its six preregistered clock exclusions."
+}

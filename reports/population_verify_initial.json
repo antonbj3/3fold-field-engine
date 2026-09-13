@@ -1,0 +1,7 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "stage": "fresh-tree report output",
+  "error": "FileNotFoundError: recipe/artifacts directory absent",
+  "child_completed_report": false,
+  "scope": "First unchanged executable invocation failed before printing its terminal report; no case outcome inferred."
+}

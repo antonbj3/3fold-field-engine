@@ -1,0 +1,117 @@
+{
+ "cell": "ikarus_v2_sphere_tracing_render",
+ "device": "cuda:0",
+ "scene": {
+  "parts": [
+   "plate_with_bore",
+   "ball"
+  ],
+  "bbox_lo_mm": [
+   -31.0,
+   -23.0,
+   -31.0
+  ],
+  "bbox_hi_mm": [
+   67.0,
+   23.0,
+   31.0
+  ],
+  "diag_mm": 124.75576139000555,
+  "baseline_pitch_mm": 0.5,
+  "baseline_n_triangles": [
+   76016,
+   29432
+  ]
+ },
+ "resolution": {
+  "width": 240,
+  "height": 135
+ },
+ "views": {
+  "iso": {
+   "png": "artifacts/render_v2/sdf_v2_iso.png",
+   "mesh_baseline_png": "artifacts/render_v2/mesh_baseline_iso.png",
+   "eye_mm": [
+    87.6137148556231,
+    -85.08342926798379,
+    58.01142904635258
+   ],
+   "wall_s_total": 0.053690195083618164,
+   "profile": {
+    "trace_wall_s": 0.03582453727722168,
+    "normal_wall_s": 0.0008220672607421875,
+    "part_classify_wall_s": 0.0005242824554443359,
+    "shadow_wall_s": 0.013379573822021484,
+    "n_eval_batch_launches_trace": 71,
+    "n_rays_total": 32400,
+    "n_rays_box_candidates": 22245,
+    "n_rays_hit": 10236,
+    "mean_steps_to_hit": 8.236615865572489,
+    "max_steps_to_hit": 67
+   },
+   "mesh_baseline_wall_s": 0.20541906356811523,
+   "mesh_baseline_n_triangles_drawn": 105448,
+   "silhouette_iou_vs_mesh_baseline": 0.9756609716521906
+  },
+  "front": {
+   "png": "artifacts/render_v2/sdf_v2_front.png",
+   "mesh_baseline_png": "artifacts/render_v2/mesh_baseline_front.png",
+   "eye_mm": [
+    18.0,
+    -106.04239718150471,
+    12.725087661780565
+   ],
+   "wall_s_total": 0.05849456787109375,
+   "profile": {
+    "trace_wall_s": 0.03976726531982422,
+    "normal_wall_s": 0.0008902549743652344,
+    "part_classify_wall_s": 0.0006670951843261719,
+    "shadow_wall_s": 0.014014959335327148,
+    "n_eval_batch_launches_trace": 100,
+    "n_rays_total": 32400,
+    "n_rays_box_candidates": 27437,
+    "n_rays_hit": 10699,
+    "mean_steps_to_hit": 6.316010842134779,
+    "max_steps_to_hit": 94
+   },
+   "mesh_baseline_wall_s": 0.20408916473388672,
+   "mesh_baseline_n_triangles_drawn": 105448,
+   "silhouette_iou_vs_mesh_baseline": 0.9619952494061758
+  },
+  "top": {
+   "png": "artifacts/render_v2/sdf_v2_top.png",
+   "mesh_baseline_png": "artifacts/render_v2/mesh_baseline_top.png",
+   "eye_mm": [
+    18.112280185251006,
+    0.112280185251005,
+    112.280185251005
+   ],
+   "wall_s_total": 0.05882406234741211,
+   "profile": {
+    "trace_wall_s": 0.03861427307128906,
+    "normal_wall_s": 0.0010204315185546875,
+    "part_classify_wall_s": 0.0005664825439453125,
+    "shadow_wall_s": 0.01521754264831543,
+    "n_eval_batch_launches_trace": 112,
+    "n_rays_total": 32400,
+    "n_rays_box_candidates": 27092,
+    "n_rays_hit": 15594,
+    "mean_steps_to_hit": 4.170834936514044,
+    "max_steps_to_hit": 96
+   },
+   "mesh_baseline_wall_s": 0.19743847846984863,
+   "mesh_baseline_n_triangles_drawn": 105448,
+   "silhouette_iou_vs_mesh_baseline": 0.9742819598272949
+  }
+ },
+ "summary": {
+  "iou_min": 0.9619952494061758,
+  "iou_mean": 0.9706460602952204,
+  "wall_s_max_view": 0.05882406234741211,
+  "wall_s_mean_view": 0.05700294176737467,
+  "target_iou": 0.95,
+  "target_wall_s_per_view": 10.0,
+  "iou_gate_pass": true,
+  "speed_gate_pass": true
+ }
+}

@@ -1,0 +1,8 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "scope": "Initial graph creation refused before the first field query; no numerical or timing samples.",
+  "creation_status": 2,
+  "queries": 0,
+  "hardware": "NVIDIA L4, driver 580.95.05",
+  "source_sha256": "fcc14dccbd257f37b930133f12affda6f891ce0c8c53c5e9187a8448ffe3ff22"
+}

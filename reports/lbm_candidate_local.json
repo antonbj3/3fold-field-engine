@@ -1,0 +1,926 @@
+{
+  "gates": {
+    "original_three_physical_gates": true,
+    "all_complete_reports_exact": true,
+    "all_complete_states_exact": true,
+    "full_selftest_speedup_1_25": true
+  },
+  "rows": [
+    {
+      "label": "original0",
+      "exit": 0,
+      "wall_seconds": 40.19507083699864,
+      "calls": [
+        {
+          "seconds": 18.406112872995436,
+          "steps": 1999,
+          "shape": [
+            30,
+            24,
+            24,
+            19
+          ]
+        },
+        {
+          "seconds": 4.373398918003659,
+          "steps": 1400,
+          "shape": [
+            23,
+            23,
+            14,
+            19
+          ]
+        },
+        {
+          "seconds": 9.512258733986528,
+          "steps": 1200,
+          "shape": [
+            38,
+            25,
+            16,
+            19
+          ]
+        },
+        {
+          "seconds": 7.897378223002306,
+          "steps": 1000,
+          "shape": [
+            38,
+            25,
+            16,
+            19
+          ]
+        }
+      ]
+    },
+    {
+      "label": "candidate0",
+      "exit": 0,
+      "wall_seconds": 11.631734398004483,
+      "calls": [
+        {
+          "seconds": 4.915889424999477,
+          "steps": 1999,
+          "shape": [
+            30,
+            24,
+            24,
+            19
+          ]
+        },
+        {
+          "seconds": 1.6896556499996223,
+          "steps": 1400,
+          "shape": [
+            23,
+            23,
+            14,
+            19
+          ]
+        },
+        {
+          "seconds": 2.7324905089917593,
+          "steps": 1200,
+          "shape": [
+            38,
+            25,
+            16,
+            19
+          ]
+        },
+        {
+          "seconds": 2.2874624590040185,
+          "steps": 1000,
+          "shape": [
+            38,
+            25,
+            16,
+            19
+          ]
+        }
+      ]
+    },
+    {
+      "label": "candidate1",
+      "exit": 0,
+      "wall_seconds": 11.605131329008145,
+      "calls": [
+        {
+          "seconds": 4.895859033000306,
+          "steps": 1999,
+          "shape": [
+            30,
+            24,
+            24,
+            19
+          ]
+        },
+        {
+          "seconds": 1.6853454919910291,
+          "steps": 1400,
+          "shape": [
+            23,
+            23,
+            14,
+            19
+          ]
+        },
+        {
+          "seconds": 2.749147422000533,
+          "steps": 1200,
+          "shape": [
+            38,
+            25,
+            16,
+            19
+          ]
+        },
+        {
+          "seconds": 2.2686798740032827,
+          "steps": 1000,
+          "shape": [
+            38,
+            25,
+            16,
+            19
+          ]
+        }
+      ]
+    },
+    {
+      "label": "original1",
+      "exit": 0,
+      "wall_seconds": 42.127903836008045,
+      "calls": [
+        {
+          "seconds": 19.495501522993436,
+          "steps": 1999,
+          "shape": [
+            30,
+            24,
+            24,
+            19
+          ]
+        },
+        {
+          "seconds": 4.379534492996754,
+          "steps": 1400,
+          "shape": [
+            23,
+            23,
+            14,
+            19
+          ]
+        },
+        {
+          "seconds": 9.879495628993027,
+          "steps": 1200,
+          "shape": [
+            38,
+            25,
+            16,
+            19
+          ]
+        },
+        {
+          "seconds": 8.367012347996933,
+          "steps": 1000,
+          "shape": [
+            38,
+            25,
+            16,
+            19
+          ]
+        }
+      ]
+    }
+  ],
+  "reports": {
+    "original0": {
+      "voxel_mm": 5.0,
+      "steps": 2000,
+      "checks": {
+        "fRe_vs_shah_london": {
+          "value": 0.8730824248934236,
+          "passed": true
+        },
+        "bend_excess_positive": {
+          "value": 0.07608242304324969,
+          "passed": true
+        },
+        "chamber_R_rises_when_outlet_shrinks": {
+          "value": 60.28325679104562,
+          "passed": true
+        }
+      },
+      "straight": {
+        "case": "straight_duct",
+        "voxel_mm": 5.0,
+        "grid_shape": [
+          30,
+          24,
+          24
+        ],
+        "n_cells": 17280,
+        "steps_to_converge": 1999,
+        "tau": 0.9,
+        "Re_matched": 0.12054431618258428,
+        "L_mm": 150.0,
+        "cross_section_mm_nominal": [
+          120.0,
+          120.0
+        ],
+        "cross_section_mm_effective": [
+          110.0,
+          110.0
+        ],
+        "target_Q_m3s": 0.00825825,
+        "Re_target_context_only": 4707.405405405405,
+        "regime_mismatch_declared": true,
+        "fRe_lu_measured": 49.68712080068473,
+        "fRe_shah_london_exact": 56.91,
+        "fRe_measured_over_exact": 0.8730824248934236,
+        "dP_lbm_pa": 9.957704741379313e-08,
+        "dP_formula_pa": 1.282612260840627e-07,
+        "dP_shah_london_square_duct_pa": 1.1405228713193763e-07,
+        "ratio_lbm_over_formula": 0.776361262510699,
+        "ratio_shah_london_over_formula": 0.88921875,
+        "f_re_circular_used_by_formula": 64.0,
+        "f_re_square_shah_london": 56.91,
+        "note": "dP_lbm_pa/dP_formula_pa/dP_shah_london_pa all evaluated at the SAME matched operating point (v_mean_matched, Re_matched) -- the LBM's own measured condition, not an extrapolation. PRIMARY validation is the dimensionless fRe_lu_measured vs the Shah&London 56.91 external literature constant (unit-conversion-free, exact LBM self-check). Re_target_context_only shows the declared branch design flow is in a DIFFERENT (turbulent) regime than this laminar calibration point -- reported, not swept under a linear rescale."
+      },
+      "bent": {
+        "case": "bent_duct_L90",
+        "voxel_mm": 10.0,
+        "grid_shape": [
+          23,
+          23,
+          14
+        ],
+        "n_cells": 7406,
+        "steps_to_converge": 1400,
+        "tau": 0.9,
+        "Re_matched": 1.0454589498994027,
+        "leg_mm": 90.0,
+        "cross_section_mm": [
+          120.0,
+          120.0
+        ],
+        "target_Q_m3s": 0.00825825,
+        "Re_target_context_only": 4315.121621621622,
+        "Q_at_matched_point_m3s": 2.0007921282557533e-06,
+        "R_pa_per_m3s": 0.5529868007305587,
+        "dP_lbm_pa_at_target_Q": 0.004566703247133137,
+        "dP_lbm_pa": 1.1064116379310348e-06,
+        "dP_formula_pa": 1.028184843686984e-06,
+        "excess_over_formula_pa": 7.822679424405068e-08,
+        "excess_over_formula_frac": 0.07608242304324969,
+        "note": "pressure-driven (fixed-density in/outlet planes) around a 90deg bend, compared to the formula AT THE SAME matched v_mean/Re (no extrapolation). The excess over the formula is the bend/expansion loss a straight-pipe-per-bin sum structurally cannot represent."
+      },
+      "plenum_large_outlet": {
+        "case": "plenum_C",
+        "voxel_mm": 16.0,
+        "grid_shape": [
+          38,
+          25,
+          16
+        ],
+        "n_cells": 15200,
+        "steps_to_converge": 1200,
+        "tau": 0.9,
+        "envelope_mm": [
+          600.0,
+          400.0,
+          250.0
+        ],
+        "outlets": {
+          "outlet_mouth": {
+            "area_mm2": 14400.0,
+            "flux_frac_measured": 1.0,
+            "flux_frac_area_expected": 1.0,
+            "imbalance": 0.0
+          }
+        },
+        "max_flow_imbalance_frac": 0.0,
+        "dP_fan_to_nozzles_pa_at_matched_point": 4.321920460668105e-07,
+        "Q_at_matched_point_m3s": 1.3598522232943292e-06,
+        "Q_target_branch_m3s": 0.00825825,
+        "R_pa_per_m3s": 0.3178228035836111,
+        "inlet_flux_lu": 0.7750666960161983,
+        "outlet_flux_lu": 0.7105534139736134,
+        "inlet_outlet_flux_balance_frac": 0.09079300834234062,
+        "dP_budget_pa_reference": 5.0,
+        "note": "one inlet and one outlet on the declared synthetic chamber SYNTH_PLENUM_MM. max_flow_imbalance_frac is 0 by construction with a single outlet, and inlet_outlet_flux_balance_frac is a measured defect of the full-cell bounce-back scheme, not a gate; the gate is the monotonicity of R_pa_per_m3s against the outlet area (stage2_plenum.outlet_area_sweep). dP is reported AT the matched (drho=0.01) operating point actually simulated, not rescaled to Q_target (same regime-mismatch caveat as the calibration stage)."
+      },
+      "plenum_small_outlet": {
+        "case": "plenum_C",
+        "voxel_mm": 16.0,
+        "grid_shape": [
+          38,
+          25,
+          16
+        ],
+        "n_cells": 15200,
+        "steps_to_converge": 1000,
+        "tau": 0.9,
+        "envelope_mm": [
+          600.0,
+          400.0,
+          250.0
+        ],
+        "outlets": {
+          "outlet_mouth": {
+            "area_mm2": 1600.0,
+            "flux_frac_measured": 1.0,
+            "flux_frac_area_expected": 1.0,
+            "imbalance": 0.0
+          }
+        },
+        "max_flow_imbalance_frac": 0.0,
+        "dP_fan_to_nozzles_pa_at_matched_point": 4.321920460668105e-07,
+        "Q_at_matched_point_m3s": 2.2557709979204702e-08,
+        "Q_target_branch_m3s": 0.00825825,
+        "R_pa_per_m3s": 19.159393682480882,
+        "inlet_flux_lu": 0.7123714903651841,
+        "outlet_flux_lu": 0.011786911520665518,
+        "inlet_outlet_flux_balance_frac": 59.43750214941478,
+        "dP_budget_pa_reference": 5.0,
+        "note": "one inlet and one outlet on the declared synthetic chamber SYNTH_PLENUM_MM. max_flow_imbalance_frac is 0 by construction with a single outlet, and inlet_outlet_flux_balance_frac is a measured defect of the full-cell bounce-back scheme, not a gate; the gate is the monotonicity of R_pa_per_m3s against the outlet area (stage2_plenum.outlet_area_sweep). dP is reported AT the matched (drho=0.01) operating point actually simulated, not rescaled to Q_target (same regime-mismatch caveat as the calibration stage)."
+      },
+      "elapsed_s": 40.2
+    },
+    "candidate0": {
+      "voxel_mm": 5.0,
+      "steps": 2000,
+      "checks": {
+        "fRe_vs_shah_london": {
+          "value": 0.8730824248934236,
+          "passed": true
+        },
+        "bend_excess_positive": {
+          "value": 0.07608242304324969,
+          "passed": true
+        },
+        "chamber_R_rises_when_outlet_shrinks": {
+          "value": 60.28325679104562,
+          "passed": true
+        }
+      },
+      "straight": {
+        "case": "straight_duct",
+        "voxel_mm": 5.0,
+        "grid_shape": [
+          30,
+          24,
+          24
+        ],
+        "n_cells": 17280,
+        "steps_to_converge": 1999,
+        "tau": 0.9,
+        "Re_matched": 0.12054431618258428,
+        "L_mm": 150.0,
+        "cross_section_mm_nominal": [
+          120.0,
+          120.0
+        ],
+        "cross_section_mm_effective": [
+          110.0,
+          110.0
+        ],
+        "target_Q_m3s": 0.00825825,
+        "Re_target_context_only": 4707.405405405405,
+        "regime_mismatch_declared": true,
+        "fRe_lu_measured": 49.68712080068473,
+        "fRe_shah_london_exact": 56.91,
+        "fRe_measured_over_exact": 0.8730824248934236,
+        "dP_lbm_pa": 9.957704741379313e-08,
+        "dP_formula_pa": 1.282612260840627e-07,
+        "dP_shah_london_square_duct_pa": 1.1405228713193763e-07,
+        "ratio_lbm_over_formula": 0.776361262510699,
+        "ratio_shah_london_over_formula": 0.88921875,
+        "f_re_circular_used_by_formula": 64.0,
+        "f_re_square_shah_london": 56.91,
+        "note": "dP_lbm_pa/dP_formula_pa/dP_shah_london_pa all evaluated at the SAME matched operating point (v_mean_matched, Re_matched) -- the LBM's own measured condition, not an extrapolation. PRIMARY validation is the dimensionless fRe_lu_measured vs the Shah&London 56.91 external literature constant (unit-conversion-free, exact LBM self-check). Re_target_context_only shows the declared branch design flow is in a DIFFERENT (turbulent) regime than this laminar calibration point -- reported, not swept under a linear rescale."
+      },
+      "bent": {
+        "case": "bent_duct_L90",
+        "voxel_mm": 10.0,
+        "grid_shape": [
+          23,
+          23,
+          14
+        ],
+        "n_cells": 7406,
+        "steps_to_converge": 1400,
+        "tau": 0.9,
+        "Re_matched": 1.0454589498994027,
+        "leg_mm": 90.0,
+        "cross_section_mm": [
+          120.0,
+          120.0
+        ],
+        "target_Q_m3s": 0.00825825,
+        "Re_target_context_only": 4315.121621621622,
+        "Q_at_matched_point_m3s": 2.0007921282557533e-06,
+        "R_pa_per_m3s": 0.5529868007305587,
+        "dP_lbm_pa_at_target_Q": 0.004566703247133137,
+        "dP_lbm_pa": 1.1064116379310348e-06,
+        "dP_formula_pa": 1.028184843686984e-06,
+        "excess_over_formula_pa": 7.822679424405068e-08,
+        "excess_over_formula_frac": 0.07608242304324969,
+        "note": "pressure-driven (fixed-density in/outlet planes) around a 90deg bend, compared to the formula AT THE SAME matched v_mean/Re (no extrapolation). The excess over the formula is the bend/expansion loss a straight-pipe-per-bin sum structurally cannot represent."
+      },
+      "plenum_large_outlet": {
+        "case": "plenum_C",
+        "voxel_mm": 16.0,
+        "grid_shape": [
+          38,
+          25,
+          16
+        ],
+        "n_cells": 15200,
+        "steps_to_converge": 1200,
+        "tau": 0.9,
+        "envelope_mm": [
+          600.0,
+          400.0,
+          250.0
+        ],
+        "outlets": {
+          "outlet_mouth": {
+            "area_mm2": 14400.0,
+            "flux_frac_measured": 1.0,
+            "flux_frac_area_expected": 1.0,
+            "imbalance": 0.0
+          }
+        },
+        "max_flow_imbalance_frac": 0.0,
+        "dP_fan_to_nozzles_pa_at_matched_point": 4.321920460668105e-07,
+        "Q_at_matched_point_m3s": 1.3598522232943292e-06,
+        "Q_target_branch_m3s": 0.00825825,
+        "R_pa_per_m3s": 0.3178228035836111,
+        "inlet_flux_lu": 0.7750666960161983,
+        "outlet_flux_lu": 0.7105534139736134,
+        "inlet_outlet_flux_balance_frac": 0.09079300834234062,
+        "dP_budget_pa_reference": 5.0,
+        "note": "one inlet and one outlet on the declared synthetic chamber SYNTH_PLENUM_MM. max_flow_imbalance_frac is 0 by construction with a single outlet, and inlet_outlet_flux_balance_frac is a measured defect of the full-cell bounce-back scheme, not a gate; the gate is the monotonicity of R_pa_per_m3s against the outlet area (stage2_plenum.outlet_area_sweep). dP is reported AT the matched (drho=0.01) operating point actually simulated, not rescaled to Q_target (same regime-mismatch caveat as the calibration stage)."
+      },
+      "plenum_small_outlet": {
+        "case": "plenum_C",
+        "voxel_mm": 16.0,
+        "grid_shape": [
+          38,
+          25,
+          16
+        ],
+        "n_cells": 15200,
+        "steps_to_converge": 1000,
+        "tau": 0.9,
+        "envelope_mm": [
+          600.0,
+          400.0,
+          250.0
+        ],
+        "outlets": {
+          "outlet_mouth": {
+            "area_mm2": 1600.0,
+            "flux_frac_measured": 1.0,
+            "flux_frac_area_expected": 1.0,
+            "imbalance": 0.0
+          }
+        },
+        "max_flow_imbalance_frac": 0.0,
+        "dP_fan_to_nozzles_pa_at_matched_point": 4.321920460668105e-07,
+        "Q_at_matched_point_m3s": 2.2557709979204702e-08,
+        "Q_target_branch_m3s": 0.00825825,
+        "R_pa_per_m3s": 19.159393682480882,
+        "inlet_flux_lu": 0.7123714903651841,
+        "outlet_flux_lu": 0.011786911520665518,
+        "inlet_outlet_flux_balance_frac": 59.43750214941478,
+        "dP_budget_pa_reference": 5.0,
+        "note": "one inlet and one outlet on the declared synthetic chamber SYNTH_PLENUM_MM. max_flow_imbalance_frac is 0 by construction with a single outlet, and inlet_outlet_flux_balance_frac is a measured defect of the full-cell bounce-back scheme, not a gate; the gate is the monotonicity of R_pa_per_m3s against the outlet area (stage2_plenum.outlet_area_sweep). dP is reported AT the matched (drho=0.01) operating point actually simulated, not rescaled to Q_target (same regime-mismatch caveat as the calibration stage)."
+      },
+      "elapsed_s": 11.6
+    },
+    "candidate1": {
+      "voxel_mm": 5.0,
+      "steps": 2000,
+      "checks": {
+        "fRe_vs_shah_london": {
+          "value": 0.8730824248934236,
+          "passed": true
+        },
+        "bend_excess_positive": {
+          "value": 0.07608242304324969,
+          "passed": true
+        },
+        "chamber_R_rises_when_outlet_shrinks": {
+          "value": 60.28325679104562,
+          "passed": true
+        }
+      },
+      "straight": {
+        "case": "straight_duct",
+        "voxel_mm": 5.0,
+        "grid_shape": [
+          30,
+          24,
+          24
+        ],
+        "n_cells": 17280,
+        "steps_to_converge": 1999,
+        "tau": 0.9,
+        "Re_matched": 0.12054431618258428,
+        "L_mm": 150.0,
+        "cross_section_mm_nominal": [
+          120.0,
+          120.0
+        ],
+        "cross_section_mm_effective": [
+          110.0,
+          110.0
+        ],
+        "target_Q_m3s": 0.00825825,
+        "Re_target_context_only": 4707.405405405405,
+        "regime_mismatch_declared": true,
+        "fRe_lu_measured": 49.68712080068473,
+        "fRe_shah_london_exact": 56.91,
+        "fRe_measured_over_exact": 0.8730824248934236,
+        "dP_lbm_pa": 9.957704741379313e-08,
+        "dP_formula_pa": 1.282612260840627e-07,
+        "dP_shah_london_square_duct_pa": 1.1405228713193763e-07,
+        "ratio_lbm_over_formula": 0.776361262510699,
+        "ratio_shah_london_over_formula": 0.88921875,
+        "f_re_circular_used_by_formula": 64.0,
+        "f_re_square_shah_london": 56.91,
+        "note": "dP_lbm_pa/dP_formula_pa/dP_shah_london_pa all evaluated at the SAME matched operating point (v_mean_matched, Re_matched) -- the LBM's own measured condition, not an extrapolation. PRIMARY validation is the dimensionless fRe_lu_measured vs the Shah&London 56.91 external literature constant (unit-conversion-free, exact LBM self-check). Re_target_context_only shows the declared branch design flow is in a DIFFERENT (turbulent) regime than this laminar calibration point -- reported, not swept under a linear rescale."
+      },
+      "bent": {
+        "case": "bent_duct_L90",
+        "voxel_mm": 10.0,
+        "grid_shape": [
+          23,
+          23,
+          14
+        ],
+        "n_cells": 7406,
+        "steps_to_converge": 1400,
+        "tau": 0.9,
+        "Re_matched": 1.0454589498994027,
+        "leg_mm": 90.0,
+        "cross_section_mm": [
+          120.0,
+          120.0
+        ],
+        "target_Q_m3s": 0.00825825,
+        "Re_target_context_only": 4315.121621621622,
+        "Q_at_matched_point_m3s": 2.0007921282557533e-06,
+        "R_pa_per_m3s": 0.5529868007305587,
+        "dP_lbm_pa_at_target_Q": 0.004566703247133137,
+        "dP_lbm_pa": 1.1064116379310348e-06,
+        "dP_formula_pa": 1.028184843686984e-06,
+        "excess_over_formula_pa": 7.822679424405068e-08,
+        "excess_over_formula_frac": 0.07608242304324969,
+        "note": "pressure-driven (fixed-density in/outlet planes) around a 90deg bend, compared to the formula AT THE SAME matched v_mean/Re (no extrapolation). The excess over the formula is the bend/expansion loss a straight-pipe-per-bin sum structurally cannot represent."
+      },
+      "plenum_large_outlet": {
+        "case": "plenum_C",
+        "voxel_mm": 16.0,
+        "grid_shape": [
+          38,
+          25,
+          16
+        ],
+        "n_cells": 15200,
+        "steps_to_converge": 1200,
+        "tau": 0.9,
+        "envelope_mm": [
+          600.0,
+          400.0,
+          250.0
+        ],
+        "outlets": {
+          "outlet_mouth": {
+            "area_mm2": 14400.0,
+            "flux_frac_measured": 1.0,
+            "flux_frac_area_expected": 1.0,
+            "imbalance": 0.0
+          }
+        },
+        "max_flow_imbalance_frac": 0.0,
+        "dP_fan_to_nozzles_pa_at_matched_point": 4.321920460668105e-07,
+        "Q_at_matched_point_m3s": 1.3598522232943292e-06,
+        "Q_target_branch_m3s": 0.00825825,
+        "R_pa_per_m3s": 0.3178228035836111,
+        "inlet_flux_lu": 0.7750666960161983,
+        "outlet_flux_lu": 0.7105534139736134,
+        "inlet_outlet_flux_balance_frac": 0.09079300834234062,
+        "dP_budget_pa_reference": 5.0,
+        "note": "one inlet and one outlet on the declared synthetic chamber SYNTH_PLENUM_MM. max_flow_imbalance_frac is 0 by construction with a single outlet, and inlet_outlet_flux_balance_frac is a measured defect of the full-cell bounce-back scheme, not a gate; the gate is the monotonicity of R_pa_per_m3s against the outlet area (stage2_plenum.outlet_area_sweep). dP is reported AT the matched (drho=0.01) operating point actually simulated, not rescaled to Q_target (same regime-mismatch caveat as the calibration stage)."
+      },
+      "plenum_small_outlet": {
+        "case": "plenum_C",
+        "voxel_mm": 16.0,
+        "grid_shape": [
+          38,
+          25,
+          16
+        ],
+        "n_cells": 15200,
+        "steps_to_converge": 1000,
+        "tau": 0.9,
+        "envelope_mm": [
+          600.0,
+          400.0,
+          250.0
+        ],
+        "outlets": {
+          "outlet_mouth": {
+            "area_mm2": 1600.0,
+            "flux_frac_measured": 1.0,
+            "flux_frac_area_expected": 1.0,
+            "imbalance": 0.0
+          }
+        },
+        "max_flow_imbalance_frac": 0.0,
+        "dP_fan_to_nozzles_pa_at_matched_point": 4.321920460668105e-07,
+        "Q_at_matched_point_m3s": 2.2557709979204702e-08,
+        "Q_target_branch_m3s": 0.00825825,
+        "R_pa_per_m3s": 19.159393682480882,
+        "inlet_flux_lu": 0.7123714903651841,
+        "outlet_flux_lu": 0.011786911520665518,
+        "inlet_outlet_flux_balance_frac": 59.43750214941478,
+        "dP_budget_pa_reference": 5.0,
+        "note": "one inlet and one outlet on the declared synthetic chamber SYNTH_PLENUM_MM. max_flow_imbalance_frac is 0 by construction with a single outlet, and inlet_outlet_flux_balance_frac is a measured defect of the full-cell bounce-back scheme, not a gate; the gate is the monotonicity of R_pa_per_m3s against the outlet area (stage2_plenum.outlet_area_sweep). dP is reported AT the matched (drho=0.01) operating point actually simulated, not rescaled to Q_target (same regime-mismatch caveat as the calibration stage)."
+      },
+      "elapsed_s": 11.6
+    },
+    "original1": {
+      "voxel_mm": 5.0,
+      "steps": 2000,
+      "checks": {
+        "fRe_vs_shah_london": {
+          "value": 0.8730824248934236,
+          "passed": true
+        },
+        "bend_excess_positive": {
+          "value": 0.07608242304324969,
+          "passed": true
+        },
+        "chamber_R_rises_when_outlet_shrinks": {
+          "value": 60.28325679104562,
+          "passed": true
+        }
+      },
+      "straight": {
+        "case": "straight_duct",
+        "voxel_mm": 5.0,
+        "grid_shape": [
+          30,
+          24,
+          24
+        ],
+        "n_cells": 17280,
+        "steps_to_converge": 1999,
+        "tau": 0.9,
+        "Re_matched": 0.12054431618258428,
+        "L_mm": 150.0,
+        "cross_section_mm_nominal": [
+          120.0,
+          120.0
+        ],
+        "cross_section_mm_effective": [
+          110.0,
+          110.0
+        ],
+        "target_Q_m3s": 0.00825825,
+        "Re_target_context_only": 4707.405405405405,
+        "regime_mismatch_declared": true,
+        "fRe_lu_measured": 49.68712080068473,
+        "fRe_shah_london_exact": 56.91,
+        "fRe_measured_over_exact": 0.8730824248934236,
+        "dP_lbm_pa": 9.957704741379313e-08,
+        "dP_formula_pa": 1.282612260840627e-07,
+        "dP_shah_london_square_duct_pa": 1.1405228713193763e-07,
+        "ratio_lbm_over_formula": 0.776361262510699,
+        "ratio_shah_london_over_formula": 0.88921875,
+        "f_re_circular_used_by_formula": 64.0,
+        "f_re_square_shah_london": 56.91,
+        "note": "dP_lbm_pa/dP_formula_pa/dP_shah_london_pa all evaluated at the SAME matched operating point (v_mean_matched, Re_matched) -- the LBM's own measured condition, not an extrapolation. PRIMARY validation is the dimensionless fRe_lu_measured vs the Shah&London 56.91 external literature constant (unit-conversion-free, exact LBM self-check). Re_target_context_only shows the declared branch design flow is in a DIFFERENT (turbulent) regime than this laminar calibration point -- reported, not swept under a linear rescale."
+      },
+      "bent": {
+        "case": "bent_duct_L90",
+        "voxel_mm": 10.0,
+        "grid_shape": [
+          23,
+          23,
+          14
+        ],
+        "n_cells": 7406,
+        "steps_to_converge": 1400,
+        "tau": 0.9,
+        "Re_matched": 1.0454589498994027,
+        "leg_mm": 90.0,
+        "cross_section_mm": [
+          120.0,
+          120.0
+        ],
+        "target_Q_m3s": 0.00825825,
+        "Re_target_context_only": 4315.121621621622,
+        "Q_at_matched_point_m3s": 2.0007921282557533e-06,
+        "R_pa_per_m3s": 0.5529868007305587,
+        "dP_lbm_pa_at_target_Q": 0.004566703247133137,
+        "dP_lbm_pa": 1.1064116379310348e-06,
+        "dP_formula_pa": 1.028184843686984e-06,
+        "excess_over_formula_pa": 7.822679424405068e-08,
+        "excess_over_formula_frac": 0.07608242304324969,
+        "note": "pressure-driven (fixed-density in/outlet planes) around a 90deg bend, compared to the formula AT THE SAME matched v_mean/Re (no extrapolation). The excess over the formula is the bend/expansion loss a straight-pipe-per-bin sum structurally cannot represent."
+      },
+      "plenum_large_outlet": {
+        "case": "plenum_C",
+        "voxel_mm": 16.0,
+        "grid_shape": [
+          38,
+          25,
+          16
+        ],
+        "n_cells": 15200,
+        "steps_to_converge": 1200,
+        "tau": 0.9,
+        "envelope_mm": [
+          600.0,
+          400.0,
+          250.0
+        ],
+        "outlets": {
+          "outlet_mouth": {
+            "area_mm2": 14400.0,
+            "flux_frac_measured": 1.0,
+            "flux_frac_area_expected": 1.0,
+            "imbalance": 0.0
+          }
+        },
+        "max_flow_imbalance_frac": 0.0,
+        "dP_fan_to_nozzles_pa_at_matched_point": 4.321920460668105e-07,
+        "Q_at_matched_point_m3s": 1.3598522232943292e-06,
+        "Q_target_branch_m3s": 0.00825825,
+        "R_pa_per_m3s": 0.3178228035836111,
+        "inlet_flux_lu": 0.7750666960161983,
+        "outlet_flux_lu": 0.7105534139736134,
+        "inlet_outlet_flux_balance_frac": 0.09079300834234062,
+        "dP_budget_pa_reference": 5.0,
+        "note": "one inlet and one outlet on the declared synthetic chamber SYNTH_PLENUM_MM. max_flow_imbalance_frac is 0 by construction with a single outlet, and inlet_outlet_flux_balance_frac is a measured defect of the full-cell bounce-back scheme, not a gate; the gate is the monotonicity of R_pa_per_m3s against the outlet area (stage2_plenum.outlet_area_sweep). dP is reported AT the matched (drho=0.01) operating point actually simulated, not rescaled to Q_target (same regime-mismatch caveat as the calibration stage)."
+      },
+      "plenum_small_outlet": {
+        "case": "plenum_C",
+        "voxel_mm": 16.0,
+        "grid_shape": [
+          38,
+          25,
+          16
+        ],
+        "n_cells": 15200,
+        "steps_to_converge": 1000,
+        "tau": 0.9,
+        "envelope_mm": [
+          600.0,
+          400.0,
+          250.0
+        ],
+        "outlets": {
+          "outlet_mouth": {
+            "area_mm2": 1600.0,
+            "flux_frac_measured": 1.0,
+            "flux_frac_area_expected": 1.0,
+            "imbalance": 0.0
+          }
+        },
+        "max_flow_imbalance_frac": 0.0,
+        "dP_fan_to_nozzles_pa_at_matched_point": 4.321920460668105e-07,
+        "Q_at_matched_point_m3s": 2.2557709979204702e-08,
+        "Q_target_branch_m3s": 0.00825825,
+        "R_pa_per_m3s": 19.159393682480882,
+        "inlet_flux_lu": 0.7123714903651841,
+        "outlet_flux_lu": 0.011786911520665518,
+        "inlet_outlet_flux_balance_frac": 59.43750214941478,
+        "dP_budget_pa_reference": 5.0,
+        "note": "one inlet and one outlet on the declared synthetic chamber SYNTH_PLENUM_MM. max_flow_imbalance_frac is 0 by construction with a single outlet, and inlet_outlet_flux_balance_frac is a measured defect of the full-cell bounce-back scheme, not a gate; the gate is the monotonicity of R_pa_per_m3s against the outlet area (stage2_plenum.outlet_area_sweep). dP is reported AT the matched (drho=0.01) operating point actually simulated, not rescaled to Q_target (same regime-mismatch caveat as the calibration stage)."
+      },
+      "elapsed_s": 42.1
+    }
+  },
+  "comparisons": [
+    {
+      "reference": "original0__state0",
+      "actual": "candidate0__state0",
+      "bytes": 2626560,
+      "exact": true,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__state1",
+      "actual": "candidate0__state1",
+      "bytes": 1125712,
+      "exact": true,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__state2",
+      "actual": "candidate0__state2",
+      "bytes": 2310400,
+      "exact": true,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__state3",
+      "actual": "candidate0__state3",
+      "bytes": 2310400,
+      "exact": true,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__state0",
+      "actual": "candidate1__state0",
+      "bytes": 2626560,
+      "exact": true,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__state1",
+      "actual": "candidate1__state1",
+      "bytes": 1125712,
+      "exact": true,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__state2",
+      "actual": "candidate1__state2",
+      "bytes": 2310400,
+      "exact": true,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__state3",
+      "actual": "candidate1__state3",
+      "bytes": 2310400,
+      "exact": true,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__state0",
+      "actual": "original1__state0",
+      "bytes": 2626560,
+      "exact": true,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__state1",
+      "actual": "original1__state1",
+      "bytes": 1125712,
+      "exact": true,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__state2",
+      "actual": "original1__state2",
+      "bytes": 2310400,
+      "exact": true,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__state3",
+      "actual": "original1__state3",
+      "bytes": 2310400,
+      "exact": true,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    }
+  ],
+  "speedups": [
+    3.4556386400891705,
+    3.630110047156923
+  ],
+  "compiler_flags": [
+    "-std=c++17",
+    "-O3",
+    "-fno-fast-math",
+    "-ffp-contract=off"
+  ],
+  "source_sha256": {
+    "src/field_engine/lbm_domare_v1.py": "fe5d666be621327af77b403ef460218608dff14b375a85e8fb11cacbcdd1cb6e",
+    "src/field_engine/lbm_collision_native_v1.py": "2970355a26591429bef3ebf41d963f2f3ea40b558b4d6ae7761d8b7d8ad3b04a",
+    "src/field_engine/lbm_collision_native_v1/collision.cpp": "2421c0dfd5ae70287cbd3bf3e2b184ef66abeba207a31ab178b5d08dcd386bc2"
+  },
+  "scope": "Original full LBM selftest, alternating old/new twice. Timings include all four prepared contexts and full return-state production. All numeric report fields and complete distributions compared; only elapsed_s excluded. CPU execution; no GPU numerical work."
+}

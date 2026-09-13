@@ -1,0 +1,74 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "exact": true,
+    "repeat": true,
+    "watertight": true,
+    "volume": true,
+    "rejects": true
+  },
+  "rows": [
+    {
+      "leg": 0,
+      "field_csg_ms": 243.89623,
+      "brep_construct_boolean_ms": 32.109656,
+      "extraction_ms": 3.4139489999999997,
+      "field_volume": 967.25,
+      "brep_volume": 960.0000000000001,
+      "volume_error": 7.249999999999886,
+      "volume_bound": 1006.0,
+      "volume_envelope": [
+        507.0,
+        1513.0
+      ],
+      "watertight": true,
+      "brep_valid": true,
+      "exact": true,
+      "offset_exact": true,
+      "retained_bytes": 136020,
+      "hashes": [
+        "93cd03976b4bb3f4516165f5749c6ef556209a1e5df368194a7392d82d2a8e1d",
+        "ad4deea1be5615158f52f61eb9c4280d10d21096a2a9423f7984834269b8f36e",
+        "3be0f4342dcaf8be51eeb3617d1626a3d3920f8194f130c334befb65e748cefd",
+        "5b16e02cc06e59d35c627f00d9a53d3a1f75fd9dd31c51a2e21ed221edd40932",
+        "e5b7a6a667867b60945fa9b304c5b672d72280f00bf78c30188b2e24c218d1af",
+        "14aafed2fa2fc1a526e30e85fb0671ad0a6234a53f93e8bd22b120f317c200d2"
+      ]
+    },
+    {
+      "leg": 1,
+      "field_csg_ms": 243.871141,
+      "brep_construct_boolean_ms": 29.091213999999997,
+      "extraction_ms": 2.325214,
+      "field_volume": 967.25,
+      "brep_volume": 960.0000000000001,
+      "volume_error": 7.249999999999886,
+      "volume_bound": 1006.0,
+      "volume_envelope": [
+        507.0,
+        1513.0
+      ],
+      "watertight": true,
+      "brep_valid": true,
+      "exact": true,
+      "offset_exact": true,
+      "retained_bytes": 136020,
+      "hashes": [
+        "93cd03976b4bb3f4516165f5749c6ef556209a1e5df368194a7392d82d2a8e1d",
+        "ad4deea1be5615158f52f61eb9c4280d10d21096a2a9423f7984834269b8f36e",
+        "3be0f4342dcaf8be51eeb3617d1626a3d3920f8194f130c334befb65e748cefd",
+        "5b16e02cc06e59d35c627f00d9a53d3a1f75fd9dd31c51a2e21ed221edd40932",
+        "e5b7a6a667867b60945fa9b304c5b672d72280f00bf78c30188b2e24c218d1af",
+        "14aafed2fa2fc1a526e30e85fb0671ad0a6234a53f93e8bd22b120f317c200d2"
+      ]
+    }
+  ],
+  "input_pack_ms": 40.358143999999996,
+  "shape": [
+    49,
+    33,
+    45
+  ],
+  "pitch": 0.5,
+  "scope": "Synthetic axis-aligned bracket/plate with two rectangular through holes. CSG starts from packed operands; B-rep includes primitive construction, excludes tessellation/rasterization. Input packing and mesh extraction reported separately. Offset verified as level-set arithmetic only, not exact Euclidean redistance."
+}

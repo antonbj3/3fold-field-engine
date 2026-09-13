@@ -1,0 +1,7 @@
+{
+  "scope": "Post-validation trailing-whitespace cleanup only; captured source hashes retain the measured original.",
+  "file": "src/field_engine/rt_columns_prepared_v1/api.cpp",
+  "captured_sha256": "43dceadbc06de00cb0d208da426a578a7ba0688517ca4c66a74dacf040172292",
+  "current_sha256": "c7484aec5f639280efec67875746b919319848de112b07f405b247549f1eb700",
+  "nonwhitespace_exact": true
+}

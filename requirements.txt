@@ -1,0 +1,18 @@
+numpy
+scipy
+scikit-image
+trimesh
+warp-lang
+pyyaml
+pytest
+# the Bayesian surrogate
+scikit-learn
+# the B-rep half: the recipe executor, the STEP export and the precision round-trip proof
+build123d
+# the independent genus instrument used by genus_v1.py
+manifold3d
+# contour topology and bounded simplification for the section-loft recipe
+shapely>=2.1,<3
+
+# Independent open-mesh generalized winding reference used by GPU gates
+libigl

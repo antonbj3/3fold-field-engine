@@ -1,0 +1,6 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "scope": "Initial observer used ordinary captured events; event elapsed-time retrieval returned status 2 before any phase report. No performance attribution accepted.",
+  "source_sha256": "113672081ffa09de645cee142aee61bf2f84c62cb47721ac2778026529bc4b6b",
+  "phase_rows": 0
+}

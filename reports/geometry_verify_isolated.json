@@ -1,0 +1,164 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "coverage": true,
+    "fresh": true,
+    "reports": true,
+    "arrays": true,
+    "source_hashes": true
+  },
+  "rows": [
+    {
+      "module": "field_recipe_oracle_v1.py",
+      "command": "field_recipe_oracle_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "report_exact": true,
+      "captures_exact": true,
+      "bytes_compared": 437760,
+      "observed_gates": {
+        "full_repeat": true,
+        "planted_errors_detected": true,
+        "zero_round_trip": true
+      }
+    },
+    {
+      "module": "field_adaptive_blocks_probe.py",
+      "command": "field_adaptive_blocks_probe.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "report_exact": true,
+      "captures_exact": true,
+      "bytes_compared": 4580680,
+      "observed_gates": {
+        "byte_budget": true,
+        "dense_source_released": true,
+        "grid_exact": true,
+        "inputs_unchanged": true,
+        "interface_exact": true,
+        "invalid_rejected": true,
+        "query_exact": true,
+        "repeat": true,
+        "sample_budget": true
+      }
+    },
+    {
+      "module": "field_loft_chain_probe.py",
+      "command": "field_loft_chain_probe.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "report_exact": true,
+      "captures_exact": true,
+      "bytes_compared": 1613056,
+      "observed_gates": {
+        "independent_chain_repeat": true,
+        "loft": true,
+        "sections": true
+      }
+    },
+    {
+      "module": "field_to_recipe_loft_v1.py",
+      "command": "field_loft_chain_probe.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "report_exact": true,
+      "captures_exact": true,
+      "bytes_compared": 546486,
+      "observed_gates": {
+        "executor": true,
+        "one_solid": true,
+        "polygon_integral": true,
+        "rasterisation_volume": true,
+        "simplification": true,
+        "valid": true
+      }
+    },
+    {
+      "module": "field_adaptive_input_audit.py",
+      "command": "field_adaptive_input_audit.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "report_exact": true,
+      "captures_exact": true,
+      "bytes_compared": 18322720,
+      "observed_gates": {
+        "input_schema": true,
+        "differences_limited": true,
+        "same_oriented_geometry": true,
+        "captured_order_mechanism": true,
+        "query_generation": true,
+        "same_input_replay": true,
+        "full_mesh_transplant": true
+      }
+    },
+    {
+      "module": "field_adaptive_canonical_probe.py",
+      "command": "field_adaptive_canonical_probe.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "report_exact": true,
+      "captures_exact": true,
+      "bytes_compared": 5531960,
+      "observed_gates": {
+        "byte_budget": true,
+        "canonical_controls": true,
+        "dense_source_released": true,
+        "face_permutations": true,
+        "face_records_preserved": true,
+        "grid_exact": true,
+        "input_repeat": true,
+        "inputs_unchanged": true,
+        "interface_exact": true,
+        "invalid_rejected": true,
+        "original_grid_exact": true,
+        "query_exact": true,
+        "repeat": true,
+        "sample_budget": true
+      }
+    }
+  ],
+  "source_sha256": {
+    "src/field_engine/field_recipe_oracle_v1.py": "9e4308b488e2c808926da3a720c4628a565dd2d53b21d45717267f89b9a98b1d",
+    "src/field_engine/field_adaptive_blocks_probe.py": "43f57d6973eda5f58f3cfda9183399e4cf74ac36cc0625daa88a0c6e4117d097",
+    "src/field_engine/adaptive_sample_blocks_v1.py": "e6bfa2c3c72b1a3bfc0b8f35599a6f06414be5d38513a49e7c89ea1e35404872",
+    "src/field_engine/field_loft_chain_probe.py": "9459694c1a0147fb54b7a185e4a158cc9d2b3057f2e7bf8c732b772779acec74",
+    "src/field_engine/field_to_recipe_loft_v1.py": "5db1cb5b92ffa2832db02b0df17e2978e718726ef9961cdc7dbf579a38ebfeda",
+    "src/field_engine/field_recipe_sections_probe.py": "6ae7a778d41d4ac547c7e278dddf1255d2c456acac1f66eb8c2b27439cd95309",
+    "src/field_engine/lastfalt_v1_topopt.py": "5beb7aa97146a6fe5a103e4f82c9b27a6de820f2c2f294e70ab1ab21bb62bb8a",
+    "src/field_engine/field_to_recipe_v1.py": "9ecb44a428722fa2d4d263e2004095d883c341cc21e5c1dbab61121d71966478",
+    "src/field_engine/recipe/cad_op_schema_v1.py": "d72ca140e58012c4a8562c20c631087cd8b915c98b49a2696232607a90da5f4f",
+    "src/field_engine/recipe/cad_op_exec_v1.py": "808f572217884893ed1b76a344953f567c2dfbd0f01c9ff395720e9a9664f772",
+    "examples/parts/holed_plate_v1.py": "a086c8371b9d3dab48d207c7087b171b77f92c87f180b45c2dc1befbe9b22486",
+    "examples/parts/bracket_part_v1.py": "9394114811dff431a55e5fd1b80f2ccd5d84dd9a61b3a770598157624e5dab59",
+    "examples/recipes/bracket_v1_recipe.json": "63f0b875595a8f8f4d2dc975d2bb98965decceb5542bae7c03a3e8f246d15a94",
+    "src/field_engine/loop/recept_exec_v1.py": "677725b96d97620deca6b1819bfd0a25b3c8286d21e64cbfe55d7ad0e69f2d10",
+    "src/field_engine/faltkarna_v1_multires.py": "f7443440584ee450b0021f3416352ee7afd710cdca397e96a7a218fc3f14c445",
+    "src/field_engine/mesh_to_sdf_small_features_v1.py": "05bc5f3b7880562856e49041d2bff98c8acbf786b316eabf906c0bc5f8e59e40",
+    "src/field_engine/faltkarna_v1_mesh_to_sdf.py": "5dda1d178b2d9f52395c1edc26ed663457b375afeb41285326dd815be33ff3e2",
+    "src/field_engine/field_adaptive_input_audit.py": "82e39856abc45f3530f0c9a4de9f51c36c5fd5dbc4ee58cd6c4367d067afbe6e",
+    "src/field_engine/field_adaptive_canonical_probe.py": "08d04f71aecf1e8f8877055ee8aab8a5cdabeb2ca211a5daf977f1094debe1b0"
+  },
+  "executions": {
+    "field_recipe_oracle_v1.py": 0,
+    "field_adaptive_blocks_probe.py": 0,
+    "field_loft_chain_probe.py": 0,
+    "field_adaptive_input_audit.py": 0,
+    "field_adaptive_canonical_probe.py": 0
+  },
+  "selected_modules": [
+    "field_recipe_oracle_v1.py",
+    "field_adaptive_blocks_probe.py",
+    "field_loft_chain_probe.py",
+    "field_to_recipe_loft_v1.py",
+    "field_adaptive_input_audit.py",
+    "field_adaptive_canonical_probe.py"
+  ],
+  "omitted_modules": [],
+  "scope": "Geometry slice only. Frozen complete report bytes, full captures and documented source pins. Loft module is explicitly executed by the chain, with its own six gates and full report checked separately; imports do not count."
+}

@@ -1,0 +1,40 @@
+{
+  "gates": {
+    "full_repeat": true,
+    "exact_cpu_outputs": true,
+    "faster_all_cases_both_legs": true,
+    "finite_timings": true,
+    "no_observed_fault": true,
+    "idle_precheck": true,
+    "cross_process_full_hash_repeat": true
+  },
+  "first_groups": [
+    {
+      "case": "sphere",
+      "leg": 0,
+      "queries": 64,
+      "runtime_setup_charge_ms": 0.27043499721912667,
+      "setup_ms": 334.6737210013089,
+      "close_ms": 7.549415000539739,
+      "cpu_mean_ms": 8.066150531021776,
+      "wrapper_query_mean_ms": 0.429413875622231,
+      "edt_surface_mean_ms": 0.9069274374269298,
+      "accounted_native_mean_ms": 6.687803359909594,
+      "ratio": 0.8291195824066055
+    },
+    {
+      "case": "sphere",
+      "leg": 0,
+      "queries": 64,
+      "runtime_setup_charge_ms": 0.2833319958881475,
+      "setup_ms": 213.31701099552447,
+      "close_ms": 7.216401005280204,
+      "cpu_mean_ms": 8.052180093500283,
+      "wrapper_query_mean_ms": 0.4215293904508144,
+      "edt_surface_mean_ms": 0.9035486096991008,
+      "accounted_native_mean_ms": 4.7753396250982405,
+      "ratio": 0.5930492822624388
+    }
+  ],
+  "timing_repeat_identity_claim": false
+}

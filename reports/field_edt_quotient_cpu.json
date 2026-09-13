@@ -1,0 +1,57 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "dense_coverage": true,
+    "dense_exact": true,
+    "repeat": true,
+    "boundary_coverage": true,
+    "boundary_exact": true
+  },
+  "rows": [
+    {
+      "denominator": 2,
+      "cases": 2097153,
+      "exact": true,
+      "repeat": true
+    },
+    {
+      "denominator": 4,
+      "cases": 2097153,
+      "exact": true,
+      "repeat": true
+    },
+    {
+      "denominator": 6,
+      "cases": 2097153,
+      "exact": true,
+      "repeat": true
+    },
+    {
+      "denominator": 8,
+      "cases": 2097153,
+      "exact": true,
+      "repeat": true
+    },
+    {
+      "denominator": 10,
+      "cases": 2097153,
+      "exact": true,
+      "repeat": true
+    },
+    {
+      "denominator": 1020,
+      "cases": 2097153,
+      "exact": true,
+      "repeat": true
+    },
+    {
+      "denominator": 1022,
+      "cases": 2097153,
+      "exact": true,
+      "repeat": true
+    }
+  ],
+  "boundary_cases": 11557,
+  "source_sha256": "bf9bf7ee26babb33f93fcedab4212e9a143e6f7ec6fab155d61fb231fe631947",
+  "scope": "CPU arithmetic proof only. Seven complete numerator ranges [-2^20,2^20], plus boundaries for all 511 EDT denominators. Float estimates are corrected by exact integer inequalities; no tolerance or GPU speed claim."
+}

@@ -1,0 +1,588 @@
+{
+ "device": "cuda:0",
+ "platta": {
+  "del_namn": "holed_plate_v1",
+  "h_grov": 0.6665718750058368,
+  "h_fin": 0.1666429687514592,
+  "h_probe": 0.0833214843757296,
+  "n_trianglar": 5072,
+  "tabell": "hole table: radial deviation of the zero level set (|sd|/R), one ring, hole volume error\n  R [mm] |   multires {h,h/2,h/4}   |     global-fine h/4      |     global-coarse h     \n       1 |    8.2%   1 ring    -1.9% |    8.2%   1 ring    -1.9% |   33.2%   1 ring    -5.0%\n       2 |    4.0%   1 ring    -2.9% |    4.0%   1 ring    -2.9% |   16.5%   1 ring    -5.1%\n       4 |    4.1%   1 ring    -3.0% |    2.1%   1 ring    -0.8% |    8.3%   1 ring    -2.0%\n       8 |    4.1%   1 ring    -3.0% |    1.0%   1 ring    -0.2% |    4.1%   1 ring    -3.0%\n      16 |    2.1%   1 ring    -1.0% |    0.5%   1 ring    -0.1% |    2.1%   1 ring    -1.0%",
+  "fall": [
+   {
+    "namn": "multires {h,h/2,h/4}",
+    "pitch": null,
+    "aktiva_voxlar": 2039808,
+    "t_bygg_s": 1.5547027587890625,
+    "rader": [
+     {
+      "R_mm": 1.0,
+      "pitch_mm": 0.1666429687514592,
+      "R_per_h": 6.000853246268415,
+      "radiell_avvikelse": 0.08189960569143295,
+      "radiell_avvikelse_nollgenomgang": 0.08189960947950381,
+      "n_radier_med_nollgenomgang": 64,
+      "n_teckenbyten": 0,
+      "en_ring": true,
+      "ring_matbar": true,
+      "vol_rekonstruerad_mm3": 18.494739436843673,
+      "vol_facit_mm3": 18.84955592153876,
+      "volym_fel": -0.018823599143237557
+     },
+     {
+      "R_mm": 2.0,
+      "pitch_mm": 0.1666429687514592,
+      "R_per_h": 12.00170649253683,
+      "radiell_avvikelse": 0.04009667783975601,
+      "radiell_avvikelse_nollgenomgang": 0.040096679781593814,
+      "n_radier_med_nollgenomgang": 64,
+      "n_teckenbyten": 0,
+      "en_ring": true,
+      "ring_matbar": true,
+      "vol_rekonstruerad_mm3": 73.18751619489716,
+      "vol_facit_mm3": 75.39822368615503,
+      "volym_fel": -0.02932041874699786
+     },
+     {
+      "R_mm": 4.0,
+      "pitch_mm": 0.3332859375029184,
+      "R_per_h": 12.00170649253683,
+      "radiell_avvikelse": 0.04087870940566063,
+      "radiell_avvikelse_nollgenomgang": 0.04087871101750851,
+      "n_radier_med_nollgenomgang": 64,
+      "n_teckenbyten": 0,
+      "en_ring": true,
+      "ring_matbar": true,
+      "vol_rekonstruerad_mm3": 292.58344550538277,
+      "vol_facit_mm3": 301.59289474462014,
+      "volym_fel": -0.02987288293666965
+     },
+     {
+      "R_mm": 8.0,
+      "pitch_mm": 0.6665718750058368,
+      "R_per_h": 12.00170649253683,
+      "radiell_avvikelse": 0.041340820491313934,
+      "radiell_avvikelse_nollgenomgang": 0.04134082032815822,
+      "n_radier_med_nollgenomgang": 64,
+      "n_teckenbyten": 0,
+      "en_ring": true,
+      "ring_matbar": true,
+      "vol_rekonstruerad_mm3": 1169.8339241989138,
+      "vol_facit_mm3": 1206.3715789784806,
+      "volym_fel": -0.03028723107892326
+     },
+     {
+      "R_mm": 16.0,
+      "pitch_mm": 0.6665718750058368,
+      "R_per_h": 24.00341298507366,
+      "radiell_avvikelse": 0.020741503685712814,
+      "radiell_avvikelse_nollgenomgang": 0.020741503909193493,
+      "n_radier_med_nollgenomgang": 64,
+      "n_teckenbyten": 0,
+      "en_ring": true,
+      "ring_matbar": true,
+      "vol_rekonstruerad_mm3": 4779.47388059334,
+      "vol_facit_mm3": 4825.486315913922,
+      "volym_fel": -0.009535294954383775
+     }
+    ],
+    "stats": {
+     "n_brickor": 528,
+     "n_aktiva": 526,
+     "n_per_niva": {
+      "0": 416,
+      "1": 62,
+      "2": 48
+     },
+     "n_klamda_brickor": 4,
+     "aktiva_voxlar": 2039808,
+     "n_overlappsfaces": 96,
+     "kluster": [
+      {
+       "niva": 1,
+       "n_brickor": 62,
+       "fonster": [
+        193,
+        129,
+        65
+       ],
+       "fonster_voxlar": 1618305
+      },
+      {
+       "niva": 2,
+       "n_brickor": 48,
+       "fonster": [
+        225,
+        161,
+        97
+       ],
+       "fonster_voxlar": 3513825
+      }
+     ],
+     "h_grov": 0.6665718750058368,
+     "h_per_niva": [
+      0.6665718750058368,
+      0.3332859375029184,
+      0.1666429687514592
+     ],
+     "origin": [
+      -12.99971562501751,
+      -27.333143750011676,
+      -4.99971562501751
+     ],
+     "shape_l": [
+      190,
+      84,
+      16
+     ],
+     "dense_voxlar_grov": 255360
+    },
+    "tid": {
+     "t_grov_falt_s": 2.384185791015625e-07,
+     "t_klassificering_s": 0.0010905265808105469,
+     "t_nivaval_s": 0.0643453598022461,
+     "t_niva0_tiles_s": 0.0014584064483642578,
+     "t_forfining_s": 1.2369225025177002,
+     "t_overlappsband_s": 0.008690834045410156,
+     "t_bygg_total_s": 1.3125078678131104
+    },
+    "n_active_blocks": null,
+    "shape_l": null
+   },
+   {
+    "namn": "global-fine h/4",
+    "pitch": 0.1666429687514592,
+    "aktiva_voxlar": 10420224,
+    "t_bygg_s": 3.2677102088928223,
+    "rader": [
+     {
+      "R_mm": 1.0,
+      "pitch_mm": 0.1666429687514592,
+      "R_per_h": 6.000853246268415,
+      "radiell_avvikelse": 0.08189960569143295,
+      "radiell_avvikelse_nollgenomgang": 0.08189960953245234,
+      "n_radier_med_nollgenomgang": 64,
+      "n_teckenbyten": 0,
+      "en_ring": true,
+      "ring_matbar": true,
+      "vol_rekonstruerad_mm3": 18.494739436843673,
+      "vol_facit_mm3": 18.84955592153876,
+      "volym_fel": -0.018823599143237557
+     },
+     {
+      "R_mm": 2.0,
+      "pitch_mm": 0.1666429687514592,
+      "R_per_h": 12.00170649253683,
+      "radiell_avvikelse": 0.04009667783975601,
+      "radiell_avvikelse_nollgenomgang": 0.04009667982301213,
+      "n_radier_med_nollgenomgang": 64,
+      "n_teckenbyten": 0,
+      "en_ring": true,
+      "ring_matbar": true,
+      "vol_rekonstruerad_mm3": 73.18751619489716,
+      "vol_facit_mm3": 75.39822368615503,
+      "volym_fel": -0.02932041874699786
+     },
+     {
+      "R_mm": 4.0,
+      "pitch_mm": 0.1666429687514592,
+      "R_per_h": 24.00341298507366,
+      "radiell_avvikelse": 0.02075221575796604,
+      "radiell_avvikelse_nollgenomgang": 0.02004833991150612,
+      "n_radier_med_nollgenomgang": 64,
+      "n_teckenbyten": 0,
+      "en_ring": true,
+      "ring_matbar": true,
+      "vol_rekonstruerad_mm3": 299.081597199409,
+      "vol_facit_mm3": 301.59289474462014,
+      "volym_fel": -0.008326779539477068
+     },
+     {
+      "R_mm": 8.0,
+      "pitch_mm": 0.1666429687514592,
+      "R_per_h": 48.00682597014732,
+      "radiell_avvikelse": 0.010095263831317425,
+      "radiell_avvikelse_nollgenomgang": 0.010095263685501066,
+      "n_radier_med_nollgenomgang": 64,
+      "n_teckenbyten": 0,
+      "en_ring": true,
+      "ring_matbar": true,
+      "vol_rekonstruerad_mm3": 1203.8242561368966,
+      "vol_facit_mm3": 1206.3715789784806,
+      "volym_fel": -0.0021115574056717983
+     },
+     {
+      "R_mm": 16.0,
+      "pitch_mm": 0.1666429687514592,
+      "R_per_h": 96.01365194029464,
+      "radiell_avvikelse": 0.0051187253557145596,
+      "radiell_avvikelse_nollgenomgang": 0.005118725595778195,
+      "n_radier_med_nollgenomgang": 64,
+      "n_teckenbyten": 0,
+      "en_ring": true,
+      "ring_matbar": true,
+      "vol_rekonstruerad_mm3": 4822.628272612642,
+      "vol_facit_mm3": 4825.486315913922,
+      "volym_fel": -0.0005922808840747911
+     }
+    ],
+    "stats": null,
+    "tid": null,
+    "n_active_blocks": 20352,
+    "shape_l": [
+     739,
+     318,
+     43
+    ]
+   },
+   {
+    "namn": "global-coarse h",
+    "pitch": 0.6665718750058368,
+    "aktiva_voxlar": 269312,
+    "t_bygg_s": 0.24219489097595215,
+    "rader": [
+     {
+      "R_mm": 1.0,
+      "pitch_mm": 0.6665718750058368,
+      "R_per_h": 1.5002133115671037,
+      "radiell_avvikelse": 0.33186405897140503,
+      "radiell_avvikelse_nollgenomgang": 0.3318640622074517,
+      "n_radier_med_nollgenomgang": 64,
+      "n_teckenbyten": 0,
+      "en_ring": true,
+      "ring_matbar": true,
+      "vol_rekonstruerad_mm3": 17.911571977123376,
+      "vol_facit_mm3": 18.84955592153876,
+      "volym_fel": -0.049761593764847234
+     },
+     {
+      "R_mm": 2.0,
+      "pitch_mm": 0.6665718750058368,
+      "R_per_h": 3.0004266231342074,
+      "radiell_avvikelse": 0.16507890820503235,
+      "radiell_avvikelse_nollgenomgang": 0.1650789063866065,
+      "n_radier_med_nollgenomgang": 64,
+      "n_teckenbyten": 0,
+      "en_ring": true,
+      "ring_matbar": true,
+      "vol_rekonstruerad_mm3": 71.52132345283916,
+      "vol_facit_mm3": 75.39822368615503,
+      "volym_fel": -0.05141898633386205
+     },
+     {
+      "R_mm": 4.0,
+      "pitch_mm": 0.6665718750058368,
+      "R_per_h": 6.000853246268415,
+      "radiell_avvikelse": 0.08253945410251617,
+      "radiell_avvikelse_nollgenomgang": 0.08253945319330336,
+      "n_radier_med_nollgenomgang": 64,
+      "n_teckenbyten": 0,
+      "en_ring": true,
+      "ring_matbar": true,
+      "vol_rekonstruerad_mm3": 295.4159731668814,
+      "vol_facit_mm3": 301.59289474462014,
+      "volym_fel": -0.020480991712252372
+     },
+     {
+      "R_mm": 8.0,
+      "pitch_mm": 0.6665718750058368,
+      "R_per_h": 12.00170649253683,
+      "radiell_avvikelse": 0.041340820491313934,
+      "radiell_avvikelse_nollgenomgang": 0.04134082032639963,
+      "n_radier_med_nollgenomgang": 64,
+      "n_teckenbyten": 0,
+      "en_ring": true,
+      "ring_matbar": true,
+      "vol_rekonstruerad_mm3": 1169.8339241989138,
+      "vol_facit_mm3": 1206.3715789784806,
+      "volym_fel": -0.03028723107892326
+     },
+     {
+      "R_mm": 16.0,
+      "pitch_mm": 0.6665718750058368,
+      "R_per_h": 24.00341298507366,
+      "radiell_avvikelse": 0.020741503685712814,
+      "radiell_avvikelse_nollgenomgang": 0.020741503916227644,
+      "n_radier_med_nollgenomgang": 64,
+      "n_teckenbyten": 0,
+      "en_ring": true,
+      "ring_matbar": true,
+      "vol_rekonstruerad_mm3": 4779.47388059334,
+      "vol_facit_mm3": 4825.486315913922,
+      "volym_fel": -0.009535294954383775
+     }
+    ],
+    "stats": null,
+    "tid": null,
+    "n_active_blocks": 526,
+    "shape_l": [
+     190,
+     84,
+     16
+    ]
+   }
+  ],
+  "lagrade_sampel_multires": 2332846,
+  "minneskvot_multires_vs_fin": 0.1957547169811321,
+  "kontinuitet_med_band": {
+   "n_pitchbyten_faces": 96,
+   "n_provpunkter": 59744,
+   "max_hopp_mm": 0.0004999637603759766,
+   "medel_hopp_mm": 0.00010909701386817072,
+   "grans_mm": 0.3332859375029184,
+   "varsta": {
+    "brick": [
+     0,
+     3,
+     1
+    ],
+    "axel": 1,
+    "sida": -1,
+    "niva": 1,
+    "niva_granne": 0
+   },
+   "GRON": true
+  },
+  "kontinuitet_utan_band": {
+   "n_pitchbyten_faces": 96,
+   "n_provpunkter": 59744,
+   "max_hopp_mm": 0.6665719747543335,
+   "medel_hopp_mm": 0.10437050294360505,
+   "grans_mm": 0.3332859375029184,
+   "varsta": {
+    "brick": [
+     1,
+     6,
+     1
+    ],
+    "axel": 0,
+    "sida": -1,
+    "niva": 2,
+    "niva_granne": 1
+   },
+   "GRON": false
+  },
+  "gradient_norm_median_pa_vagg": 0.9984532003311207,
+  "fingerprint": "fa2bf7b575d6a45f3698782fba27cf412f143873304849c55b21c55b7444a73e",
+  "gate": {
+   "rader": [
+    {
+     "R_mm": 2.0,
+     "multires_avvikelse": 0.04009667783975601,
+     "fin_avvikelse": 0.04009667783975601,
+     "pass_avvikelse": true,
+     "pass_ring": true,
+     "pass_volym_vs_fin": true
+    },
+    {
+     "R_mm": 4.0,
+     "multires_avvikelse": 0.04087870940566063,
+     "fin_avvikelse": 0.02075221575796604,
+     "pass_avvikelse": true,
+     "pass_ring": true,
+     "pass_volym_vs_fin": false
+    },
+    {
+     "R_mm": 8.0,
+     "multires_avvikelse": 0.041340820491313934,
+     "fin_avvikelse": 0.010095263831317425,
+     "pass_avvikelse": true,
+     "pass_ring": true,
+     "pass_volym_vs_fin": false
+    },
+    {
+     "R_mm": 16.0,
+     "multires_avvikelse": 0.020741503685712814,
+     "fin_avvikelse": 0.0051187253557145596,
+     "pass_avvikelse": true,
+     "pass_ring": true,
+     "pass_volym_vs_fin": true
+    }
+   ],
+   "minneskvot": 0.1957547169811321,
+   "minneskvot_tak": 0.3,
+   "pass_minne": true,
+   "pass_kontinuitet": true,
+   "pass_tabell": true,
+   "ALL_PASS": true
+  }
+ },
+ "bracket": {
+  "del_namn": "bracket_part_v1",
+  "h_grov": 2.993456687348983,
+  "h_fin": 0.7483641718372458,
+  "r_min_mm": 4.490185031023475,
+  "n_trianglar": 5088,
+  "n_provpunkter": 4000,
+  "rader": [
+   {
+    "namn": "multires {h,h/2,h/4}",
+    "pitch_mm": 2.993456687348983,
+    "aktiva_voxlar": 2334720,
+    "t_bygg_s": 0.9426290988922119,
+    "yt_avvikelse_median_mm": 0.13812853395938873,
+    "yt_avvikelse_p95_mm": 0.3741820752620697,
+    "yt_avvikelse_median_per_h_grov": 0.046143488410288605
+   },
+   {
+    "namn": "global-fine h/4",
+    "pitch_mm": 0.7483641718372458,
+    "aktiva_voxlar": 718848,
+    "t_bygg_s": 0.19260048866271973,
+    "yt_avvikelse_median_mm": 0.1379377841949463,
+    "yt_avvikelse_p95_mm": 0.3741820752620697,
+    "yt_avvikelse_median_per_h_grov": 0.046079766005277634
+   },
+   {
+    "namn": "global-coarse h",
+    "pitch_mm": 2.993456687348983,
+    "aktiva_voxlar": 40960,
+    "t_bygg_s": 0.019340991973876953,
+    "yt_avvikelse_median_mm": 0.7165347337722778,
+    "yt_avvikelse_p95_mm": 1.4967283010482788,
+    "yt_avvikelse_median_per_h_grov": 0.23936700820922852
+   }
+  ],
+  "minneskvot_multires_vs_fin": 3.247863247863248,
+  "stats": {
+   "n_brickor": 80,
+   "n_aktiva": 80,
+   "n_per_niva": {
+    "0": 0,
+    "1": 10,
+    "2": 70
+   },
+   "n_klamda_brickor": 6,
+   "aktiva_voxlar": 2334720,
+   "n_overlappsfaces": 20,
+   "kluster": [
+    {
+     "niva": 1,
+     "n_brickor": 10,
+     "fonster": [
+      49,
+      113,
+      65
+     ],
+     "fonster_voxlar": 359905
+    },
+    {
+     "niva": 2,
+     "n_brickor": 30,
+     "fonster": [
+      129,
+      193,
+      97
+     ],
+     "fonster_voxlar": 2415009
+    },
+    {
+     "niva": 2,
+     "n_brickor": 40,
+     "fonster": [
+      161,
+      193,
+      97
+     ],
+     "fonster_voxlar": 3014081
+    }
+   ],
+   "h_grov": 2.993456687348983,
+   "h_per_niva": [
+    2.993456687348983,
+    1.4967283436744916,
+    0.7483641718372458
+   ],
+   "origin": [
+    -83.98037006204694,
+    -55.98691337469797,
+    -5.986913374697966
+   ],
+   "shape_l": [
+    57,
+    39,
+    9
+   ],
+   "dense_voxlar_grov": 20007
+  },
+  "tid": {
+   "t_grov_falt_s": 2.384185791015625e-07,
+   "t_klassificering_s": 0.000377655029296875,
+   "t_nivaval_s": 0.018757104873657227,
+   "t_niva0_tiles_s": 0.00017309188842773438,
+   "t_forfining_s": 0.9010968208312988,
+   "t_overlappsband_s": 0.0028831958770751953,
+   "t_bygg_total_s": 0.923288106918335
+  },
+  "kontinuitet": {
+   "n_pitchbyten_faces": 20,
+   "n_provpunkter": 21780,
+   "max_hopp_mm": 0.0020275115966796875,
+   "medel_hopp_mm": 0.0005576986277730848,
+   "grans_mm": 0.7483641718372458,
+   "varsta": {
+    "brick": [
+     4,
+     1,
+     0
+    ],
+    "axel": 0,
+    "sida": -1,
+    "niva": 2,
+    "niva_granne": 1
+   },
+   "GRON": true
+  },
+  "fingerprint": "1fce1224b433801bcb4f2597d0e8599c2282f59b11136ffc2e9ac463d3b858b7"
+ },
+ "determinism": {
+  "fingerprint_kor1": "fa2bf7b575d6a45f3698782fba27cf412f143873304849c55b21c55b7444a73e",
+  "fingerprint_kor2": "fa2bf7b575d6a45f3698782fba27cf412f143873304849c55b21c55b7444a73e",
+  "bit_identiska": true
+ },
+ "gate": {
+  "platta": {
+   "rader": [
+    {
+     "R_mm": 2.0,
+     "multires_avvikelse": 0.04009667783975601,
+     "fin_avvikelse": 0.04009667783975601,
+     "pass_avvikelse": true,
+     "pass_ring": true,
+     "pass_volym_vs_fin": true
+    },
+    {
+     "R_mm": 4.0,
+     "multires_avvikelse": 0.04087870940566063,
+     "fin_avvikelse": 0.02075221575796604,
+     "pass_avvikelse": true,
+     "pass_ring": true,
+     "pass_volym_vs_fin": false
+    },
+    {
+     "R_mm": 8.0,
+     "multires_avvikelse": 0.041340820491313934,
+     "fin_avvikelse": 0.010095263831317425,
+     "pass_avvikelse": true,
+     "pass_ring": true,
+     "pass_volym_vs_fin": false
+    },
+    {
+     "R_mm": 16.0,
+     "multires_avvikelse": 0.020741503685712814,
+     "fin_avvikelse": 0.0051187253557145596,
+     "pass_avvikelse": true,
+     "pass_ring": true,
+     "pass_volym_vs_fin": true
+    }
+   ],
+   "minneskvot": 0.1957547169811321,
+   "minneskvot_tak": 0.3,
+   "pass_minne": true,
+   "pass_kontinuitet": true,
+   "pass_tabell": true,
+   "ALL_PASS": true
+  },
+  "bit_identiska": true,
+  "ALL_PASS": true
+ }
+}

@@ -1,0 +1,52 @@
+{
+  "precision_roundtrip": {
+    "r_in": 17.3,
+    "h_in": 42.7,
+    "occ_volume": 40148.55822800637,
+    "occ_area": 6521.946348852411,
+    "r_recovered": 17.299999999999983,
+    "h_recovered": 42.70000000000009,
+    "r_abs_err": 1.7763568394002505e-14,
+    "h_abs_err": 8.526512829121202e-14,
+    "ikarus_expr_params": {
+      "radius": 17.3,
+      "height": 42.7
+    },
+    "gate_bit_identical": true
+  },
+  "facet_scaling": {
+    "tree": "sphere(R=20)",
+    "rows": [
+      {
+        "pitch_mm": 2.0,
+        "n_verts": 1902,
+        "n_faces": 3800,
+        "mesh_area_mm2": 5010.642916272458,
+        "analytic_area_mm2": 5026.548245743669,
+        "area_err_pct": 0.3164264758560578
+      },
+      {
+        "pitch_mm": 1.0,
+        "n_verts": 7542,
+        "n_faces": 15080,
+        "mesh_area_mm2": 5022.609375,
+        "analytic_area_mm2": 5026.548245743669,
+        "area_err_pct": 0.07836134363187564
+      },
+      {
+        "pitch_mm": 0.5,
+        "n_verts": 30150,
+        "n_faces": 60296,
+        "mesh_area_mm2": 5025.563374783151,
+        "analytic_area_mm2": 5026.548245743669,
+        "area_err_pct": 0.019593385209272614
+      }
+    ],
+    "errs_by_resolution_finest_last": [
+      0.3164264758560578,
+      0.07836134363187564,
+      0.019593385209272614
+    ],
+    "gate_error_shrinks_with_resolution": true
+  }
+}

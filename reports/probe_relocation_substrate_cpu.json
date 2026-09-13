@@ -1,0 +1,88 @@
+{
+  "cell": "faltkarna_v1_selftest",
+  "params": {
+    "hx": 20.0,
+    "hy": 15.0,
+    "hz": 10.0,
+    "r": 6.0,
+    "pitch": 0.25,
+    "block": 8,
+    "vol_analytic_mm3": 21738.053289415348
+  },
+  "fallbevis_iii_normal": {
+    "vol_mesh_mm3": 21738.14761414831,
+    "vol_voxel_mm3": 21142.375,
+    "vol_analytic_mm3": 21738.053289415348,
+    "check_mesh": {
+      "volym_matt_mm3": 21738.14761414831,
+      "volym_facit_mm3": 21738.053289415348,
+      "diff_frac": 4.339152715630485e-06,
+      "tol_frac": 0.03,
+      "GRON": true
+    },
+    "check_voxel": {
+      "volym_matt_mm3": 21142.375,
+      "volym_facit_mm3": 21738.053289415348,
+      "diff_frac": 0.027402559073925636,
+      "tol_frac": 0.03,
+      "GRON": true
+    },
+    "t_raster_s": 0.04873347282409668,
+    "n_verts": 94476,
+    "n_faces": 192592
+  },
+  "substrat_minne": {
+    "n_blocks": 4488,
+    "n_active": 4184,
+    "n_interior": 280,
+    "n_exterior": 24,
+    "active_voxels": 2142208,
+    "dense_voxels": 1940289,
+    "margin_mm": 3.4641016151377544,
+    "dense_MB": 7.761156,
+    "gles_tile_MB": 8.568832,
+    "gles_over_dense_frac": 1.1040664560794808
+  },
+  "fallbevis_i_korrupt_index": {
+    "vol_voxel_mm3": 20339.5,
+    "vol_analytic_mm3": 21738.053289415348,
+    "check": {
+      "volym_matt_mm3": 20339.5,
+      "volym_facit_mm3": 21738.053289415348,
+      "diff_frac": 0.06433663910909301,
+      "tol_frac": 0.03,
+      "GRON": false
+    },
+    "GRIND_FALLER_SOM_FORVANTAT": true
+  },
+  "fallbevis_ii_determinism": {
+    "f32_unsafe": {
+      "n_korningar": 6,
+      "varden": [
+        -2637842.5,
+        -2637842.5,
+        -2637842.5,
+        -2637842.5,
+        -2637842.5,
+        -2637842.5
+      ],
+      "bit_identiska": true
+    },
+    "i64_fixpunkt_safe": {
+      "n_korningar": 6,
+      "varden": [
+        -2638472.944915,
+        -2638472.944915,
+        -2638472.944915,
+        -2638472.944915,
+        -2638472.944915,
+        -2638472.944915
+      ],
+      "bit_identiska": true
+    },
+    "n_active_voxels": 2142208,
+    "n_processer": 6,
+    "GRIND_FALLER_F32_SOM_FORVANTAT": false,
+    "GRIND_HALLER_I64_SOM_FORVANTAT": true
+  }
+}

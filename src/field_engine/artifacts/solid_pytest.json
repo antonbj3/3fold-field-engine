@@ -1,0 +1,47 @@
+{
+ "tag": "pytest",
+ "stl_path": "artifacts/lastfalt_pytest.stl",
+ "step_path": "artifacts/lastfalt_pytest.step",
+ "mesh_watertight": true,
+ "mesh_body_count": 1,
+ "mesh_n_verts": 2252,
+ "mesh_n_faces": 4508,
+ "G0_degenererad_last": {
+  "gate": "G0_degenererad_last",
+  "total_load_mag_abs_sum_N": 77237.43232071178,
+  "troskel": "> 1.0 N (summed absolute nodal force)",
+  "pass": true
+ },
+ "G1_primitivgrind": {
+  "gate": "G1_primitivgrind_ickeplan_yta",
+  "nonplanar_area_frac": 0.35834135358369035,
+  "troskel": ">= 0.08",
+  "pass": true
+ },
+ "G2_volymbudget": {
+  "gate": "G2_volymbudget",
+  "slab_vol_mm3": 7704853.4399999995,
+  "simp_vol_mm3": 3852426.7199999997,
+  "mesh_vol_mm3": 3915824.838207738,
+  "massreduktion_andel": 0.5,
+  "pass": true
+ },
+ "G3_deflektion": {
+  "gate": "G3_deflektion",
+  "max_abs_uz_mm_optimerad": 0.5856416839285257,
+  "max_abs_uz_mm_solid_ankare": 0.49594483014625607,
+  "kvot": 1.1808605480488983,
+  "troskel": "<= 1.5x the solid anchor (declared margin)",
+  "pass": true
+ },
+ "G4_tillverkningsbarhet_flagg": {
+  "gate": "G4_tillverkningsbarhet_FLAGG",
+  "overhang_voxel_andel": 0.08135072908672294,
+  "overhang_troskel_konvention": "45 degrees; the voxel proxy is 'a layer-k voxel without support below', which is coarse at five z layers and is flagged, not solved",
+  "min_godstjocklek_mm_matt": 9.6,
+  "min_godstjocklek_upplosningstak": "the grid resolution dx=17.7 dy=17.7 dz=4.8mm sets a lower measurable bound; features thinner than one cell are invisible to this measure",
+  "flagga": "OK",
+  "pass": null
+ },
+ "alla_hard_grindar_pass": true
+}

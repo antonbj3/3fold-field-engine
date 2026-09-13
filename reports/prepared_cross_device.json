@@ -1,0 +1,24 @@
+{
+  "status": "VERIFIED-FRESH",
+  "rows": [
+    {
+      "report": "field_rt_prepared_gpu",
+      "arrays": 15,
+      "bytes_compared": 40565408,
+      "exact": true
+    },
+    {
+      "report": "field_rt_prepared_hits",
+      "arrays": 72,
+      "bytes_compared": 8877760,
+      "exact": true
+    },
+    {
+      "report": "field_prepared_service",
+      "arrays": 355,
+      "bytes_compared": 36115362,
+      "exact": true
+    }
+  ],
+  "scope": "Full portable inputs, prepared bounds, CUDA predicates, RT hits and owned service arrays, Modal L4 versus RTX 5070. Numerical equality only; latency acceptance is local-device scoped."
+}

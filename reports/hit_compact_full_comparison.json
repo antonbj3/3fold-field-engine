@@ -1,0 +1,18 @@
+{
+  "exact": true,
+  "rows": [
+    {
+      "file": "field_compact_hits0_arrays.npz",
+      "arrays": 70,
+      "bytes": 7192056,
+      "exact": true
+    },
+    {
+      "file": "field_compact_hits1_arrays.npz",
+      "arrays": 70,
+      "bytes": 7192056,
+      "exact": true
+    }
+  ],
+  "scope": "Complete two independent native-compaction L4 captures against frozen original two-hit full-field archive."
+}

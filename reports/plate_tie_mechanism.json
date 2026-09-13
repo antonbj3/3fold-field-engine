@@ -1,0 +1,257 @@
+{
+  "rows": [
+    {
+      "pitch": 2.0,
+      "index": [
+        4,
+        23,
+        2
+      ],
+      "column": 147,
+      "query_z": -3.0,
+      "bottom_z": -3.0,
+      "nearest_hit_z": -2.999999999999851,
+      "hit_plane_delta": 1.4921397450962104e-13,
+      "nearest_key_delta": 2.842170943040401e-14,
+      "key_signed_count": 0,
+      "cpu": false,
+      "candidate": true,
+      "zmin": -3.0000000000001084,
+      "zmax": 3.0000000000001084
+    },
+    {
+      "pitch": 2.0,
+      "index": [
+        5,
+        21,
+        2
+      ],
+      "column": 176,
+      "query_z": -3.0,
+      "bottom_z": -3.0,
+      "nearest_hit_z": -2.9999999999998415,
+      "hit_plane_delta": 1.5853984791647235e-13,
+      "nearest_key_delta": 2.842170943040401e-14,
+      "key_signed_count": 0,
+      "cpu": false,
+      "candidate": true,
+      "zmin": -3.0000000000001084,
+      "zmax": 3.0000000000001084
+    },
+    {
+      "pitch": 2.0,
+      "index": [
+        6,
+        18,
+        2
+      ],
+      "column": 204,
+      "query_z": -3.0,
+      "bottom_z": -3.0,
+      "nearest_hit_z": -2.9999999999998135,
+      "hit_plane_delta": 1.865174681370263e-13,
+      "nearest_key_delta": 2.842170943040401e-14,
+      "key_signed_count": 0,
+      "cpu": false,
+      "candidate": true,
+      "zmin": -3.0000000000001084,
+      "zmax": 3.0000000000001084
+    },
+    {
+      "pitch": 2.0,
+      "index": [
+        6,
+        19,
+        2
+      ],
+      "column": 205,
+      "query_z": -3.0,
+      "bottom_z": -3.0,
+      "nearest_hit_z": -2.9999999999998552,
+      "hit_plane_delta": 1.4477308241112041e-13,
+      "nearest_key_delta": 2.842170943040401e-14,
+      "key_signed_count": 0,
+      "cpu": false,
+      "candidate": true,
+      "zmin": -3.0000000000001084,
+      "zmax": 3.0000000000001084
+    },
+    {
+      "pitch": 1.0,
+      "index": [
+        3,
+        3,
+        2
+      ],
+      "column": 174,
+      "query_z": -3.0,
+      "bottom_z": -3.0,
+      "nearest_hit_z": -2.9999999999998503,
+      "hit_plane_delta": 1.496580637194711e-13,
+      "nearest_key_delta": 2.842170943040401e-14,
+      "key_signed_count": 0,
+      "cpu": false,
+      "candidate": true,
+      "zmin": -3.000000000000167,
+      "zmax": 3.000000000000167
+    },
+    {
+      "pitch": 1.0,
+      "index": [
+        4,
+        4,
+        2
+      ],
+      "column": 232,
+      "query_z": -3.0,
+      "bottom_z": -3.0,
+      "nearest_hit_z": -2.9999999999999822,
+      "hit_plane_delta": 1.7763568394002505e-14,
+      "nearest_key_delta": 2.842170943040401e-14,
+      "key_signed_count": 0,
+      "cpu": false,
+      "candidate": true,
+      "zmin": -3.000000000000167,
+      "zmax": 3.000000000000167
+    },
+    {
+      "pitch": 1.0,
+      "index": [
+        4,
+        49,
+        2
+      ],
+      "column": 277,
+      "query_z": -3.0,
+      "bottom_z": -3.0,
+      "nearest_hit_z": -2.9999999999997016,
+      "hit_plane_delta": 2.984279490192421e-13,
+      "nearest_key_delta": 5.684341886080802e-14,
+      "key_signed_count": 0,
+      "cpu": false,
+      "candidate": true,
+      "zmin": -3.000000000000167,
+      "zmax": 3.000000000000167
+    },
+    {
+      "pitch": 1.0,
+      "index": [
+        5,
+        47,
+        2
+      ],
+      "column": 332,
+      "query_z": -3.0,
+      "bottom_z": -3.0,
+      "nearest_hit_z": -2.99999999999981,
+      "hit_plane_delta": 1.900701818158268e-13,
+      "nearest_key_delta": 5.684341886080802e-14,
+      "key_signed_count": 0,
+      "cpu": false,
+      "candidate": true,
+      "zmin": -3.000000000000167,
+      "zmax": 3.000000000000167
+    },
+    {
+      "pitch": 1.0,
+      "index": [
+        6,
+        44,
+        2
+      ],
+      "column": 386,
+      "query_z": -3.0,
+      "bottom_z": -3.0,
+      "nearest_hit_z": -2.999999999999776,
+      "hit_plane_delta": 2.2382096176443156e-13,
+      "nearest_key_delta": 5.684341886080802e-14,
+      "key_signed_count": 0,
+      "cpu": false,
+      "candidate": true,
+      "zmin": -3.000000000000167,
+      "zmax": 3.000000000000167
+    },
+    {
+      "pitch": 1.0,
+      "index": [
+        8,
+        39,
+        2
+      ],
+      "column": 495,
+      "query_z": -3.0,
+      "bottom_z": -3.0,
+      "nearest_hit_z": -2.9999999999998135,
+      "hit_plane_delta": 1.865174681370263e-13,
+      "nearest_key_delta": 5.684341886080802e-14,
+      "key_signed_count": 0,
+      "cpu": false,
+      "candidate": true,
+      "zmin": -3.000000000000167,
+      "zmax": 3.000000000000167
+    },
+    {
+      "pitch": 0.5,
+      "index": [
+        3,
+        105,
+        2
+      ],
+      "column": 432,
+      "query_z": -3.0,
+      "bottom_z": -3.0,
+      "nearest_hit_z": -2.999999999999937,
+      "hit_plane_delta": 6.306066779870889e-14,
+      "nearest_key_delta": 5.684341886080802e-14,
+      "key_signed_count": 0,
+      "cpu": false,
+      "candidate": true,
+      "zmin": -3.00000000000029,
+      "zmax": 3.00000000000029
+    },
+    {
+      "pitch": 0.5,
+      "index": [
+        4,
+        4,
+        2
+      ],
+      "column": 440,
+      "query_z": -3.0,
+      "bottom_z": -3.0,
+      "nearest_hit_z": -2.99999999999978,
+      "hit_plane_delta": 2.19824158875781e-13,
+      "nearest_key_delta": 5.684341886080802e-14,
+      "key_signed_count": 0,
+      "cpu": false,
+      "candidate": true,
+      "zmin": -3.00000000000029,
+      "zmax": 3.00000000000029
+    },
+    {
+      "pitch": 0.5,
+      "index": [
+        4,
+        7,
+        2
+      ],
+      "column": 443,
+      "query_z": -3.0,
+      "bottom_z": -3.0,
+      "nearest_hit_z": -2.9999999999999254,
+      "hit_plane_delta": 7.460698725481052e-14,
+      "nearest_key_delta": 5.684341886080802e-14,
+      "key_signed_count": 0,
+      "cpu": false,
+      "candidate": true,
+      "zmin": -3.00000000000029,
+      "zmax": 3.00000000000029
+    }
+  ],
+  "gates": {
+    "full_repeat": true,
+    "all_bottom": true,
+    "reconstructs_cpu": true
+  },
+  "scope": "Frozen boundary-predicate mechanism only, not a corrected candidate."
+}

@@ -1,0 +1,78 @@
+{
+  "rows": [
+    {
+      "cpu_ms": 461.521319,
+      "constructor_ms": 1392.094099,
+      "evaluate_ms": 40.053928,
+      "close_ms": 26.612899,
+      "total_ms": 1458.760926,
+      "differences": {
+        "gmin": 0,
+        "surface": 0,
+        "solid": 0,
+        "distance": 0
+      },
+      "hashes": {
+        "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "surface": "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "solid": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "distance": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      },
+      "shape_equal": true,
+      "native_host_phases_ms": {
+        "cuda_primary_context": 203.810047,
+        "optix_context": 970.33034,
+        "geometry_and_acceleration": 1.768141,
+        "module_compile": 159.773507,
+        "program_groups": 0.061518,
+        "pipeline_link": 27.241179,
+        "stack_sbt_io_buffers": 1.44334
+      }
+    },
+    {
+      "cpu_ms": 488.59194599999995,
+      "constructor_ms": 392.19854,
+      "evaluate_ms": 46.448687,
+      "close_ms": 16.080344999999998,
+      "total_ms": 454.72757199999995,
+      "differences": {
+        "gmin": 0,
+        "surface": 0,
+        "solid": 0,
+        "distance": 0
+      },
+      "hashes": {
+        "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "surface": "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "solid": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "distance": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      },
+      "shape_equal": true,
+      "native_host_phases_ms": {
+        "cuda_primary_context": 196.019542,
+        "optix_context": 143.412561,
+        "geometry_and_acceleration": 1.421199,
+        "module_compile": 0.994801,
+        "program_groups": 0.042589,
+        "pipeline_link": 22.547278,
+        "stack_sbt_io_buffers": 0.715323
+      }
+    }
+  ],
+  "gates": {
+    "exact": true,
+    "repeat": true,
+    "phase_coverage": true
+  },
+  "build_hashes": {
+    "columns_phases.cpp": "c9e3d5a2b72b93ecfd5b68cb0ec26ce96b219f8b18c07510f067ff6b9c03d7f3",
+    "columns_phases.so": "c17a7ba92f0143ecaedb164cc2ed964dd4d8d313d657769f5b6b06e06b8fe404",
+    "columns.ptx": "7de134667bc98fa13b55ad1dd8d967b12844e4c14779b1c4824ec5345d941a06",
+    "edt_large.so": "bf95c88ebff8e00c4b1bed8f0b69b8d54d24fa0bda29bfc1438592db485d16ac",
+    "column_mask.so": "e832e29d4f6df35094529a703a840e9b2c16a9465be918a37fff7a53fab1c674",
+    "baseline_cpp": "3a7a0ce676c07ebea474293e97a8cc7bc6dadb35a12ee9eac45351b9c6148f69"
+  },
+  "scope": "Instrumented host phase observation; caller owns exclusive hardware window; no speed gate promotion.",
+  "hardware": "NVIDIA L4, 580.95.05, 0 %, 3 MiB",
+  "initial_idle": true
+}

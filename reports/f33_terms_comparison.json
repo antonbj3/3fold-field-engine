@@ -1,0 +1,20 @@
+{
+  "gate": 1.15,
+  "passed": true,
+  "byte_exact_within_and_across_hosts": true,
+  "stored_bytes_per_host": 34156032,
+  "modal_app": "ap-wHBmwTEtFyKWsDcMRb8XGD",
+  "modal_stamp": "20260913T182143Z-d-f33-terms-candidate",
+  "source_sha256": "2ee41b021542a136420369b0f5070671da871541193f0c75d27f7c4a462126fe",
+  "speedups": {
+    "local": [
+      1.3323752168898992,
+      1.324891011927694
+    ],
+    "modal": [
+      1.349498798261114,
+      1.339761432214869
+    ]
+  },
+  "scope": "CPU arithmetic on local and Modal L4 host. Four complete original selftests per host, original four checks and full trajectory/report parity. Timing metadata excluded only; actual A* wall threshold retained."
+}

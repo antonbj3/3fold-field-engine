@@ -1,0 +1,90 @@
+{
+  "rows": [
+    {
+      "case": "plate_2.0",
+      "leg": 0,
+      "reference_ms": 0.658763,
+      "ranked_ms": 0.5150359999999999,
+      "differences": 0,
+      "hash": "e600f757555076bb1edfe4f47370fb089d83199602a011f9e087cac488fe19f7"
+    },
+    {
+      "case": "plate_2.0",
+      "leg": 1,
+      "reference_ms": 0.555554,
+      "ranked_ms": 0.47494899999999995,
+      "differences": 0,
+      "hash": "e600f757555076bb1edfe4f47370fb089d83199602a011f9e087cac488fe19f7"
+    },
+    {
+      "case": "plate_1.0",
+      "leg": 0,
+      "reference_ms": 7.657106,
+      "ranked_ms": 4.713825,
+      "differences": 0,
+      "hash": "5bf5c6f8186a5c0d99143ae6267c7e7854c56b401aaa6edbc38d1a17a2768ba0"
+    },
+    {
+      "case": "plate_1.0",
+      "leg": 1,
+      "reference_ms": 7.401292,
+      "ranked_ms": 5.391486,
+      "differences": 0,
+      "hash": "5bf5c6f8186a5c0d99143ae6267c7e7854c56b401aaa6edbc38d1a17a2768ba0"
+    },
+    {
+      "case": "plate_0.5",
+      "leg": 0,
+      "reference_ms": 37.231913999999996,
+      "ranked_ms": 23.182779,
+      "differences": 0,
+      "hash": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379"
+    },
+    {
+      "case": "plate_0.5",
+      "leg": 1,
+      "reference_ms": 34.673938,
+      "ranked_ms": 30.533490999999998,
+      "differences": 0,
+      "hash": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379"
+    },
+    {
+      "case": "box_0.0",
+      "leg": 0,
+      "reference_ms": 0.15978,
+      "ranked_ms": 0.133939,
+      "differences": 0,
+      "hash": "f5a9402512177e26429678fba4930d44ea5f5d424aa9e68a6260959d10500326"
+    },
+    {
+      "case": "box_0.0",
+      "leg": 1,
+      "reference_ms": 0.11955099999999999,
+      "ranked_ms": 0.11497199999999999,
+      "differences": 0,
+      "hash": "f5a9402512177e26429678fba4930d44ea5f5d424aa9e68a6260959d10500326"
+    },
+    {
+      "case": "box_1000000.0",
+      "leg": 0,
+      "reference_ms": 0.137897,
+      "ranked_ms": 0.125363,
+      "differences": 0,
+      "hash": "88b25f71fbad5bbd9d7b1448736d474f8d2d55ad0d309a6ce1756c28bb22d033"
+    },
+    {
+      "case": "box_1000000.0",
+      "leg": 1,
+      "reference_ms": 0.14144299999999999,
+      "ranked_ms": 0.11443099999999999,
+      "differences": 0,
+      "hash": "88b25f71fbad5bbd9d7b1448736d474f8d2d55ad0d309a6ce1756c28bb22d033"
+    }
+  ],
+  "gates": {
+    "exact": true,
+    "full_repeat": true,
+    "L_faster": true
+  },
+  "scope": "Saved synthetic RT hit reduction on one CPU thread; no GPU or full-stage speed claim."
+}

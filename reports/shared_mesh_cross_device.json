@@ -1,0 +1,7 @@
+{
+  "status": "VERIFIED-FRESH",
+  "arrays": 355,
+  "bytes_compared": 36115362,
+  "exact": true,
+  "scope": "Every archived full output from Modal L4 and local RTX 5070; numerical comparison only, both service latency gates fail."
+}

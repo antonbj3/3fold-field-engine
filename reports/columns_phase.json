@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "leg": 0,
+      "query_ms": 19.854629,
+      "keys_ms": 20.258772,
+      "edt_ms": 10.401494,
+      "surface_ms": 7.592226999999999,
+      "hashes": [
+        "6c1ca6da7d38ba72e41cca5ea8fee3778a68253e25323e56c3f8837d596542f1",
+        "55874d7151a6be849f0144bf8f183fe9316321d75f93eb5dff794b3128d552cc",
+        "2ec21464b20ede1ceb94b471c82091daabfcf166b1d31e9b66dedfa1aa079203",
+        "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af",
+        "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814"
+      ],
+      "differences": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "leg": 1,
+      "query_ms": 18.439804,
+      "keys_ms": 20.070111999999998,
+      "edt_ms": 10.337119,
+      "surface_ms": 7.583755999999999,
+      "hashes": [
+        "6c1ca6da7d38ba72e41cca5ea8fee3778a68253e25323e56c3f8837d596542f1",
+        "55874d7151a6be849f0144bf8f183fe9316321d75f93eb5dff794b3128d552cc",
+        "2ec21464b20ede1ceb94b471c82091daabfcf166b1d31e9b66dedfa1aa079203",
+        "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af",
+        "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814"
+      ],
+      "differences": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "gates": {
+    "exact_composed": true,
+    "full_repeat": true,
+    "idle": true
+  },
+  "columns": 27141,
+  "hit_capacity": 64,
+  "depth_sign_readback_bytes": 20844288,
+  "scope": "Synthetic full component calls; no isolated kernel or speed acceptance claim."
+}

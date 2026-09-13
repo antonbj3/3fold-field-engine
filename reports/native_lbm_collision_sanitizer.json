@@ -1,0 +1,19 @@
+{
+  "cases": 8,
+  "asan": true,
+  "ubsan": true,
+  "scope": "Two-cell known-exact collision with output canaries; empty input, negative/overflow counts, invalid relaxation/prefactor and null input refusals before writes.",
+  "source_sha256": {
+    "src/field_engine/lbm_collision_native_v1/collision.cpp": "2421c0dfd5ae70287cbd3bf3e2b184ef66abeba207a31ab178b5d08dcd386bc2",
+    "tests/native_lbm_collision_sanitizer.cpp": "7307e78f7ef6fa7b517f9a2451189a775440941eeef8fbb6e9fb15ca0d44f846"
+  },
+  "compiler_flags": [
+    "-std=c++17",
+    "-O1",
+    "-g",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer"
+  ]
+}

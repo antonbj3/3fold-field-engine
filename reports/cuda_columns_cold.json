@@ -1,0 +1,58 @@
+{
+  "status": "VERIFIED-FRESH",
+  "rows": [
+    {
+      "cpu_ms": 481.45649699999996,
+      "constructor_ms": 219.021258,
+      "evaluate_ms": 31.810071999999998,
+      "close_ms": 0.976235,
+      "total_ms": 251.80756499999998,
+      "differences": {
+        "gmin": 0,
+        "surface": 0,
+        "solid": 0,
+        "distance": 0
+      },
+      "hashes": {
+        "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "surface": "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "solid": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "distance": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      },
+      "shape_equal": true,
+      "no_optix_loaded": true,
+      "whole_process_ms": 2224.506117
+    },
+    {
+      "cpu_ms": 469.264815,
+      "constructor_ms": 235.227271,
+      "evaluate_ms": 31.393259999999998,
+      "close_ms": 1.7673079999999999,
+      "total_ms": 268.387839,
+      "differences": {
+        "gmin": 0,
+        "surface": 0,
+        "solid": 0,
+        "distance": 0
+      },
+      "hashes": {
+        "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "surface": "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "solid": "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "distance": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      },
+      "shape_equal": true,
+      "no_optix_loaded": true,
+      "whole_process_ms": 1951.277028
+    }
+  ],
+  "gates": {
+    "exact": true,
+    "repeat": true,
+    "no_optix": true,
+    "cold_faster": true
+  },
+  "scope": "First-use L CUDA scan, CPU reference and complete setup/evaluate/close. No OptiX or RT claim.",
+  "hardware": "NVIDIA L4, driver 580.95.05",
+  "initial_idle": true
+}

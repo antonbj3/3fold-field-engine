@@ -1,0 +1,17 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "coverage": true,
+    "finite": true,
+    "enclosure": true,
+    "no_false_rejection": true,
+    "nonvacuous": true,
+    "uncertainty_falls_through": true,
+    "repeat": true
+  },
+  "cases": 120016,
+  "rejected": 68644,
+  "uncertain_outside": 21606,
+  "source_sha256": "75f645856379a6ffcea40109c4e64001e5ad3f7f98366f496dca48c5d40d128d",
+  "scope": "Independent CPU interval arithmetic only. Float endpoints outward-bound frozen double differences, products and subtraction. Strict mixed signs imply rejection for either triangle orientation; uncertain signs fall through. No GPU or speed claim."
+}

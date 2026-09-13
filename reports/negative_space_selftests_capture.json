@@ -1,0 +1,33 @@
+{
+  "rows": [
+    {
+      "module": "negativrum_v1.py",
+      "repeat": 0,
+      "exit": 0,
+      "all_pass": true,
+      "report_sha256": "de44d95c409c81768bb1e68bf47ac87655c18109a6a175eee2241736803de7d7"
+    },
+    {
+      "module": "negativrum_v1.py",
+      "repeat": 1,
+      "exit": 0,
+      "all_pass": true,
+      "report_sha256": "de44d95c409c81768bb1e68bf47ac87655c18109a6a175eee2241736803de7d7"
+    },
+    {
+      "module": "fabriksnegativrum_v1.py",
+      "repeat": 0,
+      "exit": 0,
+      "all_pass": true,
+      "report_sha256": "7d6ae43512cc9ac82510baab8511545d1eef72879b1ac99a54c7f5e4bb54a513"
+    },
+    {
+      "module": "fabriksnegativrum_v1.py",
+      "repeat": 1,
+      "exit": 0,
+      "all_pass": true,
+      "report_sha256": "7d6ae43512cc9ac82510baab8511545d1eef72879b1ac99a54c7f5e4bb54a513"
+    }
+  ],
+  "exact": true
+}

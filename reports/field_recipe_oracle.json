@@ -1,0 +1,184 @@
+{
+  "gates": {
+    "full_repeat": true,
+    "planted_errors_detected": true,
+    "zero_round_trip": true
+  },
+  "origin": [
+    -4.713,
+    -4.729,
+    -0.2
+  ],
+  "pitch": 0.2,
+  "rows": [
+    {
+      "feature": "square",
+      "legs": [
+        {
+          "distance_differences": 0,
+          "occupancy_differences": 0,
+          "per_section_differences": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rebuilt_sha256": "3c78ed5929411aa69a74a6a7c3e4c9b33c0e9ab4f4322c18a564e8305ca9f665",
+          "recipe_sha256": "b213275e75e19ce4f8b8bc57db6bf744665acbaa26a39e2a6e0cf6f9d60ac5f0",
+          "reference_sha256": "3c78ed5929411aa69a74a6a7c3e4c9b33c0e9ab4f4322c18a564e8305ca9f665"
+        },
+        {
+          "distance_differences": 0,
+          "occupancy_differences": 0,
+          "per_section_differences": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rebuilt_sha256": "3c78ed5929411aa69a74a6a7c3e4c9b33c0e9ab4f4322c18a564e8305ca9f665",
+          "recipe_sha256": "b213275e75e19ce4f8b8bc57db6bf744665acbaa26a39e2a6e0cf6f9d60ac5f0",
+          "reference_sha256": "3c78ed5929411aa69a74a6a7c3e4c9b33c0e9ab4f4322c18a564e8305ca9f665"
+        }
+      ],
+      "negative": null
+    },
+    {
+      "feature": "chamfer",
+      "legs": [
+        {
+          "distance_differences": 0,
+          "occupancy_differences": 0,
+          "per_section_differences": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rebuilt_sha256": "3832c2d5dd3eb1572c133b345bec25301b3d36a73a668a37f0d6aa15a584568c",
+          "recipe_sha256": "5713081d98133cb8b4a8070d770f2055aa6baed51b163d70dc3c6e331081f8da",
+          "reference_sha256": "3832c2d5dd3eb1572c133b345bec25301b3d36a73a668a37f0d6aa15a584568c"
+        },
+        {
+          "distance_differences": 0,
+          "occupancy_differences": 0,
+          "per_section_differences": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rebuilt_sha256": "3832c2d5dd3eb1572c133b345bec25301b3d36a73a668a37f0d6aa15a584568c",
+          "recipe_sha256": "5713081d98133cb8b4a8070d770f2055aa6baed51b163d70dc3c6e331081f8da",
+          "reference_sha256": "3832c2d5dd3eb1572c133b345bec25301b3d36a73a668a37f0d6aa15a584568c"
+        }
+      ],
+      "negative": {
+        "distance_differences": 682,
+        "occupancy_differences": 135,
+        "per_section_differences": [
+          0,
+          45,
+          45,
+          45,
+          0
+        ],
+        "rebuilt_sha256": "3c78ed5929411aa69a74a6a7c3e4c9b33c0e9ab4f4322c18a564e8305ca9f665",
+        "reference_sha256": "3832c2d5dd3eb1572c133b345bec25301b3d36a73a668a37f0d6aa15a584568c",
+        "repeat": true
+      }
+    },
+    {
+      "feature": "twelve_gon",
+      "legs": [
+        {
+          "distance_differences": 0,
+          "occupancy_differences": 0,
+          "per_section_differences": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rebuilt_sha256": "e3fb6dad9da0856d584afeae0292c01165425fd6d3410d7d89cb24ea24785adc",
+          "recipe_sha256": "94138c1363b05457e54781b609286fc0a12c63ca1bb6476419cc025e2fe55179",
+          "reference_sha256": "e3fb6dad9da0856d584afeae0292c01165425fd6d3410d7d89cb24ea24785adc"
+        },
+        {
+          "distance_differences": 0,
+          "occupancy_differences": 0,
+          "per_section_differences": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rebuilt_sha256": "e3fb6dad9da0856d584afeae0292c01165425fd6d3410d7d89cb24ea24785adc",
+          "recipe_sha256": "94138c1363b05457e54781b609286fc0a12c63ca1bb6476419cc025e2fe55179",
+          "reference_sha256": "e3fb6dad9da0856d584afeae0292c01165425fd6d3410d7d89cb24ea24785adc"
+        }
+      ],
+      "negative": {
+        "distance_differences": 4212,
+        "occupancy_differences": 171,
+        "per_section_differences": [
+          0,
+          57,
+          57,
+          57,
+          0
+        ],
+        "rebuilt_sha256": "a58b20432496f88523fb0e2314836f8ffb230bfba4d0cf6cb2e0010970e5af5d",
+        "reference_sha256": "e3fb6dad9da0856d584afeae0292c01165425fd6d3410d7d89cb24ea24785adc",
+        "repeat": true
+      }
+    },
+    {
+      "feature": "through_hole",
+      "legs": [
+        {
+          "distance_differences": 0,
+          "occupancy_differences": 0,
+          "per_section_differences": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rebuilt_sha256": "37a1f3ede864a66d696e392152ee75bde6b92e6d8890fa3d3af961d92f70fb18",
+          "recipe_sha256": "61ef7c1b3753e476fead37a79ba6f052a378566709bdc704c8326754f7d69981",
+          "reference_sha256": "37a1f3ede864a66d696e392152ee75bde6b92e6d8890fa3d3af961d92f70fb18"
+        },
+        {
+          "distance_differences": 0,
+          "occupancy_differences": 0,
+          "per_section_differences": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "rebuilt_sha256": "37a1f3ede864a66d696e392152ee75bde6b92e6d8890fa3d3af961d92f70fb18",
+          "recipe_sha256": "61ef7c1b3753e476fead37a79ba6f052a378566709bdc704c8326754f7d69981",
+          "reference_sha256": "37a1f3ede864a66d696e392152ee75bde6b92e6d8890fa3d3af961d92f70fb18"
+        }
+      ],
+      "negative": null
+    }
+  ],
+  "scope": "Four synthetic extruded sections, occupancy and derived grid EDT only.",
+  "shape": [
+    48,
+    48,
+    5
+  ],
+  "status": "VERIFIED-FRESH"
+}

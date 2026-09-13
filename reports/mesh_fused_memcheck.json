@@ -1,0 +1,20 @@
+{
+  "status": "VERIFIED-FRESH",
+  "child_exit": 1,
+  "instrumented_status": "OWN-GATE-FAIL",
+  "instrumented_gates": {
+    "coverage": true,
+    "exact": true,
+    "repeat": true,
+    "capacity_lifecycle": true,
+    "L_speedup_2": false
+  },
+  "errors": [
+    "ERROR SUMMARY: 0 errors"
+  ],
+  "arrays": 80,
+  "bytes_compared": 7502220,
+  "exact": true,
+  "hardware": "NVIDIA L4, 580.95.05, 0 %, 3 MiB",
+  "scope": "Memory/numerical validation only. Instrumented speed gate failed and child exited 1; retained explicitly, timings excluded from performance evidence."
+}

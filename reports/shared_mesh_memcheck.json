@@ -1,0 +1,20 @@
+{
+  "status": "VERIFIED-FRESH",
+  "child_exit": 1,
+  "instrumented_status": "OWN-GATE-FAIL",
+  "instrumented_gates": {
+    "coverage": true,
+    "exact": true,
+    "repeats": true,
+    "lifecycle_capacity": true,
+    "warm_L_2ms": false
+  },
+  "errors": [
+    "ERROR SUMMARY: 0 errors"
+  ],
+  "arrays": 355,
+  "bytes_compared": 36115362,
+  "exact": true,
+  "hardware": "NVIDIA L4, 580.95.05, 0 %, 3 MiB",
+  "scope": "Memory and numerical scope only; sanitizer targets all spawned processes. Instrumented child speed-gate exit retained; no timing acceptance claim."
+}

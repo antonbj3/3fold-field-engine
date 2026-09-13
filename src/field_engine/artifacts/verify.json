@@ -1,0 +1,25 @@
+{
+ "cell": "lastfalt_v1_verify",
+ "v1_axial_bar": {
+  "fem_tip_ux_mm": 0.13997497044282026,
+  "analytic_ux_mm": 0.14084507042253522,
+  "rel_err": 0.006177709855976224
+ },
+ "v2_cantilever_bending": {
+  "fem_tip_uz_mm": -7.827168436730988,
+  "analytic_uz_mm": -9.014084507042254,
+  "rel_err": 0.13167350155015609,
+  "kand_felkalla": "Q1 8-node full integration (2x2x2 Gauss) shear-locks in bending and is systematically over-stiff (|fem| < |analytic|). The tension test (V1) checks the Hooke/B matrix tightly; this one exercises the same element in bending, where the known artefact dominates."
+ },
+ "v3_warp_gpu_crosscheck": {
+  "n_elem": 400,
+  "n_dof": 1815,
+  "kernel_variant": "fast",
+  "bit_identical_2x": true,
+  "rel_err_gpu_vs_cpu": 6.944746425445828e-08,
+  "wall_s_2runs": 0.0025348663330078125,
+  "fixpunktsskala": 1000000.0,
+  "device": "cuda:0",
+  "metod": "fp32 arithmetic with int64 fixed-point atomic_add"
+ }
+}

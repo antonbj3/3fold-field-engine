@@ -1,0 +1,5386 @@
+{
+  "exit": 0,
+  "wall_seconds": 6.899217307000072,
+  "phases": {
+    "outside": {
+      "obstacle_sdf": {
+        "calls": 178,
+        "seconds": 0.003354410975589417
+      },
+      "control_points_multi": {
+        "calls": 7,
+        "seconds": 0.0022796290140831843
+      },
+      "loss_and_terms_multi": {
+        "calls": 7,
+        "seconds": 0.00554521699086763
+      }
+    },
+    "descent0": {
+      "control_points_multi": {
+        "calls": 1,
+        "seconds": 0.0002857289946405217
+      },
+      "obstacle_sdf": {
+        "calls": 16,
+        "seconds": 0.00027482798031996936
+      },
+      "loss_and_terms_multi": {
+        "calls": 11190,
+        "seconds": 0.494475615239935
+      },
+      "central_diff_grad_multi": {
+        "calls": 339,
+        "seconds": 0.5090984190173913
+      }
+    },
+    "descent1": {
+      "control_points_multi": {
+        "calls": 1,
+        "seconds": 0.000267815004917793
+      },
+      "obstacle_sdf": {
+        "calls": 16,
+        "seconds": 0.0003762560081668198
+      },
+      "loss_and_terms_multi": {
+        "calls": 19802,
+        "seconds": 0.8837980225507636
+      },
+      "central_diff_grad_multi": {
+        "calls": 600,
+        "seconds": 0.9106557911145501
+      }
+    },
+    "descent2": {
+      "control_points_multi": {
+        "calls": 1,
+        "seconds": 0.00027676401077769697
+      },
+      "obstacle_sdf": {
+        "calls": 16,
+        "seconds": 0.00021528096112888306
+      },
+      "loss_and_terms_multi": {
+        "calls": 19802,
+        "seconds": 0.875699021780747
+      },
+      "central_diff_grad_multi": {
+        "calls": 600,
+        "seconds": 0.9021833529986907
+      }
+    },
+    "descent3": {
+      "control_points_multi": {
+        "calls": 1,
+        "seconds": 0.00028149299032520503
+      },
+      "obstacle_sdf": {
+        "calls": 16,
+        "seconds": 0.00020989902259316295
+      },
+      "loss_and_terms_multi": {
+        "calls": 8781,
+        "seconds": 0.3882131514255889
+      },
+      "central_diff_grad_multi": {
+        "calls": 266,
+        "seconds": 0.40018207680259366
+      }
+    },
+    "descent4": {
+      "control_points_multi": {
+        "calls": 1,
+        "seconds": 0.0002935530064860359
+      },
+      "obstacle_sdf": {
+        "calls": 16,
+        "seconds": 0.00021260797802824527
+      },
+      "loss_and_terms_multi": {
+        "calls": 19802,
+        "seconds": 0.8847826534038177
+      },
+      "central_diff_grad_multi": {
+        "calls": 600,
+        "seconds": 0.9124698111263569
+      }
+    },
+    "descent5": {
+      "control_points_multi": {
+        "calls": 1,
+        "seconds": 0.00027662698994390666
+      },
+      "obstacle_sdf": {
+        "calls": 16,
+        "seconds": 0.00020672797109000385
+      },
+      "loss_and_terms_multi": {
+        "calls": 19802,
+        "seconds": 0.8752235627325717
+      },
+      "central_diff_grad_multi": {
+        "calls": 600,
+        "seconds": 0.9032862460589968
+      }
+    },
+    "descent6": {
+      "control_points_multi": {
+        "calls": 1,
+        "seconds": 0.00027815200155600905
+      },
+      "obstacle_sdf": {
+        "calls": 16,
+        "seconds": 0.00042859400855377316
+      },
+      "loss_and_terms_multi": {
+        "calls": 19802,
+        "seconds": 0.8913810986850876
+      },
+      "central_diff_grad_multi": {
+        "calls": 600,
+        "seconds": 0.9192474431911251
+      }
+    }
+  },
+  "descents": [
+    {
+      "label": "descent0",
+      "wall_seconds": 0.5329470560100162,
+      "iterations": 340,
+      "evaluations": 11221,
+      "n_ctrl": 16,
+      "args": [
+        [
+          [
+            193.8895723693455,
+            96.07140973255858,
+            71.61686907336185
+          ],
+          [
+            193.8895723693455,
+            92.5779039241019,
+            96.07140973255858
+          ],
+          [
+            193.8895723693455,
+            85.59089230718855,
+            99.56491554101525
+          ],
+          [
+            190.3960665608888,
+            43.66882260570845,
+            103.05842134947193
+          ],
+          [
+            186.90256075243215,
+            43.66882260570845,
+            106.5519271579286
+          ],
+          [
+            183.40905494397546,
+            43.66882260570845,
+            113.53893877484197
+          ],
+          [
+            176.4220433270621,
+            40.17531679725177,
+            113.53893877484197
+          ],
+          [
+            64.6298574564485,
+            43.66882260570845,
+            113.53893877484197
+          ]
+        ],
+        {
+          "op": "union",
+          "a": {
+            "op": "union",
+            "a": {
+              "op": "union",
+              "a": {
+                "op": "box",
+                "half_extents": [
+                  21.22320137293847,
+                  13.493781985899645,
+                  20.620278789200007
+                ],
+                "center": [
+                  142.73829257220618,
+                  67.98844164101524,
+                  67.36095342762104
+                ]
+              },
+              "b": {
+                "op": "cylinder",
+                "radius": 16.202403977090015,
+                "height": 100.8822519715451,
+                "axis": "y",
+                "center": [
+                  52.215597077966365,
+                  86.32267933418146,
+                  53.48812952831913
+                ]
+              },
+              "k": 0.0
+            },
+            "b": {
+              "op": "cone",
+              "radius1": 33.238711086306594,
+              "radius2": 7.638150744306886,
+              "height": 92.22170032541692,
+              "axis": "x",
+              "center": [
+                109.72703928329662,
+                94.88222709904255,
+                65.05857984747563
+              ]
+            },
+            "k": 0.0
+          },
+          "b": {
+            "op": "cylinder",
+            "radius": 37.37794911858118,
+            "height": 75.06425016416046,
+            "axis": "z",
+            "center": [
+              87.38545687898397,
+              110.9126213987263,
+              70.18929768375064
+            ]
+          },
+          "k": 0.0
+        },
+        27.60925840577397,
+        5.295747999700889,
+        0.00825825,
+        16
+      ],
+      "final_terms": {
+        "dp_friction_pa": 0.4807751341226469,
+        "dp_bend_pa": 122.32323307332499,
+        "pen_area": 0.0,
+        "pen_intrude": 0.0,
+        "dp_total_unconstrained_pa": 122.80400820744764,
+        "n_bends": 6,
+        "max_viol_intrude_mm": 0.0
+      }
+    },
+    {
+      "label": "descent1",
+      "wall_seconds": 0.9531336970103439,
+      "iterations": 600,
+      "evaluations": 19801,
+      "n_ctrl": 16,
+      "args": [
+        [
+          [
+            356.6636951678609,
+            273.71864977998627,
+            102.29888931171205
+          ],
+          [
+            323.48567701271105,
+            273.71864977998627,
+            69.12087115656219
+          ],
+          [
+            306.8966679351361,
+            273.71864977998627,
+            41.472522693937314
+          ],
+          [
+            290.3076588575612,
+            273.71864977998627,
+            24.88351361636239
+          ],
+          [
+            268.1889800874613,
+            273.71864977998627,
+            8.294504538787463
+          ],
+          [
+            251.5999710098864,
+            284.7779891650362,
+            2.7648348462624877
+          ],
+          [
+            141.00657715938686,
+            323.48567701271105,
+            2.7648348462624877
+          ],
+          [
+            58.06153177151224,
+            240.54063162483644,
+            13.824174231312439
+          ]
+        ],
+        {
+          "op": "union",
+          "a": {
+            "op": "union",
+            "a": {
+              "op": "union",
+              "a": {
+                "op": "union",
+                "a": {
+                  "op": "union",
+                  "a": {
+                    "op": "cylinder",
+                    "radius": 44.279225375045485,
+                    "height": 101.97370269150301,
+                    "axis": "y",
+                    "center": [
+                      112.63579857162922,
+                      260.06575951840966,
+                      78.04531772046585
+                    ]
+                  },
+                  "b": {
+                    "op": "cylinder",
+                    "radius": 23.22227406308353,
+                    "height": 202.64450683597323,
+                    "axis": "y",
+                    "center": [
+                      231.09243450399103,
+                      166.34062276128296,
+                      56.49038365513605
+                    ]
+                  },
+                  "k": 0.0
+                },
+                "b": {
+                  "op": "cylinder",
+                  "radius": 26.743256582135892,
+                  "height": 140.13946951277524,
+                  "axis": "y",
+                  "center": [
+                    268.8593767807125,
+                    268.24047062163436,
+                    118.12390233678568
+                  ]
+                },
+                "k": 0.0
+              },
+              "b": {
+                "op": "cylinder",
+                "radius": 35.13735500499739,
+                "height": 130.92176100825787,
+                "axis": "x",
+                "center": [
+                  167.92078834058384,
+                  189.6403234072804,
+                  39.91381815928443
+                ]
+              },
+              "k": 0.0
+            },
+            "b": {
+              "op": "cone",
+              "radius1": 38.48460937794127,
+              "radius2": 19.478742513367372,
+              "height": 175.71893012761944,
+              "axis": "x",
+              "center": [
+                186.3955967206486,
+                250.03881328514183,
+                83.02626084423275
+              ]
+            },
+            "k": 0.0
+          },
+          "b": {
+            "op": "cylinder",
+            "radius": 28.746607412605776,
+            "height": 77.46494415002982,
+            "axis": "z",
+            "center": [
+              277.79080306668214,
+              200.30296676442651,
+              75.92240503050712
+            ]
+          },
+          "k": 0.0
+        },
+        29.453234993324564,
+        5.295747999700889,
+        0.00825825,
+        16
+      ],
+      "final_terms": {
+        "dp_friction_pa": 0.43098142039538523,
+        "dp_bend_pa": 43.50124497383996,
+        "pen_area": 22.063207392114837,
+        "pen_intrude": 0.0,
+        "dp_total_unconstrained_pa": 43.93222639423534,
+        "n_bends": 6,
+        "max_viol_intrude_mm": 0.0
+      }
+    },
+    {
+      "label": "descent2",
+      "wall_seconds": 0.9436502860044129,
+      "iterations": 600,
+      "evaluations": 19801,
+      "n_ctrl": 16,
+      "args": [
+        [
+          [
+            241.79418186883552,
+            22.906817229679156,
+            99.262874661943
+          ],
+          [
+            297.788623985829,
+            27.997221058496745,
+            58.53964403140228
+          ],
+          [
+            307.9694316434642,
+            83.99166317549023,
+            58.53964403140228
+          ],
+          [
+            348.69266227400493,
+            89.08206700430782,
+            58.53964403140228
+          ],
+          [
+            363.96387376045766,
+            99.262874661943,
+            58.53964403140228
+          ],
+          [
+            369.0542775892753,
+            109.44368231957819,
+            58.53964403140228
+          ],
+          [
+            379.23508524691044,
+            134.89570146366614,
+            58.53964403140228
+          ],
+          [
+            430.13912353508636,
+            150.1669129501189,
+            58.53964403140228
+          ]
+        ],
+        {
+          "op": "union",
+          "a": {
+            "op": "union",
+            "a": {
+              "op": "box",
+              "half_extents": [
+                50.586981156602874,
+                29.186837072439,
+                11.95845390426853
+              ],
+              "center": [
+                250.26432901058598,
+                105.0704678005088,
+                128.41330384453676
+              ]
+            },
+            "b": {
+              "op": "box",
+              "half_extents": [
+                35.995398023683876,
+                22.41544034615715,
+                25.82133948927859
+              ],
+              "center": [
+                250.62709938499617,
+                67.64671400927581,
+                77.76618682012048
+              ]
+            },
+            "k": 0.0
+          },
+          "b": {
+            "op": "cone",
+            "radius1": 37.49040488289371,
+            "radius2": 19.140922824481436,
+            "height": 93.28520327361139,
+            "axis": "z",
+            "center": [
+              321.7490370206228,
+              146.41780322027824,
+              114.60655926991087
+            ]
+          },
+          "k": 0.0
+        },
+        14.582924845096734,
+        5.295747999700889,
+        0.00825825,
+        16
+      ],
+      "final_terms": {
+        "dp_friction_pa": 4.104918319609611,
+        "dp_bend_pa": 516.1324064849301,
+        "pen_area": 0.0,
+        "pen_intrude": 0.0,
+        "dp_total_unconstrained_pa": 520.2373248045398,
+        "n_bends": 6,
+        "max_viol_intrude_mm": 0.0
+      }
+    },
+    {
+      "label": "descent3",
+      "wall_seconds": 0.4189124510012334,
+      "iterations": 267,
+      "evaluations": 8812,
+      "n_ctrl": 16,
+      "args": [
+        [
+          [
+            115.96930341649657,
+            80.28644082680532,
+            137.37902097031133
+          ],
+          [
+            115.96930341649657,
+            73.14986830886707,
+            69.58158204989795
+          ],
+          [
+            115.96930341649657,
+            58.87672327299057,
+            62.44500953195969
+          ],
+          [
+            123.10587593443482,
+            58.87672327299057,
+            51.74015075505232
+          ],
+          [
+            133.8107347113422,
+            41.03529197814494,
+            48.171864496083195
+          ],
+          [
+            183.76674233690994,
+            41.03529197814494,
+            55.30843701402144
+          ],
+          [
+            205.17645989072471,
+            48.171864496083195,
+            55.30843701402144
+          ],
+          [
+            215.8813186676321,
+            58.87672327299057,
+            55.30843701402144
+          ]
+        ],
+        {
+          "op": "union",
+          "a": {
+            "op": "union",
+            "a": {
+              "op": "box",
+              "half_extents": [
+                22.273688107937716,
+                20.384743599978826,
+                24.05986034058699
+              ],
+              "center": [
+                173.77789399656518,
+                89.52929296303199,
+                74.80688506042604
+              ]
+            },
+            "b": {
+              "op": "cone",
+              "radius1": 33.36249926822275,
+              "radius2": 19.126494305824068,
+              "height": 84.88850538513165,
+              "axis": "x",
+              "center": [
+                180.1780387299644,
+                58.58489024935051,
+                101.07013247983775
+              ]
+            },
+            "k": 0.0
+          },
+          "b": {
+            "op": "cylinder",
+            "radius": 29.36580649207333,
+            "height": 100.43677254532125,
+            "axis": "z",
+            "center": [
+              149.70320010075574,
+              40.36444780424072,
+              132.8635593115696
+            ]
+          },
+          "k": 0.0
+        },
+        15.784769119740508,
+        5.295747999700889,
+        0.00825825,
+        16
+      ],
+      "final_terms": {
+        "dp_friction_pa": 2.6618533566116387,
+        "dp_bend_pa": 536.3419768447075,
+        "pen_area": 0.0,
+        "pen_intrude": 0.0,
+        "dp_total_unconstrained_pa": 539.0038302013191,
+        "n_bends": 6,
+        "max_viol_intrude_mm": 0.0
+      }
+    },
+    {
+      "label": "descent4",
+      "wall_seconds": 0.9549501199944643,
+      "iterations": 600,
+      "evaluations": 19801,
+      "n_ctrl": 16,
+      "args": [
+        [
+          [
+            236.63312990522851,
+            67.90341988584818,
+            80.24949622872967
+          ],
+          [
+            228.40241234330753,
+            129.63380160025562,
+            80.24949622872967
+          ],
+          [
+            224.28705356234704,
+            137.8645191621766,
+            80.24949622872967
+          ],
+          [
+            220.17169478138652,
+            141.9798779431371,
+            80.24949622872967
+          ],
+          [
+            216.05633600042603,
+            146.09523672409762,
+            80.24949622872967
+          ],
+          [
+            207.82561843850505,
+            146.09523672409762,
+            72.01877866680867
+          ],
+          [
+            39.09590841912471,
+            150.2105955050581,
+            72.01877866680867
+          ],
+          [
+            39.09590841912471,
+            133.74916038121611,
+            63.78806110488769
+          ]
+        ],
+        {
+          "op": "union",
+          "a": {
+            "op": "union",
+            "a": {
+              "op": "cone",
+              "radius1": 21.83136503536251,
+              "radius2": 5.841512173074483,
+              "height": 109.36790529258855,
+              "axis": "x",
+              "center": [
+                135.50044430844451,
+                103.01445323769337,
+                105.23406708646115
+              ]
+            },
+            "b": {
+              "op": "box",
+              "half_extents": [
+                23.985227714148685,
+                23.623735493674864,
+                18.24172498047613
+              ],
+              "center": [
+                176.48146735945085,
+                99.11823740460372,
+                67.97065918065337
+              ]
+            },
+            "k": 0.0
+          },
+          "b": {
+            "op": "box",
+            "half_extents": [
+              45.322645116500944,
+              30.54684631887912,
+              23.727158294641143
+            ],
+            "center": [
+              155.52371412070846,
+              71.11976151983731,
+              108.42515695670627
+            ]
+          },
+          "k": 0.0
+        },
+        17.715167506345665,
+        5.295747999700889,
+        0.00825825,
+        16
+      ],
+      "final_terms": {
+        "dp_friction_pa": 0.8702472352314318,
+        "dp_bend_pa": 200.55120207457608,
+        "pen_area": 0.0,
+        "pen_intrude": 0.0,
+        "dp_total_unconstrained_pa": 201.4214493098075,
+        "n_bends": 6,
+        "max_viol_intrude_mm": 0.0
+      }
+    },
+    {
+      "label": "descent5",
+      "wall_seconds": 0.9457895630039275,
+      "iterations": 600,
+      "evaluations": 19801,
+      "n_ctrl": 16,
+      "args": [
+        [
+          [
+            303.2189271256356,
+            14.719365394448332,
+            138.3620347078143
+          ],
+          [
+            203.127242443387,
+            14.719365394448332,
+            138.3620347078143
+          ],
+          [
+            203.127242443387,
+            14.719365394448332,
+            126.58654239225565
+          ],
+          [
+            203.127242443387,
+            103.03555776113832,
+            126.58654239225565
+          ],
+          [
+            203.127242443387,
+            103.03555776113832,
+            120.69879623447632
+          ],
+          [
+            203.127242443387,
+            108.92330391891765,
+            120.69879623447632
+          ],
+          [
+            203.127242443387,
+            108.92330391891765,
+            91.26006544557966
+          ],
+          [
+            203.127242443387,
+            191.35175012782832,
+            91.26006544557966
+          ]
+        ],
+        {
+          "op": "union",
+          "a": {
+            "op": "union",
+            "a": {
+              "op": "cone",
+              "radius1": 44.82667288416707,
+              "radius2": 11.174147666031951,
+              "height": 119.66330019127265,
+              "axis": "y",
+              "center": [
+                129.96041390369848,
+                54.068150839110395,
+                182.3866707343935
+              ]
+            },
+            "b": {
+              "op": "box",
+              "half_extents": [
+                44.19723650899983,
+                31.948114826522712,
+                30.006304506555896
+              ],
+              "center": [
+                275.11960814557835,
+                57.14409098434794,
+                74.20937725410974
+              ]
+            },
+            "k": 0.0
+          },
+          "b": {
+            "op": "cylinder",
+            "radius": 28.782548709739018,
+            "height": 138.45287418740492,
+            "axis": "z",
+            "center": [
+              353.67603703008245,
+              56.00522867464312,
+              113.63301203812956
+            ]
+          },
+          "k": 0.0
+        },
+        24.54330952875341,
+        5.295747999700889,
+        0.00825825,
+        16
+      ],
+      "final_terms": {
+        "dp_friction_pa": 0.3035678062363566,
+        "dp_bend_pa": 68.84197633208301,
+        "pen_area": 0.0,
+        "pen_intrude": 0.0,
+        "dp_total_unconstrained_pa": 69.14554413831937,
+        "n_bends": 6,
+        "max_viol_intrude_mm": 0.0
+      }
+    },
+    {
+      "label": "descent6",
+      "wall_seconds": 0.9630152129975613,
+      "iterations": 600,
+      "evaluations": 19801,
+      "n_ctrl": 16,
+      "args": [
+        [
+          [
+            95.86407807928148,
+            307.2566605105176,
+            145.0251437609643
+          ],
+          [
+            95.86407807928148,
+            184.35399630631056,
+            145.0251437609643
+          ],
+          [
+            95.86407807928148,
+            184.35399630631056,
+            184.35399630631056
+          ],
+          [
+            95.86407807928148,
+            179.43788973814227,
+            184.35399630631056
+          ],
+          [
+            95.86407807928148,
+            174.521783169974,
+            189.27010287447882
+          ],
+          [
+            95.86407807928148,
+            174.521783169974,
+            194.1862094426471
+          ],
+          [
+            95.86407807928148,
+            56.53522553393523,
+            194.1862094426471
+          ],
+          [
+            120.4446109201229,
+            56.53522553393523,
+            194.1862094426471
+          ]
+        ],
+        {
+          "op": "union",
+          "a": {
+            "op": "union",
+            "a": {
+              "op": "union",
+              "a": {
+                "op": "union",
+                "a": {
+                  "op": "union",
+                  "a": {
+                    "op": "box",
+                    "half_extents": [
+                      28.558232838607704,
+                      14.42014430406766,
+                      10.13030849958843
+                    ],
+                    "center": [
+                      136.86822209002628,
+                      269.9980024967346,
+                      89.65531135183272
+                    ]
+                  },
+                  "b": {
+                    "op": "cone",
+                    "radius1": 37.040738770913094,
+                    "radius2": 20.196283491281868,
+                    "height": 102.56328603467864,
+                    "axis": "x",
+                    "center": [
+                      173.81032384880865,
+                      151.08387437227015,
+                      133.6116509686726
+                    ]
+                  },
+                  "k": 0.0
+                },
+                "b": {
+                  "op": "cylinder",
+                  "radius": 20.87707851961249,
+                  "height": 100.67126972200126,
+                  "axis": "x",
+                  "center": [
+                    130.5455028516704,
+                    95.61780451468957,
+                    122.76626342179836
+                  ]
+                },
+                "k": 0.0
+              },
+              "b": {
+                "op": "box",
+                "half_extents": [
+                  16.04365305497327,
+                  48.8735192360878,
+                  21.597213096010144
+                ],
+                "center": [
+                  65.12857021576669,
+                  115.67420312455178,
+                  148.2939636819902
+                ]
+              },
+              "k": 0.0
+            },
+            "b": {
+              "op": "cylinder",
+              "radius": 19.47402005724886,
+              "height": 88.92363162803319,
+              "axis": "y",
+              "center": [
+                158.64422479374065,
+                223.47030998576327,
+                150.67894599558755
+              ]
+            },
+            "k": 0.0
+          },
+          "b": {
+            "op": "box",
+            "half_extents": [
+              34.21830406642241,
+              33.45166548678416,
+              18.45378057252658
+            ],
+            "center": [
+              132.85160090273604,
+              158.35357199240616,
+              74.04407399503663
+            ]
+          },
+          "k": 0.0
+        },
+        17.354560687568323,
+        5.295747999700889,
+        0.00825825,
+        16
+      ],
+      "final_terms": {
+        "dp_friction_pa": 0.9559417573802239,
+        "dp_bend_pa": 271.0976614507114,
+        "pen_area": 0.0,
+        "pen_intrude": 0.0,
+        "dp_total_unconstrained_pa": 272.05360320809166,
+        "n_bends": 6,
+        "max_viol_intrude_mm": 0.0
+      }
+    }
+  ],
+  "report": {
+    "n_corpus_tasks": 11,
+    "n_naive_route_infeasible": 8,
+    "case_ids": [
+      "t20260730_0002_00000000",
+      "t20260730_0010_00000000",
+      "t20260730_0009_00000000",
+      "t20260730_0006_00000000",
+      "t20260730_0008_00000000",
+      "t20260730_0001_00000000",
+      "t20260730_0004_00000000"
+    ],
+    "max_astar_wall_s": 0.08198433299548924,
+    "n_constrained": 6,
+    "hardest_case": "t20260730_0002_00000000",
+    "judge_hardest": {
+      "dP_lbm_pa": 7.683414152298853e-07,
+      "Q_at_matched_point_m3s": 1.0624731720966396e-07,
+      "R_pa_per_m3s": 7.23163121110788,
+      "n_cells": 11340,
+      "steps_to_converge": 400,
+      "grid_shape": [
+        27,
+        21,
+        20
+      ],
+      "n_legs": 7,
+      "voxel_mm": 12.0,
+      "area_out_lu": 25,
+      "dP_pa_at_target_Q": 0.059720618449131645
+    },
+    "descents": [
+      {
+        "task_id": "t20260730_0002_00000000",
+        "n_legs": 7,
+        "n_ctrl_case": 16,
+        "dp_surrogate_drop_frac": 0.4416565076370529,
+        "constraints_ok": true,
+        "wall_s": 0.5321992340032011
+      },
+      {
+        "task_id": "t20260730_0010_00000000",
+        "n_legs": 7,
+        "n_ctrl_case": 16,
+        "dp_surrogate_drop_frac": 0.7420178019888638,
+        "constraints_ok": false,
+        "wall_s": 0.952323844001512
+      },
+      {
+        "task_id": "t20260730_0009_00000000",
+        "n_legs": 7,
+        "n_ctrl_case": 16,
+        "dp_surrogate_drop_frac": 0.8166602658910644,
+        "constraints_ok": true,
+        "wall_s": 0.9429970359924482
+      },
+      {
+        "task_id": "t20260730_0006_00000000",
+        "n_legs": 7,
+        "n_ctrl_case": 16,
+        "dp_surrogate_drop_frac": 0.7386510998403684,
+        "constraints_ok": true,
+        "wall_s": 0.41825761800282635
+      },
+      {
+        "task_id": "t20260730_0008_00000000",
+        "n_legs": 7,
+        "n_ctrl_case": 16,
+        "dp_surrogate_drop_frac": 0.8452712231025489,
+        "constraints_ok": true,
+        "wall_s": 0.9542805499950191
+      },
+      {
+        "task_id": "t20260730_0001_00000000",
+        "n_legs": 7,
+        "n_ctrl_case": 16,
+        "dp_surrogate_drop_frac": 0.804171846671286,
+        "constraints_ok": true,
+        "wall_s": 0.9451378710073186
+      },
+      {
+        "task_id": "t20260730_0004_00000000",
+        "n_legs": 7,
+        "n_ctrl_case": 16,
+        "dp_surrogate_drop_frac": 0.80772147780452,
+        "constraints_ok": true,
+        "wall_s": 0.962139315000968
+      }
+    ],
+    "checks": {
+      "hard_cases_found": {
+        "value": 7.0,
+        "passed": true
+      },
+      "astar_solves_all_under_1s": {
+        "value": 0.08198433299548924,
+        "passed": true
+      },
+      "descent_constrained_on_majority": {
+        "value": 0.8571428571428571,
+        "passed": true
+      },
+      "judge_resistance_finite_positive": {
+        "value": 7.23163121110788,
+        "passed": true
+      }
+    },
+    "elapsed_s": 6.9
+  },
+  "source_sha256": "2ee41b021542a136420369b0f5070671da871541193f0c75d27f7c4a462126fe",
+  "calibration_reference_sha256": "4844b130697cf42b9698f42d82c0dcc11c21e656b36af463c15955d4d10224b2",
+  "scope": "Original complete F33 selftest and original measured calibration. Timed functions return unchanged values; nested phases are not additive. Only outermost obstacle SDF calls are counted.",
+  "python_profile": [
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 312,
+      "function": "loss_and_terms_multi",
+      "primitive_calls": 118988,
+      "calls": 118988,
+      "self_seconds": 2.87491983,
+      "cumulative_seconds": 5.22222237
+    },
+    {
+      "file": "src/field_engine/opt/duct_growth_diff_v1.py",
+      "line": 193,
+      "function": "_friction_dp",
+      "primitive_calls": 1784820,
+      "calls": 1784820,
+      "self_seconds": 1.43420466,
+      "cumulative_seconds": 1.7518582690000002
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.max>",
+      "primitive_calls": 10068620,
+      "calls": 10068620,
+      "self_seconds": 0.8957441330000001,
+      "cumulative_seconds": 0.895749855
+    },
+    {
+      "file": "src/field_engine/lbm_collision_native_v1.py",
+      "line": 68,
+      "function": "__call__",
+      "primitive_calls": 401,
+      "calls": 401,
+      "self_seconds": 0.6158224520000001,
+      "cumulative_seconds": 0.923414684
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'reduce' of 'numpy.ufunc' objects>",
+      "primitive_calls": 3577,
+      "calls": 3577,
+      "self_seconds": 0.217898268,
+      "cumulative_seconds": 0.217898268
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 357,
+      "function": "central_diff_grad_multi",
+      "primitive_calls": 3605,
+      "calls": 3605,
+      "self_seconds": 0.13069355300000002,
+      "cumulative_seconds": 5.4535498570000005
+    },
+    {
+      "file": "/tmp/d_f33_native_remaining_profile.py",
+      "line": 17,
+      "function": "call",
+      "primitive_calls": 7240,
+      "calls": 122607,
+      "self_seconds": 0.114526398,
+      "cumulative_seconds": 5.643712381
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 136,
+      "function": "astar",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 0.08185067800000001,
+      "cumulative_seconds": 0.15147485600000002
+    },
+    {
+      "file": "/tmp/d_f33_native_remaining_profile.py",
+      "line": 13,
+      "function": "add",
+      "primitive_calls": 122897,
+      "calls": 122897,
+      "self_seconds": 0.074674051,
+      "cumulative_seconds": 0.102504621
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'take' of 'numpy.ndarray' objects>",
+      "primitive_calls": 401,
+      "calls": 401,
+      "self_seconds": 0.068693736,
+      "cumulative_seconds": 0.068693736
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 369,
+      "function": "adam_descent_multi",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 0.053028998,
+      "cumulative_seconds": 5.712366241000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'copy' of 'numpy.ndarray' objects>",
+      "primitive_calls": 118764,
+      "calls": 118764,
+      "self_seconds": 0.038689331,
+      "cumulative_seconds": 0.038689331
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method scipy.ndimage._nd_image.euclidean_feature_transform>",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 0.034759251000000005,
+      "cumulative_seconds": 0.034759251000000005
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'setdefault' of 'dict' objects>",
+      "primitive_calls": 245794,
+      "calls": 245794,
+      "self_seconds": 0.027830570000000002,
+      "cumulative_seconds": 0.027830570000000002
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method time.perf_counter>",
+      "primitive_calls": 245836,
+      "calls": 245836,
+      "self_seconds": 0.025497364,
+      "cumulative_seconds": 0.025497364
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.len>",
+      "primitive_calls": 242663,
+      "calls": 242663,
+      "self_seconds": 0.022301318,
+      "cumulative_seconds": 0.022301318
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'get' of 'dict' objects>",
+      "primitive_calls": 150773,
+      "calls": 150773,
+      "self_seconds": 0.02112214,
+      "cumulative_seconds": 0.02112214
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 140,
+      "function": "h",
+      "primitive_calls": 38231,
+      "calls": 38231,
+      "self_seconds": 0.016912240000000002,
+      "cumulative_seconds": 0.024321850000000002
+    },
+    {
+      "file": "src/field_engine/lbm_domare_v1.py",
+      "line": 81,
+      "function": "feq3d",
+      "primitive_calls": 803,
+      "calls": 803,
+      "self_seconds": 0.015097647,
+      "cumulative_seconds": 0.017394053
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _heapq.heappop>",
+      "primitive_calls": 26662,
+      "calls": 26662,
+      "self_seconds": 0.014364168,
+      "cumulative_seconds": 0.014364168
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.abs>",
+      "primitive_calls": 146805,
+      "calls": 146805,
+      "self_seconds": 0.010634220000000002,
+      "cumulative_seconds": 0.010634220000000002
+    },
+    {
+      "file": "<site-packages>/scipy/ndimage/_morphology.py",
+      "line": 2435,
+      "function": "distance_transform_edt",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 0.009772101,
+      "cumulative_seconds": 0.057975765000000005
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'astype' of 'numpy.ndarray' objects>",
+      "primitive_calls": 82,
+      "calls": 82,
+      "self_seconds": 0.0078068090000000005,
+      "cumulative_seconds": 0.0078068090000000005
+    },
+    {
+      "file": "<site-packages>/numpy/_core/_methods.py",
+      "line": 96,
+      "function": "_clip",
+      "primitive_calls": 3875,
+      "calls": 3875,
+      "self_seconds": 0.007033321,
+      "cumulative_seconds": 0.007409056000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _heapq.heappush>",
+      "primitive_calls": 38224,
+      "calls": 38224,
+      "self_seconds": 0.00614107,
+      "cumulative_seconds": 0.00614107
+    },
+    {
+      "file": "<site-packages>/numpy/_core/numeric.py",
+      "line": 2320,
+      "function": "isclose",
+      "primitive_calls": 501,
+      "calls": 501,
+      "self_seconds": 0.005039002,
+      "cumulative_seconds": 0.010750816
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 2245,
+      "function": "clip",
+      "primitive_calls": 3875,
+      "calls": 3875,
+      "self_seconds": 0.004040147,
+      "cumulative_seconds": 0.016763499
+    },
+    {
+      "file": "<python>/ctypes/__init__.py",
+      "line": 538,
+      "function": "cast",
+      "primitive_calls": 3208,
+      "calls": 3208,
+      "self_seconds": 0.003948748,
+      "cumulative_seconds": 0.003948748
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'add' of 'set' objects>",
+      "primitive_calls": 26357,
+      "calls": 26357,
+      "self_seconds": 0.0036399590000000003,
+      "cumulative_seconds": 0.0036399590000000003
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 110,
+      "function": "_nearest_valid",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 0.0035858590000000003,
+      "cumulative_seconds": 0.0056437020000000004
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 48,
+      "function": "_wrapfunc",
+      "primitive_calls": 4613,
+      "calls": 4613,
+      "self_seconds": 0.0031710830000000003,
+      "cumulative_seconds": 0.082730277
+    },
+    {
+      "file": "src/field_engine/ikarus_v1/expr.py",
+      "line": 263,
+      "function": "eval_sdf_py",
+      "primitive_calls": 290,
+      "calls": 2066,
+      "self_seconds": 0.0030635790000000003,
+      "cumulative_seconds": 0.005070436
+    },
+    {
+      "file": "<site-packages>/numpy/_core/numeric.py",
+      "line": 1726,
+      "function": "indices",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 0.0030544500000000002,
+      "cumulative_seconds": 0.003214981
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 197,
+      "function": "generate_one",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 0.0024960580000000002,
+      "cumulative_seconds": 0.24088718
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method numpy.zeros>",
+      "primitive_calls": 3653,
+      "calls": 3653,
+      "self_seconds": 0.002307548,
+      "cumulative_seconds": 0.002307548
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'clip' of 'numpy.ndarray' objects>",
+      "primitive_calls": 3607,
+      "calls": 3607,
+      "self_seconds": 0.001884086,
+      "cumulative_seconds": 0.008049189
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 747,
+      "function": "stage_selftest",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 0.0018499340000000001,
+      "cumulative_seconds": 6.899149245
+    },
+    {
+      "file": "<site-packages>/numpy/_core/_internal.py",
+      "line": 262,
+      "function": "__init__",
+      "primitive_calls": 3208,
+      "calls": 3208,
+      "self_seconds": 0.0016533460000000002,
+      "cumulative_seconds": 0.0016533460000000002
+    },
+    {
+      "file": "<site-packages>/numpy/_core/numeric.py",
+      "line": 323,
+      "function": "full",
+      "primitive_calls": 809,
+      "calls": 809,
+      "self_seconds": 0.0016459850000000002,
+      "cumulative_seconds": 0.002711705
+    },
+    {
+      "file": "src/field_engine/lbm_collision_native_v1.py",
+      "line": 93,
+      "function": "run_lbm",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 0.0016365960000000001,
+      "cumulative_seconds": 0.9314350830000001
+    },
+    {
+      "file": "src/field_engine/lbm_collision_native_v1.py",
+      "line": 44,
+      "function": "__init__",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 0.0014714560000000001,
+      "cumulative_seconds": 0.0024449050000000003
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 282,
+      "function": "control_points_multi",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 0.0013539250000000002,
+      "cumulative_seconds": 0.004207417000000001
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 86,
+      "function": "_wrapreduction_any_all",
+      "primitive_calls": 1503,
+      "calls": 1503,
+      "self_seconds": 0.001318612,
+      "cumulative_seconds": 0.003352119
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.getattr>",
+      "primitive_calls": 6170,
+      "calls": 6170,
+      "self_seconds": 0.0012311660000000001,
+      "cumulative_seconds": 0.0012311660000000001
+    },
+    {
+      "file": "<site-packages>/numpy/_core/_internal.py",
+      "line": 279,
+      "function": "data_as",
+      "primitive_calls": 3208,
+      "calls": 3208,
+      "self_seconds": 0.0012249440000000002,
+      "cumulative_seconds": 0.005173692000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'sum' of 'numpy.ndarray' objects>",
+      "primitive_calls": 2045,
+      "calls": 2045,
+      "self_seconds": 0.0012155970000000001,
+      "cumulative_seconds": 0.21698814800000002
+    },
+    {
+      "file": "/tmp/d_f33_native_remaining_profile.py",
+      "line": 22,
+      "function": "sdf",
+      "primitive_calls": 290,
+      "calls": 2066,
+      "self_seconds": 0.001114313,
+      "cumulative_seconds": 0.005769814000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'decompress' of 'zlib.Decompress' objects>",
+      "primitive_calls": 21,
+      "calls": 21,
+      "self_seconds": 0.001041929,
+      "cumulative_seconds": 0.001041929
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _io.open>",
+      "primitive_calls": 46,
+      "calls": 46,
+      "self_seconds": 0.000970205,
+      "cumulative_seconds": 0.0010893950000000002
+    },
+    {
+      "file": "<python>/json/decoder.py",
+      "line": 351,
+      "function": "raw_decode",
+      "primitive_calls": 34,
+      "calls": 34,
+      "self_seconds": 0.0009532080000000001,
+      "cumulative_seconds": 0.0009532080000000001
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 175,
+      "function": "corners_from_path",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 0.000923904,
+      "cumulative_seconds": 0.014354733000000001
+    },
+    {
+      "file": "src/field_engine/opt/duct_growth_diff_v1.py",
+      "line": 143,
+      "function": "synth_case",
+      "primitive_calls": 25,
+      "calls": 25,
+      "self_seconds": 0.000874052,
+      "cumulative_seconds": 0.0034791460000000002
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 2586,
+      "function": "all",
+      "primitive_calls": 1503,
+      "calls": 1503,
+      "self_seconds": 0.000746687,
+      "cumulative_seconds": 0.004098806
+    },
+    {
+      "file": "<site-packages>/numpy/_core/_methods.py",
+      "line": 47,
+      "function": "_sum",
+      "primitive_calls": 2045,
+      "calls": 2045,
+      "self_seconds": 0.0007290510000000001,
+      "cumulative_seconds": 0.215772551
+    },
+    {
+      "file": "<site-packages>/numpy/_core/numeric.py",
+      "line": 2226,
+      "function": "allclose",
+      "primitive_calls": 501,
+      "calls": 501,
+      "self_seconds": 0.000716678,
+      "cumulative_seconds": 0.012599560000000001
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 2240,
+      "function": "_clip_dispatcher",
+      "primitive_calls": 3875,
+      "calls": 3875,
+      "self_seconds": 0.000699878,
+      "cumulative_seconds": 0.000699878
+    },
+    {
+      "file": "<site-packages>/numpy/_core/numeric.py",
+      "line": 2412,
+      "function": "<genexpr>",
+      "primitive_calls": 2505,
+      "calls": 2505,
+      "self_seconds": 0.0006799730000000001,
+      "cumulative_seconds": 0.001054122
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'all' of 'numpy.generic' objects>",
+      "primitive_calls": 1002,
+      "calls": 1002,
+      "self_seconds": 0.000653067,
+      "cumulative_seconds": 0.00141106
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 503,
+      "function": "lbm_judge_n_leg",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 0.00058354,
+      "cumulative_seconds": 0.9329705340000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method numpy.empty>",
+      "primitive_calls": 819,
+      "calls": 819,
+      "self_seconds": 0.000572748,
+      "cumulative_seconds": 0.000572748
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method numpy.asarray>",
+      "primitive_calls": 1113,
+      "calls": 1113,
+      "self_seconds": 0.0005720230000000001,
+      "cumulative_seconds": 0.0005720230000000001
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 106,
+      "function": "take",
+      "primitive_calls": 401,
+      "calls": 401,
+      "self_seconds": 0.000568578,
+      "cumulative_seconds": 0.070015274
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _ctypes.POINTER>",
+      "primitive_calls": 3209,
+      "calls": 3209,
+      "self_seconds": 0.00045147300000000003,
+      "cumulative_seconds": 0.00045147300000000003
+    },
+    {
+      "file": "<site-packages>/numpy/_core/function_base.py",
+      "line": 27,
+      "function": "linspace",
+      "primitive_calls": 31,
+      "calls": 31,
+      "self_seconds": 0.00044789700000000005,
+      "cumulative_seconds": 0.000670022
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method numpy.array>",
+      "primitive_calls": 638,
+      "calls": 638,
+      "self_seconds": 0.000437028,
+      "cumulative_seconds": 0.000437028
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method zlib.crc32>",
+      "primitive_calls": 70,
+      "calls": 70,
+      "self_seconds": 0.00043675800000000004,
+      "cumulative_seconds": 0.00043675800000000004
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.isinstance>",
+      "primitive_calls": 2790,
+      "calls": 2790,
+      "self_seconds": 0.00037214500000000005,
+      "cumulative_seconds": 0.000400792
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.compile>",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 0.000353169,
+      "cumulative_seconds": 0.000353169
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_format_impl.py",
+      "line": 780,
+      "function": "read_array",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 0.00034626000000000004,
+      "cumulative_seconds": 0.003074803
+    },
+    {
+      "file": "<site-packages>/numpy/linalg/_linalg.py",
+      "line": 2598,
+      "function": "norm",
+      "primitive_calls": 170,
+      "calls": 170,
+      "self_seconds": 0.00034405300000000003,
+      "cumulative_seconds": 0.00068318
+    },
+    {
+      "file": "<site-packages>/numpy/_core/numeric.py",
+      "line": 1226,
+      "function": "roll",
+      "primitive_calls": 19,
+      "calls": 19,
+      "self_seconds": 0.00033194400000000003,
+      "cumulative_seconds": 0.000406958
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.min>",
+      "primitive_calls": 2448,
+      "calls": 2448,
+      "self_seconds": 0.00030972000000000004,
+      "cumulative_seconds": 0.00030972000000000004
+    },
+    {
+      "file": "<site-packages>/numpy/_core/_ufunc_config.py",
+      "line": 472,
+      "function": "__enter__",
+      "primitive_calls": 501,
+      "calls": 501,
+      "self_seconds": 0.00029466700000000003,
+      "cumulative_seconds": 0.0005053680000000001
+    },
+    {
+      "file": "<site-packages>/numpy/_core/getlimits.py",
+      "line": 399,
+      "function": "__init__",
+      "primitive_calls": 540,
+      "calls": 540,
+      "self_seconds": 0.00027545,
+      "cumulative_seconds": 0.00027545
+    },
+    {
+      "file": "<site-packages>/numpy/_core/_methods.py",
+      "line": 64,
+      "function": "_all",
+      "primitive_calls": 1002,
+      "calls": 1002,
+      "self_seconds": 0.000267546,
+      "cumulative_seconds": 0.0007579930000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'clip' of 'numpy.generic' objects>",
+      "primitive_calls": 268,
+      "calls": 268,
+      "self_seconds": 0.00025743,
+      "cumulative_seconds": 0.001501383
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'items' of 'dict' objects>",
+      "primitive_calls": 1557,
+      "calls": 1557,
+      "self_seconds": 0.000251592,
+      "cumulative_seconds": 0.000251592
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 1006,
+      "function": "read",
+      "primitive_calls": 70,
+      "calls": 70,
+      "self_seconds": 0.000248565,
+      "cumulative_seconds": 0.0019409280000000002
+    },
+    {
+      "file": "src/field_engine/opt/duct_growth_diff_v1.py",
+      "line": 169,
+      "function": "control_points",
+      "primitive_calls": 11,
+      "calls": 11,
+      "self_seconds": 0.000227261,
+      "cumulative_seconds": 0.0004928980000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method math.sqrt>",
+      "primitive_calls": 1966,
+      "calls": 1966,
+      "self_seconds": 0.00022690600000000003,
+      "cumulative_seconds": 0.00022690600000000003
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 1460,
+      "function": "_RealGetContents",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 0.00022669400000000002,
+      "cumulative_seconds": 0.001041809
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method numpy.asanyarray>",
+      "primitive_calls": 1573,
+      "calls": 1573,
+      "self_seconds": 0.000218373,
+      "cumulative_seconds": 0.000218373
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 306,
+      "function": "<genexpr>",
+      "primitive_calls": 98,
+      "calls": 98,
+      "self_seconds": 0.000203011,
+      "cumulative_seconds": 0.000390176
+    },
+    {
+      "file": "<python>/json/encoder.py",
+      "line": 336,
+      "function": "_iterencode_dict",
+      "primitive_calls": 353,
+      "calls": 705,
+      "self_seconds": 0.00019510800000000002,
+      "cumulative_seconds": 0.000321387
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 70,
+      "function": "scan_hardness",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 0.00019387,
+      "cumulative_seconds": 0.003182587
+    },
+    {
+      "file": "src/field_engine/opt/duct_growth_diff_v1.py",
+      "line": 123,
+      "function": "_obstacle_node",
+      "primitive_calls": 25,
+      "calls": 25,
+      "self_seconds": 0.0001907,
+      "cumulative_seconds": 0.00035131500000000005
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'read' of '_io.TextIOWrapper' objects>",
+      "primitive_calls": 34,
+      "calls": 34,
+      "self_seconds": 0.00018603400000000001,
+      "cumulative_seconds": 0.000272658
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'searchsorted' of 'numpy.ndarray' objects>",
+      "primitive_calls": 224,
+      "calls": 224,
+      "self_seconds": 0.000180774,
+      "cumulative_seconds": 0.000180774
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 2581,
+      "function": "_all_dispatcher",
+      "primitive_calls": 1503,
+      "calls": 1503,
+      "self_seconds": 0.000161408,
+      "cumulative_seconds": 0.000161408
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'dot' of 'numpy.ndarray' objects>",
+      "primitive_calls": 170,
+      "calls": 170,
+      "self_seconds": 0.000159113,
+      "cumulative_seconds": 0.000159113
+    },
+    {
+      "file": "<site-packages>/numpy/_core/_ufunc_config.py",
+      "line": 488,
+      "function": "__exit__",
+      "primitive_calls": 501,
+      "calls": 501,
+      "self_seconds": 0.000156371,
+      "cumulative_seconds": 0.00026358
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method numpy.arange>",
+      "primitive_calls": 53,
+      "calls": 53,
+      "self_seconds": 0.000145289,
+      "cumulative_seconds": 0.000145289
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'append' of 'list' objects>",
+      "primitive_calls": 899,
+      "calls": 899,
+      "self_seconds": 0.000142012,
+      "cumulative_seconds": 0.000142012
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_format_impl.py",
+      "line": 621,
+      "function": "_read_array_header",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 0.000139622,
+      "cumulative_seconds": 0.000874531
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 1618,
+      "function": "open",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 0.000131216,
+      "cumulative_seconds": 0.000469396
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 302,
+      "function": "_radius_geometry_terms",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 0.000127334,
+      "cumulative_seconds": 0.0006940090000000001
+    },
+    {
+      "file": "<python>/ast.py",
+      "line": 84,
+      "function": "_convert",
+      "primitive_calls": 14,
+      "calls": 119,
+      "self_seconds": 0.00012209700000000002,
+      "cumulative_seconds": 0.00014761600000000002
+    },
+    {
+      "file": "<site-packages>/numpy/_core/multiarray.py",
+      "line": 1088,
+      "function": "copyto",
+      "primitive_calls": 825,
+      "calls": 825,
+      "self_seconds": 0.00012099400000000001,
+      "cumulative_seconds": 0.00012099400000000001
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_function_base_impl.py",
+      "line": 1413,
+      "function": "diff",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 0.00011670300000000001,
+      "cumulative_seconds": 0.000134751
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_npyio_impl.py",
+      "line": 311,
+      "function": "load",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 0.000116225,
+      "cumulative_seconds": 0.001559166
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method numpy._core._multiarray_umath._make_extobj>",
+      "primitive_calls": 501,
+      "calls": 501,
+      "self_seconds": 0.00011463900000000001,
+      "cumulative_seconds": 0.00011463900000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.print>",
+      "primitive_calls": 13,
+      "calls": 13,
+      "self_seconds": 0.00011330800000000001,
+      "cumulative_seconds": 0.00011330800000000001
+    },
+    {
+      "file": "<python>/json/__init__.py",
+      "line": 120,
+      "function": "dump",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 0.000110748,
+      "cumulative_seconds": 0.0005545470000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'reset' of '_contextvars.ContextVar' objects>",
+      "primitive_calls": 501,
+      "calls": 501,
+      "self_seconds": 0.00010720900000000001,
+      "cumulative_seconds": 0.00010720900000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method marshal.loads>",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 0.000106087,
+      "cumulative_seconds": 0.000106087
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 1459,
+      "function": "searchsorted",
+      "primitive_calls": 224,
+      "calls": 224,
+      "self_seconds": 0.000103739,
+      "cumulative_seconds": 0.000440058
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 105,
+      "function": "_mm_to_idx",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 0.000101167,
+      "cumulative_seconds": 0.000627871
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 1088,
+      "function": "_read1",
+      "primitive_calls": 21,
+      "calls": 21,
+      "self_seconds": 9.9616e-05,
+      "cumulative_seconds": 0.0016792900000000002
+    },
+    {
+      "file": "<python>/json/__init__.py",
+      "line": 278,
+      "function": "load",
+      "primitive_calls": 34,
+      "calls": 34,
+      "self_seconds": 9.919900000000001e-05,
+      "cumulative_seconds": 0.001604189
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.__build_class__>",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 9.8108e-05,
+      "cumulative_seconds": 0.00010460200000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'set' of '_contextvars.ContextVar' objects>",
+      "primitive_calls": 501,
+      "calls": 501,
+      "self_seconds": 9.6062e-05,
+      "cumulative_seconds": 9.6062e-05
+    },
+    {
+      "file": "<python>/json/decoder.py",
+      "line": 340,
+      "function": "decode",
+      "primitive_calls": 34,
+      "calls": 34,
+      "self_seconds": 9.226900000000001e-05,
+      "cumulative_seconds": 0.001138841
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_npyio_impl.py",
+      "line": 239,
+      "function": "__getitem__",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 8.728e-05,
+      "cumulative_seconds": 0.004084036
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'reshape' of 'numpy.ndarray' objects>",
+      "primitive_calls": 67,
+      "calls": 67,
+      "self_seconds": 8.6752e-05,
+      "cumulative_seconds": 8.6752e-05
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 895,
+      "function": "__init__",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 8.4799e-05,
+      "cumulative_seconds": 0.00013526600000000002
+    },
+    {
+      "file": "<site-packages>/numpy/_core/_ufunc_config.py",
+      "line": 462,
+      "function": "__init__",
+      "primitive_calls": 501,
+      "calls": 501,
+      "self_seconds": 8.338200000000001e-05,
+      "cumulative_seconds": 8.338200000000001e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'read' of '_io.BufferedReader' objects>",
+      "primitive_calls": 76,
+      "calls": 76,
+      "self_seconds": 8.0838e-05,
+      "cumulative_seconds": 8.0838e-05
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 102,
+      "function": "_take_dispatcher",
+      "primitive_calls": 401,
+      "calls": 401,
+      "self_seconds": 7.812900000000001e-05,
+      "cumulative_seconds": 7.812900000000001e-05
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 107,
+      "function": "<genexpr>",
+      "primitive_calls": 56,
+      "calls": 56,
+      "self_seconds": 7.6931e-05,
+      "cumulative_seconds": 0.000506003
+    },
+    {
+      "file": "/tmp/d_f33_native_remaining_profile.py",
+      "line": 31,
+      "function": "descent",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 7.5474e-05,
+      "cumulative_seconds": 5.712452843
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 843,
+      "function": "read",
+      "primitive_calls": 42,
+      "calls": 42,
+      "self_seconds": 7.5041e-05,
+      "cumulative_seconds": 0.000143261
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _ctypes.dlopen>",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 7.4629e-05,
+      "cumulative_seconds": 7.4629e-05
+    },
+    {
+      "file": "<python>/json/__init__.py",
+      "line": 304,
+      "function": "loads",
+      "primitive_calls": 34,
+      "calls": 34,
+      "self_seconds": 7.3681e-05,
+      "cumulative_seconds": 0.001232332
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'decode' of 'bytes' objects>",
+      "primitive_calls": 65,
+      "calls": 65,
+      "self_seconds": 7.1102e-05,
+      "cumulative_seconds": 0.000528617
+    },
+    {
+      "file": "<site-packages>/numpy/_core/multiarray.py",
+      "line": 406,
+      "function": "where",
+      "primitive_calls": 411,
+      "calls": 411,
+      "self_seconds": 7.0214e-05,
+      "cumulative_seconds": 7.0214e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'match' of 're.Pattern' objects>",
+      "primitive_calls": 68,
+      "calls": 68,
+      "self_seconds": 6.9431e-05,
+      "cumulative_seconds": 6.9431e-05
+    },
+    {
+      "file": "<site-packages>/numpy/_core/multiarray.py",
+      "line": 115,
+      "function": "empty_like",
+      "primitive_calls": 434,
+      "calls": 434,
+      "self_seconds": 6.9084e-05,
+      "cumulative_seconds": 6.9084e-05
+    },
+    {
+      "file": "<python>/json/encoder.py",
+      "line": 417,
+      "function": "_iterencode",
+      "primitive_calls": 353,
+      "calls": 353,
+      "self_seconds": 6.619e-05,
+      "cumulative_seconds": 0.000388675
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_format_impl.py",
+      "line": 1000,
+      "function": "_read_bytes",
+      "primitive_calls": 56,
+      "calls": 56,
+      "self_seconds": 6.509900000000001e-05,
+      "cumulative_seconds": 0.00169856
+    },
+    {
+      "file": "<site-packages>/numpy/_core/numeric.py",
+      "line": 2222,
+      "function": "_allclose_dispatcher",
+      "primitive_calls": 501,
+      "calls": 501,
+      "self_seconds": 6.4659e-05,
+      "cumulative_seconds": 6.4659e-05
+    },
+    {
+      "file": "<python>/copy.py",
+      "line": 119,
+      "function": "deepcopy",
+      "primitive_calls": 1,
+      "calls": 39,
+      "self_seconds": 6.3518e-05,
+      "cumulative_seconds": 0.000144234
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_npyio_impl.py",
+      "line": 192,
+      "function": "__init__",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 6.1721e-05,
+      "cumulative_seconds": 0.00128782
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 1359,
+      "function": "argmin",
+      "primitive_calls": 84,
+      "calls": 84,
+      "self_seconds": 6.1637e-05,
+      "cumulative_seconds": 0.000176206
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'ravel' of 'numpy.ndarray' objects>",
+      "primitive_calls": 170,
+      "calls": 170,
+      "self_seconds": 6.0925000000000004e-05,
+      "cumulative_seconds": 6.0925000000000004e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'cumsum' of 'numpy.ndarray' objects>",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 6.0223e-05,
+      "cumulative_seconds": 6.0223e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'argmin' of 'numpy.ndarray' objects>",
+      "primitive_calls": 84,
+      "calls": 84,
+      "self_seconds": 5.7725e-05,
+      "cumulative_seconds": 5.7725e-05
+    },
+    {
+      "file": "<site-packages>/numpy/_core/getlimits.py",
+      "line": 410,
+      "function": "min",
+      "primitive_calls": 270,
+      "calls": 270,
+      "self_seconds": 5.7455000000000005e-05,
+      "cumulative_seconds": 5.7455000000000005e-05
+    },
+    {
+      "file": "<site-packages>/numpy/_core/numeric.py",
+      "line": 2316,
+      "function": "_isclose_dispatcher",
+      "primitive_calls": 501,
+      "calls": 501,
+      "self_seconds": 5.7432e-05,
+      "cumulative_seconds": 5.7432e-05
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_npyio_impl.py",
+      "line": 216,
+      "function": "close",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 5.7418000000000005e-05,
+      "cumulative_seconds": 0.00013992100000000002
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 1344,
+      "function": "__init__",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 5.6998000000000006e-05,
+      "cumulative_seconds": 0.0011472960000000001
+    },
+    {
+      "file": "<python>/ast.py",
+      "line": 54,
+      "function": "literal_eval",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 5.547500000000001e-05,
+      "cumulative_seconds": 0.0005753150000000001
+    },
+    {
+      "file": "<python>/json/encoder.py",
+      "line": 280,
+      "function": "_iterencode_list",
+      "primitive_calls": 215,
+      "calls": 215,
+      "self_seconds": 5.5125000000000005e-05,
+      "cumulative_seconds": 0.000147927
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'close' of '_io.BufferedReader' objects>",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 5.4519000000000004e-05,
+      "cumulative_seconds": 5.4519000000000004e-05
+    },
+    {
+      "file": "<frozen codecs>",
+      "line": 322,
+      "function": "decode",
+      "primitive_calls": 34,
+      "calls": 34,
+      "self_seconds": 5.1838e-05,
+      "cumulative_seconds": 8.6624e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _struct.unpack>",
+      "primitive_calls": 77,
+      "calls": 77,
+      "self_seconds": 5.0314000000000007e-05,
+      "cumulative_seconds": 5.0314000000000007e-05
+    },
+    {
+      "file": "src/field_engine/ikarus_v1/expr.py",
+      "line": 106,
+      "function": "box",
+      "primitive_calls": 36,
+      "calls": 36,
+      "self_seconds": 4.9467000000000006e-05,
+      "cumulative_seconds": 4.9467000000000006e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.issubclass>",
+      "primitive_calls": 354,
+      "calls": 354,
+      "self_seconds": 4.8732e-05,
+      "cumulative_seconds": 4.8732e-05
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_arraysetops_impl.py",
+      "line": 350,
+      "function": "_unique1d",
+      "primitive_calls": 6,
+      "calls": 6,
+      "self_seconds": 4.8334e-05,
+      "cumulative_seconds": 0.000151275
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method posix.stat>",
+      "primitive_calls": 15,
+      "calls": 15,
+      "self_seconds": 4.7595e-05,
+      "cumulative_seconds": 4.7595e-05
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 312,
+      "function": "_EndRecData",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 4.7229000000000005e-05,
+      "cumulative_seconds": 0.00011824200000000001
+    },
+    {
+      "file": "<site-packages>/numpy/linalg/_linalg.py",
+      "line": 168,
+      "function": "isComplexType",
+      "primitive_calls": 170,
+      "calls": 170,
+      "self_seconds": 4.7106000000000006e-05,
+      "cumulative_seconds": 6.6592e-05
+    },
+    {
+      "file": "<frozen codecs>",
+      "line": 312,
+      "function": "__init__",
+      "primitive_calls": 34,
+      "calls": 34,
+      "self_seconds": 4.6581e-05,
+      "cumulative_seconds": 5.3715e-05
+    },
+    {
+      "file": "<site-packages>/numpy/_core/multiarray.py",
+      "line": 713,
+      "function": "result_type",
+      "primitive_calls": 501,
+      "calls": 501,
+      "self_seconds": 4.5472e-05,
+      "cumulative_seconds": 4.5472e-05
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 66,
+      "function": "_wrapreduction",
+      "primitive_calls": 12,
+      "calls": 12,
+      "self_seconds": 4.5206e-05,
+      "cumulative_seconds": 0.000129274
+    },
+    {
+      "file": "<site-packages>/numpy/_core/numeric.py",
+      "line": 97,
+      "function": "zeros_like",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 4.3602e-05,
+      "cumulative_seconds": 5.7244e-05
+    },
+    {
+      "file": "<site-packages>/numpy/_core/getlimits.py",
+      "line": 423,
+      "function": "max",
+      "primitive_calls": 270,
+      "calls": 270,
+      "self_seconds": 4.283e-05,
+      "cumulative_seconds": 4.283e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'write' of '_io.TextIOWrapper' objects>",
+      "primitive_calls": 352,
+      "calls": 352,
+      "self_seconds": 4.2428e-05,
+      "cumulative_seconds": 4.2428e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'sort' of 'numpy.ndarray' objects>",
+      "primitive_calls": 6,
+      "calls": 6,
+      "self_seconds": 4.1094e-05,
+      "cumulative_seconds": 4.1094e-05
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_format_impl.py",
+      "line": 310,
+      "function": "descr_to_dtype",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 4.0604e-05,
+      "cumulative_seconds": 4.1689e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'seek' of '_io.BufferedReader' objects>",
+      "primitive_calls": 91,
+      "calls": 91,
+      "self_seconds": 4.0424000000000005e-05,
+      "cumulative_seconds": 4.0424000000000005e-05
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_npyio_impl.py",
+      "line": 100,
+      "function": "zipfile_factory",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 4.0310000000000005e-05,
+      "cumulative_seconds": 0.001190134
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 1621,
+      "function": "find_spec",
+      "primitive_calls": 3,
+      "calls": 3,
+      "self_seconds": 3.5543e-05,
+      "cumulative_seconds": 0.000135932
+    },
+    {
+      "file": "<site-packages>/numpy/_core/numeric.py",
+      "line": 1427,
+      "function": "normalize_axis_tuple",
+      "primitive_calls": 19,
+      "calls": 19,
+      "self_seconds": 3.5385e-05,
+      "cumulative_seconds": 5.985100000000001e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _codecs.utf_8_decode>",
+      "primitive_calls": 34,
+      "calls": 34,
+      "self_seconds": 3.4786e-05,
+      "cumulative_seconds": 3.4786e-05
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 1140,
+      "function": "close",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 3.4685000000000004e-05,
+      "cumulative_seconds": 5.9309000000000004e-05
+    },
+    {
+      "file": "src/field_engine/ikarus_v1/expr.py",
+      "line": 119,
+      "function": "cone",
+      "primitive_calls": 25,
+      "calls": 25,
+      "self_seconds": 3.402e-05,
+      "cumulative_seconds": 3.402e-05
+    },
+    {
+      "file": "src/field_engine/ikarus_v1/expr.py",
+      "line": 111,
+      "function": "cylinder",
+      "primitive_calls": 42,
+      "calls": 42,
+      "self_seconds": 3.3718000000000005e-05,
+      "cumulative_seconds": 3.3718000000000005e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _hashlib.openssl_sha256>",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 3.2882e-05,
+      "cumulative_seconds": 3.2882e-05
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 417,
+      "function": "__init__",
+      "primitive_calls": 35,
+      "calls": 35,
+      "self_seconds": 3.2235e-05,
+      "cumulative_seconds": 8.3238e-05
+    },
+    {
+      "file": "<python>/encodings/cp437.py",
+      "line": 1,
+      "function": "<module>",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 3.1780000000000004e-05,
+      "cumulative_seconds": 0.000104735
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 1152,
+      "function": "seek",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 3.1523e-05,
+      "cumulative_seconds": 5.4199e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method numpy.frombuffer>",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 3.1075e-05,
+      "cumulative_seconds": 3.1075e-05
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 1455,
+      "function": "_searchsorted_dispatcher",
+      "primitive_calls": 224,
+      "calls": 224,
+      "self_seconds": 3.0893000000000004e-05,
+      "cumulative_seconds": 3.0893000000000004e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method numpy._core._multiarray_umath._unique_hash>",
+      "primitive_calls": 6,
+      "calls": 6,
+      "self_seconds": 3.074e-05,
+      "cumulative_seconds": 3.074e-05
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 371,
+      "function": "_sanitize_filename",
+      "primitive_calls": 35,
+      "calls": 35,
+      "self_seconds": 2.9977e-05,
+      "cumulative_seconds": 5.1003000000000006e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'tolist' of 'numpy.ndarray' objects>",
+      "primitive_calls": 63,
+      "calls": 63,
+      "self_seconds": 2.9891000000000002e-05,
+      "cumulative_seconds": 2.9891000000000002e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.sum>",
+      "primitive_calls": 17,
+      "calls": 17,
+      "self_seconds": 2.9619000000000002e-05,
+      "cumulative_seconds": 5.8766000000000006e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _io.open_code>",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 2.9575e-05,
+      "cumulative_seconds": 2.9575e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'tell' of '_io.BufferedReader' objects>",
+      "primitive_calls": 63,
+      "calls": 63,
+      "self_seconds": 2.9276000000000002e-05,
+      "cumulative_seconds": 2.9276000000000002e-05
+    },
+    {
+      "file": "<site-packages>/numpy/_core/shape_base.py",
+      "line": 378,
+      "function": "stack",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 2.8998000000000003e-05,
+      "cumulative_seconds": 3.1771000000000005e-05
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 1124,
+      "function": "_read2",
+      "primitive_calls": 21,
+      "calls": 21,
+      "self_seconds": 2.8189e-05,
+      "cumulative_seconds": 7.6236e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method '__exit__' of '_io._IOBase' objects>",
+      "primitive_calls": 20,
+      "calls": 20,
+      "self_seconds": 2.7157e-05,
+      "cumulative_seconds": 8.646600000000001e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.sorted>",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 2.5413000000000002e-05,
+      "cumulative_seconds": 3.0299000000000002e-05
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 131,
+      "function": "_path_join",
+      "primitive_calls": 23,
+      "calls": 23,
+      "self_seconds": 2.5366e-05,
+      "cumulative_seconds": 3.8924e-05
+    },
+    {
+      "file": "src/field_engine/ikarus_v1/expr.py",
+      "line": 199,
+      "function": "union",
+      "primitive_calls": 78,
+      "calls": 78,
+      "self_seconds": 2.4583e-05,
+      "cumulative_seconds": 2.4583e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _codecs.charmap_decode>",
+      "primitive_calls": 49,
+      "calls": 49,
+      "self_seconds": 2.3856e-05,
+      "cumulative_seconds": 2.3856e-05
+    },
+    {
+      "file": "src/field_engine/lbm_collision_native_v1.py",
+      "line": 21,
+      "function": "_bound_library",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 2.3699e-05,
+      "cumulative_seconds": 0.00030424900000000003
+    },
+    {
+      "file": "<python>/encodings/cp437.py",
+      "line": 14,
+      "function": "decode",
+      "primitive_calls": 49,
+      "calls": 49,
+      "self_seconds": 2.3466000000000002e-05,
+      "cumulative_seconds": 4.7322000000000005e-05
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_arraysetops_impl.py",
+      "line": 145,
+      "function": "unique",
+      "primitive_calls": 6,
+      "calls": 6,
+      "self_seconds": 2.2646000000000003e-05,
+      "cumulative_seconds": 0.00018035200000000002
+    },
+    {
+      "file": "<python>/json/encoder.py",
+      "line": 226,
+      "function": "floatstr",
+      "primitive_calls": 25,
+      "calls": 25,
+      "self_seconds": 2.243e-05,
+      "cumulative_seconds": 2.243e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'result_type' of 'numpy._core._multiarray_umath._array_converter' objects>",
+      "primitive_calls": 31,
+      "calls": 31,
+      "self_seconds": 2.2035e-05,
+      "cumulative_seconds": 2.2035e-05
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 3325,
+      "function": "prod",
+      "primitive_calls": 10,
+      "calls": 10,
+      "self_seconds": 2.2005e-05,
+      "cumulative_seconds": 0.000130225
+    },
+    {
+      "file": "<site-packages>/numpy/linalg/_linalg.py",
+      "line": 2594,
+      "function": "_norm_dispatcher",
+      "primitive_calls": 170,
+      "calls": 170,
+      "self_seconds": 2.1835e-05,
+      "cumulative_seconds": 2.1835e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'round' of 'numpy.ndarray' objects>",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 2.1487000000000003e-05,
+      "cumulative_seconds": 2.1487000000000003e-05
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 830,
+      "function": "seek",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 2.1108000000000002e-05,
+      "cumulative_seconds": 3.2207000000000005e-05
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_format_impl.py",
+      "line": 229,
+      "function": "read_magic",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 2.1018e-05,
+      "cumulative_seconds": 5.6562000000000005e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'read' of '_io.BytesIO' objects>",
+      "primitive_calls": 140,
+      "calls": 140,
+      "self_seconds": 2.0236e-05,
+      "cumulative_seconds": 2.0236e-05
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 2003,
+      "function": "close",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 1.9996e-05,
+      "cumulative_seconds": 2.4508000000000003e-05
+    },
+    {
+      "file": "src/field_engine/lbm_collision_native_v1.py",
+      "line": 1,
+      "function": "<module>",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.95e-05,
+      "cumulative_seconds": 0.000103851
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.round>",
+      "primitive_calls": 8,
+      "calls": 8,
+      "self_seconds": 1.8878e-05,
+      "cumulative_seconds": 1.8878e-05
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 1041,
+      "function": "_update_crc",
+      "primitive_calls": 21,
+      "calls": 21,
+      "self_seconds": 1.8379e-05,
+      "cumulative_seconds": 0.000434456
+    },
+    {
+      "file": "<site-packages>/numpy/_core/shape_base.py",
+      "line": 19,
+      "function": "atleast_1d",
+      "primitive_calls": 8,
+      "calls": 8,
+      "self_seconds": 1.8263e-05,
+      "cumulative_seconds": 2.4646e-05
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 1090,
+      "function": "get_code",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.8215e-05,
+      "cumulative_seconds": 0.000222601
+    },
+    {
+      "file": "<site-packages>/numpy/_core/numeric.py",
+      "line": 170,
+      "function": "ones",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.8103000000000003e-05,
+      "cumulative_seconds": 2.4465e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'wrap' of 'numpy._core._multiarray_umath._array_converter' objects>",
+      "primitive_calls": 39,
+      "calls": 39,
+      "self_seconds": 1.8062e-05,
+      "cumulative_seconds": 1.8062e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method zlib.decompressobj>",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 1.8035000000000003e-05,
+      "cumulative_seconds": 1.8035000000000003e-05
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 1217,
+      "function": "tell",
+      "primitive_calls": 28,
+      "calls": 28,
+      "self_seconds": 1.8026e-05,
+      "cumulative_seconds": 2.1327e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'as_arrays' of 'numpy._core._multiarray_umath._array_converter' objects>",
+      "primitive_calls": 33,
+      "calls": 33,
+      "self_seconds": 1.7754e-05,
+      "cumulative_seconds": 1.7754e-05
+    },
+    {
+      "file": "<python>/pathlib/_local.py",
+      "line": 227,
+      "function": "__str__",
+      "primitive_calls": 6,
+      "calls": 6,
+      "self_seconds": 1.6977e-05,
+      "cumulative_seconds": 7.0511e-05
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 2876,
+      "function": "cumsum",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 1.6631e-05,
+      "cumulative_seconds": 9.7856e-05
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 555,
+      "function": "port_plane",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.6443e-05,
+      "cumulative_seconds": 6.7767e-05
+    },
+    {
+      "file": "<python>/pathlib/_local.py",
+      "line": 257,
+      "function": "_parse_path",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 1.6415e-05,
+      "cumulative_seconds": 3.3622000000000004e-05
+    },
+    {
+      "file": "src/field_engine/opt/duct_growth_diff_v1.py",
+      "line": 75,
+      "function": "load_k_bend",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.6186e-05,
+      "cumulative_seconds": 8.0814e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method numpy.lib.array_utils.normalize_axis_index>",
+      "primitive_calls": 74,
+      "calls": 74,
+      "self_seconds": 1.6007e-05,
+      "cumulative_seconds": 1.6007e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'end' of 're.Match' objects>",
+      "primitive_calls": 68,
+      "calls": 68,
+      "self_seconds": 1.5861e-05,
+      "cumulative_seconds": 1.5861e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _json.encode_basestring_ascii>",
+      "primitive_calls": 89,
+      "calls": 89,
+      "self_seconds": 1.5527000000000002e-05,
+      "cumulative_seconds": 1.5527000000000002e-05
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 509,
+      "function": "cache_from_source",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 1.5466e-05,
+      "cumulative_seconds": 4.6417e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'flush' of 'zlib.Decompress' objects>",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 1.5367e-05,
+      "cumulative_seconds": 1.5367e-05
+    },
+    {
+      "file": "<site-packages>/numpy/_core/numeric.py",
+      "line": 1476,
+      "function": "<genexpr>",
+      "primitive_calls": 76,
+      "calls": 76,
+      "self_seconds": 1.5298e-05,
+      "cumulative_seconds": 2.1833000000000003e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.all>",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 1.5148000000000001e-05,
+      "cumulative_seconds": 2.6988000000000003e-05
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 1240,
+      "function": "_find_spec",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.5047e-05,
+      "cumulative_seconds": 0.00017817900000000002
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.hasattr>",
+      "primitive_calls": 36,
+      "calls": 36,
+      "self_seconds": 1.4813e-05,
+      "cumulative_seconds": 1.4813e-05
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 800,
+      "function": "_get_decompressor",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 1.4395e-05,
+      "cumulative_seconds": 3.7238000000000005e-05
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 304,
+      "function": "acquire",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.4077000000000001e-05,
+      "cumulative_seconds": 4.0496e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'startswith' of 'str' objects>",
+      "primitive_calls": 44,
+      "calls": 44,
+      "self_seconds": 1.407e-05,
+      "cumulative_seconds": 1.407e-05
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 1349,
+      "function": "_find_and_load",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.3836000000000001e-05,
+      "cumulative_seconds": 0.0008045480000000001
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 539,
+      "function": "_decodeExtra",
+      "primitive_calls": 35,
+      "calls": 35,
+      "self_seconds": 1.3678e-05,
+      "cumulative_seconds": 1.8508e-05
+    },
+    {
+      "file": "<python>/encodings/__init__.py",
+      "line": 71,
+      "function": "search_function",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.3648e-05,
+      "cumulative_seconds": 0.00041019300000000005
+    },
+    {
+      "file": "<site-packages>/numpy/_core/numeric.py",
+      "line": 1911,
+      "function": "isscalar",
+      "primitive_calls": 31,
+      "calls": 31,
+      "self_seconds": 1.3558000000000001e-05,
+      "cumulative_seconds": 1.989e-05
+    },
+    {
+      "file": "<python>/contextlib.py",
+      "line": 515,
+      "function": "enter_context",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 1.3504000000000001e-05,
+      "cumulative_seconds": 4.2154e-05
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 3520,
+      "function": "ndim",
+      "primitive_calls": 31,
+      "calls": 31,
+      "self_seconds": 1.3204000000000001e-05,
+      "cumulative_seconds": 1.3204000000000001e-05
+    },
+    {
+      "file": "<python>/contextlib.py",
+      "line": 571,
+      "function": "__exit__",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 1.2879000000000002e-05,
+      "cumulative_seconds": 1.5454e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _abc._abc_instancecheck>",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 1.287e-05,
+      "cumulative_seconds": 2.1672000000000002e-05
+    },
+    {
+      "file": "<python>/contextlib.py",
+      "line": 547,
+      "function": "_push_cm_exit",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 1.2841000000000001e-05,
+      "cumulative_seconds": 2.6232000000000002e-05
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 252,
+      "function": "_EndRecData64",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 1.2743000000000001e-05,
+      "cumulative_seconds": 2.8477000000000002e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.exec>",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.2597000000000002e-05,
+      "cumulative_seconds": 0.000221183
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method '__exit__' of '_thread.RLock' objects>",
+      "primitive_calls": 60,
+      "calls": 60,
+      "self_seconds": 1.2449e-05,
+      "cumulative_seconds": 1.2449e-05
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 830,
+      "function": "spec_from_file_location",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.2424e-05,
+      "cumulative_seconds": 1.5841e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method sys.intern>",
+      "primitive_calls": 20,
+      "calls": 20,
+      "self_seconds": 1.1933e-05,
+      "cumulative_seconds": 1.1933e-05
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 3737,
+      "function": "mean",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.1524e-05,
+      "cumulative_seconds": 3.9972e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'disable' of '_lsprof.Profiler' objects>",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.151e-05,
+      "cumulative_seconds": 1.151e-05
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 236,
+      "function": "<genexpr>",
+      "primitive_calls": 28,
+      "calls": 28,
+      "self_seconds": 1.1497e-05,
+      "cumulative_seconds": 1.4278000000000001e-05
+    },
+    {
+      "file": "src/field_engine/lbm_domare_v1.py",
+      "line": 130,
+      "function": "run_lbm",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.1336000000000001e-05,
+      "cumulative_seconds": 0.931887734
+    },
+    {
+      "file": "<python>/ast.py",
+      "line": 30,
+      "function": "parse",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 1.1326000000000001e-05,
+      "cumulative_seconds": 0.000364495
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 2119,
+      "function": "_fpclose",
+      "primitive_calls": 21,
+      "calls": 21,
+      "self_seconds": 1.1048e-05,
+      "cumulative_seconds": 1.1048e-05
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 1355,
+      "function": "_argmin_dispatcher",
+      "primitive_calls": 84,
+      "calls": 84,
+      "self_seconds": 1.0959000000000001e-05,
+      "cumulative_seconds": 1.0959000000000001e-05
+    },
+    {
+      "file": "<python>/copy.py",
+      "line": 201,
+      "function": "_deepcopy_tuple",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 1.095e-05,
+      "cumulative_seconds": 0.00010159200000000001
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 1304,
+      "function": "_find_and_load_unlocked",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.0927e-05,
+      "cumulative_seconds": 0.000715473
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 854,
+      "function": "close",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 1.0883e-05,
+      "cumulative_seconds": 1.7419e-05
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 426,
+      "function": "_get_module_lock",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.0816000000000001e-05,
+      "cumulative_seconds": 1.6101e-05
+    },
+    {
+      "file": "<python>/pathlib/_local.py",
+      "line": 289,
+      "function": "drive",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 1.0734000000000001e-05,
+      "cumulative_seconds": 4.8241e-05
+    },
+    {
+      "file": "<python>/contextlib.py",
+      "line": 485,
+      "function": "__init__",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 1.0664e-05,
+      "cumulative_seconds": 1.0664e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.chr>",
+      "primitive_calls": 35,
+      "calls": 35,
+      "self_seconds": 1.0646000000000001e-05,
+      "cumulative_seconds": 1.0646000000000001e-05
+    },
+    {
+      "file": "<python>/contextlib.py",
+      "line": 488,
+      "function": "pop_all",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 1.0543e-05,
+      "cumulative_seconds": 1.3926e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'update' of 'dict' objects>",
+      "primitive_calls": 8,
+      "calls": 8,
+      "self_seconds": 1.0412000000000001e-05,
+      "cumulative_seconds": 1.0412000000000001e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'find' of 'str' objects>",
+      "primitive_calls": 35,
+      "calls": 35,
+      "self_seconds": 1.038e-05,
+      "cumulative_seconds": 1.038e-05
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_format_impl.py",
+      "line": 687,
+      "function": "<genexpr>",
+      "primitive_calls": 35,
+      "calls": 35,
+      "self_seconds": 1.0252000000000001e-05,
+      "cumulative_seconds": 1.184e-05
+    },
+    {
+      "file": "<frozen posixpath>",
+      "line": 388,
+      "function": "realpath",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.0077e-05,
+      "cumulative_seconds": 2.8781e-05
+    },
+    {
+      "file": "<frozen codecs>",
+      "line": 1079,
+      "function": "make_identity_dict",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 9.481000000000001e-06,
+      "cumulative_seconds": 9.481000000000001e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'flatten' of 'numpy.ndarray' objects>",
+      "primitive_calls": 6,
+      "calls": 6,
+      "self_seconds": 9.441e-06,
+      "cumulative_seconds": 9.441e-06
+    },
+    {
+      "file": "<python>/copy.py",
+      "line": 248,
+      "function": "_reconstruct",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 9.31e-06,
+      "cumulative_seconds": 5.0052e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.id>",
+      "primitive_calls": 79,
+      "calls": 79,
+      "self_seconds": 9.152e-06,
+      "cumulative_seconds": 9.152e-06
+    },
+    {
+      "file": "<site-packages>/numpy/_core/_methods.py",
+      "line": 115,
+      "function": "_mean",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 8.99e-06,
+      "cumulative_seconds": 2.8448000000000003e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'join' of 'str' objects>",
+      "primitive_calls": 32,
+      "calls": 32,
+      "self_seconds": 8.979e-06,
+      "cumulative_seconds": 8.979e-06
+    },
+    {
+      "file": "<site-packages>/numpy/ma/core.py",
+      "line": 6884,
+      "function": "is_masked",
+      "primitive_calls": 6,
+      "calls": 6,
+      "self_seconds": 8.920000000000001e-06,
+      "cumulative_seconds": 1.7603e-05
+    },
+    {
+      "file": "<python>/json/encoder.py",
+      "line": 207,
+      "function": "iterencode",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 8.900000000000001e-06,
+      "cumulative_seconds": 1.057e-05
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_npyio_impl.py",
+      "line": 81,
+      "function": "__init__",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 8.789e-06,
+      "cumulative_seconds": 1.2924e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'removesuffix' of 'str' objects>",
+      "primitive_calls": 35,
+      "calls": 35,
+      "self_seconds": 8.744000000000001e-06,
+      "cumulative_seconds": 8.744000000000001e-06
+    },
+    {
+      "file": "<python>/pathlib/_abc.py",
+      "line": 621,
+      "function": "read_bytes",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 8.477e-06,
+      "cumulative_seconds": 0.00013137
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_format_impl.py",
+      "line": 1028,
+      "function": "isfileobj",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 8.323e-06,
+      "cumulative_seconds": 1.4467e-05
+    },
+    {
+      "file": "<python>/pathlib/_local.py",
+      "line": 498,
+      "function": "__init__",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 8.195e-06,
+      "cumulative_seconds": 1.7973000000000002e-05
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 1576,
+      "function": "getinfo",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 8.1e-06,
+      "cumulative_seconds": 1.2196000000000001e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'rstrip' of 'str' objects>",
+      "primitive_calls": 50,
+      "calls": 50,
+      "self_seconds": 7.913e-06,
+      "cumulative_seconds": 7.913e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'argmax' of 'numpy.ndarray' objects>",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 7.861e-06,
+      "cumulative_seconds": 7.861e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 733,
+      "function": "_init_module_attrs",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 7.858e-06,
+      "cumulative_seconds": 5.1624000000000006e-05
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 1519,
+      "function": "_get_spec",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 7.587e-06,
+      "cumulative_seconds": 0.00014573100000000002
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 911,
+      "function": "_load_unlocked",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 7.530000000000001e-06,
+      "cumulative_seconds": 0.000523205
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 819,
+      "function": "__init__",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 7.347e-06,
+      "cumulative_seconds": 7.347e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _operator.index>",
+      "primitive_calls": 31,
+      "calls": 31,
+      "self_seconds": 7.277000000000001e-06,
+      "cumulative_seconds": 7.277000000000001e-06
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 765,
+      "function": "_check_compression",
+      "primitive_calls": 21,
+      "calls": 21,
+      "self_seconds": 7.263000000000001e-06,
+      "cumulative_seconds": 7.263000000000001e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<function ZipExtFile.close at 0x7eb6324b0ae0>",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 7.2050000000000005e-06,
+      "cumulative_seconds": 7.2050000000000005e-06
+    },
+    {
+      "file": "<frozen os>",
+      "line": 712,
+      "function": "__getitem__",
+      "primitive_calls": 3,
+      "calls": 3,
+      "self_seconds": 7.182000000000001e-06,
+      "cumulative_seconds": 1.6191e-05
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 1665,
+      "function": "<lambda>",
+      "primitive_calls": 56,
+      "calls": 56,
+      "self_seconds": 7.152e-06,
+      "cumulative_seconds": 7.152e-06
+    },
+    {
+      "file": "<frozen codecs>",
+      "line": 263,
+      "function": "__init__",
+      "primitive_calls": 34,
+      "calls": 34,
+      "self_seconds": 7.134000000000001e-06,
+      "cumulative_seconds": 7.134000000000001e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _struct.calcsize>",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 7.107000000000001e-06,
+      "cumulative_seconds": 7.107000000000001e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 1017,
+      "function": "exec_module",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 7.022000000000001e-06,
+      "cumulative_seconds": 0.000452419
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 1211,
+      "function": "get_data",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 6.987e-06,
+      "cumulative_seconds": 5.4018000000000004e-05
+    },
+    {
+      "file": "<frozen abc>",
+      "line": 117,
+      "function": "__instancecheck__",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 6.975e-06,
+      "cumulative_seconds": 2.8647000000000002e-05
+    },
+    {
+      "file": "<python>/copy.py",
+      "line": 232,
+      "function": "_keep_alive",
+      "primitive_calls": 11,
+      "calls": 11,
+      "self_seconds": 6.945e-06,
+      "cumulative_seconds": 9.842e-06
+    },
+    {
+      "file": "<python>/ctypes/__init__.py",
+      "line": 416,
+      "function": "__getitem__",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 6.9400000000000005e-06,
+      "cumulative_seconds": 7.317e-06
+    },
+    {
+      "file": "<site-packages>/numpy/_core/_methods.py",
+      "line": 73,
+      "function": "_count_reduce_items",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 6.89e-06,
+      "cumulative_seconds": 7.583e-06
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_npyio_impl.py",
+      "line": 229,
+      "function": "__del__",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 6.821e-06,
+      "cumulative_seconds": 0.000146742
+    },
+    {
+      "file": "<site-packages>/numpy/ma/core.py",
+      "line": 1411,
+      "function": "getmask",
+      "primitive_calls": 6,
+      "calls": 6,
+      "self_seconds": 6.7890000000000006e-06,
+      "cumulative_seconds": 8.683e-06
+    },
+    {
+      "file": "<python>/encodings/__init__.py",
+      "line": 43,
+      "function": "normalize_encoding",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 6.588e-06,
+      "cumulative_seconds": 9.519e-06
+    },
+    {
+      "file": "<python>/threading.py",
+      "line": 122,
+      "function": "RLock",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 6.557e-06,
+      "cumulative_seconds": 6.557e-06
+    },
+    {
+      "file": "<python>/contextlib.py",
+      "line": 552,
+      "function": "_push_exit_callback",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 6.5290000000000005e-06,
+      "cumulative_seconds": 8.516000000000001e-06
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 237,
+      "function": "<genexpr>",
+      "primitive_calls": 28,
+      "calls": 28,
+      "self_seconds": 6.5170000000000005e-06,
+      "cumulative_seconds": 8.179e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 806,
+      "function": "module_from_spec",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 6.4730000000000005e-06,
+      "cumulative_seconds": 6.126100000000001e-05
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_format_impl.py",
+      "line": 199,
+      "function": "_check_version",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 6.414000000000001e-06,
+      "cumulative_seconds": 6.414000000000001e-06
+    },
+    {
+      "file": "<python>/pathlib/_local.py",
+      "line": 117,
+      "function": "__init__",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 6.380000000000001e-06,
+      "cumulative_seconds": 9.778e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method fromkeys>",
+      "primitive_calls": 19,
+      "calls": 19,
+      "self_seconds": 6.314e-06,
+      "cumulative_seconds": 6.314e-06
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 1542,
+      "function": "namelist",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 6.3100000000000006e-06,
+      "cumulative_seconds": 6.3100000000000006e-06
+    },
+    {
+      "file": "<python>/pathlib/_local.py",
+      "line": 664,
+      "function": "resolve",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 6.306e-06,
+      "cumulative_seconds": 3.9768e-05
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 124,
+      "function": "setdefault",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 6.042000000000001e-06,
+      "cumulative_seconds": 1.4558e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'max' of 'numpy.ndarray' objects>",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 5.911000000000001e-06,
+      "cumulative_seconds": 1.7632e-05
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 1259,
+      "function": "argmax",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 5.821000000000001e-06,
+      "cumulative_seconds": 2.1939e-05
+    },
+    {
+      "file": "<python>/copy.py",
+      "line": 253,
+      "function": "<genexpr>",
+      "primitive_calls": 16,
+      "calls": 16,
+      "self_seconds": 5.7220000000000004e-06,
+      "cumulative_seconds": 3.9993e-05
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 145,
+      "function": "_path_stat",
+      "primitive_calls": 13,
+      "calls": 13,
+      "self_seconds": 5.553e-06,
+      "cumulative_seconds": 4.2372e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method posix.lstat>",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 5.536e-06,
+      "cumulative_seconds": 5.536e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 1616,
+      "function": "_get_spec",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 5.514e-06,
+      "cumulative_seconds": 2.1947000000000002e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method posix.fspath>",
+      "primitive_calls": 21,
+      "calls": 21,
+      "self_seconds": 5.426e-06,
+      "cumulative_seconds": 1.5256000000000001e-05
+    },
+    {
+      "file": "<python>/copy.py",
+      "line": 218,
+      "function": "_deepcopy_dict",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 5.389e-06,
+      "cumulative_seconds": 0.000130791
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 38,
+      "function": "_wrapit",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 5.385e-06,
+      "cumulative_seconds": 1.7927e-05
+    },
+    {
+      "file": "<python>/ctypes/__init__.py",
+      "line": 345,
+      "function": "__init__",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 5.278e-06,
+      "cumulative_seconds": 0.00011285700000000001
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'hexdigest' of '_hashlib.HASH' objects>",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 5.253e-06,
+      "cumulative_seconds": 5.253e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'lstrip' of 'str' objects>",
+      "primitive_calls": 18,
+      "calls": 18,
+      "self_seconds": 5.206000000000001e-06,
+      "cumulative_seconds": 5.206000000000001e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 74,
+      "function": "__new__",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 5.11e-06,
+      "cumulative_seconds": 6.227000000000001e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 639,
+      "function": "_get_cached",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 5.054e-06,
+      "cumulative_seconds": 3.6750000000000006e-05
+    },
+    {
+      "file": "<python>/contextlib.py",
+      "line": 402,
+      "function": "__enter__",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 4.936000000000001e-06,
+      "cumulative_seconds": 6.0280000000000006e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 89,
+      "function": "_unpack_uint32",
+      "primitive_calls": 6,
+      "calls": 6,
+      "self_seconds": 4.904e-06,
+      "cumulative_seconds": 7.644e-06
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 1538,
+      "function": "<lambda>",
+      "primitive_calls": 35,
+      "calls": 35,
+      "self_seconds": 4.886e-06,
+      "cumulative_seconds": 4.886e-06
+    },
+    {
+      "file": "<python>/contextlib.py",
+      "line": 475,
+      "function": "_create_exit_wrapper",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 4.875e-06,
+      "cumulative_seconds": 4.875e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 779,
+      "function": "_compile_bytecode",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 4.8150000000000005e-06,
+      "cumulative_seconds": 0.00011256200000000001
+    },
+    {
+      "file": "<site-packages>/numpy/_core/function_base.py",
+      "line": 22,
+      "function": "_linspace_dispatcher",
+      "primitive_calls": 31,
+      "calls": 31,
+      "self_seconds": 4.807e-06,
+      "cumulative_seconds": 4.807e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'keys' of 'dict' objects>",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 4.718e-06,
+      "cumulative_seconds": 4.718e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 155,
+      "function": "_path_is_mode_type",
+      "primitive_calls": 8,
+      "calls": 8,
+      "self_seconds": 4.7e-06,
+      "cumulative_seconds": 2.6009e-05
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 372,
+      "function": "release",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 4.649e-06,
+      "cumulative_seconds": 7.146000000000001e-06
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 3516,
+      "function": "_ndim_dispatcher",
+      "primitive_calls": 31,
+      "calls": 31,
+      "self_seconds": 4.627e-06,
+      "cumulative_seconds": 4.627e-06
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_arraysetops_impl.py",
+      "line": 131,
+      "function": "_unpack_tuple",
+      "primitive_calls": 6,
+      "calls": 6,
+      "self_seconds": 4.540000000000001e-06,
+      "cumulative_seconds": 5.4400000000000004e-06
+    },
+    {
+      "file": "<python>/pathlib/_local.py",
+      "line": 166,
+      "function": "__fspath__",
+      "primitive_calls": 5,
+      "calls": 5,
+      "self_seconds": 4.531e-06,
+      "cumulative_seconds": 7.4873e-05
+    },
+    {
+      "file": "<frozen posixpath>",
+      "line": 72,
+      "function": "join",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 4.525e-06,
+      "cumulative_seconds": 6.608e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 137,
+      "function": "_path_split",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 4.518000000000001e-06,
+      "cumulative_seconds": 1.1931000000000001e-05
+    },
+    {
+      "file": "<frozen os>",
+      "line": 794,
+      "function": "encode",
+      "primitive_calls": 3,
+      "calls": 3,
+      "self_seconds": 4.508e-06,
+      "cumulative_seconds": 6.593e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 416,
+      "function": "__enter__",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 4.4090000000000005e-06,
+      "cumulative_seconds": 6.1006000000000005e-05
+    },
+    {
+      "file": "<python>/ctypes/__init__.py",
+      "line": 382,
+      "function": "_load_library",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 4.3360000000000005e-06,
+      "cumulative_seconds": 7.9614e-05
+    },
+    {
+      "file": "<python>/encodings/cp437.py",
+      "line": 33,
+      "function": "getregentry",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 4.333e-06,
+      "cumulative_seconds": 7.484000000000001e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'rpartition' of 'str' objects>",
+      "primitive_calls": 12,
+      "calls": 12,
+      "self_seconds": 4.252e-06,
+      "cumulative_seconds": 4.252e-06
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 3620,
+      "function": "round",
+      "primitive_calls": 8,
+      "calls": 8,
+      "self_seconds": 4.239e-06,
+      "cumulative_seconds": 1.6237e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'sort' of 'list' objects>",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 4.2240000000000006e-06,
+      "cumulative_seconds": 5.5080000000000005e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _weakref.proxy>",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 4.135e-06,
+      "cumulative_seconds": 4.135e-06
+    },
+    {
+      "file": "src/field_engine/lbm_domare_v1.py",
+      "line": 155,
+      "function": "unit_scale",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 4.131e-06,
+      "cumulative_seconds": 4.131e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _abc._abc_subclasscheck>",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 4.13e-06,
+      "cumulative_seconds": 7.814e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.__import__>",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 4.104e-06,
+      "cumulative_seconds": 0.000377652
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'split' of 'str' objects>",
+      "primitive_calls": 5,
+      "calls": 5,
+      "self_seconds": 3.7860000000000003e-06,
+      "cumulative_seconds": 3.7860000000000003e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method __new__ of type object at 0x5fccbf2882a0>",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 3.627e-06,
+      "cumulative_seconds": 3.627e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 694,
+      "function": "_classify_pyc",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 3.5050000000000003e-06,
+      "cumulative_seconds": 8.075e-06
+    },
+    {
+      "file": "<python>/pathlib/_local.py",
+      "line": 505,
+      "function": "__new__",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 3.4990000000000003e-06,
+      "cumulative_seconds": 5.55e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'reverse' of 'list' objects>",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 3.491e-06,
+      "cumulative_seconds": 3.491e-06
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 1999,
+      "function": "__del__",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 3.4760000000000003e-06,
+      "cumulative_seconds": 4.817000000000001e-06
+    },
+    {
+      "file": "<python>/zipfile/__init__.py",
+      "line": 827,
+      "function": "tell",
+      "primitive_calls": 28,
+      "calls": 28,
+      "self_seconds": 3.4310000000000003e-06,
+      "cumulative_seconds": 3.4310000000000003e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'seekable' of '_io.BufferedReader' objects>",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 3.407e-06,
+      "cumulative_seconds": 3.407e-06
+    },
+    {
+      "file": "<site-packages>/scipy/ndimage/_morphology.py",
+      "line": 2619,
+      "function": "_distance_transform_arg_check",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 3.3480000000000004e-06,
+      "cumulative_seconds": 3.3480000000000004e-06
+    },
+    {
+      "file": "<frozen genericpath>",
+      "line": 16,
+      "function": "exists",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 3.2800000000000004e-06,
+      "cumulative_seconds": 1.4056e-05
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 164,
+      "function": "_path_isfile",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 3.255e-06,
+      "cumulative_seconds": 2.6777e-05
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 527,
+      "function": "<genexpr>",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 3.254e-06,
+      "cumulative_seconds": 3.254e-06
+    },
+    {
+      "file": "<python>/pathlib/_local.py",
+      "line": 529,
+      "function": "open",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 3.254e-06,
+      "cumulative_seconds": 0.000100501
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 232,
+      "function": "__init__",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 3.219e-06,
+      "cumulative_seconds": 4.204e-06
+    },
+    {
+      "file": "<site-packages>/numpy/_core/numeric.py",
+      "line": 1222,
+      "function": "_roll_dispatcher",
+      "primitive_calls": 19,
+      "calls": 19,
+      "self_seconds": 3.1880000000000002e-06,
+      "cumulative_seconds": 3.1880000000000002e-06
+    },
+    {
+      "file": "<frozen _collections_abc>",
+      "line": 808,
+      "function": "get",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 3.186e-06,
+      "cumulative_seconds": 1.4488000000000001e-05
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 793,
+      "function": "<genexpr>",
+      "primitive_calls": 8,
+      "calls": 8,
+      "self_seconds": 3.1790000000000004e-06,
+      "cumulative_seconds": 3.1790000000000004e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 480,
+      "function": "_call_with_frames_removed",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 3.1280000000000004e-06,
+      "cumulative_seconds": 0.00022636000000000002
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 162,
+      "function": "__enter__",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 3.112e-06,
+      "cumulative_seconds": 1.8291e-05
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 1548,
+      "function": "find_spec",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 3.079e-06,
+      "cumulative_seconds": 0.00014881
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'startswith' of 'bytes' objects>",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 3.023e-06,
+      "cumulative_seconds": 3.023e-06
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_function_base_impl.py",
+      "line": 1409,
+      "function": "_diff_dispatcher",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 3.0190000000000002e-06,
+      "cumulative_seconds": 3.0190000000000002e-06
+    },
+    {
+      "file": "src/field_engine/lbm_domare_v1.py",
+      "line": 123,
+      "function": "_selected_backend",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 2.9850000000000002e-06,
+      "cumulative_seconds": 1.0315e-05
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 727,
+      "function": "_validate_timestamp_pyc",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 2.967e-06,
+      "cumulative_seconds": 6.479e-06
+    },
+    {
+      "file": "<python>/ctypes/__init__.py",
+      "line": 409,
+      "function": "__getattr__",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 2.9300000000000003e-06,
+      "cumulative_seconds": 1.0803000000000001e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method '__deepcopy__' of 'numpy.generic' objects>",
+      "primitive_calls": 8,
+      "calls": 8,
+      "self_seconds": 2.92e-06,
+      "cumulative_seconds": 2.92e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 491,
+      "function": "_verbose_message",
+      "primitive_calls": 19,
+      "calls": 19,
+      "self_seconds": 2.9e-06,
+      "cumulative_seconds": 2.9e-06
+    },
+    {
+      "file": "<site-packages>/numpy/_core/multiarray.py",
+      "line": 197,
+      "function": "concatenate",
+      "primitive_calls": 16,
+      "calls": 16,
+      "self_seconds": 2.877e-06,
+      "cumulative_seconds": 2.877e-06
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 2872,
+      "function": "_cumsum_dispatcher",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 2.8440000000000002e-06,
+      "cumulative_seconds": 2.8440000000000002e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 190,
+      "function": "_path_abspath",
+      "primitive_calls": 6,
+      "calls": 6,
+      "self_seconds": 2.843e-06,
+      "cumulative_seconds": 6.1e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 139,
+      "function": "<genexpr>",
+      "primitive_calls": 8,
+      "calls": 8,
+      "self_seconds": 2.8330000000000002e-06,
+      "cumulative_seconds": 4.1000000000000006e-06
+    },
+    {
+      "file": "<python>/pathlib/_local.py",
+      "line": 277,
+      "function": "_raw_path",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 2.762e-06,
+      "cumulative_seconds": 3.885e-06
+    },
+    {
+      "file": "<python>/ctypes/__init__.py",
+      "line": 349,
+      "function": "_FuncPtr",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 2.7560000000000004e-06,
+      "cumulative_seconds": 2.7560000000000004e-06
+    },
+    {
+      "file": "<frozen codecs>",
+      "line": 94,
+      "function": "__new__",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 2.6920000000000002e-06,
+      "cumulative_seconds": 3.151e-06
+    },
+    {
+      "file": "<python>/pathlib/_local.py",
+      "line": 237,
+      "function": "_format_parsed_parts",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 2.611e-06,
+      "cumulative_seconds": 4.3070000000000004e-06
+    },
+    {
+      "file": "<python>/contextlib.py",
+      "line": 407,
+      "function": "__exit__",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 2.601e-06,
+      "cumulative_seconds": 3.922e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method sys.exception>",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 2.5750000000000003e-06,
+      "cumulative_seconds": 2.5750000000000003e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 82,
+      "function": "remove",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 2.57e-06,
+      "cumulative_seconds": 3.5160000000000003e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method '__reduce_ex__' of 'object' objects>",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 2.5240000000000003e-06,
+      "cumulative_seconds": 2.5240000000000003e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 420,
+      "function": "__exit__",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 2.5070000000000003e-06,
+      "cumulative_seconds": 9.653e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method '__enter__' of '_io._IOBase' objects>",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 2.418e-06,
+      "cumulative_seconds": 2.418e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method posix._path_splitroot_ex>",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 2.3830000000000003e-06,
+      "cumulative_seconds": 2.3830000000000003e-06
+    },
+    {
+      "file": "<frozen _collections_abc>",
+      "line": 108,
+      "function": "_check_methods",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 2.357e-06,
+      "cumulative_seconds": 2.357e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 79,
+      "function": "__init__",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 2.289e-06,
+      "cumulative_seconds": 2.289e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 632,
+      "function": "cached",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 2.289e-06,
+      "cumulative_seconds": 3.9039000000000003e-05
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.setattr>",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 2.2640000000000003e-06,
+      "cumulative_seconds": 2.2640000000000003e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 185,
+      "function": "_path_isabs",
+      "primitive_calls": 6,
+      "calls": 6,
+      "self_seconds": 2.251e-06,
+      "cumulative_seconds": 3.2570000000000003e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'pop' of 'list' objects>",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 2.244e-06,
+      "cumulative_seconds": 2.244e-06
+    },
+    {
+      "file": "<python>/copy.py",
+      "line": 192,
+      "function": "_deepcopy_list",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 2.216e-06,
+      "cumulative_seconds": 0.00013922400000000002
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 3187,
+      "function": "min",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 2.165e-06,
+      "cumulative_seconds": 1.6935e-05
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 671,
+      "function": "_check_name_wrapper",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 2.156e-06,
+      "cumulative_seconds": 2.565e-06
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 3320,
+      "function": "_prod_dispatcher",
+      "primitive_calls": 10,
+      "calls": 10,
+      "self_seconds": 2.155e-06,
+      "cumulative_seconds": 2.155e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method builtins.any>",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 2.136e-06,
+      "cumulative_seconds": 3.3930000000000004e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 445,
+      "function": "cb",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 2.1290000000000003e-06,
+      "cumulative_seconds": 3.299e-06
+    },
+    {
+      "file": "<python>/json/encoder.py",
+      "line": 105,
+      "function": "__init__",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 2.126e-06,
+      "cumulative_seconds": 2.126e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 1128,
+      "function": "find_spec",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 2.088e-06,
+      "cumulative_seconds": 5.652e-06
+    },
+    {
+      "file": "<site-packages>/numpy/_core/shape_base.py",
+      "line": 15,
+      "function": "_atleast_1d_dispatcher",
+      "primitive_calls": 8,
+      "calls": 8,
+      "self_seconds": 2.075e-06,
+      "cumulative_seconds": 2.075e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _imp.find_frozen>",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 2.049e-06,
+      "cumulative_seconds": 2.049e-06
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 795,
+      "function": "<genexpr>",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 2.0280000000000003e-06,
+      "cumulative_seconds": 2.0280000000000003e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method from_bytes>",
+      "primitive_calls": 6,
+      "calls": 6,
+      "self_seconds": 2.004e-06,
+      "cumulative_seconds": 2.004e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'append' of 'collections.deque' objects>",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 1.987e-06,
+      "cumulative_seconds": 1.987e-06
+    },
+    {
+      "file": "<site-packages>/numpy/_core/shape_base.py",
+      "line": 368,
+      "function": "_stack_dispatcher",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.975e-06,
+      "cumulative_seconds": 4.541e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _imp.is_builtin>",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.952e-06,
+      "cumulative_seconds": 1.952e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 982,
+      "function": "find_spec",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.91e-06,
+      "cumulative_seconds": 3.8620000000000005e-06
+    },
+    {
+      "file": "<site-packages>/numpy/_core/numeric.py",
+      "line": 91,
+      "function": "_zeros_like_dispatcher",
+      "primitive_calls": 14,
+      "calls": 14,
+      "self_seconds": 1.9050000000000002e-06,
+      "cumulative_seconds": 1.9050000000000002e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 1497,
+      "function": "_path_importer_cache",
+      "primitive_calls": 3,
+      "calls": 3,
+      "self_seconds": 1.8350000000000002e-06,
+      "cumulative_seconds": 1.8350000000000002e-06
+    },
+    {
+      "file": "<site-packages>/numpy/_core/shape_base.py",
+      "line": 206,
+      "function": "_arrays_for_stack_dispatcher",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.8110000000000001e-06,
+      "cumulative_seconds": 2.566e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 48,
+      "function": "_new_module",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.7780000000000002e-06,
+      "cumulative_seconds": 1.7780000000000002e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 173,
+      "function": "__exit__",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.771e-06,
+      "cumulative_seconds": 2.7600000000000003e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _imp.release_lock>",
+      "primitive_calls": 10,
+      "calls": 10,
+      "self_seconds": 1.748e-06,
+      "cumulative_seconds": 1.748e-06
+    },
+    {
+      "file": "<python>/copy.py",
+      "line": 173,
+      "function": "_deepcopy_atomic",
+      "primitive_calls": 16,
+      "calls": 16,
+      "self_seconds": 1.7100000000000001e-06,
+      "cumulative_seconds": 1.7100000000000001e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _imp.acquire_lock>",
+      "primitive_calls": 10,
+      "calls": 10,
+      "self_seconds": 1.639e-06,
+      "cumulative_seconds": 1.639e-06
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 98,
+      "function": "hard_case_ids",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.6310000000000001e-06,
+      "cumulative_seconds": 1.6310000000000001e-06
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 794,
+      "function": "<genexpr>",
+      "primitive_calls": 8,
+      "calls": 8,
+      "self_seconds": 1.622e-06,
+      "cumulative_seconds": 1.622e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 1222,
+      "function": "__enter__",
+      "primitive_calls": 6,
+      "calls": 6,
+      "self_seconds": 1.619e-06,
+      "cumulative_seconds": 2.3720000000000003e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'encode' of 'str' objects>",
+      "primitive_calls": 3,
+      "calls": 3,
+      "self_seconds": 1.554e-06,
+      "cumulative_seconds": 1.554e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 1226,
+      "function": "__exit__",
+      "primitive_calls": 6,
+      "calls": 6,
+      "self_seconds": 1.5130000000000002e-06,
+      "cumulative_seconds": 2.436e-06
+    },
+    {
+      "file": "<python>/pathlib/_abc.py",
+      "line": 130,
+      "function": "with_segments",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.5100000000000002e-06,
+      "cumulative_seconds": 4.681000000000001e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 1230,
+      "function": "path_stats",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.505e-06,
+      "cumulative_seconds": 5.099000000000001e-06
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 761,
+      "function": "<genexpr>",
+      "primitive_calls": 9,
+      "calls": 9,
+      "self_seconds": 1.483e-06,
+      "cumulative_seconds": 1.483e-06
+    },
+    {
+      "file": "<python>/json/encoder.py",
+      "line": 265,
+      "function": "_make_iterencode",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.3860000000000002e-06,
+      "cumulative_seconds": 1.3860000000000002e-06
+    },
+    {
+      "file": "<frozen os>",
+      "line": 798,
+      "function": "decode",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.368e-06,
+      "cumulative_seconds": 2.4160000000000002e-06
+    },
+    {
+      "file": "<site-packages>/numpy/_core/_methods.py",
+      "line": 39,
+      "function": "_amax",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.3580000000000002e-06,
+      "cumulative_seconds": 1.1721e-05
+    },
+    {
+      "file": "<site-packages>/numpy/lib/_arraysetops_impl.py",
+      "line": 139,
+      "function": "_unique_dispatcher",
+      "primitive_calls": 6,
+      "calls": 6,
+      "self_seconds": 1.356e-06,
+      "cumulative_seconds": 1.356e-06
+    },
+    {
+      "file": "<frozen os>",
+      "line": 1127,
+      "function": "__subclasshook__",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.3270000000000002e-06,
+      "cumulative_seconds": 3.6840000000000002e-06
+    },
+    {
+      "file": "src/field_engine/opt/f33_1_topologi_v1.py",
+      "line": 94,
+      "function": "<lambda>",
+      "primitive_calls": 11,
+      "calls": 11,
+      "self_seconds": 1.2840000000000001e-06,
+      "cumulative_seconds": 1.2840000000000001e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'rfind' of 'str' objects>",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 1.2670000000000001e-06,
+      "cumulative_seconds": 1.2670000000000001e-06
+    },
+    {
+      "file": "src/field_engine/lbm_collision_native_v1.py",
+      "line": 46,
+      "function": "<genexpr>",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 1.257e-06,
+      "cumulative_seconds": 1.257e-06
+    },
+    {
+      "file": "src/field_engine/lbm_collision_native_v1.py",
+      "line": 43,
+      "function": "PreparedStep",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.2280000000000001e-06,
+      "cumulative_seconds": 1.2280000000000001e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'endswith' of 'str' objects>",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 1.2000000000000002e-06,
+      "cumulative_seconds": 1.2000000000000002e-06
+    },
+    {
+      "file": "<python>/contextlib.py",
+      "line": 568,
+      "function": "__enter__",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 1.1120000000000001e-06,
+      "cumulative_seconds": 1.1120000000000001e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 1390,
+      "function": "_handle_fromlist",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.1010000000000001e-06,
+      "cumulative_seconds": 1.613e-06
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 3049,
+      "function": "max",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.0900000000000002e-06,
+      "cumulative_seconds": 7.374e-06
+    },
+    {
+      "file": "<frozen posixpath>",
+      "line": 42,
+      "function": "_get_sep",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.029e-06,
+      "cumulative_seconds": 1.26e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 645,
+      "function": "parent",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.026e-06,
+      "cumulative_seconds": 1.5690000000000001e-06
+    },
+    {
+      "file": "<python>/contextlib.py",
+      "line": 397,
+      "function": "__init__",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.013e-06,
+      "cumulative_seconds": 1.013e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method time.time>",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 1.002e-06,
+      "cumulative_seconds": 1.002e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _thread.get_ident>",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 9.970000000000002e-07,
+      "cumulative_seconds": 9.970000000000002e-07
+    },
+    {
+      "file": "<python>/encodings/cp437.py",
+      "line": 9,
+      "function": "Codec",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 9.970000000000002e-07,
+      "cumulative_seconds": 9.970000000000002e-07
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 1255,
+      "function": "_argmax_dispatcher",
+      "primitive_calls": 7,
+      "calls": 7,
+      "self_seconds": 9.95e-07,
+      "cumulative_seconds": 9.95e-07
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'remove' of 'list' objects>",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 9.89e-07,
+      "cumulative_seconds": 9.89e-07
+    },
+    {
+      "file": "<frozen abc>",
+      "line": 121,
+      "function": "__subclasscheck__",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 9.880000000000001e-07,
+      "cumulative_seconds": 8.802e-06
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _thread.allocate_lock>",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 9.85e-07,
+      "cumulative_seconds": 9.85e-07
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _weakref._remove_dead_weakref>",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 9.46e-07,
+      "cumulative_seconds": 9.46e-07
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _imp._fix_co_filename>",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 9.22e-07,
+      "cumulative_seconds": 9.22e-07
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'isalnum' of 'str' objects>",
+      "primitive_calls": 5,
+      "calls": 5,
+      "self_seconds": 8.53e-07,
+      "cumulative_seconds": 8.53e-07
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'pop' of 'dict' objects>",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 7.88e-07,
+      "cumulative_seconds": 7.88e-07
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 3616,
+      "function": "_round_dispatcher",
+      "primitive_calls": 8,
+      "calls": 8,
+      "self_seconds": 7.81e-07,
+      "cumulative_seconds": 7.81e-07
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'replace' of 'str' objects>",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 6.98e-07,
+      "cumulative_seconds": 6.98e-07
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 599,
+      "function": "__init__",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 6.690000000000001e-07,
+      "cumulative_seconds": 6.690000000000001e-07
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 169,
+      "function": "_path_isdir",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 6.58e-07,
+      "cumulative_seconds": 3.1450000000000004e-06
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 1181,
+      "function": "__init__",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 5.92e-07,
+      "cumulative_seconds": 5.92e-07
+    },
+    {
+      "file": "<python>/pathlib/_local.py",
+      "line": 298,
+      "function": "root",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 5.75e-07,
+      "cumulative_seconds": 5.75e-07
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 1014,
+      "function": "create_module",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 5.58e-07,
+      "cumulative_seconds": 5.58e-07
+    },
+    {
+      "file": "<python>/encodings/cp437.py",
+      "line": 17,
+      "function": "IncrementalEncoder",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 5.54e-07,
+      "cumulative_seconds": 5.54e-07
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<method 'isascii' of 'str' objects>",
+      "primitive_calls": 5,
+      "calls": 5,
+      "self_seconds": 5.380000000000001e-07,
+      "cumulative_seconds": 5.380000000000001e-07
+    },
+    {
+      "file": "<frozen codecs>",
+      "line": 189,
+      "function": "__init__",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 4.32e-07,
+      "cumulative_seconds": 4.32e-07
+    },
+    {
+      "file": "~",
+      "line": 0,
+      "function": "<built-in method _stat.S_ISLNK>",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 4.25e-07,
+      "cumulative_seconds": 4.25e-07
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 412,
+      "function": "__init__",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 4.25e-07,
+      "cumulative_seconds": 4.25e-07
+    },
+    {
+      "file": "<python>/pathlib/_local.py",
+      "line": 307,
+      "function": "_tail",
+      "primitive_calls": 4,
+      "calls": 4,
+      "self_seconds": 4.11e-07,
+      "cumulative_seconds": 4.11e-07
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 1206,
+      "function": "get_filename",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 4.09e-07,
+      "cumulative_seconds": 4.09e-07
+    },
+    {
+      "file": "<frozen importlib._bootstrap_external>",
+      "line": 71,
+      "function": "_relax_case",
+      "primitive_calls": 3,
+      "calls": 3,
+      "self_seconds": 4.08e-07,
+      "cumulative_seconds": 4.08e-07
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 653,
+      "function": "has_location",
+      "primitive_calls": 3,
+      "calls": 3,
+      "self_seconds": 3.63e-07,
+      "cumulative_seconds": 3.63e-07
+    },
+    {
+      "file": "<python>/encodings/cp437.py",
+      "line": 21,
+      "function": "IncrementalDecoder",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 3.5200000000000003e-07,
+      "cumulative_seconds": 3.5200000000000003e-07
+    },
+    {
+      "file": "<python>/encodings/cp437.py",
+      "line": 25,
+      "function": "StreamWriter",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 3.4000000000000003e-07,
+      "cumulative_seconds": 3.4000000000000003e-07
+    },
+    {
+      "file": "<frozen importlib._bootstrap>",
+      "line": 158,
+      "function": "__init__",
+      "primitive_calls": 2,
+      "calls": 2,
+      "self_seconds": 2.92e-07,
+      "cumulative_seconds": 2.92e-07
+    },
+    {
+      "file": "<python>/encodings/cp437.py",
+      "line": 28,
+      "function": "StreamReader",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 2.67e-07,
+      "cumulative_seconds": 2.67e-07
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 3732,
+      "function": "_mean_dispatcher",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.5700000000000002e-07,
+      "cumulative_seconds": 1.5700000000000002e-07
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 3044,
+      "function": "_max_dispatcher",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.46e-07,
+      "cumulative_seconds": 1.46e-07
+    },
+    {
+      "file": "<site-packages>/numpy/_core/fromnumeric.py",
+      "line": 3182,
+      "function": "_min_dispatcher",
+      "primitive_calls": 1,
+      "calls": 1,
+      "self_seconds": 1.22e-07,
+      "cumulative_seconds": 1.22e-07
+    }
+  ]
+}

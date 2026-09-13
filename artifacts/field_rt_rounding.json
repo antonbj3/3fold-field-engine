@@ -1,0 +1,37 @@
+{
+  "rows": [
+    {
+      "translation": 0.0,
+      "world_max_error": 1.157643447768919e-07,
+      "local_max_error": 2.338313205285658e-07,
+      "world_hash": "0fa1eee825b06944c70ca40f382c6b26289bff03d1299379e0ab093b40e2a0f1",
+      "local_hash": "08681b11d3d3d9f5ea4bc6996ba8f516954632fe4486cc9afc6414eb6c84d3fa"
+    },
+    {
+      "translation": 100.0,
+      "world_max_error": 3.7294706203283567e-06,
+      "local_max_error": 2.338313151994953e-07,
+      "world_hash": "dfacb691a10a730e72af498a8a5e2dccf45d01945f4b14ea58a2d0c70b8fcb50",
+      "local_hash": "08681b11d3d3d9f5ea4bc6996ba8f516954632fe4486cc9afc6414eb6c84d3fa"
+    },
+    {
+      "translation": 10000.0,
+      "world_max_error": 0.0004603058332577348,
+      "local_max_error": 2.338329068152234e-07,
+      "world_hash": "aa673615080885e11e5b5e3624bb938177f893f5ffc4bdf9f512c2b5fad3b106",
+      "local_hash": "08681b11d3d3d9f5ea4bc6996ba8f516954632fe4486cc9afc6414eb6c84d3fa"
+    },
+    {
+      "translation": 1000000.0,
+      "world_max_error": 0.030789694166742265,
+      "local_max_error": 2.337619662284851e-07,
+      "world_hash": "951492594fb49660c86001f8a28f8cfe377bb00b1ac2a8e237c1181262c60e8e",
+      "local_hash": "08681b11d3d3d9f5ea4bc6996ba8f516954632fe4486cc9afc6414eb6c84d3fa"
+    }
+  ],
+  "gates": {
+    "full_repeat": true,
+    "finite": true
+  },
+  "timing_measured": false
+}

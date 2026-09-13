@@ -1,0 +1,22 @@
+{
+  "status": "VERIFIED-FRESH",
+  "controls": {
+    "valid_row": true,
+    "duplicate_row": true,
+    "empty_rows": true,
+    "missing_source": true,
+    "escaped_source": true,
+    "valid_contract": true,
+    "duplicate_contract": true,
+    "unsupported_contract": true,
+    "valid_receipt": true,
+    "child_failure": true,
+    "empty_gates": true,
+    "invented_gate": true,
+    "omitted_execution": true,
+    "false_status": true,
+    "false_nested_gate": true,
+    "explicit_probe_only": true
+  },
+  "scope": "Coverage/parser/child receipt controls, no GPU initialization."
+}

@@ -1,0 +1,151 @@
+{
+  "rows": [
+    {
+      "curved": false,
+      "pitch": 0.5,
+      "leg": 0,
+      "times_ms": {
+        "python": 27.134771999999998,
+        "original": 12.030498999999999,
+        "rows": 11.735496999999999
+      },
+      "exact": true,
+      "hashes": [
+        "3be0f4342dcaf8be51eeb3617d1626a3d3920f8194f130c334befb65e748cefd",
+        "5b16e02cc06e59d35c627f00d9a53d3a1f75fd9dd31c51a2e21ed221edd40932",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ],
+      "speedup": 2.3121962367678166,
+      "reader_change_factor": 1.025137580453559
+    },
+    {
+      "curved": false,
+      "pitch": 0.5,
+      "leg": 1,
+      "times_ms": {
+        "rows": 11.703142,
+        "original": 11.8088,
+        "python": 26.978264
+      },
+      "exact": true,
+      "hashes": [
+        "3be0f4342dcaf8be51eeb3617d1626a3d3920f8194f130c334befb65e748cefd",
+        "5b16e02cc06e59d35c627f00d9a53d3a1f75fd9dd31c51a2e21ed221edd40932",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ],
+      "speedup": 2.305215471195684,
+      "reader_change_factor": 1.0090281738015312
+    },
+    {
+      "curved": false,
+      "pitch": 0.25,
+      "leg": 0,
+      "times_ms": {
+        "python": 143.4428,
+        "original": 69.08201,
+        "rows": 68.287599
+      },
+      "exact": true,
+      "hashes": [
+        "491aa6105e17681292235dc64718f236089e8f5a9b8f60ff2bbd03060af49c7c",
+        "3b5e9ffb9a79d3626b027f107cd7762224aa24b712d184959dacac8316a22216",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ],
+      "speedup": 2.1005688016648527,
+      "reader_change_factor": 1.0116333128069124
+    },
+    {
+      "curved": false,
+      "pitch": 0.25,
+      "leg": 1,
+      "times_ms": {
+        "rows": 68.670465,
+        "original": 69.00295799999999,
+        "python": 142.829581
+      },
+      "exact": true,
+      "hashes": [
+        "491aa6105e17681292235dc64718f236089e8f5a9b8f60ff2bbd03060af49c7c",
+        "3b5e9ffb9a79d3626b027f107cd7762224aa24b712d184959dacac8316a22216",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ],
+      "speedup": 2.0799273894533843,
+      "reader_change_factor": 1.0048418632377107
+    },
+    {
+      "curved": true,
+      "pitch": 0.5,
+      "leg": 0,
+      "times_ms": {
+        "python": 17.126355,
+        "original": 10.870394,
+        "rows": 10.77592
+      },
+      "exact": true,
+      "hashes": [
+        "238a0882ddbf868bd7e495cf48acf5c33e99b627d2a698f05ff8f4d1e0256b6e",
+        "660c87e5debb9552b63470c063591929ad4416cb8daa70018d1472617283c01e",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ],
+      "speedup": 1.5893171998307338,
+      "reader_change_factor": 1.008767140067855
+    },
+    {
+      "curved": true,
+      "pitch": 0.5,
+      "leg": 1,
+      "times_ms": {
+        "rows": 10.750121,
+        "original": 10.891361999999999,
+        "python": 17.023957
+      },
+      "exact": true,
+      "hashes": [
+        "238a0882ddbf868bd7e495cf48acf5c33e99b627d2a698f05ff8f4d1e0256b6e",
+        "660c87e5debb9552b63470c063591929ad4416cb8daa70018d1472617283c01e",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ],
+      "speedup": 1.5836060822013072,
+      "reader_change_factor": 1.0131385497893464
+    },
+    {
+      "curved": true,
+      "pitch": 0.25,
+      "leg": 0,
+      "times_ms": {
+        "python": 96.704347,
+        "original": 76.941423,
+        "rows": 76.370001
+      },
+      "exact": true,
+      "hashes": [
+        "5cfb397dbd00418b1bee7d664ae1479ee0cb717df80d2bdfd259aec0bf40d143",
+        "e3792f302f8ef0c4093de1f8eeadba796791b63d415a46694ac38f050a0f6bca",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ],
+      "speedup": 1.2662609104849951,
+      "reader_change_factor": 1.007482283521248
+    },
+    {
+      "curved": true,
+      "pitch": 0.25,
+      "leg": 1,
+      "times_ms": {
+        "rows": 76.15270799999999,
+        "original": 76.486336,
+        "python": 95.645124
+      },
+      "exact": true,
+      "hashes": [
+        "5cfb397dbd00418b1bee7d664ae1479ee0cb717df80d2bdfd259aec0bf40d143",
+        "e3792f302f8ef0c4093de1f8eeadba796791b63d415a46694ac38f050a0f6bca",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ],
+      "speedup": 1.2559648436927549,
+      "reader_change_factor": 1.0043810392139962
+    }
+  ],
+  "exact": true,
+  "speedup_1_25": true,
+  "scope": "Full Python CSG and final Python packing, two reversed orders, hashing/extraction outside timing, same-process original and row-copy libraries."
+}

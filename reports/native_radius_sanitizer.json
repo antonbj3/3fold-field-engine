@@ -1,0 +1,22 @@
+{
+  "exit": 0,
+  "controls": 15,
+  "sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "compiler_flags": [
+    "-O1",
+    "-g",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-fno-builtin-pow",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer"
+  ],
+  "source_sha256": {
+    "src/field_engine/opt/radius_objective_native_v1/objective.cpp": "4b9aed0b2816a674ecbe089fd33e3af134f4cecb75ea4372be753e2926d40f24",
+    "tests/native_radius_objective_sanitizer.cpp": "3ce67c5ac344b23268232f5147ffe8ae37a12d411a77783c4c9c5abc64ca3270"
+  },
+  "scope": "Valid two-control objective and64-control central batch, guard canaries, count/capacity/corner/null/step/overflow controls, rejected calls leave output unchanged."
+}

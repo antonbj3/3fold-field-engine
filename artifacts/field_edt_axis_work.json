@@ -1,0 +1,1020 @@
+{
+  "rows": [
+    {
+      "mask": "sphere_0_mask",
+      "polarity": 0,
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "voxels": 50653,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 21275,
+          "max_reached_square": 400,
+          "sha256": "25d81da06f524840e5b31fa75fd15567a593878f63ddb4432497d1d27d6b6a6f"
+        },
+        {
+          "axis": 1,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 8214,
+          "max_reached_square": 545,
+          "sha256": "105a08f7f593324c6192119a9e7efc13d31f742224abee870ba0962d2c5c9dba"
+        },
+        {
+          "axis": 2,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 363,
+          "sha256": "e1f160bd7e566f20e021b69d433f1b5ba6783c9c18d762329db12abd2b7f08f5"
+        }
+      ],
+      "candidates": 5622483,
+      "expected_candidates": 5622483,
+      "input_mask_bytes": 50653,
+      "signed_float32_output_bytes": 202612,
+      "squared_int64_output_bytes": 405224,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_0_mask",
+      "polarity": 1,
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "voxels": 50653,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 256,
+          "sha256": "422fe3feb21ec8ff9accbbd55843541a2b22978c8ba7a24f86ecd7c5e4ed8679"
+        },
+        {
+          "axis": 1,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 256,
+          "sha256": "a1b35316c143b602366c4bbb2b60081c9dc4a482a77bfbd6c6d009b7ce9f2c4a"
+        },
+        {
+          "axis": 2,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 254,
+          "sha256": "99fa2c456e316c4776cb7e59c953429d41bedceb89291d434df23163b58aa44f"
+        }
+      ],
+      "candidates": 5622483,
+      "expected_candidates": 5622483,
+      "input_mask_bytes": 50653,
+      "signed_float32_output_bytes": 202612,
+      "squared_int64_output_bytes": 405224,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_1_mask",
+      "polarity": 0,
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "voxels": 50653,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 20905,
+          "max_reached_square": 400,
+          "sha256": "049354c0f30792a867ab029fe4449711cec48693272858ed5b46b6acbeae3f65"
+        },
+        {
+          "axis": 1,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 6845,
+          "max_reached_square": 648,
+          "sha256": "5ecd76452ccc910a8444175afb01b654d3c20ffb70c1dc198bb620e5c2e080c5"
+        },
+        {
+          "axis": 2,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 321,
+          "sha256": "d53da29b99114043550480d39b8ad5287c5fa38dac900c857050c85237ec5a2a"
+        }
+      ],
+      "candidates": 5622483,
+      "expected_candidates": 5622483,
+      "input_mask_bytes": 50653,
+      "signed_float32_output_bytes": 202612,
+      "squared_int64_output_bytes": 405224,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_1_mask",
+      "polarity": 1,
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "voxels": 50653,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 256,
+          "sha256": "ab0b13e9fdae3046d612b872886a4722e03a7fc803da4417756b2d826177f5d0"
+        },
+        {
+          "axis": 1,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 241,
+          "sha256": "ef76160365766298814cbbeeb494566cb878819e0dce8f65e816f906040f4446"
+        },
+        {
+          "axis": 2,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 236,
+          "sha256": "8102957f8dba896ec8c1a4914fdf8eb01d70577997ecf7f7a43bc5d5efaf24ca"
+        }
+      ],
+      "candidates": 5622483,
+      "expected_candidates": 5622483,
+      "input_mask_bytes": 50653,
+      "signed_float32_output_bytes": 202612,
+      "squared_int64_output_bytes": 405224,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_2_mask",
+      "polarity": 0,
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "voxels": 50653,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 21090,
+          "max_reached_square": 400,
+          "sha256": "78faee44ea569aa655b777eccc315e2baebc8b29db2c276e20ce06f8dce824d3"
+        },
+        {
+          "axis": 1,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 6845,
+          "max_reached_square": 685,
+          "sha256": "41902af523776d67546c2f0ae9d12360b80d93e5f95769aadd8cca0df4c4a1b2"
+        },
+        {
+          "axis": 2,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 363,
+          "sha256": "75669238b0bf48650e387b6f1ca9ab08d5e95c80b587f53a05da155993bc3925"
+        }
+      ],
+      "candidates": 5622483,
+      "expected_candidates": 5622483,
+      "input_mask_bytes": 50653,
+      "signed_float32_output_bytes": 202612,
+      "squared_int64_output_bytes": 405224,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_2_mask",
+      "polarity": 1,
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "voxels": 50653,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 1024,
+          "sha256": "1db20162020841d839c8e0644086d49f9bed88ceaa3d671f2331be1e21ad84df"
+        },
+        {
+          "axis": 1,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 241,
+          "sha256": "76da925de7756f4e61dd298d43830baa24d38c86d6c1766fada5e50e5ff60a89"
+        },
+        {
+          "axis": 2,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 236,
+          "sha256": "a7bf90c8c9b64b5666c1dabebbbc4d7b3adf95260b3b82a0ad45089a8a12d16a"
+        }
+      ],
+      "candidates": 5622483,
+      "expected_candidates": 5622483,
+      "input_mask_bytes": 50653,
+      "signed_float32_output_bytes": 202612,
+      "squared_int64_output_bytes": 405224,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_fine_0_mask",
+      "polarity": 0,
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "voxels": 50653,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 21275,
+          "max_reached_square": 400,
+          "sha256": "a1cc13ebeb40a79ded2d3bea28b011ee4163e7a224f2368123b9fff284ebf214"
+        },
+        {
+          "axis": 1,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 8214,
+          "max_reached_square": 545,
+          "sha256": "cc59f1f4f8ae3f0870068e2331786234fab8ceb30d4b1fea1da2505272459d19"
+        },
+        {
+          "axis": 2,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 363,
+          "sha256": "8c8ce207f97fe48af23dd7836b5de2114f71d1d0398765e9e5f6b129366ceb80"
+        }
+      ],
+      "candidates": 5622483,
+      "expected_candidates": 5622483,
+      "input_mask_bytes": 50653,
+      "signed_float32_output_bytes": 202612,
+      "squared_int64_output_bytes": 405224,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_fine_0_mask",
+      "polarity": 1,
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "voxels": 50653,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 256,
+          "sha256": "d5ad4d8031c288c39f9f0bfd82541a045d4348cb95da1e49503e9400fd4a2fd5"
+        },
+        {
+          "axis": 1,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 256,
+          "sha256": "99105cce1728dfc29e63432d1d5c8f6493b358c7edff3df527db0ca0b87c2623"
+        },
+        {
+          "axis": 2,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 256,
+          "sha256": "f0bb38a8af735a6eef6e8664e4fd8d0565a6517bba6916fdab4f3fbe5b856e53"
+        }
+      ],
+      "candidates": 5622483,
+      "expected_candidates": 5622483,
+      "input_mask_bytes": 50653,
+      "signed_float32_output_bytes": 202612,
+      "squared_int64_output_bytes": 405224,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_fine_1_mask",
+      "polarity": 0,
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "voxels": 50653,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 20905,
+          "max_reached_square": 361,
+          "sha256": "ff16ab0b3d6e2b41451aa9d4fe915a0e687d013ec41be84a60106bf49b8c46ce"
+        },
+        {
+          "axis": 1,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 6845,
+          "max_reached_square": 648,
+          "sha256": "da8cafca4c3cd64fbae7f272edbbacec346f5f55b2cee23cc21c2e8381a31f3c"
+        },
+        {
+          "axis": 2,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 321,
+          "sha256": "1d59e6d8abd8d732cf22025d883d046163dc5e5bcd9a434087dd081831ea4dfc"
+        }
+      ],
+      "candidates": 5622483,
+      "expected_candidates": 5622483,
+      "input_mask_bytes": 50653,
+      "signed_float32_output_bytes": 202612,
+      "squared_int64_output_bytes": 405224,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_fine_1_mask",
+      "polarity": 1,
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "voxels": 50653,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 256,
+          "sha256": "de5a6128b925236891f773e7d464bc40574eabe43364a8a68c494aa024b15998"
+        },
+        {
+          "axis": 1,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 241,
+          "sha256": "74c724fbba63071f112bdeb478272a8d389b222afd4822d3ee9f3d66cbad3a21"
+        },
+        {
+          "axis": 2,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 237,
+          "sha256": "874ba30cec5689525e2cec48b9df9585dadcda746a8401b28385f233cd700511"
+        }
+      ],
+      "candidates": 5622483,
+      "expected_candidates": 5622483,
+      "input_mask_bytes": 50653,
+      "signed_float32_output_bytes": 202612,
+      "squared_int64_output_bytes": 405224,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_fine_2_mask",
+      "polarity": 0,
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "voxels": 50653,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 20942,
+          "max_reached_square": 400,
+          "sha256": "22521cb3ebda6138de9faa159b6f34e44cfec754446649ea463db3b9fbb595dd"
+        },
+        {
+          "axis": 1,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 6845,
+          "max_reached_square": 685,
+          "sha256": "50758a88e2e1c5eaa4bd43a8c948c4fb63c3a20479c2e68696b8a912d3b71d40"
+        },
+        {
+          "axis": 2,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 363,
+          "sha256": "e3cc9b44ecb63ae9b2441aa424b77273fe0b6dff399dc680b7c58f8f37b18b05"
+        }
+      ],
+      "candidates": 5622483,
+      "expected_candidates": 5622483,
+      "input_mask_bytes": 50653,
+      "signed_float32_output_bytes": 202612,
+      "squared_int64_output_bytes": 405224,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_fine_2_mask",
+      "polarity": 1,
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "voxels": 50653,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 1024,
+          "sha256": "a8fed2bbc9213c2f3fe98b0541637fbbdd25dfe514047f8f5747b424240c283f"
+        },
+        {
+          "axis": 1,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 241,
+          "sha256": "8843c9e4d2df5afa4a6c1757b9b2a630e6bff53119726c8a970a02e5acf8bd03"
+        },
+        {
+          "axis": 2,
+          "length": 37,
+          "candidates": 1874161,
+          "unreached": 0,
+          "max_reached_square": 237,
+          "sha256": "29bce6d39cbe41fdc77970921992b7c84422d3c1c92462bfcda20a5944bce95f"
+        }
+      ],
+      "candidates": 5622483,
+      "expected_candidates": 5622483,
+      "input_mask_bytes": 50653,
+      "signed_float32_output_bytes": 202612,
+      "squared_int64_output_bytes": 405224,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_overlap_0_mask",
+      "polarity": 0,
+      "shape": [
+        45,
+        39,
+        38
+      ],
+      "voxels": 66690,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 45,
+          "candidates": 3001050,
+          "unreached": 27765,
+          "max_reached_square": 676,
+          "sha256": "4c7106c7231d578621b63cc0bccdad8d71167544cab8a763925c22bb16d2981f"
+        },
+        {
+          "axis": 1,
+          "length": 39,
+          "candidates": 2600910,
+          "unreached": 10530,
+          "max_reached_square": 929,
+          "sha256": "6b432eeada95d2a0ba0490b39a59d2e74f4ad53cebaf98ff33a604914af8f9f1"
+        },
+        {
+          "axis": 2,
+          "length": 38,
+          "candidates": 2534220,
+          "unreached": 0,
+          "max_reached_square": 363,
+          "sha256": "03f978fd6dcec6442b71c5964dac75da523280f430cac877aa17d70f87ceed08"
+        }
+      ],
+      "candidates": 8136180,
+      "expected_candidates": 8136180,
+      "input_mask_bytes": 66690,
+      "signed_float32_output_bytes": 266760,
+      "squared_int64_output_bytes": 533520,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_overlap_0_mask",
+      "polarity": 1,
+      "shape": [
+        45,
+        39,
+        38
+      ],
+      "voxels": 66690,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 45,
+          "candidates": 3001050,
+          "unreached": 0,
+          "max_reached_square": 400,
+          "sha256": "f73c6bf6e0f10125257fa1a277da6988563dcca78277537b2191b6be3f03a604"
+        },
+        {
+          "axis": 1,
+          "length": 39,
+          "candidates": 2600910,
+          "unreached": 0,
+          "max_reached_square": 256,
+          "sha256": "9374a8e410b4ba9a8da7e387111256b55d1e984bfe9d5d3fd3a234a2d2b640d4"
+        },
+        {
+          "axis": 2,
+          "length": 38,
+          "candidates": 2534220,
+          "unreached": 0,
+          "max_reached_square": 254,
+          "sha256": "c6058f7e4990b4ab8b5a16117994e823582f596c5a78698ebdbf1349a7aaa207"
+        }
+      ],
+      "candidates": 8136180,
+      "expected_candidates": 8136180,
+      "input_mask_bytes": 66690,
+      "signed_float32_output_bytes": 266760,
+      "squared_int64_output_bytes": 533520,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_overlap_1_mask",
+      "polarity": 0,
+      "shape": [
+        45,
+        39,
+        38
+      ],
+      "voxels": 66690,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 45,
+          "candidates": 3001050,
+          "unreached": 27315,
+          "max_reached_square": 784,
+          "sha256": "0b8bf3ef513da48410a7225212770794cf354bfbc04c4f532ccadf0a1b7c553e"
+        },
+        {
+          "axis": 1,
+          "length": 39,
+          "candidates": 2600910,
+          "unreached": 8775,
+          "max_reached_square": 1076,
+          "sha256": "9951d74f9a05a0580193b6a4a1a0a741645f31f9d9496907233b4ee391231939"
+        },
+        {
+          "axis": 2,
+          "length": 38,
+          "candidates": 2534220,
+          "unreached": 0,
+          "max_reached_square": 321,
+          "sha256": "ef535f053d9dfba9b8bfa1eccf11943ea46db1250a5c1d8218c0c15b48816eee"
+        }
+      ],
+      "candidates": 8136180,
+      "expected_candidates": 8136180,
+      "input_mask_bytes": 66690,
+      "signed_float32_output_bytes": 266760,
+      "squared_int64_output_bytes": 533520,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_overlap_1_mask",
+      "polarity": 1,
+      "shape": [
+        45,
+        39,
+        38
+      ],
+      "voxels": 66690,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 45,
+          "candidates": 3001050,
+          "unreached": 0,
+          "max_reached_square": 400,
+          "sha256": "0ffa5f93625ea3e6bd00c629462cf114321d60d01b228bcad8b702ac6e7be6f9"
+        },
+        {
+          "axis": 1,
+          "length": 39,
+          "candidates": 2600910,
+          "unreached": 0,
+          "max_reached_square": 256,
+          "sha256": "25dad6a4e094be79c11cb862eb2379c111d633f5244237608e8cd7f01d8bf254"
+        },
+        {
+          "axis": 2,
+          "length": 38,
+          "candidates": 2534220,
+          "unreached": 0,
+          "max_reached_square": 242,
+          "sha256": "931f7ac6565a8394ad4e9fad5aa21e64f2b9daefa9d7abbe98684dacc3e4fe2d"
+        }
+      ],
+      "candidates": 8136180,
+      "expected_candidates": 8136180,
+      "input_mask_bytes": 66690,
+      "signed_float32_output_bytes": 266760,
+      "squared_int64_output_bytes": 533520,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_overlap_2_mask",
+      "polarity": 0,
+      "shape": [
+        45,
+        39,
+        38
+      ],
+      "voxels": 66690,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 45,
+          "candidates": 3001050,
+          "unreached": 27540,
+          "max_reached_square": 784,
+          "sha256": "d053ab1be23edcd81ffc0b8e1c6c1fe38e62f9ab5cc7b269d30cba6226ba0313"
+        },
+        {
+          "axis": 1,
+          "length": 39,
+          "candidates": 2600910,
+          "unreached": 8775,
+          "max_reached_square": 1129,
+          "sha256": "aedb7b926f6e1deaae08ae1e2e47294b2156faa308f876abb2fedbbabfb6ecd1"
+        },
+        {
+          "axis": 2,
+          "length": 38,
+          "candidates": 2534220,
+          "unreached": 0,
+          "max_reached_square": 363,
+          "sha256": "1707c3208c682bf10d802a846aadef1ffb97c4398aa10a703fbc60ba72873904"
+        }
+      ],
+      "candidates": 8136180,
+      "expected_candidates": 8136180,
+      "input_mask_bytes": 66690,
+      "signed_float32_output_bytes": 266760,
+      "squared_int64_output_bytes": 533520,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "sphere_overlap_2_mask",
+      "polarity": 1,
+      "shape": [
+        45,
+        39,
+        38
+      ],
+      "voxels": 66690,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 45,
+          "candidates": 3001050,
+          "unreached": 0,
+          "max_reached_square": 1600,
+          "sha256": "a6fe651be8fd1a2c8556f2f5c558b332268f5dc4ea5ed8ba00333472ab0f5b13"
+        },
+        {
+          "axis": 1,
+          "length": 39,
+          "candidates": 2600910,
+          "unreached": 0,
+          "max_reached_square": 256,
+          "sha256": "47f0ca9ee89c70f598d3d5d6d83f0a3e00e8feae03d22e81f1744e0cef6fef9e"
+        },
+        {
+          "axis": 2,
+          "length": 38,
+          "candidates": 2534220,
+          "unreached": 0,
+          "max_reached_square": 241,
+          "sha256": "1b150b275728527e2c9e531e287943952f0e54a894a8fa2074aa728b9cb49a90"
+        }
+      ],
+      "candidates": 8136180,
+      "expected_candidates": 8136180,
+      "input_mask_bytes": 66690,
+      "signed_float32_output_bytes": 266760,
+      "squared_int64_output_bytes": 533520,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "subdivided_rotated_box_0_mask",
+      "polarity": 0,
+      "shape": [
+        46,
+        39,
+        30
+      ],
+      "voxels": 53820,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 46,
+          "candidates": 2475720,
+          "unreached": 23828,
+          "max_reached_square": 1444,
+          "sha256": "0fe57180f033c68d7d153f95dc5d334fc39953394083031683365ef4035250b8"
+        },
+        {
+          "axis": 1,
+          "length": 39,
+          "candidates": 2098980,
+          "unreached": 10764,
+          "max_reached_square": 1994,
+          "sha256": "6d414327c635998d50e33824e938cf2d7cf7d32cbe3ab285b6b7db5e73e7b33e"
+        },
+        {
+          "axis": 2,
+          "length": 30,
+          "candidates": 1614600,
+          "unreached": 0,
+          "max_reached_square": 289,
+          "sha256": "07cc2346e88c1eff1159b46e4ed724e476e36c558ba24e9b6511cdcc98e7d459"
+        }
+      ],
+      "candidates": 6189300,
+      "expected_candidates": 6189300,
+      "input_mask_bytes": 53820,
+      "signed_float32_output_bytes": 215280,
+      "squared_int64_output_bytes": 430560,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "subdivided_rotated_box_0_mask",
+      "polarity": 1,
+      "shape": [
+        46,
+        39,
+        30
+      ],
+      "voxels": 53820,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 46,
+          "candidates": 2475720,
+          "unreached": 0,
+          "max_reached_square": 324,
+          "sha256": "6f14518dadba64f9ece0e1ab9fc7f1478b6bc932c9c1dbc269c2db2d482e3ddc"
+        },
+        {
+          "axis": 1,
+          "length": 39,
+          "candidates": 2098980,
+          "unreached": 0,
+          "max_reached_square": 153,
+          "sha256": "f3c8e0a062a573294db1129757525569d74e4d17c7216e18c3632d5c1ce5dcb2"
+        },
+        {
+          "axis": 2,
+          "length": 30,
+          "candidates": 1614600,
+          "unreached": 0,
+          "max_reached_square": 65,
+          "sha256": "dbee9064a6b18d5fd879fc489c28fbec75ff034141e60f4f5ffeda965eab9234"
+        }
+      ],
+      "candidates": 6189300,
+      "expected_candidates": 6189300,
+      "input_mask_bytes": 53820,
+      "signed_float32_output_bytes": 215280,
+      "squared_int64_output_bytes": 430560,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "subdivided_rotated_box_1_mask",
+      "polarity": 0,
+      "shape": [
+        46,
+        39,
+        30
+      ],
+      "voxels": 53820,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 46,
+          "candidates": 2475720,
+          "unreached": 23920,
+          "max_reached_square": 1521,
+          "sha256": "60da77e86e4e446d9d744854e008b979e4e5a9f967735e4b4ffaeeb404fe00c3"
+        },
+        {
+          "axis": 1,
+          "length": 39,
+          "candidates": 2098980,
+          "unreached": 10764,
+          "max_reached_square": 1882,
+          "sha256": "fd7a2f9833f2ca48d4fb1bee88cbad69b9bb6a32e2969f244540b5a11d7e3dec"
+        },
+        {
+          "axis": 2,
+          "length": 30,
+          "candidates": 1614600,
+          "unreached": 0,
+          "max_reached_square": 280,
+          "sha256": "bb5b3e701a6f127d62927a7a91862a4b47210238a87c95628e972c0fb7c258fb"
+        }
+      ],
+      "candidates": 6189300,
+      "expected_candidates": 6189300,
+      "input_mask_bytes": 53820,
+      "signed_float32_output_bytes": 215280,
+      "squared_int64_output_bytes": 430560,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "subdivided_rotated_box_1_mask",
+      "polarity": 1,
+      "shape": [
+        46,
+        39,
+        30
+      ],
+      "voxels": 53820,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 46,
+          "candidates": 2475720,
+          "unreached": 0,
+          "max_reached_square": 324,
+          "sha256": "ef7822ee9f37739404f88d4281da9570bea2271ae191db246682c4d77839e4d6"
+        },
+        {
+          "axis": 1,
+          "length": 39,
+          "candidates": 2098980,
+          "unreached": 0,
+          "max_reached_square": 153,
+          "sha256": "97765d281be6b14cae4ec56fd0fc5fd1a848bc06f599677b1df1b9dd14760bc1"
+        },
+        {
+          "axis": 2,
+          "length": 30,
+          "candidates": 1614600,
+          "unreached": 0,
+          "max_reached_square": 65,
+          "sha256": "ac32f26650b26f8eba10820964fb4e79272358b4c25cb880e226070a8c4d9ec2"
+        }
+      ],
+      "candidates": 6189300,
+      "expected_candidates": 6189300,
+      "input_mask_bytes": 53820,
+      "signed_float32_output_bytes": 215280,
+      "squared_int64_output_bytes": 430560,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "subdivided_rotated_box_2_mask",
+      "polarity": 0,
+      "shape": [
+        46,
+        39,
+        30
+      ],
+      "voxels": 53820,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 46,
+          "candidates": 2475720,
+          "unreached": 23828,
+          "max_reached_square": 1521,
+          "sha256": "d825d6fb26cd9934badfa5c6ace3cbe7bfcd289724b236608c4f0b6b094f90a4"
+        },
+        {
+          "axis": 1,
+          "length": 39,
+          "candidates": 2098980,
+          "unreached": 10764,
+          "max_reached_square": 1921,
+          "sha256": "c8ef41f292286c9985c4701072add9eb2d3a67bcfb5b9745f828017b9b033aa4"
+        },
+        {
+          "axis": 2,
+          "length": 30,
+          "candidates": 1614600,
+          "unreached": 0,
+          "max_reached_square": 305,
+          "sha256": "5128c3d9deaed93f0007e0403adfa89fcbe468308ed1cecdadd273d699deeeea"
+        }
+      ],
+      "candidates": 6189300,
+      "expected_candidates": 6189300,
+      "input_mask_bytes": 53820,
+      "signed_float32_output_bytes": 215280,
+      "squared_int64_output_bytes": 430560,
+      "final_mismatches": 0
+    },
+    {
+      "mask": "subdivided_rotated_box_2_mask",
+      "polarity": 1,
+      "shape": [
+        46,
+        39,
+        30
+      ],
+      "voxels": 53820,
+      "stages": [
+        {
+          "axis": 0,
+          "length": 46,
+          "candidates": 2475720,
+          "unreached": 0,
+          "max_reached_square": 324,
+          "sha256": "1f879117a4b93a69627da7b8dcd1c29547a4bbacbfdf56a8881f86d46a29bd01"
+        },
+        {
+          "axis": 1,
+          "length": 39,
+          "candidates": 2098980,
+          "unreached": 0,
+          "max_reached_square": 153,
+          "sha256": "7f382a8df1680ea0a9ae49a39bae009dc82b1c5a06aa1736cf316be028491536"
+        },
+        {
+          "axis": 2,
+          "length": 30,
+          "candidates": 1614600,
+          "unreached": 0,
+          "max_reached_square": 65,
+          "sha256": "da58f6f742f2032499b76824d020414e66228cf2b1e4a405430d447d0cf24a27"
+        }
+      ],
+      "candidates": 6189300,
+      "expected_candidates": 6189300,
+      "input_mask_bytes": 53820,
+      "signed_float32_output_bytes": 215280,
+      "squared_int64_output_bytes": 430560,
+      "final_mismatches": 0
+    }
+  ],
+  "gates": {
+    "full_tables_repeat": true,
+    "oracle_exact": true,
+    "final_reachable": true,
+    "accounting": true
+  },
+  "timing_measured": false,
+  "byte_scope": "Explicit array payload only; no measured bus or allocator traffic."
+}

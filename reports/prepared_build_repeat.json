@@ -1,0 +1,38 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "rows": [
+    {
+      "artifact": "columns.ptx",
+      "exact": true
+    },
+    {
+      "artifact": "prepared.ptx",
+      "exact": true
+    },
+    {
+      "artifact": "columns_compact.so",
+      "exact": true
+    },
+    {
+      "artifact": "prepared_columns.so",
+      "exact": true
+    },
+    {
+      "artifact": "edt_large.so",
+      "exact": false
+    },
+    {
+      "artifact": "mesh_fused_prepared.so",
+      "exact": false
+    },
+    {
+      "artifact": "column_mask.so",
+      "exact": false
+    },
+    {
+      "artifact": "prepared_probe.so",
+      "exact": false
+    }
+  ],
+  "scope": "Two independent local output directories; complete artifact bytes compared, not a cross-toolchain reproducibility claim."
+}

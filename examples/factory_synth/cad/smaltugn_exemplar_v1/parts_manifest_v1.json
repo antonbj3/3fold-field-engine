@@ -1,0 +1,78 @@
+{
+ "schema": "parts_manifest_v1",
+ "station": "smaltugn",
+ "parts": [
+  {
+   "part": "stativ",
+   "subassembly": "ram",
+   "bbox": [
+    0.0,
+    0.0,
+    0.0,
+    3200.0,
+    2400.0,
+    390.0
+   ]
+  },
+  {
+   "part": "hus",
+   "subassembly": "ram",
+   "bbox": [
+    0.0,
+    0.0,
+    390.0,
+    3200.0,
+    2400.0,
+    2600.0
+   ]
+  },
+  {
+   "part": "hmi_pendang",
+   "subassembly": "styr",
+   "bbox": [
+    1120.0,
+    -320.0,
+    900.0,
+    2080.0,
+    0.0,
+    1700.0
+   ]
+  },
+  {
+   "part": "hmi_skarm",
+   "subassembly": "styr",
+   "bbox": [
+    1280.0,
+    -340.0,
+    1150.0,
+    1920.0,
+    -300.0,
+    1500.0
+   ]
+  },
+  {
+   "part": "elskap_huvud",
+   "subassembly": "el",
+   "bbox": [
+    3200.0,
+    720.0,
+    200.0,
+    3600.0,
+    1680.0,
+    2000.0
+   ]
+  },
+  {
+   "part": "servicelucka_bak",
+   "subassembly": "ram",
+   "bbox": [
+    960.0,
+    2400.0,
+    400.0,
+    2240.0,
+    2460.0,
+    1600.0
+   ]
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+{
+  "reservation": "D-PREPARED-RT-130026",
+  "start": "2026-09-13T13:00:26.410796+00:00",
+  "exit": 0,
+  "gpu": "NVIDIA GeForce RTX 5070, 580.178.04, 7 %, 1790 MiB",
+  "contexts": "",
+  "end": "2026-09-13T13:00:45.077213+00:00",
+  "scope": "User-authorized shared-lock window; prepared interval proof, raw hits and full owned service. Before/between/after kernel fault guards pass; no compute contexts and desktop background recorded. All three children passed, lock released, no settings changes."
+}

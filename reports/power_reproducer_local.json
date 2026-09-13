@@ -1,0 +1,24 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "fixture_integrity": true,
+    "source_integrity": true,
+    "input_preserved": true,
+    "known_result": true,
+    "reference_exact": true
+  },
+  "differing_values": 0,
+  "max_abs_difference": 0.0,
+  "matches_known_native": false,
+  "actual_sha256": "f8a76f4b7ca7e08a4f44a3d79d4162fe9cc5b0cac91d996432eb699d27295313",
+  "numpy_version": "2.5.3",
+  "numpy_core_sha256": "097e10f2baaf99d5a4655e549a6c76b139e3931681af39068f79c7b3abddadac",
+  "requested_numpy_disabled": "",
+  "enabled_dispatch": {
+    "X86_V3": true,
+    "X86_V4": false,
+    "AVX512_ICL": false,
+    "AVX512_SPR": false
+  },
+  "scope": "Complete captured second-iteration power operation only. Native mismatch remains a failed reference comparison; no optimizer, geometry or accuracy claim inferred."
+}

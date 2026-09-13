@@ -1,0 +1,27 @@
+{
+  "status": "VERIFIED-FRESH",
+  "rows": [
+    {
+      "exit": 0,
+      "all_pass": true,
+      "raw_sha256": "7a15d2c3ddd9ac6f43ce20ba0b2744ee7216c1d8f66efdf152e565f0c63fb4d2",
+      "normalized_sha256": "4071443d15563f24f3e3d12e91090bbff6bc01be3ead98e9784969c90a1f53a2",
+      "timings": {
+        "cache_measurement.wall_ms_miss_run": 74.14,
+        "cache_measurement.wall_ms_hit_run": 28.29
+      }
+    },
+    {
+      "exit": 0,
+      "all_pass": true,
+      "raw_sha256": "ae28865c44f2bfa49fcc6a274c4ea4a67880ac2b23c762eca7794cc47f16e667",
+      "normalized_sha256": "4071443d15563f24f3e3d12e91090bbff6bc01be3ead98e9784969c90a1f53a2",
+      "timings": {
+        "cache_measurement.wall_ms_miss_run": 73.35,
+        "cache_measurement.wall_ms_hit_run": 28.44
+      }
+    }
+  ],
+  "case_count": 11,
+  "scope": "All declared fields exact twice after two preregistered observational clock exclusions; complete raw artifacts retained in caller evidence."
+}

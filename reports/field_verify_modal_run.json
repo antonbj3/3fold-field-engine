@@ -1,0 +1,22 @@
+{
+  "exit": 2,
+  "elapsed_s": 112.07577361300001,
+  "stdout": "/usr/local/bin/python scripts/verify.py --declared --output /tmp/field_evidence\n{\"status\": \"OWN-GATE-FAIL\", \"selected_status\": \"OWN-GATE-FAIL\", \"fresh_rows\": 162, \"mapped_rows\": 18, \"unmapped\": 144, \"gpu_deferred\": 3, \"gates\": {\"mapped_cpu\": false, \"full_coverage\": false}}\n",
+  "stderr": "make: *** [Makefile:20: verify-declared] Error 2\n",
+  "python": "3.13.3 (main, May 21 2025, 23:35:07) [GCC 12.2.0]",
+  "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "trimesh": "5.1.0",
+    "build123d": "0.11.1",
+    "cadquery-ocp-novtk": "7.9.3.1.1",
+    "scikit-image": "0.26.0",
+    "scikit-learn": "1.9.1",
+    "warp-lang": "1.17.0",
+    "shapely": "2.1.2",
+    "libigl": "2.6.3"
+  },
+  "compiler": "g++ (Debian 12.2.0-14+deb12u1) 12.2.0\nCopyright (C) 2022 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "scope": "CPU-only Modal; CUDA hidden, no GPU resource requested."
+}

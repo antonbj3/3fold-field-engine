@@ -1,0 +1,17 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "coverage": true,
+    "finite": true,
+    "enclosure": true,
+    "no_false_rejection": true,
+    "nonvacuous": true,
+    "uncertainty_falls_through": true,
+    "repeat": true
+  },
+  "cases": 120016,
+  "rejected": 65738,
+  "uncertain_outside": 24512,
+  "source_sha256": "d3bff4cccff6db4091f6c6ef4e755e8845ff9fe3b450fd01cfff55ceac9af949",
+  "scope": "CPU proof only. One-ulp outward float neighbors of rounded local coordinates enclose exact shifted coordinates; interval subtraction/products enclose frozen world-space double edges. Portable fixtures with local and zero anchors, no tolerance or GPU speed claim."
+}

@@ -1,0 +1,44 @@
+{
+  "src/field_engine/lbm_domare_v1.py": {
+    "exact_original_functions": [
+      "feq3d",
+      "guo_force",
+      "lbm_step",
+      "run_lbm",
+      "unit_scale",
+      "straight_duct_case",
+      "bent_duct_case",
+      "stage_calib",
+      "_calibration_digest",
+      "cached_calibration",
+      "plenum_case",
+      "stage_plenum",
+      "kcand_dp",
+      "stage_kcands_one",
+      "stage_kcands",
+      "lbm_domare",
+      "stage_report",
+      "stage_selftest",
+      "main"
+    ],
+    "changed_functions": [
+      "calibration_binding"
+    ],
+    "added_functions": [
+      "_selected_backend"
+    ]
+  },
+  "src/field_engine/lbm_collision_native_v1.py": {
+    "exact_original_functions": [
+      "run_lbm"
+    ],
+    "changed_functions": [
+      "PreparedStep"
+    ],
+    "added_functions": [
+      "_bound_library",
+      "implementation_binding"
+    ]
+  },
+  "scope": "Original LBM run loop compared after removing only explicit backend dispatch. Native PreparedStep changes only library identity loading; collision.cpp unchanged in git."
+}

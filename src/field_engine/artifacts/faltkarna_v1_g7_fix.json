@@ -1,0 +1,146 @@
+{
+  "cell": "faltkarna_v1_g7_fix",
+  "device": "cuda:0",
+  "params": {
+    "hx": 20.0,
+    "hy": 15.0,
+    "hz": 10.0,
+    "r": 6.0,
+    "vol_analytic_mm3": 21738.053289415348
+  },
+  "korrekthetsgrind": {
+    "max_abs_dev_v0_vs_v1": 0.0,
+    "max_abs_dev_v0_vs_v2": 0.0,
+    "bit_identical_v0_vs_v1": true,
+    "bit_identical_v0_vs_v2": true,
+    "vol_v0_mm3": 21142.375,
+    "vol_v2_mm3": 21142.375,
+    "konservering_v2": {
+      "volym_matt_mm3": 21142.375,
+      "volym_facit_mm3": 21738.053289415348,
+      "diff_frac": 0.027402559073925636,
+      "tol_frac": 0.03,
+      "GRON": true
+    },
+    "PASS": true
+  },
+  "fallbevis": {
+    "fallbevis_i_korrupt_index_pa_v2": {
+      "vol_voxel_mm3": 20339.5,
+      "check": {
+        "volym_matt_mm3": 20339.5,
+        "volym_facit_mm3": 21738.053289415348,
+        "diff_frac": 0.06433663910909301,
+        "tol_frac": 0.03,
+        "GRON": false
+      },
+      "GRIND_FALLER_SOM_FORVANTAT": true
+    },
+    "fallbevis_ii_determinism_pa_v2": {
+      "f32_unsafe": {
+        "n_korningar": 6,
+        "varden": [
+          -2637849.0,
+          -2637845.25,
+          -2637841.25,
+          -2637841.75,
+          -2637836.0,
+          -2637841.5
+        ],
+        "bit_identiska": false
+      },
+      "i64_fixpunkt_safe": {
+        "n_korningar": 6,
+        "varden": [
+          -2638472.944915,
+          -2638472.944915,
+          -2638472.944915,
+          -2638472.944915,
+          -2638472.944915,
+          -2638472.944915
+        ],
+        "bit_identiska": true
+      },
+      "n_active_voxels": 2142208,
+      "n_processer": 6,
+      "GRIND_FALLER_F32_SOM_FORVANTAT": true,
+      "GRIND_HALLER_I64_SOM_FORVANTAT": true
+    }
+  },
+  "benchmarkgrind": [
+    {
+      "label": "S_liten",
+      "pitch": 0.9,
+      "n_dense_voxels": 44400,
+      "n_active_blocks": 120,
+      "dense_MB": 0.1776,
+      "gles_MB": 0.24576,
+      "gles_over_dense_frac": 1.3837837837837839,
+      "v0_cpu_scatter_median_s": 0.00010657310485839844,
+      "v0_all_s": [
+        0.00011897087097167969,
+        0.00010967254638671875,
+        0.00010228157043457031,
+        0.00010657310485839844,
+        0.00010633468627929688
+      ],
+      "v1_gpu_scatter_roundtrip_median_s": 0.00044727325439453125,
+      "v1_all_s": [
+        0.0004608631134033203,
+        0.0004534721374511719,
+        0.0004458427429199219,
+        0.00044727325439453125,
+        0.00044655799865722656
+      ],
+      "v2_gpu_resident_g7fix_median_s": 0.0004291534423828125,
+      "v2_all_s": [
+        0.0005352497100830078,
+        0.0004291534423828125,
+        0.0004305839538574219,
+        0.0004265308380126953,
+        0.0004191398620605469
+      ],
+      "dense_ref_kernel_median_s": 0.0001399517059326172,
+      "gles_ge_tat_v0": true,
+      "gles_ge_tat_v2": false,
+      "v2_speedup_over_v1": 1.0422222222222222
+    },
+    {
+      "label": "M_f4pilot_skala",
+      "pitch": 0.25,
+      "n_dense_voxels": 1940289,
+      "n_active_blocks": 4184,
+      "dense_MB": 7.761156,
+      "gles_MB": 8.568832,
+      "gles_over_dense_frac": 1.104066456079481,
+      "v0_cpu_scatter_median_s": 0.0030896663665771484,
+      "v0_all_s": [
+        0.00426030158996582,
+        0.0038013458251953125,
+        0.003083944320678711,
+        0.0030896663665771484,
+        0.0030536651611328125
+      ],
+      "v1_gpu_scatter_roundtrip_median_s": 0.002198457717895508,
+      "v1_all_s": [
+        0.0051555633544921875,
+        0.004858732223510742,
+        0.002198457717895508,
+        0.0020885467529296875,
+        0.0020775794982910156
+      ],
+      "v2_gpu_resident_g7fix_median_s": 0.004271984100341797,
+      "v2_all_s": [
+        0.004212617874145508,
+        0.004403352737426758,
+        0.004271984100341797,
+        0.0044443607330322266,
+        0.003977060317993164
+      ],
+      "dense_ref_kernel_median_s": 0.0002009868621826172,
+      "gles_ge_tat_v0": false,
+      "gles_ge_tat_v2": false,
+      "v2_speedup_over_v1": 0.5146221676526398
+    }
+  ]
+}

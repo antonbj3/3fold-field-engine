@@ -1,0 +1,131 @@
+{
+  "scope": "Five slowest existing CPU pytest commands; 62 passed, five CUDA-dependent skips, four fit warnings, isolated fresh source tree. Individual instrumented profiles are separate observations, not acceptance timings.",
+  "suite": {
+    "passed": 62,
+    "skipped": 5,
+    "warnings": 4,
+    "wall_s": 507.69
+  },
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_CORETYPE": "Haswell",
+    "NPY_DISABLE_CPU_FEATURES": "X86_V4,AVX512_ICL,AVX512_SPR",
+    "CUDA_VISIBLE_DEVICES": ""
+  },
+  "rows": [
+    {
+      "module": "opt/duct_growth_diff_v1.py",
+      "test_wall_s": 180.65,
+      "calibration_s": 158.7,
+      "selftest_s": 21.8,
+      "optimizer_iterations": 600,
+      "objective_evaluations": 7801
+    },
+    {
+      "module": "field_to_recipe_v1.py",
+      "test_wall_s": 43.36,
+      "full_runs": 2,
+      "profile": {
+        "module": "field_to_recipe_v1",
+        "method": "_selftest",
+        "import_s": 0.19501192099414766,
+        "wall_s": 21.008130911010085,
+        "phases": {
+          "passa_primitiver": {
+            "calls": 3,
+            "seconds": 1.6714943450000002
+          },
+          "falt_till_recept": {
+            "calls": 2,
+            "seconds": 1.9989943660000002
+          },
+          "topopt.assemble_K_cpu": {
+            "calls": 12,
+            "seconds": 0.580729454
+          },
+          "topopt.solve": {
+            "calls": 12,
+            "seconds": 15.877080398
+          },
+          "topopt.compliance": {
+            "calls": 12,
+            "seconds": 0.00037201100000000005
+          },
+          "topopt.run": {
+            "calls": 1,
+            "seconds": 16.574564513000002
+          },
+          "_topopt_falt": {
+            "calls": 1,
+            "seconds": 16.574762077000003
+          },
+          "_topopt_tackning": {
+            "calls": 1,
+            "seconds": 16.970937141
+          }
+        },
+        "scope": "Complete unchanged selftest; nested phase timings must not be summed. Observer adds no state or arithmetic changes."
+      }
+    },
+    {
+      "module": "lbm_domare_v1.py",
+      "test_wall_s": 40.83,
+      "profile": {
+        "module": "lbm_domare_v1",
+        "method": "stage_selftest",
+        "import_s": 0.03995845600729808,
+        "wall_s": 41.59451473399531,
+        "phases": {
+          "feq3d": {
+            "calls": 12813,
+            "seconds": 9.366200803000005
+          },
+          "numpy.roll": {
+            "calls": 106457,
+            "seconds": 4.772376639000012
+          },
+          "lbm_step": {
+            "calls": 5603,
+            "seconds": 41.07969359399996
+          },
+          "straight_duct_case": {
+            "calls": 1,
+            "seconds": 18.977678242
+          },
+          "bent_duct_case": {
+            "calls": 1,
+            "seconds": 4.472401176
+          },
+          "plenum_case": {
+            "calls": 2,
+            "seconds": 18.144068071
+          }
+        },
+        "scope": "Complete unchanged selftest; nested phase timings must not be summed. Observer adds no state or arithmetic changes."
+      }
+    },
+    {
+      "module": "opt/f33_1_topologi_v1.py",
+      "test_wall_s": 34.64,
+      "selftest_s": 34.4,
+      "descent_s": 31.92173028999241,
+      "descents": 7,
+      "max_astar_s": 0.04216272899066098
+    },
+    {
+      "module": "bench/_komp_importprobe.py",
+      "test_wall_s": 28.13,
+      "imports": 40,
+      "passing_imports": 40,
+      "import_child_sum_s": 27.839335441589355
+    }
+  ],
+  "source_sha256": {
+    "opt/duct_growth_diff_v1.py": "774708c82a8db3c2b8523cac19e65bedc89842fb3f4197e2fcc562b349e247d9",
+    "field_to_recipe_v1.py": "9ecb44a428722fa2d4d263e2004095d883c341cc21e5c1dbab61121d71966478",
+    "lbm_domare_v1.py": "8aa44a0ca974fbd9a0aec60184dcbf5f23dc869f2ed40eda9fe0df87fced4f4e",
+    "opt/f33_1_topologi_v1.py": "e46070fd543ea433b9aa1b97922deb6fb31e89a9d76dc492221950e233968381",
+    "bench/_komp_importprobe.py": "c24e7ae3694f17aa9a5d115c68fdbf83b406547b72e5c891cb89657c51ceacda"
+  }
+}

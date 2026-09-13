@@ -1,0 +1,14 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "child_exit": 99,
+  "queries": 0,
+  "creation_phase": 50,
+  "first_error": "Invalid global read in OptiX ray generation during preparation, before first query.",
+  "error_summaries": [
+    "ERROR SUMMARY: 11262 errors",
+    "ERROR SUMMARY: 9160 errors were not printed. Use --print-limit option to adjust the number of printed errors"
+  ],
+  "source_sha256": "956c3ccd2dfdcb23d40d3f020641cf1e52d1c621b9aaf42224374ad2f936c3ee",
+  "hardware": "NVIDIA L4, 580.95.05, 0 %, 3 MiB",
+  "scope": "Full OptiX capture rejected on Modal; no local execution. Diagnostic failure retained and not used by the separate CUDA-tail capture variant."
+}

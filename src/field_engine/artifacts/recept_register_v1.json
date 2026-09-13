@@ -1,0 +1,1037 @@
+{
+ "version": "recept_register_v1",
+ "genererad": "2026-09-12T19:51:45",
+ "byggsek": 0.7,
+ "moduler": [
+  {
+   "modul": "recept_familjer_egna_v1",
+   "status": "OK"
+  }
+ ],
+ "grind": "FAIL-CLOSED: only recipes with a PASS selftest are in `recept`",
+ "recept": [
+  {
+   "id": "egen.aluprofil_tslot",
+   "familj": "aluprofil_tslot",
+   "namn": "T-spar-aluprofil (2020/4040/...)",
+   "klass": "familj",
+   "kalla": "egen:recept_familjer_egna_v1",
+   "licens": "own geometry; dimensions from publicly published catalogues",
+   "taggar": [
+    "profil",
+    "aluprofil",
+    "t-spar",
+    "ram"
+   ],
+   "arketyp": "tslot_profil",
+   "standard": null,
+   "tabellrader": 8,
+   "variant_count": 96,
+   "param_schema": [
+    {
+     "namn": "key",
+     "enhet": "-",
+     "typ": "str",
+     "min": null,
+     "max": null,
+     "default": "2020",
+     "beskrivning": "profilbeteckning"
+    },
+    {
+     "namn": "l",
+     "enhet": "mm",
+     "typ": "float",
+     "min": 20.0,
+     "max": 6000.0,
+     "default": 500.0,
+     "beskrivning": "kaplangd"
+    }
+   ],
+   "n_sjalvtest": 3,
+   "extra": {
+    "provenans_klass": "hand-inmatad",
+    "varning": "the dimension table is hand-entered from general catalogue knowledge, NOT machine-read from a named source"
+   },
+   "sjalvtest": {
+    "status": "PASS",
+    "n_kontroller": 12,
+    "n_oberoende": 3,
+    "fall": [
+     {
+      "etikett": "2020 l=500.0",
+      "status": "PASS",
+      "matt": {
+       "volym_mm3": 118672.7881988345,
+       "bbox_x_mm": 20.0,
+       "bbox_y_mm": 20.0,
+       "bbox_z_mm": 500.0,
+       "bbox_xy_max_mm": 20.0,
+       "bbox_xy_min_mm": 20.0,
+       "bbox_diag_mm": 500.7993610219566,
+       "solids": 1.0
+      },
+      "fel": null,
+      "kontroller": [
+       {
+        "storhet": "bbox_x_mm",
+        "matt": 20.0,
+        "lo": 19.98,
+        "hi": 20.019999999999996,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "profilbredd"
+       },
+       {
+        "storhet": "bbox_y_mm",
+        "matt": 20.0,
+        "lo": 19.98,
+        "hi": 20.019999999999996,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "profilhojd"
+       },
+       {
+        "storhet": "bbox_z_mm",
+        "matt": 500.0,
+        "lo": 499.5,
+        "hi": 500.49999999999994,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "cut length"
+       },
+       {
+        "storhet": "volym_mm3",
+        "matt": 118672.7881988345,
+        "lo": 80000.0,
+        "hi": 170000.0,
+        "pass": true,
+        "oberoende": true,
+        "motivering": "INDEPENDENT: a real T-slot profile is 45-65 % material of its bounding box (catalogue cross-section 2020 ~ 160 mm2 of 400 mm2); a profile WITHOUT slots or holes gives 1.0 and fails, an over-cut one gives < 0.40 and fails"
+       }
+      ]
+     },
+     {
+      "etikett": "4040 l=500.0",
+      "status": "PASS",
+      "matt": {
+       "volym_mm3": 585041.594462251,
+       "bbox_x_mm": 40.0,
+       "bbox_y_mm": 40.0,
+       "bbox_z_mm": 500.0,
+       "bbox_xy_max_mm": 40.0,
+       "bbox_xy_min_mm": 40.0,
+       "bbox_diag_mm": 503.189825016365,
+       "solids": 1.0
+      },
+      "fel": null,
+      "kontroller": [
+       {
+        "storhet": "bbox_x_mm",
+        "matt": 40.0,
+        "lo": 39.96,
+        "hi": 40.03999999999999,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "profilbredd"
+       },
+       {
+        "storhet": "bbox_y_mm",
+        "matt": 40.0,
+        "lo": 39.96,
+        "hi": 40.03999999999999,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "profilhojd"
+       },
+       {
+        "storhet": "bbox_z_mm",
+        "matt": 500.0,
+        "lo": 499.5,
+        "hi": 500.49999999999994,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "cut length"
+       },
+       {
+        "storhet": "volym_mm3",
+        "matt": 585041.594462251,
+        "lo": 320000.0,
+        "hi": 680000.0,
+        "pass": true,
+        "oberoende": true,
+        "motivering": "INDEPENDENT: a real T-slot profile is 45-65 % material of its bounding box (catalogue cross-section 2020 ~ 160 mm2 of 400 mm2); a profile WITHOUT slots or holes gives 1.0 and fails, an over-cut one gives < 0.40 and fails"
+       }
+      ]
+     },
+     {
+      "etikett": "2080 l=500.0",
+      "status": "PASS",
+      "matt": {
+       "volym_mm3": 586291.152795338,
+       "bbox_x_mm": 20.0,
+       "bbox_y_mm": 80.0,
+       "bbox_z_mm": 500.0,
+       "bbox_xy_max_mm": 80.0,
+       "bbox_xy_min_mm": 20.0,
+       "bbox_diag_mm": 506.7543783727971,
+       "solids": 1.0
+      },
+      "fel": null,
+      "kontroller": [
+       {
+        "storhet": "bbox_x_mm",
+        "matt": 20.0,
+        "lo": 19.98,
+        "hi": 20.019999999999996,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "profilbredd"
+       },
+       {
+        "storhet": "bbox_y_mm",
+        "matt": 80.0,
+        "lo": 79.92,
+        "hi": 80.07999999999998,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "profilhojd"
+       },
+       {
+        "storhet": "bbox_z_mm",
+        "matt": 500.0,
+        "lo": 499.5,
+        "hi": 500.49999999999994,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "cut length"
+       },
+       {
+        "storhet": "volym_mm3",
+        "matt": 586291.152795338,
+        "lo": 320000.0,
+        "hi": 680000.0,
+        "pass": true,
+        "oberoende": true,
+        "motivering": "INDEPENDENT: a real T-slot profile is 45-65 % material of its bounding box (catalogue cross-section 2020 ~ 160 mm2 of 400 mm2); a profile WITHOUT slots or holes gives 1.0 and fails, an over-cut one gives < 0.40 and fails"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "egen.aluprofil_vslot",
+   "familj": "aluprofil_vslot",
+   "namn": "V-spar-aluprofil (20x20..20x80)",
+   "klass": "familj",
+   "kalla": "egen:recept_familjer_egna_v1",
+   "licens": "own geometry; dimensions from publicly published catalogues",
+   "taggar": [
+    "profil",
+    "aluprofil",
+    "v-spar",
+    "ram"
+   ],
+   "arketyp": "tslot_profil",
+   "standard": null,
+   "tabellrader": 4,
+   "variant_count": 48,
+   "param_schema": [
+    {
+     "namn": "key",
+     "enhet": "-",
+     "typ": "str",
+     "min": null,
+     "max": null,
+     "default": "vslot2020",
+     "beskrivning": "profilbeteckning"
+    },
+    {
+     "namn": "l",
+     "enhet": "mm",
+     "typ": "float",
+     "min": 20.0,
+     "max": 6000.0,
+     "default": 300.0,
+     "beskrivning": "kaplangd"
+    }
+   ],
+   "n_sjalvtest": 2,
+   "extra": {
+    "provenans_klass": "hand-inmatad",
+    "varning": "the dimension table is hand-entered from general catalogue knowledge, NOT machine-read from a named source",
+    "yttermatt_kalla": "BOLTS vslot*-familjerna (LGPL 2.1+)"
+   },
+   "sjalvtest": {
+    "status": "PASS",
+    "n_kontroller": 6,
+    "n_oberoende": 2,
+    "fall": [
+     {
+      "etikett": "vslot2020 l=300.0",
+      "status": "PASS",
+      "matt": {
+       "volym_mm3": 68988.85009851992,
+       "bbox_x_mm": 20.0,
+       "bbox_y_mm": 20.0,
+       "bbox_z_mm": 300.0,
+       "bbox_xy_max_mm": 20.0,
+       "bbox_xy_min_mm": 20.0,
+       "bbox_diag_mm": 301.3303834663873,
+       "solids": 1.0
+      },
+      "fel": null,
+      "kontroller": [
+       {
+        "storhet": "bbox_x_mm",
+        "matt": 20.0,
+        "lo": 19.98,
+        "hi": 20.019999999999996,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "profilbredd"
+       },
+       {
+        "storhet": "bbox_y_mm",
+        "matt": 20.0,
+        "lo": 19.98,
+        "hi": 20.019999999999996,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "profilhojd"
+       },
+       {
+        "storhet": "volym_mm3",
+        "matt": 68988.85009851992,
+        "lo": 48000.0,
+        "hi": 102000.0,
+        "pass": true,
+        "oberoende": true,
+        "motivering": "INDEPENDENT: material fraction 45-65 % of the bounding box (same anchor as the T-slot)"
+       }
+      ]
+     },
+     {
+      "etikett": "vslot2040 l=300.0",
+      "status": "PASS",
+      "matt": {
+       "volym_mm3": 160297.70019703978,
+       "bbox_x_mm": 20.0,
+       "bbox_y_mm": 40.0,
+       "bbox_z_mm": 300.0,
+       "bbox_xy_max_mm": 40.0,
+       "bbox_xy_min_mm": 20.0,
+       "bbox_diag_mm": 303.31501776206204,
+       "solids": 1.0
+      },
+      "fel": null,
+      "kontroller": [
+       {
+        "storhet": "bbox_x_mm",
+        "matt": 20.0,
+        "lo": 19.98,
+        "hi": 20.019999999999996,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "profilbredd"
+       },
+       {
+        "storhet": "bbox_y_mm",
+        "matt": 40.0,
+        "lo": 39.96,
+        "hi": 40.03999999999999,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "profilhojd"
+       },
+       {
+        "storhet": "volym_mm3",
+        "matt": 160297.70019703978,
+        "lo": 96000.0,
+        "hi": 204000.0,
+        "pass": true,
+        "oberoende": true,
+        "motivering": "INDEPENDENT: material fraction 45-65 % of the bounding box (same anchor as the T-slot)"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "egen.din_skena",
+   "familj": "din_skena",
+   "namn": "DIN-skena EN 60715 (TS35/TS32/TS15)",
+   "klass": "familj",
+   "kalla": "egen:recept_familjer_egna_v1",
+   "licens": "own geometry; dimensions from publicly published catalogues",
+   "taggar": [
+    "elektronik",
+    "skena",
+    "montage",
+    "din-skena"
+   ],
+   "arketyp": "din_skena",
+   "standard": null,
+   "tabellrader": 5,
+   "variant_count": 45,
+   "param_schema": [
+    {
+     "namn": "key",
+     "enhet": "-",
+     "typ": "str",
+     "min": null,
+     "max": null,
+     "default": "TS35x7.5",
+     "beskrivning": "skenprofil"
+    },
+    {
+     "namn": "l",
+     "enhet": "mm",
+     "typ": "float",
+     "min": 25.0,
+     "max": 4000.0,
+     "default": 300.0,
+     "beskrivning": "kaplangd"
+    },
+    {
+     "namn": "hal",
+     "enhet": "-",
+     "typ": "bool",
+     "min": null,
+     "max": null,
+     "default": true,
+     "beskrivning": "slots with 25 mm pitch"
+    }
+   ],
+   "n_sjalvtest": 3,
+   "extra": {
+    "provenans_klass": "hand-inmatad",
+    "varning": "the dimension table is hand-entered from general catalogue knowledge, NOT machine-read from a named source"
+   },
+   "sjalvtest": {
+    "status": "PASS",
+    "n_kontroller": 12,
+    "n_oberoende": 3,
+    "fall": [
+     {
+      "etikett": "TS35x7.5 l=300.0",
+      "status": "PASS",
+      "matt": {
+       "volym_mm3": 14025.930562737085,
+       "bbox_x_mm": 35.0,
+       "bbox_y_mm": 7.500000000000001,
+       "bbox_z_mm": 300.0,
+       "bbox_xy_max_mm": 35.0,
+       "bbox_xy_min_mm": 7.500000000000001,
+       "bbox_diag_mm": 302.1278702801183,
+       "solids": 1.0
+      },
+      "fel": null,
+      "kontroller": [
+       {
+        "storhet": "bbox_x_mm",
+        "matt": 35.0,
+        "lo": 34.825,
+        "hi": 35.175,
+        "pass": true,
+        "oberoende": true,
+        "motivering": "INDEPENDENT: EN 60715 fixes the rail WIDTH (35/32/15 mm) as the dimension the device clips grip -- the builder is given the width but the flange/web split is our own, so the measured outer width checks that the section is not grown outside its span"
+       },
+       {
+        "storhet": "bbox_y_mm",
+        "matt": 7.500000000000001,
+        "lo": 7.4625,
+        "hi": 7.65,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "profile height"
+       },
+       {
+        "storhet": "bbox_z_mm",
+        "matt": 300.0,
+        "lo": 299.7,
+        "hi": 300.29999999999995,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "cut length"
+       },
+       {
+        "storhet": "volym_mm3",
+        "matt": 14025.930562737085,
+        "lo": 3937.5,
+        "hi": 59062.5,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "a flat profile: much air in its bbox"
+       }
+      ]
+     },
+     {
+      "etikett": "TS35x15 l=300.0",
+      "status": "PASS",
+      "matt": {
+       "volym_mm3": 27338.895844105573,
+       "bbox_x_mm": 35.0,
+       "bbox_y_mm": 15.0,
+       "bbox_z_mm": 300.0,
+       "bbox_xy_max_mm": 35.0,
+       "bbox_xy_min_mm": 15.0,
+       "bbox_diag_mm": 302.4070105007488,
+       "solids": 1.0
+      },
+      "fel": null,
+      "kontroller": [
+       {
+        "storhet": "bbox_x_mm",
+        "matt": 35.0,
+        "lo": 34.825,
+        "hi": 35.175,
+        "pass": true,
+        "oberoende": true,
+        "motivering": "INDEPENDENT: EN 60715 fixes the rail WIDTH (35/32/15 mm) as the dimension the device clips grip -- the builder is given the width but the flange/web split is our own, so the measured outer width checks that the section is not grown outside its span"
+       },
+       {
+        "storhet": "bbox_y_mm",
+        "matt": 15.0,
+        "lo": 14.925,
+        "hi": 15.3,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "profile height"
+       },
+       {
+        "storhet": "bbox_z_mm",
+        "matt": 300.0,
+        "lo": 299.7,
+        "hi": 300.29999999999995,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "cut length"
+       },
+       {
+        "storhet": "volym_mm3",
+        "matt": 27338.895844105573,
+        "lo": 7875.0,
+        "hi": 118125.0,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "a flat profile: much air in its bbox"
+       }
+      ]
+     },
+     {
+      "etikett": "TS15 l=300.0",
+      "status": "PASS",
+      "matt": {
+       "volym_mm3": 6764.785671288472,
+       "bbox_x_mm": 15.0,
+       "bbox_y_mm": 5.500000000000001,
+       "bbox_z_mm": 300.0,
+       "bbox_xy_max_mm": 15.0,
+       "bbox_xy_min_mm": 5.500000000000001,
+       "bbox_diag_mm": 300.4251154614075,
+       "solids": 1.0
+      },
+      "fel": null,
+      "kontroller": [
+       {
+        "storhet": "bbox_x_mm",
+        "matt": 15.0,
+        "lo": 14.925,
+        "hi": 15.075,
+        "pass": true,
+        "oberoende": true,
+        "motivering": "INDEPENDENT: EN 60715 fixes the rail WIDTH (35/32/15 mm) as the dimension the device clips grip -- the builder is given the width but the flange/web split is our own, so the measured outer width checks that the section is not grown outside its span"
+       },
+       {
+        "storhet": "bbox_y_mm",
+        "matt": 5.500000000000001,
+        "lo": 5.4725,
+        "hi": 5.61,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "profile height"
+       },
+       {
+        "storhet": "bbox_z_mm",
+        "matt": 300.0,
+        "lo": 299.7,
+        "hi": 300.29999999999995,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "cut length"
+       },
+       {
+        "storhet": "volym_mm3",
+        "matt": 6764.785671288472,
+        "lo": 1237.5,
+        "hi": 18562.5,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "a flat profile: much air in its bbox"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "egen.distansbult",
+   "familj": "distansbult",
+   "namn": "Standoff M2.5-M6 (female/male)",
+   "klass": "familj",
+   "kalla": "egen:recept_familjer_egna_v1",
+   "licens": "own geometry; dimensions from publicly published catalogues",
+   "taggar": [
+    "fastelement",
+    "distans",
+    "montage",
+    "elektronik"
+   ],
+   "arketyp": "distansbult",
+   "standard": null,
+   "tabellrader": 5,
+   "variant_count": 120,
+   "param_schema": [
+    {
+     "namn": "key",
+     "enhet": "-",
+     "typ": "str",
+     "min": null,
+     "max": null,
+     "default": "M3",
+     "beskrivning": "gangbeteckning"
+    },
+    {
+     "namn": "l",
+     "enhet": "mm",
+     "typ": "float",
+     "min": 3.0,
+     "max": 200.0,
+     "default": 20.0,
+     "beskrivning": "pelarlangd"
+    },
+    {
+     "namn": "typ",
+     "enhet": "-",
+     "typ": "str",
+     "min": null,
+     "max": null,
+     "default": "hona",
+     "beskrivning": "hona | hane"
+    }
+   ],
+   "n_sjalvtest": 3,
+   "extra": {
+    "provenans_klass": "hand-inmatad",
+    "varning": "the dimension table is hand-entered from general catalogue knowledge, NOT machine-read from a named source"
+   },
+   "sjalvtest": {
+    "status": "PASS",
+    "n_kontroller": 12,
+    "n_oberoende": 3,
+    "fall": [
+     {
+      "etikett": "M3 hona l=20.0",
+      "status": "PASS",
+      "matt": {
+       "volym_mm3": 382.5736998780445,
+       "bbox_x_mm": 6.350852961085883,
+       "bbox_y_mm": 5.5,
+       "bbox_z_mm": 20.0,
+       "bbox_xy_max_mm": 6.350852961085883,
+       "bbox_xy_min_mm": 5.5,
+       "bbox_diag_mm": 21.692932796957937,
+       "solids": 1.0
+      },
+      "fel": null,
+      "kontroller": [
+       {
+        "storhet": "bbox_xy_min_mm",
+        "matt": 5.5,
+        "lo": 5.39,
+        "hi": 5.61,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "width across flats"
+       },
+       {
+        "storhet": "bbox_xy_max_mm",
+        "matt": 6.350852961085883,
+        "lo": 6.215,
+        "hi": 6.38,
+        "pass": true,
+        "oberoende": true,
+        "motivering": "INDEPENDENT: a regular hexagon's across-corners dimension MUST be 2/sqrt(3) = 1.1547 x the width across flats -- a geometric identity the builder was not fed; a square gives 1.414 and a cylinder 1.000, both fail"
+       },
+       {
+        "storhet": "bbox_z_mm",
+        "matt": 20.0,
+        "lo": 19.98,
+        "hi": 26.5265,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "pillar length (plus any male stud)"
+       },
+       {
+        "storhet": "volym_mm3",
+        "matt": 382.5736998780445,
+        "lo": 0.0,
+        "hi": 733.5235170054195,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "below a solid hexagonal prism (the bore is present)"
+       }
+      ]
+     },
+     {
+      "etikett": "M4 hane l=20.0",
+      "status": "PASS",
+      "matt": {
+       "volym_mm3": 663.9993538706527,
+       "bbox_x_mm": 8.08290376865476,
+       "bbox_y_mm": 6.999999999999998,
+       "bbox_z_mm": 26.0,
+       "bbox_xy_max_mm": 8.08290376865476,
+       "bbox_xy_min_mm": 6.999999999999998,
+       "bbox_diag_mm": 28.112867753634337,
+       "solids": 2.0
+      },
+      "fel": null,
+      "kontroller": [
+       {
+        "storhet": "bbox_xy_min_mm",
+        "matt": 6.999999999999998,
+        "lo": 6.859999999999999,
+        "hi": 7.140000000000001,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "width across flats"
+       },
+       {
+        "storhet": "bbox_xy_max_mm",
+        "matt": 8.08290376865476,
+        "lo": 7.909999999999999,
+        "hi": 8.12,
+        "pass": true,
+        "oberoende": true,
+        "motivering": "INDEPENDENT: a regular hexagon's across-corners dimension MUST be 2/sqrt(3) = 1.1547 x the width across flats -- a geometric identity the builder was not fed; a square gives 1.414 and a cylinder 1.000, both fail"
+       },
+       {
+        "storhet": "bbox_z_mm",
+        "matt": 26.0,
+        "lo": 19.98,
+        "hi": 26.5265,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "pillar length (plus any male stud)"
+       },
+       {
+        "storhet": "volym_mm3",
+        "matt": 663.9993538706527,
+        "lo": 0.0,
+        "hi": 1188.1868539922498,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "below a solid hexagonal prism (the bore is present)"
+       }
+      ]
+     },
+     {
+      "etikett": "M6 hona l=20.0",
+      "status": "PASS",
+      "matt": {
+       "volym_mm3": 1166.5641299227145,
+       "bbox_x_mm": 11.547005383792515,
+       "bbox_y_mm": 10.0,
+       "bbox_z_mm": 20.0,
+       "bbox_xy_max_mm": 11.547005383792515,
+       "bbox_xy_min_mm": 10.0,
+       "bbox_diag_mm": 25.16611478423583,
+       "solids": 1.0
+      },
+      "fel": null,
+      "kontroller": [
+       {
+        "storhet": "bbox_xy_min_mm",
+        "matt": 10.0,
+        "lo": 9.8,
+        "hi": 10.2,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "width across flats"
+       },
+       {
+        "storhet": "bbox_xy_max_mm",
+        "matt": 11.547005383792515,
+        "lo": 11.299999999999999,
+        "hi": 11.6,
+        "pass": true,
+        "oberoende": true,
+        "motivering": "INDEPENDENT: a regular hexagon's across-corners dimension MUST be 2/sqrt(3) = 1.1547 x the width across flats -- a geometric identity the builder was not fed; a square gives 1.414 and a cylinder 1.000, both fail"
+       },
+       {
+        "storhet": "bbox_z_mm",
+        "matt": 20.0,
+        "lo": 19.98,
+        "hi": 26.5265,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "pillar length (plus any male stud)"
+       },
+       {
+        "storhet": "volym_mm3",
+        "matt": 1166.5641299227145,
+        "lo": 0.0,
+        "hi": 2424.871130596428,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "below a solid hexagonal prism (the bore is present)"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "egen.gangstang",
+   "familj": "gangstang",
+   "namn": "Gangstang M3-M24 (DIN 975-lika)",
+   "klass": "familj",
+   "kalla": "egen:recept_familjer_egna_v1",
+   "licens": "own geometry; dimensions from publicly published catalogues",
+   "taggar": [
+    "fastelement",
+    "gangstang",
+    "metrisk"
+   ],
+   "arketyp": "gangstang",
+   "standard": null,
+   "tabellrader": 11,
+   "variant_count": 110,
+   "param_schema": [
+    {
+     "namn": "key",
+     "enhet": "-",
+     "typ": "str",
+     "min": null,
+     "max": null,
+     "default": "M8",
+     "beskrivning": "gangbeteckning"
+    },
+    {
+     "namn": "l",
+     "enhet": "mm",
+     "typ": "float",
+     "min": 10.0,
+     "max": 3000.0,
+     "default": 1000.0,
+     "beskrivning": "kaplangd"
+    }
+   ],
+   "n_sjalvtest": 3,
+   "extra": {
+    "provenans_klass": "hand-inmatad",
+    "varning": "the dimension table is hand-entered from general catalogue knowledge, NOT machine-read from a named source"
+   },
+   "sjalvtest": {
+    "status": "PASS",
+    "n_kontroller": 9,
+    "n_oberoende": 3,
+    "fall": [
+     {
+      "etikett": "M4 l=1000.0",
+      "status": "PASS",
+      "matt": {
+       "volym_mm3": 10985.835350338148,
+       "bbox_x_mm": 3.74,
+       "bbox_y_mm": 3.74,
+       "bbox_z_mm": 1000.0,
+       "bbox_xy_max_mm": 3.74,
+       "bbox_xy_min_mm": 3.74,
+       "bbox_diag_mm": 1000.0139875021749,
+       "solids": 1.0
+      },
+      "fel": null,
+      "kontroller": [
+       {
+        "storhet": "bbox_x_mm",
+        "matt": 3.74,
+        "lo": 3.6,
+        "hi": 4.004,
+        "pass": true,
+        "oberoende": true,
+        "motivering": "INDEPENDENT: a threaded rod's OUTER dimension may never exceed its nominal thread diameter (and not fall below the core diameter ~0.85d) -- a builder that set radius=d by mistake would give 2d and fail here"
+       },
+       {
+        "storhet": "bbox_z_mm",
+        "matt": 1000.0,
+        "lo": 999.0,
+        "hi": 1000.9999999999999,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "cut length"
+       },
+       {
+        "storhet": "volym_mm3",
+        "matt": 10985.835350338148,
+        "lo": 10656.260289828006,
+        "hi": 11315.410410848293,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "effektiv kardiametervolym"
+       }
+      ]
+     },
+     {
+      "etikett": "M8 l=1000.0",
+      "status": "PASS",
+      "matt": {
+       "volym_mm3": 43943.34140135259,
+       "bbox_x_mm": 7.48,
+       "bbox_y_mm": 7.48,
+       "bbox_z_mm": 1000.0,
+       "bbox_xy_max_mm": 7.48,
+       "bbox_xy_min_mm": 7.48,
+       "bbox_diag_mm": 1000.0559488348639,
+       "solids": 1.0
+      },
+      "fel": null,
+      "kontroller": [
+       {
+        "storhet": "bbox_x_mm",
+        "matt": 7.48,
+        "lo": 7.2,
+        "hi": 8.008,
+        "pass": true,
+        "oberoende": true,
+        "motivering": "INDEPENDENT: a threaded rod's OUTER dimension may never exceed its nominal thread diameter (and not fall below the core diameter ~0.85d) -- a builder that set radius=d by mistake would give 2d and fail here"
+       },
+       {
+        "storhet": "bbox_z_mm",
+        "matt": 1000.0,
+        "lo": 999.0,
+        "hi": 1000.9999999999999,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "cut length"
+       },
+       {
+        "storhet": "volym_mm3",
+        "matt": 43943.34140135259,
+        "lo": 42625.04115931202,
+        "hi": 45261.64164339317,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "effektiv kardiametervolym"
+       }
+      ]
+     },
+     {
+      "etikett": "M16 l=1000.0",
+      "status": "PASS",
+      "matt": {
+       "volym_mm3": 175773.36560541036,
+       "bbox_x_mm": 14.96,
+       "bbox_y_mm": 14.96,
+       "bbox_z_mm": 1000.0,
+       "bbox_xy_max_mm": 14.96,
+       "bbox_xy_min_mm": 14.96,
+       "bbox_diag_mm": 1000.2237765620251,
+       "solids": 1.0
+      },
+      "fel": null,
+      "kontroller": [
+       {
+        "storhet": "bbox_x_mm",
+        "matt": 14.96,
+        "lo": 14.4,
+        "hi": 16.016,
+        "pass": true,
+        "oberoende": true,
+        "motivering": "INDEPENDENT: a threaded rod's OUTER dimension may never exceed its nominal thread diameter (and not fall below the core diameter ~0.85d) -- a builder that set radius=d by mistake would give 2d and fail here"
+       },
+       {
+        "storhet": "bbox_z_mm",
+        "matt": 1000.0,
+        "lo": 999.0,
+        "hi": 1000.9999999999999,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "cut length"
+       },
+       {
+        "storhet": "volym_mm3",
+        "matt": 175773.36560541036,
+        "lo": 170500.1646372481,
+        "hi": 181046.5665735727,
+        "pass": true,
+        "oberoende": false,
+        "motivering": "effektiv kardiametervolym"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "avvisade": [],
+ "instans_fil": "src/field_engine/artifacts/recept_instanser_v1.jsonl",
+ "instanser": {
+  "tot": 0,
+  "geometri_matta": 0,
+  "endast_metadata": 0,
+  "per_kalla": {}
+ },
+ "instanser_avvisade": [],
+ "n_instanser_avvisade": 0,
+ "rakning": {
+  "familjer": 5,
+  "instanser": 0,
+  "instanser_geometri_matta": 0,
+  "instanser_endast_metadata": 0,
+  "delvarianter_ur_familjer": 419,
+  "delteckning_tot": 419,
+  "avvisade": 0,
+  "instanser_avvisade": 0,
+  "sjalvtest_pass_andel": 1.0,
+  "n_kontroller_tot": 51,
+  "n_oberoende_kontroller": 14,
+  "recept_med_oberoende_kontroll": 5,
+  "andel_recept_med_oberoende_kontroll": 1.0,
+  "per_kalla": {
+   "egen": {
+    "familjer": 5,
+    "instanser": 0,
+    "delvarianter": 419,
+    "licenser": {
+     "own geometry; dimensions from publicly published catalogues": 5
+    }
+   }
+  },
+  "delvarianter_per_tagg": {
+   "fastelement": 230,
+   "elektronik": 165,
+   "montage": 165,
+   "profil": 144,
+   "aluprofil": 144,
+   "ram": 144,
+   "distans": 120,
+   "gangstang": 110,
+   "metrisk": 110,
+   "t-spar": 96,
+   "v-spar": 48,
+   "skena": 45,
+   "din-skena": 45
+  },
+  "delteckning_geometriskt_realiserbar": 419,
+  "mal_10000": {
+   "nu_geometriskt_realiserbar": 419,
+   "kvar_till_10000": 9581,
+   "andel_geometrisk": 0.0419,
+   "nu_inkl_sha256_pinnad_katalog": 419,
+   "andel_inkl_katalog": 0.0419
+  }
+ }
+}

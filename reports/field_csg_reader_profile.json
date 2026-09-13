@@ -1,0 +1,86 @@
+[
+  {
+    "curved": false,
+    "pitch": 0.25,
+    "leg": 0,
+    "total_ms": 69.35728499999999,
+    "stages_ms": {
+      "native_c": 7.615299000000005,
+      "reader": 17.79630700000002,
+      "pack": 48.358332
+    },
+    "calls": {
+      "native_c": 630,
+      "reader": 630,
+      "pack": 1
+    },
+    "hashes": [
+      "491aa6105e17681292235dc64718f236089e8f5a9b8f60ff2bbd03060af49c7c",
+      "3b5e9ffb9a79d3626b027f107cd7762224aa24b712d184959dacac8316a22216",
+      "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+    ]
+  },
+  {
+    "curved": false,
+    "pitch": 0.25,
+    "leg": 1,
+    "total_ms": 69.22155,
+    "stages_ms": {
+      "native_c": 7.489186000000007,
+      "reader": 17.50678199999999,
+      "pack": 48.624717999999994
+    },
+    "calls": {
+      "native_c": 630,
+      "reader": 630,
+      "pack": 1
+    },
+    "hashes": [
+      "491aa6105e17681292235dc64718f236089e8f5a9b8f60ff2bbd03060af49c7c",
+      "3b5e9ffb9a79d3626b027f107cd7762224aa24b712d184959dacac8316a22216",
+      "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+    ]
+  },
+  {
+    "curved": true,
+    "pitch": 0.25,
+    "leg": 0,
+    "total_ms": 77.139132,
+    "stages_ms": {
+      "native_c": 3.8792030000000004,
+      "reader": 10.003973999999994,
+      "pack": 65.158256
+    },
+    "calls": {
+      "native_c": 378,
+      "reader": 378,
+      "pack": 1
+    },
+    "hashes": [
+      "5cfb397dbd00418b1bee7d664ae1479ee0cb717df80d2bdfd259aec0bf40d143",
+      "e3792f302f8ef0c4093de1f8eeadba796791b63d415a46694ac38f050a0f6bca",
+      "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+    ]
+  },
+  {
+    "curved": true,
+    "pitch": 0.25,
+    "leg": 1,
+    "total_ms": 76.924917,
+    "stages_ms": {
+      "native_c": 3.9019700000000004,
+      "reader": 9.940256000000003,
+      "pack": 65.015894
+    },
+    "calls": {
+      "native_c": 378,
+      "reader": 378,
+      "pack": 1
+    },
+    "hashes": [
+      "5cfb397dbd00418b1bee7d664ae1479ee0cb717df80d2bdfd259aec0bf40d143",
+      "e3792f302f8ef0c4093de1f8eeadba796791b63d415a46694ac38f050a0f6bca",
+      "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+    ]
+  }
+]

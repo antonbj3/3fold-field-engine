@@ -1,0 +1,113 @@
+{
+  "area": 482083.8972918537,
+  "field_sha256": "11ef98e3796e24a9456f3d209d99f161b0d6490c249a29f7e77412ec8f1927f6",
+  "field_shape": [
+    120,
+    120,
+    7
+  ],
+  "freeform_area": 158845.5971386187,
+  "gates": {
+    "closed_sections": true,
+    "partial_coverage": true,
+    "positive_volume": true,
+    "watertight": true
+  },
+  "origin": [
+    -288.1,
+    -288.1,
+    -4.8
+  ],
+  "pass": true,
+  "pitch": 4.8,
+  "primitive_coverage": 0.6705021718606512,
+  "rasterisation_bound": 0.41282290795854254,
+  "rho_shape": [
+    32,
+    32,
+    5
+  ],
+  "sections": [
+    {
+      "absolute_loop_areas": [
+        149579.6052373839,
+        705.4318780863156,
+        705.4318781044284
+      ],
+      "closed_loops": 3,
+      "loops": 3,
+      "vertices": [
+        616,
+        28,
+        28
+      ],
+      "z_index": 1
+    },
+    {
+      "absolute_loop_areas": [
+        119801.43873070812,
+        2383.4981119927293,
+        2383.4981120608086
+      ],
+      "closed_loops": 3,
+      "loops": 3,
+      "vertices": [
+        630,
+        56,
+        56
+      ],
+      "z_index": 2
+    },
+    {
+      "absolute_loop_areas": [
+        9843.083273891365,
+        9843.083273809336,
+        42373.98405614337,
+        2327.0814321781254,
+        2327.081432173534
+      ],
+      "closed_loops": 5,
+      "loops": 5,
+      "vertices": [
+        148,
+        148,
+        214,
+        82,
+        82
+      ],
+      "z_index": 3
+    },
+    {
+      "absolute_loop_areas": [
+        119358.34432632968,
+        2400.8054485865728,
+        2400.805448605583
+      ],
+      "closed_loops": 3,
+      "loops": 3,
+      "vertices": [
+        624,
+        56,
+        56
+      ],
+      "z_index": 4
+    },
+    {
+      "absolute_loop_areas": [
+        150108.11371244022,
+        705.0809307335595,
+        705.0809307455496
+      ],
+      "closed_loops": 3,
+      "loops": 3,
+      "vertices": [
+        612,
+        28,
+        28
+      ],
+      "z_index": 5
+    }
+  ],
+  "status": "SYNTHETIC-ONLY",
+  "volume": 2802657.825414669
+}

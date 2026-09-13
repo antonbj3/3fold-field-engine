@@ -1,0 +1,98 @@
+{
+  "rows": [
+    {
+      "case": "sphere",
+      "legs": [
+        {
+          "exit": 0,
+          "counts_sha256": "117ed2acba3a0050879d9d89ed2e82531cbe2ebef0f97a375f3addb8523a9310",
+          "distance_sha256": "bde4a361951b59382a35222e25c8cbb5e4ec8ae238816cb306fe9b04746adac9",
+          "occupancy_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_distance_difference": 0.0
+        },
+        {
+          "exit": 0,
+          "counts_sha256": "117ed2acba3a0050879d9d89ed2e82531cbe2ebef0f97a375f3addb8523a9310",
+          "distance_sha256": "bde4a361951b59382a35222e25c8cbb5e4ec8ae238816cb306fe9b04746adac9",
+          "occupancy_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_distance_difference": 0.0
+        }
+      ]
+    },
+    {
+      "case": "sphere_fine",
+      "legs": [
+        {
+          "exit": 0,
+          "counts_sha256": "8f642312ebbc86bd5ada6849edc771bad4f8129d60a48739e3fe609b6d24b057",
+          "distance_sha256": "ccea4d74c815ddc4a5cb1eb8aaecdf836ecca75e3cfb84dd4f25d4ef00c33f52",
+          "occupancy_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_distance_difference": 0.0
+        },
+        {
+          "exit": 0,
+          "counts_sha256": "8f642312ebbc86bd5ada6849edc771bad4f8129d60a48739e3fe609b6d24b057",
+          "distance_sha256": "ccea4d74c815ddc4a5cb1eb8aaecdf836ecca75e3cfb84dd4f25d4ef00c33f52",
+          "occupancy_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_distance_difference": 0.0
+        }
+      ]
+    },
+    {
+      "case": "sphere_overlap",
+      "legs": [
+        {
+          "exit": 0,
+          "counts_sha256": "0cf88b6884e659911bc0b4edb5011c37e77de28b47f37d33175536ab5d2aae08",
+          "distance_sha256": "eeef967702964e101269d0deeb57a37acd7b14ac94c5a5cd942e4b81c8c80b2f",
+          "occupancy_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_distance_difference": 0.0
+        },
+        {
+          "exit": 0,
+          "counts_sha256": "0cf88b6884e659911bc0b4edb5011c37e77de28b47f37d33175536ab5d2aae08",
+          "distance_sha256": "eeef967702964e101269d0deeb57a37acd7b14ac94c5a5cd942e4b81c8c80b2f",
+          "occupancy_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_distance_difference": 0.0
+        }
+      ]
+    },
+    {
+      "case": "subdivided_rotated_box",
+      "legs": [
+        {
+          "exit": 0,
+          "counts_sha256": "4b966c84647fc93d158d77611302e8a184dff93b2cf9f04406ad2829639c0870",
+          "distance_sha256": "47d5b0aac91420f70a0399de587bd379c7cc179a855204208b323203327f2003",
+          "occupancy_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_distance_difference": 0.0
+        },
+        {
+          "exit": 0,
+          "counts_sha256": "4b966c84647fc93d158d77611302e8a184dff93b2cf9f04406ad2829639c0870",
+          "distance_sha256": "47d5b0aac91420f70a0399de587bd379c7cc179a855204208b323203327f2003",
+          "occupancy_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_distance_difference": 0.0
+        }
+      ]
+    }
+  ],
+  "gates": {
+    "runtime_success": true,
+    "full_repeat": true,
+    "exact_occupancy": true,
+    "exact_distance": true,
+    "no_observed_current_boot_fault": true
+  },
+  "timing_measured": false,
+  "binary_sha256": "bfa7cea50849ae466cb957298dc0f37fbf188dfdcbbed91ab9c707a6b3594bcc",
+  "ptx_sha256": "e49cb5ab6eb7b09d8ad9cc5265a06f82b8026ca5e6b4f9768235e8703b9f554d"
+}

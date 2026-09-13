@@ -1,0 +1,9 @@
+{
+  "exit": 0,
+  "result": {
+    "cases": 24,
+    "exact": true,
+    "sanitizers": "address,undefined"
+  },
+  "stderr": ""
+}

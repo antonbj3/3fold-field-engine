@@ -1,0 +1,9 @@
+{
+  "reservation": "D-INTERVAL-SIGN-122046",
+  "start": "2026-09-13T12:20:46.274460+00:00",
+  "exit": 1,
+  "gpu": "NVIDIA GeForce RTX 5070, 580.178.04, 13 %, 1477 MiB",
+  "contexts": "",
+  "end": "2026-09-13T12:21:04.698113+00:00",
+  "scope": "User-authorized shared-lock window; portable interval inputs, RT hit controls and full owned service. Before/between/after journal guards pass. No compute contexts; desktop background recorded. Lock released and no settings changed."
+}

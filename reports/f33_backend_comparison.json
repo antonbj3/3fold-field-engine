@@ -1,0 +1,30 @@
+{
+  "gate": 1.15,
+  "passed": true,
+  "byte_exact_within_and_across_hosts": true,
+  "stored_bytes_per_host": 41050752,
+  "modal_app": "ap-nQKxMBF9qrUDcVts36KgWc",
+  "modal_stamp": "20260913T182942Z-d-f33-backend-candidate",
+  "source_sha256": "2ee41b021542a136420369b0f5070671da871541193f0c75d27f7c4a462126fe",
+  "speedups": {
+    "local": [
+      1.2993030716082332,
+      1.3295286246061027
+    ],
+    "modal": [
+      1.2160671248563286,
+      1.1991796460768982
+    ]
+  },
+  "scope": "CPU arithmetic on local and Modal L4 host. Four complete original selftests per host, original four checks and full trajectory/report parity. Timing metadata excluded only; actual A* wall threshold retained.",
+  "backend_selection": {
+    "old": "numpy",
+    "new": "native"
+  },
+  "backend_source_sha256": {
+    "src/field_engine/lbm_domare_v1.py": "d18e1827ccf32b8feae9da349321d8685d0f81cdde69c06a560822c09b3bd6f5",
+    "src/field_engine/lbm_collision_native_v1.py": "d36b6c820c2f43e18c8355d928150ea44687be1fc92816123e54da6aaf3ad663",
+    "src/field_engine/lbm_collision_native_v1/collision.cpp": "2421c0dfd5ae70287cbd3bf3e2b184ef66abeba207a31ab178b5d08dcd386bc2",
+    "src/field_engine/opt/duct_growth_diff_v1.py": "98ed54b77a85ac7587be76517d04e489a90e6ffef92b038de26f7f58ed4d8565"
+  }
+}

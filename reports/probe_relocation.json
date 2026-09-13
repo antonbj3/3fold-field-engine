@@ -1,0 +1,1043 @@
+{
+  "scope": "Repository-local source relocation and import/command routing. Python arithmetic and gates are AST-identical after explicit routing/source-provenance normalization; native changes are resolved include paths only. Frozen numerical references are not replaced.",
+  "moved_files": 116,
+  "engine_cli_files": 32,
+  "rows": [
+    {
+      "old": "src/field_engine/field_native_pack_probe.py",
+      "new": "probes/field_engine/field_native_pack_probe.py",
+      "old_sha256": "fe0ea5acbb4f7dece48de56af8524b09f452abfeef5087527d23be45882eeea7",
+      "new_sha256": "ea29c62c2fdae9ffe5ffdca91989e421c5395f24b8f84b3a1b6f6b312a647103",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_tail_graph_service_probe.py",
+      "new": "probes/field_engine/field_tail_graph_service_probe.py",
+      "old_sha256": "2c9272eec488a1e9db4b7714b89d5a8ec8e0a1d51ef27f01f71e27c25e6ad30e",
+      "new_sha256": "563be470d407b20b8c4257ba7a1180d01a9711ef978612345ed690c122e5a740",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_owned_gpu_probe.py",
+      "new": "probes/field_engine/field_owned_gpu_probe.py",
+      "old_sha256": "63f28e6e6cab985313f674acf878b68b41f1ecccd16dea207fbfd692260c0584",
+      "new_sha256": "202358d759504f724b2d468c3fe8272430cf4c5322d7aa8820378c083cb90772",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_interval_hits_probe.py",
+      "new": "probes/field_engine/field_rt_interval_hits_probe.py",
+      "old_sha256": "de6c65d93e10b7ac54b47bf548e91aaecb9e3028fb881d06f786f967f7181609",
+      "new_sha256": "b4da10fd240ba3192b8ef2b560a4e32f7b7cb406610b16bc46236e2f41ffef48",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_winding_precision_probe.py",
+      "new": "probes/field_engine/field_rt_winding_precision_probe.py",
+      "old_sha256": "e23c42679e0613d3a4d304a7cf4ba7dac1bef04b06debdc136c129b674338749",
+      "new_sha256": "327b32d3e9142309a7cbc64359cd5b77430e9b3c44d62509b321dc86fd51d6aa",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_mesh_compact_stage_probe.py",
+      "new": "probes/field_engine/field_mesh_compact_stage_probe.py",
+      "old_sha256": "5f26cbe3f29ac15962a5334ff06259e659eccda4adc3f027d95d42face100a9b",
+      "new_sha256": "18d9a0820ccc97a826524f8a2b84d4848375dc998266e367e11dc569997b0ae1",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_columns_probe.py",
+      "new": "probes/field_engine/field_rt_columns_probe.py",
+      "old_sha256": "dd2f716d1ebcb251aa40aba10d05c773af0bca5e18278d12773283a9c19a5053",
+      "new_sha256": "6426f3346b005874f0d31d9ed18740c18d1c442a83154baa297f228c0b3d987d",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_validated_timing_probe.py",
+      "new": "probes/field_engine/field_rt_validated_timing_probe.py",
+      "old_sha256": "cda0099c6907d351643390343a3923d99a89e1c45c838e8750462b47fcdf1337",
+      "new_sha256": "04bd964d904920ebafb360e8d7ad45da8aaa504daf4c8001823fd56fa59beb16",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_cuda_columns_probe.py",
+      "new": "probes/field_engine/field_cuda_columns_probe.py",
+      "old_sha256": "0ab48b69f731b7cf7889a180b0e591727d8a5bdc7b2932ed0886b94cc630f5fb",
+      "new_sha256": "cd1b602cdd213299bd19e89b62189141193d52f1da66d0efcfea8a3f58b30626",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_persistent_edt_probe.py",
+      "new": "probes/field_engine/field_persistent_edt_probe.py",
+      "old_sha256": "0f27d1337b7afb81a82cd9500aff7c46293f6f783ab07ee8772389b96e65401e",
+      "new_sha256": "3e60254a1d983ac653db65bd88b5b8714a943aa6b57cc96485f8d245293f0e22",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_csg_curved_probe.py",
+      "new": "probes/field_engine/field_csg_curved_probe.py",
+      "old_sha256": "1018036de56bae84c7b6ca52501b1b265c9fe6fd6be009375a169e89225b329b",
+      "new_sha256": "67d32937f88392b4c21e47bcff834b13d38241035cc8ff63d0775693a52ac5e0",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_compact_capacity_probe.py",
+      "new": "probes/field_engine/field_compact_capacity_probe.py",
+      "old_sha256": "7b3ba4b453d7ca0da85a548e21c47ea39b1ef9b7f2b288e26c67c71763d143b4",
+      "new_sha256": "add300b2214a9a28640e55a6578d4c422c442d30bfefad8ac76b4f14f93aee59",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_lifecycle_probe.py",
+      "new": "probes/field_engine/field_rt_lifecycle_probe.py",
+      "old_sha256": "01cd20f7e85d909ddabdc2164869a8d12ec51604f542942fa5cd7028f28bec87",
+      "new_sha256": "b7984234bb08f9ace55741b39ca485e9a272fdcbc18910215d52bb6a246bbb59",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_api_probe.py",
+      "new": "probes/field_engine/field_rt_api_probe.py",
+      "old_sha256": "d4085d8a21c07b902b508d8aea182d42cb0ab9189b2893686fba769082a477b1",
+      "new_sha256": "7f5672eff8bb0e0a0f2a5f05c9c361522fcbccc6e74faf2d54c484d92ea44734",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_tail_graph_profile.py",
+      "new": "probes/field_engine/field_tail_graph_profile.py",
+      "old_sha256": "bc849ca29d98054bdf926a7877d8eaa93c4e3cc9be58c3f70d6459c251b014a1",
+      "new_sha256": "5cf3e25dd1a6fd55e6870c5b37569751c653ed7caec5140c6250454c1904eadf",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_quotient_pair_probe.py",
+      "new": "probes/field_engine/field_quotient_pair_probe.py",
+      "old_sha256": "06917ee8a82fb2cba9890636fad3af6d9568a7e0b86f7b57512fe622109d5106",
+      "new_sha256": "13e1baf26dff699c06e9a390bc8447e8bf3f27829077d27246c3072fbd987f32",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_service_probe.py",
+      "new": "probes/field_engine/field_service_probe.py",
+      "old_sha256": "5e38b34a80f2db8921ac34af95a5529fd49bbc308fc5a8b62aeb74ea656ae45c",
+      "new_sha256": "ee4c54ee65dfb975e06b4f46bc939242ff8f03783a49ddfc04efff67231ff557",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_native_edt_probe.py",
+      "new": "probes/field_engine/field_rt_native_edt_probe.py",
+      "old_sha256": "2cfaf8b425b1ab97bf16bd28b02ee38df8fbff0157adeb315eaf1dadc6c734c5",
+      "new_sha256": "c7704d4b3720b81d26bf1c3d695c650de09bcd2cdebaff99406a20def23a6b96",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_adaptive_canonical_probe.py",
+      "new": "probes/field_engine/field_adaptive_canonical_probe.py",
+      "old_sha256": "08d04f71aecf1e8f8877055ee8aab8a5cdabeb2ca211a5daf977f1094debe1b0",
+      "new_sha256": "70903777ad18ad8b9adf5032e09b466bab46c4823d6d85156a5d198674b7a4a7",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_owned_service_cpu_probe.py",
+      "new": "probes/field_engine/field_owned_service_cpu_probe.py",
+      "old_sha256": "68044f16daf8a9047b9b017dfcbc7a607da7de64a33772612116c77607a0a0ea",
+      "new_sha256": "c07936fb0be79cd5d2cb0cc8b0c73d6803b52776225945dc84bab544275e5420",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_ranked_columns_probe.py",
+      "new": "probes/field_engine/field_ranked_columns_probe.py",
+      "old_sha256": "b772adf01809184cb2597de6d3f587279120c827c24b3878bb7f4ab2dc7e7028",
+      "new_sha256": "6e619ea71477aa287a794f1885dd715fff2e8faf43af74d96fadc0b3a689f720",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_recipe_sections_probe.py",
+      "new": "probes/field_engine/field_recipe_sections_probe.py",
+      "old_sha256": "6ae7a778d41d4ac547c7e278dddf1255d2c456acac1f66eb8c2b27439cd95309",
+      "new_sha256": "ba3dabd4171edc194183a6f949d9fb7954af842dfc5835b74b65130644362408",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_interval_sign_hits_probe.py",
+      "new": "probes/field_engine/field_rt_interval_sign_hits_probe.py",
+      "old_sha256": "727d815fa7cda10b2ff5dcf603ec78d2ee14c72977d5724ed7c4e7550e489261",
+      "new_sha256": "dff42c442716cece748dd116aa72d7941a791123dac9dfd8be89fdf2acb5f88f",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_mesh_columns_stage_probe.py",
+      "new": "probes/field_engine/field_mesh_columns_stage_probe.py",
+      "old_sha256": "369498b8b60f9a1bb3f7906ef837ef31098d4e3eabe846a4379b0b53899938c3",
+      "new_sha256": "b16fc4e0f5ec6617ff4aaac776fc860249f012e6cd413a50e9a85a63fa932ab2",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_parallel_edt_probe.py",
+      "new": "probes/field_engine/field_rt_parallel_edt_probe.py",
+      "old_sha256": "ace83c03a02e8e7791f38b65c7748e716a17a0dce805927b35534e160b90fe0d",
+      "new_sha256": "febbeabab3a9675b4b2d8930c495fd8a67684169a20687daf51353bd687b5cf7",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_prepared_cpu_probe.py",
+      "new": "probes/field_engine/field_rt_prepared_cpu_probe.py",
+      "old_sha256": "5ae0cfa66b007f29f2444351a65e96bbfb343103509bcc91f9da79e7bcb6304c",
+      "new_sha256": "58f12a629f6462f20554cd31ab74d4b6804836d9cfe67ba5d5dff3b214a7d717",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_edt_integer_probe.py",
+      "new": "probes/field_engine/field_edt_integer_probe.py",
+      "old_sha256": "60029b39189f227f2eb25d822c1c77b09a6e68ae978b06d580feb3e0342bb2f5",
+      "new_sha256": "003cdbc1a978385224fe65a544a7df38e48f1f9af3f27436b9dc4734b2320435",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_mesh_native_mask_stage_probe.py",
+      "new": "probes/field_engine/field_mesh_native_mask_stage_probe.py",
+      "old_sha256": "d2c9fbf548cf8f829976064046c66387fc326ea52c383d58dc6beddbd03168f5",
+      "new_sha256": "82461874e3160bff77c4c6805424cc7f37b930421164f80885cbf532cda88037",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_mesh_probe.py",
+      "new": "probes/field_engine/field_rt_mesh_probe.py",
+      "old_sha256": "8694090f56f2da45f0afa5d3deb8f2f66ff7cb457e5babe68a6a108f8c158f91",
+      "new_sha256": "2a351bad65b6ef090a2dc7d2e5bc3686db506313e918aed7b38a7626be2f3473",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_csg_fused_probe.py",
+      "new": "probes/field_engine/field_csg_fused_probe.py",
+      "old_sha256": "07208e8e9c0147b391f820dcd083a9bf762acfe1f9c5c439c3f80adfca0525ee",
+      "new_sha256": "6aeeae45d7018c5a51e9a840c5207c00a5447fcd318bbc2b0a6f7b2d67f379ea",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_dynamic_timing_probe.py",
+      "new": "probes/field_engine/field_rt_dynamic_timing_probe.py",
+      "old_sha256": "6dfdeafd60efbc8f300a9574e06dc490b3cf7afe9013db3685b371609ec52f44",
+      "new_sha256": "75acbda0bcdd441469ec140051bea4be54e472b72196e0095e4fd5e0417e0f42",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_interval_cpu_probe.py",
+      "new": "probes/field_engine/field_rt_interval_cpu_probe.py",
+      "old_sha256": "82c3d0731b92f924e8932799a5c08ee5bd30289852131ed91c9a24e30c7b103d",
+      "new_sha256": "fbc31347dcb7675a1e1e2fe843bdba7c52e7a6a689f329ba3af4065893f2c807",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_interval_sign_gpu_probe.py",
+      "new": "probes/field_engine/field_rt_interval_sign_gpu_probe.py",
+      "old_sha256": "3d14b6371b8b592a5fb1b3fe3d0f77ab85a9fb3c35f0435381f3c0b1337cd660",
+      "new_sha256": "d86f9a56b805b15706c01cb602ee95e32c046f0067eda8d5c48fe928c3e4ca74",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_contract_probe.py",
+      "new": "probes/field_engine/field_rt_contract_probe.py",
+      "old_sha256": "f317aba71280408695fbdfda0f0d47356c5fd54a16c0c45b64053e6305cf7f48",
+      "new_sha256": "be684acca4959f0fb38ed7e15efb798e94816b30cace57f1b767a6b68034344a",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_native_mask_timing_probe.py",
+      "new": "probes/field_engine/field_native_mask_timing_probe.py",
+      "old_sha256": "523d4213cda754ea84f9c9fe996863549f436f57b53d3ebb485b2194561fc4ee",
+      "new_sha256": "1f22d250d33718b94fd35326f5d1cc8e6b38583b71eb526093a863a8a19b331b",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_edt_wrapper_probe.py",
+      "new": "probes/field_engine/field_edt_wrapper_probe.py",
+      "old_sha256": "f3e9884f0e36b3d3eef562bb00ce1ce902fde0970d391bc71d2259f9c280d0f6",
+      "new_sha256": "5554bcff4e1fee67ddba4a80370c107ce368801def45ab3a7b31914e1886e505",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_native_phase_profile.py",
+      "new": "probes/field_engine/field_rt_native_phase_profile.py",
+      "old_sha256": "adac013cb7380e9505801430f9c370381c26310abbf9a7fcc04fb08a2a48e9b7",
+      "new_sha256": "51f1a32b38d986b8bd797eab1a889c9986fd39a48b7ea18b2173859b56f91d8b",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_gwn_ordered_probe.py",
+      "new": "probes/field_engine/field_gwn_ordered_probe.py",
+      "old_sha256": "dac768d8d7b6d027c1a766eaa7dc2a6d6ab7f5223f6889fb12a6049d246979a7",
+      "new_sha256": "fb305b78e8af7098a7e94a6bb349fd47bd8f2618c52f75dbfb704885f334b6cb",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_service_persistent_probe.py",
+      "new": "probes/field_engine/field_service_persistent_probe.py",
+      "old_sha256": "cd3ee7b17cc3bbee39ab70034181720604eba659c926c86d49130d9380bafc6d",
+      "new_sha256": "d145ee3eb3f01b0b52c8765322df4660303f757835830c16cb6318676a9eab0a",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_linear_edt_probe.py",
+      "new": "probes/field_engine/field_linear_edt_probe.py",
+      "old_sha256": "5336b2d4e8ca30aeb6f8f784f116a8fa2ceceab73e6ba914e7a0d57101a5fd82",
+      "new_sha256": "1d17034d3f7a074eec5b5b107d8cb76aa5bf885c139750cc896d1edced186116",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_edt_parallel_probe.py",
+      "new": "probes/field_engine/field_edt_parallel_probe.py",
+      "old_sha256": "9a7d67bbd3310e6f391645cab35a7f0ec39dba0a12e170b2e8beda80f438cf5d",
+      "new_sha256": "927e7616799c268e11816c7b9b301a428ac1ad6621226e26bb7a364ab5325ad1",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_winding_probe.py",
+      "new": "probes/field_engine/field_rt_winding_probe.py",
+      "old_sha256": "bcd7bbd945b4c20513a5d216501ad080e5f24a2a3327c2beec20fd647b9e1691",
+      "new_sha256": "1591ccbaff6a95019a216c5b6ebd7e64c6521b8e5d9808a407297a3a53068a64",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_two_hit_stage_probe.py",
+      "new": "probes/field_engine/field_two_hit_stage_probe.py",
+      "old_sha256": "6c1b1f5f7c5b5e4bf6dd97bad048a0d767c7f96f5a1041b456c028752210c6b3",
+      "new_sha256": "6751c7e38d3c834205231cc3af57107e0cc5f9b3c469ae3b9da59d46493d791e",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_edt_native_rejection_probe.py",
+      "new": "probes/field_engine/field_edt_native_rejection_probe.py",
+      "old_sha256": "e5716016fb7023f86a27b588b6cd8953bd24a892e7cf964d22cb61f4029ec7a5",
+      "new_sha256": "be7c74c3048836c5dd50a2bbfc3ebea4182c47b08057f8954de9ed5708f30cc1",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_loft_chain_probe.py",
+      "new": "probes/field_engine/field_loft_chain_probe.py",
+      "old_sha256": "9459694c1a0147fb54b7a185e4a158cc9d2b3057f2e7bf8c732b772779acec74",
+      "new_sha256": "5ec58c5be1b25a4607cd12a66038c917fcb026ffe9812b43092c2c95b53c1098",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_pointer_layout_probe.py",
+      "new": "probes/field_engine/field_rt_pointer_layout_probe.py",
+      "old_sha256": "5d58fb8b361ff11a3e826318723b15494a0ad7240362a34e0cd6dbfcfe68a7de",
+      "new_sha256": "4c95a2aef31a84e2e27be5886e7531bc40a2aa1f8f5db5f5ef90f5cc1cb77503",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_templated_pair_probe.py",
+      "new": "probes/field_engine/field_templated_pair_probe.py",
+      "old_sha256": "1b7211896811ba93c14c188d3fc6802fd71ace701c05d5717be20e784d8a1791",
+      "new_sha256": "cbb6fd9a3b3e019949e1dc2a8e3b05689e41a2041d2553a8c7cfb93283eb5269",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_native_timing_probe.py",
+      "new": "probes/field_engine/field_rt_native_timing_probe.py",
+      "old_sha256": "c9720b6007cc6b8da052a079e3ce92509cbd71bfd28d63bfb90255188ea4b25e",
+      "new_sha256": "8399c7a56110efad328181f55fe75a4920de54436f66098d43a92f37b33ffc31",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_rounding_probe.py",
+      "new": "probes/field_engine/field_rt_rounding_probe.py",
+      "old_sha256": "1e27c4ce5c984a3ab5c9f3bf6355136275caa91aa9f1df3ddace41c43dcb22c3",
+      "new_sha256": "6156e75d2b536657f36dac9db8dd470b2f672f51b5354675a3328f884212df15",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_csg_native_probe.py",
+      "new": "probes/field_engine/field_csg_native_probe.py",
+      "old_sha256": "15954ac74ada018f50b8663662c7356b680b57e815ab4fd7d9ca4b5a24d3742c",
+      "new_sha256": "c74aa8e62bd68c08ac9d516503db47a18da83572b859200c471ff8f41b7025de",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_shared_gpu_probe.py",
+      "new": "probes/field_engine/field_shared_gpu_probe.py",
+      "old_sha256": "52540683a0727ea7298e54b0467170cd1a10f493026d93135f65e6e3f003874b",
+      "new_sha256": "2a987f7be6f40d21bd2cf66b95bb1a1b8f3e57f2c97703fff36314a6c27dd52d",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_mesh_templated_probe.py",
+      "new": "probes/field_engine/field_mesh_templated_probe.py",
+      "old_sha256": "0ab355f12c43bbbad0109030f4447648081a3490c6f47126e71a9eea581d5780",
+      "new_sha256": "fc0c6c58788477a1428a6b36c8c440789e97c522c376ac8996824b5793602717",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_columns_phase_mechanism.py",
+      "new": "probes/field_engine/field_columns_phase_mechanism.py",
+      "old_sha256": "0e1cd6255ff1a5547f7a85829a73dc31b1702d0bd637f2a3f76999b7fe6f5eb1",
+      "new_sha256": "452ecdc5a5266ccf2f635bafea3d48f625fac223ab2d888de084a495951dccfa",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_stage_scale_mechanism.py",
+      "new": "probes/field_engine/field_stage_scale_mechanism.py",
+      "old_sha256": "3a91321eede04c397c1c8e38503ed55ce6060fa0af86f82f245d28dd36a5cc6f",
+      "new_sha256": "b286b4900b923170601b595f9cfd6acb57ff48fc34c4fbecff75ef1f9f3aeba0",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_wrapper_probe.py",
+      "new": "probes/field_engine/field_rt_wrapper_probe.py",
+      "old_sha256": "372aa6e2273a3048bb34969cc8c023ade4dfc41ce3354d597e1f858b39a6464f",
+      "new_sha256": "2639d62e0c7d7d75367540089240032f965e96a20facff4977e47c299b381937",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_prepared_hits_probe.py",
+      "new": "probes/field_engine/field_rt_prepared_hits_probe.py",
+      "old_sha256": "e2721017aa443da107bb8664d95d49ee94b9b93e41a6041091c44b64233a60ec",
+      "new_sha256": "e9addbe03990ede61acd4148568ff887b994a587d1752c82cde32e8c581fa613",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_mesh_rt_stage_probe.py",
+      "new": "probes/field_engine/field_mesh_rt_stage_probe.py",
+      "old_sha256": "5030658feee16445d14d8a98d8becdc407145fc4acecd242f00084a68c57aa62",
+      "new_sha256": "7fc7f1c4ff05c753609302c882c7c9c869d1aa86ccef01f1d1faeaf10d4f7d30",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_interval_gpu_probe.py",
+      "new": "probes/field_engine/field_rt_interval_gpu_probe.py",
+      "old_sha256": "78238a7773a89d82ed480265ef5b142637b44889a5a1d5aae723c052d2f89efa",
+      "new_sha256": "142208af066c1f1819aa950608a9d0ce3a82545cdfc2ce77dd759bba0c744ef6",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_edt_native_probe.py",
+      "new": "probes/field_engine/field_edt_native_probe.py",
+      "old_sha256": "92497dc386839428aea73229679db63c82e7293984ae59e78c2c5a02bde95779",
+      "new_sha256": "08c9d0795fc9a6d6bbdc254be962e525c8d06769f8153e394554e2c3cfc5c4ea",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_api_contiguous_probe.py",
+      "new": "probes/field_engine/field_rt_api_contiguous_probe.py",
+      "old_sha256": "47f4c7f300b83eede9ab4aaac27f6419c0f46acc52309c6eeedfaca9deb1a6d1",
+      "new_sha256": "4bbe04deb6e501936244758368e58eaa36a884b36f058e32d60bf319699165e4",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_batch_probe.py",
+      "new": "probes/field_engine/field_rt_batch_probe.py",
+      "old_sha256": "428996633db54b2f4b13c7a87ef44bb7d651ef7bcb8b64df010ec68a948a4737",
+      "new_sha256": "9c9192b0ec63981d8a003279cc0ce83dd8c2008c2fa72fae7cf1311712e53f81",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_composed_timing_probe.py",
+      "new": "probes/field_engine/field_rt_composed_timing_probe.py",
+      "old_sha256": "bca8cd3b95287283c28fd31680f813b4dc66748504d4acb31ff22cc13dc3ca03",
+      "new_sha256": "03bb85e4296a07302d09e513b988557e979af2490b33d1acaaa807e481062af1",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_graph_service_probe.py",
+      "new": "probes/field_engine/field_graph_service_probe.py",
+      "old_sha256": "afba452e88e15111d8473ecfe53df1be35f7d735c248b8dc7fa5378cc1f75b93",
+      "new_sha256": "78fd40389c5d0e679a8b289a5ad2a7c7d0c55fb1ec976559132991336cc52ea0",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_open_mesh_mechanism.py",
+      "new": "probes/field_engine/field_open_mesh_mechanism.py",
+      "old_sha256": "b93883d9241cafc210362ec024be16ce6ea3193409210379ff463d577ba4d789",
+      "new_sha256": "b6affdd0d8e76371a1bf401e994bae41fb53f430e5d1487cba2c76c3d3a935c0",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_cuda_columns_cold_probe.py",
+      "new": "probes/field_engine/field_cuda_columns_cold_probe.py",
+      "old_sha256": "94dddde3d2784b47d09cfff358d932a2c4ebff6797ac92c632da5fd42e16a279",
+      "new_sha256": "67151c03d3ca9db2cd52642caed7fdd850fe7bd25499275c4c9d0527d04008d2",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_prepared_service_probe.py",
+      "new": "probes/field_engine/field_prepared_service_probe.py",
+      "old_sha256": "cdd7691b3f1be11ba4d567fe5774a1d03e1a6a78405b706856448498be94de4d",
+      "new_sha256": "cbb43e3315ea527e600627aa8eea9d0808107537cf5845453f119925da364abb",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_native_cold_probe.py",
+      "new": "probes/field_engine/field_native_cold_probe.py",
+      "old_sha256": "23a1b34a38f27aeae9f2e515d67ae4dbb1a173a0bcdc34535a529ecf3d13ab56",
+      "new_sha256": "9a82933c5a69401aad384def487a7e5270467ed22636df99890b0ba65658533e",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_lifecycle_timestamped_probe.py",
+      "new": "probes/field_engine/field_rt_lifecycle_timestamped_probe.py",
+      "old_sha256": "b6741eb2230d43b6ea022335c7762958ec356a9fd7313115ef4cdd17f44dd631",
+      "new_sha256": "ac886406a75e1b312e51d8a9ee31e463f6ac47cceef5c3d2b9e69fa41e402c25",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_edt_quotient_gpu_probe.py",
+      "new": "probes/field_engine/field_edt_quotient_gpu_probe.py",
+      "old_sha256": "15598aebfae5b8d15eddc6f0236cd238402e4e5e308d8adad33a7ce28e4c8526",
+      "new_sha256": "b6d5289e25c0ae9b0aaf4d4f3a1ef2df964b6695209a98dfcc8b56a6286f5d76",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_block_layout_probe.py",
+      "new": "probes/field_engine/field_block_layout_probe.py",
+      "old_sha256": "01cfba5756a38cf0442a22f14523406984f45bfaf2b96b35565c3742391d55d7",
+      "new_sha256": "698f7f42810980e31bfb91db630719322d0a003e0059fe90f3db7187dc4247af",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_native_cold_probe.py",
+      "new": "probes/field_engine/field_rt_native_cold_probe.py",
+      "old_sha256": "a1e64a3d6c439c07914456d4276dd51da7e92bb8deeafd14bb7f747478aebf21",
+      "new_sha256": "1044aa539922ae2729a56b7f5b96b4a81d06a4cb71b299da069630e00a9b41dc",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_columns_timing_probe.py",
+      "new": "probes/field_engine/field_columns_timing_probe.py",
+      "old_sha256": "0d47d5d77905da8e000e07d9c5e08a5159ec701802a2ae11375b5fb6b1695421",
+      "new_sha256": "c98b11b13b2588fb43182aac504b7c7e367ca091d4b1e218be75664ba401ee58",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_packed_probe.py",
+      "new": "probes/field_engine/field_rt_packed_probe.py",
+      "old_sha256": "1563c698208da969feddf4dcbea834406fc165fedaf790164bd92142d78ba40e",
+      "new_sha256": "20e0ab83562c62b66c7f77553cb6c217da412e1ddc96fe9ae9bbd2ec34e99d18",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_csg_packed_probe.py",
+      "new": "probes/field_engine/field_csg_packed_probe.py",
+      "old_sha256": "547f922e54a195824d25bb7134ce6b7216d231add1ae3123282f1ad4fce41b4a",
+      "new_sha256": "74b94134c12afa8acd04be2cd7bc828694ef76c67ce98f08fd49b20bb497ffa2",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_edt_large_probe.py",
+      "new": "probes/field_engine/field_edt_large_probe.py",
+      "old_sha256": "4c8c6b213dce82b6122bc679873293e4f624a18ee5e2edc83364d4dca32210a8",
+      "new_sha256": "54c38d818f398ac80a06ac3205c47f337beacb5281eac466230291442fa6c2b4",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_compact_timing_probe.py",
+      "new": "probes/field_engine/field_compact_timing_probe.py",
+      "old_sha256": "0914fb917f2fbe3fad2f93399e630e079b896bdee8f1b427f53ed83a0a1cf4c6",
+      "new_sha256": "4d1b2fe3b65dbe6613a02bdc4e18ba56a60277641f766004bbb13a4ac7635821",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_mesh_adaptive_probe.py",
+      "new": "probes/field_engine/field_mesh_adaptive_probe.py",
+      "old_sha256": "8e7e9683bcd29672162c7626c5d284db471dea6831bf13126c9548445f859c8d",
+      "new_sha256": "8e89a8c7f39ad2321f392215e31a85bfc6c28a5fabd772516d4c7ef51da4a640",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_csg_tiled_probe.py",
+      "new": "probes/field_engine/field_csg_tiled_probe.py",
+      "old_sha256": "cb41d0faccdb790e10bb0b35220a181ec077852cb1c581867bfabcfb2877c396",
+      "new_sha256": "95aa1f39dc9de7009d29ff1ad45543f5c6e907d636259a5e54fbe947df696707",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_edt_quotient_cpu_probe.py",
+      "new": "probes/field_engine/field_edt_quotient_cpu_probe.py",
+      "old_sha256": "70ff66c534d5cee08e1cd660b4c912fb7af01f57f08ffa850543ef887e17d657",
+      "new_sha256": "571000e15655ff45ee479276bcddf592be256634a7f5b1af6a68a95d4fc86df0",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_quotient_service_probe.py",
+      "new": "probes/field_engine/field_quotient_service_probe.py",
+      "old_sha256": "6724d4d4b1382726aa769a4f8ac8a354608121dadb7b013e9e6d3a7ee6eea783",
+      "new_sha256": "43baf19466ab59a0b0546417ef0918dfc4ff10c672b8beba97ed18cb47504ad5",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rowwise_stage_probe.py",
+      "new": "probes/field_engine/field_rowwise_stage_probe.py",
+      "old_sha256": "9800533aaf2b11c1fa02aa72efe54fa3b22e45d2897a0854fe8041fbb59bbc3b",
+      "new_sha256": "0e119451a07c74d5313c0d5bcfc85a900f6fb1d8cda304a1f1c15c7210f52e49",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_block_size_probe.py",
+      "new": "probes/field_engine/field_block_size_probe.py",
+      "old_sha256": "fba246c38e3642c15b34a399ab48ebb93b2a55f94a15e76749c572e877c3f41e",
+      "new_sha256": "f848166426b1ce4c7a2cf5db7dc0d7f2df93fd60cfb55ef0167089179fd93625",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_adaptive_blocks_probe.py",
+      "new": "probes/field_engine/field_adaptive_blocks_probe.py",
+      "old_sha256": "43f57d6973eda5f58f3cfda9183399e4cf74ac36cc0625daa88a0c6e4117d097",
+      "new_sha256": "28b9f78a2f20a0f817da10fa77914be89f0f2388f0bf41bad108f4ef5f29eb8c",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_adaptive_input_audit.py",
+      "new": "probes/field_engine/field_adaptive_input_audit.py",
+      "old_sha256": "82e39856abc45f3530f0c9a4de9f51c36c5fd5dbc4ee58cd6c4367d067afbe6e",
+      "new_sha256": "10d3c367d40918fcaad3ba299d210ba783e978e281a33d5403fb1ab2ee65b860",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_open_mesh_repeat_probe.py",
+      "new": "probes/field_engine/field_open_mesh_repeat_probe.py",
+      "old_sha256": "c681775ac640afc821667a0ac8426c2023eddd6277f126ca6d9ffc6e5c18d3f4",
+      "new_sha256": "c15b0f69046268a8891f3a1ebd31e6b07aa53d30c08872ee00f8d25326154535",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_edt_axis_work_probe.py",
+      "new": "probes/field_engine/field_edt_axis_work_probe.py",
+      "old_sha256": "2fd2563cf18d5d1683bd2db91ad48ac70c800757d233d5ff38204191c238d4b7",
+      "new_sha256": "c337c9509756690ca2d30981e46dea5dc423430913897812fbe670ed1592d41b",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_persistent_stage_profile.py",
+      "new": "probes/field_engine/field_persistent_stage_profile.py",
+      "old_sha256": "a620a7f7260950c1e1227d4c4fd0cd688a7d6a3681b35f7964da9f85b2ce9137",
+      "new_sha256": "e624a6fae64222d22b04b32303c7bd7798d837d56a3edc6b099f97b76778659d",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_prepared_gpu_probe.py",
+      "new": "probes/field_engine/field_rt_prepared_gpu_probe.py",
+      "old_sha256": "dbfa3639d735805862357c7682866448f34cdc7f81a211a6351fed02ae8a6ce7",
+      "new_sha256": "03151c3a55dc722c607fe90c354a2ea6a4e2c6e3f9a282eab1466c808555d54a",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_edt_arithmetic_probe.py",
+      "new": "probes/field_engine/field_edt_arithmetic_probe.py",
+      "old_sha256": "90cb339d3237eb59971cdca9fbcfb381f7c260a9ed8eea44a87b985650f776e4",
+      "new_sha256": "36ecd0a10d369065089fad0101e5ba6c58ebc73c2d0552b95ab70acb3d54cc6c",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_plate_tie_mechanism.py",
+      "new": "probes/field_engine/field_plate_tie_mechanism.py",
+      "old_sha256": "9b077e47d2744d2cd650b01d3aed0bf0b92c7af6af122e60f51a1f1e74104dfc",
+      "new_sha256": "54cd26796f8d3e985c643c29d68b139f772dbde3d1a4bad3d5806a9b76b38962",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_native_phase_probe.py",
+      "new": "probes/field_engine/field_rt_native_phase_probe.py",
+      "old_sha256": "858c1fb4c5ef2a028edd35dc0da06c28dad16b1bb283ddcba04edeae5e8b5b07",
+      "new_sha256": "dfc89458582db5ba8df38697d8569c28a8e0b9903e0e33f8e56466529d9b1c7c",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_backend_timing_probe.py",
+      "new": "probes/field_engine/field_backend_timing_probe.py",
+      "old_sha256": "be115fbbf5d6ba2227f8c6aea716f8fb40a5f8fdad0c2a5a981b6657d07e1a99",
+      "new_sha256": "fa2e0b1f823d11e51e364055f9fd9d5993d0d8dae9d87c80c17909d0d69c464c",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_shared_service_probe.py",
+      "new": "probes/field_engine/field_shared_service_probe.py",
+      "old_sha256": "ee32481c093aa77c0d776eb8c521d37a7f3e0523db9203f688a3f1b87c67bb2b",
+      "new_sha256": "2b0831900a0a6851f18bef1ad0ad78758ab5b6b30d5e65b1c4ab1c8dde7e8a27",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_call_profile.py",
+      "new": "probes/field_engine/field_rt_call_profile.py",
+      "old_sha256": "54f2197a4043cad0b1a668fc4ecb0db1e947a4171a8f4040068bc2891c393614",
+      "new_sha256": "2b099eb027ec2373242ddf1651c72247147ebaf3857a3b0023138eefda62b49c",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_mesh_fused_probe.py",
+      "new": "probes/field_engine/field_mesh_fused_probe.py",
+      "old_sha256": "39dc24213162067f4c71b61575cad24e229290e16a0a94e573453d3bf39cd066",
+      "new_sha256": "9145a0c9e3e28ceff149c57d2e5c97198dba097533c18d162a013f2d5215f842",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_columns_compact_probe.py",
+      "new": "probes/field_engine/field_rt_columns_compact_probe.py",
+      "old_sha256": "96f0500bdd7b6e65cfc8d7435d8a2d79e7b67f28a2ca633300aa9d74d86fbc58",
+      "new_sha256": "9be1d25270b8cda7ac55f8469ed8821b5c7973e142428d65e3951b63b1acbe57",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_column_mask_probe.py",
+      "new": "probes/field_engine/field_column_mask_probe.py",
+      "old_sha256": "af7fa662c09dce10db566c5c3bc9638ba430167ca49ccdf363312f2c52047bd1",
+      "new_sha256": "b7e5c8113d1320c2d1f8a6c9b4cbca11716d46275b0920045be9760cf61737fd",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_interval_service_probe.py",
+      "new": "probes/field_engine/field_interval_service_probe.py",
+      "old_sha256": "7b7a19be21a9d5398717bee25ba9a635560c284d5754b84b77c7562fe547d4b4",
+      "new_sha256": "e3f847eebd5b98dc38d0826c546e2c2cea61153a37071f0d928bbbbeadacdb33",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_interval_portable_probe.py",
+      "new": "probes/field_engine/field_rt_interval_portable_probe.py",
+      "old_sha256": "18864937ff6cc1f7409b200b680ef5a2418b68584abdb556aa980339aed5a8b4",
+      "new_sha256": "d633145b1b550454ce669c294b300fa1ea2310fa36904eaeb89c72064fe43ba3",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_interval_sign_service_probe.py",
+      "new": "probes/field_engine/field_interval_sign_service_probe.py",
+      "old_sha256": "f92af59532360af83a5969da094b30f4b7d68039a02c9b9ce96f9c04feb77465",
+      "new_sha256": "778b7826ff2faa942bb8664ae126a02a13dfb78e82393566a9f32f45f1bdac72",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_edt_parallel_timing_probe.py",
+      "new": "probes/field_engine/field_edt_parallel_timing_probe.py",
+      "old_sha256": "2b944ccc7a2560a34be89304e8d6d018a8a4b9c78ed715940e901d2f3841e77f",
+      "new_sha256": "51b71a9835bb7831639c803c076950d110b39044984fe7712926bd55c931d908",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_cuda_cross_device_probe.py",
+      "new": "probes/field_engine/field_cuda_cross_device_probe.py",
+      "old_sha256": "956b85b965b9b79ad900ac0855b5c4f8e1aad8eb38aaae48c4159875a239c774",
+      "new_sha256": "9c10bbc28798b865254bc4ed2ac402a12c47c2454277685fff032edefffbdfc6",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_csg_batch_probe.py",
+      "new": "probes/field_engine/field_csg_batch_probe.py",
+      "old_sha256": "eaad4965d45721b23ebd8d3a278d912e0c98e237fe337de4c3b12310f016df40",
+      "new_sha256": "aaabbdbdd157af174a8d60ab09c3480a67fb139a2026808d7759bd3e6a9ea4c9",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_csg_probe.py",
+      "new": "probes/field_engine/field_csg_probe.py",
+      "old_sha256": "e3a41345bdb8ece388c2152f383be4134234d6edfbbd2e5639805bc199ea102e",
+      "new_sha256": "847e963e9ce8f54d17fb5e2a226898e5f9fc0eda7d1cf68ea3dfd621bb127ac7",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_changed_query_reference.py",
+      "new": "probes/field_engine/field_rt_changed_query_reference.py",
+      "old_sha256": "3b83948b1359c93dc288f3a17952de5aacec19e0c8d7599c291b2ec5f6c77328",
+      "new_sha256": "a3debfa0456a3e038bb21091d038900a2466a76accc21b31df60d5ccdf4b64a4",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/mesh_field_fused_v1.py",
+      "new": "src/field_engine/mesh_field_fused_v1.py",
+      "old_sha256": "ed8ce7ce48e16b73a3d344c5573edc5558269fe089442a87480f01fa8970fb41",
+      "new_sha256": "7c57255d28890df6d4966acf8957e3dde655d548454550ab8dc78ac6cd47f0b1",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/rt_columns_rowwise_handle_v1.py",
+      "new": "src/field_engine/rt_columns_rowwise_handle_v1.py",
+      "old_sha256": "d57978ee3f6b94c0065279428ea4e0439c7e19208c60c8ef652423341262a590",
+      "new_sha256": "79dbd678bb64e196172f8c2e7839d925d4be797e25520dad98c3ee3598ae290e",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/mesh_field_columns_v1.py",
+      "new": "src/field_engine/mesh_field_columns_v1.py",
+      "old_sha256": "ad3e120ef1db190cf4a61e5b82f183d2ba3145a8ea6c8e03c5af13ddc91302cf",
+      "new_sha256": "142bcb34b98d0762006239c21fcb070cd150c712ac7ecdc1a9ec8f197d8e903c",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/edt_persistent_pair_v1.py",
+      "new": "src/field_engine/edt_persistent_pair_v1.py",
+      "old_sha256": "45abe8f434fdf6d87b411e35dc044964bba21959ddccd24702e1cfcf19622286",
+      "new_sha256": "accd3a4aba95c3ba65a6fcd92927a572cd3c27a021334b297c03e876d1560b7a",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/mesh_field_rt_v1.py",
+      "new": "src/field_engine/mesh_field_rt_v1.py",
+      "old_sha256": "dc7b6cca2b69d65943f645e6cbe8e046459b9ce8b44a724e543ccf41665ee29c",
+      "new_sha256": "09ac15eb789d38662f9d45a908fe31d15b9c32078d622725888b61ac30325c21",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_csg_native_v1.py",
+      "new": "src/field_engine/field_csg_native_v1.py",
+      "old_sha256": "6bfd91389e2547ac768b634dfde2456541f180bc3d63ebfd47fb181f2bcf8269",
+      "new_sha256": "643f185a851afa6d162bbdda944c917081a4fa2496b761abc62984a824eea156",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/adaptive_sample_blocks_v1.py",
+      "new": "src/field_engine/adaptive_sample_blocks_v1.py",
+      "old_sha256": "e6bfa2c3c72b1a3bfc0b8f35599a6f06414be5d38513a49e7c89ea1e35404872",
+      "new_sha256": "a9ab3b4de15872425ae0942549e286475a25a92f3e84e557e063597b9b5c8b3f",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/native_edt_v1.py",
+      "new": "src/field_engine/native_edt_v1.py",
+      "old_sha256": "15c2115179b7a3df2732612eafbdf9527ad451138e48c44c421f3836227483d6",
+      "new_sha256": "e58f165f1af6cb5be97d27bef7ec84ab46a9733519079c5c1aaf8493702962e8",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_csg_blocks_v1.py",
+      "new": "src/field_engine/field_csg_blocks_v1.py",
+      "old_sha256": "aff27e613e0e2e69ff4647b0d24da88291932b87a9f8070587116c16d9b2adcb",
+      "new_sha256": "8949fde987624fcd0c31a39735124d85d79292322da0fd889dfa192d9d5980dc",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/column_mask_native_v1.py",
+      "new": "src/field_engine/column_mask_native_v1.py",
+      "old_sha256": "6ea9617c77c4ea8db67cfff4ac1af8e1d805fe1e3e433c7fb6e2b8ef66ffb61b",
+      "new_sha256": "feba7c251befbb3f7eac557d96804bd8a88ceb4977263dc8dfb13b32434a361d",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/mesh_field_service_v1.py",
+      "new": "src/field_engine/mesh_field_service_v1.py",
+      "old_sha256": "ade794ac0642738097116ee6460025a31252ae265a9a8b0eb8991d1b98564e2e",
+      "new_sha256": "296af2c2de60c912a5246b40e27786c03bf641bf63297f466227c98dcd3361ec",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/column_mask_ordered_v1.py",
+      "new": "src/field_engine/column_mask_ordered_v1.py",
+      "old_sha256": "b24975e144268aed2f8ac29c83320bf285a7ee2f47bd8b775ea7704cb9e9449b",
+      "new_sha256": "b5d8874fcb11a97e0aeceac099bf3b35e10887d17c9ee611812bb3a89bbf4578",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_csg_tiled_v1.py",
+      "new": "src/field_engine/field_csg_tiled_v1.py",
+      "old_sha256": "e45702be55c2b74773eb6a13f373ad7cd11ad943971e4d053fba1a236eb8b43f",
+      "new_sha256": "46ed4ad18f5fb7cc28802b01985d5e8ff6e23f516b7f66e938cb23737813f7aa",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/generalized_winding_ordered_v1.py",
+      "new": "src/field_engine/generalized_winding_ordered_v1.py",
+      "old_sha256": "a076690f3346d118bb7e698f0aa88202d871ae79bc547bff3435c7d0db03de11",
+      "new_sha256": "987dd35447267ce4bbb1f52ea46a076df26f6be92e4f3b32d43dfff359cc2034",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_edt_parallel_v1.py",
+      "new": "src/field_engine/field_edt_parallel_v1.py",
+      "old_sha256": "ac7f685a889339c8615d42f84e2281c986c699aa350fc8eecf9ab36f8a2f1add",
+      "new_sha256": "cee86046de5819ef790905d1bd3d713a3b62a35221f39cff79251170cf7f223b",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/adaptive_pack_native_v1.py",
+      "new": "src/field_engine/adaptive_pack_native_v1.py",
+      "old_sha256": "aec799dc192d9c8ced8478598051b0696a8af314895e762f218e3de12d09c78a",
+      "new_sha256": "ba0060762587843bd1011cfa752717c63e3618472b13bad63aaf0f62b29a4934",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/mesh_adaptive_field_v1.py",
+      "new": "src/field_engine/mesh_adaptive_field_v1.py",
+      "old_sha256": "ff7363fcb063db4b1653419782673d56635472aad52467017b3b3d270b280331",
+      "new_sha256": "0ed6b48fd790f2966b5c40e5e4f576b2c825b49319e4924f2eb6a1c4deb5425f",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/mesh_fused_handle_v1.py",
+      "new": "src/field_engine/mesh_fused_handle_v1.py",
+      "old_sha256": "b47ad58c7242ee5e2fcc581e793fda76dc7a86e8fa191f4da47540b807405744",
+      "new_sha256": "0b51983f7bdc2b6c6a7f1d0a77c9ba64ed899bdd17609df35a7903d89f9600fd",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/mesh_field_rowwise_v1.py",
+      "new": "src/field_engine/mesh_field_rowwise_v1.py",
+      "old_sha256": "8ded6e3a62b669e32898230854754aca041c3b48f3ab5721b3b7b638bd493e50",
+      "new_sha256": "9c27ab9bd81bdfa3c4f849c0a2e631cd68fd86caa81034dabe519ad655a4b280",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/native_edt_large_v1.py",
+      "new": "src/field_engine/native_edt_large_v1.py",
+      "old_sha256": "f0e26c56a6d88b0383160a81081ec8e0094e6bb0f3303d5aae9e71ebb36d3d32",
+      "new_sha256": "6635c946e32ab8c94695b1a99ac01bb044da8370d6b0e3c02fc8ff3b00569dc5",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/mesh_field_two_hit_v1.py",
+      "new": "src/field_engine/mesh_field_two_hit_v1.py",
+      "old_sha256": "86a90d9d1ce75eda8bb8f1b58c710e17b4de3346436f3cc0fdd9c7fd554b9e2c",
+      "new_sha256": "2eb3df8f41791d9bb356eeefdb3792eea583f9ce2ac87abce4f9b33db264ef7e",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_csg_packed_v1.py",
+      "new": "src/field_engine/field_csg_packed_v1.py",
+      "old_sha256": "645cbc89b7c750d3fbbf72f3135892bcc78f04eef108749d935abbca66a1d4b2",
+      "new_sha256": "148ba228805d0bb1366d3859d306015feb59ffe0f9c28565cd8cf884c0086ed8",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/rt_columns_two_hit_handle_v1.py",
+      "new": "src/field_engine/rt_columns_two_hit_handle_v1.py",
+      "old_sha256": "e3a5f6e52ba988d909fe6a9116921b1379ed833e0ada7620865671e9f64e431e",
+      "new_sha256": "2f24fde6a34dcba3a1f6e99d4f966ecaec3f224407ea3243a0251547fc0820cd",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_csg_batch_v1.py",
+      "new": "src/field_engine/field_csg_batch_v1.py",
+      "old_sha256": "5d7d472fff74d4f9dcd6ff0fec91d351448dc0fed9d0f03ec1e0d1bc79d7073f",
+      "new_sha256": "586c810a91b35de94ced693911f40cfa8c424fda1e93e3f2fa09302d4c600aa6",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/mesh_field_compact_v1.py",
+      "new": "src/field_engine/mesh_field_compact_v1.py",
+      "old_sha256": "c2da195293d87bebb68e85b5a0521cabf6710178106a4fa6f9887a5888d7d66b",
+      "new_sha256": "4372c57aacf567dccea0f01fe624310bb840a00f9f90324da84c9a065aa23f3c",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_csg_fused_v1.py",
+      "new": "src/field_engine/field_csg_fused_v1.py",
+      "old_sha256": "5b90465dbfab052b88313593dc25c06d09465df0d7444280fed6651fc6eb41b7",
+      "new_sha256": "6fbdbdf76959a2a667795ffec3da06c402bfdeeee59186500674bc6e09a95803",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/mesh_field_persistent_edt_v1.py",
+      "new": "src/field_engine/mesh_field_persistent_edt_v1.py",
+      "old_sha256": "90eef277492b97d836f49163155d829b5fad4e3e3320ffab6a5601ef64952cc8",
+      "new_sha256": "37f88e3620de792c3ba179d62467956f6b6a1dca0aeede2220d26aad1e12e60f",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/mesh_field_native_mask_v1.py",
+      "new": "src/field_engine/mesh_field_native_mask_v1.py",
+      "old_sha256": "d9e375380cd9f7013c973d9e17d1872bd06a1f0abd2f0d4b0cf0a3a620538fee",
+      "new_sha256": "e79e2ac8f761e57c8462083aaf4d5916251b9f029d0a13ef826a42578fbeb253",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/mesh_field_service_persistent_v1.py",
+      "new": "src/field_engine/mesh_field_service_persistent_v1.py",
+      "old_sha256": "92139c270d3c9b7105e142951c23ec1cee790ba5ca005066c55429a32f26044b",
+      "new_sha256": "cd6afb6ee8dd76bd1e366965168ad5c2124717ece331184f5edef1f7a48d6547",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/csg_tile_native_v1.py",
+      "new": "src/field_engine/csg_tile_native_v1.py",
+      "old_sha256": "afdb0e913ff8cbef2701882f7a2e8be19881d52a859754345e20df4616519533",
+      "new_sha256": "a29872b1656faa24cce3e30f8e7311d222ae8db2a507934993223319abb2f68f",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/mesh_field_cuda_columns_v1.py",
+      "new": "src/field_engine/mesh_field_cuda_columns_v1.py",
+      "old_sha256": "58c19233c157e4110faf985688042dba411768f4fd1b4d4d4a19561dfb2f60b8",
+      "new_sha256": "c07d43f2db1373547a3f093dac92ed7876637d3229d3161adab00264fc665c5b",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/bench/_komp_importprobe.py",
+      "new": "probes/field_engine/bench/_komp_importprobe.py",
+      "old_sha256": "c24e7ae3694f17aa9a5d115c68fdbf83b406547b72e5c891cb89657c51ceacda",
+      "new_sha256": "631efdfec38285a2a96f19c54d2fd22cdfe77f6d7ca11dc5fd3bc0fed7e99ee1",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/bench/faltbench_v1.py",
+      "new": "src/field_engine/bench/faltbench_v1.py",
+      "old_sha256": "aa0d6b2298424da42de556a8184477d84970de048f5db114e10a6cf238adc5db",
+      "new_sha256": "6b07cb2de14b949fa19e814acb0f9ac3003d58b7c2188cdfaa19086154ac4952",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/edt_pair_quotient_v1/probe.cu",
+      "new": "probes/field_engine/edt_pair_quotient_v1/probe.cu",
+      "old_sha256": "eaf5086f4ed4ed4d5069f4b7d9dbd073b638604d3ef72c94ba27b7141a97b46f",
+      "new_sha256": "4414176daa467ee9b07b7901d3a3955ad29cfd6d4aa1d10ceb77350eb642f477",
+      "only_include_paths_changed": true
+    },
+    {
+      "old": "src/field_engine/rt_columns_interval_v1/probe.cu",
+      "new": "probes/field_engine/rt_columns_interval_v1/probe.cu",
+      "old_sha256": "d63a6e40c7ba099abc453b1c202df8d721d61916b1a4827a892cfcc53189d596",
+      "new_sha256": "a38a1f603551c879b6967432e2d6bd44fd85b5600861bab3cbf2dfbbc1cd3a14",
+      "only_include_paths_changed": true
+    },
+    {
+      "old": "src/field_engine/rt_columns_interval_sign_v1/probe.cu",
+      "new": "probes/field_engine/rt_columns_interval_sign_v1/probe.cu",
+      "old_sha256": "d63a6e40c7ba099abc453b1c202df8d721d61916b1a4827a892cfcc53189d596",
+      "new_sha256": "05dbc6266bf592fb283ec7c8934d713bbda52b0dcf1bce1cbafd45378fbdeadf",
+      "only_include_paths_changed": true
+    },
+    {
+      "old": "src/field_engine/rt_columns_prepared_v1/probe.cu",
+      "new": "probes/field_engine/rt_columns_prepared_v1/probe.cu",
+      "old_sha256": "68d768a3cc1faff7a59746f0894cd4b841d47607490befdaab6c081fe9b7b5de",
+      "new_sha256": "afaf4c47c1ab1b489d76aca96de6d45847c8877abed556ec6187099bced6c4f3",
+      "only_include_paths_changed": true
+    },
+    {
+      "old": "src/field_engine/rt_columns_query_profile_v1/api.cpp",
+      "new": "probes/field_engine/rt_columns_query_profile_v1/api.cpp",
+      "old_sha256": "af1bd94f22c2adada1a5757f8878273c5033b65b78a6b4bf14f3b1149ce70e05",
+      "new_sha256": "dd8185af496711212ebcb8f86914f7f8887d1bfa9e8a01f97b2badaf04933233",
+      "only_include_paths_changed": true
+    },
+    {
+      "old": "src/field_engine/mesh_tail_graph_profile_v1/field.cu",
+      "new": "probes/field_engine/mesh_tail_graph_profile_v1/field.cu",
+      "old_sha256": "b8129cda879efcf2e369d50367d7d1082ca30229d8d432d0e10c5c64de16a99e",
+      "new_sha256": "88e7e2e4776344bb1a6ae567b27cbb5dcc294a615fcc6c62d204f3f00fe97a62",
+      "only_include_paths_changed": true
+    },
+    {
+      "old": "src/field_engine/field_rt_cold_phases.py",
+      "new": "probes/field_engine/field_rt_cold_phases.py",
+      "old_sha256": "ffffed8851ddf1c9e8399b6f9273a8c3594ecd80a354930e1695e8435949ccdf",
+      "new_sha256": "7b42c8718821aad2bcc58600dfa74a9ada6ac10f61af6cecf76ee5f918d3b9f2",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_recipe_oracle_v1.py",
+      "new": "probes/field_engine/field_recipe_oracle_v1.py",
+      "old_sha256": "9e4308b488e2c808926da3a720c4628a565dd2d53b21d45717267f89b9a98b1d",
+      "new_sha256": "b9768358f8633c3076696c221fd670bf716cacf935fc8c823469346cca1f43f2",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/field_rt_winding_local_v1.py",
+      "new": "probes/field_engine/field_rt_winding_local_v1.py",
+      "old_sha256": "5ebd97c939c535954957f91e14160fb99bf6b0b68f9ede7f9a2046247efb0268",
+      "new_sha256": "242ddf76282342d6115af3a870f0c29eb982b6e2877a7f808dd8680e920a514e",
+      "numerical_ast_exact": true
+    },
+    {
+      "old": "src/field_engine/faltkarna_v1_selftest_v1.py",
+      "new": "probes/field_engine/faltkarna_v1_selftest_v1.py",
+      "old_sha256": "42750f54146b17df53f0a65b75a118b708e671244f7ecad8d49621eeeeca0654",
+      "new_sha256": "fac8259e1adb39fb9b4b44509298022506257fa75a95739e9c8797bff4f4c9f9",
+      "numerical_ast_exact": true
+    }
+  ]
+}

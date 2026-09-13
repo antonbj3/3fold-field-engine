@@ -1,0 +1,52 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "exact": true,
+    "repeats": true,
+    "frozen_fixture": true,
+    "arithmetic_controls": true,
+    "invalid_controls": true,
+    "speedup_1_25": true
+  },
+  "rows": [
+    {
+      "leg": 0,
+      "times_ms": {
+        "eager": 245.604696,
+        "fused": 132.039293
+      },
+      "speedup": 1.8600879360964164,
+      "exact": true,
+      "packed_exact": true,
+      "hashes": [
+        "3be0f4342dcaf8be51eeb3617d1626a3d3920f8194f130c334befb65e748cefd",
+        "5b16e02cc06e59d35c627f00d9a53d3a1f75fd9dd31c51a2e21ed221edd40932",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    },
+    {
+      "leg": 1,
+      "times_ms": {
+        "fused": 132.07738899999998,
+        "eager": 242.44194499999998
+      },
+      "speedup": 1.8356052223291603,
+      "exact": true,
+      "packed_exact": true,
+      "hashes": [
+        "3be0f4342dcaf8be51eeb3617d1626a3d3920f8194f130c334befb65e748cefd",
+        "5b16e02cc06e59d35c627f00d9a53d3a1f75fd9dd31c51a2e21ed221edd40932",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    }
+  ],
+  "arithmetic_controls": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "invalid_rejections": 9,
+  "scope": "Same packed input fields, two reversed-order CPU comparisons. One final pack vs four eager packs; no input packing or extraction timed. Prior fixture mesh/volume evidence applies only through complete saved field equality. Ordinary concurrent desktop load, no isolated timing claim."
+}

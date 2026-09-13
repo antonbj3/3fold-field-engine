@@ -1,0 +1,56 @@
+{
+  "status": "VERIFIED-FRESH",
+  "rows": [
+    {
+      "report": "field_rt_prepared_gpu",
+      "arrays": 15,
+      "bytes_compared": 40565408,
+      "exact": true,
+      "errors": [
+        "ERROR SUMMARY: 0 errors"
+      ],
+      "child_exit": 0,
+      "instrumented_gates": {
+        "coverage": true,
+        "exact": true,
+        "repeat": true,
+        "no_false_rejection": true
+      }
+    },
+    {
+      "report": "field_rt_prepared_hits",
+      "arrays": 72,
+      "bytes_compared": 8877760,
+      "exact": true,
+      "errors": [
+        "ERROR SUMMARY: 0 errors"
+      ],
+      "child_exit": 0,
+      "instrumented_gates": {
+        "coverage": true,
+        "exact": true,
+        "repeat": true,
+        "capacity_lifecycle": true
+      }
+    },
+    {
+      "report": "field_prepared_service",
+      "arrays": 355,
+      "bytes_compared": 36115362,
+      "exact": true,
+      "errors": [
+        "ERROR SUMMARY: 0 errors"
+      ],
+      "child_exit": 1,
+      "instrumented_gates": {
+        "coverage": true,
+        "exact": true,
+        "repeats": true,
+        "lifecycle_capacity": true,
+        "warm_L_2ms": false
+      }
+    }
+  ],
+  "hardware": "NVIDIA L4, 580.95.05, 0 %, 6 MiB",
+  "scope": "Native preparation/layout, CUDA predicates, raw RT and full-field memory proof. All spawned processes targeted. Instrumented service latency failure retained; no timing claim."
+}

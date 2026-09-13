@@ -1,0 +1,92 @@
+{
+ "schema": "fabriksspec_v2",
+ "factories": {
+  "glasfabrik": {
+   "processgraf": {
+    "nodes": [
+     {
+      "id": "smaltugn",
+      "namn": "smaltugn",
+      "typ": "process"
+     },
+     {
+      "id": "formning_till_amne",
+      "namn": "formning_till_amne",
+      "typ": "process"
+     },
+     {
+      "id": "grovslipning",
+      "namn": "grovslipning",
+      "typ": "process"
+     },
+     {
+      "id": "polering",
+      "namn": "polering",
+      "typ": "process"
+     },
+     {
+      "id": "ar_coating",
+      "namn": "ar_coating",
+      "typ": "process"
+     },
+     {
+      "id": "metrologi",
+      "namn": "metrologi",
+      "typ": "process"
+     },
+     {
+      "id": "transportband",
+      "namn": "transportband",
+      "typ": "transport",
+      "kommentar": "conveyor between grinding and polishing"
+     }
+    ],
+    "edges": [
+     {
+      "from": "smaltugn",
+      "to": "formning_till_amne",
+      "typ": "materialflode",
+      "kalla": "process line order"
+     },
+     {
+      "from": "formning_till_amne",
+      "to": "grovslipning",
+      "typ": "materialflode",
+      "kalla": "process line order"
+     },
+     {
+      "from": "grovslipning",
+      "to": "transportband",
+      "typ": "materialflode",
+      "kalla": "process line order"
+     },
+     {
+      "from": "transportband",
+      "to": "polering",
+      "typ": "materialflode",
+      "kalla": "process line order"
+     },
+     {
+      "from": "polering",
+      "to": "ar_coating",
+      "typ": "materialflode",
+      "kalla": "process line order"
+     },
+     {
+      "from": "ar_coating",
+      "to": "metrologi",
+      "typ": "materialflode",
+      "kalla": "process line order"
+     }
+    ]
+   },
+   "layoutvillkor": {
+    "byggnadsmatt_mm": {
+     "w": 26000.0,
+     "h": 14000.0
+    },
+    "sakerhetszon_mm": 300.0
+   }
+  }
+ }
+}

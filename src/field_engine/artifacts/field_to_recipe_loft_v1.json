@@ -1,0 +1,22 @@
+{
+  "gates": {
+    "executor": true,
+    "one_solid": true,
+    "polygon_integral": true,
+    "rasterisation_volume": true,
+    "simplification": true,
+    "valid": true
+  },
+  "lofts": 17,
+  "max_simplification_distance": 0.5973291264960829,
+  "ops": 56,
+  "pass": true,
+  "polygon_integral_relative_error": 8.181910411803077e-16,
+  "polygon_integral_volume": 2845675.7888474595,
+  "rasterisation_bound": 0.41282290795854254,
+  "recipe_sha256": "7a4611170260936d5bca7723c6f379fb5791bb90e997d44525819ebb5256e5e6",
+  "reference_volume": 2802657.825414669,
+  "relative_volume_error": 0.015348988750144087,
+  "status": "SYNTHETIC-ONLY",
+  "volume": 2845675.788847462
+}

@@ -1,0 +1,80 @@
+{
+  "rows": [
+    {
+      "case": "closed",
+      "triangles": 12,
+      "watertight": true,
+      "voxels": 10648,
+      "generalized_occupied": 4096,
+      "signed_occupied": 4096,
+      "parity_occupied": 4096,
+      "parity_disagreements": 0,
+      "signed_disagreements": 0,
+      "disagreement_fraction": 0.0,
+      "winding_range": [
+        0.0,
+        1.000000000000002
+      ],
+      "minimum_threshold_distance": 0.49999999999999845,
+      "hashes": {
+        "generalized": "950ea99f10723791697f87a34ef493b9e74efbd656ee60fd3d623aa888e6f415",
+        "winding": "7bbc9277d6eba4df3a8ae0994485c8a8ce7e628c044541e0535806a14aa14551",
+        "signed": "950ea99f10723791697f87a34ef493b9e74efbd656ee60fd3d623aa888e6f415",
+        "parity": "950ea99f10723791697f87a34ef493b9e74efbd656ee60fd3d623aa888e6f415"
+      }
+    },
+    {
+      "case": "open",
+      "triangles": 10,
+      "watertight": false,
+      "voxels": 10648,
+      "generalized_occupied": 4096,
+      "signed_occupied": 768,
+      "parity_occupied": 768,
+      "parity_disagreements": 4864,
+      "signed_disagreements": 4864,
+      "disagreement_fraction": 0.4567993989481593,
+      "winding_range": [
+        -0.20709252092724373,
+        0.955353983817955
+      ],
+      "minimum_threshold_distance": 0.012830789209912763,
+      "hashes": {
+        "generalized": "950ea99f10723791697f87a34ef493b9e74efbd656ee60fd3d623aa888e6f415",
+        "winding": "00635c448d9ca9433e0d2dd18c6ca5aa39301d7fe5ae90e26a2ca0dd01900814",
+        "signed": "3aad3bd982f9a229ce113aaed1911e4674decaca6cdb7e2bc708fbdbd4dffca7",
+        "parity": "3aad3bd982f9a229ce113aaed1911e4674decaca6cdb7e2bc708fbdbd4dffca7"
+      }
+    },
+    {
+      "case": "reversed_open",
+      "triangles": 10,
+      "watertight": false,
+      "voxels": 10648,
+      "generalized_occupied": 4096,
+      "signed_occupied": 768,
+      "parity_occupied": 768,
+      "parity_disagreements": 4864,
+      "signed_disagreements": 4864,
+      "disagreement_fraction": 0.4567993989481593,
+      "winding_range": [
+        -0.9553539838179552,
+        0.20709252092724373
+      ],
+      "minimum_threshold_distance": 0.012830789209912763,
+      "hashes": {
+        "generalized": "950ea99f10723791697f87a34ef493b9e74efbd656ee60fd3d623aa888e6f415",
+        "winding": "6f48c142fe19a49fdf353ee089f7624a955a3f1325e25b633f9549f796a8e726",
+        "signed": "3aad3bd982f9a229ce113aaed1911e4674decaca6cdb7e2bc708fbdbd4dffca7",
+        "parity": "3aad3bd982f9a229ce113aaed1911e4674decaca6cdb7e2bc708fbdbd4dffca7"
+      }
+    }
+  ],
+  "gates": {
+    "full_repeat": false,
+    "closed_agreement": true,
+    "open_disagreement": true,
+    "reversed_classification": true
+  },
+  "scope": "Synthetic open-mesh sign selection, no unique-solid or RT generalized-winding claim."
+}

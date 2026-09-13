@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "gate": 1.25,
+  "speedups": {
+    "modal": 2.8057667092693386,
+    "repeat_modal": 3.0308053924804628
+  },
+  "stored_bytes": 28733872,
+  "all_state_bytes_exact_between_backends_workers_and_prior_original_calibration": true,
+  "apps": [
+    "ap-tsbp8u9uNAhopFwQFlKCNo",
+    "ap-88ICc4hcvpvOkSmDPSFUYo"
+  ],
+  "source_sha256": {
+    "src/field_engine/lbm_domare_v1.py": "d18e1827ccf32b8feae9da349321d8685d0f81cdde69c06a560822c09b3bd6f5",
+    "src/field_engine/lbm_collision_native_v1.py": "d36b6c820c2f43e18c8355d928150ea44687be1fc92816123e54da6aaf3ad663",
+    "src/field_engine/lbm_collision_native_v1/collision.cpp": "2421c0dfd5ae70287cbd3bf3e2b184ef66abeba207a31ab178b5d08dcd386bc2",
+    "src/field_engine/opt/duct_growth_diff_v1.py": "98ed54b77a85ac7587be76517d04e489a90e6ffef92b038de26f7f58ed4d8565"
+  },
+  "scope": "Explicit backend adoption through existing run_lbm, calibration and duct public CLI. CPU arithmetic on two independent Modal L4 hosts. Full original straight/bent calibration and duct selftest, all states/reports/history/iterations exact, with loaded backend/binary bound cache reuse. Prior original calibration report arrays independently reused only as comparison gold, not computation.",
+  "full_numerical_reports_and_histories_exact_across_workers": true,
+  "calibration_report_exact_to_prior_original": true
+}

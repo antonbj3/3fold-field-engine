@@ -1,0 +1,69 @@
+{
+  "rows": [
+    {
+      "module": "cad_op_schema_v1.py",
+      "leg": 0,
+      "exit": 0,
+      "gates": true,
+      "count": 9,
+      "report_sha256": "bee58c42ad9a85036811b742b80a7ce6227c125ec023fd575eb222270ca93c68"
+    },
+    {
+      "module": "iso_thread_table_v1.py",
+      "leg": 0,
+      "exit": 0,
+      "gates": true,
+      "count": 4,
+      "report_sha256": "4856b3a5055b7a7faf7b847b256b2a3a442dc54fe401a19aac90c6f0a083f35d"
+    },
+    {
+      "module": "formrib_v1.py",
+      "leg": 0,
+      "exit": 0,
+      "gates": true,
+      "count": 4,
+      "report_sha256": "f073d0dabe2d0ca2ef86237f1feafd5e00626dd9474cfc51fe52fc00c08eec67"
+    },
+    {
+      "module": "geometri_selektor_v1.py",
+      "leg": 0,
+      "exit": 0,
+      "gates": true,
+      "count": 12,
+      "report_sha256": "59ac18b51ce5fee5521d8cce3909df7ca50561084e2e42838c4a34cdec7958e6"
+    },
+    {
+      "module": "cad_op_schema_v1.py",
+      "leg": 1,
+      "exit": 0,
+      "gates": true,
+      "count": 9,
+      "report_sha256": "bee58c42ad9a85036811b742b80a7ce6227c125ec023fd575eb222270ca93c68"
+    },
+    {
+      "module": "iso_thread_table_v1.py",
+      "leg": 1,
+      "exit": 0,
+      "gates": true,
+      "count": 4,
+      "report_sha256": "4856b3a5055b7a7faf7b847b256b2a3a442dc54fe401a19aac90c6f0a083f35d"
+    },
+    {
+      "module": "formrib_v1.py",
+      "leg": 1,
+      "exit": 0,
+      "gates": true,
+      "count": 4,
+      "report_sha256": "f073d0dabe2d0ca2ef86237f1feafd5e00626dd9474cfc51fe52fc00c08eec67"
+    },
+    {
+      "module": "geometri_selektor_v1.py",
+      "leg": 1,
+      "exit": 0,
+      "gates": true,
+      "count": 12,
+      "report_sha256": "59ac18b51ce5fee5521d8cce3909df7ca50561084e2e42838c4a34cdec7958e6"
+    }
+  ],
+  "scope": "Two independently copied CPU trees, four unchanged executable selftests, all 29 own checks pass per leg; complete canonical report hashes repeat."
+}

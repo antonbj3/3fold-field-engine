@@ -1,0 +1,937 @@
+{
+  "gates": {
+    "original_recipe_gates": true,
+    "complete_recipe_reports_exact": true,
+    "all_vectors_and_density_exact": true,
+    "one_ordering_per_sequence": true
+  },
+  "rows": [
+    {
+      "label": "original0",
+      "wall_seconds": 50.871509628000005,
+      "solve_seconds": 31.192871703999998,
+      "solve_calls": 12,
+      "per_solve_seconds": [
+        2.6128343110000003,
+        2.6089253339999985,
+        2.5770571429999976,
+        2.573965631,
+        2.587348434000006,
+        2.6278937039999946,
+        2.618184149000001,
+        2.5880822379999984,
+        2.5836373380000026,
+        2.589677815999991,
+        2.6082221679999975,
+        2.6170434380000103
+      ]
+    },
+    {
+      "label": "candidate0",
+      "wall_seconds": 35.92296997300001,
+      "solve_seconds": 29.267830759999995,
+      "solve_calls": 12,
+      "per_solve_seconds": [
+        2.6208875469999953,
+        2.418109205999997,
+        2.390381112,
+        2.391461394000004,
+        2.3992962920000025,
+        2.4420884750000056,
+        2.4463017349999916,
+        2.430756328000001,
+        2.422957568000001,
+        2.4430658480000034,
+        2.424509168,
+        2.438016086999994
+      ],
+      "builds": 1,
+      "reuses": 11
+    },
+    {
+      "label": "candidate1",
+      "wall_seconds": 35.828525137,
+      "solve_seconds": 29.008032476000025,
+      "solve_calls": 12,
+      "per_solve_seconds": [
+        2.5798898750000063,
+        2.402465331000002,
+        2.394663234999996,
+        2.3780110130000054,
+        2.3837229629999968,
+        2.44213388499999,
+        2.4296069540000076,
+        2.384922356000004,
+        2.3937343119999923,
+        2.405146116999987,
+        2.394667425000023,
+        2.4190690100000154
+      ],
+      "builds": 1,
+      "reuses": 11
+    },
+    {
+      "label": "original1",
+      "wall_seconds": 37.721472292000016,
+      "solve_seconds": 31.073186793000048,
+      "solve_calls": 12,
+      "per_solve_seconds": [
+        2.5970821450000017,
+        2.5985539460000098,
+        2.563712025000001,
+        2.5598890439999877,
+        2.6049955990000058,
+        2.586538485999995,
+        2.59256923800001,
+        2.587392890000018,
+        2.5834962190000113,
+        2.5935076000000095,
+        2.5920671899999945,
+        2.6133824110000035
+      ]
+    }
+  ],
+  "reports": {
+    "original0": {
+      "bound_identity": {
+        "tol_frac_svep": 0.25158189414504445,
+        "tol_frac_egen": 0.25158189414504445,
+        "IDENTISK": true
+      },
+      "gate_a_parts": {
+        "synthetic_bracket": {
+          "del": "synthetic_bracket",
+          "pitch_mm": 1.0,
+          "n_blocks": 684,
+          "n_active_blocks": 684,
+          "n_trianglar_nivamesh": 63772,
+          "passning": {
+            "n_plan": 6,
+            "n_cylinder": 4,
+            "tackning_area_frac": 0.96294,
+            "radier_mm": [
+              3.866,
+              3.866,
+              3.866,
+              3.866
+            ],
+            "max_residual_mm": 0.562421,
+            "tol_mm": 0.75
+          },
+          "ops": [
+            "sketch_2d",
+            "extrude",
+            "hole",
+            "hole",
+            "hole",
+            "hole"
+          ],
+          "rebuilt": {
+            "volume_mm3": 148946.25765299576,
+            "face_mix": {
+              "PLANE": 6,
+              "CYLINDER": 4
+            }
+          },
+          "orig": {
+            "volume_mm3": 148787.256842043,
+            "area_mm2": 31524.247719318988,
+            "face_mix": {
+              "PLANE": 6,
+              "CYLINDER": 4
+            }
+          },
+          "vol_dev_frac": 0.001068645355304654,
+          "vol_dev_pct": 0.106865,
+          "rasterisation_bound_frac": 0.10593732416475046,
+          "face_mix_match": true,
+          "PASS": true
+        },
+        "holed_plate": {
+          "del": "holed_plate",
+          "pitch_mm": 0.5,
+          "n_blocks": 1344,
+          "n_active_blocks": 1320,
+          "n_trianglar_nivamesh": 113128,
+          "passning": {
+            "n_plan": 6,
+            "n_cylinder": 5,
+            "tackning_area_frac": 0.954127,
+            "radier_mm": [
+              0.934,
+              1.933,
+              3.942,
+              7.959,
+              15.981
+            ],
+            "max_residual_mm": 0.339143,
+            "tol_mm": 0.375
+          },
+          "ops": [
+            "sketch_2d",
+            "extrude",
+            "hole",
+            "hole",
+            "hole",
+            "hole",
+            "hole"
+          ],
+          "rebuilt": {
+            "volume_mm3": 31676.260910868776,
+            "face_mix": {
+              "PLANE": 6,
+              "CYLINDER": 5
+            }
+          },
+          "orig": {
+            "volume_mm3": 31636.30143075529,
+            "area_mm2": 13802.106277387164,
+            "face_mix": {
+              "PLANE": 6,
+              "CYLINDER": 5
+            }
+          },
+          "vol_dev_frac": 0.0012630894986554203,
+          "vol_dev_pct": 0.126309,
+          "rasterisation_bound_frac": 0.1090685830295053,
+          "face_mix_match": true,
+          "PASS": true
+        }
+      },
+      "gate_b_topopt": {
+        "fall": "lastfalt_v1_topopt selftest case",
+        "n_iter": 12,
+        "grid": [
+          32,
+          32,
+          5
+        ],
+        "final_volfrac": 0.35,
+        "compliance_final_Nmm": 29257.52051,
+        "pitch_mm": 4.8,
+        "tol_mm": 3.6,
+        "n_trianglar": 47212,
+        "area_total_mm2": 482083.897,
+        "area_primitiv_mm2": 323238.3,
+        "fri_form_area_mm2": 158845.597,
+        "n_plan": 3,
+        "n_cylinder": 1,
+        "tackning_area_frac": 0.670502,
+        "recept_for_fri_form": false
+      },
+      "GATE_A_PASS": true,
+      "PASS": true
+    },
+    "candidate0": {
+      "bound_identity": {
+        "tol_frac_svep": 0.25158189414504445,
+        "tol_frac_egen": 0.25158189414504445,
+        "IDENTISK": true
+      },
+      "gate_a_parts": {
+        "synthetic_bracket": {
+          "del": "synthetic_bracket",
+          "pitch_mm": 1.0,
+          "n_blocks": 684,
+          "n_active_blocks": 684,
+          "n_trianglar_nivamesh": 63772,
+          "passning": {
+            "n_plan": 6,
+            "n_cylinder": 4,
+            "tackning_area_frac": 0.96294,
+            "radier_mm": [
+              3.866,
+              3.866,
+              3.866,
+              3.866
+            ],
+            "max_residual_mm": 0.562421,
+            "tol_mm": 0.75
+          },
+          "ops": [
+            "sketch_2d",
+            "extrude",
+            "hole",
+            "hole",
+            "hole",
+            "hole"
+          ],
+          "rebuilt": {
+            "volume_mm3": 148946.25765299576,
+            "face_mix": {
+              "PLANE": 6,
+              "CYLINDER": 4
+            }
+          },
+          "orig": {
+            "volume_mm3": 148787.256842043,
+            "area_mm2": 31524.247719318988,
+            "face_mix": {
+              "PLANE": 6,
+              "CYLINDER": 4
+            }
+          },
+          "vol_dev_frac": 0.001068645355304654,
+          "vol_dev_pct": 0.106865,
+          "rasterisation_bound_frac": 0.10593732416475046,
+          "face_mix_match": true,
+          "PASS": true
+        },
+        "holed_plate": {
+          "del": "holed_plate",
+          "pitch_mm": 0.5,
+          "n_blocks": 1344,
+          "n_active_blocks": 1320,
+          "n_trianglar_nivamesh": 113128,
+          "passning": {
+            "n_plan": 6,
+            "n_cylinder": 5,
+            "tackning_area_frac": 0.954127,
+            "radier_mm": [
+              0.934,
+              1.933,
+              3.942,
+              7.959,
+              15.981
+            ],
+            "max_residual_mm": 0.339143,
+            "tol_mm": 0.375
+          },
+          "ops": [
+            "sketch_2d",
+            "extrude",
+            "hole",
+            "hole",
+            "hole",
+            "hole",
+            "hole"
+          ],
+          "rebuilt": {
+            "volume_mm3": 31676.260910868776,
+            "face_mix": {
+              "PLANE": 6,
+              "CYLINDER": 5
+            }
+          },
+          "orig": {
+            "volume_mm3": 31636.30143075529,
+            "area_mm2": 13802.106277387164,
+            "face_mix": {
+              "PLANE": 6,
+              "CYLINDER": 5
+            }
+          },
+          "vol_dev_frac": 0.0012630894986554203,
+          "vol_dev_pct": 0.126309,
+          "rasterisation_bound_frac": 0.1090685830295053,
+          "face_mix_match": true,
+          "PASS": true
+        }
+      },
+      "gate_b_topopt": {
+        "fall": "lastfalt_v1_topopt selftest case",
+        "n_iter": 12,
+        "grid": [
+          32,
+          32,
+          5
+        ],
+        "final_volfrac": 0.35,
+        "compliance_final_Nmm": 29257.52051,
+        "pitch_mm": 4.8,
+        "tol_mm": 3.6,
+        "n_trianglar": 47212,
+        "area_total_mm2": 482083.897,
+        "area_primitiv_mm2": 323238.3,
+        "fri_form_area_mm2": 158845.597,
+        "n_plan": 3,
+        "n_cylinder": 1,
+        "tackning_area_frac": 0.670502,
+        "recept_for_fri_form": false
+      },
+      "GATE_A_PASS": true,
+      "PASS": true
+    },
+    "candidate1": {
+      "bound_identity": {
+        "tol_frac_svep": 0.25158189414504445,
+        "tol_frac_egen": 0.25158189414504445,
+        "IDENTISK": true
+      },
+      "gate_a_parts": {
+        "synthetic_bracket": {
+          "del": "synthetic_bracket",
+          "pitch_mm": 1.0,
+          "n_blocks": 684,
+          "n_active_blocks": 684,
+          "n_trianglar_nivamesh": 63772,
+          "passning": {
+            "n_plan": 6,
+            "n_cylinder": 4,
+            "tackning_area_frac": 0.96294,
+            "radier_mm": [
+              3.866,
+              3.866,
+              3.866,
+              3.866
+            ],
+            "max_residual_mm": 0.562421,
+            "tol_mm": 0.75
+          },
+          "ops": [
+            "sketch_2d",
+            "extrude",
+            "hole",
+            "hole",
+            "hole",
+            "hole"
+          ],
+          "rebuilt": {
+            "volume_mm3": 148946.25765299576,
+            "face_mix": {
+              "PLANE": 6,
+              "CYLINDER": 4
+            }
+          },
+          "orig": {
+            "volume_mm3": 148787.256842043,
+            "area_mm2": 31524.247719318988,
+            "face_mix": {
+              "PLANE": 6,
+              "CYLINDER": 4
+            }
+          },
+          "vol_dev_frac": 0.001068645355304654,
+          "vol_dev_pct": 0.106865,
+          "rasterisation_bound_frac": 0.10593732416475046,
+          "face_mix_match": true,
+          "PASS": true
+        },
+        "holed_plate": {
+          "del": "holed_plate",
+          "pitch_mm": 0.5,
+          "n_blocks": 1344,
+          "n_active_blocks": 1320,
+          "n_trianglar_nivamesh": 113128,
+          "passning": {
+            "n_plan": 6,
+            "n_cylinder": 5,
+            "tackning_area_frac": 0.954127,
+            "radier_mm": [
+              0.934,
+              1.933,
+              3.942,
+              7.959,
+              15.981
+            ],
+            "max_residual_mm": 0.339143,
+            "tol_mm": 0.375
+          },
+          "ops": [
+            "sketch_2d",
+            "extrude",
+            "hole",
+            "hole",
+            "hole",
+            "hole",
+            "hole"
+          ],
+          "rebuilt": {
+            "volume_mm3": 31676.260910868776,
+            "face_mix": {
+              "PLANE": 6,
+              "CYLINDER": 5
+            }
+          },
+          "orig": {
+            "volume_mm3": 31636.30143075529,
+            "area_mm2": 13802.106277387164,
+            "face_mix": {
+              "PLANE": 6,
+              "CYLINDER": 5
+            }
+          },
+          "vol_dev_frac": 0.0012630894986554203,
+          "vol_dev_pct": 0.126309,
+          "rasterisation_bound_frac": 0.1090685830295053,
+          "face_mix_match": true,
+          "PASS": true
+        }
+      },
+      "gate_b_topopt": {
+        "fall": "lastfalt_v1_topopt selftest case",
+        "n_iter": 12,
+        "grid": [
+          32,
+          32,
+          5
+        ],
+        "final_volfrac": 0.35,
+        "compliance_final_Nmm": 29257.52051,
+        "pitch_mm": 4.8,
+        "tol_mm": 3.6,
+        "n_trianglar": 47212,
+        "area_total_mm2": 482083.897,
+        "area_primitiv_mm2": 323238.3,
+        "fri_form_area_mm2": 158845.597,
+        "n_plan": 3,
+        "n_cylinder": 1,
+        "tackning_area_frac": 0.670502,
+        "recept_for_fri_form": false
+      },
+      "GATE_A_PASS": true,
+      "PASS": true
+    },
+    "original1": {
+      "bound_identity": {
+        "tol_frac_svep": 0.25158189414504445,
+        "tol_frac_egen": 0.25158189414504445,
+        "IDENTISK": true
+      },
+      "gate_a_parts": {
+        "synthetic_bracket": {
+          "del": "synthetic_bracket",
+          "pitch_mm": 1.0,
+          "n_blocks": 684,
+          "n_active_blocks": 684,
+          "n_trianglar_nivamesh": 63772,
+          "passning": {
+            "n_plan": 6,
+            "n_cylinder": 4,
+            "tackning_area_frac": 0.96294,
+            "radier_mm": [
+              3.866,
+              3.866,
+              3.866,
+              3.866
+            ],
+            "max_residual_mm": 0.562421,
+            "tol_mm": 0.75
+          },
+          "ops": [
+            "sketch_2d",
+            "extrude",
+            "hole",
+            "hole",
+            "hole",
+            "hole"
+          ],
+          "rebuilt": {
+            "volume_mm3": 148946.25765299576,
+            "face_mix": {
+              "PLANE": 6,
+              "CYLINDER": 4
+            }
+          },
+          "orig": {
+            "volume_mm3": 148787.256842043,
+            "area_mm2": 31524.247719318988,
+            "face_mix": {
+              "PLANE": 6,
+              "CYLINDER": 4
+            }
+          },
+          "vol_dev_frac": 0.001068645355304654,
+          "vol_dev_pct": 0.106865,
+          "rasterisation_bound_frac": 0.10593732416475046,
+          "face_mix_match": true,
+          "PASS": true
+        },
+        "holed_plate": {
+          "del": "holed_plate",
+          "pitch_mm": 0.5,
+          "n_blocks": 1344,
+          "n_active_blocks": 1320,
+          "n_trianglar_nivamesh": 113128,
+          "passning": {
+            "n_plan": 6,
+            "n_cylinder": 5,
+            "tackning_area_frac": 0.954127,
+            "radier_mm": [
+              0.934,
+              1.933,
+              3.942,
+              7.959,
+              15.981
+            ],
+            "max_residual_mm": 0.339143,
+            "tol_mm": 0.375
+          },
+          "ops": [
+            "sketch_2d",
+            "extrude",
+            "hole",
+            "hole",
+            "hole",
+            "hole",
+            "hole"
+          ],
+          "rebuilt": {
+            "volume_mm3": 31676.260910868776,
+            "face_mix": {
+              "PLANE": 6,
+              "CYLINDER": 5
+            }
+          },
+          "orig": {
+            "volume_mm3": 31636.30143075529,
+            "area_mm2": 13802.106277387164,
+            "face_mix": {
+              "PLANE": 6,
+              "CYLINDER": 5
+            }
+          },
+          "vol_dev_frac": 0.0012630894986554203,
+          "vol_dev_pct": 0.126309,
+          "rasterisation_bound_frac": 0.1090685830295053,
+          "face_mix_match": true,
+          "PASS": true
+        }
+      },
+      "gate_b_topopt": {
+        "fall": "lastfalt_v1_topopt selftest case",
+        "n_iter": 12,
+        "grid": [
+          32,
+          32,
+          5
+        ],
+        "final_volfrac": 0.35,
+        "compliance_final_Nmm": 29257.52051,
+        "pitch_mm": 4.8,
+        "tol_mm": 3.6,
+        "n_trianglar": 47212,
+        "area_total_mm2": 482083.897,
+        "area_primitiv_mm2": 323238.3,
+        "fri_form_area_mm2": 158845.597,
+        "n_plan": 3,
+        "n_cylinder": 1,
+        "tackning_area_frac": 0.670502,
+        "recept_for_fri_form": false
+      },
+      "GATE_A_PASS": true,
+      "PASS": true
+    }
+  },
+  "comparisons": [
+    {
+      "reference": "original0__u0",
+      "actual": "candidate0__u0",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u1",
+      "actual": "candidate0__u1",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u2",
+      "actual": "candidate0__u2",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u3",
+      "actual": "candidate0__u3",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u4",
+      "actual": "candidate0__u4",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u5",
+      "actual": "candidate0__u5",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u6",
+      "actual": "candidate0__u6",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u7",
+      "actual": "candidate0__u7",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u8",
+      "actual": "candidate0__u8",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u9",
+      "actual": "candidate0__u9",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u10",
+      "actual": "candidate0__u10",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u11",
+      "actual": "candidate0__u11",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__density",
+      "actual": "candidate0__density",
+      "exact": true,
+      "bytes": 40960,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u0",
+      "actual": "candidate1__u0",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u1",
+      "actual": "candidate1__u1",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u2",
+      "actual": "candidate1__u2",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u3",
+      "actual": "candidate1__u3",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u4",
+      "actual": "candidate1__u4",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u5",
+      "actual": "candidate1__u5",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u6",
+      "actual": "candidate1__u6",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u7",
+      "actual": "candidate1__u7",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u8",
+      "actual": "candidate1__u8",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u9",
+      "actual": "candidate1__u9",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u10",
+      "actual": "candidate1__u10",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u11",
+      "actual": "candidate1__u11",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__density",
+      "actual": "candidate1__density",
+      "exact": true,
+      "bytes": 40960,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u0",
+      "actual": "original1__u0",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u1",
+      "actual": "original1__u1",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u2",
+      "actual": "original1__u2",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u3",
+      "actual": "original1__u3",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u4",
+      "actual": "original1__u4",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u5",
+      "actual": "original1__u5",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u6",
+      "actual": "original1__u6",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u7",
+      "actual": "original1__u7",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u8",
+      "actual": "original1__u8",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u9",
+      "actual": "original1__u9",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u10",
+      "actual": "original1__u10",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__u11",
+      "actual": "original1__u11",
+      "exact": true,
+      "bytes": 156816,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "reference": "original0__density",
+      "actual": "original1__density",
+      "exact": true,
+      "bytes": 40960,
+      "different_values": 0,
+      "max_abs_difference": 0.0
+    }
+  ],
+  "scope": "Original recipe selftest in alternating old/new order; original complete reports, all twelve displacement vectors and density compared. Numeric factors are rebuilt on every call. Timing covers full recipe and its complete solve calls.",
+  "sources": {
+    "sparse_pattern_solve_v1.py": "a41abd487e88208c413482c801df6975a9bb9629c39ba7d9d8d4d2f9f253518d",
+    "lastfalt_v1_fem.py": "6ed4f7f14afeaafd439cd3939184aa0e8f0ca1dae770da9bb872a28a932cae3c",
+    "lastfalt_v1_topopt.py": "5beb7aa97146a6fe5a103e4f82c9b27a6de820f2c2f294e70ab1ab21bb62bb8a",
+    "field_to_recipe_v1.py": "9ecb44a428722fa2d4d263e2004095d883c341cc21e5c1dbab61121d71966478"
+  }
+}

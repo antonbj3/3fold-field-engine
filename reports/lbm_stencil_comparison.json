@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "gate": 1.15,
+  "speedups": {
+    "local": [
+      1.2029025035848704,
+      1.1923245326643446
+    ],
+    "modal": [
+      1.2407020857759954,
+      1.1921576378336927
+    ]
+  },
+  "full_states_exact_across_hosts_and_prior_original": true,
+  "full_reports_exact_across_hosts": true,
+  "stored_bytes": 33492288,
+  "modal_app": "ap-D5PAOFeP9dJCuCSxHYVQhR",
+  "modal_stamp": "20260913T191053Z-d-lbm-stencil-candidate",
+  "source_sha256": {
+    "src/field_engine/lbm_domare_v1.py": "d18e1827ccf32b8feae9da349321d8685d0f81cdde69c06a560822c09b3bd6f5",
+    "src/field_engine/lbm_collision_native_v1.py": "f022ed3530419cef3315175c48974f664a9b3774f909af0c8aa90377f2b7bbe3",
+    "src/field_engine/lbm_collision_native_v1/collision.cpp": "b65576fdb8fab9e928e22b238cd93ff145ec28eb423c7e21492218465cd4cf07",
+    "src/field_engine/lbm_collision_native_v1/moments.hpp": "a17a19593a8f2f49ac2758383a51d2f31e47d69ff906736222800e26f27fe898"
+  },
+  "scope": "Compile-time canonical D3Q19 stencil versus preceding runtime-matrix moments kernel, complete original LBM selftest twice each way per host. CPU arithmetic, original three physics gates, full four return distributions and reports exact; original collision-only library fallback tested."
+}

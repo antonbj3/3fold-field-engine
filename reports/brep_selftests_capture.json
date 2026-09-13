@@ -1,0 +1,33 @@
+{
+  "rows": [
+    {
+      "module": "brep_aag_v1.py",
+      "repeat": 0,
+      "exit": 0,
+      "all_pass": true,
+      "report_sha256": "a2245aae8a80886abf9fc025229f6a23e6bd3bcb4ee83b24eacb0a5c328e833f"
+    },
+    {
+      "module": "brep_aag_v1.py",
+      "repeat": 1,
+      "exit": 0,
+      "all_pass": true,
+      "report_sha256": "a2245aae8a80886abf9fc025229f6a23e6bd3bcb4ee83b24eacb0a5c328e833f"
+    },
+    {
+      "module": "brep_feature_igenkann_v1.py",
+      "repeat": 0,
+      "exit": 0,
+      "all_pass": true,
+      "report_sha256": "93a9deb2cb5d5a87d63c5a8a12485e3f2489600a79bdf36f1c63518a1900575e"
+    },
+    {
+      "module": "brep_feature_igenkann_v1.py",
+      "repeat": 1,
+      "exit": 0,
+      "all_pass": true,
+      "report_sha256": "93a9deb2cb5d5a87d63c5a8a12485e3f2489600a79bdf36f1c63518a1900575e"
+    }
+  ],
+  "exact": true
+}

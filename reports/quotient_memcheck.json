@@ -1,0 +1,57 @@
+{
+  "status": "VERIFIED-FRESH",
+  "rows": [
+    {
+      "report": "field_edt_quotient_gpu",
+      "arrays": 18,
+      "bytes_compared": 117625480,
+      "exact": true,
+      "errors": [
+        "ERROR SUMMARY: 0 errors"
+      ],
+      "child_exit": 0,
+      "instrumented_gates": {
+        "coverage": true,
+        "exact": true,
+        "repeat": true,
+        "invalid": true
+      }
+    },
+    {
+      "report": "field_quotient_pair",
+      "arrays": 180,
+      "bytes_compared": 141559320,
+      "exact": true,
+      "errors": [
+        "ERROR SUMMARY: 0 errors"
+      ],
+      "child_exit": 1,
+      "instrumented_gates": {
+        "coverage": true,
+        "exact": true,
+        "repeat": true,
+        "lifecycle": true,
+        "plate_speedup_1_25": false
+      }
+    },
+    {
+      "report": "field_quotient_service",
+      "arrays": 355,
+      "bytes_compared": 36115362,
+      "exact": true,
+      "errors": [
+        "ERROR SUMMARY: 0 errors"
+      ],
+      "child_exit": 1,
+      "instrumented_gates": {
+        "coverage": true,
+        "exact": true,
+        "repeats": true,
+        "lifecycle_capacity": true,
+        "warm_L_2ms": false
+      }
+    }
+  ],
+  "hardware": "NVIDIA L4, 580.95.05, 0 %, 3 MiB",
+  "scope": "Modal L4 numerical/memory proof only, all spawned processes targeted. Instrumented component/service speed failures retained; no local execution or performance acceptance."
+}

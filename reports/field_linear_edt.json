@@ -1,0 +1,357 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "gates": {
+    "coverage": true,
+    "exact": true,
+    "repeat": true,
+    "invalid": true,
+    "plate_speedup_2": false
+  },
+  "rows": [
+    {
+      "case": "random_(1, 1, 2)",
+      "shape": [
+        1,
+        1,
+        2
+      ],
+      "leg": 0,
+      "pair_ms": {
+        "exhaustive": 153.130778,
+        "envelope": 7.059877999999999
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "01acecb507abfe1a354aa8064f4af5d3f1acd019e37db3c11c97523b71c76e9d",
+        "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+      ]
+    },
+    {
+      "case": "random_(1, 1, 2)",
+      "shape": [
+        1,
+        1,
+        2
+      ],
+      "leg": 1,
+      "pair_ms": {
+        "envelope": 0.596781,
+        "exhaustive": 1.199396
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "01acecb507abfe1a354aa8064f4af5d3f1acd019e37db3c11c97523b71c76e9d",
+        "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+      ]
+    },
+    {
+      "case": "random_(512, 1, 7)",
+      "shape": [
+        512,
+        1,
+        7
+      ],
+      "leg": 0,
+      "pair_ms": {
+        "exhaustive": 1.351467,
+        "envelope": 6.1938569999999995
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "2418e47e16336e9d4837c54c72bdd39d24199834ce9894bc14a44e51fe8e7eaf",
+        "5d4edb8f595d791daee6f04e1ee902ae8c154b9e293a24bf1d2152996181d568"
+      ]
+    },
+    {
+      "case": "random_(512, 1, 7)",
+      "shape": [
+        512,
+        1,
+        7
+      ],
+      "leg": 1,
+      "pair_ms": {
+        "envelope": 4.43028,
+        "exhaustive": 0.9991359999999999
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "2418e47e16336e9d4837c54c72bdd39d24199834ce9894bc14a44e51fe8e7eaf",
+        "5d4edb8f595d791daee6f04e1ee902ae8c154b9e293a24bf1d2152996181d568"
+      ]
+    },
+    {
+      "case": "random_(1, 512, 7)",
+      "shape": [
+        1,
+        512,
+        7
+      ],
+      "leg": 0,
+      "pair_ms": {
+        "exhaustive": 1.2530459999999999,
+        "envelope": 1.9753619999999998
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "2bc52fbe3eca662a14d9573061dada6b52b427f43223da108bd8f0515a30ec41",
+        "49020b3642167bf808e9c66dde7125a789ce2fd69688b6f3fd8b31bee1324fdb"
+      ]
+    },
+    {
+      "case": "random_(1, 512, 7)",
+      "shape": [
+        1,
+        512,
+        7
+      ],
+      "leg": 1,
+      "pair_ms": {
+        "envelope": 1.377372,
+        "exhaustive": 0.7319439999999999
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "2bc52fbe3eca662a14d9573061dada6b52b427f43223da108bd8f0515a30ec41",
+        "49020b3642167bf808e9c66dde7125a789ce2fd69688b6f3fd8b31bee1324fdb"
+      ]
+    },
+    {
+      "case": "random_(7, 1, 512)",
+      "shape": [
+        7,
+        1,
+        512
+      ],
+      "leg": 0,
+      "pair_ms": {
+        "exhaustive": 1.1012739999999999,
+        "envelope": 1.582695
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "e01603f5cb835162374212165d03e8792034949a0d1d8c3fdb2b65b3eb9408f4",
+        "7e57b46bf7198e6b7be06b2a4430536597fc35bd4f115b712c6a35fb15112177"
+      ]
+    },
+    {
+      "case": "random_(7, 1, 512)",
+      "shape": [
+        7,
+        1,
+        512
+      ],
+      "leg": 1,
+      "pair_ms": {
+        "envelope": 1.438494,
+        "exhaustive": 0.6963239999999999
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "e01603f5cb835162374212165d03e8792034949a0d1d8c3fdb2b65b3eb9408f4",
+        "7e57b46bf7198e6b7be06b2a4430536597fc35bd4f115b712c6a35fb15112177"
+      ]
+    },
+    {
+      "case": "random_(31, 27, 19)",
+      "shape": [
+        31,
+        27,
+        19
+      ],
+      "leg": 0,
+      "pair_ms": {
+        "exhaustive": 1.262453,
+        "envelope": 1.016365
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "2ea3fb4930c72298ed9e4dde33d86c9e96087810a90b581e137238d989a7d78f",
+        "102a80cd02842f49c61045ecd8e27764022deae7370d0ac110726c45e7e7ea26"
+      ]
+    },
+    {
+      "case": "random_(31, 27, 19)",
+      "shape": [
+        31,
+        27,
+        19
+      ],
+      "leg": 1,
+      "pair_ms": {
+        "envelope": 0.9177829999999999,
+        "exhaustive": 0.773273
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "2ea3fb4930c72298ed9e4dde33d86c9e96087810a90b581e137238d989a7d78f",
+        "102a80cd02842f49c61045ecd8e27764022deae7370d0ac110726c45e7e7ea26"
+      ]
+    },
+    {
+      "case": "random_(97, 65, 89)",
+      "shape": [
+        97,
+        65,
+        89
+      ],
+      "leg": 0,
+      "pair_ms": {
+        "exhaustive": 6.820162,
+        "envelope": 5.786289
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "528d99dd96e49b032af542772349ee200f1ffc17f7fbe6ddaca76475332db350",
+        "836b3809995971bc0bf0d7a8ad5522de0a55281155a8dc6d27271e0395330f6c"
+      ]
+    },
+    {
+      "case": "random_(97, 65, 89)",
+      "shape": [
+        97,
+        65,
+        89
+      ],
+      "leg": 1,
+      "pair_ms": {
+        "envelope": 5.931483999999999,
+        "exhaustive": 5.514545
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "528d99dd96e49b032af542772349ee200f1ffc17f7fbe6ddaca76475332db350",
+        "836b3809995971bc0bf0d7a8ad5522de0a55281155a8dc6d27271e0395330f6c"
+      ]
+    },
+    {
+      "case": "single_zero",
+      "shape": [
+        37,
+        41,
+        43
+      ],
+      "leg": 0,
+      "pair_ms": {
+        "exhaustive": 1.8005799999999998,
+        "envelope": 1.5429039999999998
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "dfa9ad9677160bafd81ade6984736de2df40e3d8134e9e506b944b29c39eb504",
+        "b773ac79ba37025628a5a998e334fd85f782c501b9232dad2b97cdbda5b14678"
+      ]
+    },
+    {
+      "case": "single_zero",
+      "shape": [
+        37,
+        41,
+        43
+      ],
+      "leg": 1,
+      "pair_ms": {
+        "envelope": 1.6592829999999998,
+        "exhaustive": 1.4743769999999998
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "dfa9ad9677160bafd81ade6984736de2df40e3d8134e9e506b944b29c39eb504",
+        "b773ac79ba37025628a5a998e334fd85f782c501b9232dad2b97cdbda5b14678"
+      ]
+    },
+    {
+      "case": "single_one",
+      "shape": [
+        37,
+        41,
+        43
+      ],
+      "leg": 0,
+      "pair_ms": {
+        "exhaustive": 1.763159,
+        "envelope": 1.421916
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "b773ac79ba37025628a5a998e334fd85f782c501b9232dad2b97cdbda5b14678",
+        "dfa9ad9677160bafd81ade6984736de2df40e3d8134e9e506b944b29c39eb504"
+      ]
+    },
+    {
+      "case": "single_one",
+      "shape": [
+        37,
+        41,
+        43
+      ],
+      "leg": 1,
+      "pair_ms": {
+        "envelope": 1.545534,
+        "exhaustive": 1.8910799999999999
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "b773ac79ba37025628a5a998e334fd85f782c501b9232dad2b97cdbda5b14678",
+        "dfa9ad9677160bafd81ade6984736de2df40e3d8134e9e506b944b29c39eb504"
+      ]
+    },
+    {
+      "case": "plate_L",
+      "shape": [
+        249,
+        109,
+        17
+      ],
+      "leg": 0,
+      "pair_ms": {
+        "exhaustive": 5.889614,
+        "envelope": 4.8401179999999995
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "648d29b3194051c8df4a6ea09b84588ad32b7cc8d086bca2deaf08b2a2237fe0",
+        "3ed836c70de61cceccdb0ae63448f52b8fde9f655c34c79cd7368e3378115e83"
+      ]
+    },
+    {
+      "case": "plate_L",
+      "shape": [
+        249,
+        109,
+        17
+      ],
+      "leg": 1,
+      "pair_ms": {
+        "envelope": 5.031374,
+        "exhaustive": 9.206339
+      },
+      "exact": true,
+      "signed_exact": true,
+      "hashes": [
+        "648d29b3194051c8df4a6ea09b84588ad32b7cc8d086bca2deaf08b2a2237fe0",
+        "3ed836c70de61cceccdb0ae63448f52b8fde9f655c34c79cd7368e3378115e83"
+      ]
+    }
+  ],
+  "invalid_rejections": 4,
+  "source_sha256": "22d1441c94e0f2c0a639985ad4ac1eef593901107a7f3df839b536a9e61386e3",
+  "scope": "Exact integer squared EDT; independent SciPy squared values plus frozen native reference. Two reversed orders. Pair time includes host validation/allocation/upload/three axes/download/free for mask and complement; first runtime initialization charged where it occurs. Signed host arithmetic unchanged. Modal device metadata stored separately."
+}

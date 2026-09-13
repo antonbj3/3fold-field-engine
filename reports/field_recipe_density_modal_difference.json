@@ -1,0 +1,17 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "shape": [
+    32,
+    32,
+    5
+  ],
+  "dtype": "float64",
+  "differing_values": 2314,
+  "total_values": 5120,
+  "max_abs_difference": 1.1920131548492918e-11,
+  "sum_local": 1792.0,
+  "sum_modal": 1792.0,
+  "threshold_half_different": 0,
+  "float32_projection_exact": true,
+  "scope": "Complete reports and original gates pass, but complete float64 density capture identity fails under explicit Haswell. Float32/threshold observations are diagnostics only and do not change the frozen float64 comparison."
+}

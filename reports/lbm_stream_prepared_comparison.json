@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "gate": 1.15,
+  "speedups": {
+    "local": [
+      1.1849992525753408,
+      1.190435320539843
+    ],
+    "modal": [
+      1.2001628854839013,
+      1.1824999319535656
+    ]
+  },
+  "full_states_exact_across_hosts_and_prior_original": true,
+  "full_reports_exact_across_hosts": true,
+  "stored_bytes": 33492288,
+  "modal_app": "ap-CtKvCuVzgzMUQOIT3O2JQq",
+  "modal_stamp": "20260913T192431Z-d-lbm-stream-prepared-candidate",
+  "source_sha256": {
+    "src/field_engine/lbm_domare_v1.py": "d18e1827ccf32b8feae9da349321d8685d0f81cdde69c06a560822c09b3bd6f5",
+    "src/field_engine/lbm_collision_native_v1.py": "26d2ccd68031b8f7017a2e4474fdd04d9c00c1995a8c04d1d4fe81018c697a16",
+    "src/field_engine/lbm_collision_native_v1/collision.cpp": "b65576fdb8fab9e928e22b238cd93ff145ec28eb423c7e21492218465cd4cf07",
+    "src/field_engine/lbm_collision_native_v1/moments.hpp": "a17a19593a8f2f49ac2758383a51d2f31e47d69ff906736222800e26f27fe898"
+  },
+  "scope": "Prepared merged streaming/reflection indices versus separate periodic gather and bounceback, complete original LBM selftest twice each way per host. CPU arithmetic, original three physics gates, full four return distributions and reports exact; original collision-only library fallback tested."
+}

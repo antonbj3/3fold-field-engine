@@ -1,0 +1,29 @@
+{
+  "rows": [
+    {
+      "exit": 0,
+      "all_pass": true,
+      "report_sha256": "b886d530144ef24c872b9a35324789886a7c297af492df1026f276f7514418f3",
+      "captures": [
+        {
+          "sha256": "fb4f386853d042c188e270a9cb6a048fffd473412c5609dbcb041fabf7e0693d",
+          "bytes": 41088,
+          "relative_path": "src/field_engine/artifacts/rho_field_field_to_recipe_v1.npy"
+        }
+      ]
+    },
+    {
+      "exit": 0,
+      "all_pass": true,
+      "report_sha256": "b886d530144ef24c872b9a35324789886a7c297af492df1026f276f7514418f3",
+      "captures": [
+        {
+          "sha256": "fb4f386853d042c188e270a9cb6a048fffd473412c5609dbcb041fabf7e0693d",
+          "bytes": 41088,
+          "relative_path": "src/field_engine/artifacts/rho_field_field_to_recipe_v1.npy"
+        }
+      ]
+    }
+  ],
+  "exact": true
+}

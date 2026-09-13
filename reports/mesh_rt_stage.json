@@ -1,0 +1,309 @@
+{
+  "rows": [
+    {
+      "case": "plate_2.0",
+      "closed": true,
+      "method": "rt_signed",
+      "shape": [
+        66,
+        31,
+        8
+      ],
+      "legs": [
+        {
+          "hashes": {
+            "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+            "surface": "b6c880047296f432627f84f2814eb72b2fdf32dcb90cb20a66989e8774ef9943",
+            "solid": "a632890c80f8cc4eccec6dd8fef8cd25a2d3ca0802ff567ffda5565e637157a2",
+            "distance": "4707e44902e0cf3d3e3a5e0f3d86b73e886093661bc00eceb3fd47acb2c69782"
+          },
+          "differences": {
+            "gmin": 0,
+            "surface": 8,
+            "solid": 4,
+            "distance": 38
+          },
+          "shape_equal": true
+        },
+        {
+          "hashes": {
+            "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+            "surface": "b6c880047296f432627f84f2814eb72b2fdf32dcb90cb20a66989e8774ef9943",
+            "solid": "a632890c80f8cc4eccec6dd8fef8cd25a2d3ca0802ff567ffda5565e637157a2",
+            "distance": "4707e44902e0cf3d3e3a5e0f3d86b73e886093661bc00eceb3fd47acb2c69782"
+          },
+          "differences": {
+            "gmin": 0,
+            "surface": 8,
+            "solid": 4,
+            "distance": 38
+          },
+          "shape_equal": true
+        }
+      ]
+    },
+    {
+      "case": "plate_1.0",
+      "closed": true,
+      "method": "rt_signed",
+      "shape": [
+        127,
+        57,
+        11
+      ],
+      "legs": [
+        {
+          "hashes": {
+            "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+            "surface": "e013e9540866bb21de1a0b8530cd3f7df431907d8bfdca3047b533064f25abb6",
+            "solid": "43903ae6b8aaf4c6c5bcd87d4d00589cbea6971193d96859d541c21c77ad79a0",
+            "distance": "3c78e0177c6578be694a9a8b7ba48b2a98edafb8482d9370667ab5ea4fb04e34"
+          },
+          "differences": {
+            "gmin": 0,
+            "surface": 12,
+            "solid": 6,
+            "distance": 108
+          },
+          "shape_equal": true
+        },
+        {
+          "hashes": {
+            "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+            "surface": "e013e9540866bb21de1a0b8530cd3f7df431907d8bfdca3047b533064f25abb6",
+            "solid": "43903ae6b8aaf4c6c5bcd87d4d00589cbea6971193d96859d541c21c77ad79a0",
+            "distance": "3c78e0177c6578be694a9a8b7ba48b2a98edafb8482d9370667ab5ea4fb04e34"
+          },
+          "differences": {
+            "gmin": 0,
+            "surface": 12,
+            "solid": 6,
+            "distance": 108
+          },
+          "shape_equal": true
+        }
+      ]
+    },
+    {
+      "case": "plate_0.5",
+      "closed": true,
+      "method": "rt_signed",
+      "shape": [
+        249,
+        109,
+        17
+      ],
+      "legs": [
+        {
+          "hashes": {
+            "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+            "surface": "98568578d78fdd4745862579288f547f0c1bb8153f0dc9e9bc78dbb63a8fc4b0",
+            "solid": "ef1520e8d5cf2d57b4024aa6bb4d60cc7f8a92a0d8fd7d6120c71488e77baca9",
+            "distance": "6d1cec600ea09297931255efdedf1bfe00f9c1bc26524073ebfadbeb190f146d"
+          },
+          "differences": {
+            "gmin": 0,
+            "surface": 5,
+            "solid": 3,
+            "distance": 66
+          },
+          "shape_equal": true
+        },
+        {
+          "hashes": {
+            "gmin": "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+            "surface": "98568578d78fdd4745862579288f547f0c1bb8153f0dc9e9bc78dbb63a8fc4b0",
+            "solid": "ef1520e8d5cf2d57b4024aa6bb4d60cc7f8a92a0d8fd7d6120c71488e77baca9",
+            "distance": "6d1cec600ea09297931255efdedf1bfe00f9c1bc26524073ebfadbeb190f146d"
+          },
+          "differences": {
+            "gmin": 0,
+            "surface": 5,
+            "solid": 3,
+            "distance": 66
+          },
+          "shape_equal": true
+        }
+      ]
+    },
+    {
+      "case": "rotated_0.0",
+      "closed": true,
+      "method": "rt_signed",
+      "shape": [
+        26,
+        22,
+        18
+      ],
+      "legs": [
+        {
+          "hashes": {
+            "gmin": "f1475481fd56adb877bb7e9e2445d219ad6dd710c8f5aba167470b9c67c6c9f5",
+            "surface": "cd14f7e46e5fd41895e697238c463d2dca8a025960edf96caa93786cf30fbe91",
+            "solid": "a198d33c2993591a9614d8ae512827ad32bee11361b3af2384e0f3716f8e3f28",
+            "distance": "2d0873516d29e7ff85353ccb2bf3c3f123caf1a199bbcb6b95bec0e8afd602e4"
+          },
+          "differences": {
+            "gmin": 0,
+            "surface": 0,
+            "solid": 0,
+            "distance": 0
+          },
+          "shape_equal": true
+        },
+        {
+          "hashes": {
+            "gmin": "f1475481fd56adb877bb7e9e2445d219ad6dd710c8f5aba167470b9c67c6c9f5",
+            "surface": "cd14f7e46e5fd41895e697238c463d2dca8a025960edf96caa93786cf30fbe91",
+            "solid": "a198d33c2993591a9614d8ae512827ad32bee11361b3af2384e0f3716f8e3f28",
+            "distance": "2d0873516d29e7ff85353ccb2bf3c3f123caf1a199bbcb6b95bec0e8afd602e4"
+          },
+          "differences": {
+            "gmin": 0,
+            "surface": 0,
+            "solid": 0,
+            "distance": 0
+          },
+          "shape_equal": true
+        }
+      ]
+    },
+    {
+      "case": "rotated_1000000.0",
+      "closed": true,
+      "method": "rt_signed",
+      "shape": [
+        26,
+        22,
+        18
+      ],
+      "legs": [
+        {
+          "hashes": {
+            "gmin": "f1475481fd56adb877bb7e9e2445d219ad6dd710c8f5aba167470b9c67c6c9f5",
+            "surface": "cd14f7e46e5fd41895e697238c463d2dca8a025960edf96caa93786cf30fbe91",
+            "solid": "a198d33c2993591a9614d8ae512827ad32bee11361b3af2384e0f3716f8e3f28",
+            "distance": "2d0873516d29e7ff85353ccb2bf3c3f123caf1a199bbcb6b95bec0e8afd602e4"
+          },
+          "differences": {
+            "gmin": 0,
+            "surface": 0,
+            "solid": 0,
+            "distance": 0
+          },
+          "shape_equal": true
+        },
+        {
+          "hashes": {
+            "gmin": "f1475481fd56adb877bb7e9e2445d219ad6dd710c8f5aba167470b9c67c6c9f5",
+            "surface": "cd14f7e46e5fd41895e697238c463d2dca8a025960edf96caa93786cf30fbe91",
+            "solid": "a198d33c2993591a9614d8ae512827ad32bee11361b3af2384e0f3716f8e3f28",
+            "distance": "2d0873516d29e7ff85353ccb2bf3c3f123caf1a199bbcb6b95bec0e8afd602e4"
+          },
+          "differences": {
+            "gmin": 0,
+            "surface": 0,
+            "solid": 0,
+            "distance": 0
+          },
+          "shape_equal": true
+        }
+      ]
+    },
+    {
+      "case": "open",
+      "closed": false,
+      "method": "ordered_gwn",
+      "shape": [
+        22,
+        22,
+        22
+      ],
+      "legs": [
+        {
+          "hashes": {
+            "gmin": "165a7f138546f74cd5177705c7fcd0b10329b4e9ff493fd77939a5291beda702",
+            "surface": "8ae5fb17c7bf9749244dde3d977f32a816999aa17eea52322aeb422f9d55d059",
+            "solid": "950ea99f10723791697f87a34ef493b9e74efbd656ee60fd3d623aa888e6f415",
+            "distance": "54aeb9bef8ba770c51323f571d0e5f0ce6cbccb48c8e34009721dba99a73c788"
+          },
+          "differences": {
+            "gmin": 0,
+            "surface": 0,
+            "solid": 0,
+            "distance": 0
+          },
+          "shape_equal": true
+        },
+        {
+          "hashes": {
+            "gmin": "165a7f138546f74cd5177705c7fcd0b10329b4e9ff493fd77939a5291beda702",
+            "surface": "8ae5fb17c7bf9749244dde3d977f32a816999aa17eea52322aeb422f9d55d059",
+            "solid": "950ea99f10723791697f87a34ef493b9e74efbd656ee60fd3d623aa888e6f415",
+            "distance": "54aeb9bef8ba770c51323f571d0e5f0ce6cbccb48c8e34009721dba99a73c788"
+          },
+          "differences": {
+            "gmin": 0,
+            "surface": 0,
+            "solid": 0,
+            "distance": 0
+          },
+          "shape_equal": true
+        }
+      ]
+    },
+    {
+      "case": "reversed_open",
+      "closed": false,
+      "method": "ordered_gwn",
+      "shape": [
+        22,
+        22,
+        22
+      ],
+      "legs": [
+        {
+          "hashes": {
+            "gmin": "165a7f138546f74cd5177705c7fcd0b10329b4e9ff493fd77939a5291beda702",
+            "surface": "8ae5fb17c7bf9749244dde3d977f32a816999aa17eea52322aeb422f9d55d059",
+            "solid": "950ea99f10723791697f87a34ef493b9e74efbd656ee60fd3d623aa888e6f415",
+            "distance": "54aeb9bef8ba770c51323f571d0e5f0ce6cbccb48c8e34009721dba99a73c788"
+          },
+          "differences": {
+            "gmin": 0,
+            "surface": 0,
+            "solid": 0,
+            "distance": 0
+          },
+          "shape_equal": true
+        },
+        {
+          "hashes": {
+            "gmin": "165a7f138546f74cd5177705c7fcd0b10329b4e9ff493fd77939a5291beda702",
+            "surface": "8ae5fb17c7bf9749244dde3d977f32a816999aa17eea52322aeb422f9d55d059",
+            "solid": "950ea99f10723791697f87a34ef493b9e74efbd656ee60fd3d623aa888e6f415",
+            "distance": "54aeb9bef8ba770c51323f571d0e5f0ce6cbccb48c8e34009721dba99a73c788"
+          },
+          "differences": {
+            "gmin": 0,
+            "surface": 0,
+            "solid": 0,
+            "distance": 0
+          },
+          "shape_equal": true
+        }
+      ]
+    }
+  ],
+  "gates": {
+    "full_repeat": true,
+    "closed_exact": false,
+    "open_occupancy_exact": true,
+    "open_distance_surface_exact": true,
+    "method_selection": true,
+    "inputs_unchanged": true,
+    "closed_rejection": true
+  },
+  "closed_rejections": 7,
+  "scope": "Bounded mesh-stage correctness, not full application or timing acceptance."
+}

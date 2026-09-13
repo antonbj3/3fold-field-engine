@@ -1,0 +1,314 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "observations": {
+    "local": {
+      "source_sha256": "d999420f7eef60e69cdf4d2daa5fd70db9519085f8486150447d392405610d6d",
+      "rows": [
+        {
+          "profile": "native",
+          "repeat": 0,
+          "exit": 0,
+          "own_gates": true,
+          "report_sha256": "89b9d864e0c559881de7a3385061d9f7c055f87c8f33147be19687142eff5593",
+          "reference_exact": true,
+          "runtime": {
+            "numpy": "2.5.3",
+            "runtimes": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "version": "0.3.34.106.0",
+                "threading_layer": "pthreads",
+                "architecture": "Haswell",
+                "binary_name": "libscipy_openblas64_-f48b354e.so",
+                "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+              }
+            ]
+          }
+        },
+        {
+          "profile": "native",
+          "repeat": 1,
+          "exit": 0,
+          "own_gates": true,
+          "report_sha256": "89b9d864e0c559881de7a3385061d9f7c055f87c8f33147be19687142eff5593",
+          "reference_exact": true,
+          "runtime": {
+            "numpy": "2.5.3",
+            "runtimes": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "version": "0.3.34.106.0",
+                "threading_layer": "pthreads",
+                "architecture": "Haswell",
+                "binary_name": "libscipy_openblas64_-f48b354e.so",
+                "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+              }
+            ]
+          }
+        },
+        {
+          "profile": "Haswell",
+          "repeat": 0,
+          "exit": 0,
+          "own_gates": true,
+          "report_sha256": "89b9d864e0c559881de7a3385061d9f7c055f87c8f33147be19687142eff5593",
+          "reference_exact": true,
+          "runtime": {
+            "numpy": "2.5.3",
+            "runtimes": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "version": "0.3.34.106.0",
+                "threading_layer": "pthreads",
+                "architecture": "Haswell",
+                "binary_name": "libscipy_openblas64_-f48b354e.so",
+                "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+              }
+            ]
+          }
+        },
+        {
+          "profile": "Haswell",
+          "repeat": 1,
+          "exit": 0,
+          "own_gates": true,
+          "report_sha256": "89b9d864e0c559881de7a3385061d9f7c055f87c8f33147be19687142eff5593",
+          "reference_exact": true,
+          "runtime": {
+            "numpy": "2.5.3",
+            "runtimes": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "version": "0.3.34.106.0",
+                "threading_layer": "pthreads",
+                "architecture": "Haswell",
+                "binary_name": "libscipy_openblas64_-f48b354e.so",
+                "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "modal_cpu8": {
+      "source_sha256": "d999420f7eef60e69cdf4d2daa5fd70db9519085f8486150447d392405610d6d",
+      "rows": [
+        {
+          "profile": "native",
+          "repeat": 0,
+          "exit": 0,
+          "own_gates": true,
+          "report_sha256": "89b9d864e0c559881de7a3385061d9f7c055f87c8f33147be19687142eff5593",
+          "reference_exact": true,
+          "runtime": {
+            "numpy": "2.5.3",
+            "runtimes": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "version": "0.3.34.106.0",
+                "threading_layer": "pthreads",
+                "architecture": "Haswell",
+                "binary_name": "libscipy_openblas64_-f48b354e.so",
+                "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+              }
+            ]
+          }
+        },
+        {
+          "profile": "native",
+          "repeat": 1,
+          "exit": 0,
+          "own_gates": true,
+          "report_sha256": "89b9d864e0c559881de7a3385061d9f7c055f87c8f33147be19687142eff5593",
+          "reference_exact": true,
+          "runtime": {
+            "numpy": "2.5.3",
+            "runtimes": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "version": "0.3.34.106.0",
+                "threading_layer": "pthreads",
+                "architecture": "Haswell",
+                "binary_name": "libscipy_openblas64_-f48b354e.so",
+                "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+              }
+            ]
+          }
+        },
+        {
+          "profile": "Haswell",
+          "repeat": 0,
+          "exit": 0,
+          "own_gates": true,
+          "report_sha256": "89b9d864e0c559881de7a3385061d9f7c055f87c8f33147be19687142eff5593",
+          "reference_exact": true,
+          "runtime": {
+            "numpy": "2.5.3",
+            "runtimes": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "version": "0.3.34.106.0",
+                "threading_layer": "pthreads",
+                "architecture": "Haswell",
+                "binary_name": "libscipy_openblas64_-f48b354e.so",
+                "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+              }
+            ]
+          }
+        },
+        {
+          "profile": "Haswell",
+          "repeat": 1,
+          "exit": 0,
+          "own_gates": true,
+          "report_sha256": "89b9d864e0c559881de7a3385061d9f7c055f87c8f33147be19687142eff5593",
+          "reference_exact": true,
+          "runtime": {
+            "numpy": "2.5.3",
+            "runtimes": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "version": "0.3.34.106.0",
+                "threading_layer": "pthreads",
+                "architecture": "Haswell",
+                "binary_name": "libscipy_openblas64_-f48b354e.so",
+                "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "modal_cpu32": {
+      "source_sha256": "d999420f7eef60e69cdf4d2daa5fd70db9519085f8486150447d392405610d6d",
+      "rows": [
+        {
+          "profile": "native",
+          "repeat": 0,
+          "exit": 0,
+          "own_gates": true,
+          "report_sha256": "89b9d864e0c559881de7a3385061d9f7c055f87c8f33147be19687142eff5593",
+          "reference_exact": true,
+          "runtime": {
+            "numpy": "2.5.3",
+            "runtimes": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "version": "0.3.34.106.0",
+                "threading_layer": "pthreads",
+                "architecture": "Haswell",
+                "binary_name": "libscipy_openblas64_-f48b354e.so",
+                "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+              }
+            ]
+          }
+        },
+        {
+          "profile": "native",
+          "repeat": 1,
+          "exit": 0,
+          "own_gates": true,
+          "report_sha256": "89b9d864e0c559881de7a3385061d9f7c055f87c8f33147be19687142eff5593",
+          "reference_exact": true,
+          "runtime": {
+            "numpy": "2.5.3",
+            "runtimes": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "version": "0.3.34.106.0",
+                "threading_layer": "pthreads",
+                "architecture": "Haswell",
+                "binary_name": "libscipy_openblas64_-f48b354e.so",
+                "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+              }
+            ]
+          }
+        },
+        {
+          "profile": "Haswell",
+          "repeat": 0,
+          "exit": 0,
+          "own_gates": true,
+          "report_sha256": "89b9d864e0c559881de7a3385061d9f7c055f87c8f33147be19687142eff5593",
+          "reference_exact": true,
+          "runtime": {
+            "numpy": "2.5.3",
+            "runtimes": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "version": "0.3.34.106.0",
+                "threading_layer": "pthreads",
+                "architecture": "Haswell",
+                "binary_name": "libscipy_openblas64_-f48b354e.so",
+                "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+              }
+            ]
+          }
+        },
+        {
+          "profile": "Haswell",
+          "repeat": 1,
+          "exit": 0,
+          "own_gates": true,
+          "report_sha256": "89b9d864e0c559881de7a3385061d9f7c055f87c8f33147be19687142eff5593",
+          "reference_exact": true,
+          "runtime": {
+            "numpy": "2.5.3",
+            "runtimes": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "version": "0.3.34.106.0",
+                "threading_layer": "pthreads",
+                "architecture": "Haswell",
+                "binary_name": "libscipy_openblas64_-f48b354e.so",
+                "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "gates": {
+    "own_gates": true,
+    "report_identity": true,
+    "distinct_native_core": false
+  },
+  "scope": "All observed cores are Haswell. These successful collections do not explain the earlier native numerical mismatch."
+}

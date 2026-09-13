@@ -1,0 +1,15 @@
+{
+  "first_differing_array": "i1_power2_result",
+  "preceding_arrays_exact": 211,
+  "same_complete_operands": true,
+  "differing_values": 183,
+  "max_abs_difference": 2.7755575615628914e-17,
+  "max_ulp_difference": 1,
+  "differing_arrays": 159,
+  "total_arrays": 411,
+  "complete_array_bytes": 46066184,
+  "status": "VERIFIED-FRESH",
+  "native_repeat_exact": true,
+  "compatible_profile_exact": true,
+  "scope": "First differing observed operation is the second iteration cube of identical densities. All earlier recorded arrays are identical; no individual machine instruction or correctness preference is claimed."
+}

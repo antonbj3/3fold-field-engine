@@ -1,0 +1,271 @@
+{
+ "id": "VIRT_FACTORY_LAYOUT_V0",
+ "lab_envelope_m": {
+  "w": 30.0,
+  "h": 20.0
+ },
+ "stations": [
+  {
+   "id": "clean_enclosure",
+   "x_m": 20.5,
+   "y_m": 8.5,
+   "w_m": 3.0,
+   "h_m": 3.0,
+   "height_mm": 2400,
+   "zones": [
+    "particle_sensitive_hub"
+   ]
+  },
+  {
+   "id": "metrology_bench",
+   "x_m": 21.5,
+   "y_m": 13.5,
+   "w_m": 1.5,
+   "h_m": 1.2,
+   "height_mm": 2000,
+   "zones": [
+    "vibration_sensitive"
+   ]
+  },
+  {
+   "id": "tube_furnace",
+   "x_m": 21.0,
+   "y_m": 11.0,
+   "w_m": 1.2,
+   "h_m": 0.8,
+   "height_mm": 1800,
+   "zones": [
+    "heat_source",
+    "particle_adjacent"
+   ]
+  },
+  {
+   "id": "surface_treat_chamber",
+   "x_m": 13.5,
+   "y_m": 5.5,
+   "w_m": 1.5,
+   "h_m": 1.2,
+   "height_mm": 2000,
+   "zones": [
+    "vibration_source",
+    "particle_adjacent"
+   ]
+  },
+  {
+   "id": "coating_chamber",
+   "x_m": 13.0,
+   "y_m": 7.0,
+   "w_m": 1.8,
+   "h_m": 1.2,
+   "height_mm": 2000,
+   "zones": [
+    "vibration_source",
+    "particle_adjacent"
+   ]
+  },
+  {
+   "id": "wet_bench",
+   "x_m": 16.5,
+   "y_m": 14.0,
+   "w_m": 2.0,
+   "h_m": 0.9,
+   "height_mm": 2200,
+   "zones": [
+    "wet_chem_ventilation"
+   ]
+  },
+  {
+   "id": "precision_stage",
+   "x_m": 21.5,
+   "y_m": 15.0,
+   "w_m": 1.0,
+   "h_m": 0.6,
+   "height_mm": 1200,
+   "zones": [
+    "vibration_sensitive"
+   ]
+  },
+  {
+   "id": "planarization_station",
+   "x_m": 15.5,
+   "y_m": 6.0,
+   "w_m": 1.5,
+   "h_m": 1.5,
+   "height_mm": 1800,
+   "zones": [
+    "vibration_source"
+   ]
+  },
+  {
+   "id": "roller_station",
+   "x_m": 17.0,
+   "y_m": 9.0,
+   "w_m": 1.5,
+   "h_m": 0.8,
+   "height_mm": 1600,
+   "zones": [
+    "particle_adjacent",
+    "vibration_sensitive"
+   ]
+  },
+  {
+   "id": "instrument_rack",
+   "x_m": 19.5,
+   "y_m": 6.0,
+   "w_m": 1.0,
+   "h_m": 0.8,
+   "height_mm": 1800,
+   "zones": [
+    "particle_adjacent"
+   ]
+  },
+  {
+   "id": "rolling_mill",
+   "x_m": 6.0,
+   "y_m": 19.0,
+   "w_m": 2.2,
+   "h_m": 1.0,
+   "height_mm": 1400,
+   "zones": [
+    "vibration_source"
+   ]
+  },
+  {
+   "id": "deposition_reactor",
+   "x_m": 23.0,
+   "y_m": 9.0,
+   "w_m": 1.0,
+   "h_m": 1.0,
+   "height_mm": 1800,
+   "zones": [
+    "particle_adjacent"
+   ]
+  },
+  {
+   "id": "cnc_cut",
+   "x_m": 12.5,
+   "y_m": 18.0,
+   "w_m": 4.0,
+   "h_m": 3.0,
+   "height_mm": 3000,
+   "zones": [
+    "vibration_source"
+   ]
+  },
+  {
+   "id": "pwht_furnace_workshop",
+   "x_m": 1.5,
+   "y_m": 7.5,
+   "w_m": 2.5,
+   "h_m": 2.0,
+   "height_mm": 2500,
+   "zones": [
+    "heat_source"
+   ]
+  },
+  {
+   "id": "weld_arc",
+   "x_m": 28.0,
+   "y_m": 11.0,
+   "w_m": 3.0,
+   "h_m": 3.0,
+   "height_mm": 2800,
+   "zones": [
+    "general"
+   ]
+  },
+  {
+   "id": "cnc_rig",
+   "x_m": 9.0,
+   "y_m": 13.0,
+   "w_m": 3.0,
+   "h_m": 2.0,
+   "height_mm": 2600,
+   "zones": [
+    "vibration_source"
+   ]
+  },
+  {
+   "id": "rig_qc",
+   "x_m": 24.5,
+   "y_m": 6.5,
+   "w_m": 2.5,
+   "h_m": 2.0,
+   "height_mm": 2000,
+   "zones": [
+    "vibration_sensitive"
+   ]
+  },
+  {
+   "id": "bench_el",
+   "x_m": 25.0,
+   "y_m": 11.0,
+   "w_m": 2.0,
+   "h_m": 1.0,
+   "height_mm": 2000,
+   "zones": [
+    "general"
+   ]
+  }
+ ],
+ "flow_edges": [
+  {
+   "from": "metrology_bench",
+   "to": "precision_stage",
+   "weight": 3,
+   "kind": "DECLARED"
+  },
+  {
+   "from": "surface_treat_chamber",
+   "to": "coating_chamber",
+   "weight": 4,
+   "kind": "DECLARED"
+  },
+  {
+   "from": "clean_enclosure",
+   "to": "tube_furnace",
+   "weight": 1,
+   "kind": "DECLARED"
+  },
+  {
+   "from": "clean_enclosure",
+   "to": "roller_station",
+   "weight": 1,
+   "kind": "DECLARED"
+  },
+  {
+   "from": "clean_enclosure",
+   "to": "instrument_rack",
+   "weight": 2,
+   "kind": "DECLARED"
+  },
+  {
+   "from": "planarization_station",
+   "to": "roller_station",
+   "weight": 1,
+   "kind": "DECLARED"
+  },
+  {
+   "from": "coating_chamber",
+   "to": "roller_station",
+   "weight": 1,
+   "kind": "DECLARED"
+  }
+ ],
+ "workshop_routes": {
+  "furnace_class_parts": [
+   "cnc_cut",
+   "pwht_furnace_workshop",
+   "weld_arc",
+   "cnc_rig",
+   "rig_qc"
+  ],
+  "no_furnace_parts": [
+   "cnc_cut",
+   "bench_el",
+   "cnc_rig",
+   "rig_qc"
+  ]
+ },
+ "consumed_by_next": "CAD generation, robot path planning, thermal coupling between heat sources and sensitive zones"
+}

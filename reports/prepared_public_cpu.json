@@ -1,0 +1,53 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "coverage": true,
+    "fresh": true,
+    "source_hashes": true,
+    "arrays": true
+  },
+  "rows": [
+    {
+      "module": "field_rt_interval_portable_probe.py",
+      "exit": 0,
+      "checks": true,
+      "sources": true,
+      "arrays_exact": true,
+      "bytes_compared": 16442192,
+      "timed_out": false,
+      "elapsed_s": 0.9457768049906008
+    },
+    {
+      "module": "field_rt_prepared_cpu_probe.py",
+      "exit": 0,
+      "checks": true,
+      "sources": true,
+      "arrays_exact": true,
+      "bytes_compared": 27003600,
+      "timed_out": false,
+      "elapsed_s": 1.3740270650014281
+    },
+    {
+      "module": "field_shared_service_probe.py",
+      "exit": 0,
+      "checks": true,
+      "sources": true,
+      "arrays_exact": true,
+      "bytes_compared": 0,
+      "timed_out": false,
+      "elapsed_s": 0.6203701259946683
+    },
+    {
+      "module": "field_owned_service_cpu_probe.py",
+      "exit": 0,
+      "checks": true,
+      "sources": true,
+      "arrays_exact": true,
+      "bytes_compared": 0,
+      "timed_out": false,
+      "elapsed_s": 0.16555146100290585
+    }
+  ],
+  "scope": "CPU interval and service-ownership slice; no GPU execution. Complete captures retained; not all-module verification.",
+  "contract_sha256": "ef457e8c946c4d61721e028cf90f3741d2130e2628550394079c507f3d038487"
+}

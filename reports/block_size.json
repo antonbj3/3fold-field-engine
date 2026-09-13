@@ -1,0 +1,143 @@
+{
+  "fine_cells": 718848,
+  "gates": {
+    "bracket": false,
+    "repeat": true
+  },
+  "limits": {
+    "median": 0.1379377841949463,
+    "p95": 0.3741820752620697
+  },
+  "rows": [
+    {
+      "block": 8,
+      "cell_ratio": 3.247863247863248,
+      "gates": {
+        "accuracy": false,
+        "continuity": true,
+        "memory": false,
+        "repeat": true
+      },
+      "legs": [
+        {
+          "cells": 2334720,
+          "continuity_jump": 0.0020275115966796875,
+          "continuity_pass": true,
+          "fingerprint": "1fce1224b433801bcb4f2597d0e8599c2282f59b11136ffc2e9ac463d3b858b7",
+          "median": 0.13812853395938873,
+          "p95": 0.3741820752620697,
+          "query_sha256": "a5aa9e630760aca3b9539cc22b9cf470569a80efe0c33b9e801eda488f9481da",
+          "samples": 2564720
+        },
+        {
+          "cells": 2334720,
+          "continuity_jump": 0.0020275115966796875,
+          "continuity_pass": true,
+          "fingerprint": "1fce1224b433801bcb4f2597d0e8599c2282f59b11136ffc2e9ac463d3b858b7",
+          "median": 0.13812853395938873,
+          "p95": 0.3741820752620697,
+          "query_sha256": "a5aa9e630760aca3b9539cc22b9cf470569a80efe0c33b9e801eda488f9481da",
+          "samples": 2564720
+        }
+      ]
+    },
+    {
+      "block": 4,
+      "cell_ratio": 1.6012286324786325,
+      "gates": {
+        "accuracy": false,
+        "continuity": true,
+        "memory": false,
+        "repeat": true
+      },
+      "legs": [
+        {
+          "cells": 1151040,
+          "continuity_jump": 0.718858003616333,
+          "continuity_pass": true,
+          "fingerprint": "f51469811ff85a2fec0750f086fbbe74b3086dc18faa6fb9f2a6328c351c2f6c",
+          "median": 0.1424010694026947,
+          "p95": 0.3741820752620697,
+          "query_sha256": "1add8549a7dca5f07319f1a3666f7c693675b07bc50a89bc6df51dabd8269338",
+          "samples": 1396254
+        },
+        {
+          "cells": 1151040,
+          "continuity_jump": 0.718858003616333,
+          "continuity_pass": true,
+          "fingerprint": "f51469811ff85a2fec0750f086fbbe74b3086dc18faa6fb9f2a6328c351c2f6c",
+          "median": 0.1424010694026947,
+          "p95": 0.3741820752620697,
+          "query_sha256": "1add8549a7dca5f07319f1a3666f7c693675b07bc50a89bc6df51dabd8269338",
+          "samples": 1396254
+        }
+      ]
+    },
+    {
+      "block": 2,
+      "cell_ratio": 0.7008324430199431,
+      "gates": {
+        "accuracy": false,
+        "continuity": false,
+        "memory": false,
+        "repeat": true
+      },
+      "legs": [
+        {
+          "cells": 503792,
+          "continuity_jump": 5.238548755645752,
+          "continuity_pass": false,
+          "fingerprint": "9d73075915a67ce6d250a1e316c89db3bbf4972b238a2e974b5fe5725268f9de",
+          "median": 0.18434806913137436,
+          "p95": 0.7483641505241394,
+          "query_sha256": "250afb9f66e1015878f345b437897e35bc29aa92ff062eda542c856ae6fdc211",
+          "samples": 754084
+        },
+        {
+          "cells": 503792,
+          "continuity_jump": 5.238548755645752,
+          "continuity_pass": false,
+          "fingerprint": "9d73075915a67ce6d250a1e316c89db3bbf4972b238a2e974b5fe5725268f9de",
+          "median": 0.18434806913137436,
+          "p95": 0.7483641505241394,
+          "query_sha256": "250afb9f66e1015878f345b437897e35bc29aa92ff062eda542c856ae6fdc211",
+          "samples": 754084
+        }
+      ]
+    },
+    {
+      "block": 1,
+      "cell_ratio": 0.3246138265669516,
+      "gates": {
+        "accuracy": false,
+        "continuity": true,
+        "memory": true,
+        "repeat": true
+      },
+      "legs": [
+        {
+          "cells": 233348,
+          "continuity_jump": 1.0071932372828138,
+          "continuity_pass": true,
+          "fingerprint": "7b1a9cc5aa3200b539e0c763f42a386d6230f0341738b72628852a628f7cc79e",
+          "median": 0.19566993415355682,
+          "p95": 1.4967283010482788,
+          "query_sha256": "abb0af4d5e3b0948f57229851494f2564563bbd3a07dd8cebae6d8202f0bc297",
+          "samples": 537993
+        },
+        {
+          "cells": 233348,
+          "continuity_jump": 1.0071932372828138,
+          "continuity_pass": true,
+          "fingerprint": "7b1a9cc5aa3200b539e0c763f42a386d6230f0341738b72628852a628f7cc79e",
+          "median": 0.19566993415355682,
+          "p95": 1.4967283010482788,
+          "query_sha256": "abb0af4d5e3b0948f57229851494f2564563bbd3a07dd8cebae6d8202f0bc297",
+          "samples": 537993
+        }
+      ]
+    }
+  ],
+  "scope": "CPU bracket block-size sweep; original fine comparator and query set.",
+  "status": "OWN-GATE-FAIL"
+}

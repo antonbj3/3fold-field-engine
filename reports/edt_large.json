@@ -1,0 +1,123 @@
+{
+  "rows": [
+    {
+      "leg": 0,
+      "case": "plate_2.0",
+      "squared_mismatches": 0,
+      "signed_mismatches": 0,
+      "hashes": {
+        "squared0": "58e489c32e66ef6933333fcf3a63ad49675e910ac0967be99557cbc0c2d9ec14",
+        "squared1": "567987414cec680a48905090f17dae3366a47aa32419437788bd61a5fae99d27",
+        "signed": "334394c5ef52530e3c0f87a16da306ebdb0c1284a31f8d370a4b1d1bd778ace3"
+      }
+    },
+    {
+      "leg": 0,
+      "case": "plate_1.0",
+      "squared_mismatches": 0,
+      "signed_mismatches": 0,
+      "hashes": {
+        "squared0": "9f5773387e20f6c9778399f57ec135c6e5cb1373912f72b7fb25e550889175f6",
+        "squared1": "5139614c2824a9c6a43f243e87a67d5b52571a81621697ec25fbeb4e4837c7a3",
+        "signed": "82101f72c1376a95aa0c0ccff150d33ba52963f0088f46ebb6721ca3eb2273d8"
+      }
+    },
+    {
+      "leg": 0,
+      "case": "plate_0.5",
+      "squared_mismatches": 0,
+      "signed_mismatches": 0,
+      "hashes": {
+        "squared0": "3ed836c70de61cceccdb0ae63448f52b8fde9f655c34c79cd7368e3378115e83",
+        "squared1": "648d29b3194051c8df4a6ea09b84588ad32b7cc8d086bca2deaf08b2a2237fe0",
+        "signed": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      }
+    },
+    {
+      "leg": 0,
+      "case": "single_site",
+      "squared_mismatches": 0,
+      "signed_mismatches": 0,
+      "hashes": {
+        "squared0": "f0c500e2401e1aee33d11ae25ae14e574820fbdb1731670af1888f88f3c17794",
+        "squared1": "5e8642c4307fe4cdec570191444c4792347dc82bafdf5fc4fc7dee684e93239b",
+        "signed": "b033da3cbd09983243dbb8edcf4ff087b2f57bb4a5847fd6f34f27f5860c3428"
+      }
+    },
+    {
+      "leg": 0,
+      "case": "checker",
+      "squared_mismatches": 0,
+      "signed_mismatches": 0,
+      "hashes": {
+        "squared0": "c8411fdf3ca175740dc0282708bd6ab24719faf62e8f92feeb757c7887bcfca3",
+        "squared1": "e05af73dedb336f9713310b8d022136b7bf9f7f7b62522fa6330886db8ecf731",
+        "signed": "47f95a4f23da9bd156e9c83d7ef94166d5a350ed45499a64275d636126fb3427"
+      }
+    },
+    {
+      "leg": 1,
+      "case": "plate_2.0",
+      "squared_mismatches": 0,
+      "signed_mismatches": 0,
+      "hashes": {
+        "squared0": "58e489c32e66ef6933333fcf3a63ad49675e910ac0967be99557cbc0c2d9ec14",
+        "squared1": "567987414cec680a48905090f17dae3366a47aa32419437788bd61a5fae99d27",
+        "signed": "334394c5ef52530e3c0f87a16da306ebdb0c1284a31f8d370a4b1d1bd778ace3"
+      }
+    },
+    {
+      "leg": 1,
+      "case": "plate_1.0",
+      "squared_mismatches": 0,
+      "signed_mismatches": 0,
+      "hashes": {
+        "squared0": "9f5773387e20f6c9778399f57ec135c6e5cb1373912f72b7fb25e550889175f6",
+        "squared1": "5139614c2824a9c6a43f243e87a67d5b52571a81621697ec25fbeb4e4837c7a3",
+        "signed": "82101f72c1376a95aa0c0ccff150d33ba52963f0088f46ebb6721ca3eb2273d8"
+      }
+    },
+    {
+      "leg": 1,
+      "case": "plate_0.5",
+      "squared_mismatches": 0,
+      "signed_mismatches": 0,
+      "hashes": {
+        "squared0": "3ed836c70de61cceccdb0ae63448f52b8fde9f655c34c79cd7368e3378115e83",
+        "squared1": "648d29b3194051c8df4a6ea09b84588ad32b7cc8d086bca2deaf08b2a2237fe0",
+        "signed": "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      }
+    },
+    {
+      "leg": 1,
+      "case": "single_site",
+      "squared_mismatches": 0,
+      "signed_mismatches": 0,
+      "hashes": {
+        "squared0": "f0c500e2401e1aee33d11ae25ae14e574820fbdb1731670af1888f88f3c17794",
+        "squared1": "5e8642c4307fe4cdec570191444c4792347dc82bafdf5fc4fc7dee684e93239b",
+        "signed": "b033da3cbd09983243dbb8edcf4ff087b2f57bb4a5847fd6f34f27f5860c3428"
+      }
+    },
+    {
+      "leg": 1,
+      "case": "checker",
+      "squared_mismatches": 0,
+      "signed_mismatches": 0,
+      "hashes": {
+        "squared0": "c8411fdf3ca175740dc0282708bd6ab24719faf62e8f92feeb757c7887bcfca3",
+        "squared1": "e05af73dedb336f9713310b8d022136b7bf9f7f7b62522fa6330886db8ecf731",
+        "signed": "47f95a4f23da9bd156e9c83d7ef94166d5a350ed45499a64275d636126fb3427"
+      }
+    }
+  ],
+  "gates": {
+    "exact_squared": true,
+    "exact_signed": true,
+    "full_repeat": true,
+    "invalid_rejected": true
+  },
+  "rejected": 6,
+  "library_sha256": "d79d234baa29d04f34e845e674b6353441c9d2234c99b602ab5ff44dddd05ed8",
+  "scope": "Bounded exact larger EDT; no timing claim."
+}

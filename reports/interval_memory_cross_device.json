@@ -1,0 +1,59 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "rows": [
+    {
+      "report": "field_rt_interval_gpu",
+      "arrays": 8,
+      "bytes_compared": 11761568,
+      "instrumented_exact": true,
+      "cross_device_exact": false,
+      "child_exit": 0,
+      "instrumented_gates": {
+        "coverage": true,
+        "exact": true,
+        "repeat": true,
+        "no_false_rejection": true
+      },
+      "errors": [
+        "ERROR SUMMARY: 0 errors"
+      ]
+    },
+    {
+      "report": "field_rt_interval_hits",
+      "arrays": 72,
+      "bytes_compared": 8877760,
+      "instrumented_exact": true,
+      "cross_device_exact": true,
+      "child_exit": 0,
+      "instrumented_gates": {
+        "coverage": true,
+        "exact": true,
+        "repeat": true,
+        "capacity_lifecycle": true
+      },
+      "errors": [
+        "ERROR SUMMARY: 0 errors"
+      ]
+    },
+    {
+      "report": "field_interval_service",
+      "arrays": 355,
+      "bytes_compared": 36115362,
+      "instrumented_exact": true,
+      "cross_device_exact": true,
+      "child_exit": 1,
+      "instrumented_gates": {
+        "coverage": true,
+        "exact": true,
+        "repeats": true,
+        "lifecycle_capacity": true,
+        "warm_L_2ms": false
+      },
+      "errors": [
+        "ERROR SUMMARY: 0 errors"
+      ]
+    }
+  ],
+  "hardware": "NVIDIA L4, 580.95.05, 0 %, 3 MiB",
+  "scope": "Complete numerical and memory proof across CUDA helper, raw RT hits and full owned service; all spawned processes targeted. Instrumented service latency failure retained; no timing acceptance."
+}

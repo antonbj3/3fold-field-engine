@@ -1,0 +1,24 @@
+Warp 1.17.0 initialized:
+   CUDA Toolkit 12.9, CUDA driver not available (NVRTC compilation available)
+   Devices:
+     "cpu"      : "x86_64"
+   Kernel cache:
+     <warp-cache>/1.17.0
+
+Warp CUDA error 100: no CUDA-capable device is detected (in function init_cuda_driver, /builds/omniverse/warp/warp/native/cuda_util.cpp:333)
+Traceback (most recent call last):
+  File "<isolated-root>/src/field_engine/field_adaptive_blocks_probe.py", line 162, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "<isolated-root>/src/field_engine/field_adaptive_blocks_probe.py", line 114, in main
+    vertices, faces = baseline._bracket_mesh()
+                      ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "<isolated-root>/src/field_engine/faltkarna_v1_multires.py", line 719, in _bracket_mesh
+    part = BP.build({"plate_w": 150.0, "plate_h": 100.0, "thk": 10.0, "hole_d": 9.0})
+  File "<isolated-root>/examples/parts/bracket_part_v1.py", line 41, in build
+    return RX.execute(_recipe(), theta, CONSTS)
+                      ~~~~~~~^^
+  File "<isolated-root>/examples/parts/bracket_part_v1.py", line 35, in _recipe
+    with open(RECIPE_PATH) as f:
+         ~~~~^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '<isolated-root>/examples/parts/../recipes/bracket_v1_recipe.json'

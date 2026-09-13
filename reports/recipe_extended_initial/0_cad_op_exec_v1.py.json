@@ -1,0 +1,228 @@
+{
+  "AT2a_box_hole": {
+    "expected": 5874.336293856409,
+    "measured": 5874.336293856408,
+    "pass": true,
+    "rel_dev": 1.5482509959875984e-16
+  },
+  "AT2a_cut_series": {
+    "expected": 31575.88499176538,
+    "measured": 31575.88499176538,
+    "pass": true,
+    "rel_dev": 0.0
+  },
+  "AT2a_loft_two_profiles": {
+    "expected": 480,
+    "measured": 480.0,
+    "pass": true,
+    "rel_dev": 0.0
+  },
+  "AT2a_pass": true,
+  "AT2b_tomcut_fallbevis": {
+    "pass": true,
+    "row": {
+      "op_id": "tomcut",
+      "op_type": "boolean_cut",
+      "reason": "MISSED_CUT",
+      "status": "FAIL",
+      "volymdelta_mm3": 0.0,
+      "wall_ms": 1.878105991636403
+    }
+  },
+  "AT2d_reference_not_implemented": {
+    "pass": true,
+    "raised_msg": "reference"
+  },
+  "AT2e_draft_cube": {
+    "Lp_top_side_mm": 14.378366611904342,
+    "expected": 5962.0317244294165,
+    "fallbevis": {
+      "exception_type": "ValueError",
+      "params": "angle_deg=80.0 (top side L'=L-2*H*tan(80deg) < 0, self-intersecting)",
+      "pass": true
+    },
+    "measured": 5962.031724429418,
+    "pass": true,
+    "rel_dev": 3.0509555930280446e-16
+  },
+  "AT2f_sheet_bend_l_bracket": {
+    "REFRAME_k_factor_scan": {
+      "0.0": {
+        "rel_dev_vs_flat": 0.01570796326795028,
+        "volume": 4062.8318530718007
+      },
+      "0.33": {
+        "rel_dev_vs_flat": 0.005340707511102437,
+        "volume": 4021.3628300444093
+      },
+      "0.44": {
+        "rel_dev_vs_flat": 0.0018849555921536879,
+        "volume": 4007.5398223686143
+      },
+      "0.5": {
+        "rel_dev_vs_flat": 5.684341886080803e-16,
+        "volume": 3999.9999999999973
+      }
+    },
+    "fallbevis_radius_lt_thickness": {
+      "pass": true,
+      "raised_msg": "sheet_bend: bend radius (1.0mm) < sheet thickness (2.0mm) -- below the practical minimum inside bend radius (rule of thumb, min radius ~= thickness for most sheet materials); refusing rather than building an unmanufacturable/self-crushing bend"
+    },
+    "fallbevis_zone_exceeds_material": {
+      "pass": true,
+      "raised_msg": "sheet_bend: bend allowance zone (BA=9.2363mm, half-width=4.6181mm around bend_line at X=2.0) exceeds available flat material on one side (available: -2.6181mm fixed-side, 93.3819mm rotating-side) -- radius/thickness/k_factor too large for this sheet, or bend_line too close to an edge"
+    },
+    "pass": true,
+    "pass_reconstruct": true,
+    "pass_volume_facit": true,
+    "reconstruct_rel_dev": 0.0,
+    "rel_dev_k050": 5.684341886080803e-16,
+    "v_bent_k050_mm3": 3999.9999999999973,
+    "v_flat_mm3": 3999.9999999999995
+  },
+  "AT2g_thread_cosmetic": {
+    "facecount_after": 3,
+    "facecount_before": 3,
+    "facecount_pass": true,
+    "fallbevis_wrong_pitch": {
+      "pass": true,
+      "raised_msg": "thread designation 'M8x2.0': pitch 2.0mm does not match the ISO 724 COARSE pitch for M8 (1.25mm) -- fine-pitch series is outside this table's declared scope (grovserien only), not silently accepted with a made-up value"
+    },
+    "meta": {
+      "designation": "M8",
+      "diameter_mm": 8.0,
+      "measured_face_diameter_mm": 8.0,
+      "pitch_mm": 1.25
+    },
+    "meta_pass": true,
+    "pass": true,
+    "volume_bit_identical": true,
+    "volume_rel_dev": 0.0
+  },
+  "AT2h_rib_on_bracket": {
+    "expected": 154080.0,
+    "measured": 154080.0,
+    "pass": true,
+    "rel_dev": 0.0
+  },
+  "AT2i_sketch_profile_extrude": {
+    "expected": 151200.0,
+    "measured": 151200.00000000017,
+    "pass": true,
+    "rel_dev": 1.1549139070132422e-15,
+    "solver_status": "FULLT_BESTAMD"
+  },
+  "AT2j_all_op_types_dispatch": {
+    "declared_not_implemented": [
+      "reference"
+    ],
+    "lazy_imports": {
+      "formrib_v1": true,
+      "sketch_gcs_v1": true
+    },
+    "missing_handlers": [],
+    "n_declared": 21,
+    "n_handlers": 20,
+    "pass": true
+  },
+  "AT3_resolve_expr_fallbevis": {
+    "arithmetic_ok": true,
+    "attribute_access_rejected": {
+      "pass": true,
+      "raised_msg": "expr 'BORE_D.__class__': disallowed syntax node Attribute (allowed: numeric literals, names-in-params, + - * / // % **, unary + -; no calls/attrs/subscripts/compares/boolops/lambdas/comprehensions/string-or-collection-literals)"
+    },
+    "function_call_rejected": {
+      "pass": true,
+      "raised_msg": "expr \"__import__('os').system('true')\": disallowed syntax node Call (allowed: numeric literals, names-in-params, + - * / // % **, unary + -; no calls/attrs/subscripts/compares/boolops/lambdas/comprehensions/string-or-collection-literals)"
+    },
+    "nested_arithmetic_ok": true,
+    "pass": true,
+    "string_literal_rejected": true,
+    "unary_minus_ok": true,
+    "unknown_name_rejected": {
+      "pass": true,
+      "raised_msg": "expr 'BORE_D/2': unknown name 'BORE_D' -- not present in params ['OTHER'] (an undeclared name is a configuration error, never silently treated as 0)"
+    }
+  },
+  "AT3b_exec_ops_params_end_to_end": {
+    "geometry_pass": true,
+    "no_provenance_leak_on_legacy_run": true,
+    "pass": true,
+    "provenance": {
+      "pass": true,
+      "row": [
+        {
+          "expr": "BORE_D/2",
+          "params_used": [
+            "BORE_D"
+          ],
+          "path": "radius",
+          "resolved_value": 3.0
+        }
+      ]
+    },
+    "rel_dev": 0.0,
+    "v_expr_mm3": 8495.362697409255,
+    "v_literal_mm3": 8495.362697409255
+  },
+  "AT3c_backward_compat_data_identity": {
+    "identity_preserved_params_none": true,
+    "pass": true
+  },
+  "AT3d_arithmetic_error_guard_fallbevis": {
+    "cases": {
+      "bore_d_over_n_minus_4": {
+        "exc_type": "ValueError",
+        "mentions_expr_and_params": true,
+        "pass": true,
+        "raised_msg": "expr 'BORE_D/(N-4)': ZeroDivisionError evaluating 'BORE_D / (N - 4)' (left=96.0, right=0.0) -- float division by zero; params={'BORE_D': 96.0, 'N': 4.0}",
+        "raised_valueerror": true
+      },
+      "div_by_zero": {
+        "exc_type": "ValueError",
+        "mentions_expr_and_params": true,
+        "pass": true,
+        "raised_msg": "expr 'A/B': ZeroDivisionError evaluating 'A / B' (left=10.0, right=0.0) -- float division by zero; params={'A': 10.0, 'B': 0.0}",
+        "raised_valueerror": true
+      },
+      "floordiv_by_zero": {
+        "exc_type": "ValueError",
+        "mentions_expr_and_params": true,
+        "pass": true,
+        "raised_msg": "expr 'A//B': ZeroDivisionError evaluating 'A // B' (left=10.0, right=0.0) -- float floor division by zero; params={'A': 10.0, 'B': 0.0}",
+        "raised_valueerror": true
+      },
+      "inf_via_huge_pow": {
+        "exc_type": "ValueError",
+        "mentions_expr_and_params": true,
+        "pass": true,
+        "raised_msg": "expr 'BASE**EXP': OverflowError evaluating 'BASE ** EXP' (left=10.0, right=400.0) -- (34, 'Numerical result out of range'); params={'BASE': 10.0, 'EXP': 400.0}",
+        "raised_valueerror": true
+      },
+      "mod_by_zero": {
+        "exc_type": "ValueError",
+        "mentions_expr_and_params": true,
+        "pass": true,
+        "raised_msg": "expr 'A%B': ZeroDivisionError evaluating 'A % B' (left=10.0, right=0.0) -- float modulo by zero; params={'A': 10.0, 'B': 0.0}",
+        "raised_valueerror": true
+      },
+      "neg_base_fractional_power": {
+        "exc_type": "ValueError",
+        "mentions_expr_and_params": true,
+        "pass": true,
+        "raised_msg": "expr 'BASE**EXP': 'BASE ** EXP' (left=-4.0, right=0.5) produced a complex result -- negative base with a fractional/non-integer exponent has no real-valued answer (only real arithmetic is supported); params={'BASE': -4.0, 'EXP': 0.5}",
+        "raised_valueerror": true
+      },
+      "zero_over_zero": {
+        "exc_type": "ValueError",
+        "mentions_expr_and_params": true,
+        "pass": true,
+        "raised_msg": "expr 'A/B': ZeroDivisionError evaluating 'A / B' (left=0.0, right=0.0) -- float division by zero; params={'A': 0.0, 'B': 0.0}",
+        "raised_valueerror": true
+      }
+    },
+    "pass": true,
+    "valid_exprs_unaffected": true
+  },
+  "all_pass": true
+}

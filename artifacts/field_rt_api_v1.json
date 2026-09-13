@@ -1,0 +1,335 @@
+{
+  "rows": [
+    {
+      "case": "sphere",
+      "leg": 0,
+      "call": 0,
+      "phase": 0,
+      "counts_sha256": "b1ef7c3cdff183dc4834705a4f11aeafe5bb43eb89e24482a3d37e433233bbe6",
+      "distance_sha256": "3160d3e3078478d2cfedcb9352b98d08b1d908b1a534aa378d608987f4f8f3c3",
+      "occupancy_mismatches": 25020,
+      "distance_mismatches": 49202
+    },
+    {
+      "case": "sphere",
+      "leg": 0,
+      "call": 1,
+      "phase": 1,
+      "counts_sha256": "fc9be5745fe134229237e6111c6a744ac67d3d633cdf1e515f6aab9a0287114a",
+      "distance_sha256": "5d4b81b19b24cfdc4e8e64643d4662525753cd8a1eaa067cbb8da4b700a1cade",
+      "occupancy_mismatches": 24294,
+      "distance_mismatches": 48968
+    },
+    {
+      "case": "sphere",
+      "leg": 0,
+      "call": 2,
+      "phase": 2,
+      "counts_sha256": "f25b92acbe3ad9e6460d031b76caa117ac9704776fc6fd4b48150d74b3099e04",
+      "distance_sha256": "58bf75238a2f5cd1d6bcb07b6072c8fc4559f04bcd1d6ac1578531abdb2a2ef2",
+      "occupancy_mismatches": 24658,
+      "distance_mismatches": 49245
+    },
+    {
+      "case": "sphere",
+      "leg": 0,
+      "call": 3,
+      "phase": 0,
+      "counts_sha256": "b1ef7c3cdff183dc4834705a4f11aeafe5bb43eb89e24482a3d37e433233bbe6",
+      "distance_sha256": "3160d3e3078478d2cfedcb9352b98d08b1d908b1a534aa378d608987f4f8f3c3",
+      "occupancy_mismatches": 25020,
+      "distance_mismatches": 49202
+    },
+    {
+      "case": "sphere_fine",
+      "leg": 0,
+      "call": 0,
+      "phase": 0,
+      "counts_sha256": "b1ef7c3cdff183dc4834705a4f11aeafe5bb43eb89e24482a3d37e433233bbe6",
+      "distance_sha256": "3160d3e3078478d2cfedcb9352b98d08b1d908b1a534aa378d608987f4f8f3c3",
+      "occupancy_mismatches": 25008,
+      "distance_mismatches": 49207
+    },
+    {
+      "case": "sphere_fine",
+      "leg": 0,
+      "call": 1,
+      "phase": 1,
+      "counts_sha256": "fc9be5745fe134229237e6111c6a744ac67d3d633cdf1e515f6aab9a0287114a",
+      "distance_sha256": "5d4b81b19b24cfdc4e8e64643d4662525753cd8a1eaa067cbb8da4b700a1cade",
+      "occupancy_mismatches": 24286,
+      "distance_mismatches": 48940
+    },
+    {
+      "case": "sphere_fine",
+      "leg": 0,
+      "call": 2,
+      "phase": 2,
+      "counts_sha256": "f25b92acbe3ad9e6460d031b76caa117ac9704776fc6fd4b48150d74b3099e04",
+      "distance_sha256": "58bf75238a2f5cd1d6bcb07b6072c8fc4559f04bcd1d6ac1578531abdb2a2ef2",
+      "occupancy_mismatches": 24638,
+      "distance_mismatches": 49221
+    },
+    {
+      "case": "sphere_fine",
+      "leg": 0,
+      "call": 3,
+      "phase": 0,
+      "counts_sha256": "b1ef7c3cdff183dc4834705a4f11aeafe5bb43eb89e24482a3d37e433233bbe6",
+      "distance_sha256": "3160d3e3078478d2cfedcb9352b98d08b1d908b1a534aa378d608987f4f8f3c3",
+      "occupancy_mismatches": 25008,
+      "distance_mismatches": 49207
+    },
+    {
+      "case": "sphere_overlap",
+      "leg": 0,
+      "call": 0,
+      "phase": 0,
+      "counts_sha256": "d68ab217c5579b9b1b89e67950eaebd685d748e2282a415838223e47c8ef9639",
+      "distance_sha256": "86e46752df10d2756a472264ff76ac6ee98336294d2e86d9c71c2da317971248",
+      "occupancy_mismatches": 33289,
+      "distance_mismatches": 65142
+    },
+    {
+      "case": "sphere_overlap",
+      "leg": 0,
+      "call": 1,
+      "phase": 1,
+      "counts_sha256": "7f2c8b81f903eb56f3b2886dc6b5c764fec33c6fbb4cf85dc58ed325373c5d1b",
+      "distance_sha256": "8f7af1d541ed4a380f8f5af31e11b95b60761e99527a2cfe631c2fa45bb9f17c",
+      "occupancy_mismatches": 33248,
+      "distance_mismatches": 64709
+    },
+    {
+      "case": "sphere_overlap",
+      "leg": 0,
+      "call": 2,
+      "phase": 2,
+      "counts_sha256": "a00653cd0c8688a68eb27e5d1303ab169f930ee44117dc3ccc7d18caef4d3f07",
+      "distance_sha256": "722de4e4d5ff4840a7f3bb957f9f88ae974a0e8cd88315a803ed76419e16b00e",
+      "occupancy_mismatches": 32869,
+      "distance_mismatches": 64993
+    },
+    {
+      "case": "sphere_overlap",
+      "leg": 0,
+      "call": 3,
+      "phase": 0,
+      "counts_sha256": "d68ab217c5579b9b1b89e67950eaebd685d748e2282a415838223e47c8ef9639",
+      "distance_sha256": "86e46752df10d2756a472264ff76ac6ee98336294d2e86d9c71c2da317971248",
+      "occupancy_mismatches": 33289,
+      "distance_mismatches": 65142
+    },
+    {
+      "case": "subdivided_rotated_box",
+      "leg": 0,
+      "call": 0,
+      "phase": 0,
+      "counts_sha256": "c95e40fd32bb1a33b6ee75f57fb2309bf3eb07cd13e15baac78b7626eacf0c2f",
+      "distance_sha256": "db33b71cb5da7fa15d09a83f455e5393fb2bfb132a1b4a098603bb90592af8d2",
+      "occupancy_mismatches": 24558,
+      "distance_mismatches": 51936
+    },
+    {
+      "case": "subdivided_rotated_box",
+      "leg": 0,
+      "call": 1,
+      "phase": 1,
+      "counts_sha256": "fc373dcb63bd0df389ff78c5bed0c13f0db5cee6fb6682874b124aa5e153c5df",
+      "distance_sha256": "b77c70a947ec20aa1c64c3667e65d0d1dec020645dc597ed8a25b64c2c28492e",
+      "occupancy_mismatches": 25871,
+      "distance_mismatches": 51915
+    },
+    {
+      "case": "subdivided_rotated_box",
+      "leg": 0,
+      "call": 2,
+      "phase": 2,
+      "counts_sha256": "d264fb1f293cdb2bfff692b9b45be39ed8d8092099ae74a73cb923b9535b3f9d",
+      "distance_sha256": "c33b8470d5eb4b0854251b609ff7d0245e672a23d8017d82da724722abc377a1",
+      "occupancy_mismatches": 24772,
+      "distance_mismatches": 51953
+    },
+    {
+      "case": "subdivided_rotated_box",
+      "leg": 0,
+      "call": 3,
+      "phase": 0,
+      "counts_sha256": "c95e40fd32bb1a33b6ee75f57fb2309bf3eb07cd13e15baac78b7626eacf0c2f",
+      "distance_sha256": "db33b71cb5da7fa15d09a83f455e5393fb2bfb132a1b4a098603bb90592af8d2",
+      "occupancy_mismatches": 24558,
+      "distance_mismatches": 51936
+    },
+    {
+      "case": "sphere",
+      "leg": 1,
+      "call": 0,
+      "phase": 0,
+      "counts_sha256": "b1ef7c3cdff183dc4834705a4f11aeafe5bb43eb89e24482a3d37e433233bbe6",
+      "distance_sha256": "3160d3e3078478d2cfedcb9352b98d08b1d908b1a534aa378d608987f4f8f3c3",
+      "occupancy_mismatches": 25020,
+      "distance_mismatches": 49202
+    },
+    {
+      "case": "sphere",
+      "leg": 1,
+      "call": 1,
+      "phase": 1,
+      "counts_sha256": "fc9be5745fe134229237e6111c6a744ac67d3d633cdf1e515f6aab9a0287114a",
+      "distance_sha256": "5d4b81b19b24cfdc4e8e64643d4662525753cd8a1eaa067cbb8da4b700a1cade",
+      "occupancy_mismatches": 24294,
+      "distance_mismatches": 48968
+    },
+    {
+      "case": "sphere",
+      "leg": 1,
+      "call": 2,
+      "phase": 2,
+      "counts_sha256": "f25b92acbe3ad9e6460d031b76caa117ac9704776fc6fd4b48150d74b3099e04",
+      "distance_sha256": "58bf75238a2f5cd1d6bcb07b6072c8fc4559f04bcd1d6ac1578531abdb2a2ef2",
+      "occupancy_mismatches": 24658,
+      "distance_mismatches": 49245
+    },
+    {
+      "case": "sphere",
+      "leg": 1,
+      "call": 3,
+      "phase": 0,
+      "counts_sha256": "b1ef7c3cdff183dc4834705a4f11aeafe5bb43eb89e24482a3d37e433233bbe6",
+      "distance_sha256": "3160d3e3078478d2cfedcb9352b98d08b1d908b1a534aa378d608987f4f8f3c3",
+      "occupancy_mismatches": 25020,
+      "distance_mismatches": 49202
+    },
+    {
+      "case": "sphere_fine",
+      "leg": 1,
+      "call": 0,
+      "phase": 0,
+      "counts_sha256": "b1ef7c3cdff183dc4834705a4f11aeafe5bb43eb89e24482a3d37e433233bbe6",
+      "distance_sha256": "3160d3e3078478d2cfedcb9352b98d08b1d908b1a534aa378d608987f4f8f3c3",
+      "occupancy_mismatches": 25008,
+      "distance_mismatches": 49207
+    },
+    {
+      "case": "sphere_fine",
+      "leg": 1,
+      "call": 1,
+      "phase": 1,
+      "counts_sha256": "fc9be5745fe134229237e6111c6a744ac67d3d633cdf1e515f6aab9a0287114a",
+      "distance_sha256": "5d4b81b19b24cfdc4e8e64643d4662525753cd8a1eaa067cbb8da4b700a1cade",
+      "occupancy_mismatches": 24286,
+      "distance_mismatches": 48940
+    },
+    {
+      "case": "sphere_fine",
+      "leg": 1,
+      "call": 2,
+      "phase": 2,
+      "counts_sha256": "f25b92acbe3ad9e6460d031b76caa117ac9704776fc6fd4b48150d74b3099e04",
+      "distance_sha256": "58bf75238a2f5cd1d6bcb07b6072c8fc4559f04bcd1d6ac1578531abdb2a2ef2",
+      "occupancy_mismatches": 24638,
+      "distance_mismatches": 49221
+    },
+    {
+      "case": "sphere_fine",
+      "leg": 1,
+      "call": 3,
+      "phase": 0,
+      "counts_sha256": "b1ef7c3cdff183dc4834705a4f11aeafe5bb43eb89e24482a3d37e433233bbe6",
+      "distance_sha256": "3160d3e3078478d2cfedcb9352b98d08b1d908b1a534aa378d608987f4f8f3c3",
+      "occupancy_mismatches": 25008,
+      "distance_mismatches": 49207
+    },
+    {
+      "case": "sphere_overlap",
+      "leg": 1,
+      "call": 0,
+      "phase": 0,
+      "counts_sha256": "d68ab217c5579b9b1b89e67950eaebd685d748e2282a415838223e47c8ef9639",
+      "distance_sha256": "86e46752df10d2756a472264ff76ac6ee98336294d2e86d9c71c2da317971248",
+      "occupancy_mismatches": 33289,
+      "distance_mismatches": 65142
+    },
+    {
+      "case": "sphere_overlap",
+      "leg": 1,
+      "call": 1,
+      "phase": 1,
+      "counts_sha256": "7f2c8b81f903eb56f3b2886dc6b5c764fec33c6fbb4cf85dc58ed325373c5d1b",
+      "distance_sha256": "8f7af1d541ed4a380f8f5af31e11b95b60761e99527a2cfe631c2fa45bb9f17c",
+      "occupancy_mismatches": 33248,
+      "distance_mismatches": 64709
+    },
+    {
+      "case": "sphere_overlap",
+      "leg": 1,
+      "call": 2,
+      "phase": 2,
+      "counts_sha256": "a00653cd0c8688a68eb27e5d1303ab169f930ee44117dc3ccc7d18caef4d3f07",
+      "distance_sha256": "722de4e4d5ff4840a7f3bb957f9f88ae974a0e8cd88315a803ed76419e16b00e",
+      "occupancy_mismatches": 32869,
+      "distance_mismatches": 64993
+    },
+    {
+      "case": "sphere_overlap",
+      "leg": 1,
+      "call": 3,
+      "phase": 0,
+      "counts_sha256": "d68ab217c5579b9b1b89e67950eaebd685d748e2282a415838223e47c8ef9639",
+      "distance_sha256": "86e46752df10d2756a472264ff76ac6ee98336294d2e86d9c71c2da317971248",
+      "occupancy_mismatches": 33289,
+      "distance_mismatches": 65142
+    },
+    {
+      "case": "subdivided_rotated_box",
+      "leg": 1,
+      "call": 0,
+      "phase": 0,
+      "counts_sha256": "c95e40fd32bb1a33b6ee75f57fb2309bf3eb07cd13e15baac78b7626eacf0c2f",
+      "distance_sha256": "db33b71cb5da7fa15d09a83f455e5393fb2bfb132a1b4a098603bb90592af8d2",
+      "occupancy_mismatches": 24558,
+      "distance_mismatches": 51936
+    },
+    {
+      "case": "subdivided_rotated_box",
+      "leg": 1,
+      "call": 1,
+      "phase": 1,
+      "counts_sha256": "fc373dcb63bd0df389ff78c5bed0c13f0db5cee6fb6682874b124aa5e153c5df",
+      "distance_sha256": "b77c70a947ec20aa1c64c3667e65d0d1dec020645dc597ed8a25b64c2c28492e",
+      "occupancy_mismatches": 25871,
+      "distance_mismatches": 51915
+    },
+    {
+      "case": "subdivided_rotated_box",
+      "leg": 1,
+      "call": 2,
+      "phase": 2,
+      "counts_sha256": "d264fb1f293cdb2bfff692b9b45be39ed8d8092099ae74a73cb923b9535b3f9d",
+      "distance_sha256": "c33b8470d5eb4b0854251b609ff7d0245e672a23d8017d82da724722abc377a1",
+      "occupancy_mismatches": 24772,
+      "distance_mismatches": 51953
+    },
+    {
+      "case": "subdivided_rotated_box",
+      "leg": 1,
+      "call": 3,
+      "phase": 0,
+      "counts_sha256": "c95e40fd32bb1a33b6ee75f57fb2309bf3eb07cd13e15baac78b7626eacf0c2f",
+      "distance_sha256": "db33b71cb5da7fa15d09a83f455e5393fb2bfb132a1b4a098603bb90592af8d2",
+      "occupancy_mismatches": 24558,
+      "distance_mismatches": 51936
+    }
+  ],
+  "gates": {
+    "full_repeat": true,
+    "exact_occupancy": false,
+    "exact_distance": false,
+    "prefix_and_suffix": true,
+    "invalid_rejected_without_write": true,
+    "destroy_idempotent": true,
+    "no_observed_fault": true
+  },
+  "timing_measured": false,
+  "library_sha256": "7e019e51887ae23961a288d3bcdafcd4a15cd90ce57fcc7abe1728499362f524"
+}

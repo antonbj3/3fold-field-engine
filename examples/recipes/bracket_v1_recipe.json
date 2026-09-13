@@ -1,0 +1,18 @@
+{
+  "schema": "recept_v1",
+  "part": "bracket_v1",
+  "frame_note": "local (u,v) in the XY sketch plane, w along the extrude axis; the sketch plane defines the origin",
+  "params": {
+    "plate_w": {"bounds": [120.0, 180.0], "roll": "plate width along u"},
+    "plate_h": {"bounds": [80.0, 120.0], "roll": "plate depth along v"},
+    "thk": {"bounds": [6.0, 14.0], "roll": "plate thickness along w"},
+    "hole_d": {"bounds": [6.0, 12.0], "roll": "diameter of the four mounting holes"}
+  },
+  "steps": [
+    {"op": "sketch_rect", "on": "XY", "w": "plate_w", "h": "plate_h", "fillet_r": "corner_r"},
+    {"op": "sketch_hole_pattern", "centers_uv": [[-50.0, -30.0], [50.0, -30.0], [50.0, 30.0], [-50.0, 30.0]], "d": "hole_d"},
+    {"op": "extrude", "amount": "thk", "mode": "ADD", "as": "plate"},
+    {"op": "box", "w": "slot_w", "h": "slot_h", "d": "slot_d", "at": [0.0, 0.0, 0.0], "as": "slot"},
+    {"op": "boolean_cut", "target": "plate", "tool": "slot", "as": "bracket"}
+  ]
+}

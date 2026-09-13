@@ -1,0 +1,8 @@
+{
+  "reservation": "D-PREPARED-BUILD-131353",
+  "start": "2026-09-13T13:13:53.799377+00:00",
+  "exit": 0,
+  "gpu": "NVIDIA GeForce RTX 5070, 580.178.04, 4 %, 1568 MiB",
+  "contexts": "",
+  "end": "2026-09-13T13:14:12.995221+00:00"
+}

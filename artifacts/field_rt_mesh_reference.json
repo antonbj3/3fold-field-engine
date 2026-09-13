@@ -1,0 +1,78 @@
+{
+  "rows": [
+    {
+      "case": "sphere",
+      "triangles": 1280,
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "pitch": 0.125,
+      "voxels": 50653,
+      "occupied": 17049,
+      "columns": 1369,
+      "hits": 1590,
+      "mask_sha256": "a31a7af130f11bd54fa4eee0111d307fb552b25aa5d3f03a4c89e7267fb6d313",
+      "distance_sha256": "bde4a361951b59382a35222e25c8cbb5e4ec8ae238816cb306fe9b04746adac9",
+      "hit_sha256": "669cf234097830fc0f51a16875b9d3965abbe85d1062f6dffbbd8867ddf9ab6c"
+    },
+    {
+      "case": "sphere_fine",
+      "triangles": 5120,
+      "shape": [
+        37,
+        37,
+        37
+      ],
+      "pitch": 0.125,
+      "voxels": 50653,
+      "occupied": 17073,
+      "columns": 1369,
+      "hits": 1590,
+      "mask_sha256": "c416e2026c3fa72d9b2a6166c907bd9ca34c9dfdce23892500b85491cf8fafe4",
+      "distance_sha256": "ccea4d74c815ddc4a5cb1eb8aaecdf836ecca75e3cfb84dd4f25d4ef00c33f52",
+      "hit_sha256": "e2912e2bf39b2ed3bfb11b49e02465cf0fe3306a4f336032c5bb1c88476aa098"
+    },
+    {
+      "case": "sphere_overlap",
+      "triangles": 2560,
+      "shape": [
+        45,
+        39,
+        38
+      ],
+      "pitch": 0.125,
+      "voxels": 66690,
+      "occupied": 23547,
+      "columns": 1755,
+      "hits": 3180,
+      "mask_sha256": "96def4991e3a6b3cc1b64219d638f789a6c6e406ab878fafc372afddaf81335d",
+      "distance_sha256": "eeef967702964e101269d0deeb57a37acd7b14ac94c5a5cd942e4b81c8c80b2f",
+      "hit_sha256": "24df6518a0e0c2899da0f18fe52625d6aaaaa79f9e13d1c2512e0714c5b08dc5"
+    },
+    {
+      "case": "subdivided_rotated_box",
+      "triangles": 768,
+      "shape": [
+        46,
+        39,
+        30
+      ],
+      "pitch": 0.125,
+      "voxels": 53820,
+      "occupied": 12288,
+      "columns": 1794,
+      "hits": 1764,
+      "mask_sha256": "a7d12bbadb01a8d5c529214c9b31913dba4ef7b2405c64e26be7ad0cb8e04c9d",
+      "distance_sha256": "47d5b0aac91420f70a0399de587bd379c7cc179a855204208b323203327f2003",
+      "hit_sha256": "9b2288657939379e251e6082d9c95f77973d307451c5956167edd322e053cb50"
+    }
+  ],
+  "gates": {
+    "full_arrays_repeat": true,
+    "full_tables_repeat": true,
+    "finite": true
+  },
+  "timing_measured": false
+}

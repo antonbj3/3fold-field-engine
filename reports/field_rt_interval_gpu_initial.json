@@ -1,0 +1,50 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "gates": {
+    "coverage": true,
+    "exact": false,
+    "repeat": true,
+    "no_false_rejection": true
+  },
+  "rows": [
+    {
+      "leg": 0,
+      "differing_bytes": [
+        9985,
+        0,
+        0,
+        0
+      ],
+      "no_false_rejection": true,
+      "hashes": [
+        "00d152ab75d2bbaca0c2e93cdcc9e8b0a1462176166575ab15061e11e9774c64",
+        "bef03626b92021ef7eb0624fa21d1947766d4b4d6fd2e8c83e96d1db27a2eaa9",
+        "2013e4051663d66144235f087c2c9a6c683b91d32f4a2451ce89853fb10bfc34",
+        "359d6956d10376227dc1b70cc386ac3ef5928d30738c158180118b3853fb7140"
+      ]
+    },
+    {
+      "leg": 1,
+      "differing_bytes": [
+        9985,
+        0,
+        0,
+        0
+      ],
+      "no_false_rejection": true,
+      "hashes": [
+        "00d152ab75d2bbaca0c2e93cdcc9e8b0a1462176166575ab15061e11e9774c64",
+        "bef03626b92021ef7eb0624fa21d1947766d4b4d6fd2e8c83e96d1db27a2eaa9",
+        "2013e4051663d66144235f087c2c9a6c683b91d32f4a2451ce89853fb10bfc34",
+        "359d6956d10376227dc1b70cc386ac3ef5928d30738c158180118b3853fb7140"
+      ]
+    }
+  ],
+  "cases": 120016,
+  "rejected": 68644,
+  "source_sha256": {
+    "filter.cuh": "1a6649660026731501bcaf1696c14ae505fabe8a81566a30ab041c22ba5b63e3",
+    "probe.cu": "d63a6e40c7ba099abc453b1c202df8d721d61916b1a4827a892cfcc53189d596"
+  },
+  "scope": "Complete CUDA interval/rejection/frozen-edge equality to CPU, two repeats. No RT traversal, full-service or speed claim."
+}

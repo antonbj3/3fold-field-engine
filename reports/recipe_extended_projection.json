@@ -1,0 +1,26 @@
+{
+  "status": "VERIFIED-FRESH",
+  "rows": [
+    {
+      "module": "cad_op_exec_v1.py",
+      "declared_projection_exact": true,
+      "report_sha256": "257b7049d339472430532ecbcbd5f4d8fe09d350c012d34f32ada7e4c2dc95b5"
+    },
+    {
+      "module": "recept_cache_v1.py",
+      "declared_projection_exact": true,
+      "report_sha256": "5ae5d9fc98582992658812b4c6029938b8ccae2cdcacbcce2f0144ac726c6b54"
+    },
+    {
+      "module": "formfeature_v1.py",
+      "declared_projection_exact": true,
+      "report_sha256": "c921309e106218498676a88ae8e6302bd4adc9a292fdd5212e6e350cbf97a3ce"
+    },
+    {
+      "module": "brep_recept_synth_v1.py",
+      "declared_projection_exact": true,
+      "report_sha256": "b89d66fd0f51819fda3e4875822ad3b5962d2f0beb96da6c9e6d7ea70fd300c6"
+    }
+  ],
+  "scope": "Separate declared metadata projection of retained complete initial reports; no numerical fields or own gates omitted."
+}

@@ -1,0 +1,148 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "coverage": true,
+    "fresh": true,
+    "documented_numbers": true,
+    "arrays": true,
+    "source_hashes": true,
+    "negative_controls": true
+  },
+  "rows": [
+    {
+      "module": "field_csg_probe.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "arrays_exact": true,
+      "source_hashes": true,
+      "bytes_compared": 1801776,
+      "elapsed_s": 7.421526496007573,
+      "observed_gates": {
+        "exact": true,
+        "repeat": true,
+        "watertight": true,
+        "volume": true,
+        "rejects": true
+      }
+    },
+    {
+      "module": "field_csg_fused_probe.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "arrays_exact": true,
+      "source_hashes": true,
+      "bytes_compared": 582120,
+      "elapsed_s": 3.204611045992351,
+      "observed_gates": {
+        "exact": true,
+        "repeats": true,
+        "frozen_fixture": true,
+        "arithmetic_controls": true,
+        "invalid_controls": true,
+        "speedup_1_25": true
+      }
+    },
+    {
+      "module": "field_csg_tiled_probe.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "arrays_exact": true,
+      "source_hashes": true,
+      "bytes_compared": 582120,
+      "elapsed_s": 2.753631224986748,
+      "observed_gates": {
+        "exact": true,
+        "repeat": true,
+        "frozen_fixture": true,
+        "tile_arithmetic": true,
+        "invalid_controls": true,
+        "speedup_1_25": true
+      }
+    },
+    {
+      "module": "field_csg_curved_probe.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "arrays_exact": true,
+      "source_hashes": true,
+      "bytes_compared": 16796320,
+      "elapsed_s": 5.0869314830051735,
+      "observed_gates": {
+        "coverage": true,
+        "exact": true,
+        "repeats": true,
+        "watertight": true,
+        "analytic_brep": true,
+        "volume_1percent": true,
+        "envelope": true,
+        "refinement": true,
+        "missing_hole_control": true
+      }
+    },
+    {
+      "module": "field_native_pack_probe.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "arrays_exact": true,
+      "source_hashes": true,
+      "bytes_compared": 131104,
+      "elapsed_s": 3.3457573220075574,
+      "observed_gates": {
+        "coverage": true,
+        "exact": true,
+        "repeats": true,
+        "controls": true,
+        "lifetime": true,
+        "invalid": true,
+        "speedup_2": true
+      }
+    },
+    {
+      "module": "field_csg_packed_probe.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "arrays_exact": true,
+      "source_hashes": true,
+      "bytes_compared": 10142560,
+      "elapsed_s": 5.206810707997647,
+      "observed_gates": {
+        "brep_reference": true,
+        "coverage": true,
+        "exact": true,
+        "repeats": true,
+        "frozen_fixture": true,
+        "tile_controls": true,
+        "invalid_controls": true,
+        "speedup_1_25": true
+      }
+    },
+    {
+      "module": "field_csg_batch_probe.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "arrays_exact": true,
+      "source_hashes": true,
+      "bytes_compared": 10142560,
+      "elapsed_s": 5.399736065999605,
+      "observed_gates": {
+        "brep_reference": true,
+        "coverage": true,
+        "exact": true,
+        "repeats": true,
+        "frozen_fixture": true,
+        "tile_controls": true,
+        "invalid_controls": true,
+        "speedup_1_25": true
+      }
+    }
+  ],
+  "contract_sha256": "30867036669baf2b21b25d117f47f6aa340064540aa97d4fe856419ea1557b23",
+  "scope": "CPU CSG subset only; seven fresh probes in isolated tree. Full archived arrays and documented decisive values exact. Live speed gates are required, timing values are not equality targets. No GPU or all-repository verification claim."
+}

@@ -1,0 +1,54 @@
+{
+  "rows": [
+    {
+      "leg": 0,
+      "method": "full",
+      "hits": 64,
+      "hashes": [
+        "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+        "e456b0dfeda71b8e5aaf88c2c7a99099f01d83fa9e9618f69d7d2e8659b03301",
+        "c15144afd60645dd9f0fbbd59c528fc26f72449a8636810a960daa11d7f38332"
+      ]
+    },
+    {
+      "leg": 0,
+      "method": "compact",
+      "hits": 64,
+      "hashes": [
+        "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+        "e456b0dfeda71b8e5aaf88c2c7a99099f01d83fa9e9618f69d7d2e8659b03301",
+        "c15144afd60645dd9f0fbbd59c528fc26f72449a8636810a960daa11d7f38332"
+      ]
+    },
+    {
+      "leg": 1,
+      "method": "full",
+      "hits": 64,
+      "hashes": [
+        "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+        "e456b0dfeda71b8e5aaf88c2c7a99099f01d83fa9e9618f69d7d2e8659b03301",
+        "c15144afd60645dd9f0fbbd59c528fc26f72449a8636810a960daa11d7f38332"
+      ]
+    },
+    {
+      "leg": 1,
+      "method": "compact",
+      "hits": 64,
+      "hashes": [
+        "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+        "e456b0dfeda71b8e5aaf88c2c7a99099f01d83fa9e9618f69d7d2e8659b03301",
+        "c15144afd60645dd9f0fbbd59c528fc26f72449a8636810a960daa11d7f38332"
+      ]
+    }
+  ],
+  "gates": {
+    "full_width_exact": true,
+    "full_repeat": true,
+    "overflow_and_latch": true,
+    "thread_refusal": true
+  },
+  "overflow_rejections": 4,
+  "retry_refusals": 4,
+  "thread_refusals": 8,
+  "scope": "Synthetic column resource and lifecycle control, no timing claim."
+}

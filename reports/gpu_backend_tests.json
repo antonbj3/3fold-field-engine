@@ -1,0 +1,11 @@
+{
+  "exit": 0,
+  "stdout": "......                                                                   [100%]\n6 passed, 53 deselected in 3.03s\n",
+  "stderr": "",
+  "scope": "Six targeted tests on H100. Default backend explicitly numpy before tests; each backend test selects its own backend. Earlier observer leaked warp into the baseline calibration test and that test import failed; numerical/public CLI chain had already passed, no kernel changes or numerical rerun.",
+  "source_sha256": {
+    "src/field_engine/lbm_domare_v1.py": "ac049da26f960759eb0a4cc25154e04c131bb64073b4284be5184b00d8e9b6cc",
+    "src/field_engine/lbm_warp_v1.py": "a363b0213711f810243646b1a6e207696323817b6da90ae4ccf8944ed2afb93f",
+    "tests/test_selftests.py": "3f0f143b3e790f485a74156011a2d9fa2371bae76753af67de0761dbc7671815"
+  }
+}

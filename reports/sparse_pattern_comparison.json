@@ -1,0 +1,12 @@
+{
+  "cross_host_array_bytes": 7691008,
+  "cross_host_arrays_exact": true,
+  "unit_controls": 2,
+  "original_setup_failure": {
+    "app": "ap-R7e5tyiD68n3NO9whlBvuh",
+    "reason": "Minimal upload omitted the existing holed plate fixture; failed before solver execution.",
+    "retained_run": "20260913T173815Z-d-sparse-candidate"
+  },
+  "corrected_app": "ap-OJsT6tHmjNexonSCFfG70v",
+  "scope": "Separate reusable column-order solver, numeric LU rebuilt each call. Existing default unchanged; full recipe gates and full twelve-vector/density parity. First full old leg includes CAD cold-start overhead; use reverse-order warm leg for complete-chain gain."
+}

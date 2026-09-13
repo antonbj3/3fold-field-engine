@@ -1,0 +1,54 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "coverage": true,
+    "exact": true,
+    "repeat": true,
+    "no_false_rejection": true
+  },
+  "rows": [
+    {
+      "leg": 0,
+      "differing_bytes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "no_false_rejection": true,
+      "hashes": [
+        "00d152ab75d2bbaca0c2e93cdcc9e8b0a1462176166575ab15061e11e9774c64",
+        "bef03626b92021ef7eb0624fa21d1947766d4b4d6fd2e8c83e96d1db27a2eaa9",
+        "2013e4051663d66144235f087c2c9a6c683b91d32f4a2451ce89853fb10bfc34",
+        "50f6e65885044b80f04efc2d5be67885c8f7aab1ea7450fed82c221d563ae49f"
+      ]
+    },
+    {
+      "leg": 1,
+      "differing_bytes": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "no_false_rejection": true,
+      "hashes": [
+        "00d152ab75d2bbaca0c2e93cdcc9e8b0a1462176166575ab15061e11e9774c64",
+        "bef03626b92021ef7eb0624fa21d1947766d4b4d6fd2e8c83e96d1db27a2eaa9",
+        "2013e4051663d66144235f087c2c9a6c683b91d32f4a2451ce89853fb10bfc34",
+        "50f6e65885044b80f04efc2d5be67885c8f7aab1ea7450fed82c221d563ae49f"
+      ]
+    }
+  ],
+  "input_sha256": {
+    "triangles": "c288c398365d299a2807f015ccb7f63bc4e9de96a3278c78e5b25856f9ef5f76",
+    "queries": "3464fb594351022e5e7dfd7d9c4d795f0a6af994f1011dd75688313aabfaf69b"
+  },
+  "cases": 120016,
+  "rejected": 68644,
+  "source_sha256": {
+    "filter.cuh": "fc2ca5a1429fb9f1364766a6db5a7e0b4ad3bcbb47af01366c41307925b301cb",
+    "probe.cu": "d63a6e40c7ba099abc453b1c202df8d721d61916b1a4827a892cfcc53189d596"
+  },
+  "scope": "Complete CUDA interval/rejection/frozen-edge equality to CPU, two repeats. No RT traversal, full-service or speed claim."
+}

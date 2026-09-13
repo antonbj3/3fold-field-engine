@@ -1,0 +1,36 @@
+{
+ "tag": "pytest_zero",
+ "volfrac_target": 0.35,
+ "mirror": false,
+ "zero_load": true,
+ "grid": [
+  32,
+  32,
+  5
+ ],
+ "n_elem": 5120,
+ "n_design_elem": 4988,
+ "design_mask_anvand": false,
+ "n_void_elem": 0,
+ "dx_dy_dz_mm": [
+  17.70625,
+  17.70625,
+  4.8
+ ],
+ "fix_r_mm": 15.0503125,
+ "R_load_mm": 102.0,
+ "Fv_N": 0.0,
+ "Mk_Nm": 0.0,
+ "total_load_mag_abs_sum_N": 0.0,
+ "n_iter": 3,
+ "wall_s": 4.2841386795043945,
+ "compliance_hist_Nmm": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "compliance_final_Nmm": 0.0,
+ "final_volfrac": 0.02675546874999999,
+ "max_abs_uz_mm": 0.0,
+ "rho_field_npy": "artifacts/rho_field_pytest_zero.npy"
+}

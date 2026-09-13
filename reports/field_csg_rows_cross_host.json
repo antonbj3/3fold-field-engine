@@ -1,0 +1,19 @@
+{
+  "exact": true,
+  "comparisons": [
+    {
+      "file": "field_csg_rows_modal0_arrays.npz",
+      "arrays": 8,
+      "bytes": 10142560,
+      "exact": true
+    },
+    {
+      "file": "field_csg_rows_modal1_arrays.npz",
+      "arrays": 8,
+      "bytes": 10142560,
+      "exact": true
+    }
+  ],
+  "source_sha256": "d7b6dc6c2b45309d944f75feabc2e35965590b27a61d8995bc4a5225006de128",
+  "scope": "Complete local versus two independent Modal CPU array captures; no projection or tolerance."
+}

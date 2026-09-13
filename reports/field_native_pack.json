@@ -1,0 +1,165 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "coverage": true,
+    "exact": true,
+    "repeats": true,
+    "controls": true,
+    "lifetime": true,
+    "invalid": true,
+    "speedup_2": true
+  },
+  "rows": [
+    {
+      "case": "bracket_plate_rectangular_holes_0.5_0_field",
+      "leg": 0,
+      "times_ms": {
+        "python": 8.982743,
+        "native": 0.777951
+      },
+      "speedup": 11.546669391774032,
+      "exact": true,
+      "query_exact": true,
+      "hashes": [
+        "3be0f4342dcaf8be51eeb3617d1626a3d3920f8194f130c334befb65e748cefd",
+        "5b16e02cc06e59d35c627f00d9a53d3a1f75fd9dd31c51a2e21ed221edd40932",
+        "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+      ]
+    },
+    {
+      "case": "bracket_plate_rectangular_holes_0.5_0_field",
+      "leg": 1,
+      "times_ms": {
+        "native": 0.641797,
+        "python": 8.513301
+      },
+      "speedup": 13.264787775573899,
+      "exact": true,
+      "query_exact": true,
+      "hashes": [
+        "3be0f4342dcaf8be51eeb3617d1626a3d3920f8194f130c334befb65e748cefd",
+        "5b16e02cc06e59d35c627f00d9a53d3a1f75fd9dd31c51a2e21ed221edd40932",
+        "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+      ]
+    },
+    {
+      "case": "bracket_plate_rectangular_holes_0.25_0_field",
+      "leg": 0,
+      "times_ms": {
+        "python": 49.830223,
+        "native": 4.068961
+      },
+      "speedup": 12.24642433289481,
+      "exact": true,
+      "query_exact": true,
+      "hashes": [
+        "491aa6105e17681292235dc64718f236089e8f5a9b8f60ff2bbd03060af49c7c",
+        "3b5e9ffb9a79d3626b027f107cd7762224aa24b712d184959dacac8316a22216",
+        "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+      ]
+    },
+    {
+      "case": "bracket_plate_rectangular_holes_0.25_0_field",
+      "leg": 1,
+      "times_ms": {
+        "native": 4.076538,
+        "python": 49.476713
+      },
+      "speedup": 12.136943897002798,
+      "exact": true,
+      "query_exact": true,
+      "hashes": [
+        "491aa6105e17681292235dc64718f236089e8f5a9b8f60ff2bbd03060af49c7c",
+        "3b5e9ffb9a79d3626b027f107cd7762224aa24b712d184959dacac8316a22216",
+        "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+      ]
+    },
+    {
+      "case": "sphere_plate_round_hole_0.5_0_field",
+      "leg": 0,
+      "times_ms": {
+        "python": 8.919639,
+        "native": 0.564453
+      },
+      "speedup": 15.80227051676579,
+      "exact": true,
+      "query_exact": true,
+      "hashes": [
+        "238a0882ddbf868bd7e495cf48acf5c33e99b627d2a698f05ff8f4d1e0256b6e",
+        "660c87e5debb9552b63470c063591929ad4416cb8daa70018d1472617283c01e",
+        "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+      ]
+    },
+    {
+      "case": "sphere_plate_round_hole_0.5_0_field",
+      "leg": 1,
+      "times_ms": {
+        "native": 0.551235,
+        "python": 8.95871
+      },
+      "speedup": 16.252070351120665,
+      "exact": true,
+      "query_exact": true,
+      "hashes": [
+        "238a0882ddbf868bd7e495cf48acf5c33e99b627d2a698f05ff8f4d1e0256b6e",
+        "660c87e5debb9552b63470c063591929ad4416cb8daa70018d1472617283c01e",
+        "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+      ]
+    },
+    {
+      "case": "sphere_plate_round_hole_0.25_0_field",
+      "leg": 0,
+      "times_ms": {
+        "python": 65.457568,
+        "native": 3.4954929999999997
+      },
+      "speedup": 18.72627637932618,
+      "exact": true,
+      "query_exact": true,
+      "hashes": [
+        "5cfb397dbd00418b1bee7d664ae1479ee0cb717df80d2bdfd259aec0bf40d143",
+        "e3792f302f8ef0c4093de1f8eeadba796791b63d415a46694ac38f050a0f6bca",
+        "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+      ]
+    },
+    {
+      "case": "sphere_plate_round_hole_0.25_0_field",
+      "leg": 1,
+      "times_ms": {
+        "native": 3.835193,
+        "python": 66.134337
+      },
+      "speedup": 17.24407011589769,
+      "exact": true,
+      "query_exact": true,
+      "hashes": [
+        "5cfb397dbd00418b1bee7d664ae1479ee0cb717df80d2bdfd259aec0bf40d143",
+        "e3792f302f8ef0c4093de1f8eeadba796791b63d415a46694ac38f050a0f6bca",
+        "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0"
+      ]
+    }
+  ],
+  "controls": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "invalid_rejections": 8,
+  "source_sha256": "12e7f82368df77354a12f8059f0312fb2840003f6d9706675d2f1308aeff4895",
+  "scope": "Same tree splitting, axis tie order, metadata layout and exact sample bits as Python. CPU packing only, compilation excluded, queries outside timing. No retained dense source; no peak-memory claim. Two reversed orders with ordinary concurrent CPU load."
+}

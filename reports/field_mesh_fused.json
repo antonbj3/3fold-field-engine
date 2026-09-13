@@ -1,0 +1,260 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "coverage": true,
+    "exact": true,
+    "repeat": true,
+    "capacity_lifecycle": true,
+    "L_speedup_2": true
+  },
+  "rows": [
+    {
+      "case": "plate_2.0",
+      "leg": 0,
+      "times_ms": {
+        "two_hit": 1.9768109999999999,
+        "fused": 0.938006
+      },
+      "exact": true,
+      "hashes": [
+        "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "1a2440c5d539d34340bbd383f91a20ecffb1a23c0f131ef9463bf53dc34c95e5",
+        "34a7bb9603b6ec70144e2c13567ccf8e86f86baae3496bb5017d3b62facd2ea6",
+        "e600f757555076bb1edfe4f47370fb089d83199602a011f9e087cac488fe19f7",
+        "334394c5ef52530e3c0f87a16da306ebdb0c1284a31f8d370a4b1d1bd778ace3"
+      ]
+    },
+    {
+      "case": "plate_2.0",
+      "leg": 1,
+      "times_ms": {
+        "fused": 0.909439,
+        "two_hit": 1.850611
+      },
+      "exact": true,
+      "hashes": [
+        "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "1a2440c5d539d34340bbd383f91a20ecffb1a23c0f131ef9463bf53dc34c95e5",
+        "34a7bb9603b6ec70144e2c13567ccf8e86f86baae3496bb5017d3b62facd2ea6",
+        "e600f757555076bb1edfe4f47370fb089d83199602a011f9e087cac488fe19f7",
+        "334394c5ef52530e3c0f87a16da306ebdb0c1284a31f8d370a4b1d1bd778ace3"
+      ]
+    },
+    {
+      "case": "plate_1.0",
+      "leg": 0,
+      "times_ms": {
+        "two_hit": 3.015301,
+        "fused": 1.0869499999999999
+      },
+      "exact": true,
+      "hashes": [
+        "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "5910185a5e59f0c876d99c55d3e68669f063c734188e98012e62238d9526d91d",
+        "95877a3c60a6973a5b5b03e4c50dea54e8184482931d33eafdb6b8855768d317",
+        "5bf5c6f8186a5c0d99143ae6267c7e7854c56b401aaa6edbc38d1a17a2768ba0",
+        "82101f72c1376a95aa0c0ccff150d33ba52963f0088f46ebb6721ca3eb2273d8"
+      ]
+    },
+    {
+      "case": "plate_1.0",
+      "leg": 1,
+      "times_ms": {
+        "fused": 1.187755,
+        "two_hit": 2.8889389999999997
+      },
+      "exact": true,
+      "hashes": [
+        "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "5910185a5e59f0c876d99c55d3e68669f063c734188e98012e62238d9526d91d",
+        "95877a3c60a6973a5b5b03e4c50dea54e8184482931d33eafdb6b8855768d317",
+        "5bf5c6f8186a5c0d99143ae6267c7e7854c56b401aaa6edbc38d1a17a2768ba0",
+        "82101f72c1376a95aa0c0ccff150d33ba52963f0088f46ebb6721ca3eb2273d8"
+      ]
+    },
+    {
+      "case": "plate_0.5",
+      "leg": 0,
+      "times_ms": {
+        "two_hit": 8.501539,
+        "fused": 3.105712
+      },
+      "exact": true,
+      "hashes": [
+        "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "e07692a312e14e9b33c5e79971d1bf0d40bb753e788aa728a573e6b077fa13f7",
+        "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      ]
+    },
+    {
+      "case": "plate_0.5",
+      "leg": 1,
+      "times_ms": {
+        "fused": 2.940153,
+        "two_hit": 8.493647
+      },
+      "exact": true,
+      "hashes": [
+        "605390e5a369ee568b19ead1733af824c7c1d286d7d24b86283238fc44a99334",
+        "e07692a312e14e9b33c5e79971d1bf0d40bb753e788aa728a573e6b077fa13f7",
+        "5e91e77cdf0075d9e70ee856c83de17469a221652f0cb59120b8fcce6281e814",
+        "ab80d6053ec6fcb66135c6b7c8cb64144ed85dc9796bbf32a0adc01e999cc379",
+        "eff9d517627d2b50e3c65e535c022ed5ae1637c22af934952f4d0d6b3fab71af"
+      ]
+    },
+    {
+      "case": "rotated_0.0",
+      "leg": 0,
+      "times_ms": {
+        "two_hit": 0.883143,
+        "fused": 0.253081
+      },
+      "exact": true,
+      "hashes": [
+        "f1475481fd56adb877bb7e9e2445d219ad6dd710c8f5aba167470b9c67c6c9f5",
+        "118d1e00b21d0659d4f095a664bcb8c51f2d2205b3331d7f00e4c812bb9e8679",
+        "cd14f7e46e5fd41895e697238c463d2dca8a025960edf96caa93786cf30fbe91",
+        "a198d33c2993591a9614d8ae512827ad32bee11361b3af2384e0f3716f8e3f28",
+        "2d0873516d29e7ff85353ccb2bf3c3f123caf1a199bbcb6b95bec0e8afd602e4"
+      ]
+    },
+    {
+      "case": "rotated_0.0",
+      "leg": 1,
+      "times_ms": {
+        "fused": 0.25901399999999997,
+        "two_hit": 0.877757
+      },
+      "exact": true,
+      "hashes": [
+        "f1475481fd56adb877bb7e9e2445d219ad6dd710c8f5aba167470b9c67c6c9f5",
+        "118d1e00b21d0659d4f095a664bcb8c51f2d2205b3331d7f00e4c812bb9e8679",
+        "cd14f7e46e5fd41895e697238c463d2dca8a025960edf96caa93786cf30fbe91",
+        "a198d33c2993591a9614d8ae512827ad32bee11361b3af2384e0f3716f8e3f28",
+        "2d0873516d29e7ff85353ccb2bf3c3f123caf1a199bbcb6b95bec0e8afd602e4"
+      ]
+    },
+    {
+      "case": "rotated_1000000.0",
+      "leg": 0,
+      "times_ms": {
+        "two_hit": 0.876483,
+        "fused": 0.24379599999999998
+      },
+      "exact": true,
+      "hashes": [
+        "f1475481fd56adb877bb7e9e2445d219ad6dd710c8f5aba167470b9c67c6c9f5",
+        "118d1e00b21d0659d4f095a664bcb8c51f2d2205b3331d7f00e4c812bb9e8679",
+        "cd14f7e46e5fd41895e697238c463d2dca8a025960edf96caa93786cf30fbe91",
+        "a198d33c2993591a9614d8ae512827ad32bee11361b3af2384e0f3716f8e3f28",
+        "2d0873516d29e7ff85353ccb2bf3c3f123caf1a199bbcb6b95bec0e8afd602e4"
+      ]
+    },
+    {
+      "case": "rotated_1000000.0",
+      "leg": 1,
+      "times_ms": {
+        "fused": 0.236678,
+        "two_hit": 0.8414499999999999
+      },
+      "exact": true,
+      "hashes": [
+        "f1475481fd56adb877bb7e9e2445d219ad6dd710c8f5aba167470b9c67c6c9f5",
+        "118d1e00b21d0659d4f095a664bcb8c51f2d2205b3331d7f00e4c812bb9e8679",
+        "cd14f7e46e5fd41895e697238c463d2dca8a025960edf96caa93786cf30fbe91",
+        "a198d33c2993591a9614d8ae512827ad32bee11361b3af2384e0f3716f8e3f28",
+        "2d0873516d29e7ff85353ccb2bf3c3f123caf1a199bbcb6b95bec0e8afd602e4"
+      ]
+    },
+    {
+      "case": "open",
+      "leg": 0,
+      "times_ms": {
+        "two_hit": 9.230443,
+        "fused": 9.389797
+      },
+      "exact": true,
+      "hashes": [
+        "165a7f138546f74cd5177705c7fcd0b10329b4e9ff493fd77939a5291beda702",
+        "9b5e9e0b9c2c3bfbe212345b562b5ab72937abc43d7331c12406a415e49c637e",
+        "8ae5fb17c7bf9749244dde3d977f32a816999aa17eea52322aeb422f9d55d059",
+        "950ea99f10723791697f87a34ef493b9e74efbd656ee60fd3d623aa888e6f415",
+        "54aeb9bef8ba770c51323f571d0e5f0ce6cbccb48c8e34009721dba99a73c788"
+      ]
+    },
+    {
+      "case": "open",
+      "leg": 1,
+      "times_ms": {
+        "fused": 9.314767999999999,
+        "two_hit": 9.168115
+      },
+      "exact": true,
+      "hashes": [
+        "165a7f138546f74cd5177705c7fcd0b10329b4e9ff493fd77939a5291beda702",
+        "9b5e9e0b9c2c3bfbe212345b562b5ab72937abc43d7331c12406a415e49c637e",
+        "8ae5fb17c7bf9749244dde3d977f32a816999aa17eea52322aeb422f9d55d059",
+        "950ea99f10723791697f87a34ef493b9e74efbd656ee60fd3d623aa888e6f415",
+        "54aeb9bef8ba770c51323f571d0e5f0ce6cbccb48c8e34009721dba99a73c788"
+      ]
+    },
+    {
+      "case": "reversed_open",
+      "leg": 0,
+      "times_ms": {
+        "two_hit": 9.220077999999999,
+        "fused": 9.493015
+      },
+      "exact": true,
+      "hashes": [
+        "165a7f138546f74cd5177705c7fcd0b10329b4e9ff493fd77939a5291beda702",
+        "9b5e9e0b9c2c3bfbe212345b562b5ab72937abc43d7331c12406a415e49c637e",
+        "8ae5fb17c7bf9749244dde3d977f32a816999aa17eea52322aeb422f9d55d059",
+        "950ea99f10723791697f87a34ef493b9e74efbd656ee60fd3d623aa888e6f415",
+        "54aeb9bef8ba770c51323f571d0e5f0ce6cbccb48c8e34009721dba99a73c788"
+      ]
+    },
+    {
+      "case": "reversed_open",
+      "leg": 1,
+      "times_ms": {
+        "fused": 9.414818,
+        "two_hit": 9.235306999999999
+      },
+      "exact": true,
+      "hashes": [
+        "165a7f138546f74cd5177705c7fcd0b10329b4e9ff493fd77939a5291beda702",
+        "9b5e9e0b9c2c3bfbe212345b562b5ab72937abc43d7331c12406a415e49c637e",
+        "8ae5fb17c7bf9749244dde3d977f32a816999aa17eea52322aeb422f9d55d059",
+        "950ea99f10723791697f87a34ef493b9e74efbd656ee60fd3d623aa888e6f415",
+        "54aeb9bef8ba770c51323f571d0e5f0ce6cbccb48c8e34009721dba99a73c788"
+      ]
+    }
+  ],
+  "controls": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "source_sha256": "7e214fee6470f9bdf694c0a920d6219cc7019b4d8fafccbfa2e8895fd40a6fcd",
+  "scope": "Prepared immutable query grid. Every evaluation retraces geometry and recomputes mask/surface/signed EDT. Closed path keeps hits and mask on device, reads complete three arrays; open path preserves GWN/stateless EDT. Preparation and warmup excluded, two reversed orders. No full-service 2 ms claim."
+}

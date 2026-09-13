@@ -1,0 +1,668 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "collection_exact": true,
+  "initial_assembly_difference": false,
+  "rows": [
+    {
+      "profile": "native_0",
+      "complete_arrays_exact": true,
+      "compared_bytes": 16910524,
+      "observation": {
+        "numpy_core_sha256": "097e10f2baaf99d5a4655e549a6c76b139e3931681af39068f79c7b3abddadac",
+        "source_sha256": {
+          "lastfalt_v1_topopt.py": "5beb7aa97146a6fe5a103e4f82c9b27a6de820f2c2f294e70ab1ab21bb62bb8a",
+          "lastfalt_v1_fem.py": "6ed4f7f14afeaafd439cd3939184aa0e8f0ca1dae770da9bb872a28a932cae3c"
+        },
+        "requested_openblas_core": "Haswell",
+        "requested_numpy_disabled": "",
+        "numpy_dispatch": [
+          "X86_V3",
+          "X86_V4",
+          "AVX512_ICL",
+          "AVX512_SPR"
+        ],
+        "numpy_features": {
+          "X86_V2": true,
+          "X86_V3": true,
+          "AVX512F": true,
+          "AVX512CD": true,
+          "AVX512ER": false,
+          "AVX512PF": false,
+          "AVX5124FMAPS": false,
+          "AVX5124VNNIW": false,
+          "AVX512VPOPCNTDQ": false,
+          "AVX512VL": true,
+          "AVX512BW": true,
+          "AVX512DQ": true,
+          "AVX512VNNI": true,
+          "AVX512IFMA": false,
+          "AVX512VBMI": false,
+          "AVX512VBMI2": false,
+          "AVX512BITALG": false,
+          "AVX512FP16": false,
+          "AVX512BF16": false,
+          "AVX512_KNL": false,
+          "AVX512_KNM": false,
+          "AVX512_SKX": true,
+          "X86_V4": true,
+          "AVX512_CLX": true,
+          "AVX512_CNL": false,
+          "AVX512_ICL": false,
+          "AVX512_SPR": false
+        },
+        "runtimes": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "version": "0.3.34.106.0",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell",
+            "binary_name": "libscipy_openblas64_-f48b354e.so",
+            "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "version": "0.3.31.dev",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell",
+            "binary_name": "libscipy_openblas-5f890258.so",
+            "binary_sha256": "2a5b4c1a6311873c59132b2ceaaf3c26258a17350b7cd27ea8782a47e3322981"
+          }
+        ],
+        "arrays": {
+          "elem_nodes": {
+            "shape": [
+              5120,
+              8
+            ],
+            "dtype": "int64",
+            "bytes": 327680,
+            "sha256": "ecc2fc8059e7a02b7fed0eb581edf273333a4291c1fd1d5b201613aa0a1f9fb6"
+          },
+          "rho": {
+            "shape": [
+              5120
+            ],
+            "dtype": "float64",
+            "bytes": 40960,
+            "sha256": "28f02d2ecac0245eb761304b6beb0d26e2df05326234b72de3ee1bac590e810c"
+          },
+          "Ke0": {
+            "shape": [
+              24,
+              24
+            ],
+            "dtype": "float64",
+            "bytes": 4608,
+            "sha256": "34ba8660d287fa92d666b602b8cbeac478edba25c1671542d2945d6f9e601e29"
+          },
+          "p_E0": {
+            "shape": [
+              2
+            ],
+            "dtype": "float64",
+            "bytes": 16,
+            "sha256": "db993c269821058d44a3cc28e05e3eb77379437bb6629026e786b68f212e28e9"
+          },
+          "actual_power": {
+            "shape": [
+              5120
+            ],
+            "dtype": "float64",
+            "bytes": 40960,
+            "sha256": "1ebb4bb528456fe5b12f53ae206f9768099932dd46601440f17ed3fbd97ff155"
+          },
+          "K_data": {
+            "shape": [
+              1354896
+            ],
+            "dtype": "float64",
+            "bytes": 10839168,
+            "sha256": "faed1cd691982be29a4bfbf88f9fc907bbf5c6475d4e3fc492f7caa9b8dca1ac"
+          },
+          "K_indices": {
+            "shape": [
+              1354896
+            ],
+            "dtype": "int32",
+            "bytes": 5419584,
+            "sha256": "999358ae418cc329fe58cd967ca91f2c2fd73524415d0d828bd4d7eb9490bd4a"
+          },
+          "K_indptr": {
+            "shape": [
+              19603
+            ],
+            "dtype": "int32",
+            "bytes": 78412,
+            "sha256": "660b11ca1fd5f9f4eb9ba90d8893c9acd58192012f5071d29d713413d8286d97"
+          },
+          "K_shape": {
+            "shape": [
+              2
+            ],
+            "dtype": "int64",
+            "bytes": 16,
+            "sha256": "73104cf41cbef94eaf02158be87e1c58de66114a400775d8d46dda72e46eb9ae"
+          },
+          "load": {
+            "shape": [
+              19602
+            ],
+            "dtype": "float64",
+            "bytes": 156816,
+            "sha256": "45d98cbbc8dbba555f95a039850e9f074ab6082a888d649f23f2f551da0b2779"
+          },
+          "fixed_dofs": {
+            "shape": [
+              288
+            ],
+            "dtype": "int64",
+            "bytes": 2304,
+            "sha256": "c011ba67315251377ce4decf16c698ba561c45381278c888ab33111c34536710"
+          }
+        }
+      }
+    },
+    {
+      "profile": "native_1",
+      "complete_arrays_exact": true,
+      "compared_bytes": 16910524,
+      "observation": {
+        "numpy_core_sha256": "097e10f2baaf99d5a4655e549a6c76b139e3931681af39068f79c7b3abddadac",
+        "source_sha256": {
+          "lastfalt_v1_topopt.py": "5beb7aa97146a6fe5a103e4f82c9b27a6de820f2c2f294e70ab1ab21bb62bb8a",
+          "lastfalt_v1_fem.py": "6ed4f7f14afeaafd439cd3939184aa0e8f0ca1dae770da9bb872a28a932cae3c"
+        },
+        "requested_openblas_core": "Haswell",
+        "requested_numpy_disabled": "",
+        "numpy_dispatch": [
+          "X86_V3",
+          "X86_V4",
+          "AVX512_ICL",
+          "AVX512_SPR"
+        ],
+        "numpy_features": {
+          "X86_V2": true,
+          "X86_V3": true,
+          "AVX512F": true,
+          "AVX512CD": true,
+          "AVX512ER": false,
+          "AVX512PF": false,
+          "AVX5124FMAPS": false,
+          "AVX5124VNNIW": false,
+          "AVX512VPOPCNTDQ": false,
+          "AVX512VL": true,
+          "AVX512BW": true,
+          "AVX512DQ": true,
+          "AVX512VNNI": true,
+          "AVX512IFMA": false,
+          "AVX512VBMI": false,
+          "AVX512VBMI2": false,
+          "AVX512BITALG": false,
+          "AVX512FP16": false,
+          "AVX512BF16": false,
+          "AVX512_KNL": false,
+          "AVX512_KNM": false,
+          "AVX512_SKX": true,
+          "X86_V4": true,
+          "AVX512_CLX": true,
+          "AVX512_CNL": false,
+          "AVX512_ICL": false,
+          "AVX512_SPR": false
+        },
+        "runtimes": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "version": "0.3.34.106.0",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell",
+            "binary_name": "libscipy_openblas64_-f48b354e.so",
+            "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "version": "0.3.31.dev",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell",
+            "binary_name": "libscipy_openblas-5f890258.so",
+            "binary_sha256": "2a5b4c1a6311873c59132b2ceaaf3c26258a17350b7cd27ea8782a47e3322981"
+          }
+        ],
+        "arrays": {
+          "elem_nodes": {
+            "shape": [
+              5120,
+              8
+            ],
+            "dtype": "int64",
+            "bytes": 327680,
+            "sha256": "ecc2fc8059e7a02b7fed0eb581edf273333a4291c1fd1d5b201613aa0a1f9fb6"
+          },
+          "rho": {
+            "shape": [
+              5120
+            ],
+            "dtype": "float64",
+            "bytes": 40960,
+            "sha256": "28f02d2ecac0245eb761304b6beb0d26e2df05326234b72de3ee1bac590e810c"
+          },
+          "Ke0": {
+            "shape": [
+              24,
+              24
+            ],
+            "dtype": "float64",
+            "bytes": 4608,
+            "sha256": "34ba8660d287fa92d666b602b8cbeac478edba25c1671542d2945d6f9e601e29"
+          },
+          "p_E0": {
+            "shape": [
+              2
+            ],
+            "dtype": "float64",
+            "bytes": 16,
+            "sha256": "db993c269821058d44a3cc28e05e3eb77379437bb6629026e786b68f212e28e9"
+          },
+          "actual_power": {
+            "shape": [
+              5120
+            ],
+            "dtype": "float64",
+            "bytes": 40960,
+            "sha256": "1ebb4bb528456fe5b12f53ae206f9768099932dd46601440f17ed3fbd97ff155"
+          },
+          "K_data": {
+            "shape": [
+              1354896
+            ],
+            "dtype": "float64",
+            "bytes": 10839168,
+            "sha256": "faed1cd691982be29a4bfbf88f9fc907bbf5c6475d4e3fc492f7caa9b8dca1ac"
+          },
+          "K_indices": {
+            "shape": [
+              1354896
+            ],
+            "dtype": "int32",
+            "bytes": 5419584,
+            "sha256": "999358ae418cc329fe58cd967ca91f2c2fd73524415d0d828bd4d7eb9490bd4a"
+          },
+          "K_indptr": {
+            "shape": [
+              19603
+            ],
+            "dtype": "int32",
+            "bytes": 78412,
+            "sha256": "660b11ca1fd5f9f4eb9ba90d8893c9acd58192012f5071d29d713413d8286d97"
+          },
+          "K_shape": {
+            "shape": [
+              2
+            ],
+            "dtype": "int64",
+            "bytes": 16,
+            "sha256": "73104cf41cbef94eaf02158be87e1c58de66114a400775d8d46dda72e46eb9ae"
+          },
+          "load": {
+            "shape": [
+              19602
+            ],
+            "dtype": "float64",
+            "bytes": 156816,
+            "sha256": "45d98cbbc8dbba555f95a039850e9f074ab6082a888d649f23f2f551da0b2779"
+          },
+          "fixed_dofs": {
+            "shape": [
+              288
+            ],
+            "dtype": "int64",
+            "bytes": 2304,
+            "sha256": "c011ba67315251377ce4decf16c698ba561c45381278c888ab33111c34536710"
+          }
+        }
+      }
+    },
+    {
+      "profile": "v3_0",
+      "complete_arrays_exact": true,
+      "compared_bytes": 16910524,
+      "observation": {
+        "numpy_core_sha256": "097e10f2baaf99d5a4655e549a6c76b139e3931681af39068f79c7b3abddadac",
+        "source_sha256": {
+          "lastfalt_v1_topopt.py": "5beb7aa97146a6fe5a103e4f82c9b27a6de820f2c2f294e70ab1ab21bb62bb8a",
+          "lastfalt_v1_fem.py": "6ed4f7f14afeaafd439cd3939184aa0e8f0ca1dae770da9bb872a28a932cae3c"
+        },
+        "requested_openblas_core": "Haswell",
+        "requested_numpy_disabled": "X86_V4,AVX512_ICL,AVX512_SPR",
+        "numpy_dispatch": [
+          "X86_V3",
+          "X86_V4",
+          "AVX512_ICL",
+          "AVX512_SPR"
+        ],
+        "numpy_features": {
+          "X86_V2": true,
+          "X86_V3": true,
+          "AVX512F": true,
+          "AVX512CD": true,
+          "AVX512ER": false,
+          "AVX512PF": false,
+          "AVX5124FMAPS": false,
+          "AVX5124VNNIW": false,
+          "AVX512VPOPCNTDQ": false,
+          "AVX512VL": true,
+          "AVX512BW": true,
+          "AVX512DQ": true,
+          "AVX512VNNI": true,
+          "AVX512IFMA": false,
+          "AVX512VBMI": false,
+          "AVX512VBMI2": false,
+          "AVX512BITALG": false,
+          "AVX512FP16": false,
+          "AVX512BF16": false,
+          "AVX512_KNL": false,
+          "AVX512_KNM": false,
+          "AVX512_SKX": false,
+          "X86_V4": false,
+          "AVX512_CLX": true,
+          "AVX512_CNL": false,
+          "AVX512_ICL": false,
+          "AVX512_SPR": false
+        },
+        "runtimes": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "version": "0.3.34.106.0",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell",
+            "binary_name": "libscipy_openblas64_-f48b354e.so",
+            "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "version": "0.3.31.dev",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell",
+            "binary_name": "libscipy_openblas-5f890258.so",
+            "binary_sha256": "2a5b4c1a6311873c59132b2ceaaf3c26258a17350b7cd27ea8782a47e3322981"
+          }
+        ],
+        "arrays": {
+          "elem_nodes": {
+            "shape": [
+              5120,
+              8
+            ],
+            "dtype": "int64",
+            "bytes": 327680,
+            "sha256": "ecc2fc8059e7a02b7fed0eb581edf273333a4291c1fd1d5b201613aa0a1f9fb6"
+          },
+          "rho": {
+            "shape": [
+              5120
+            ],
+            "dtype": "float64",
+            "bytes": 40960,
+            "sha256": "28f02d2ecac0245eb761304b6beb0d26e2df05326234b72de3ee1bac590e810c"
+          },
+          "Ke0": {
+            "shape": [
+              24,
+              24
+            ],
+            "dtype": "float64",
+            "bytes": 4608,
+            "sha256": "34ba8660d287fa92d666b602b8cbeac478edba25c1671542d2945d6f9e601e29"
+          },
+          "p_E0": {
+            "shape": [
+              2
+            ],
+            "dtype": "float64",
+            "bytes": 16,
+            "sha256": "db993c269821058d44a3cc28e05e3eb77379437bb6629026e786b68f212e28e9"
+          },
+          "actual_power": {
+            "shape": [
+              5120
+            ],
+            "dtype": "float64",
+            "bytes": 40960,
+            "sha256": "1ebb4bb528456fe5b12f53ae206f9768099932dd46601440f17ed3fbd97ff155"
+          },
+          "K_data": {
+            "shape": [
+              1354896
+            ],
+            "dtype": "float64",
+            "bytes": 10839168,
+            "sha256": "faed1cd691982be29a4bfbf88f9fc907bbf5c6475d4e3fc492f7caa9b8dca1ac"
+          },
+          "K_indices": {
+            "shape": [
+              1354896
+            ],
+            "dtype": "int32",
+            "bytes": 5419584,
+            "sha256": "999358ae418cc329fe58cd967ca91f2c2fd73524415d0d828bd4d7eb9490bd4a"
+          },
+          "K_indptr": {
+            "shape": [
+              19603
+            ],
+            "dtype": "int32",
+            "bytes": 78412,
+            "sha256": "660b11ca1fd5f9f4eb9ba90d8893c9acd58192012f5071d29d713413d8286d97"
+          },
+          "K_shape": {
+            "shape": [
+              2
+            ],
+            "dtype": "int64",
+            "bytes": 16,
+            "sha256": "73104cf41cbef94eaf02158be87e1c58de66114a400775d8d46dda72e46eb9ae"
+          },
+          "load": {
+            "shape": [
+              19602
+            ],
+            "dtype": "float64",
+            "bytes": 156816,
+            "sha256": "45d98cbbc8dbba555f95a039850e9f074ab6082a888d649f23f2f551da0b2779"
+          },
+          "fixed_dofs": {
+            "shape": [
+              288
+            ],
+            "dtype": "int64",
+            "bytes": 2304,
+            "sha256": "c011ba67315251377ce4decf16c698ba561c45381278c888ab33111c34536710"
+          }
+        }
+      }
+    },
+    {
+      "profile": "v3_1",
+      "complete_arrays_exact": true,
+      "compared_bytes": 16910524,
+      "observation": {
+        "numpy_core_sha256": "097e10f2baaf99d5a4655e549a6c76b139e3931681af39068f79c7b3abddadac",
+        "source_sha256": {
+          "lastfalt_v1_topopt.py": "5beb7aa97146a6fe5a103e4f82c9b27a6de820f2c2f294e70ab1ab21bb62bb8a",
+          "lastfalt_v1_fem.py": "6ed4f7f14afeaafd439cd3939184aa0e8f0ca1dae770da9bb872a28a932cae3c"
+        },
+        "requested_openblas_core": "Haswell",
+        "requested_numpy_disabled": "X86_V4,AVX512_ICL,AVX512_SPR",
+        "numpy_dispatch": [
+          "X86_V3",
+          "X86_V4",
+          "AVX512_ICL",
+          "AVX512_SPR"
+        ],
+        "numpy_features": {
+          "X86_V2": true,
+          "X86_V3": true,
+          "AVX512F": true,
+          "AVX512CD": true,
+          "AVX512ER": false,
+          "AVX512PF": false,
+          "AVX5124FMAPS": false,
+          "AVX5124VNNIW": false,
+          "AVX512VPOPCNTDQ": false,
+          "AVX512VL": true,
+          "AVX512BW": true,
+          "AVX512DQ": true,
+          "AVX512VNNI": true,
+          "AVX512IFMA": false,
+          "AVX512VBMI": false,
+          "AVX512VBMI2": false,
+          "AVX512BITALG": false,
+          "AVX512FP16": false,
+          "AVX512BF16": false,
+          "AVX512_KNL": false,
+          "AVX512_KNM": false,
+          "AVX512_SKX": false,
+          "X86_V4": false,
+          "AVX512_CLX": true,
+          "AVX512_CNL": false,
+          "AVX512_ICL": false,
+          "AVX512_SPR": false
+        },
+        "runtimes": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "version": "0.3.34.106.0",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell",
+            "binary_name": "libscipy_openblas64_-f48b354e.so",
+            "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "version": "0.3.31.dev",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell",
+            "binary_name": "libscipy_openblas-5f890258.so",
+            "binary_sha256": "2a5b4c1a6311873c59132b2ceaaf3c26258a17350b7cd27ea8782a47e3322981"
+          }
+        ],
+        "arrays": {
+          "elem_nodes": {
+            "shape": [
+              5120,
+              8
+            ],
+            "dtype": "int64",
+            "bytes": 327680,
+            "sha256": "ecc2fc8059e7a02b7fed0eb581edf273333a4291c1fd1d5b201613aa0a1f9fb6"
+          },
+          "rho": {
+            "shape": [
+              5120
+            ],
+            "dtype": "float64",
+            "bytes": 40960,
+            "sha256": "28f02d2ecac0245eb761304b6beb0d26e2df05326234b72de3ee1bac590e810c"
+          },
+          "Ke0": {
+            "shape": [
+              24,
+              24
+            ],
+            "dtype": "float64",
+            "bytes": 4608,
+            "sha256": "34ba8660d287fa92d666b602b8cbeac478edba25c1671542d2945d6f9e601e29"
+          },
+          "p_E0": {
+            "shape": [
+              2
+            ],
+            "dtype": "float64",
+            "bytes": 16,
+            "sha256": "db993c269821058d44a3cc28e05e3eb77379437bb6629026e786b68f212e28e9"
+          },
+          "actual_power": {
+            "shape": [
+              5120
+            ],
+            "dtype": "float64",
+            "bytes": 40960,
+            "sha256": "1ebb4bb528456fe5b12f53ae206f9768099932dd46601440f17ed3fbd97ff155"
+          },
+          "K_data": {
+            "shape": [
+              1354896
+            ],
+            "dtype": "float64",
+            "bytes": 10839168,
+            "sha256": "faed1cd691982be29a4bfbf88f9fc907bbf5c6475d4e3fc492f7caa9b8dca1ac"
+          },
+          "K_indices": {
+            "shape": [
+              1354896
+            ],
+            "dtype": "int32",
+            "bytes": 5419584,
+            "sha256": "999358ae418cc329fe58cd967ca91f2c2fd73524415d0d828bd4d7eb9490bd4a"
+          },
+          "K_indptr": {
+            "shape": [
+              19603
+            ],
+            "dtype": "int32",
+            "bytes": 78412,
+            "sha256": "660b11ca1fd5f9f4eb9ba90d8893c9acd58192012f5071d29d713413d8286d97"
+          },
+          "K_shape": {
+            "shape": [
+              2
+            ],
+            "dtype": "int64",
+            "bytes": 16,
+            "sha256": "73104cf41cbef94eaf02158be87e1c58de66114a400775d8d46dda72e46eb9ae"
+          },
+          "load": {
+            "shape": [
+              19602
+            ],
+            "dtype": "float64",
+            "bytes": 156816,
+            "sha256": "45d98cbbc8dbba555f95a039850e9f074ab6082a888d649f23f2f551da0b2779"
+          },
+          "fixed_dofs": {
+            "shape": [
+              288
+            ],
+            "dtype": "int64",
+            "bytes": 2304,
+            "sha256": "c011ba67315251377ce4decf16c698ba561c45381278c888ab33111c34536710"
+          }
+        }
+      }
+    }
+  ],
+  "scope": "Complete first-assembly inputs, actual power results and sparse matrices are identical. This observation does not localize the later float64 density difference. The separate combined runtime profile reproduces the full final density."
+}

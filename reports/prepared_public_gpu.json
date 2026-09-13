@@ -1,0 +1,43 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "coverage": true,
+    "fresh": true,
+    "source_hashes": true,
+    "arrays": true
+  },
+  "rows": [
+    {
+      "module": "field_rt_prepared_gpu_probe.py",
+      "exit": 0,
+      "checks": true,
+      "sources": true,
+      "arrays_exact": true,
+      "bytes_compared": 40565408,
+      "timed_out": false,
+      "elapsed_s": 2.086345302988775
+    },
+    {
+      "module": "field_rt_prepared_hits_probe.py",
+      "exit": 0,
+      "checks": true,
+      "sources": true,
+      "arrays_exact": true,
+      "bytes_compared": 8877760,
+      "timed_out": false,
+      "elapsed_s": 2.3414272199879633
+    },
+    {
+      "module": "field_prepared_service_probe.py",
+      "exit": 0,
+      "checks": true,
+      "sources": true,
+      "arrays_exact": true,
+      "bytes_compared": 36115362,
+      "timed_out": false,
+      "elapsed_s": 14.396507327008294
+    }
+  ],
+  "scope": "GPU helper/raw-hit/full owned-service slice; unchanged 2 ms warm L gate. Complete captures retained; not all-module verification.",
+  "contract_sha256": "ef457e8c946c4d61721e028cf90f3741d2130e2628550394079c507f3d038487"
+}

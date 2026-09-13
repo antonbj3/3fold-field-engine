@@ -1,0 +1,289 @@
+{
+  "rows": [
+    {
+      "array": "sphere_corners",
+      "shape": [
+        1280,
+        3,
+        3
+      ],
+      "strides": [
+        36,
+        12,
+        4
+      ],
+      "c_contiguous": true,
+      "raw_pointer_mismatches": 0,
+      "contiguous_pointer_mismatches": 0,
+      "logical_hash": "b58f9041782570ee96ea0bd3be3d23dd3e9fa2689cd2fcc0b9025904e1bdea64",
+      "physical_hash": "b58f9041782570ee96ea0bd3be3d23dd3e9fa2689cd2fcc0b9025904e1bdea64",
+      "fixed_hash": "b58f9041782570ee96ea0bd3be3d23dd3e9fa2689cd2fcc0b9025904e1bdea64"
+    },
+    {
+      "array": "sphere_0_rays",
+      "shape": [
+        50653,
+        3
+      ],
+      "strides": [
+        4,
+        202612
+      ],
+      "c_contiguous": false,
+      "raw_pointer_mismatches": 150588,
+      "contiguous_pointer_mismatches": 0,
+      "logical_hash": "b6caeab8025565ebe01397e51c4cc4699294740fa4744419315db5cb58c3d916",
+      "physical_hash": "0d40031b93c0a944afd7a9b772123e80c1a67c409e21f0a9100a4410ba5bfab6",
+      "fixed_hash": "b6caeab8025565ebe01397e51c4cc4699294740fa4744419315db5cb58c3d916"
+    },
+    {
+      "array": "sphere_1_rays",
+      "shape": [
+        50653,
+        3
+      ],
+      "strides": [
+        4,
+        202612
+      ],
+      "c_contiguous": false,
+      "raw_pointer_mismatches": 150588,
+      "contiguous_pointer_mismatches": 0,
+      "logical_hash": "7a1df6ffc1043f1f5372b3dde36f7bb8a15d6fedde0628d658ac4a7c5d3e64a9",
+      "physical_hash": "5fcf722b71700e774f603102eb55d0ffc6ce2bcb67456e7d6258e3a5e6483127",
+      "fixed_hash": "7a1df6ffc1043f1f5372b3dde36f7bb8a15d6fedde0628d658ac4a7c5d3e64a9"
+    },
+    {
+      "array": "sphere_2_rays",
+      "shape": [
+        50653,
+        3
+      ],
+      "strides": [
+        4,
+        202612
+      ],
+      "c_contiguous": false,
+      "raw_pointer_mismatches": 150588,
+      "contiguous_pointer_mismatches": 0,
+      "logical_hash": "37c34aa573ce5d0de60ba5010f09346757b91f865ff35551d083c80e956fc47c",
+      "physical_hash": "c260f06b42475c47bc2260e2dbdfbb43419dc541c55bbe8f14549b0445b19ac0",
+      "fixed_hash": "37c34aa573ce5d0de60ba5010f09346757b91f865ff35551d083c80e956fc47c"
+    },
+    {
+      "array": "sphere_fine_corners",
+      "shape": [
+        5120,
+        3,
+        3
+      ],
+      "strides": [
+        36,
+        12,
+        4
+      ],
+      "c_contiguous": true,
+      "raw_pointer_mismatches": 0,
+      "contiguous_pointer_mismatches": 0,
+      "logical_hash": "3cb87778f935b4ba741dc1f4c72ea2937d5f0440a7c315c6e3a0767cfc2a5660",
+      "physical_hash": "3cb87778f935b4ba741dc1f4c72ea2937d5f0440a7c315c6e3a0767cfc2a5660",
+      "fixed_hash": "3cb87778f935b4ba741dc1f4c72ea2937d5f0440a7c315c6e3a0767cfc2a5660"
+    },
+    {
+      "array": "sphere_fine_0_rays",
+      "shape": [
+        50653,
+        3
+      ],
+      "strides": [
+        4,
+        202612
+      ],
+      "c_contiguous": false,
+      "raw_pointer_mismatches": 150588,
+      "contiguous_pointer_mismatches": 0,
+      "logical_hash": "b6caeab8025565ebe01397e51c4cc4699294740fa4744419315db5cb58c3d916",
+      "physical_hash": "0d40031b93c0a944afd7a9b772123e80c1a67c409e21f0a9100a4410ba5bfab6",
+      "fixed_hash": "b6caeab8025565ebe01397e51c4cc4699294740fa4744419315db5cb58c3d916"
+    },
+    {
+      "array": "sphere_fine_1_rays",
+      "shape": [
+        50653,
+        3
+      ],
+      "strides": [
+        4,
+        202612
+      ],
+      "c_contiguous": false,
+      "raw_pointer_mismatches": 150588,
+      "contiguous_pointer_mismatches": 0,
+      "logical_hash": "7a1df6ffc1043f1f5372b3dde36f7bb8a15d6fedde0628d658ac4a7c5d3e64a9",
+      "physical_hash": "5fcf722b71700e774f603102eb55d0ffc6ce2bcb67456e7d6258e3a5e6483127",
+      "fixed_hash": "7a1df6ffc1043f1f5372b3dde36f7bb8a15d6fedde0628d658ac4a7c5d3e64a9"
+    },
+    {
+      "array": "sphere_fine_2_rays",
+      "shape": [
+        50653,
+        3
+      ],
+      "strides": [
+        4,
+        202612
+      ],
+      "c_contiguous": false,
+      "raw_pointer_mismatches": 150588,
+      "contiguous_pointer_mismatches": 0,
+      "logical_hash": "37c34aa573ce5d0de60ba5010f09346757b91f865ff35551d083c80e956fc47c",
+      "physical_hash": "c260f06b42475c47bc2260e2dbdfbb43419dc541c55bbe8f14549b0445b19ac0",
+      "fixed_hash": "37c34aa573ce5d0de60ba5010f09346757b91f865ff35551d083c80e956fc47c"
+    },
+    {
+      "array": "sphere_overlap_corners",
+      "shape": [
+        2560,
+        3,
+        3
+      ],
+      "strides": [
+        36,
+        12,
+        4
+      ],
+      "c_contiguous": true,
+      "raw_pointer_mismatches": 0,
+      "contiguous_pointer_mismatches": 0,
+      "logical_hash": "7d244ab01855a893d86c4fc5fda190f6f90cfa066fbd1a9d76305fd02e476c2d",
+      "physical_hash": "7d244ab01855a893d86c4fc5fda190f6f90cfa066fbd1a9d76305fd02e476c2d",
+      "fixed_hash": "7d244ab01855a893d86c4fc5fda190f6f90cfa066fbd1a9d76305fd02e476c2d"
+    },
+    {
+      "array": "sphere_overlap_0_rays",
+      "shape": [
+        66690,
+        3
+      ],
+      "strides": [
+        4,
+        266760
+      ],
+      "c_contiguous": false,
+      "raw_pointer_mismatches": 197836,
+      "contiguous_pointer_mismatches": 0,
+      "logical_hash": "0dfa57cdeddef7f9ff7c6fbf76d546c762b86a912b912d2a5251158f2567fbb9",
+      "physical_hash": "b9adf39c503452b3d92efcf22d7cc9deb4b1f6a1b3607a2415d466e23b8db4ba",
+      "fixed_hash": "0dfa57cdeddef7f9ff7c6fbf76d546c762b86a912b912d2a5251158f2567fbb9"
+    },
+    {
+      "array": "sphere_overlap_1_rays",
+      "shape": [
+        66690,
+        3
+      ],
+      "strides": [
+        4,
+        266760
+      ],
+      "c_contiguous": false,
+      "raw_pointer_mismatches": 197836,
+      "contiguous_pointer_mismatches": 0,
+      "logical_hash": "863f8800c7201d6ab2cdd727932bb74dd0ed7fbd577b8b25c9de0c312987f56e",
+      "physical_hash": "7df52ca986e32b6f096cd320a6af6ec0efb8bca5d85f00075e51b012012cff8f",
+      "fixed_hash": "863f8800c7201d6ab2cdd727932bb74dd0ed7fbd577b8b25c9de0c312987f56e"
+    },
+    {
+      "array": "sphere_overlap_2_rays",
+      "shape": [
+        66690,
+        3
+      ],
+      "strides": [
+        4,
+        266760
+      ],
+      "c_contiguous": false,
+      "raw_pointer_mismatches": 197836,
+      "contiguous_pointer_mismatches": 0,
+      "logical_hash": "6f7cf3ac2eb2bf7e37fb438f241c8aa14567e1379769437ca8bfdea04f5ffcdf",
+      "physical_hash": "cb4fa3ab0c08e25c5e61e2cc179396c0badfdc15a18ed751e9dda91a62697e3c",
+      "fixed_hash": "6f7cf3ac2eb2bf7e37fb438f241c8aa14567e1379769437ca8bfdea04f5ffcdf"
+    },
+    {
+      "array": "subdivided_rotated_box_corners",
+      "shape": [
+        768,
+        3,
+        3
+      ],
+      "strides": [
+        36,
+        12,
+        4
+      ],
+      "c_contiguous": true,
+      "raw_pointer_mismatches": 0,
+      "contiguous_pointer_mismatches": 0,
+      "logical_hash": "77e89e4ed71679016663e38a71968e2c909a9f532fa4cb253d73e5f8d240be26",
+      "physical_hash": "77e89e4ed71679016663e38a71968e2c909a9f532fa4cb253d73e5f8d240be26",
+      "fixed_hash": "77e89e4ed71679016663e38a71968e2c909a9f532fa4cb253d73e5f8d240be26"
+    },
+    {
+      "array": "subdivided_rotated_box_0_rays",
+      "shape": [
+        53820,
+        3
+      ],
+      "strides": [
+        4,
+        215280
+      ],
+      "c_contiguous": false,
+      "raw_pointer_mismatches": 159414,
+      "contiguous_pointer_mismatches": 0,
+      "logical_hash": "c036127d722ff7e45ae611b75d4811f246b30cd583aad284ea83c14dc553b7b7",
+      "physical_hash": "29ddf68551b6c65862470e7edce9af829db743aaf0311051683c62140f1426fe",
+      "fixed_hash": "c036127d722ff7e45ae611b75d4811f246b30cd583aad284ea83c14dc553b7b7"
+    },
+    {
+      "array": "subdivided_rotated_box_1_rays",
+      "shape": [
+        53820,
+        3
+      ],
+      "strides": [
+        4,
+        215280
+      ],
+      "c_contiguous": false,
+      "raw_pointer_mismatches": 159414,
+      "contiguous_pointer_mismatches": 0,
+      "logical_hash": "0a9a23da80d41963fa2138cde5030974dbcb4b1b20c2ec7876d03571d9eb5a95",
+      "physical_hash": "8d95bc1c6a2bd4033711dbfe31b30cbd0268fdbb3fcf0f65840fcd330708d41c",
+      "fixed_hash": "0a9a23da80d41963fa2138cde5030974dbcb4b1b20c2ec7876d03571d9eb5a95"
+    },
+    {
+      "array": "subdivided_rotated_box_2_rays",
+      "shape": [
+        53820,
+        3
+      ],
+      "strides": [
+        4,
+        215280
+      ],
+      "c_contiguous": false,
+      "raw_pointer_mismatches": 159414,
+      "contiguous_pointer_mismatches": 0,
+      "logical_hash": "e4b3b74d3ee9ebd2990181ac6b067c811c04680ff72a0006299e90fbfb922102",
+      "physical_hash": "c685195a7892f8a1d7f1412bb8670dbaa57dd6aa2e0b2a7feac20c10b2cddeca",
+      "fixed_hash": "e4b3b74d3ee9ebd2990181ac6b067c811c04680ff72a0006299e90fbfb922102"
+    }
+  ],
+  "gates": {
+    "full_repeat": true,
+    "contiguous_exact": true
+  },
+  "timing_measured": false
+}

@@ -1,0 +1,78 @@
+{
+ "schema": "parts_manifest_v1",
+ "station": "polering",
+ "parts": [
+  {
+   "part": "stativ",
+   "subassembly": "ram",
+   "bbox": [
+    0.0,
+    0.0,
+    0.0,
+    2400.0,
+    1900.0,
+    315.0
+   ]
+  },
+  {
+   "part": "hus",
+   "subassembly": "ram",
+   "bbox": [
+    0.0,
+    0.0,
+    315.0,
+    2400.0,
+    1900.0,
+    2100.0
+   ]
+  },
+  {
+   "part": "hmi_pendang",
+   "subassembly": "styr",
+   "bbox": [
+    840.0,
+    -320.0,
+    900.0,
+    1560.0,
+    0.0,
+    1700.0
+   ]
+  },
+  {
+   "part": "hmi_skarm",
+   "subassembly": "styr",
+   "bbox": [
+    960.0,
+    -340.0,
+    1150.0,
+    1440.0,
+    -300.0,
+    1500.0
+   ]
+  },
+  {
+   "part": "elskap_huvud",
+   "subassembly": "el",
+   "bbox": [
+    2400.0,
+    570.0,
+    200.0,
+    2800.0,
+    1330.0,
+    2000.0
+   ]
+  },
+  {
+   "part": "servicelucka_bak",
+   "subassembly": "ram",
+   "bbox": [
+    720.0,
+    1900.0,
+    400.0,
+    1680.0,
+    1960.0,
+    1600.0
+   ]
+  }
+ ]
+}

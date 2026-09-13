@@ -1,0 +1,612 @@
+{
+ "id": "virt_factory_model_v0",
+ "cell": "VIRT-FACTORY-MODEL-V0",
+ "thread": "spatial virtual factory: 12 process stations + 6 workshop stations as geometry",
+ "geometry_inventory": [
+  {
+   "id": "clean_enclosure",
+   "footprint_m2": 9.0,
+   "w_m": 3.0,
+   "h_m": 3.0,
+   "height_mm": 2400,
+   "zones": [
+    "particle_sensitive_hub"
+   ],
+   "source_flag": "DECLARED: mini-environment tent + glovebox bench class"
+  },
+  {
+   "id": "metrology_bench",
+   "footprint_m2": 1.8,
+   "w_m": 1.5,
+   "h_m": 1.2,
+   "height_mm": 2000,
+   "zones": [
+    "vibration_sensitive"
+   ],
+   "source_flag": "DECLARED: XY-stage + shielded enclosure bench class"
+  },
+  {
+   "id": "tube_furnace",
+   "footprint_m2": 0.96,
+   "w_m": 1.2,
+   "h_m": 0.8,
+   "height_mm": 1800,
+   "zones": [
+    "heat_source",
+    "particle_adjacent"
+   ],
+   "source_flag": "DECLARED: bench tube-furnace class around an 80 mm tube inner diameter"
+  },
+  {
+   "id": "surface_treat_chamber",
+   "footprint_m2": 1.8,
+   "w_m": 1.5,
+   "h_m": 1.2,
+   "height_mm": 2000,
+   "zones": [
+    "vibration_source",
+    "particle_adjacent"
+   ],
+   "source_flag": "DECLARED: process chamber + roughing-pump cart bench class"
+  },
+  {
+   "id": "coating_chamber",
+   "footprint_m2": 2.16,
+   "w_m": 1.8,
+   "h_m": 1.2,
+   "height_mm": 2000,
+   "zones": [
+    "vibration_source",
+    "particle_adjacent"
+   ],
+   "source_flag": "DECLARED: magnetron coating chamber + turbo-pump cart class, 25 mm uniformity field"
+  },
+  {
+   "id": "wet_bench",
+   "footprint_m2": 1.8,
+   "w_m": 2.0,
+   "h_m": 0.9,
+   "height_mm": 2200,
+   "zones": [
+    "wet_chem_ventilation"
+   ],
+   "source_flag": "DECLARED: fume hood + solvent line rack class"
+  },
+  {
+   "id": "precision_stage",
+   "footprint_m2": 0.6,
+   "w_m": 1.0,
+   "h_m": 0.6,
+   "height_mm": 1200,
+   "zones": [
+    "vibration_sensitive"
+   ],
+   "source_flag": "DECLARED: flexure-stage bench class, 5 nm repeatability class"
+  },
+  {
+   "id": "planarization_station",
+   "footprint_m2": 2.25,
+   "w_m": 1.5,
+   "h_m": 1.5,
+   "height_mm": 1800,
+   "zones": [
+    "vibration_source"
+   ],
+   "source_flag": "DECLARED: planarising polisher + slurry-delivery cart class"
+  },
+  {
+   "id": "roller_station",
+   "footprint_m2": 1.2,
+   "w_m": 1.5,
+   "h_m": 0.8,
+   "height_mm": 1600,
+   "zones": [
+    "particle_adjacent",
+    "vibration_sensitive"
+   ],
+   "source_flag": "DECLARED: drum roller + linear-stage bench class"
+  },
+  {
+   "id": "instrument_rack",
+   "footprint_m2": 0.8,
+   "w_m": 1.0,
+   "h_m": 0.8,
+   "height_mm": 1800,
+   "zones": [
+    "particle_adjacent"
+   ],
+   "source_flag": "DECLARED: automated instrument rack class"
+  },
+  {
+   "id": "rolling_mill",
+   "footprint_m2": 2.2,
+   "w_m": 2.2,
+   "h_m": 1.0,
+   "height_mm": 1400,
+   "zones": [
+    "vibration_source"
+   ],
+   "source_flag": "DECLARED: bench rolling-mill stand class, 124 mm band width"
+  },
+  {
+   "id": "deposition_reactor",
+   "footprint_m2": 1.0,
+   "w_m": 1.0,
+   "h_m": 1.0,
+   "height_mm": 1800,
+   "zones": [
+    "particle_adjacent"
+   ],
+   "source_flag": "DECLARED: bench reactor class"
+  },
+  {
+   "id": "cnc_cut",
+   "footprint_m2": 12.0,
+   "w_m": 4.0,
+   "h_m": 3.0,
+   "height_mm": 3000,
+   "zones": [
+    "vibration_source"
+   ],
+   "source_flag": "DECLARED: large-format CNC mill class"
+  },
+  {
+   "id": "pwht_furnace_workshop",
+   "footprint_m2": 5.0,
+   "w_m": 2.5,
+   "h_m": 2.0,
+   "height_mm": 2500,
+   "zones": [
+    "heat_source"
+   ],
+   "source_flag": "DECLARED: 600-675 C post-weld heat-treatment chamber furnace, workshop scale"
+  },
+  {
+   "id": "weld_arc",
+   "footprint_m2": 9.0,
+   "w_m": 3.0,
+   "h_m": 3.0,
+   "height_mm": 2800,
+   "zones": [
+    "general"
+   ],
+   "source_flag": "DECLARED: arc-welding bay with screens"
+  },
+  {
+   "id": "cnc_rig",
+   "footprint_m2": 6.0,
+   "w_m": 3.0,
+   "h_m": 2.0,
+   "height_mm": 2600,
+   "zones": [
+    "vibration_source"
+   ],
+   "source_flag": "DECLARED: rig-machining CNC class"
+  },
+  {
+   "id": "rig_qc",
+   "footprint_m2": 5.0,
+   "w_m": 2.5,
+   "h_m": 2.0,
+   "height_mm": 2000,
+   "zones": [
+    "vibration_sensitive"
+   ],
+   "source_flag": "DECLARED: inspection and QC bench with a measuring arm"
+  },
+  {
+   "id": "bench_el",
+   "footprint_m2": 2.0,
+   "w_m": 2.0,
+   "h_m": 1.0,
+   "height_mm": 2000,
+   "zones": [
+    "general"
+   ],
+   "source_flag": "DECLARED: electrical assembly bench"
+  }
+ ],
+ "zone_requirements": {
+  "particle_sensitive_stations": [
+   "clean_enclosure",
+   "tube_furnace",
+   "surface_treat_chamber",
+   "coating_chamber",
+   "roller_station",
+   "instrument_rack",
+   "deposition_reactor"
+  ],
+  "vibration_source_stations": [
+   "surface_treat_chamber",
+   "coating_chamber",
+   "planarization_station",
+   "rolling_mill",
+   "cnc_cut",
+   "cnc_rig"
+  ],
+  "vibration_sensitive_stations": [
+   "metrology_bench",
+   "precision_stage",
+   "roller_station",
+   "rig_qc"
+  ],
+  "vibration_model": "1/r^2 amplitude attenuation class (declared)",
+  "vib_A0_um_at_1m_DECLARED": 10.0,
+  "vib_budget_um_DECLARED": 1.0,
+  "vib_budget_derivation": "FLEXURE_REPEAT_NM(5.0, measured) * FLEXURE_MARGIN_X(200.0, measured anchor) / 1000",
+  "r_min_m": 3.1623
+ },
+ "flow_edges": [
+  {
+   "from": "metrology_bench",
+   "to": "precision_stage",
+   "weight": 3,
+   "kind": "DECLARED",
+   "source": "the flexure stage sits on top of the metrology stage"
+  },
+  {
+   "from": "surface_treat_chamber",
+   "to": "coating_chamber",
+   "weight": 4,
+   "kind": "DECLARED",
+   "source": "shared RF generator and matching network, retuned between the two"
+  },
+  {
+   "from": "clean_enclosure",
+   "to": "tube_furnace",
+   "weight": 1,
+   "kind": "DECLARED",
+   "source": "furnace load/unload reuses the closed transport-box architecture"
+  },
+  {
+   "from": "clean_enclosure",
+   "to": "roller_station",
+   "weight": 1,
+   "kind": "DECLARED",
+   "source": "the roller assembly step inherits the enclosure's particle budget"
+  },
+  {
+   "from": "clean_enclosure",
+   "to": "instrument_rack",
+   "weight": 2,
+   "kind": "DECLARED",
+   "source": "bidirectional coupling between the enclosure and the instrument rack, weighted x2"
+  },
+  {
+   "from": "planarization_station",
+   "to": "roller_station",
+   "weight": 1,
+   "kind": "DECLARED",
+   "source": "planarisation step feeds the assembly step in the same demo chain"
+  },
+  {
+   "from": "coating_chamber",
+   "to": "roller_station",
+   "weight": 1,
+   "kind": "DECLARED",
+   "source": "the coated counter-electrode feeds the same assembly pipeline"
+  }
+ ],
+ "lab_envelope_m": {
+  "w": 30.0,
+  "h": 20.0
+ },
+ "layout_optimization": {
+  "method": "simulated annealing, deterministic seed=42, n_iter=20000",
+  "naive_layout_objective": 3261.3,
+  "optimized_layout_objective": 43.417,
+  "improvement_pct": 98.669,
+  "naive_vibration_violations": [
+   [
+    "planarization_station",
+    "metrology_bench",
+    1.85
+   ],
+   [
+    "planarization_station",
+    "precision_stage",
+    1.6
+   ],
+   [
+    "rolling_mill",
+    "roller_station",
+    2.2
+   ]
+  ],
+  "optimized_vibration_violations": [],
+  "zone_conflict_falsification": {
+   "naive_creates_conflict": true,
+   "optimized_resolves_conflict": true,
+   "example_pair": [
+    "planarization_station",
+    "metrology_bench",
+    1.85
+   ],
+   "r_min_m": 3.1623
+  }
+ },
+ "flow_round_trip_build": {
+  "per_part": {
+   "base_frame": {
+    "route": [
+     "cnc_cut",
+     "pwht_furnace_workshop",
+     "weld_arc",
+     "cnc_rig",
+     "rig_qc"
+    ],
+    "distance_m": 77.85,
+    "n_hops": 4
+   },
+   "clamp_frame_fixture": {
+    "route": [
+     "cnc_cut",
+     "pwht_furnace_workshop",
+     "weld_arc",
+     "cnc_rig",
+     "rig_qc"
+    ],
+    "distance_m": 77.85,
+    "n_hops": 4
+   },
+   "safety_guarding": {
+    "route": [
+     "cnc_cut",
+     "pwht_furnace_workshop",
+     "weld_arc",
+     "cnc_rig",
+     "rig_qc"
+    ],
+    "distance_m": 77.85,
+    "n_hops": 4
+   },
+   "rail_track_a": {
+    "route": [
+     "cnc_cut",
+     "pwht_furnace_workshop",
+     "weld_arc",
+     "cnc_rig",
+     "rig_qc"
+    ],
+    "distance_m": 77.85,
+    "n_hops": 4
+   },
+   "rail_track_b": {
+    "route": [
+     "cnc_cut",
+     "pwht_furnace_workshop",
+     "weld_arc",
+     "cnc_rig",
+     "rig_qc"
+    ],
+    "distance_m": 77.85,
+    "n_hops": 4
+   },
+   "rail_carriage_a": {
+    "route": [
+     "cnc_cut",
+     "pwht_furnace_workshop",
+     "weld_arc",
+     "cnc_rig",
+     "rig_qc"
+    ],
+    "distance_m": 77.85,
+    "n_hops": 4
+   },
+   "rail_carriage_b": {
+    "route": [
+     "cnc_cut",
+     "pwht_furnace_workshop",
+     "weld_arc",
+     "cnc_rig",
+     "rig_qc"
+    ],
+    "distance_m": 77.85,
+    "n_hops": 4
+   },
+   "forming_tool_head": {
+    "route": [
+     "cnc_cut",
+     "pwht_furnace_workshop",
+     "weld_arc",
+     "cnc_rig",
+     "rig_qc"
+    ],
+    "distance_m": 77.85,
+    "n_hops": 4
+   },
+   "supporting_tool_head": {
+    "route": [
+     "cnc_cut",
+     "pwht_furnace_workshop",
+     "weld_arc",
+     "cnc_rig",
+     "rig_qc"
+    ],
+    "distance_m": 77.85,
+    "n_hops": 4
+   },
+   "controller_cabinet_a": {
+    "route": [
+     "cnc_cut",
+     "bench_el",
+     "cnc_rig",
+     "rig_qc"
+    ],
+    "distance_m": 47.259,
+    "n_hops": 3
+   },
+   "controller_cabinet_b": {
+    "route": [
+     "cnc_cut",
+     "bench_el",
+     "cnc_rig",
+     "rig_qc"
+    ],
+    "distance_m": 47.259,
+    "n_hops": 3
+   },
+   "cable_energy_chain": {
+    "route": [
+     "cnc_cut",
+     "bench_el",
+     "cnc_rig",
+     "rig_qc"
+    ],
+    "distance_m": 47.259,
+    "n_hops": 3
+   }
+  },
+  "total_transport_distance_m": 842.424,
+  "total_transport_hr": 0.23401,
+  "T1_SEQ_hr_anchor": 133.839,
+  "T1_SEQ_days_anchor": 16.73,
+  "transport_fraction_of_T1_SEQ": 0.00175,
+  "transport_pct_of_T1_SEQ": 0.175,
+  "bottleneck_part": "rail_track_b",
+  "bottleneck_route_distance_m": 77.85,
+  "bottleneck_transport_hr": 0.02162,
+  "verdict": "transport-negligible assumption in the 16.73d/133.839h critical path HOLDS in this geometry: total 12-part transport is 0.175% of T1_SEQ"
+ },
+ "most_constructed_dimension": {
+  "candidates_with_zero_measured_anchor_in_footprint": [
+   "clean_enclosure",
+   "metrology_bench",
+   "surface_treat_chamber",
+   "wet_bench",
+   "planarization_station",
+   "roller_station",
+   "instrument_rack",
+   "deposition_reactor",
+   "cnc_cut",
+   "pwht_furnace_workshop",
+   "weld_arc",
+   "cnc_rig",
+   "rig_qc",
+   "bench_el"
+  ],
+  "highest_layout_risk_pick": "cnc_cut",
+  "reasoning": "cnc_cut (4.0m x 3.0m, workshop) carries the LARGEST footprint of any unanchored station (12.0 m2) with zero measured dimension anywhere in this repo (ANCHOR_GRAPH names only the process CLASS 'CNC-fras stor-format', no housing number) AND sits in the vibration_source zone that gates the R_MIN_M=3.162 separation constraint -- a footprint error here has the largest lever on both the SA objective (largest area to place) and the vibration-conflict falsification below."
+ },
+ "declared_inputs": [
+  "the hall rectangle is 30x20 m, declared, not derived from a building model.",
+  "every station footprint, zone tag and flow edge is declared in this module.",
+  "the workshop process-station order is a declared standard shop sequence.",
+  "the vibration source amplitude A0 is declared -- the single most constructed number."
+ ],
+ "dom": {
+  "geometry_inventory_n_stations": 18,
+  "geometry_inventory_n_constructed_footprints": 18,
+  "layout_improvement_pct": 98.669,
+  "transport_pct_of_T1_SEQ": 0.175,
+  "zone_conflict_falsified": true,
+  "naive_vibration_violation_count": 3,
+  "optimized_vibration_violation_count": 0
+ },
+ "ATOMS": {
+  "report": "virt_factory_model_v0",
+  "claims": [
+   {
+    "id": "geometry_inventory",
+    "text": "18-station geometry inventory (12 build-queue + 6 workshop), footprint/zone per station, source-flagged.",
+    "load_bearing": true
+   },
+   {
+    "id": "layout_improvement",
+    "text": "SA-optimized layout objective beats naive row layout by a computed %.",
+    "load_bearing": true
+   },
+   {
+    "id": "zone_conflict",
+    "text": "naive row layout creates a vibration-source/vibration-sensitive conflict that the optimized layout resolves.",
+    "load_bearing": true
+   },
+   {
+    "id": "transport_roundtrip",
+    "text": "machine #1's 12-part BOM played through the workshop layout quantifies transport as a % of the 16.73d/133.839h critical path.",
+    "load_bearing": true
+   }
+  ],
+  "atoms": [
+   {
+    "id": "report_exists",
+    "type": "artifact-exists",
+    "path": "reports/probes/virt_factory_model_v0.json"
+   },
+   {
+    "id": "script_exists",
+    "type": "artifact-exists",
+    "path": "scripts/physics_exp/virt_factory_model_v0.py"
+   },
+   {
+    "id": "layout_json_exists",
+    "type": "artifact-exists",
+    "path": "data/VIRT_FACTORY_LAYOUT_V0.json"
+   },
+   {
+    "id": "geometry_inventory_value",
+    "claim": "geometry_inventory",
+    "type": "value-in-artifact",
+    "artifact": "reports/probes/virt_factory_model_v0.json",
+    "key": "dom.geometry_inventory_n_stations",
+    "expected": 18
+   },
+   {
+    "id": "layout_improvement_value",
+    "claim": "layout_improvement",
+    "type": "value-in-artifact",
+    "artifact": "reports/probes/virt_factory_model_v0.json",
+    "key": "dom.layout_improvement_pct",
+    "expected": 98.669,
+    "tol": 0.5
+   },
+   {
+    "id": "layout_improvement_positive",
+    "claim": "layout_improvement",
+    "type": "inequality",
+    "lhs": {
+     "artifact": "reports/probes/virt_factory_model_v0.json",
+     "key": "dom.layout_improvement_pct"
+    },
+    "op": ">",
+    "rhs": 0
+   },
+   {
+    "id": "zone_conflict_value",
+    "claim": "zone_conflict",
+    "type": "value-in-artifact",
+    "artifact": "reports/probes/virt_factory_model_v0.json",
+    "key": "dom.zone_conflict_falsified",
+    "expected": true
+   },
+   {
+    "id": "zone_conflict_naive_violation_count",
+    "claim": "zone_conflict",
+    "type": "inequality",
+    "lhs": {
+     "artifact": "reports/probes/virt_factory_model_v0.json",
+     "key": "dom.naive_vibration_violation_count"
+    },
+    "op": ">",
+    "rhs": 0
+   },
+   {
+    "id": "zone_conflict_optimized_violation_count",
+    "claim": "zone_conflict",
+    "type": "value-in-artifact",
+    "artifact": "reports/probes/virt_factory_model_v0.json",
+    "key": "dom.optimized_vibration_violation_count",
+    "expected": 0
+   },
+   {
+    "id": "transport_pct_value",
+    "claim": "transport_roundtrip",
+    "type": "value-in-artifact",
+    "artifact": "reports/probes/virt_factory_model_v0.json",
+    "key": "dom.transport_pct_of_T1_SEQ",
+    "expected": 0.175,
+    "tol": 0.01
+   }
+  ]
+ }
+}

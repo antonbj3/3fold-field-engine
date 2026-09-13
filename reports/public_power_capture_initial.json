@@ -1,0 +1,6 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "stage": "public harness output routing",
+  "error": "FileNotFoundError: fresh numerical_artifacts output directory absent",
+  "scope": "First public source-copy harness attempt failed at saving the final density. No successful artifact claim inferred. Retry creates the explicitly selected output directory before execution."
+}

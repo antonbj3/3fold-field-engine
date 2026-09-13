@@ -1,0 +1,208 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "brep_reference": true,
+    "coverage": true,
+    "exact": true,
+    "repeats": true,
+    "frozen_fixture": true,
+    "tile_controls": true,
+    "invalid_controls": true,
+    "speedup_1_25": true
+  },
+  "rows": [
+    {
+      "brep_volume": 960.0000000000001,
+      "brep_valid": true,
+      "curved": false,
+      "pitch": 0.5,
+      "leg": 0,
+      "times_ms": {
+        "python": 4.360474,
+        "native": 1.828415,
+        "brep": 28.500628
+      },
+      "speedup": 2.384838234208317,
+      "exact": true,
+      "hashes": [
+        "3be0f4342dcaf8be51eeb3617d1626a3d3920f8194f130c334befb65e748cefd",
+        "5b16e02cc06e59d35c627f00d9a53d3a1f75fd9dd31c51a2e21ed221edd40932",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    },
+    {
+      "brep_volume": 960.0000000000001,
+      "brep_valid": true,
+      "curved": false,
+      "pitch": 0.5,
+      "leg": 1,
+      "times_ms": {
+        "brep": 28.511812,
+        "native": 1.868663,
+        "python": 3.948842
+      },
+      "speedup": 2.1131910890299643,
+      "exact": true,
+      "hashes": [
+        "3be0f4342dcaf8be51eeb3617d1626a3d3920f8194f130c334befb65e748cefd",
+        "5b16e02cc06e59d35c627f00d9a53d3a1f75fd9dd31c51a2e21ed221edd40932",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    },
+    {
+      "brep_volume": 960.0000000000001,
+      "brep_valid": true,
+      "curved": false,
+      "pitch": 0.25,
+      "leg": 0,
+      "times_ms": {
+        "python": 24.160356999999998,
+        "native": 12.709363999999999,
+        "brep": 26.909145
+      },
+      "speedup": 1.9009886726039162,
+      "exact": true,
+      "hashes": [
+        "491aa6105e17681292235dc64718f236089e8f5a9b8f60ff2bbd03060af49c7c",
+        "3b5e9ffb9a79d3626b027f107cd7762224aa24b712d184959dacac8316a22216",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    },
+    {
+      "brep_volume": 960.0000000000001,
+      "brep_valid": true,
+      "curved": false,
+      "pitch": 0.25,
+      "leg": 1,
+      "times_ms": {
+        "brep": 26.848916,
+        "native": 12.653787999999999,
+        "python": 24.07835
+      },
+      "speedup": 1.9028570733127506,
+      "exact": true,
+      "hashes": [
+        "491aa6105e17681292235dc64718f236089e8f5a9b8f60ff2bbd03060af49c7c",
+        "3b5e9ffb9a79d3626b027f107cd7762224aa24b712d184959dacac8316a22216",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    },
+    {
+      "brep_volume": 1233.6047889592164,
+      "brep_valid": true,
+      "curved": true,
+      "pitch": 0.5,
+      "leg": 0,
+      "times_ms": {
+        "python": 2.665609,
+        "native": 1.127413,
+        "brep": 8.251795999999999
+      },
+      "speedup": 2.364358935013167,
+      "exact": true,
+      "hashes": [
+        "238a0882ddbf868bd7e495cf48acf5c33e99b627d2a698f05ff8f4d1e0256b6e",
+        "660c87e5debb9552b63470c063591929ad4416cb8daa70018d1472617283c01e",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    },
+    {
+      "brep_volume": 1233.6047889592164,
+      "brep_valid": true,
+      "curved": true,
+      "pitch": 0.5,
+      "leg": 1,
+      "times_ms": {
+        "brep": 8.021899,
+        "native": 1.285572,
+        "python": 2.432431
+      },
+      "speedup": 1.8921001701966127,
+      "exact": true,
+      "hashes": [
+        "238a0882ddbf868bd7e495cf48acf5c33e99b627d2a698f05ff8f4d1e0256b6e",
+        "660c87e5debb9552b63470c063591929ad4416cb8daa70018d1472617283c01e",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    },
+    {
+      "brep_volume": 1233.6047889592164,
+      "brep_valid": true,
+      "curved": true,
+      "pitch": 0.25,
+      "leg": 0,
+      "times_ms": {
+        "python": 14.680997999999999,
+        "native": 7.849663,
+        "brep": 8.45862
+      },
+      "speedup": 1.8702711186454755,
+      "exact": true,
+      "hashes": [
+        "5cfb397dbd00418b1bee7d664ae1479ee0cb717df80d2bdfd259aec0bf40d143",
+        "e3792f302f8ef0c4093de1f8eeadba796791b63d415a46694ac38f050a0f6bca",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    },
+    {
+      "brep_volume": 1233.6047889592164,
+      "brep_valid": true,
+      "curved": true,
+      "pitch": 0.25,
+      "leg": 1,
+      "times_ms": {
+        "brep": 8.256129999999999,
+        "native": 7.306832,
+        "python": 14.026748999999999
+      },
+      "speedup": 1.9196758595243464,
+      "exact": true,
+      "hashes": [
+        "5cfb397dbd00418b1bee7d664ae1479ee0cb717df80d2bdfd259aec0bf40d143",
+        "e3792f302f8ef0c4093de1f8eeadba796791b63d415a46694ac38f050a0f6bca",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    }
+  ],
+  "controls": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "invalid": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "source_sha256": "89c5f6090e2f83989874ecd66f38d6894bf322ead261af288547fec2d59ffe9d",
+  "batch_source_sha256": "29072f3dcf62415c6712e6e0c12966c9d39ac1eb18b59292a8bfc13f9c8ff04c",
+  "pack_source_sha256": "12e7f82368df77354a12f8059f0312fb2840003f6d9706675d2f1308aeff4895",
+  "scope": "python timing key means previous Python-orchestrated native reads/pack; native means one C++ tile batch and native pack. Ordered arithmetic checked against NumPy including equal signed zeros and subnormals. B-rep booleans use prepared primitives. Eight reversed-order comparisons, no compilation/preparation/extraction in operation timing. Ordinary concurrent CPU load. Full saved field equality transfers prior fixture accuracy only."
+}

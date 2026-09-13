@@ -1,0 +1,172 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "gates": {
+    "coverage": true,
+    "exact": true,
+    "repeats": true,
+    "frozen_fixture": true,
+    "tile_controls": true,
+    "invalid_controls": true,
+    "speedup_1_25": false
+  },
+  "rows": [
+    {
+      "curved": false,
+      "pitch": 0.5,
+      "leg": 0,
+      "times_ms": {
+        "python": 27.239824,
+        "native": 12.018588999999999
+      },
+      "speedup": 2.266474375652583,
+      "exact": true,
+      "hashes": [
+        "3be0f4342dcaf8be51eeb3617d1626a3d3920f8194f130c334befb65e748cefd",
+        "5b16e02cc06e59d35c627f00d9a53d3a1f75fd9dd31c51a2e21ed221edd40932",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    },
+    {
+      "curved": false,
+      "pitch": 0.5,
+      "leg": 1,
+      "times_ms": {
+        "native": 12.002158999999999,
+        "python": 27.254534999999997
+      },
+      "speedup": 2.270802694748503,
+      "exact": true,
+      "hashes": [
+        "3be0f4342dcaf8be51eeb3617d1626a3d3920f8194f130c334befb65e748cefd",
+        "5b16e02cc06e59d35c627f00d9a53d3a1f75fd9dd31c51a2e21ed221edd40932",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    },
+    {
+      "curved": false,
+      "pitch": 0.25,
+      "leg": 0,
+      "times_ms": {
+        "python": 143.399341,
+        "native": 69.656151
+      },
+      "speedup": 2.058674488057774,
+      "exact": true,
+      "hashes": [
+        "491aa6105e17681292235dc64718f236089e8f5a9b8f60ff2bbd03060af49c7c",
+        "3b5e9ffb9a79d3626b027f107cd7762224aa24b712d184959dacac8316a22216",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    },
+    {
+      "curved": false,
+      "pitch": 0.25,
+      "leg": 1,
+      "times_ms": {
+        "native": 69.507812,
+        "python": 142.91485799999998
+      },
+      "speedup": 2.056097780778943,
+      "exact": true,
+      "hashes": [
+        "491aa6105e17681292235dc64718f236089e8f5a9b8f60ff2bbd03060af49c7c",
+        "3b5e9ffb9a79d3626b027f107cd7762224aa24b712d184959dacac8316a22216",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    },
+    {
+      "curved": true,
+      "pitch": 0.5,
+      "leg": 0,
+      "times_ms": {
+        "python": 17.215956,
+        "native": 10.957542
+      },
+      "speedup": 1.571151267318893,
+      "exact": true,
+      "hashes": [
+        "238a0882ddbf868bd7e495cf48acf5c33e99b627d2a698f05ff8f4d1e0256b6e",
+        "660c87e5debb9552b63470c063591929ad4416cb8daa70018d1472617283c01e",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    },
+    {
+      "curved": true,
+      "pitch": 0.5,
+      "leg": 1,
+      "times_ms": {
+        "native": 10.988531,
+        "python": 16.951667999999998
+      },
+      "speedup": 1.542669170246687,
+      "exact": true,
+      "hashes": [
+        "238a0882ddbf868bd7e495cf48acf5c33e99b627d2a698f05ff8f4d1e0256b6e",
+        "660c87e5debb9552b63470c063591929ad4416cb8daa70018d1472617283c01e",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    },
+    {
+      "curved": true,
+      "pitch": 0.25,
+      "leg": 0,
+      "times_ms": {
+        "python": 97.123463,
+        "native": 78.224554
+      },
+      "speedup": 1.241598168779588,
+      "exact": true,
+      "hashes": [
+        "5cfb397dbd00418b1bee7d664ae1479ee0cb717df80d2bdfd259aec0bf40d143",
+        "e3792f302f8ef0c4093de1f8eeadba796791b63d415a46694ac38f050a0f6bca",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    },
+    {
+      "curved": true,
+      "pitch": 0.25,
+      "leg": 1,
+      "times_ms": {
+        "native": 77.628895,
+        "python": 97.17289699999999
+      },
+      "speedup": 1.2517619502377304,
+      "exact": true,
+      "hashes": [
+        "5cfb397dbd00418b1bee7d664ae1479ee0cb717df80d2bdfd259aec0bf40d143",
+        "e3792f302f8ef0c4093de1f8eeadba796791b63d415a46694ac38f050a0f6bca",
+        "45c9e86e904970040986c7f254bbd9585436cafc0535dfa82ed4d488b3be3491"
+      ]
+    }
+  ],
+  "controls": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "invalid": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "source_sha256": "89c5f6090e2f83989874ecd66f38d6894bf322ead261af288547fec2d59ffe9d",
+  "scope": "Native CPU bit copies only, unchanged NumPy CSG and final Python packing. Eight reversed-order observations with prepared inputs, no compilation/preparation/extraction in timing. Ordinary concurrent CPU load. Full saved field equality transfers prior fixture accuracy only."
+}

@@ -1,0 +1,24 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "gates": {
+    "fixture_integrity": true,
+    "source_integrity": true,
+    "input_preserved": true,
+    "known_result": true,
+    "reference_exact": false
+  },
+  "differing_values": 183,
+  "max_abs_difference": 2.7755575615628914e-17,
+  "matches_known_native": true,
+  "actual_sha256": "8959c6a14153dd05d2765a8b2f2f42e4bd7f70b5977be4755bb222ddf5e0f826",
+  "numpy_version": "2.5.3",
+  "numpy_core_sha256": "097e10f2baaf99d5a4655e549a6c76b139e3931681af39068f79c7b3abddadac",
+  "requested_numpy_disabled": "",
+  "enabled_dispatch": {
+    "X86_V3": true,
+    "X86_V4": true,
+    "AVX512_ICL": false,
+    "AVX512_SPR": false
+  },
+  "scope": "Complete captured second-iteration power operation only. Native mismatch remains a failed reference comparison; no optimizer, geometry or accuracy claim inferred."
+}

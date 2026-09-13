@@ -1,0 +1,17 @@
+{
+  "rows": [
+    {
+      "exit": 0,
+      "all_pass": true,
+      "report_sha256": "3577277a415faec299da86c9a5226cc9218dfc98446a4e02e417f9512fbbc5e1",
+      "captures": []
+    },
+    {
+      "exit": 0,
+      "all_pass": true,
+      "report_sha256": "3577277a415faec299da86c9a5226cc9218dfc98446a4e02e417f9512fbbc5e1",
+      "captures": []
+    }
+  ],
+  "exact": true
+}

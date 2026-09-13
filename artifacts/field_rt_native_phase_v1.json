@@ -1,0 +1,249 @@
+{
+  "rows": [
+    {
+      "native_phases_ms": {
+        "input_read": 0.297984,
+        "cuda_init": 212.904865,
+        "optix_context_stream": 61.191203,
+        "vertices_gas": 0.423183,
+        "module_pipeline": 12.537,
+        "sbt_ray_upload": 0.103852,
+        "launch_sync": 0.06342,
+        "readback_write": 0.168561,
+        "teardown": 7.225231
+      },
+      "case": "sphere",
+      "leg": 0,
+      "idle_utilization_percent": [
+        0
+      ],
+      "cpu_total_ms": 10.112514999491395,
+      "cpu_sign_ms": 1.8083660033880733,
+      "cpu_edt_ms": 7.171642002504086,
+      "native_process_ms": 383.0950740011758,
+      "native_adapter_total_ms": 394.99921500100754,
+      "total_ratio": 39.060433039740744,
+      "occupancy_mismatches": 0,
+      "distance_mismatches": 0,
+      "counts_sha256": "117ed2acba3a0050879d9d89ed2e82531cbe2ebef0f97a375f3addb8523a9310",
+      "distance_sha256": "bde4a361951b59382a35222e25c8cbb5e4ec8ae238816cb306fe9b04746adac9",
+      "cpu_distance_sha256": "bde4a361951b59382a35222e25c8cbb5e4ec8ae238816cb306fe9b04746adac9"
+    },
+    {
+      "native_phases_ms": {
+        "input_read": 0.558471,
+        "cuda_init": 138.087252,
+        "optix_context_stream": 61.568579,
+        "vertices_gas": 0.503462,
+        "module_pipeline": 12.501044,
+        "sbt_ray_upload": 0.094884,
+        "launch_sync": 0.055075,
+        "readback_write": 0.201682,
+        "teardown": 6.867611
+      },
+      "case": "sphere_fine",
+      "leg": 0,
+      "idle_utilization_percent": [
+        0
+      ],
+      "cpu_total_ms": 9.615520997613203,
+      "cpu_sign_ms": 2.163834000384668,
+      "cpu_edt_ms": 7.230268998682732,
+      "native_process_ms": 308.0922629997076,
+      "native_adapter_total_ms": 326.5114390014787,
+      "total_ratio": 33.956708022636164,
+      "occupancy_mismatches": 0,
+      "distance_mismatches": 0,
+      "counts_sha256": "8f642312ebbc86bd5ada6849edc771bad4f8129d60a48739e3fe609b6d24b057",
+      "distance_sha256": "ccea4d74c815ddc4a5cb1eb8aaecdf836ecca75e3cfb84dd4f25d4ef00c33f52",
+      "cpu_distance_sha256": "ccea4d74c815ddc4a5cb1eb8aaecdf836ecca75e3cfb84dd4f25d4ef00c33f52"
+    },
+    {
+      "native_phases_ms": {
+        "input_read": 0.618623,
+        "cuda_init": 142.337808,
+        "optix_context_stream": 61.343162,
+        "vertices_gas": 0.435121,
+        "module_pipeline": 12.474591,
+        "sbt_ray_upload": 0.109202,
+        "launch_sync": 0.056957,
+        "readback_write": 0.22093,
+        "teardown": 6.961007
+      },
+      "case": "sphere_overlap",
+      "leg": 0,
+      "idle_utilization_percent": [
+        0
+      ],
+      "cpu_total_ms": 12.080497999704676,
+      "cpu_sign_ms": 2.286576000187779,
+      "cpu_edt_ms": 8.259865000582067,
+      "native_process_ms": 312.54160499884165,
+      "native_adapter_total_ms": 334.1056909994222,
+      "total_ratio": 27.656615729549387,
+      "occupancy_mismatches": 0,
+      "distance_mismatches": 0,
+      "counts_sha256": "0cf88b6884e659911bc0b4edb5011c37e77de28b47f37d33175536ab5d2aae08",
+      "distance_sha256": "eeef967702964e101269d0deeb57a37acd7b14ac94c5a5cd942e4b81c8c80b2f",
+      "cpu_distance_sha256": "eeef967702964e101269d0deeb57a37acd7b14ac94c5a5cd942e4b81c8c80b2f"
+    },
+    {
+      "native_phases_ms": {
+        "input_read": 0.442607,
+        "cuda_init": 133.637243,
+        "optix_context_stream": 61.24556,
+        "vertices_gas": 0.362385,
+        "module_pipeline": 12.648881,
+        "sbt_ray_upload": 0.095079,
+        "launch_sync": 0.056006,
+        "readback_write": 0.20445,
+        "teardown": 7.12369
+      },
+      "case": "subdivided_rotated_box",
+      "leg": 0,
+      "idle_utilization_percent": [
+        0
+      ],
+      "cpu_total_ms": 8.603721998952096,
+      "cpu_sign_ms": 1.4799989985476714,
+      "cpu_edt_ms": 6.571869002073072,
+      "native_process_ms": 303.76440300096874,
+      "native_adapter_total_ms": 322.23000900194165,
+      "total_ratio": 37.452396653586455,
+      "occupancy_mismatches": 0,
+      "distance_mismatches": 0,
+      "counts_sha256": "4b966c84647fc93d158d77611302e8a184dff93b2cf9f04406ad2829639c0870",
+      "distance_sha256": "47d5b0aac91420f70a0399de587bd379c7cc179a855204208b323203327f2003",
+      "cpu_distance_sha256": "47d5b0aac91420f70a0399de587bd379c7cc179a855204208b323203327f2003"
+    },
+    {
+      "native_phases_ms": {
+        "input_read": 0.462397,
+        "cuda_init": 141.792358,
+        "optix_context_stream": 61.232607,
+        "vertices_gas": 0.392411,
+        "module_pipeline": 12.603261,
+        "sbt_ray_upload": 0.091445,
+        "launch_sync": 0.061041,
+        "readback_write": 0.193383,
+        "teardown": 7.007641
+      },
+      "case": "sphere",
+      "leg": 1,
+      "idle_utilization_percent": [
+        1
+      ],
+      "cpu_total_ms": 8.193084002414253,
+      "cpu_sign_ms": 1.5102690013009124,
+      "cpu_edt_ms": 6.189920997712761,
+      "native_process_ms": 311.86479199823225,
+      "native_adapter_total_ms": 331.6860950035334,
+      "total_ratio": 40.48366828727688,
+      "occupancy_mismatches": 0,
+      "distance_mismatches": 0,
+      "counts_sha256": "117ed2acba3a0050879d9d89ed2e82531cbe2ebef0f97a375f3addb8523a9310",
+      "distance_sha256": "bde4a361951b59382a35222e25c8cbb5e4ec8ae238816cb306fe9b04746adac9",
+      "cpu_distance_sha256": "bde4a361951b59382a35222e25c8cbb5e4ec8ae238816cb306fe9b04746adac9"
+    },
+    {
+      "native_phases_ms": {
+        "input_read": 0.548523,
+        "cuda_init": 150.199794,
+        "optix_context_stream": 61.623352,
+        "vertices_gas": 0.45973,
+        "module_pipeline": 12.579576,
+        "sbt_ray_upload": 0.096949,
+        "launch_sync": 0.054384,
+        "readback_write": 0.204743,
+        "teardown": 7.396214
+      },
+      "case": "sphere_fine",
+      "leg": 1,
+      "idle_utilization_percent": [
+        1
+      ],
+      "cpu_total_ms": 8.68932099911035,
+      "cpu_sign_ms": 1.9185979981557466,
+      "cpu_edt_ms": 6.189052000991069,
+      "native_process_ms": 320.94325100115384,
+      "native_adapter_total_ms": 338.6655130016152,
+      "total_ratio": 38.97491104728312,
+      "occupancy_mismatches": 0,
+      "distance_mismatches": 0,
+      "counts_sha256": "8f642312ebbc86bd5ada6849edc771bad4f8129d60a48739e3fe609b6d24b057",
+      "distance_sha256": "ccea4d74c815ddc4a5cb1eb8aaecdf836ecca75e3cfb84dd4f25d4ef00c33f52",
+      "cpu_distance_sha256": "ccea4d74c815ddc4a5cb1eb8aaecdf836ecca75e3cfb84dd4f25d4ef00c33f52"
+    },
+    {
+      "native_phases_ms": {
+        "input_read": 0.607829,
+        "cuda_init": 145.176364,
+        "optix_context_stream": 61.113501,
+        "vertices_gas": 0.430545,
+        "module_pipeline": 12.537434,
+        "sbt_ray_upload": 0.109543,
+        "launch_sync": 0.052439,
+        "readback_write": 0.21985,
+        "teardown": 7.141617
+      },
+      "case": "sphere_overlap",
+      "leg": 1,
+      "idle_utilization_percent": [
+        1
+      ],
+      "cpu_total_ms": 12.653314999624854,
+      "cpu_sign_ms": 2.3590099990542512,
+      "cpu_edt_ms": 9.479804000875447,
+      "native_process_ms": 315.3970390012546,
+      "native_adapter_total_ms": 333.5283199994592,
+      "total_ratio": 26.358967591445218,
+      "occupancy_mismatches": 0,
+      "distance_mismatches": 0,
+      "counts_sha256": "0cf88b6884e659911bc0b4edb5011c37e77de28b47f37d33175536ab5d2aae08",
+      "distance_sha256": "eeef967702964e101269d0deeb57a37acd7b14ac94c5a5cd942e4b81c8c80b2f",
+      "cpu_distance_sha256": "eeef967702964e101269d0deeb57a37acd7b14ac94c5a5cd942e4b81c8c80b2f"
+    },
+    {
+      "native_phases_ms": {
+        "input_read": 0.282731,
+        "cuda_init": 134.638669,
+        "optix_context_stream": 62.520345,
+        "vertices_gas": 0.3606,
+        "module_pipeline": 12.539321,
+        "sbt_ray_upload": 0.09532,
+        "launch_sync": 0.05616,
+        "readback_write": 0.20552,
+        "teardown": 6.93738
+      },
+      "case": "subdivided_rotated_box",
+      "leg": 1,
+      "idle_utilization_percent": [
+        0
+      ],
+      "cpu_total_ms": 8.5253700017347,
+      "cpu_sign_ms": 1.4628329990955535,
+      "cpu_edt_ms": 6.660230999841588,
+      "native_process_ms": 305.66684899895336,
+      "native_adapter_total_ms": 322.7406250007334,
+      "total_ratio": 37.856494783811584,
+      "occupancy_mismatches": 0,
+      "distance_mismatches": 0,
+      "counts_sha256": "4b966c84647fc93d158d77611302e8a184dff93b2cf9f04406ad2829639c0870",
+      "distance_sha256": "47d5b0aac91420f70a0399de587bd379c7cc179a855204208b323203327f2003",
+      "cpu_distance_sha256": "47d5b0aac91420f70a0399de587bd379c7cc179a855204208b323203327f2003"
+    }
+  ],
+  "gates": {
+    "phases_finite_nonnegative": true,
+    "full_repeat": true,
+    "exact_occupancy": true,
+    "exact_distance": true,
+    "native_total_faster_both_legs": false,
+    "no_observed_fault": true,
+    "idle_prechecks_passed": true
+  },
+  "cache_policy": "Existing compiler cache; no warmup or cache flush. Each native call starts a new process.",
+  "timing_repeat_identity_claim": false,
+  "binary_sha256": "f150f2f49f4f9a4066517c0c385369fa41fe6cd83e76efdcf8acdc25365531ea",
+  "ptx_sha256": "e49cb5ab6eb7b09d8ad9cc5265a06f82b8026ca5e6b4f9768235e8703b9f554d"
+}

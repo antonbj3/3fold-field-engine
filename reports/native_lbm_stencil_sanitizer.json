@@ -1,0 +1,21 @@
+{
+  "exit": 0,
+  "controls": 14,
+  "sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "compiler_flags": [
+    "-O1",
+    "-g",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer"
+  ],
+  "source_sha256": {
+    "src/field_engine/lbm_collision_native_v1/moments.hpp": "a17a19593a8f2f49ac2758383a51d2f31e47d69ff906736222800e26f27fe898",
+    "tests/native_lbm_moments_sanitizer.cpp": "2e0c70e48664d36cb94f7fb24b7d7e2bbc7710f9d3e2e5b1cde1a193bafed568"
+  },
+  "scope": "Canonical and generic two-cell outputs, empty no-op, negative/overflow counts and all nine null pointer controls; guard canaries retained."
+}

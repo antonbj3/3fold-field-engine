@@ -1,0 +1,19 @@
+{
+  "stamp": "20260913T180536Z-d-f33-profile",
+  "result": {
+    "repo": "3fold-field-engine",
+    "cmd": "CUDA_VISIBLE_DEVICES=\"\" FIELD_ENGINE_DEVICE=cpu OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 OPENBLAS_CORETYPE=Haswell NPY_DISABLE_CPU_FEATURES=X86_V4,AVX512_ICL,AVX512_SPR timeout 240 python observer.py",
+    "gpu": "NVIDIA L4, 23034 MiB, 580.95.05",
+    "rc": 1,
+    "seconds": 1.3,
+    "stamp": "20260913T180536Z-d-f33-profile",
+    "files": [
+      "reports/duct_calibration_reuse_final.json"
+    ],
+    "extras": [
+      "warp-lang",
+      "build123d"
+    ],
+    "tail": "[selftest] hardness scan: 8/11 corpus tasks naive-route-infeasible, taking 7\nTraceback (most recent call last):\n  File \"/work/3fold-field-engine/observer.py\", line 41, in <module>\n    with contextlib.redirect_stdout(sys.stderr):code=F.stage_selftest()\n                                                     ^^^^^^^^^^^^^^^^^^\n  File \"/work/3fold-field-engine/src/field_engine/opt/f33_1_topologi_v1.py\", line 752, in stage_selftest\n    g = generate_one(tid)\n        ^^^^^^^^^^^^^^^^^\n  File \"/work/3fold-field-engine/src/field_engine/opt/f33_1_topologi_v1.py\", line 200, in generate_one\n    npz = np.load(f\"{CORPUS_DIR}/{task_id}/occupancy_task.npz\")\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py\", line 454, in load\n    fid = stack.enter_context(open(os.fspath(file), \"rb\"))\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/work/3fold-field-engine/data/corpus/duct_v1/t20260730_0002_00000000/occupancy_task.npz'\n"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "status": "VERIFIED-FRESH",
+  "all_power_arrays_exact": true,
+  "compared_bytes": 2949312,
+  "complete_density_exact": true,
+  "capture_report_exact": true,
+  "scope": "Public fresh-source/output-routed replay on the local CPU reproduces all L4 compatible-profile replay arrays and the original native density. The initial output-directory failure remains retained."
+}

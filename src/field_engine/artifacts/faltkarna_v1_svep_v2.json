@@ -1,0 +1,120 @@
+{
+  "cell": "faltkarna_v1_svep_v2_loft",
+  "device": "cuda:0",
+  "verification_gate": "HYPOTHESIS-awaiting-QC",
+  "A_sjalvtest_rak_ror": {
+    "r_in_mm": 15.0,
+    "r_out_mm": 17.0,
+    "L_mm": 300.0,
+    "pitch_mm": 0.5,
+    "n_stationer": 60,
+    "n_poly": 28,
+    "t_mesh_s": 0.003108501434326172,
+    "t_rast_s": 1.5083627700805664,
+    "vol_mesh_mm3": 57600.0,
+    "vol_facit_analytisk_mm3": 59813.62704745731,
+    "vol_facit_cirkel_mm3": 60318.57894892403,
+    "ngon_cirkel_areakvot": 0.9916285842560334,
+    "A_mantelyta_mm2": 60192.1023531383,
+    "konvergens_per_pitch": {
+      "0.5": {
+        "vol_mesh_mm3": 57600.0,
+        "diff_frac": 0.037008741263942664,
+        "tol_frac_rasterbound": 0.2515818941450445,
+        "GRON": true
+      },
+      "0.35": {
+        "vol_mesh_mm3": 59819.028499999986,
+        "diff_frac": 9.030471498392705e-05,
+        "tol_frac_rasterbound": 0.17610732590153116,
+        "GRON": true
+      },
+      "0.25": {
+        "vol_mesh_mm3": 59475.0,
+        "diff_frac": 0.005661369560294963,
+        "tol_frac_rasterbound": 0.12579094707252225,
+        "GRON": true
+      }
+    },
+    "PITCHAR_A": [
+      0.5,
+      0.35,
+      0.25
+    ],
+    "PASS": true,
+    "diff_frac": 0.037008741263942664,
+    "tol_frac": 0.2515818941450445,
+    "GRON": true
+  },
+  "B_syntetisk_krokt_rutt": {
+    "n_ankarstationer": 28,
+    "SUB_slerp": 8,
+    "wall_mm": 2.5,
+    "n_stationer_finfordelat": 217,
+    "n_poly": 28,
+    "max_ang_mellan_ankare_deg": 8.704709480963242,
+    "vol_mm3_per_pitch": {
+      "1.0": 77955.0,
+      "0.7": 78047.24899999998
+    },
+    "n_komponenter_per_pitch": {
+      "1.0": 1,
+      "0.7": 1
+    },
+    "t_s_per_pitch": {
+      "1.0": 1.12,
+      "0.7": 3.07
+    },
+    "konvergens_diff_frac": 0.001181963505209282,
+    "TOL_KONVERGENS": 0.05,
+    "PASS": true,
+    "metodklass_atgard": "the old nearest-station Voronoi approximation is replaced by an EXPLICIT ruled-loft mesh (the same polygon-to-polygon construction a B-rep ruled loft performs) rasterised through the already gated mesh-to-SDF op -- no Voronoi partition left. A LITERAL loft on the anchor stations self-intersects when the frame rotation between neighbouring stations is large; the fix is SLERP densification (slerp_densify_frames), which PRESERVES the actual accumulated twist between real anchor stations instead of removing it, but distributes it over sub substeps so no single ruled edge self-crosses."
+  },
+  "C_fallbevis_sjalvskarande_centrumlinje": {
+    "sanity_ej_sjalvskarande_R_over_r": {
+      "R_loop_mm": 30.0,
+      "r_mm": 10.0,
+      "sjalvskarande": false,
+      "pitch_mm": 0.25,
+      "vol_svep_mm3": 58709.1875,
+      "vol_naiv_rorformel_mm3": 59217.62640653615,
+      "vol_facit_svept_ngon_mm3": 58721.891036516136,
+      "signal1_kvot_mot_naiv_rorformel": 0.9914140613633237,
+      "signal2_axelstrale_solid_frac": 0.0,
+      "signal3_kvot_mot_svept_facit": 0.999783666086158,
+      "diff_frac": 0.00021633391384204268,
+      "tol_frac": 0.03,
+      "GRON": true
+    },
+    "flagga_sjalvskarande_R_under_r": {
+      "R_loop_mm": 5.0,
+      "r_mm": 10.0,
+      "sjalvskarande": true,
+      "pitch_mm": 0.25,
+      "vol_svep_mm3": 9781.5,
+      "vol_naiv_rorformel_mm3": 9869.604401089357,
+      "vol_facit_svept_ngon_mm3": 10560.28483148984,
+      "signal1_kvot_mot_naiv_rorformel": 0.9910731577975271,
+      "signal2_axelstrale_solid_frac": 0.0,
+      "signal3_kvot_mot_svept_facit": 0.926253425554624,
+      "diff_frac": 0.07374657444537597,
+      "tol_frac": 0.03,
+      "GRON": false
+    },
+    "detektor_fungerar": true
+  },
+  "D_fallbevis_rotation_10deg": {
+    "station_index": 14,
+    "theta_deg": 10.0,
+    "pitch_mm": 1.5,
+    "n_poly": 20,
+    "r_lokal_mm": 39.75,
+    "d_sd_lokal_max_mm": 2.1213202476501465,
+    "d_sd_fjarran_max_mm": 0.0,
+    "kvot": 2121320247.6501462,
+    "PASS": true,
+    "tolkning": "the local sd array MUST change measurably when a single section's frame is rotated 10 degrees about its own tangent, and the far field must be practically untouched -- the old failure mode (the rejected lerp attempt) was that a naive frame interpolation could skew or lose such a rotation invisibly; this mesh-based method carries the rotation EXPLICITLY (the corner points literally move), so the case is a sanity check that the explicit geometry propagates, not a test of a separate interpolation mechanism (there is none any more)."
+  },
+  "t_total_s": 24.927514791488647,
+  "ALLA_GRONA": true
+}

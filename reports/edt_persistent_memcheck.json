@@ -1,0 +1,11 @@
+{
+  "status": "VERIFIED-FRESH",
+  "exit": 0,
+  "errors": [
+    "ERROR SUMMARY: 0 errors"
+  ],
+  "arrays": 90,
+  "exact": true,
+  "hardware": "NVIDIA L4, 580.95.05, 0 %, 3 MiB",
+  "scope": "Compute Sanitizer memcheck; numerical arrays match uninstrumented capture. Instrumented timings excluded."
+}

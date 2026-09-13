@@ -1,0 +1,35 @@
+{
+  "rows": [
+    {
+      "case": "closed",
+      "max_oracle_error": 1.6962958301138756e-15,
+      "classification_mismatches": 0,
+      "full_repeat": true,
+      "sha256": "f97713ef964c840f3ba8d882d4d5597123285edd4ae770f772eea492d290bc24"
+    },
+    {
+      "case": "open",
+      "max_oracle_error": 1.7486012637846216e-15,
+      "classification_mismatches": 0,
+      "full_repeat": true,
+      "sha256": "003c00cb01b539fbedd8f0346ad888a7259ba0da47f31e360e48b4d994b9140e"
+    },
+    {
+      "case": "reversed_open",
+      "max_oracle_error": 2.67841304690819e-15,
+      "classification_mismatches": 0,
+      "full_repeat": true,
+      "sha256": "fc57cb1a7e484203d68c4033ec865b4841925cb2d11d0ef801d5b1aaaae6a2bd"
+    }
+  ],
+  "gates": {
+    "full_repeat": true,
+    "oracle_bound": true,
+    "exact_classification": true,
+    "reversed_classification": true,
+    "invalid_rejected": true,
+    "inputs_unchanged": true
+  },
+  "invalid_rejections": 2,
+  "scope": "Synthetic direct CPU GWN, no arbitrary surface or RT speed claim."
+}

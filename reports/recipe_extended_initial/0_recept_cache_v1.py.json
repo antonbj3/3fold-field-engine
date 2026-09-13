@@ -1,0 +1,63 @@
+{
+  "AT5a_prefix_reuse": {
+    "cache_hits_run2": 3,
+    "cached_vol": 8732.964624444869,
+    "fresh_vol": 8732.964624444869,
+    "late_op_miss": true,
+    "pass": true,
+    "prefix_hit": true,
+    "roundtrip_identical": true
+  },
+  "AT5b_fingerprint_mismatch": {
+    "correct_final_volume": 384.0,
+    "fingerprint_mismatches": 1,
+    "pass": true,
+    "rebuilt": true
+  },
+  "AT5c_synthetic_full_hit": {
+    "bit_identical": true,
+    "cache_hits_run2": 17,
+    "fingerprint_mismatches_run2": 0,
+    "n_ops": 17,
+    "pass": true,
+    "speedup_x": 870.7,
+    "t_cold_s": 0.108,
+    "t_warm_s": 0.0,
+    "vol_cold_mm3": 108236.6146725406,
+    "vol_warm_mm3": 108236.6146725406
+  },
+  "AT5d_counterfactual_dirty_scope": {
+    "cache_hits_run2": 7,
+    "diverging_all_miss": true,
+    "diverging_index": 7,
+    "n_ops": 17,
+    "pass": true,
+    "prefix_all_hit": true,
+    "prefix_hits_expected": 7
+  },
+  "AT6a_mem_hit_same_process": {
+    "bit_identical": true,
+    "disk_hits_run2": 0,
+    "fingerprint_mismatches_run2": 0,
+    "mem_hits_run2": 17,
+    "n_ops": 17,
+    "pass": true,
+    "speedup_x": 790.0,
+    "t_cold_s": 0.102,
+    "t_mem_s": 0.0
+  },
+  "AT6b_cross_process_trap_fallbevis": {
+    "correct_final_volume": 1800.0,
+    "final_cache_row": "HIT_DISK",
+    "mem_cross_process_rejected": 1,
+    "pass": true
+  },
+  "AT6c_lru_bound": {
+    "maxsize": 300,
+    "mem_cache_len": 0,
+    "newest_present": true,
+    "oldest_evicted": true,
+    "pass": true
+  },
+  "all_pass": true
+}

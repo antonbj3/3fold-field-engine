@@ -1,0 +1,103 @@
+{
+  "status": "VERIFIED-FRESH",
+  "gates": {
+    "input_schema": true,
+    "differences_limited": true,
+    "same_oriented_geometry": true,
+    "captured_order_mechanism": true,
+    "query_generation": true,
+    "same_input_replay": true,
+    "full_mesh_transplant": true
+  },
+  "comparisons": [
+    {
+      "leg": 0,
+      "vertices_exact": true,
+      "oriented_triangle_multiset_exact": true,
+      "changed_face_rows": 28,
+      "changed_point_rows": 23,
+      "interior_points_exact": true
+    },
+    {
+      "leg": 1,
+      "vertices_exact": true,
+      "oriented_triangle_multiset_exact": true,
+      "changed_face_rows": 28,
+      "changed_point_rows": 23,
+      "interior_points_exact": true
+    }
+  ],
+  "rows": [
+    {
+      "host": "local",
+      "leg": 0,
+      "repeat": 0,
+      "regenerated_points_exact": true,
+      "all_outputs_exact": true,
+      "bytes_compared": 2290340
+    },
+    {
+      "host": "local",
+      "leg": 0,
+      "repeat": 1,
+      "regenerated_points_exact": true,
+      "all_outputs_exact": true,
+      "bytes_compared": 2290340
+    },
+    {
+      "host": "local",
+      "leg": 1,
+      "repeat": 0,
+      "regenerated_points_exact": true,
+      "all_outputs_exact": true,
+      "bytes_compared": 2290340
+    },
+    {
+      "host": "local",
+      "leg": 1,
+      "repeat": 1,
+      "regenerated_points_exact": true,
+      "all_outputs_exact": true,
+      "bytes_compared": 2290340
+    },
+    {
+      "host": "modal",
+      "leg": 0,
+      "repeat": 0,
+      "regenerated_points_exact": true,
+      "all_outputs_exact": true,
+      "bytes_compared": 2290340
+    },
+    {
+      "host": "modal",
+      "leg": 0,
+      "repeat": 1,
+      "regenerated_points_exact": true,
+      "all_outputs_exact": true,
+      "bytes_compared": 2290340
+    },
+    {
+      "host": "modal",
+      "leg": 1,
+      "repeat": 0,
+      "regenerated_points_exact": true,
+      "all_outputs_exact": true,
+      "bytes_compared": 2290340
+    },
+    {
+      "host": "modal",
+      "leg": 1,
+      "repeat": 1,
+      "regenerated_points_exact": true,
+      "all_outputs_exact": true,
+      "bytes_compared": 2290340
+    }
+  ],
+  "transplanted_bytes": 4580680,
+  "source_sha256": {
+    "adaptive_sample_blocks_v1.py": "e6bfa2c3c72b1a3bfc0b8f35599a6f06414be5d38513a49e7c89ea1e35404872",
+    "field_adaptive_blocks_probe.py": "43f57d6973eda5f58f3cfda9183399e4cf74ac36cc0625daa88a0c6e4117d097",
+    "field_adaptive_input_audit.py": "82e39856abc45f3530f0c9a4de9f51c36c5fd5dbc4ee58cd6c4367d067afbe6e"
+  },
+  "scope": "CPU audit. First captured difference is mesh face-row order, not vertex positions or oriented triangle content. Every captured point is regenerated from that order and the original RNG. Both hosts outputs replay exactly on the same local CPU. Replacing only the generated mesh with the captured cloud mesh reproduces the entire cloud report/archive. The specific exporter/library instruction causing the permutation is not identified; original cross-host verification remains failed."
+}

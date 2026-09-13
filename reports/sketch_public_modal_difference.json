@@ -1,0 +1,58 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "differences": [
+    {
+      "path": [
+        "bridge_schema_proposal",
+        "points",
+        1,
+        1
+      ],
+      "local": 1.7949020760212243e-17,
+      "modal": 1.8004495962672084e-17
+    },
+    {
+      "path": [
+        "bridge_schema_proposal",
+        "points",
+        3,
+        0
+      ],
+      "local": 2.1032832763811144e-24,
+      "modal": 2.1032833358080903e-24
+    },
+    {
+      "path": [
+        "diagnosis_demo",
+        "overbestamd",
+        "top_blame",
+        0,
+        "residual"
+      ],
+      "local": 1.0000000000310045,
+      "modal": 1.0000000000310063
+    },
+    {
+      "path": [
+        "diagnosis_demo",
+        "overbestamd",
+        "top_blame",
+        1,
+        "residual"
+      ],
+      "local": 0.9999999999689955,
+      "modal": 0.9999999999689937
+    },
+    {
+      "path": [
+        "facits",
+        "dimensionerad_fyrkant_fasning",
+        "a_solved",
+        1
+      ],
+      "local": 1.8977044807637752e-17,
+      "modal": 1.9024190418863148e-17
+    }
+  ],
+  "scope": "All own gates pass, but strict normalized report identity fails on this Modal worker. Previous separate passing host remains limited evidence; no tolerance or clock projection changed."
+}

@@ -1,0 +1,17 @@
+{
+  "status": "VERIFIED-FRESH",
+  "rows": [
+    {
+      "control": "archive",
+      "exit": 2,
+      "expected_refusal": true,
+      "no_final_field": true
+    },
+    {
+      "control": "operand",
+      "exit": 2,
+      "expected_refusal": true,
+      "no_final_field": true
+    }
+  ]
+}

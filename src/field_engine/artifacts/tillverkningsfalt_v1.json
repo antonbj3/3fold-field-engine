@@ -1,0 +1,126 @@
+{
+  "cell": "tillverkningsfalt_v1",
+  "input": "synthetic turned profile generated in code (stepped shaft, three ring grooves)",
+  "device": "cuda:0",
+  "have_cuda": true,
+  "params": {
+    "rho_turn_mm": 1.0,
+    "rho_mill_mm": 3.0,
+    "drill_r_mm": 11.15,
+    "radial_allowance_mm": 1.5,
+    "axial_allowance_mm": 1.0,
+    "pitch2d_mm": 0.04,
+    "pitch3d_mm": 0.35,
+    "grid_voxels": 13105152,
+    "grid_shape": [
+      288,
+      288,
+      158
+    ]
+  },
+  "profil": {
+    "polyline_rz_mm": [
+      [
+        -21.0,
+        47.7
+      ],
+      [
+        12.5,
+        47.7
+      ],
+      [
+        12.5,
+        45.5
+      ],
+      [
+        15.5,
+        45.5
+      ],
+      [
+        15.5,
+        47.7
+      ],
+      [
+        17.5,
+        47.7
+      ],
+      [
+        17.5,
+        45.5
+      ],
+      [
+        20.5,
+        45.5
+      ],
+      [
+        20.5,
+        47.7
+      ],
+      [
+        22.5,
+        47.7
+      ],
+      [
+        22.5,
+        45.5
+      ],
+      [
+        25.5,
+        45.5
+      ],
+      [
+        25.5,
+        47.7
+      ],
+      [
+        32.0,
+        47.7
+      ]
+    ],
+    "volume_ideal_revolved_mm3": 373048.4510664466
+  },
+  "amne": {
+    "r_blank_mm": 49.2,
+    "z_range_mm": [
+      -22.0,
+      33.0
+    ],
+    "volume_blank_analytisk_mm3": 418256.56625420786,
+    "monotonic_envelope_ok": true,
+    "max_delradie_mm": 47.7
+  },
+  "svarvning": {
+    "matt_spargrund_hornradie_mm": 0.8297498963102886,
+    "deklarerad_verktygsradie_mm": 1.0,
+    "avvikelse_mm": 0.17025010368971139,
+    "t_2d_closing_ms": 2079.1683197021484
+  },
+  "resultat_full_drill": {
+    "volym_mesh_mm3": 321278.5749551691,
+    "volym_voxel_mm3": 321006.3254999999,
+    "volym_konsistens_diff_frac": 0.0008473937460883657,
+    "n_verts": 292706,
+    "n_faces": 583198,
+    "n_lossa_mikrofragment_kasserade": 340,
+    "stl": "artifacts/tillverkningsfalt_v1_resultat.stl"
+  },
+  "negativ_kontroll_kort_borr": {
+    "drill_x_half_short_mm": 30.0,
+    "drill_x_half_full_mm": 50.2,
+    "restmaterial_mm3_voxelraknat": 13024.396000000008,
+    "restmaterial_over_noll": true,
+    "mesh_vs_voxel_mismatch_frac_kort_fall": 0.15973898402009926,
+    "matmetod_not": "residual material measured by voxel count (topology independent), not by the marching-cubes mesh integral"
+  },
+  "declared_scope": [
+    "turning (the ring-groove profile) is fully field driven",
+    "the blank is a field operation that degenerates to a constant-radius round bar for this profile, since it has no overhangs",
+    "the pocket is a rounded-box plus arch approximation, not a copy of an individual surface"
+  ],
+  "gates": {
+    "monotonic_envelope_ok": true,
+    "groove_root_radius_between_0p3_and_2mm": true,
+    "mesh_vs_voxel_volume_within_1pct": true,
+    "short_drill_leaves_residual": true
+  }
+}

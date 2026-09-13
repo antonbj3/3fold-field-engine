@@ -1,0 +1,238 @@
+{
+  "status": "VERIFIED-FRESH",
+  "mode": "replay",
+  "source_sha256": {
+    "lastfalt_v1_topopt.py": "5beb7aa97146a6fe5a103e4f82c9b27a6de820f2c2f294e70ab1ab21bb62bb8a",
+    "lastfalt_v1_fem.py": "6ed4f7f14afeaafd439cd3939184aa0e8f0ca1dae770da9bb872a28a932cae3c"
+  },
+  "calls": [
+    {
+      "index": 0,
+      "exponent": 3.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 0
+    },
+    {
+      "index": 1,
+      "exponent": 2.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 0
+    },
+    {
+      "index": 2,
+      "exponent": 3.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 183
+    },
+    {
+      "index": 3,
+      "exponent": 2.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 0
+    },
+    {
+      "index": 4,
+      "exponent": 3.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 232
+    },
+    {
+      "index": 5,
+      "exponent": 2.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 0
+    },
+    {
+      "index": 6,
+      "exponent": 3.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 245
+    },
+    {
+      "index": 7,
+      "exponent": 2.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 0
+    },
+    {
+      "index": 8,
+      "exponent": 3.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 182
+    },
+    {
+      "index": 9,
+      "exponent": 2.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 0
+    },
+    {
+      "index": 10,
+      "exponent": 3.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 167
+    },
+    {
+      "index": 11,
+      "exponent": 2.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 0
+    },
+    {
+      "index": 12,
+      "exponent": 3.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 163
+    },
+    {
+      "index": 13,
+      "exponent": 2.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 0
+    },
+    {
+      "index": 14,
+      "exponent": 3.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 139
+    },
+    {
+      "index": 15,
+      "exponent": 2.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 0
+    },
+    {
+      "index": 16,
+      "exponent": 3.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 134
+    },
+    {
+      "index": 17,
+      "exponent": 2.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 0
+    },
+    {
+      "index": 18,
+      "exponent": 3.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 117
+    },
+    {
+      "index": 19,
+      "exponent": 2.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 0
+    },
+    {
+      "index": 20,
+      "exponent": 3.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 134
+    },
+    {
+      "index": 21,
+      "exponent": 2.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 0
+    },
+    {
+      "index": 22,
+      "exponent": 3.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 134
+    },
+    {
+      "index": 23,
+      "exponent": 2.0,
+      "strides": [
+        8
+      ],
+      "computed_returned_differences": 0
+    }
+  ],
+  "npz_sha256": "05702e7ff1e8e9c9922121cf3287470b6c9bb86609eee218caac03f570de2ae3",
+  "density_sha256": "09abc62926e5bb63ea86a510c48c276d2c8b6e4522dbeee8881b98df66522344",
+  "numpy_core_sha256": "097e10f2baaf99d5a4655e549a6c76b139e3931681af39068f79c7b3abddadac",
+  "requested_numpy_disabled": "X86_V4,AVX512_ICL,AVX512_SPR",
+  "requested_openblas_core": "Haswell",
+  "runtimes": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "version": "0.3.34.106.0",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell",
+      "binary_name": "libscipy_openblas64_-f48b354e.so",
+      "binary_sha256": "432e1c1739731468ba305771af96773939e43016643e2d630f58cb45b6670e96"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "version": "0.3.31.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell",
+      "binary_name": "libscipy_openblas-5f890258.so",
+      "binary_sha256": "2a5b4c1a6311873c59132b2ceaaf3c26258a17350b7cd27ea8782a47e3322981"
+    }
+  ],
+  "array_bytes": 2949312,
+  "numpy_dispatch_enabled": {
+    "X86_V3": true,
+    "X86_V4": false,
+    "AVX512_ICL": false,
+    "AVX512_SPR": false
+  }
+}

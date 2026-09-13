@@ -1,0 +1,217 @@
+{
+  "status": "OWN-GATE-FAIL",
+  "gates": {
+    "coverage": true,
+    "fresh": true,
+    "decisive": true,
+    "reports": false,
+    "source_hashes": true
+  },
+  "rows": [
+    {
+      "module": "recipe/cad_op_schema_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {},
+      "report_sha256": "bee58c42ad9a85036811b742b80a7ce6227c125ec023fd575eb222270ca93c68",
+      "own_check_count": 9,
+      "error": null
+    },
+    {
+      "module": "recipe/iso_thread_table_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {},
+      "report_sha256": "4856b3a5055b7a7faf7b847b256b2a3a442dc54fe401a19aac90c6f0a083f35d",
+      "own_check_count": 4,
+      "error": null
+    },
+    {
+      "module": "recipe/formrib_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {},
+      "report_sha256": "f073d0dabe2d0ca2ef86237f1feafd5e00626dd9474cfc51fe52fc00c08eec67",
+      "own_check_count": 4,
+      "error": null
+    },
+    {
+      "module": "recipe/geometri_selektor_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {},
+      "report_sha256": "59ac18b51ce5fee5521d8cce3909df7ca50561084e2e42838c4a34cdec7958e6",
+      "own_check_count": 12,
+      "error": null
+    },
+    {
+      "module": "recipe/cad_op_exec_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {
+        "AT2b_tomcut_fallbevis.row.wall_ms": 2.8974280000007013
+      },
+      "report_sha256": "257b7049d339472430532ecbcbd5f4d8fe09d350c012d34f32ada7e4c2dc95b5",
+      "own_check_count": 15,
+      "error": null
+    },
+    {
+      "module": "recipe/recept_cache_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {
+        "AT5c_synthetic_full_hit.t_cold_s": 0.16,
+        "AT5c_synthetic_full_hit.t_warm_s": 0.001,
+        "AT5c_synthetic_full_hit.speedup_x": 155.1,
+        "AT6a_mem_hit_same_process.t_cold_s": 0.163,
+        "AT6a_mem_hit_same_process.t_mem_s": 0.001,
+        "AT6a_mem_hit_same_process.speedup_x": 178.1
+      },
+      "report_sha256": "5ae5d9fc98582992658812b4c6029938b8ccae2cdcacbcce2f0144ac726c6b54",
+      "own_check_count": 7,
+      "error": null
+    },
+    {
+      "module": "recipe/formfeature_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {},
+      "report_sha256": "c921309e106218498676a88ae8e6302bd4adc9a292fdd5212e6e350cbf97a3ce",
+      "own_check_count": 13,
+      "error": null
+    },
+    {
+      "module": "recipe/brep_recept_synth_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {},
+      "report_sha256": "b89d66fd0f51819fda3e4875822ad3b5962d2f0beb96da6c9e6d7ea70fd300c6",
+      "own_check_count": 5,
+      "error": null
+    },
+    {
+      "module": "recipe/_cad_op_exec_v1_populationsvakt_fallbevis.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {},
+      "report_sha256": "ce5b30a501bd52460768888e793973475b165d11b65c449034d207cebbd037f3",
+      "own_check_count": 4,
+      "error": null
+    },
+    {
+      "module": "recipe/_cad_op_exec_v1_formverb_test.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": true,
+      "observational_timing": {
+        "cache_measurement.wall_ms_miss_run": 94.26,
+        "cache_measurement.wall_ms_hit_run": 34.7
+      },
+      "report_sha256": "4071443d15563f24f3e3d12e91090bbff6bc01be3ead98e9784969c90a1f53a2",
+      "own_check_count": 11,
+      "error": null
+    },
+    {
+      "module": "recipe/sketch_gcs_v1.py",
+      "exit": 0,
+      "gates": true,
+      "decisive": true,
+      "declared_report_exact": false,
+      "observational_timing": {
+        "timing_ms.dimensionerad_fyrkant_fasning.median": 1.7284629999991807,
+        "timing_ms.dimensionerad_fyrkant_fasning.p95": 1.84490299999851,
+        "timing_ms.dimensionerad_fyrkant_fasning.all_ms": [
+          1.84490299999851,
+          1.7299119999947266,
+          1.7385729999972455,
+          1.7217230000028394,
+          1.7312029999985157,
+          1.7262430000002382,
+          1.7545429999969997,
+          1.7274129999975685,
+          1.7366719999998281,
+          1.7345030000015527,
+          1.71363300000138,
+          1.7164530000002287,
+          1.7251029999982848,
+          1.7284629999991807,
+          1.7110130000048684
+        ],
+        "timing_ms.spline_tangenthandtag.median": 0.1649290000003134,
+        "timing_ms.spline_tangenthandtag.p95": 0.1991190000012466,
+        "timing_ms.spline_tangenthandtag.all_ms": [
+          0.1991190000012466,
+          0.17131900000322275,
+          0.1656800000020553,
+          0.16412999999459998,
+          0.1631989999992811,
+          0.1698000000018851,
+          0.1634889999948541,
+          0.16334900000458674,
+          0.1649290000003134,
+          0.18713899999767136,
+          0.16432000000321523,
+          0.1641599999970822,
+          0.16988899999859086,
+          0.1647590000004584,
+          0.1779990000017051
+        ],
+        "timing_ms.tangentcirkelkedja.median": 0.3936980000034396,
+        "timing_ms.tangentcirkelkedja.p95": 1.3652549999960684,
+        "timing_ms.tangentcirkelkedja.all_ms": [
+          1.3652549999960684,
+          0.4209880000018984,
+          0.41485799999918527,
+          0.3816879999973821,
+          0.40314799999663364,
+          0.3853579999955059,
+          0.3936980000034396,
+          0.38260799999534356,
+          0.394907999996974,
+          0.3890079999990803,
+          0.395077999996829,
+          0.3816479999940725,
+          0.3940280000023222,
+          0.3742079999966563,
+          0.39163799999641924
+        ]
+      },
+      "report_sha256": "f23dd7070a4eb6343d851b1044240f3dc747960a1b789b9f03c0154d95c8aea4",
+      "own_check_count": 11,
+      "error": null
+    }
+  ],
+  "source_sha256": {
+    "src/field_engine/recipe/_cad_op_exec_v1_formverb_test.py": "fdfc4a86408711566f4e53c17cd394e0d629116ede479e9feab138bb10f8587f",
+    "src/field_engine/recipe/_cad_op_exec_v1_populationsvakt_fallbevis.py": "66bd786b2e68ad2bcb41ea33fe2a05239b00bbf98782de70455e3e6b5f3e563d",
+    "src/field_engine/recipe/brep_recept_synth_v1.py": "6faf3414a1a46911f10ab78b09ff73fdaafbcfc5bec90266f75031ec2dc1fcf0",
+    "src/field_engine/recipe/cad_op_exec_v1.py": "808f572217884893ed1b76a344953f567c2dfbd0f01c9ff395720e9a9664f772",
+    "src/field_engine/recipe/cad_op_schema_v1.py": "d72ca140e58012c4a8562c20c631087cd8b915c98b49a2696232607a90da5f4f",
+    "src/field_engine/recipe/formfeature_v1.py": "243dc9aa3388faa2f47f3f072f2f7189b9c54723dedf2e243ead7353fc012062",
+    "src/field_engine/recipe/formrib_v1.py": "0070d8bab2b2ebe085344ebcaa5085a33e4b49ee31c0b01484738807827f0f9e",
+    "src/field_engine/recipe/geometri_selektor_v1.py": "c7a9f7c5efe94923714297e05e27cae5ada15996b19ce8ac2e17ca7ac7ae992d",
+    "src/field_engine/recipe/iso_thread_table_v1.py": "f23d4ae29d8b122afab3c6d883907faa7d0475fd75f716fa2e37b01b9eef5792",
+    "src/field_engine/recipe/recept_cache_v1.py": "83f4cfe5380db41bd9aee4db26ccea1e1b769109817f6bda977649fdd77321e9",
+    "src/field_engine/recipe/sketch_gcs_v1.py": "d999420f7eef60e69cdf4d2daa5fd70db9519085f8486150447d392405610d6d"
+  },
+  "scope": "Explicit executable recipe selftests; every own gate and all report fields except named clock observations/generated STEP directories/self-references. Raw reports retained; no imported-library coverage inferred."
+}

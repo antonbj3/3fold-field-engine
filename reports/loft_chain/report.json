@@ -1,0 +1,59 @@
+{
+  "gates": {
+    "independent_chain_repeat": true,
+    "loft": true,
+    "sections": true
+  },
+  "legs": [
+    {
+      "hashes": {
+        "field_recipe_sections_probe.json": "f6b9a0004dacec4fbb138afa98faeabe793435a90842f937b5099f9ef49c28e5",
+        "field_recipe_sections_probe.npy": "3519257cc2f2cc7f6fb32d910f49845c186664ebae2a646597c51c051ac9aa57",
+        "field_to_recipe_loft_v1.json": "b3f458dfa2db08b65e1fe22902f96ac3080b020ae7855a04d855ee4c6d75e64b",
+        "field_to_recipe_loft_v1_recipe.json": "7a4611170260936d5bca7723c6f379fb5791bb90e997d44525819ebb5256e5e6"
+      },
+      "loft_gates": {
+        "executor": true,
+        "one_solid": true,
+        "polygon_integral": true,
+        "rasterisation_volume": true,
+        "simplification": true,
+        "valid": true
+      },
+      "rasterisation_bound": 0.41282290795854254,
+      "section_gates": {
+        "closed_sections": true,
+        "partial_coverage": true,
+        "positive_volume": true,
+        "watertight": true
+      },
+      "volume_error": 0.015348988750144087
+    },
+    {
+      "hashes": {
+        "field_recipe_sections_probe.json": "f6b9a0004dacec4fbb138afa98faeabe793435a90842f937b5099f9ef49c28e5",
+        "field_recipe_sections_probe.npy": "3519257cc2f2cc7f6fb32d910f49845c186664ebae2a646597c51c051ac9aa57",
+        "field_to_recipe_loft_v1.json": "b3f458dfa2db08b65e1fe22902f96ac3080b020ae7855a04d855ee4c6d75e64b",
+        "field_to_recipe_loft_v1_recipe.json": "7a4611170260936d5bca7723c6f379fb5791bb90e997d44525819ebb5256e5e6"
+      },
+      "loft_gates": {
+        "executor": true,
+        "one_solid": true,
+        "polygon_integral": true,
+        "rasterisation_volume": true,
+        "simplification": true,
+        "valid": true
+      },
+      "rasterisation_bound": 0.41282290795854254,
+      "section_gates": {
+        "closed_sections": true,
+        "partial_coverage": true,
+        "positive_volume": true,
+        "watertight": true
+      },
+      "volume_error": 0.015348988750144087
+    }
+  ],
+  "scope": "Synthetic topology-optimized fixture; ruled section slabs; CPU only.",
+  "status": "VERIFIED-FRESH"
+}

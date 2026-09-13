@@ -1,0 +1,11 @@
+
+Traceback (most recent call last):
+  File "<isolated-root>/src/field_engine/field_adaptive_blocks_probe.py", line 9, in <module>
+    import faltkarna_v1_multires as baseline
+  File "<isolated-root>/src/field_engine/faltkarna_v1_multires.py", line 66, in <module>
+    import mesh_to_sdf_small_features_v1 as SMF       # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<isolated-root>/src/field_engine/mesh_to_sdf_small_features_v1.py", line 41, in <module>
+    import holed_plate_v1 as PART           # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'holed_plate_v1'

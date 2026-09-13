@@ -1,0 +1,25 @@
+{
+  "gates": {
+    "full_arrays_exact": true,
+    "full_reports_exact": true,
+    "stops_exact": true,
+    "histories_exact": true,
+    "original_checks": true,
+    "full_chain_speedup": true
+  },
+  "speedups": [
+    9.02631722626017,
+    31.945803030268703
+  ],
+  "full_chain_seconds": {
+    "native0": 26.941624087999994,
+    "gpu0": 2.9847858669999994,
+    "gpu1": 1.0062737689999963,
+    "native1": 32.14622361899999
+  },
+  "stored_bytes": 57467744,
+  "all_states_and_radii_exact_against_prior_original_numpy": true,
+  "source_commit": "56a9ea5",
+  "kernel_function_asts_unchanged_by_backend_integration": true,
+  "scope": "Pre-integration measurement of the existing GPU candidate: native CPU versus H100, full new calibration plus duct chain twice. First GPU leg includes GPU import/context/build, second has compiled kernels. All optimizer histories/reports/stops exact. No process-startup or universal subsecond claim."
+}

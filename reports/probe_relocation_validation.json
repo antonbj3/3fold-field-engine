@@ -1,0 +1,469 @@
+{
+  "scope": "Path relocation validation, without promotion of historical numerical failures or complete repository coverage.",
+  "moved_files": 116,
+  "python_files_moved": 110,
+  "native_files_moved": 6,
+  "engine_cli_files": 32,
+  "python_ast_exact": 142,
+  "native_include_path_only": 6,
+  "import_checks": [
+    {
+      "module": "probes/field_engine/field_adaptive_blocks_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_adaptive_canonical_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_adaptive_input_audit.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_backend_timing_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_block_layout_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_block_size_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_column_mask_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_columns_phase_mechanism.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_columns_timing_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_compact_capacity_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_compact_timing_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_csg_batch_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_csg_curved_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_csg_fused_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_csg_native_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_csg_packed_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_csg_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_csg_tiled_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_cuda_columns_cold_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_cuda_columns_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_cuda_cross_device_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_edt_arithmetic_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_edt_axis_work_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_edt_integer_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_edt_large_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_edt_native_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_edt_native_rejection_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_edt_parallel_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_edt_parallel_timing_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_edt_quotient_cpu_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_edt_quotient_gpu_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_edt_wrapper_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_graph_service_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_gwn_ordered_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_interval_service_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_interval_sign_service_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_linear_edt_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_loft_chain_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_mesh_adaptive_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_mesh_columns_stage_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_mesh_compact_stage_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_mesh_fused_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_mesh_native_mask_stage_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_mesh_rt_stage_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_mesh_templated_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_native_cold_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_native_mask_timing_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_native_pack_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_open_mesh_mechanism.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_open_mesh_repeat_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_owned_gpu_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_owned_service_cpu_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_persistent_edt_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_persistent_stage_profile.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_plate_tie_mechanism.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_prepared_service_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_quotient_pair_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_quotient_service_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_ranked_columns_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_recipe_sections_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rowwise_stage_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_api_contiguous_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_api_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_batch_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_call_profile.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_changed_query_reference.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_columns_compact_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_columns_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_composed_timing_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_contract_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_dynamic_timing_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_interval_cpu_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_interval_gpu_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_interval_hits_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_interval_portable_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_interval_sign_gpu_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_interval_sign_hits_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_lifecycle_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_lifecycle_timestamped_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_mesh_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_native_cold_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_native_edt_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_native_phase_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_native_phase_profile.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_native_timing_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_packed_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_parallel_edt_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_pointer_layout_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_prepared_cpu_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_prepared_gpu_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_prepared_hits_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_rounding_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_validated_timing_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_winding_precision_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_winding_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_wrapper_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_service_persistent_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_service_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_shared_gpu_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_shared_service_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_stage_scale_mechanism.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_tail_graph_profile.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_tail_graph_service_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_templated_pair_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_two_hit_stage_probe.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_cold_phases.py",
+      "imported": true
+    },
+    {
+      "module": "probes/field_engine/field_rt_winding_local_v1.py",
+      "imported": true
+    }
+  ],
+  "pytest": {
+    "passed": 62,
+    "skipped": 5,
+    "warnings": 4,
+    "seconds": 516.13,
+    "scope": "CPU; CUDA-dependent skips. Completed before the final four diagnostic moves; oracle and substrate were then executed at their new paths, and cold/winding observers imported."
+  },
+  "additional_entrypoints": {
+    "recipe_oracle": "Three original gates and 437760 capture bytes exact",
+    "substrate": "Original and relocated CPU full reports equal excluding raster time; expected float32 variation gate false despite exit zero"
+  },
+  "controls": 92,
+  "source_parent": "f28bde9",
+  "environment": {
+    "FIELD_ENGINE_DEVICE": "cpu",
+    "CUDA_VISIBLE_DEVICES": "",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_CORETYPE": "Haswell",
+    "NPY_DISABLE_CPU_FEATURES": "X86_V4,AVX512_ICL,AVX512_SPR"
+  },
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 5070",
+    "driver": "580.178.04",
+    "elapsed_window_seconds": 20.240765,
+    "released_utc": "2026-09-13T16:50:01.512036+00:00",
+    "gates": "Four aggregate gates; three complete probes; owned service five gates",
+    "array_bytes": 85558530,
+    "guard": "Current-boot kernel fault checks before, between and after commands passed; no competing compute context."
+  }
+}
