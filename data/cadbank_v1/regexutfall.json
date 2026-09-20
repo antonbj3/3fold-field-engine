@@ -1,0 +1,85 @@
+{
+ "matt_grammatikbaslinje": {
+  "end_to_end_yield": 0.65,
+  "false_accept_rate": 0.025,
+  "false_accepts": 1,
+  "false_rejects": 2,
+  "field_accuracies": {
+   "diameter": {
+    "hits": 5,
+    "rate": 0.8333,
+    "total": 6
+   },
+   "height": {
+    "hits": 0,
+    "rate": 0.0,
+    "total": 5
+   },
+   "hole_count": {
+    "hits": 10,
+    "rate": 0.5,
+    "total": 20
+   },
+   "hole_diameter": {
+    "hits": 9,
+    "rate": 0.45,
+    "total": 20
+   },
+   "length": {
+    "hits": 18,
+    "rate": 0.75,
+    "total": 24
+   },
+   "material": {
+    "hits": 30,
+    "rate": 1.0,
+    "total": 30
+   },
+   "max_deflection": {
+    "hits": 8,
+    "rate": 0.8,
+    "total": 10
+   },
+   "pitch_x": {
+    "hits": 5,
+    "rate": 0.4545,
+    "total": 11
+   },
+   "pitch_y": {
+    "hits": 5,
+    "rate": 0.625,
+    "total": 8
+   },
+   "radius": {
+    "hits": 0,
+    "rate": 0.0,
+    "total": 2
+   },
+   "test_force": {
+    "hits": 8,
+    "rate": 0.8,
+    "total": 10
+   },
+   "thickness": {
+    "hits": 23,
+    "rate": 0.92,
+    "total": 25
+   },
+   "width": {
+    "hits": 18,
+    "rate": 0.75,
+    "total": 24
+   }
+  },
+  "mean_latency_ms": 0.5,
+  "median_latency_ms": 0.37,
+  "method": "regex_grammar_baseline",
+  "n_accepted": 29,
+  "n_rejected": 11,
+  "n_valid_manufactured": 26,
+  "overall_field_accuracy": 0.7128,
+  "rejection_rate": 0.275,
+  "total_intentions": 40,
+  "verdict_accuracy": 0.925
+ }
+}

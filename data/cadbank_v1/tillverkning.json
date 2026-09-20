@@ -1,0 +1,60 @@
+{
+ "milling": [
+  {
+   "drill_half_length_mm": 12.0,
+   "mismatch_voxels": 0,
+   "pass": true,
+   "remaining_voxels": 4505,
+   "samples": 15625
+  },
+  {
+   "drill_half_length_mm": 6.0,
+   "mismatch_voxels": 0,
+   "pass": true,
+   "remaining_voxels": 4592,
+   "samples": 15625
+  }
+ ],
+ "milling_tolerance_voxels": 0,
+ "short_drill_residual_voxels": 87,
+ "short_drill_rule": true,
+ "turning": [
+  {
+   "error_mm": 0.037368601148976666,
+   "geometric_radius_mm": 47.61651513899117,
+   "measured_radius_mm": 47.57914653784219,
+   "pass": true,
+   "rule_reaches_floor": false,
+   "tool_reaches_floor": false,
+   "width_mm": 0.8
+  },
+  {
+   "error_mm": 0.03693659322685505,
+   "geometric_radius_mm": 47.13588989435407,
+   "measured_radius_mm": 47.09895330112722,
+   "pass": true,
+   "rule_reaches_floor": false,
+   "tool_reaches_floor": false,
+   "width_mm": 1.8
+  },
+  {
+   "error_mm": 0.0016908212560338143,
+   "geometric_radius_mm": 45.5,
+   "measured_radius_mm": 45.498309178743966,
+   "pass": true,
+   "rule_reaches_floor": true,
+   "tool_reaches_floor": true,
+   "width_mm": 2.2
+  },
+  {
+   "error_mm": 0.0016908212560338143,
+   "geometric_radius_mm": 45.5,
+   "measured_radius_mm": 45.498309178743966,
+   "pass": true,
+   "rule_reaches_floor": true,
+   "tool_reaches_floor": true,
+   "width_mm": 3.0
+  }
+ ],
+ "turning_tolerance_mm": 0.05
+}

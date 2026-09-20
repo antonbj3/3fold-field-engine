@@ -1,0 +1,142 @@
+{
+ "ej_shippad_tackningsjamforelse": {
+  "K_16": {
+   "dpp": {
+    "classes_mean": 6.6,
+    "classes_std": 0.8,
+    "span_mean": 1.8086569522691867e-06,
+    "span_std": 2.9967879712583444e-07
+   },
+   "lhs": {
+    "classes_mean": 6.75,
+    "classes_std": 0.5361902647381804,
+    "span_mean": 1.8625453661633882e-06,
+    "span_std": 1.8715552219895224e-07
+   },
+   "random": {
+    "classes_mean": 6.4,
+    "classes_std": 0.8602325267042626,
+    "span_mean": 1.8202024721759195e-06,
+    "span_std": 2.399037115254992e-07
+   }
+  },
+  "K_64": {
+   "dpp": {
+    "classes_mean": 7.7,
+    "classes_std": 0.45825756949558405,
+    "span_mean": 2.026474002431014e-06,
+    "span_std": 8.299518277416589e-08
+   },
+   "lhs": {
+    "classes_mean": 8.0,
+    "classes_std": 0.0,
+    "span_mean": 2.037846716558921e-06,
+    "span_std": 7.260680724735244e-08
+   },
+   "random": {
+    "classes_mean": 7.85,
+    "classes_std": 0.3570714214271425,
+    "span_mean": 2.0674213380997974e-06,
+    "span_std": 5.5575046250825105e-08
+   }
+  }
+ },
+ "grannmatning_dold_variabel": {
+  "all_ranked_attributes": [
+   [
+    "groove_w",
+    0.46444444444444444,
+    0.0
+   ],
+   [
+    "pocket_d",
+    0.0728267397832616,
+    0.032
+   ],
+   [
+    "drill_r",
+    0.045,
+    0.228
+   ],
+   [
+    "r_land",
+    0.04222222222222227,
+    0.256
+   ],
+   [
+    "pocket_w",
+    0.036296296296296326,
+    0.318
+   ],
+   [
+    "material_grade",
+    0.028603131174950613,
+    0.186
+   ]
+  ],
+  "discovered_planted_attribute": true,
+  "n_candidates_ranked": 6,
+  "n_reports": 60,
+  "top_attribute": "groove_w",
+  "top_p_value": 0.0,
+  "top_score": 0.46444444444444444,
+  "top_split": 2.0207061639347152,
+  "true_threshold": 2.0
+ },
+ "matt_med_rikare_posterior": {
+  "beskrivning": "measured with a threshold posterior that also entertains a two-transition hypothesis family and a prior on whether a transition exists at all; that wider hypothesis space is what the extra probes buy",
+  "rader": [
+   {
+    "bisection_err": 0.038795986622073286,
+    "bisection_est": 2.0387959866220733,
+    "bisection_probes": 5,
+    "bounds": [
+     1.2,
+     5.0
+    ],
+    "description": "turning tool nose radius",
+    "parameter": "groove_w",
+    "speedup": 1.4,
+    "sweep_err": 0.03600000000000003,
+    "sweep_est": 2.036,
+    "sweep_probes": 7,
+    "tol_2pct": 0.076,
+    "true_boundary": 2.0
+   },
+   {
+    "bisection_err": 0.08695652173913082,
+    "bisection_est": 6.086956521739131,
+    "bisection_probes": 4,
+    "bounds": [
+     4.0,
+     16.0
+    ],
+    "description": "milling cutter diameter",
+    "parameter": "pocket_w",
+    "speedup": 1.5,
+    "sweep_err": 0.16000000000000014,
+    "sweep_est": 6.16,
+    "sweep_probes": 6,
+    "tol_2pct": 0.24,
+    "true_boundary": 6.0
+   },
+   {
+    "bisection_err": 0.11705685618728978,
+    "bisection_est": 19.88294314381271,
+    "bisection_probes": 4,
+    "bounds": [
+     5.0,
+     30.0
+    ],
+    "description": "milling flute length",
+    "parameter": "pocket_d",
+    "speedup": 4.25,
+    "sweep_err": 0.5,
+    "sweep_est": 20.5,
+    "sweep_probes": 17,
+    "tol_2pct": 0.5,
+    "true_boundary": 20.0
+   }
+  ]
+ }
+}

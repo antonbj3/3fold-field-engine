@@ -1,0 +1,84 @@
+{
+ "all_comparisons": 8817,
+ "all_equal": 8817,
+ "extra_hashes": [
+  {
+   "equal": true,
+   "object": "physics/u11_gradients",
+   "run1": "12434733bc758e7ed17bea96f4c117b8186008a5ffc53a4d646f9f57e0007774",
+   "run2": "12434733bc758e7ed17bea96f4c117b8186008a5ffc53a4d646f9f57e0007774"
+  },
+  {
+   "equal": true,
+   "object": "physics/u11_margins",
+   "run1": "60acd8f32cf989e0244aa2a1fe466e5eefc54d76dea57d041993e1ed82819fb3",
+   "run2": "60acd8f32cf989e0244aa2a1fe466e5eefc54d76dea57d041993e1ed82819fb3"
+  },
+  {
+   "equal": true,
+   "object": "physics/u14_compliances",
+   "run1": "7eab8b2891ee228160a00d3d1b810fb4f3b27065057c5e139775b8acfa535bac",
+   "run2": "7eab8b2891ee228160a00d3d1b810fb4f3b27065057c5e139775b8acfa535bac"
+  },
+  {
+   "equal": true,
+   "object": "physics/u14_gradients",
+   "run1": "d82785230bd1695102a391998fa44ae911b33a1e93cb2fd041ccb39de6774c8f",
+   "run2": "d82785230bd1695102a391998fa44ae911b33a1e93cb2fd041ccb39de6774c8f"
+  },
+  {
+   "equal": true,
+   "object": "0.5B/probs_0.5B",
+   "run1": "a28f358308217aa7f4866728e9bf8266f6427945e7440d68d1113ca243cb1cea",
+   "run2": "a28f358308217aa7f4866728e9bf8266f6427945e7440d68d1113ca243cb1cea"
+  },
+  {
+   "equal": true,
+   "object": "1.5B/probs_1.5B",
+   "run1": "acec54430e5956424dcba80ee3efe36ed5f8dd0546cb44542591360dd7134acb",
+   "run2": "acec54430e5956424dcba80ee3efe36ed5f8dd0546cb44542591360dd7134acb"
+  },
+  {
+   "equal": true,
+   "object": "physics/metrics",
+   "run1": "7a00ea2750abc7ab36081ae261f1e7ef357d83e79e4b69aa019218b77d9572ae",
+   "run2": "7a00ea2750abc7ab36081ae261f1e7ef357d83e79e4b69aa019218b77d9572ae"
+  },
+  {
+   "equal": true,
+   "object": "reader/metrics_original_schema",
+   "run1": "4bc91e5ebb2eb8f318a76b1c882b2fd808f76d4518e6de3169e361d1011db52d",
+   "run2": "4bc91e5ebb2eb8f318a76b1c882b2fd808f76d4518e6de3169e361d1011db52d"
+  }
+ ],
+ "rapporterat_i_korningen": {
+  "comparisons": 8809,
+  "equal": 8809
+ },
+ "part_a": {
+  "comparisons": 8545,
+  "equal": 8545
+ },
+ "part_a_groups": {
+  "generation": {
+   "comparisons": 1284,
+   "equal": 1284
+  },
+  "manufacturing": {
+   "comparisons": 53,
+   "equal": 53
+  },
+  "parts": {
+   "comparisons": 4868,
+   "equal": 4868
+  },
+  "screening": {
+   "comparisons": 2340,
+   "equal": 2340
+  }
+ },
+ "part_b_numbers": {
+  "comparisons": 264,
+  "equal": 264
+ }
+}
