@@ -79,6 +79,16 @@ tail). A removal in the middle of an owner's cloud would need a general set diff
 assumption is written into `borttagna_per_agare`. The pass is CPU only; the GPU variant of this path
 was measured to differ from the rebuild on exact distance ties and is not carried here.
 
+THE INCREMENTAL PATH'S TIE-BREAK. The owner of a cell is the LOWEST particle id among those at the
+smallest squared distance, and that distance is compared as an EXACT int64 in fixed point (1 quantum
+= 1 nm), never as float equality or float ordering. scipy's cKDTree does not return bit-identical
+distances for symmetric ties -- its summation order differs by 1 ulp -- so a float `==` would leave
+the tie to the tree's structure and the path would stop being a function of the particles alone.
+Measured on the five scenes above, the rule changes exactly 91 cells against the previous float
+KDTree (jump_3cells 66, disappear_at_4 25, the other three 0), and every one of those cells is an
+exact tie where at least two particles share the minimal int64 squared distance. The tree-and-ballot
+engine and an independent chunked int64 brute force break all 91 the same way.
+
 THE MASS-GRID FEED. A simulator's mass grid can be handed to the occupancy with the threshold in the
 feed rather than in this module:
 
@@ -99,6 +109,12 @@ DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..",
                     "data", "tidsfalt_keepout_v1")
 
 TICK_MS = 10.0
+
+# The owner channel's tie-break: coordinates in int64 fixed point, 1 quantum = 1 nm.
+KVANTUM = 1_000_000_000
+TIE_MARGIN = 1e-8
+BALL_EPS = 1e-6
+_INT64_MAX = np.int64(9_223_372_036_854_775_807)
 
 
 def ockupans_fran_partiklar(punkter, ursprung, form, pitch, radie):
@@ -165,7 +181,12 @@ def holje_intrang(punkter, lada_min, lada_max, n_prov=12):
 # id of the particle with the smallest squared distance d2 among particles with d2 <= radie**2,
 # ties by particle index, -1 when there is none. `agare_full` is the rebuild reference (one KDTree
 # over all particles, every cell queried); the incremental path keeps the previous channel and
-# re-judges the cells where the owner can change. Distance arithmetic is float64.
+# re-judges the cells where the owner can change.
+#
+# Distances are compared in int64 fixed point (1 quantum = 1 nm) for the decision that matters --
+# which particle owns a cell -- so an exact tie is an integer equality and the winner is the lowest
+# particle id. Float64 is used only for conservative candidate sets and margin inequalities (never
+# for `==`, never for ordering); cKDTree's distances smear symmetric ties by 1 ulp.
 
 def cellcentra(ursprung, pitch, form):
     """(M, 3) float64 cell centres, C-order, index = i*ny*nz + j*nz + k."""
@@ -200,31 +221,149 @@ def aabb_celler(form, ursprung, pitch, lo, hi, pad=0.0):
     return celler_i_lada(form, ursprung, pitch, lo, hi)
 
 
-def agare_full(punkter, agare, cellcentra, radie):
-    """Rebuild reference: nearest owner per cell via one KDTree over all particles."""
+def kvantisera(X):
+    """(N, 3) int64 fixed-point coordinates: round(x * 1e9). Exact, no float remains."""
+    return np.rint(np.asarray(X, dtype=np.float64) * float(KVANTUM)).astype(np.int64)
+
+
+def r2_kvant(radie):
+    """radie**2 in quanta**2 as a Python int (r <= 0.012 gives (r*1e9)**2 < 2**53)."""
+    return int(np.rint((float(radie) * float(KVANTUM)) ** 2))
+
+
+def _bygg_agartrad(punkter):
+    """One cKDTree per tick, shared by the reference and the incremental subset calls."""
     from scipy.spatial import cKDTree
 
-    tree = cKDTree(np.asarray(punkter, dtype=np.float64))
-    d, idx = tree.query(cellcentra, k=1, workers=1)
-    kanal = np.full(len(cellcentra), -1, dtype=np.int32)
-    traff = d <= float(radie)
-    kanal[traff] = np.asarray(agare, dtype=np.int32)[idx[traff]]
-    return kanal
+    if len(punkter) == 0:
+        return None
+    return cKDTree(np.ascontiguousarray(punkter, dtype=np.float64),
+                   balanced_tree=False, compact_nodes=False)
 
 
-def agare_delvis(punkter, agare, cellcentra, radie, cellindex):
-    """Nearest owner for a subset of cells; identical semantics to `agare_full`."""
-    from scipy.spatial import cKDTree
+def _ballot_agare(Pq, agare, Cq, r2q, bollar):
+    """Vectorised int64 ballot over ball-candidate lists: winner = lowest particle id at the
+    minimal int64 d2 <= r2q. Returns {local row: owner} for rows with an in-range candidate."""
+    counts = np.fromiter((len(b) for b in bollar), dtype=np.int64, count=len(bollar))
+    nz = np.nonzero(counts)[0]
+    if len(nz) == 0:
+        return {}
+    delar = np.concatenate([np.asarray(bollar[j], dtype=np.int64) for j in nz])
+    rader = np.repeat(nz, counts[nz])
+    d = Pq[delar] - Cq[rader]
+    d2 = d[:, 0] * d[:, 0] + d[:, 1] * d[:, 1] + d[:, 2] * d[:, 2]
+    m = d2 <= r2q
+    if not bool(np.any(m)):
+        return {}
+    rm, d2m, pm = rader[m], d2[m], delar[m]
+    ordning = np.lexsort((pm, d2m, rm))  # primary cell, then d2, then particle id
+    rm_s = rm[ordning]
+    forst = np.concatenate((np.ones(1, dtype=bool), rm_s[1:] != rm_s[:-1]))
+    vinn = ordning[forst]
+    return dict(zip(rm[vinn].tolist(), agare[pm[vinn]].tolist()))
 
+
+def agare_exakt(punkter, agare, cellcentra, radie, cellindex, trad=None):
+    """The tie-break rule on a cell subset: cKDTree k=4 with `distance_upper_bound=radie+M`,
+    then the exact int64 ballot only for tied or boundary cells. `trad` (from `_bygg_agartrad`)
+    may be shared across calls over the same particles; the result is identical without it.
+
+    M = TIE_MARGIN. Tree error (~1e-17 m) and the 0.5 nm quantization both lie far below M, so
+    the float margin inequalities are exact proofs, not nearness tests:
+    * out of range (d0 > radie, not within M): -1.
+    * clear (d0 <= radie, |d0-radie| > M, k=2 gap > M): the tree's winner is uniquely nearest
+      by value and nearest in int64 too.
+    * agreed tie (k=2 gap <= M but every neighbour within M/2 of the minimum shares i0's owner,
+      witnessed inside the top 4): the ballot winner has that owner, so no ballot is needed.
+    * ballot (boundary, or a tie without owner agreement): exact int64 ballot over
+      ball(radie + BALL_EPS), winner = lowest id at minimal d2. No float `==` anywhere.
+    """
+    J = 4
+    S = len(cellindex)
+    ut = np.full(S, -1, dtype=np.int32)
+    if S == 0 or len(punkter) == 0:
+        return ut
+    agare = np.asarray(agare, dtype=np.int32)
+    N = len(agare)
+    if trad is None:
+        trad = _bygg_agartrad(punkter)
+    pts = np.ascontiguousarray(np.asarray(cellcentra)[cellindex], dtype=np.float64)
+    M = TIE_MARGIN
+    halv = 0.5 * M
+    with np.errstate(invalid="ignore"):  # empty cells hold inf; handled below, never warn
+        dd, ii = trad.query(pts, k=J, workers=1, distance_upper_bound=float(radie) + M)
+        dd = np.asarray(dd, dtype=np.float64).reshape(S, J)
+        ii = np.asarray(ii, dtype=np.int64).reshape(S, J)
+        d0 = dd[:, 0]
+        gap2 = np.where(np.isinf(dd[:, 1]), np.inf, dd[:, 1] - d0)
+        inG = (dd - d0[:, None]) <= halv
+        gJ = np.where(np.isinf(dd[:, J - 1]), np.inf, dd[:, J - 1] - d0)
+    giltig = ii < N
+    egen = agare[np.where(giltig, ii, 0)]
+    samma0 = giltig & (egen == egen[:, :1])
+    begransad = gJ > halv
+    enasG = begransad & ((~inG | samma0).all(axis=1))
+    nara_r = np.abs(d0 - float(radie)) <= M
+    inom = d0 <= float(radie)
+    oppen = d0 <= float(radie) + M
+    unik = gap2 > M
+    hoppa = inom & (~nara_r) & (unik | enasG)
+    ih = np.nonzero(hoppa)[0]
+    ut[ih] = agare[ii[ih, 0]]
+    exakta = np.nonzero(oppen & (~hoppa))[0]
+    if len(exakta):
+        bollar = trad.query_ball_point(pts[exakta], float(radie) + BALL_EPS)
+        Pq = kvantisera(punkter)
+        Cq = kvantisera(np.ascontiguousarray(np.asarray(cellcentra)[cellindex[exakta]],
+                                             dtype=np.float64))
+        r2q = np.int64(r2_kvant(radie))
+        vinst = _ballot_agare(Pq, agare, Cq, r2q, list(bollar))
+        vr = np.fromiter(vinst.keys(), dtype=np.int64, count=len(vinst))
+        va = np.fromiter(vinst.values(), dtype=np.int32, count=len(vinst))
+        ut[exakta[vr]] = va
+    return ut
+
+
+def agare_brute_kvant(punkter, agare, cellcentra, radie, cellindex):
+    """Independent reference for the same rule: chunked int64 brute force over ALL particles,
+    no tree and no margin. Too slow for the update path; the test uses it to prove that two
+    implementations break every tie identically."""
     cellindex = np.asarray(cellindex, dtype=np.int64)
     ut = np.full(len(cellindex), -1, dtype=np.int32)
-    if len(cellindex) == 0:
+    if len(cellindex) == 0 or len(punkter) == 0:
         return ut
-    tree = cKDTree(np.asarray(punkter, dtype=np.float64))
-    d, idx = tree.query(np.asarray(cellcentra)[cellindex], k=1, workers=1)
-    traff = d <= float(radie)
-    ut[traff] = np.asarray(agare, dtype=np.int32)[idx[traff]]
+    agare = np.asarray(agare)
+    Pq = kvantisera(punkter)
+    Cq = kvantisera(np.ascontiguousarray(np.asarray(cellcentra)[cellindex], dtype=np.float64))
+    r2q = np.int64(r2_kvant(radie))
+    steg = max(1, int(4_000_000 // max(len(Pq), 1)))
+    for s in range(0, len(Cq), steg):
+        cc = Cq[s:s + steg]
+        dx = cc[:, None, 0] - Pq[None, :, 0]
+        dy = cc[:, None, 1] - Pq[None, :, 1]
+        dz = cc[:, None, 2] - Pq[None, :, 2]
+        d2 = dx * dx + dy * dy + dz * dz
+        m = d2 <= r2q
+        d2m = np.where(m, d2, _INT64_MAX)
+        dmin = d2m.min(axis=1)
+        for k in range(len(cc)):
+            if not bool(m[k].any()):
+                continue
+            lika = np.nonzero((d2[k] == dmin[k]) & m[k])[0]
+            ut[s + k] = agare[int(lika.min())]
     return ut
+
+
+def agare_full(punkter, agare, cellcentra, radie, trad=None):
+    """Rebuild reference: exact owner per cell under the int64 tie-break rule."""
+    return agare_exakt(punkter, agare, cellcentra, radie,
+                       np.arange(len(cellcentra), dtype=np.int64), trad=trad)
+
+
+def agare_delvis(punkter, agare, cellcentra, radie, cellindex, trad=None):
+    """Nearest owner for a subset of cells; identical semantics to `agare_full`."""
+    return agare_exakt(punkter, agare, cellcentra, radie,
+                       np.asarray(cellindex, dtype=np.int64), trad=trad)
 
 
 def borttagna_per_agare(punkter_fore, agare_fore, agare):
