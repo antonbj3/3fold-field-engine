@@ -59,7 +59,27 @@ rather than quietly dropped:
   * the recorded route clearance is the field's default 0.5 m in all 200 frames, and the recorded
     hull route error has a median of 98.8 % over a 28-100 % spread. Neither is a measurement of
     anything; the routing leg of that run is not evidence and is not cited here as any.
+
+THE INCREMENTAL PATH AND ITS REMOVAL PASS. Rebuilding the occupancy every tick is what makes the
+path slow; the alternative is to keep the owner channel and re-judge only the cells whose owner can
+change. That set is the radius-expanded AABB of each body's old and new particle positions, plus --
+and this is the part a naive update misses -- the cells a SHRUNKEN owner used to hold. Measured on
+five scenes (a growing pile, three bodies on sinusoids, a body that jumps 3 cells/tick, a body
+removed at tick 4, and a pile that shrinks 60 -> 120 -> 90 -> 60 -> 30 -> 0 particles):
+
+    divergent ticks against the full rebuild    0 of 40 / 200 / 8 / 8 / 6
+    cells the removal pass re-judges            vanish 234 (tick 4); shrink 138, 113, 81, 42
+    removal pass cost when nothing is removed    0 cells on the pile and the three bodies
+    update per tick, CPU                        pile 0.982 / 0.980 ms, three bodies 0.593 / 0.589 ms
+                                                against 0.924 / 0.562 ms before the pass (+5-6 %)
+
+The removal pass is exact under one stated assumption: that an owner's surviving particles are a
+PREFIX of its previous cloud (a shrinking pile keeps frames[f][:n], a vanished body loses its whole
+tail). A removal in the middle of an owner's cloud would need a general set difference; the prefix
+assumption is written into `borttagna_per_agare`. The pass is CPU only; the GPU variant of this path
+was measured to differ from the rebuild on exact distance ties and is not carried here.
 """
+import hashlib
 import json
 import os
 
@@ -117,6 +137,152 @@ def holje_intrang(punkter, lada_min, lada_max, n_prov=12):
     prov = np.stack(np.meshgrid(*axlar, indexing="ij"), axis=-1).reshape(-1, 3)
     inne = h.find_simplex(prov) >= 0
     return bool(inne.any()), int(inne.sum())
+
+
+# ─────────────── owner-indexed occupancy, incrementally updated ───────────────
+# The occupancy in this section carries an owner id per cell instead of a flag: owner(cell) is the
+# id of the particle with the smallest squared distance d2 among particles with d2 <= radie**2,
+# ties by particle index, -1 when there is none. `agare_full` is the rebuild reference (one KDTree
+# over all particles, every cell queried); the incremental path keeps the previous channel and
+# re-judges the cells where the owner can change. Distance arithmetic is float64.
+
+def cellcentra(ursprung, pitch, form):
+    """(M, 3) float64 cell centres, C-order, index = i*ny*nz + j*nz + k."""
+    ursprung = np.asarray(ursprung, dtype=np.float64)
+    axlar = [ursprung[d] + (np.arange(int(form[d])) + 0.5) * float(pitch) for d in range(3)]
+    g = np.stack(np.meshgrid(*axlar, indexing="ij"), axis=-1)
+    return np.ascontiguousarray(g.reshape(-1, 3), dtype=np.float64)
+
+
+def celler_i_lada(form, ursprung, pitch, lo, hi):
+    """Linear indices of the cells whose CENTRE lies inside [lo, hi] (inclusive), ascending."""
+    ursprung = np.asarray(ursprung, dtype=np.float64)
+    lo = np.asarray(lo, dtype=np.float64)
+    hi = np.asarray(hi, dtype=np.float64)
+    form = np.asarray(form, dtype=np.int64)
+    i0 = np.ceil((lo - ursprung) / pitch - 0.5).astype(np.int64)
+    i1 = np.floor((hi - ursprung) / pitch - 0.5).astype(np.int64)
+    i0 = np.maximum(i0, 0)
+    i1 = np.minimum(i1, form - 1)
+    if np.any(i0 > i1):
+        return np.zeros(0, dtype=np.int64)
+    axlar = [np.arange(i0[d], i1[d] + 1) for d in range(3)]
+    g = np.meshgrid(*axlar, indexing="ij")
+    lin = (g[0] * (form[1] * form[2]) + g[1] * form[2] + g[2]).reshape(-1)
+    return np.unique(lin)
+
+
+def aabb_celler(form, ursprung, pitch, lo, hi, pad=0.0):
+    """Conservative superset: every cell whose centre is within `pad` of the AABB [lo, hi]."""
+    lo = np.asarray(lo, dtype=np.float64) - float(pad)
+    hi = np.asarray(hi, dtype=np.float64) + float(pad)
+    return celler_i_lada(form, ursprung, pitch, lo, hi)
+
+
+def agare_full(punkter, agare, cellcentra, radie):
+    """Rebuild reference: nearest owner per cell via one KDTree over all particles."""
+    from scipy.spatial import cKDTree
+
+    tree = cKDTree(np.asarray(punkter, dtype=np.float64))
+    d, idx = tree.query(cellcentra, k=1, workers=1)
+    kanal = np.full(len(cellcentra), -1, dtype=np.int32)
+    traff = d <= float(radie)
+    kanal[traff] = np.asarray(agare, dtype=np.int32)[idx[traff]]
+    return kanal
+
+
+def agare_delvis(punkter, agare, cellcentra, radie, cellindex):
+    """Nearest owner for a subset of cells; identical semantics to `agare_full`."""
+    from scipy.spatial import cKDTree
+
+    cellindex = np.asarray(cellindex, dtype=np.int64)
+    ut = np.full(len(cellindex), -1, dtype=np.int32)
+    if len(cellindex) == 0:
+        return ut
+    tree = cKDTree(np.asarray(punkter, dtype=np.float64))
+    d, idx = tree.query(np.asarray(cellcentra)[cellindex], k=1, workers=1)
+    traff = d <= float(radie)
+    ut[traff] = np.asarray(agare, dtype=np.int32)[idx[traff]]
+    return ut
+
+
+def borttagna_per_agare(punkter_fore, agare_fore, agare):
+    """Owner -> the removed particles (the previous cloud's suffix) whose count fell.
+
+    Assumes an owner's surviving particles are a PREFIX of its previous cloud: a shrinking pile
+    keeps frames[f][:n], a vanished body loses its whole tail. An owner absent now has all its
+    previous particles removed. A removal in the middle of a cloud would need a set difference.
+    """
+    ut = {}
+    agare_fore = np.asarray(agare_fore)
+    for o in np.unique(agare_fore):
+        o = int(o)
+        n_fore = int(np.count_nonzero(agare_fore == o))
+        n_nu = int(np.count_nonzero(np.asarray(agare) == o))
+        if n_nu < n_fore:
+            pts = np.asarray(punkter_fore, dtype=np.float64)[agare_fore == o]
+            svans = pts[n_nu:] if n_nu > 0 else pts
+            if len(svans):
+                ut[o] = svans
+    return ut
+
+
+def borttagningsceller(agare_fore_kanal, punkter, agare, punkter_fore, agare_fore,
+                       form, ursprung, pitch, radie):
+    """Cells that must be re-judged because material was removed.
+
+    For every owner whose count fell, the radius-expanded AABB of the removed particles, restricted
+    to the cells that owner held at the previous tick (the owner's own cell-set difference, never the
+    whole field). A cell can only lose its nearest particle when a particle within `radie` of it
+    disappeared, and every such cell was owned by that particle's owner, so the filter loses nothing.
+    Ascending unique linear indices.
+    """
+    borttagna = borttagna_per_agare(punkter_fore, agare_fore, agare)
+    if not borttagna:
+        return np.zeros(0, dtype=np.int64)
+    delar = []
+    for o, pts in borttagna.items():
+        lo = pts.min(axis=0) - float(radie)
+        hi = pts.max(axis=0) + float(radie)
+        cand = aabb_celler(form, ursprung, pitch, lo, hi)
+        cand = cand[agare_fore_kanal[cand] == o]
+        if len(cand):
+            delar.append(cand)
+    if not delar:
+        return np.zeros(0, dtype=np.int64)
+    return np.unique(np.concatenate(delar))
+
+
+def agare_inkrementell(agare_fore_kanal, punkter, agare, punkter_fore, agare_fore,
+                       form, ursprung, pitch, radie, misstankta, agare_fn):
+    """The incremental update: the removal pass first, then the movement/addition suspect set.
+
+    `agare_fn(punkter, agare, cellindex)` is the per-cell owner back end (a KDTree subset here).
+    The removal pass runs on the copy of the previous channel BEFORE the suspect cells are
+    overwritten, so no stale owner survives a removed particle. Returns
+    (channel, n_removal_cells, n_suspect_cells).
+    """
+    kanal = np.asarray(agare_fore_kanal, dtype=np.int32).copy()
+    bort = borttagningsceller(kanal, punkter, agare, punkter_fore, agare_fore,
+                              form, ursprung, pitch, radie)
+    if len(bort):
+        kanal[bort] = agare_fn(punkter, agare, bort)
+    misstankta = np.asarray(misstankta, dtype=np.int64)
+    if len(misstankta):
+        kanal[misstankta] = agare_fn(punkter, agare, misstankta)
+    return kanal, int(len(bort)), int(len(misstankta))
+
+
+def keepout_dom(agare_kanal, box_index):
+    """Canonical bytes of the keep-out judgement over `box_index` (ascending linear indices)."""
+    occ_idx = box_index[agare_kanal[box_index] >= 0]
+    owners = agare_kanal[occ_idx]
+    nyttolast = np.concatenate([occ_idx.astype("<i8"), owners.astype("<i4")]).tobytes()
+    return nyttolast, int(occ_idx.size)
+
+
+def dom_sha(nyttolast):
+    return hashlib.sha256(nyttolast).hexdigest()
 
 
 def syntetisk_hog(n_ramar=40, per_ram=60, fro=20260920):
