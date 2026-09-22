@@ -78,6 +78,16 @@ PREFIX of its previous cloud (a shrinking pile keeps frames[f][:n], a vanished b
 tail). A removal in the middle of an owner's cloud would need a general set difference; the prefix
 assumption is written into `borttagna_per_agare`. The pass is CPU only; the GPU variant of this path
 was measured to differ from the rebuild on exact distance ties and is not carried here.
+
+THE MASS-GRID FEED. A simulator's mass grid can be handed to the occupancy with the threshold in the
+feed rather than in this module:
+
+    occ = mass > theta * rho * dx**3        theta = 0.5 by default
+
+Measured on the saved MPM bed against the highest particle per column: theta = 0.5 gives a p95
+within one cell in all 50 frames (worst frame 0.4865 mm, cell 2.0833 mm); theta = 0.25 in 46 of 50;
+theta = 0.05 in 8 of 50. The threshold is the feed's, not the field's: `ockupans_fran_massgitter`
+takes the grid, the density and the pitch.
 """
 import hashlib
 import json
@@ -107,6 +117,17 @@ def ockupans_fran_partiklar(punkter, ursprung, form, pitch, radie):
         return np.zeros(form, dtype=bool)
     d, _ = cKDTree(np.asarray(punkter, dtype=np.float64)).query(platt, k=1)
     return (d <= radie).reshape(form)
+
+
+def ockupans_fran_massgitter(massa, rho, dx, theta=0.5):
+    """Occupancy of a simulator mass grid: `mass > theta * rho * dx**3` cell by cell.
+
+    The threshold lives in the feed, not in the field: this function only applies it. theta is the
+    share of a full cell mass (rho*dx**3), so the default 0.5 is half a cell mass, which is the MPM's
+    own surface definition. The grid is indexed [ix, iy, iz] with node iy at height iy*dx.
+    """
+    troskel = float(theta) * (float(rho) * float(dx) ** 3)
+    return np.asarray(massa, dtype=np.float64) > troskel
 
 
 def keepout_intrang(punkter, lada_min, lada_max):
