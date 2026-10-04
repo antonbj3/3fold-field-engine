@@ -1,0 +1,24 @@
+{
+  "exit": 0,
+  "cases": 2,
+  "controls": 19,
+  "sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "compiler_flags": [
+    "-O1",
+    "-g",
+    "-fopenmp",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-fno-omit-frame-pointer",
+    "-fsanitize=address,undefined",
+    "-fno-sanitize-recover=all"
+  ],
+  "source_sha256": {
+    "src/field_engine/mesh_sdf_native_v1/field.cpp": "c09a6374ad61ee9bb691fa614fa42c8ce7909748561f5314569785cabde69209",
+    "tests/native_mesh_sdf_sanitizer.cpp": "b14a5b561cbcfefd6ffc5963dfae46fd58d75aff5bd76673b48884b5f874aba4"
+  },
+  "scope": "Axis box and 140 stacked slabs (280 hits per column, past the 256-key column buffer): solid, surface and sd bytes exact against a brute-force reference for 1 and 4 threads, guard canaries intact, block classification and tile gather; field, classify and tile calls with bad face indices, empty/overflowing counts, zero or non-finite pitch and origin, null pointers and out-of-range block ids are refused before any output write."
+}

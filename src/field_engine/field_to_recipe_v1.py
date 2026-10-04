@@ -64,6 +64,7 @@ CYL_TOL_PITCH = 0.75        # the same band for a cylinder's radius
 PLAN_MIN_AREA_FRAC = 0.01   # a planar region must carry this fraction of the surface to be a plane
 CYL_MIN_AREA_FRAC = 1.0e-3  # a leftover component must carry this fraction to be offered a cylinder
 CYL_INLIER_MIN_FRAC = 0.5   # and this fraction of the component must end up inside the band
+KASA_RANG_TOL = 1.0e-4      # thickness/length of the centred cross-axis point cloud below this: no circle
 TACKNING_NORMAL_TOL_DEG = 25.0  # normal agreement required before a triangle counts as covered
 RUND_MM = 6                 # rounding of the reported fit, in mm decimals
 
@@ -209,6 +210,22 @@ def _cyl_passning(normal, area, cent, idx):
     u, v = P @ e1, P @ e2
     A = np.stack([u, v, np.ones_like(u)], axis=1) * w[:, None]
     b = (u ** 2 + v ** 2) * w
+    # Null-space check before the fit is used. Points that are collinear across the axis (a flat
+    # triangle set: every normal parallel) leave the circle system rank 2 of 3; lstsq then returns
+    # the minimum-norm member of a one-parameter family of circles, whose radius is set by the
+    # coordinate origin (a flat strip read r = 5.89 mm at the origin and 20.0 mm 37.3 mm away) or by
+    # float32 noise (r = 258 km, inward), and its residual still passes the band. A flat set
+    # determines no cylinder, so it is refused like a non-positive r^2. The measure is the aspect of
+    # the weighted, centred cross-axis point cloud (thickness over length, s_min/s_max), which does
+    # not change under translation, rotation or scale. (The column-normalised [u, v, 1] rank does:
+    # it let a tilted flat strip through when its plane passed within 0.01 mm of the origin, and
+    # refused a real r = 300 mm arc 1 km from it.) Measured: real arcs >= 8.6e-3 (R 20-3000 mm, any
+    # offset), flat strips <= 5.6e-6 (float32 vertices of a 550 mm window).
+    uc0, vc0 = np.average(u, weights=w), np.average(v, weights=w)
+    Q = np.stack([u - uc0, v - vc0], axis=1) * np.sqrt(w)[:, None]
+    sv = np.linalg.svd(Q, compute_uv=False)
+    if not np.all(np.isfinite(sv)) or sv[-1] <= KASA_RANG_TOL * sv[0]:
+        return ax, P.mean(axis=0), 0.0, float("inf"), 0
     sol, *_ = np.linalg.lstsq(A, b, rcond=None)
     uc, vc = 0.5 * sol[0], 0.5 * sol[1]
     r2 = sol[2] + uc ** 2 + vc ** 2

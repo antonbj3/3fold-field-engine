@@ -1,0 +1,28 @@
+{
+  "cases": 11,
+  "controls": 33,
+  "canaries": true,
+  "exact": true,
+  "exit": 0,
+  "sanitizers": [
+    "address",
+    "undefined"
+  ],
+  "compiler_flags": [
+    "-std=c++17",
+    "-O1",
+    "-g",
+    "-fopenmp",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-fno-omit-frame-pointer",
+    "-fsanitize=address,undefined",
+    "-fno-sanitize-recover=all",
+    "-no-pie"
+  ],
+  "source_sha256": {
+    "src/field_engine/mesh_gate_native_v1/gate.cpp": "662fb85a58b85a32a1e406d8db823078fb6c532818abff02013fd81dd639bcde",
+    "tests/native_mesh_gate_sanitizer.cpp": "d905c6d8538e2d7cf6aac73b211659c32385af578f9cc41ddf13d0832b229f1c"
+  },
+  "scope": "11 exact edge/parity/AABB cases including internal BVH nodes and 1/4-thread parity; 33 invalid-size/index/null/non-finite/capacity refusals and guard canaries; no field-sign reuse."
+}

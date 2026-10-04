@@ -155,6 +155,8 @@ retain their own criteria. A local pass does not imply an L4 latency pass.
 | src/field_engine/faltkarna_v1.py | VERIFIED-FRESH | Block-sparse GPU-resident SDF field kernel. |
 | src/field_engine/faltkarna_v1_g7_fix.py | VERIFIED-FRESH | GPU-resident variant of the sparse field reconstruction, with correctness and benchmark gates. |
 | src/field_engine/faltkarna_v1_mesh_to_sdf.py | VERIFIED-FRESH | Mesh to SDF: turn a triangle mesh into a signed field and a sparse block-classified occupancy. |
+| src/field_engine/mesh_sdf_native_v1.py | VERIFIED-FRESH | Optional `metod="raypar_vindning_native"`; NumPy stays default. Build `mesh_sdf_native_v1/field.cpp` with `-O3 -fopenmp -fno-fast-math -ffp-contract=off -shared -fPIC` and set FIELD_MESH_SDF_LIBRARY; the loaded library is bound to its sha256. No library, a refused call, or vertex or face arrays the kernel does not take (not (n, 3), indices outside the vertex range) run the NumPy path with a declared, warned fallback. Solid, surface and sd bits equal NumPy on 7 test meshes, 20 further meshes (degenerate and duplicate faces, thin walls, more than 256 hits per column, open and overlapping bodies, 1e6 mm offset) at 1–16 threads, and 8 timing cases up to 17,008,992 cells. Field stage warm, 4 threads, shared host: 0.8–15.7 ms vs NumPy 10.7–615 ms up to 461,397 cells; 534–552 ms vs 7.7–9.1 s at 17,008,992 cells. |
+| src/field_engine/mesh_sdf_native_v1/field.cpp | VERIFIED-FRESH | Binary64 ray winding, two exact Felzenszwalb–Huttenlocher EDTs with SciPy's distance formula, block classifier and tile gather, OpenMP; no fast-math or contraction. Arguments, including face indices, are checked before any output write. Two exact cases and 19 refusal controls ASan/UBSan clean. reports/native_mesh_sdf_sanitizer.json. |
 | src/field_engine/mesh_to_sdf_small_features_v1.py | VERIFIED-FRESH | Small-feature resolution of the mesh-to-SDF path, measured on a plate with five through holes. |
 | src/field_engine/faltkarna_v1_multires.py | VERIFIED-FRESH | Per-block pitch for the block-sparse SDF: a two-level structure where every active block carries |
 | src/field_engine/faltkarna_v1_svep_v2_loft.py | VERIFIED-FRESH | Sweep/loft as a native sparse-field op: an explicit ruled-loft mesh, not a station Voronoi. |
@@ -5869,12 +5871,13 @@ unaccepted. Source/document scrub patterns have zero matches; README is unchange
 | tests/native_csg_sanitizer.cpp | VERIFIED-FRESH | 24 exact native pack/free/tile reconstructions, AddressSanitizer and UndefinedBehaviorSanitizer clean. |
 | tests/native_lbm_collision_sanitizer.cpp | VERIFIED-FRESH | Eight native controls: exact two-cell result and canaries, empty operation, negative/overflow count, invalid scalars and null-pointer refusals; ASan/UBSan clean. |
 | tests/native_csg_batch_sanitizer.cpp | VERIFIED-FRESH | 24 exact pack/tile/batch cases plus bad-reference and overflow checks; address/undefined sanitizers clean. |
+| tests/native_mesh_sdf_sanitizer.cpp | VERIFIED-FRESH | Two exact native mesh fields against brute force (one past the 256-key column buffer), 1/4-thread identity, canaries, classify/tile gather and 19 refusal controls; ASan/UBSan clean. `c++ -std=c++17 -O1 -g -fopenmp -fno-fast-math -ffp-contract=off -fno-omit-frame-pointer -fsanitize=address,undefined -fno-sanitize-recover=all tests/native_mesh_sdf_sanitizer.cpp -o /tmp/field_mesh_sdf_sanitizer`; also run by tests/test_mesh_sdf_backends.py, skipped without a compiler or sanitizer runtime. |
 | scripts/verify_csg.py | VERIFIED-FRESH | 6/6 aggregate gates; seven isolated fresh probes, 40178560 exact array bytes, documented numbers/source hashes and negative controls pass. |
 | scripts/build_prepared_service.py | VERIFIED-FRESH | Eight artifacts compile without GPU initialization; public-build helper/raw-hit/full service passes locally. |
 | scripts/verify_prepared_service.py | VERIFIED-FRESH | Four CPU probes twice and three GPU probes pass unchanged gates and complete-array/source checks; service slice only. |
 | scripts/prepared_verifier_controls.py | VERIFIED-FRESH | Thirteen report/build/array controls repeat exactly; no synthetic artifact is executed. |
 | Makefile | VERIFIED-FRESH | Explicit prepared build/CPU/GPU recipes and existing CSG subset recipe; no all-module coverage claim. |
-| scripts/verify.py | VERIFIED-FRESH | 37/173 fresh rows mapped; 136 remain unmapped and three GPU rows are deferred in CPU mode. Selected groups pass; complete coverage remains unfulfilled. |
+| scripts/verify.py | VERIFIED-FRESH | 37/176 fresh rows mapped; 139 remain unmapped and three GPU rows are deferred in CPU mode. Selected groups pass; complete coverage remains unfulfilled. |
 | scripts/verify_controls.py | VERIFIED-FRESH | 92 controls pass; explicit named case lists, nonempty unique contracts, full-array mismatch retention and independent execution after failure. |
 | requirements.txt | VERIFIED-FRESH | Add libigl for the independent open-mesh GPU oracle; installed 2.6.3 used by complete prepared-service validation. |
 | scripts/verify_geometry.py | OWN-GATE-FAIL | Local aggregate 5/5 twice; Modal full-report/array reproduction fails on the original face-order-dependent adaptive fixture, despite its own nine gates passing. |
@@ -6008,3 +6011,51 @@ retain their engine includes at their original source locations.
 | probes/field_engine/field_rt_winding_local_v1.py | SYNTHETIC-ONLY | All five fixed gates PASS on ten fixtures x two processes;0 occupancy/EDT mismatches, full winding repeats exact, native binary unchanged. |
 | probes/field_engine/field_recipe_oracle_v1.py | VERIFIED-FRESH | 3/3 gates, four zero-difference fixtures twice and two detected recipe mutations twice; reports/field_recipe_oracle.json and full arrays. |
 | probes/field_engine/field_rt_cold_phases.py | VERIFIED-FRESH | 3/3 observer gates; all full arrays exact; cold phase table and build hashes in reports/cold_phases.json. |
+
+
+## Optional native complete mesh gate
+
+The NumPy field and trimesh gate remain the default. For the optional native field,
+configure both explicit libraries to accelerate the complete independent gate:
+
+```sh
+mkdir -p build/native
+c++ -std=c++17 -O3 -fopenmp -fno-fast-math -ffp-contract=off -shared -fPIC src/field_engine/mesh_sdf_native_v1/field.cpp -o build/native/mesh_sdf_native.so
+c++ -std=c++17 -O3 -fopenmp -fno-fast-math -ffp-contract=off -shared -fPIC src/field_engine/mesh_gate_native_v1/gate.cpp -o build/native/mesh_gate_native.so
+export FIELD_MESH_SDF_LIBRARY="$PWD/build/native/mesh_sdf_native.so"
+export FIELD_MESH_GATE_LIBRARY="$PWD/build/native/mesh_gate_native.so"
+```
+
+Use `mesh_to_sdf_del(..., metod="raypar_vindning_native")`. With an actual native
+field, a configured gate library and an importable rtree, `grind_backend=None`
+selects the native gate; otherwise it selects trimesh. Override with `grind_backend="native"` or `"trimesh"`.
+The direct gate takes `vattentathetsgrind(..., backend="native")`. No import compiles
+or writes artifacts. Both loaded libraries are bound to their SHA256; replacing
+a library in a running process requires a restart. A refused/unavailable native
+gate reruns the complete original gate, declares `grind_fallback` and warns.
+
+The native gate preserves trimesh's tolerance-based vertex merging, exact edge
+multiplicity, signed volume, probe RNG/positions, independent ray parity and
+geometry-based depth decisions. Empty-face input uses the reference because
+trimesh versions differ there. Missing rtree preserves the original depth fallback.
+The proximity hierarchy only changes candidate retrieval; trimesh retains point
+arithmetic/tie rules and handles depth comparisons in the tie band. Near arithmetic
+thresholds use the original parity probe. This is the existing gate semantics,
+which does not certify self-intersection freedom or vertex manifoldness.
+
+Tests: `tests/test_mesh_gate_native.py` and `tests/mesh_gate_cases.py` include holes,
+duplicates, inversion, T junctions, self-intersection, slivers, tolerance-bin gaps,
+open sampling planes, invalid input, 100 seeded mutations, rank/volume identity,
+depth/parity boundaries and native-vs-rtree AABB sets.
+`tests/native_mesh_gate_sanitizer.cpp` checks 11 exact cases and 33 refusal controls
+under ASan/UBSan (receipt: `reports/native_mesh_gate_sanitizer.json`). Build/run:
+
+```sh
+c++ -std=c++17 -O1 -g -fopenmp -fno-fast-math -ffp-contract=off -fno-omit-frame-pointer -fsanitize=address,undefined -fno-sanitize-recover=all -no-pie tests/native_mesh_gate_sanitizer.cpp -o build/native/mesh_gate_sanitizer
+OMP_NUM_THREADS=4 build/native/mesh_gate_sanitizer
+```
+
+Empirical scope: NumPy2.2.6/trimesh4.12.2 with rtree and NumPy2.5.3/trimesh5.1.0
+without rtree; normal source build has no fast-math, contraction or march=native.
+The field dispatch also requires vertices/faces of shape(n,3), preserving the
+reference exception instead of allowing a flat vertex buffer into native code.

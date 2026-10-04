@@ -36,8 +36,8 @@ def test_korpusen_i_repot_ar_den_som_mattes(ref):
 
 def test_flodet_loser_alla_elva_dar_centrumlinjen_inte_gor_det(ref):
     rader = ref["uppgifter"]
-    assert sum(1 for r in rader if r["len_lap_mm"] == r["len_lap_mm"]) == 11
-    assert sum(1 for r in rader if r["len_astar_mm"] == r["len_astar_mm"]) == 11
+    assert sum(1 for r in rader if np.isfinite(r["len_lap_mm"])) == 11
+    assert sum(1 for r in rader if np.isfinite(r["len_astar_mm"])) == 11
     assert sum(1 for r in rader if r["naive_feasible"]) == 3
 
 

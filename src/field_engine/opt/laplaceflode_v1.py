@@ -47,6 +47,7 @@ import sys
 import numpy as np
 from scipy import sparse
 from scipy.ndimage import distance_transform_edt
+from scipy.sparse.csgraph import connected_components
 from scipy.sparse.linalg import cg
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -62,6 +63,7 @@ KORPUS = os.environ.get("FIELD_ENGINE_DUCT_CORPUS", os.path.join(ROOT, "data", "
 P_KONDUKTANS = 1.5                 # conductance exponent on the clearance
 GAMMA_STROM = 1.5                  # how sharply the path extraction prefers a high-current edge
 KONDUKTANS_GOLV = 0.1              # a cell at the wall still conducts a little, or the graph splits
+INFO_SKILDA_KOMPONENTER = -1       # los_potential: inlet and outlet in different components, no solve
 
 
 def bygg_gitterlaplacian(occ, edt_mm, pitch_mm, p_kond=P_KONDUKTANS):
@@ -94,18 +96,172 @@ def bygg_gitterlaplacian(occ, edt_mm, pitch_mm, p_kond=P_KONDUKTANS):
     return n, nodkarta, u, v, kond, L
 
 
+# Dirichlet physics is distinct from the floating, no-flux routing network above.
+def bygg_sdf_dirichlet(sd_mm, pitch_mm, randvarde=0.0, theta_merge=1e-3):
+    """Symmetric cut-boundary Poisson operator from the engine SDF (sd<0 in the domain).
+
+    Returns a system dict with A, P, offset, node_map, free, boundary_rhs and diagnostics.
+    A is in lattice units; physical source f enters as pitch_mm**2 * P.T @ f. P reconstructs
+    the original inside nodes: u = P @ reduced_u + offset. Constant Dirichlet value only.
+    The domain must be enclosed by nonnegative samples; no artificial box boundary is invented.
+
+    Boundary energy is (u-g)^2/(2*theta), with theta from linear SDF interpolation. For a tiny
+    crossing, merge toward the opposite interior neighbour with u_i-g=theta/(1+theta)*(u_j-g).
+    This is a linear reconstruction, not exact Schur elimination. Since P has one positive entry
+    per row, P.T A P retains symmetric M-matrix signs. A subthreshold node without a mergeable
+    neighbour keeps its eps-floored 1/theta row; a node with no free neighbour at all is refused.
+    Accuracy depends on the supplied zero set, and is not upgraded by calling an EDT a SDF.
+    Only sign changes between samples are seen: a solid wall thinner than a pitch that leaves both
+    neighbouring samples negative is invisible, and a spurious nonnegative sample inside the domain
+    becomes a silent interior Dirichlet hole. Neither is detected here.
+    """
+    from sdf_rand_v1 import sdf_randlankar
+    sd = np.asarray(sd_mm, dtype=np.float64)
+    h, g = float(pitch_mm), float(randvarde)
+    if not np.isfinite(h) or h <= 0 or not np.isfinite(g):
+        raise ValueError("positive finite pitch and finite constant boundary value required")
+    if not np.isfinite(theta_merge) or not 0 <= theta_merge < 0.5:
+        raise ValueError("theta_merge must be in [0, 0.5)")
+    directions = np.concatenate([np.eye(sd.ndim, dtype=int), -np.eye(sd.ndim, dtype=int)])
+    free, links = sdf_randlankar(sd, directions)
+    for axis in range(sd.ndim):
+        if np.take(free, [0, sd.shape[axis]-1], axis=axis).any():
+            raise ValueError("Dirichlet domain needs a nonnegative SDF halo on every side")
+    n, nk, _, _, _, L = bygg_gitterlaplacian(~free, np.ones(sd.shape), h, p_kond=0.0)
+    if n == 0:
+        raise ValueError("empty Dirichlet domain")
+    boundary_nodes = np.concatenate([nk.ravel()[idx] for idx, _, _, _ in links])
+    theta = np.concatenate([t for _, t, _, _ in links])
+    if np.any(theta <= 0):
+        raise ValueError("nonpositive SDF crossing")
+    d = np.zeros(n)
+    # Floor only at floating-point scale; report its use. Never clamp to the merge threshold.
+    theta_safe = np.maximum(theta, np.finfo(float).eps)
+    np.add.at(d, boundary_nodes, 1.0/theta_safe)
+    A_full = L + sparse.diags(d)
+    small = np.zeros(n, bool)
+    small[boundary_nodes[theta < theta_merge]] = True
+    master = np.arange(n)
+    alpha = np.ones(n)
+    best = np.ones(n)
+    for idx, t, back, back_inside in links:
+        nodes = nk.ravel()[idx]
+        back_nodes = nk.ravel()[back]
+        good = (t < theta_merge) & back_inside
+        good &= ~small[np.maximum(back_nodes, 0)]
+        good &= t < best[nodes]
+        master[nodes[good]] = back_nodes[good]
+        alpha[nodes[good]] = t[good]/(1.0+t[good])
+        best[nodes[good]] = t[good]
+    # A subthreshold node whose interior neighbours are all subthreshold too (the corner of a box whose
+    # faces lie on lattice planes, or within the winding query's 1e-4*pitch jitter of them) keeps its
+    # own unknown with the eps-floored 1/theta: same signs, solved like theta_merge=0. Only a node with
+    # no free lattice neighbour at all is a sliver the grid cannot resolve.
+    unmerged = small & (master == np.arange(n))
+    if unmerged.any():
+        free_deg = np.asarray((L != 0).sum(axis=1)).ravel() - 1
+        if np.any(unmerged & (free_deg <= 0)):
+            raise ValueError("subthreshold SDF sliver has no interior merge neighbour; refine geometry/grid")
+        small &= ~unmerged
+    keep = ~small
+    ids = -np.ones(n, dtype=int)
+    ids[keep] = np.arange(keep.sum())
+    P = sparse.coo_matrix((alpha, (np.arange(n), ids[master])), shape=(n, int(keep.sum()))).tocsr()
+    offset = (1.0-alpha)*g
+    A = (P.T @ A_full @ P).tocsr()
+    boundary_rhs = np.asarray(P.T @ (d*alpha*g - L @ offset)).ravel()
+    return dict(A=A, P=P, offset=offset, free=free, node_map=nk,
+                boundary_rhs=boundary_rhs, theta=theta, boundary_nodes=boundary_nodes,
+                pitch_mm=h, stats=dict(nodes=n, reduced_nodes=int(keep.sum()),
+                merged_nodes=int(small.sum()), unmerged_small_nodes=int(unmerged.sum()),
+                theta_min=float(theta.min()),
+                floored_links=int(np.sum(theta < np.finfo(float).eps)), nnz=int(A.nnz)))
+
+
+def los_sdf_poisson(sd_mm, pitch_mm, rhs=1.0, randvarde=0.0, theta_merge=1e-3,
+                    tol=1e-11, maxiter=20000):
+    """Solve -lap u=rhs with constant Dirichlet data, returning (dense field, system, CG info).
+
+    A failed CG solve produces NaNs inside, never an unconverged physics answer; one correction solve
+    on the explicitly recomputed residual precedes that verdict. rhs is a scalar or an array of the
+    SDF shape. Empty/out-of-halo domains and isolated slivers raise ValueError.
+    """
+    system = bygg_sdf_dirichlet(sd_mm, pitch_mm, randvarde, theta_merge)
+    source = np.broadcast_to(np.asarray(rhs, dtype=float), system["free"].shape)[system["free"]]
+    if not np.all(np.isfinite(source)):
+        raise ValueError("source must be finite in the domain")
+    b = pitch_mm**2 * np.asarray(system["P"].T @ source).ravel() + system["boundary_rhs"]
+    A = system["A"]
+    M = sparse.diags(1.0/A.diagonal())
+    x, info = cg(A, b, rtol=tol, atol=0.0, maxiter=maxiter, M=M)
+    residual = float(np.linalg.norm(A @ x - b)/max(np.linalg.norm(b), 1e-300))
+    if info == 0 and residual > max(10*tol, 1e-14):
+        # CG's recursive residual drifts from the true one on fine grids (2D N=768: 1.6e-10 after a
+        # reported convergence at 1e-11). One correction solve on the explicit residual, then re-gate.
+        dx, info = cg(A, b - A @ x, rtol=0.01, atol=0.0, maxiter=maxiter, M=M)
+        x = x + dx
+        residual = float(np.linalg.norm(A @ x - b)/max(np.linalg.norm(b), 1e-300))
+        system["stats"]["residual_correction"] = True
+    system["stats"]["relative_residual"] = residual
+    field = np.full(system["free"].shape, np.nan)
+    if info == 0 and np.all(np.isfinite(x)) and residual <= max(10*tol, 1e-14):
+        field[system["free"]] = system["P"] @ x + system["offset"]
+    else:
+        info = int(info) if info else -2
+    return field, system, int(info)
+
+
+def nollrum_komponenter(L):
+    """The null space of the network Laplacian, as component labels.
+
+    L's null space is spanned by one indicator vector per connected component of the free space, not
+    only by the global constant. Returns (number of components = null-space dimension, label per
+    node); the basis vector of component k is (label == k). A stored entry of value zero is not a
+    conductance, so explicit zeros are dropped before labelling (csgraph counts them as edges)."""
+    G = sparse.csr_matrix(L, copy=True)
+    G.eliminate_zeros()
+    return connected_components(G, directed=False)
+
+
 def los_potential(L, n, s_nod, t_nod, tol=1e-10, maxiter=2000):
     """One Laplace solve: unit current in at the inlet, out at the outlet.
 
-    The Laplacian is singular by one constant (a floating network has no absolute potential), so the
-    solution is only defined up to an additive constant; the effective resistance, which is a
-    DIFFERENCE of potentials, is not. That is the quantity read off here."""
+    The Laplacian is singular by one constant per connected component (a floating network has no
+    absolute potential), so the solution is only defined up to an additive constant per component;
+    the effective resistance, which is a DIFFERENCE of potentials, is not. That is the quantity read
+    off here.
+
+    The system is consistent only when N^T b = 0 for the null-space basis N, i.e. when inlet and
+    outlet lie in the same component. When they do not, no current can flow and the effective
+    resistance is +inf exactly; CG is then not run, since on that inconsistent system it returns a
+    finite potential difference set by its iteration count (a wall-split 24 x 24 room read
+    R_eff = -5.09e14 at maxiter 2000). The return is (nan potential, inf, INFO_SKILDA_KOMPONENTER).
+    A CG run that does not converge (info != 0) returns R_eff = nan, uncertain, never the
+    unconverged difference."""
+    if s_nod == t_nod:
+        return np.zeros(n), 0.0, 0         # no separation, R_eff = 0 exactly (b would be -e_s, inconsistent)
+    _nk, etikett = nollrum_komponenter(L)
+    if etikett[s_nod] != etikett[t_nod]:
+        return np.full(n, np.nan), float("inf"), INFO_SKILDA_KOMPONENTER
     b = np.zeros(n)
     b[s_nod], b[t_nod] = 1.0, -1.0
     M = sparse.diags(1.0 / np.maximum(L.diagonal(), 1e-12))
     x, info = cg(L, b, rtol=tol, maxiter=maxiter, M=M)
     x = x - x.mean()
-    return x, float(x[s_nod] - x[t_nod]), int(info)
+    r_eff = float(x[s_nod] - x[t_nod])
+    if info != 0 or not np.isfinite(r_eff):
+        r_eff = float("nan")
+    return x, r_eff, int(info)
+
+
+def r_eff_status(r_eff, info):
+    """INFEASIBEL: inlet and outlet in different components, R_eff = inf is exact. OSÄKER: the solve
+    did not converge or gave a non-finite difference. OK otherwise."""
+    if info == INFO_SKILDA_KOMPONENTER and r_eff == float("inf"):
+        return "INFEASIBEL"
+    if info != 0 or not np.isfinite(r_eff):
+        return "OSÄKER"
+    return "OK"
 
 
 def _grannlista(n, u, v):
@@ -158,17 +314,24 @@ def rutt_genom_flode(occ, pitch_mm, start, mal, min_r_mm):
     edt_mm = distance_transform_edt(fri) * pitch_mm
     n, nodkarta, u, v, kond, L = bygg_gitterlaplacian(occ, edt_mm, pitch_mm)
     s, t = int(nodkarta[start]), int(nodkarta[mal])
-    pot, r_eff, _ = los_potential(L, n, s, t)
+    pot, r_eff, info = los_potential(L, n, s, t)
+    status = r_eff_status(r_eff, info)
+    if status == "INFEASIBEL" or not np.all(np.isfinite(pot)):
+        # No current path (or no usable potential): no route. An OSÄKER solve still has a finite
+        # potential, and the route extracted from it is a real path whose clearance and length are
+        # measured on the path itself, so it is kept; only R_eff is withheld (nan, OSÄKER).
+        return {"bana": [], "clearance_mm": float("nan"), "langd_mm": float("nan"),
+                "r_eff": r_eff, "marginal_mm": float("nan"), "r_eff_status": status}
     koordinater = np.argwhere(fri)
     bana = extrahera_strombana(_grannlista(n, u, v), koordinater, s, t, kond * (pot[u] - pot[v]))
     if not bana:
         return {"bana": [], "clearance_mm": float("nan"), "langd_mm": float("nan"),
-                "r_eff": r_eff, "marginal_mm": float("nan")}
+                "r_eff": r_eff, "marginal_mm": float("nan"), "r_eff_status": status}
     clr = float(min(edt_mm[p] for p in bana))
     langd = float(sum(np.linalg.norm(np.array(bana[i]) - np.array(bana[i + 1])) * pitch_mm
                       for i in range(len(bana) - 1)))
     return {"bana": bana, "clearance_mm": clr, "langd_mm": langd, "r_eff": r_eff,
-            "marginal_mm": clr - min_r_mm}
+            "marginal_mm": clr - min_r_mm, "r_eff_status": status}
 
 
 def korpusuppgifter(korpus=None):
@@ -207,7 +370,7 @@ def kor_uppgift(task_id, korpus=None):
             "astar_loste": bool(p_astar), "flode_loste": bool(flode["bana"]),
             "clr_astar_mm": clr_astar, "clr_flode_mm": flode["clearance_mm"],
             "langd_astar_mm": langd_astar, "langd_flode_mm": flode["langd_mm"],
-            "r_eff": flode["r_eff"]}
+            "r_eff": flode["r_eff"], "r_eff_status": flode["r_eff_status"]}
 
 
 def las_korpusreferens(sokvag=None):

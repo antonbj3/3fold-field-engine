@@ -13,13 +13,18 @@ extern "C" __global__ void __intersection__prepared_columns(){
  if(interval_outside(params.interval_corners[3*face],params.interval_corners[3*face+1],params.interval_corners[3*face+2],params.interval_queries[column]))return;
  double3 a=params.corners[3*face],b=params.corners[3*face+1],c=params.corners[3*face+2];
  double d=(b.x-a.x)*(c.y-a.y)-(b.y-a.y)*(c.x-a.x);
- if(!(fabs(d)>params.area_floor))return;
+ double e1x=b.x-a.x,e1y=b.y-a.y,e2x=c.x-a.x,e2y=c.y-a.y;
+ double scale=fmax(fmax(fabs(e1x),fabs(e1y)),fmax(fabs(e2x),fabs(e2y)));
+ if(!(fabs(d)>1.e-12*scale*scale))return;
  double2 q=params.queries[column];
  double l0=(b.x-q.x)*(c.y-q.y)-(b.y-q.y)*(c.x-q.x);
  double l1=(c.x-q.x)*(a.y-q.y)-(c.y-q.y)*(a.x-q.x);
  double l2=(a.x-q.x)*(b.y-q.y)-(a.y-q.y)*(b.x-q.x);
  int sign=(d>0)?1:-1;if(l0*sign<0 || l1*sign<0 || l2*sign<0)return;
- double z=(l0*a.z+l1*b.z+l2*c.z)/d;
+ double edge=fmax(scale,fmax(fabs(b.z-a.z),fabs(c.z-a.z)));
+ double z=(fabs(a.z)>1024.*edge)
+   ? a.z+(l1*(b.z-a.z)+l2*(c.z-a.z))/d
+   : (l0*a.z+l1*b.z+l2*c.z)/d;
  optixReportIntersection(1.f,0,__double2loint(z),__double2hiint(z),unsigned(sign));
 }
 extern "C" __global__ void __anyhit__winding(){

@@ -28,6 +28,7 @@ import math
 import os
 import sys
 import time
+import warnings
 
 import numpy as np
 from scipy import ndimage
@@ -87,6 +88,9 @@ def _import_warp():
 # A second path is implemented and measured: metod="winding_gpu" reads sd directly from Warp's
 # mesh_query_point_sign_winding_number (BVH plus generalised winding number), giving exact mm
 # distances instead of a voxel-quantised transform, and no distance transform at all. It needs a GPU.
+# The same mesh query is exposed on CPU by metod="winding_cpu" for physics consumers that need
+# subcell distances. It retains the existing float32 arithmetic and deterministic 1e-4*pitch jitter;
+# its zero set is the triangle mesh, so tessellation/scan errors are not removed by the query.
 # The default is the host path because it is deterministic without a GPU and because the signing also
 # runs in worker processes without a CUDA context.
 #
@@ -94,7 +98,27 @@ def _import_warp():
 # show before and after in one run.
 # ================================================================================================
 METOD_STANDARD = os.environ.get("FALTKARNA_SDF_METOD", "raypar_vindning")
-METODER = ("raypar_vindning", "raypar_paritet", "winding_gpu", "skal_floodfill")
+METODER = ("raypar_vindning", "raypar_paritet", "winding_gpu", "winding_cpu", "skal_floodfill", "raypar_vindning_native")
+# raypar_vindning_native (mesh_sdf_native_v1): the reference's binary64 operation sequence as a threaded
+# C++ kernel, bit-identical solid, surface and sd arrays (tests/test_mesh_sdf_backends.py). The library
+# is built explicitly and named by FIELD_MESH_SDF_LIBRARY. A missing library, a backend failure or input
+# the kernel does not take (vertices or faces that are not (n, 3) arrays, face indices outside the
+# vertex array) runs the NumPy path instead; the fallback is declared in the diagnostics as
+# "fallback" and emitted as a RuntimeWarning.
+_ACCELERERADE = ("raypar_vindning_native",)
+
+
+def _krav_andliga_indata(V, pitch, lo):
+    """Non-finite vertex, pitch or origin: no field and no certified side (ValueError).
+
+    Before this guard a NaN vertex coordinate gave an empty window and the watertightness gate
+    reported OK, i.e. a silent all-outside answer for an invalid mesh."""
+    Vf = np.asarray(V, dtype=np.float64)
+    if not (np.isfinite(Vf).all() and math.isfinite(float(pitch)) and float(pitch) > 0.0
+            and np.isfinite(np.asarray(lo, dtype=np.float64)).all()):
+        raise ValueError("non-finite vertex, pitch or origin (or pitch <= 0): no field and no certified side")
+
+
 _GYLLENE = (0.3819660112501051, 0.6180339887498949, 0.2360679774997897)  # jitter direction
 JITTER_FRAC = 1.0e-4   # fraction of a pitch; subvoxel, breaks XY ties without moving the geometry
 # Sample position inside a voxel: 0.0 means voxel i represents the point lo + i*pitch, not the cell
@@ -175,8 +199,10 @@ def _kolumntraffar(V, T, pitch, origin_l, nx, ny, jitter_frac=JITTER_FRAC, cap=3
     Vf = np.asarray(V, dtype=np.float64)
     Ti = np.asarray(T, dtype=np.int64)
     A, B, C = Vf[Ti[:, 0]], Vf[Ti[:, 1]], Vf[Ti[:, 2]]
-    a2 = (B[:, 0] - A[:, 0]) * (C[:, 1] - A[:, 1]) - (B[:, 1] - A[:, 1]) * (C[:, 0] - A[:, 0])
-    skala = max(float(np.abs(Vf[:, :2]).max()), 1.0)
+    e1 = B[:, :2] - A[:, :2]
+    e2 = C[:, :2] - A[:, :2]
+    a2 = e1[:, 0] * e2[:, 1] - e1[:, 1] * e2[:, 0]
+    skala = np.maximum(np.abs(e1).max(axis=1), np.abs(e2).max(axis=1))
     lev = np.abs(a2) > 1e-12 * skala * skala
     A, B, C, a2 = A[lev], B[lev], C[lev], a2[lev]
     tom = (np.zeros(0, np.int64), np.zeros(0, np.float64), np.zeros(0, np.int8))
@@ -223,7 +249,16 @@ def _kolumntraffar(V, T, pitch, origin_l, nx, ny, jitter_frac=JITTER_FRAC, cap=3
             continue
         l0, l1, l2, d = l0[inne], l1[inne], l2[inne], d[inne]
         s_in = s[inne]
+        # Keep the original expression for well-conditioned coordinates, preserving
+        # existing hit bytes. Use a local z origin when translation dwarfs the edges.
+        edge = np.maximum.reduce((np.abs(B[s_in] - A[s_in]).max(axis=1),
+                                  np.abs(C[s_in] - A[s_in]).max(axis=1)))
+        local = np.abs(A[s_in, 2]) > 1024.0 * edge
         z = (l0 * A[s_in, 2] + l1 * B[s_in, 2] + l2 * C[s_in, 2]) / d
+        if local.any():
+            z[local] = A[s_in[local], 2] + (
+                l1[local] * (B[s_in[local], 2] - A[s_in[local], 2])
+                + l2[local] * (C[s_in[local], 2] - A[s_in[local], 2])) / d[local]
         ut_kol.append(ii[inne] * ny + jj[inne])
         ut_z.append(z)
         ut_tk.append(tecken[s_in])
@@ -413,6 +448,43 @@ def _solid_via_skal_floodfill(V, T, pitch, lo, global_shape=None, margin_vox_pad
 
 
 
+class _EjStodd(Exception):
+    """Input the compiled backend does not take; the NumPy path reproduces the reference behaviour."""
+
+
+def _kontrollera_for_accelererad(V, T):
+    """The native kernel refuses face indices outside [0, len(V)); NumPy raises IndexError for those
+    or wraps a negative index. Such input, vertex or face arrays that are not (n, 3), and a changed
+    sample position go to the NumPy path so the behaviour stays the reference's own."""
+    if VOXEL_PROVPUNKT != 0.0:
+        raise _EjStodd("VOXEL_PROVPUNKT != 0.0 is not compiled into the native kernel")
+    Va = np.asarray(V)
+    if Va.ndim != 2 or Va.shape[1] != 3:
+        # the kernel takes len(V) as the vertex count: a flat (3n,) array would let indices in [n, 3n)
+        # through and read past the array; NumPy raises IndexError for it
+        raise _EjStodd(f"vertices must be an (n, 3) array, got shape {Va.shape}")
+    Ta = np.asarray(T)
+    nv = Va.shape[0]
+    if Ta.ndim != 2 or Ta.shape[1] != 3 or not np.issubdtype(Ta.dtype, np.integer):
+        raise _EjStodd(f"faces must be an (n, 3) integer array, got shape {Ta.shape} dtype {Ta.dtype}")
+    if Ta.size and (int(Ta.min()) < 0 or int(Ta.max()) >= nv):
+        raise _EjStodd(f"face index outside [0, {nv})")
+
+
+def _accelererad(V, T, pitch, lo, global_shape, margin_vox_pad, metod, ytkorr):
+    """Runs the native backend; returns (None, reason) when it cannot run."""
+    try:
+        _kontrollera_for_accelererad(V, T)
+        import mesh_sdf_native_v1 as NAT
+        gmin, shape_l, yta, solid, sd, diag = NAT.field_stage(V, T, pitch, lo, global_shape, margin_vox_pad, ytkorr)
+    except ValueError:
+        raise
+    except Exception as e:  # noqa: BLE001 -- a backend failure must fall back, and must show
+        return None, f"{type(e).__name__}: {str(e)[:200]}"
+    diag["metod_vald"] = metod
+    return (gmin, shape_l, yta, solid, sd, diag), None
+
+
 def surface_raster_and_flood(V, T, pitch, lo, global_shape=None, margin_vox_pad=2,
                              metod=None, wp=None, device="cuda:0", diag_ut=None,
                              ytkorrektion=None):
@@ -421,18 +493,36 @@ def surface_raster_and_flood(V, T, pitch, lo, global_shape=None, margin_vox_pad=
     `metod` chooses how inside/outside is decided:
       "raypar_vindning" (default) -- +Z ray winding number per voxel, sd from two distance transforms
       "raypar_paritet"            -- same hits, even/odd rule (independent anchor)
-      "winding_gpu"               -- Warp mesh_query_point_sign_winding_number, exact sd, needs a GPU
+      "winding_gpu"               -- Warp mesh_query_point_sign_winding_number, exact mesh sd on device
+      "winding_cpu"               -- the same mesh query on CPU; retains subvoxel distances
       "skal_floodfill"            -- the legacy path, kept for before/after comparisons
     For the ray paths `surface` is the material's surface layer (solid minus its erosion) rather than
     the point raster, so the "solid is only the shell" diagnostic still works.
     `ytkorrektion` (default YTKORREKTION_STANDARD, on) subtracts the half pitch by which a distance
     transform of a voxel mask overstates the distance to the surface; it applies to the two
-    distance-transform paths only, since winding_gpu already returns true distances.
+    distance-transform paths only, since the winding queries retain mesh distances.
     """
     metod = metod or METOD_STANDARD
     ytkorr = YTKORREKTION_STANDARD if ytkorrektion is None else bool(ytkorrektion)
     if metod not in METODER:
         raise ValueError(f"okand metod {metod!r}, valj bland {METODER}")
+    _krav_andliga_indata(V, pitch, lo)
+    if metod in _ACCELERERADE:
+        r, orsak = _accelererad(V, T, pitch, lo, global_shape, margin_vox_pad, metod, ytkorr)
+        if r is not None:
+            gmin, shape_l, yta, solid, sd, diag = r
+            if diag_ut is not None:
+                diag_ut.update(diag)
+            return gmin, shape_l, yta, solid, sd
+        warnings.warn(f"{metod} unavailable, NumPy path raypar_vindning used instead: {orsak}",
+                      RuntimeWarning, stacklevel=2)
+        fallback_diag = {"fallback": orsak, "metod_begard": metod}
+        gmin, shape_l, yta, solid, sd = surface_raster_and_flood(
+            V, T, pitch, lo, global_shape=global_shape, margin_vox_pad=margin_vox_pad, metod="raypar_vindning",
+            diag_ut=diag_ut, ytkorrektion=ytkorr)
+        if diag_ut is not None:
+            diag_ut.update(fallback_diag)
+        return gmin, shape_l, yta, solid, sd
     if metod == "skal_floodfill":
         r = _solid_via_skal_floodfill(V, T, pitch, lo, global_shape=global_shape,
                                       margin_vox_pad=margin_vox_pad)
@@ -441,10 +531,12 @@ def surface_raster_and_flood(V, T, pitch, lo, global_shape=None, margin_vox_pad=
         return r
     gmin, shape_l = _fonster(V, pitch, lo, global_shape, margin_vox_pad)
     origin_l = np.asarray(lo, dtype=np.float64) + gmin.astype(np.float64) * pitch
-    if metod == "winding_gpu":
+    if metod in ("winding_gpu", "winding_cpu"):
         if wp is None:
             wp, _have = _import_warp()
-        sd, solid, diag = sd_via_winding_gpu(wp, V, T, pitch, origin_l, shape_l, device=device)
+        sd, solid, diag = sd_via_winding_gpu(wp, V, T, pitch, origin_l, shape_l,
+                                             device="cpu" if metod == "winding_cpu" else device)
+        diag["metod"] = metod
     else:
         solid, diag = solid_via_stralvindning(
             V, T, pitch, origin_l, shape_l,
@@ -454,7 +546,7 @@ def surface_raster_and_flood(V, T, pitch, lo, global_shape=None, margin_vox_pad=
         sd = (d_out - d_in).astype(np.float32)
         if ytkorr:
             sd = (sd - np.sign(sd) * np.float32(0.5 * pitch)).astype(np.float32)
-    diag["ytkorrektion"] = bool(ytkorr and metod != "winding_gpu")
+    diag["ytkorrektion"] = bool(ytkorr and metod not in ("winding_gpu", "winding_cpu"))
     if solid.any():
         yta = solid & ~ndimage.binary_erosion(solid, ndimage.generate_binary_structure(3, 1))
     else:
@@ -645,8 +737,8 @@ def _trimesh_fakta(V, T, sla_ihop=True):
     """Mesh facts for the gate, computed on the vertex-merged mesh.
 
     A mesh stored with unmerged vertices has every triangle carrying its own corners, so no edge is
-    shared and is_watertight reads False even for a provably closed body. Vertex merging is
-    topological and lossless (it moves no point), so the gate judges the merged mesh and reports
+    shared and is_watertight reads False even for a provably closed body. Trimesh merging groups
+    rounded coordinates (tol.merge) and retains a representative; near vertices may move. The gate judges the merged mesh and reports
     both; otherwise it flags a storage convention instead of a hole. Returns a dict of facts.
     """
     import trimesh
@@ -669,7 +761,7 @@ def laga_oppen_mesh(V, T):
     n_tri_fore = int(len(m.faces))
     n_v_fore = int(len(m.vertices))
     fore_vattentat = bool(m.is_watertight)
-    m.merge_vertices()   # topological and lossless: moves no point
+    m.merge_vertices()   # Preserve trimesh tolerance and representative selection.
     vattentat_efter_ihopslagning = bool(m.is_watertight)
     n_hal_fyllda = 0
     if not vattentat_efter_ihopslagning:
@@ -686,7 +778,52 @@ def laga_oppen_mesh(V, T):
                  n_trianglar_ur_halfyllning=n_hal_fyllda))
 
 
-def vattentathetsgrind(V, T, solid, pitch, lo=None, gmin=None, n_prob=96, seed=20260902, sd=None):
+def _grind_probe_indices(solid, n_prob, seed, compact=False):
+    """Same ordered populations and RNG, compact storage for optional native gate."""
+    rng = np.random.default_rng(seed)
+    idx_in = np.flatnonzero(solid) if compact else np.argwhere(solid)
+    idx_ut = np.flatnonzero(~solid) if compact else np.argwhere(~solid)
+    if not (len(idx_in) and len(idx_ut)):
+        return None
+    k = max(1, n_prob // 2)
+    a = idx_in[rng.choice(len(idx_in), size=min(k, len(idx_in)), replace=False)]
+    b = idx_ut[rng.choice(len(idx_ut), size=min(k, len(idx_ut)), replace=False)]
+    if compact:
+        return np.column_stack(np.unravel_index(np.concatenate((a, b)), solid.shape))
+    return np.vstack((a, b))
+
+
+def _auto_grind_backend(diag_sign):
+    """Native gate only with an actual native field, a configured gate library and rtree. Without rtree
+    the reference measures depth from sd instead, so the native gate would always rerun the reference
+    and warn."""
+    import importlib.util
+    if (diag_sign.get("backend") == "native_cpu" and os.environ.get("FIELD_MESH_GATE_LIBRARY")
+            and importlib.util.find_spec("rtree") is not None):
+        return "native"
+    return "trimesh"
+
+
+def vattentathetsgrind(V, T, solid, pitch, lo=None, gmin=None, n_prob=96, seed=20260902, sd=None,
+                       backend="trimesh"):
+    """Complete gate; native failure reruns the entire original gate and warns."""
+    if backend not in ("trimesh", "native"):
+        raise ValueError(f"unknown gate backend {backend!r}")
+    if backend == "native":
+        try:
+            return _vattentathetsgrind(V, T, solid, pitch, lo, gmin, n_prob, seed, sd, native=True)
+        except Exception as e:
+            reason = f"{type(e).__name__}: {str(e)[:200]}"
+            warnings.warn(f"native mesh gate unavailable, trimesh used instead: {reason}",
+                          RuntimeWarning, stacklevel=2)
+            result = _vattentathetsgrind(V, T, solid, pitch, lo, gmin, n_prob, seed, sd)
+            result.update(grind_backend="trimesh", grind_fallback=reason)
+            return result
+    return _vattentathetsgrind(V, T, solid, pitch, lo, gmin, n_prob, seed, sd)
+
+
+def _vattentathetsgrind(V, T, solid, pitch, lo=None, gmin=None, n_prob=96, seed=20260902, sd=None,
+                        native=False):
     """The watertightness gate (see the block comment above).
 
     Takes the mesh, the delivered boolean occupancy on the local grid, the pitch, the grid origin lo
@@ -696,12 +833,19 @@ def vattentathetsgrind(V, T, solid, pitch, lo=None, gmin=None, n_prob=96, seed=2
     """
     ut = dict(status="OK", flaggor=[], n_prob=0)
     try:
-        _, vattentat, n_kanter_ej_par, vol_mesh = _trimesh_fakta(V, T, sla_ihop=True)
-        _, vattentat_ratt, n_kanter_ratt, _ = _trimesh_fakta(V, T, sla_ihop=False)
+        if native:
+            import mesh_gate_native_v1 as GATE
+            m_grind, vattentat, n_kanter_ej_par, vol_mesh, vattentat_ratt, n_kanter_ratt, digest = GATE.facts(V, T)
+            ut.update(grind_backend="native", grind_library_sha256=digest)
+        else:
+            _, vattentat, n_kanter_ej_par, vol_mesh = _trimesh_fakta(V, T, sla_ihop=True)
+            _, vattentat_ratt, n_kanter_ratt, _ = _trimesh_fakta(V, T, sla_ihop=False)
         ut.update(vattentat_utan_sammanslagning=vattentat_ratt,
                   n_kanter_ej_par_utan_sammanslagning=n_kanter_ratt,
                   kravde_vertex_sammanslagning=bool(vattentat and not vattentat_ratt))
     except Exception as e:  # noqa: BLE001 -- a mesh-library failure must not kill the run, but must show
+        if native:
+            raise
         ut.update(status="GRIND-BROKEN", fel=str(e)[:300], flaggor=["GRIND-BROKEN"])
         return ut
     vol_vox = float(np.count_nonzero(solid)) * pitch ** 3
@@ -717,13 +861,8 @@ def vattentathetsgrind(V, T, solid, pitch, lo=None, gmin=None, n_prob=96, seed=2
         ut["flaggor"].append("VOLYMAVVIKELSE")
     # (c) independent parity anchor at random voxel centres, both solid and empty
     try:
-        rng = np.random.default_rng(seed)
-        idx_in = np.argwhere(solid)
-        idx_ut = np.argwhere(~solid)
-        if len(idx_in) and len(idx_ut):
-            k = max(1, n_prob // 2)
-            pick = np.vstack([idx_in[rng.choice(len(idx_in), size=min(k, len(idx_in)), replace=False)],
-                              idx_ut[rng.choice(len(idx_ut), size=min(k, len(idx_ut)), replace=False)]])
+        pick = _grind_probe_indices(solid, n_prob, seed, compact=native)
+        if pick is not None:
             # grid origin: lo + gmin*pitch (gmin is in global grid indices relative to lo). Without
             # gmin the probes land hundreds of mm away and the "divergence" reads 34-52% on every
             # part: a measurement error, not a leak.
@@ -731,7 +870,8 @@ def vattentathetsgrind(V, T, solid, pitch, lo=None, gmin=None, n_prob=96, seed=2
                         if lo is not None and gmin is not None
                         else np.asarray(V, dtype=np.float64).min(0) - 3 * pitch)
             P = lo_lokal + (pick + 0.5) * pitch
-            paritet = ray_parity_probe(np.asarray(V, dtype=np.float64), np.asarray(T, dtype=np.int64), P)
+            paritet = (GATE.parity(V, T, P) if native else
+                       ray_parity_probe(np.asarray(V, dtype=np.float64), np.asarray(T, dtype=np.int64), P))
             flood = solid[pick[:, 0], pick[:, 1], pick[:, 2]]
             oense = paritet != flood
             div = float(np.mean(oense))
@@ -750,13 +890,18 @@ def vattentathetsgrind(V, T, solid, pitch, lo=None, gmin=None, n_prob=96, seed=2
             # signing families and of the voxel quantisation.
             try:
                 import trimesh as _tm
-                _m = _tm.Trimesh(np.asarray(V, dtype=np.float64), np.asarray(T, dtype=np.int64),
-                                 process=False)
-                _m.merge_vertices()
-                _, dist_yta, _ = _tm.proximity.closest_point(_m, P)
+                if native:
+                    dist_yta = GATE.distances(m_grind, P, pitch)
+                else:
+                    _m = _tm.Trimesh(np.asarray(V, dtype=np.float64), np.asarray(T, dtype=np.int64),
+                                     process=False)
+                    _m.merge_vertices()
+                    _, dist_yta, _ = _tm.proximity.closest_point(_m, P)
                 djup = np.asarray(dist_yta) >= pitch
                 ut["avstand_till_yta_median_mm"] = float(np.median(dist_yta))
             except Exception as e:  # noqa: BLE001
+                if native:
+                    raise
                 ut["djupmatt_fel"] = str(e)[:200]
                 djup = (np.abs(np.asarray(sd)[pick[:, 0], pick[:, 1], pick[:, 2]]) >= 2.0 * pitch
                         if sd is not None else np.zeros(len(P), dtype=bool))
@@ -769,6 +914,8 @@ def vattentathetsgrind(V, T, solid, pitch, lo=None, gmin=None, n_prob=96, seed=2
                 ut["status"] = "PARITETSDIVERGENS"
                 ut["flaggor"].append("PARITETSDIVERGENS")
     except Exception as e:  # noqa: BLE001
+        if native:
+            raise
         ut["paritet_fel"] = str(e)[:200]
     return ut
 
@@ -889,14 +1036,20 @@ def valj_pitch_for_feature(V, T, pitch, feature_radius_min, faktor=FEATURE_PITCH
 
 def mesh_to_sdf_del(wp, V, T, pitch, marginal_mm, lo, device, global_shape=None, block=BLOCK,
                     grind="flagga", laga_oppen=False, grind_n_prob=96, metod=None,
-                    feature_radius_min=None, ytkorrektion=None, returnera_falt=False):
+                    feature_radius_min=None, ytkorrektion=None, returnera_falt=False, grind_backend=None):
     """One part: mesh -> signed field -> sparse classification -> local occupancy with margin.
 
     Takes a warp module, the mesh (V, T), the pitch, the margin in mm, the grid origin lo, the device,
     and optionally the global shape, the block size, the gate mode and the signing method.
     grind="flagga" (default) always puts the watertightness verdict in the result's "vattentathet"
     field; grind="strikt" (or env FALTKARNA_VATTENTATHET_STRIKT=1) raises instead; grind="av" skips
-    it. laga_oppen=True fills holes before rasterisation and declares it.
+    it. laga_oppen=True fills holes before rasterisation and declares it. Non-finite vertices, pitch
+    or origin (or pitch <= 0) raise ValueError in every gate mode: there is no field to flag.
+
+    grind_backend=None selects native with the native field and a configured gate library,
+    trimesh otherwise; explicitly
+    pass "native" or "trimesh" to override. Native requires FIELD_MESH_GATE_LIBRARY and
+    preserves the independent parity/volume/depth decisions, warning on reference fallback.
 
     feature_radius_min (default None, off, so the numbers of every existing caller are unchanged)
     refines the pitch to resolve the smallest round feature: give a radius in mm, or "auto" to measure
@@ -907,6 +1060,7 @@ def mesh_to_sdf_del(wp, V, T, pitch, marginal_mm, lo, device, global_shape=None,
     Returns a dict with the window origin and shape, the final occupancy, the block counts, timings
     and the gate verdict.
     """
+    _krav_andliga_indata(V, pitch, lo)
     lagning = None
     if laga_oppen:
         V, T, lagning = laga_oppen_mesh(V, T)
@@ -919,7 +1073,11 @@ def mesh_to_sdf_del(wp, V, T, pitch, marginal_mm, lo, device, global_shape=None,
         diag_ut=diag_sign, ytkorrektion=ytkorrektion)
     t_flood = time.time() - t0
     t1 = time.time()
-    sf = klassificera_och_evaluera_fran_tatt_falt(wp, sd, pitch, block, device)
+    if diag_sign.get("backend") == "native_cpu":
+        import mesh_sdf_native_v1 as NAT
+        sf = NAT.classify(sd, pitch, block)
+    else:
+        sf = klassificera_och_evaluera_fran_tatt_falt(wp, sd, pitch, block, device)
     t_gpu = time.time() - t1
     nx, ny, nz = shape_l
     solid_gpu = reconstruct_solid_from_sparse(sf, nx, ny, nz, block)
@@ -933,7 +1091,8 @@ def mesh_to_sdf_del(wp, V, T, pitch, marginal_mm, lo, device, global_shape=None,
     vt = None
     if grind != "av":
         t2 = time.time()
-        vt = vattentathetsgrind(V, T, solid_no_margin, pitch, lo=lo, gmin=gmin, n_prob=grind_n_prob, sd=sd)
+        vt = vattentathetsgrind(V, T, solid_no_margin, pitch, lo=lo, gmin=gmin, n_prob=grind_n_prob, sd=sd,
+                               backend=grind_backend or _auto_grind_backend(diag_sign))
         vt["grind_wall_s"] = time.time() - t2
         vt["lagning"] = lagning
         if strikt and vt["status"] != "OK":

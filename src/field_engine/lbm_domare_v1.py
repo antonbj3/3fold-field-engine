@@ -5,9 +5,25 @@ Ranks duct-geometry candidates on pressure drop with a real flow solve instead o
 Darcy-Weisbach sum. A straight-pipe friction formula applied bin by bin along a curved centreline
 has no bend- or expansion-loss term at all; this module measures the difference.
 
-Solver: D3Q19 BGK collision, Guo/Zheng/Shi (2002) forcing, full-cell bounce-back on an arbitrary
-solid mask (no-slip lands ON the solid node, not half a cell outside -- a declared O(dx)
-simplification, enough to rank candidates, not a mm-accurate CFD reference) and constant-density
+Solver: D3Q19 BGK collision, Guo/Zheng/Shi (2002) forcing, legacy solid-node population reversal
+on an arbitrary solid mask (the effective no-slip position depends on tau; it is not on the solid
+node). Optional prepared SDF links use Bouzidi interpolated bounce-back at theta along the link
+from the fluid node to the solid neighbour. By default these links close their mass balance
+locally in the zero-velocity population: each reflected population b returns the outgoing f*_q,
+with f*_q-b added to f_0 at the same fluid node. Closed fluid components conserve their population
+sum within floating-point roundoff, without a direct change of momentum. This does not guarantee
+positivity or eliminate finite-grid wall slip. Opt-in positivitetsbevarande=True limits an
+otherwise negative rest correction by a node-common conservative blend toward halfway reflection.
+The additional opt-in impulsbevarande=True instead projects all populations at an active wall
+node, preserving the conservative interpolated target's density and momentum. Targets outside
+the D3Q19 moment hull raise PopulationProjectionError; stress and future dynamics may change.
+It is positive given nonnegative post-collision populations. The separate positivitet=True step
+option limits unforced BGK collision toward the previous positive state; it preserves density and
+momentum and rejects a force-active limiter rather than silently changing the applied impulse.
+Both limits preserve the existing arithmetic when inactive. The diagnostic massbevarande=False option retains
+the original interpolation, whose secular loss scales with velocity squared (R=8, tau=.8,
+u_max .05: -1.1 % after 40000 steps). Existing mask-only callers retain the legacy wall.
+Constant-density
 inlet/outlet planes (Zou/He-style equilibrium, f = feq(rho_target, u_nearest_interior)) so flow can
 be pressure-driven through a non-periodic bent duct, which a fixed-direction body force cannot do.
 
@@ -91,12 +107,159 @@ def guo_force(rho, u, a):
     return Ea
 
 
-def lbm_step(f, solid, tau, a_field, bc_planes):
-    """One D3Q19 BGK+Guo-force step with (i) full-cell bounce-back on `solid` (bool array) and
+class PopulationProjectionError(ValueError):
+    """No admissible state, or an unresolved numerical projection; never a fallback state."""
+
+    def __init__(self, reason, rho, momentum, node=None):
+        self.reason, self.rho, self.momentum, self.node = reason, rho, momentum, node
+        super().__init__(f"population projection {reason}: node={node}, rho={rho}, j={momentum}")
+
+
+def projektera_populationer(target):
+    """Euclidean projection onto nonnegative D3Q19 populations with the target's rho,j.
+
+    Float64 only. The hull is |j_i|<=rho, sum|j_i|<=2rho. A regularised dual Newton solve
+    has p=max(target-A.T*lambda,0); positivity and KKT stationarity are intrinsic.
+    Residual failure is reported separately from hull infeasibility. No target moments
+    are reduced and no inadmissible target is silently replaced by halfway reflection.
+    """
+    h = np.asarray(target)
+    if h.shape != (QN,) or h.dtype != np.float64 or not np.isfinite(h).all():
+        raise ValueError("projection requires a finite float64 D3Q19 vector")
+    with np.errstate(over="ignore", invalid="ignore"):
+        rho, j = float(h.sum()), h @ E
+    if not np.isfinite(rho) or not np.isfinite(j).all():
+        raise PopulationProjectionError("nonfinite_moments", rho, j.tolist())
+    if rho < 0 or (rho == 0 and np.any(j != 0)):
+        raise PopulationProjectionError("infeasible", rho, j.tolist())
+    if rho == 0:
+        return np.zeros_like(h)
+    excess = max(float(np.max(np.abs(j))-rho), float(np.abs(j).sum()-2*rho))
+    if excess > 0:
+        reason = "infeasible" if excess > 64*np.finfo(float).eps*rho else "numerically_uncertain_hull"
+        raise PopulationProjectionError(reason, rho, j.tolist())
+    if np.all(h >= 0):
+        return h.copy()
+    A = np.vstack((np.ones(QN), E.T))
+    with np.errstate(over="ignore", invalid="ignore", divide="ignore"):
+        hn = h/rho
+    if not np.isfinite(hn).all():
+        raise PopulationProjectionError("numerical_dynamic_range", rho, j.tolist())
+    b = A @ hn
+    dual = np.zeros(4)
+    for _ in range(256):
+        z = hn - A.T @ dual
+        p = np.maximum(z, 0)
+        grad = b - A @ p
+        if np.max(np.abs(grad)) <= 4e-14:
+            result = p*rho
+            if np.max(np.abs(A @ result - A @ h)) <= 2e-13*rho:
+                return result
+            break
+        active = A[:, z > 0]
+        Hess = active @ active.T
+        # Regularised semismooth Newton. On a degenerate support (e.g. a hull facet) Hess is
+        # singular and the gradient can lie in its null space; a pseudoinverse step then has
+        # zero slope and the unit gradient fallback only crawls along the linear piece of the
+        # dual, exhausting the iteration budget on feasible, well-conditioned wall targets.
+        mu = min(1.0, float(np.linalg.norm(grad)))
+        direction = -np.linalg.solve(Hess + mu*np.eye(4), grad)
+        slope = float(grad @ direction)
+        if slope >= -1e-16*float(grad @ grad):
+            direction, slope = -grad, -float(grad @ grad)
+        value = .5*float(p @ p) + float(b @ dual)
+        step = 1.0
+        for _ in range(64):
+            trial = dual + step*direction
+            pt = np.maximum(hn - A.T @ trial, 0)
+            val = .5*float(pt @ pt) + float(b @ trial)
+            if val <= value + 1e-4*step*slope + 2e-16*max(1., abs(value)):
+                dual = trial
+                break
+            step *= .5
+        else:
+            break
+    raise PopulationProjectionError("numerical_solver_failure", rho, j.tolist())
+
+
+def forbered_sdf_vagg(sd_mm, solid, *, massbevarande=True, positivitetsbevarande=False,
+                     impulsbevarande=False):
+    """Prepare stationary Bouzidi links from the engine's signed distance (positive in fluid).
+
+    sd and solid have the lattice shape; sd<=0 belongs to the wall and must match solid.
+    Fractions use the actual sampled SDF, not a geometry callback. Streaming is periodic on all
+    three axes, as in lbm_step. If theta<1/2 has no second fluid node, use halfway bounce-back on
+    that link and report fallback_links; narrow gaps need refinement for accurate interpolation.
+    massbevarande=True adds outgoing-minus-reflected mass to the same node's rest population.
+    This closes the wall-link balance, not physical cut-cell-volume quadrature. It leaves the
+    reflected populations and instantaneous momentum unchanged. It need not preserve positivity
+    for arbitrary nonequilibrium input. False reproduces the original nonconservative Bouzidi wall.
+    positivitetsbevarande=True requires massbevarande=True and nonnegative fluid f*; it shares
+    one limiter across all links at each node. Active limiting changes wall momentum and can
+    lose the interpolated wall's accuracy; smooth positive flows keep the original operation.
+    impulsbevarande=True additionally requires both preceding modes. It replaces the blend by
+    a full-node nonnegative moment projection (float64 only). Infeasible or numerically unresolved
+    targets are flagged. Non-wall incoming populations may change. Reconstruct force with
+    lbm_step(..., wall_force=True, diagnostics=d), including the redistribution impulse.
+    Rebuild after geometry changes. The prepared mask is copied to detect stale geometry.
+    """
+    if impulsbevarande and (not massbevarande or not positivitetsbevarande):
+        raise ValueError("moment-preserving wall requires mass and positivity modes")
+    if positivitetsbevarande and not massbevarande:
+        raise ValueError("positive conservative wall requires massbevarande=True")
+    from sdf_rand_v1 import sdf_randlankar
+    if np.ndim(sd_mm) != 3:
+        raise ValueError("D3Q19 wall SDF must be three dimensional")
+    fluid, links = sdf_randlankar(sd_mm, Ei, negativ_insida=False, periodisk=True)
+    solid = np.asarray(solid, dtype=bool)
+    if solid.shape != fluid.shape or not np.array_equal(~fluid, solid):
+        raise ValueError("solid must equal (sd_mm<=0); wall signs and mask disagree")
+    fallback = sum(int(np.sum((t < 0.5) & ~ok)) for _, t, _, ok in links)
+    return dict(shape=solid.shape, solid=solid.copy(), links=links,
+                massbevarande=bool(massbevarande),
+                positivitetsbevarande=bool(positivitetsbevarande),
+                impulsbevarande=bool(impulsbevarande),
+                stats=dict(wall_links=sum(len(i) for i, _, _, _ in links),
+                           fallback_links=fallback, wall_position="linear SDF zero on each fluid-to-solid link",
+                           mass_balance="local rest population" if massbevarande else "uncorrected",
+                           positivity=("full-node moment projection" if impulsbevarande else
+                                       "conservative node blend" if positivitetsbevarande else "unchecked")))
+
+
+def lbm_step(f, solid, tau, a_field, bc_planes, sdf_vagg=None, *,
+             positivitet=False, diagnostics=None, wall_force=False):
+    """One D3Q19 BGK+Guo-force step with (i) legacy population reversal on `solid` (bool array) or
+    optional prepared Bouzidi `sdf_vagg` (local mass closure by default), and
     (ii) fixed-density inlet/outlet planes in `bc_planes` (list of dict: idx=index tuple/slice
     tuple selecting boundary cells, rho=target density, adj=index tuple selecting the one-cell-
-    inward neighbour whose velocity is copied). Returns updated f."""
+    inward neighbour whose velocity is copied). Returns updated f.
+
+    positivitet=True validates the fluid input and limits negative unforced collision targets
+    with a single convex parameter per node. It rejects limiting where a_field is nonzero.
+    Use a mass-conservative positivitetsbevarande SDF wall for full wall/step positivity.
+    Density planes must have nonnegative equilibrium; their mass exchange is external.
+    Optional diagnostics accumulates limiter counts and minimum parameters, without affecting f.
+    wall_force=True requires a prepared SDF wall and diagnostics. It reports force ON the wall
+    in lattice momentum/step before any density-plane overwrite: wall_force_last equals
+    wall_link_force_last + wall_redistribution_force_last. The latter includes the negative
+    non-wall redistribution impulse. Force conservation does not validate physical stress.
+    With impulsbevarande, diagnostics also count projected wall nodes (wall_projected_nodes) and
+    the largest absolute nodal rho/j change (max_wall_moment_error). A PopulationProjectionError
+    aborts the step without a state; counters of that step may already be incremented.
+    Conservation is algebraic, with floating-point roundoff in finite arithmetic. Where rounding
+    would still leave a negative population, the node falls back to an exact operation: halfway
+    reflection at the wall (wall_halfway_nodes) or no collision, lambda=0 (collision_frozen_nodes).
+    Positivity is not validity: a small min_collision_alpha means a locally much larger viscosity.
+    """
+    if wall_force and (sdf_vagg is None or diagnostics is None):
+        raise ValueError("wall_force requires a prepared SDF wall and diagnostics")
+    if sdf_vagg is not None and sdf_vagg.get("impulsbevarande", False) and f.dtype != np.float64:
+        raise ValueError("moment-preserving wall currently requires float64")
     rho = f.sum(-1)
+    if positivitet:
+        if (not np.isfinite(f[~solid]).all() or np.any(f[~solid] < 0) or
+                np.any(rho[~solid] <= 1e-9)):
+            raise ValueError("positivitet requires finite nonnegative fluid populations and rho>1e-9")
     rho_safe = np.where(rho > 1e-9, rho, 1.0)
     u = (f @ E + 0.5 * rho_safe[..., None] * a_field) / rho_safe[..., None]
     u[solid] = 0.0
@@ -107,16 +270,158 @@ def lbm_step(f, solid, tau, a_field, bc_planes):
     ua = (u * a_field).sum(-1, keepdims=True)                    # (...,1)  u . a(x)
     Fi = pref * W * rho_safe[..., None] * (3 * (Ea - ua) + 9 * cu * Ea)
     fstar = f - (f - fq) / tau + Fi
-    fnew = np.empty_like(fstar)
+    if positivitet:
+        if not np.isfinite(fstar[~solid]).all():
+            raise ValueError("nonfinite collision target")
+        limited = (~solid) & np.any(fstar < 0, axis=-1)
+        if np.any(limited):
+            # In the unforced collision, f and C share density and momentum.
+            # A common convex parameter therefore preserves both moments. With
+            # forcing, limiting this segment would silently reduce the impulse.
+            if np.any(a_field[limited] != 0):
+                raise ValueError("active positivity collision limiter requires zero local force")
+            old, target = f[limited], fstar[limited]
+            ratios = np.ones_like(old)
+            np.divide(old, old-target, out=ratios, where=target < 0)
+            lam = ratios.min(axis=-1) * (1-64*np.finfo(f.dtype).eps)
+            blend = (1-lam[:, None])*old + lam[:, None]*target
+            # With subnormal populations (|u| near 1, feq<0) the relative margin underflows
+            # and the blend can round below zero. Such nodes take lambda=0, i.e. f itself,
+            # which is exact and keeps density and momentum.
+            frozen = np.any(blend < 0, axis=-1)
+            if np.any(frozen):
+                lam[frozen] = 0.0
+                blend[frozen] = old[frozen]
+                if diagnostics is not None:
+                    diagnostics["collision_frozen_nodes"] = (diagnostics.get("collision_frozen_nodes", 0) +
+                                                             int(frozen.sum()))
+            fstar[limited] = blend
+            if diagnostics is not None:
+                diagnostics["collision_limited_nodes"] = diagnostics.get("collision_limited_nodes", 0) + int(limited.sum())
+                diagnostics["min_collision_alpha"] = min(diagnostics.get("min_collision_alpha", 1.0), float(lam.min()))
+    # Reflection writes through a flat view; keep that view writable for non-C-order inputs too.
+    fnew = np.empty_like(fstar, order="C") if sdf_vagg is not None else np.empty_like(fstar)
     for q in range(QN):
         fnew[..., q] = np.roll(fstar[..., q], Ei[q], axis=(0, 1, 2))
-    # simple full-cell bounce-back at solid nodes (no-slip AT the solid node, O(dx))
+    # Legacy solid-node reversal: the effective hydrodynamic wall depends on tau.
     fnew[solid] = fstar[solid][:, OPP]
+    if sdf_vagg is not None:
+        if sdf_vagg["shape"] != solid.shape or not np.array_equal(sdf_vagg["solid"], solid):
+            raise ValueError("stale SDF wall: rebuild after changing solid")
+        post = fstar.reshape(-1, QN)
+        streamed = fnew.reshape(-1, QN)
+        if sdf_vagg.get("impulsbevarande", False) and not (
+                sdf_vagg.get("massbevarande", True) and sdf_vagg.get("positivitetsbevarande", False)):
+            raise ValueError("moment-preserving wall requires mass and positivity modes")
+        if sdf_vagg.get("positivitetsbevarande", False):
+            if not sdf_vagg.get("massbevarande", True):
+                raise ValueError("positive conservative wall requires massbevarande=True")
+            if not np.isfinite(fstar[~solid]).all() or np.any(fstar[~solid] < 0):
+                raise ValueError("positive wall requires nonnegative post-collision populations")
+        for q in range(1, QN):
+            idx, theta, back, ok = sdf_vagg["links"][q]
+            low = (theta < 0.5) & ok
+            high = theta >= 0.5
+            fallback = (theta < 0.5) & ~ok
+            # q points TOWARD the wall. Both populations in the low branch must have index q.
+            streamed[idx[low], OPP[q]] = (2*theta[low]*post[idx[low], q] +
+                                        (1-2*theta[low])*post[back[low], q])
+            streamed[idx[high], OPP[q]] = (post[idx[high], q]/(2*theta[high]) +
+                (2*theta[high]-1)/(2*theta[high])*post[idx[high], OPP[q]])
+            streamed[idx[fallback], OPP[q]] = post[idx[fallback], q]
+            if sdf_vagg.get("massbevarande", True):
+                # Each idx occurs once within a direction; different directions accumulate
+                # sequentially at corner nodes. No fluid-to-fluid transport is corrected.
+                streamed[idx, 0] += post[idx, q] - streamed[idx, OPP[q]]
+        if sdf_vagg.get("positivitetsbevarande", False):
+            # H is the conservative Bouzidi target just computed. L differs only
+            # in reflected wall populations (a instead of b) and the rest value.
+            # Both have the same nodal mass. One alpha per node shares its reserve
+            # across all wall links, including corners. Inactive nodes keep H's bytes.
+            bad = (~solid.ravel()) & (streamed[:, 0] < 0)
+            ids = np.flatnonzero(bad)
+            redistribution_force = np.zeros(3)
+            if len(ids) and sdf_vagg.get("impulsbevarande", False):
+                if f.dtype != np.float64:
+                    raise ValueError("moment-preserving wall currently requires float64")
+                targets = streamed[ids].copy()
+                # Solve every node before changing the private output; input f is never mutated.
+                projected = []
+                for node, target in zip(ids, targets):
+                    try:
+                        projected.append(projektera_populationer(target))
+                    except PopulationProjectionError as error:
+                        raise PopulationProjectionError(error.reason, error.rho,
+                                                        error.momentum, int(node)) from error
+                projected = np.asarray(projected)
+                delta = projected-targets
+                is_wall = np.zeros((len(ids), QN), bool)
+                for q in range(1, QN):
+                    idx = sdf_vagg["links"][q][0]
+                    affected = idx[bad[idx]]
+                    is_wall[np.searchsorted(ids, affected), OPP[q]] = True
+                redistribution_force = -np.sum((delta*~is_wall) @ E, axis=0)
+                streamed[ids] = projected
+                if diagnostics is not None:
+                    diagnostics["wall_projected_nodes"] = diagnostics.get("wall_projected_nodes", 0) + len(ids)
+                    err = float(np.max(np.abs(np.column_stack((delta.sum(-1), delta @ E)))))
+                    diagnostics["max_wall_moment_error"] = max(diagnostics.get("max_wall_moment_error", 0.), err)
+            elif len(ids):
+                if np.any(post[ids, 0] < 0):
+                    raise ValueError("positive wall requires nonnegative post-collision populations")
+                alpha = np.ones(solid.size)
+                alpha[ids] = (post[ids, 0] / (post[ids, 0] - streamed[ids, 0]) *
+                              (1 - 64*np.finfo(f.dtype).eps))
+                if diagnostics is not None:
+                    diagnostics["wall_limited_nodes"] = diagnostics.get("wall_limited_nodes", 0) + len(ids)
+                    diagnostics["min_wall_alpha"] = min(diagnostics.get("min_wall_alpha", 1.0), float(alpha[ids].min()))
+                # Convex interpolation is applied only on affected wall nodes.
+                for q in range(1, QN):
+                    idx = sdf_vagg["links"][q][0]
+                    idx = idx[bad[idx]]
+                    t = alpha[idx]
+                    streamed[idx, OPP[q]] = ((1-t)*post[idx, q] +
+                                              t*streamed[idx, OPP[q]])
+                streamed[ids, 0] = post[ids, 0]
+                for q in range(1, QN):
+                    idx = sdf_vagg["links"][q][0]
+                    idx = idx[bad[idx]]
+                    streamed[idx, 0] += post[idx, q] - streamed[idx, OPP[q]]
+                # The 64-eps margin is relative to f*_0, but rounding in the blended
+                # populations is relative to f*_q. When f*_0 is tiny this can leave
+                # f_0 at about -1e-16*rho. Such nodes take alpha=0 (halfway), which
+                # is exact in floating point: reflected = f*_q and f_0 = f*_0 >= 0.
+                still = bad & (streamed[:, 0] < 0)
+                if np.any(still):
+                    for q in range(1, QN):
+                        idx = sdf_vagg["links"][q][0]
+                        idx = idx[still[idx]]
+                        streamed[idx, OPP[q]] = post[idx, q]
+                    streamed[still, 0] = post[still, 0]
+                    if diagnostics is not None:
+                        diagnostics["wall_halfway_nodes"] = (diagnostics.get("wall_halfway_nodes", 0) +
+                                                             int(still.sum()))
+                        diagnostics["min_wall_alpha"] = 0.0
+        else:
+            redistribution_force = np.zeros(3)
+        if wall_force and diagnostics is not None:
+            # The projected reflected links alone miss the non-wall redistribution impulse.
+            raw_force = np.zeros(3)
+            for q in range(1, QN):
+                idx = sdf_vagg["links"][q][0]
+                raw_force += np.sum(post[idx, q] + streamed[idx, OPP[q]])*E[q]
+            force = raw_force + redistribution_force
+            diagnostics["wall_force_last"] = force.tolist()
+            diagnostics["wall_link_force_last"] = raw_force.tolist()
+            diagnostics["wall_redistribution_force_last"] = redistribution_force.tolist()
     # fixed-density (Zou/He equilibrium) inlet/outlet planes
     for bc in bc_planes:
         idx, adj, rho_t = bc["idx"], bc["adj"], bc["rho"]
         u_adj = u[adj]
-        fnew[idx] = feq3d(np.full(u_adj.shape[:-1], rho_t), u_adj)
+        boundary = feq3d(np.full(u_adj.shape[:-1], rho_t), u_adj)
+        if positivitet and (not np.isfinite(boundary).all() or np.any(boundary < 0)):
+            raise ValueError("positive mode requires nonnegative boundary equilibrium")
+        fnew[idx] = boundary
     return fnew
 
 
@@ -127,7 +432,14 @@ def _selected_backend():
     return backend
 
 
-def run_lbm(shp, solid, tau, a_field, bc_planes, steps, sample_every=200, tol=1e-7):
+def run_lbm(shp, solid, tau, a_field, bc_planes, steps, sample_every=200, tol=1e-7,
+            sdf_vagg=None, *, positivitet=False, diagnostics=None, wall_force=False):
+    if wall_force and (sdf_vagg is None or diagnostics is None):
+        raise ValueError("wall_force requires a prepared SDF wall and diagnostics")
+    if positivitet and _selected_backend() != 'numpy':
+        raise ValueError('positive collision currently requires FIELD_ENGINE_LBM_BACKEND=numpy')
+    if sdf_vagg is not None and _selected_backend() != 'numpy':
+        raise ValueError('SDF walls currently require FIELD_ENGINE_LBM_BACKEND=numpy')
     if _selected_backend() == 'native':
         from lbm_collision_native_v1 import run_lbm as native_run
         return native_run(shp, solid, tau, a_field, bc_planes, steps, sample_every, tol)
@@ -138,7 +450,8 @@ def run_lbm(shp, solid, tau, a_field, bc_planes, steps, sample_every=200, tol=1e
     last = 0.0
     s = 0
     for s in range(steps):
-        f = lbm_step(f, solid, tau, a_field, bc_planes)
+        f = lbm_step(f, solid, tau, a_field, bc_planes, sdf_vagg=sdf_vagg,
+                     positivitet=positivitet, diagnostics=diagnostics, wall_force=wall_force)
         if s % sample_every == 0 and s > 0:
             rho = f.sum(-1)
             um = float(np.abs((f @ E)[..., 0] / np.where(rho > 1e-9, rho, 1.0)).max())
@@ -194,10 +507,9 @@ def straight_duct_case(voxel_mm=VOX_CALIB, lx=LX_STRAIGHT, tau=TAU, target_Q_m3s
     ux = u[lx // 2, :, :, 0]
     ux[solid[lx // 2]] = 0.0
     us = unit_scale(voxel_mm, tau)
-    # EFFECTIVE fluid cross-section (measured from the sim, NOT the nominal cross-section): this simple
-    # full-cell bounce-back (not halfway) places no-slip AT the solid node, narrowing the fluid domain
-    # by ~1 voxel per wall vs the nominal opening -- using the nominal width here would silently compare
-    # two different geometries (REFRAME declared: fixed by measuring the actual simulated opening).
+    # Sampled fluid cross-section: the count of fluid nodes, not a measurement of the hydraulic wall.
+    # The legacy wall is tau-dependent (FACIT Poiseuille); these dimensions are the historical
+    # calibration convention. They cannot be claimed as exact no-slip positions.
     ny_eff, nz_eff = ny - 2, nz - 2
     area_lu = ny_eff * nz_eff
     dh_lu = 4 * area_lu / (2 * (ny_eff + nz_eff))

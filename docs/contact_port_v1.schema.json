@@ -1,0 +1,354 @@
+{
+  "type": "object",
+  "properties": {
+    "producer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "consumer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contacts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/contact"
+      }
+    },
+    "branch_set": {
+      "$ref": "#/$defs/branch_set"
+    },
+    "latent_box": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "prefixItems": [
+          {
+            "type": "string",
+            "minLength": 1
+          },
+          {
+            "type": "string",
+            "pattern": "^-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?$"
+          },
+          {
+            "type": "string",
+            "pattern": "^-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?$"
+          }
+        ],
+        "minItems": 3,
+        "maxItems": 3
+      }
+    },
+    "affine_gaps": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/affine"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/witness"
+      }
+    },
+    "physical_status": {
+      "const": "UNKNOWN"
+    },
+    "schema": {
+      "const": "threefold-contact-port/v1"
+    }
+  },
+  "required": [
+    "producer",
+    "consumer",
+    "contacts",
+    "branch_set",
+    "latent_box",
+    "affine_gaps",
+    "evidence",
+    "physical_status",
+    "schema"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "sha256",
+        "scope"
+      ],
+      "additionalProperties": false
+    },
+    "gap": {
+      "type": "object",
+      "properties": {
+        "lower": {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?$"
+        },
+        "upper": {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?$"
+        },
+        "unit": {
+          "enum": [
+            "m",
+            "mm"
+          ]
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        },
+        "sigma": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "assurance": {
+          "enum": [
+            "MODEL_BOUND",
+            "CONDITIONAL",
+            "NUMERICAL",
+            "POINT"
+          ]
+        },
+        "condition": {
+          "type": "string"
+        },
+        "blocked": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "lower",
+        "upper",
+        "unit",
+        "source",
+        "sigma",
+        "assurance",
+        "condition",
+        "blocked"
+      ],
+      "additionalProperties": false
+    },
+    "contact": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "participants": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "string",
+              "minLength": 1
+            }
+          ],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "frame": {
+          "type": "string",
+          "minLength": 1
+        },
+        "gap": {
+          "$ref": "#/$defs/gap"
+        },
+        "normal": {
+          "anyOf": [
+            {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "type": "string",
+                  "pattern": "^-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?$"
+                },
+                {
+                  "type": "string",
+                  "pattern": "^-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?$"
+                },
+                {
+                  "type": "string",
+                  "pattern": "^-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?$"
+                }
+              ],
+              "minItems": 3,
+              "maxItems": 3
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "participants",
+        "frame",
+        "gap",
+        "normal"
+      ],
+      "additionalProperties": false
+    },
+    "witness": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payload_json": {
+          "type": "string",
+          "minLength": 1
+        },
+        "input_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        }
+      },
+      "required": [
+        "kind",
+        "payload_json",
+        "input_sha256",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "branch": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "state_json": {
+          "type": "string",
+          "minLength": 1
+        },
+        "witnesses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/witness"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "id",
+        "state_json",
+        "witnesses"
+      ],
+      "additionalProperties": false
+    },
+    "branch_set": {
+      "type": "object",
+      "properties": {
+        "branches": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/branch"
+          }
+        },
+        "complete": {
+          "type": "boolean"
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coverage": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/witness"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "branches",
+        "complete",
+        "scope",
+        "coverage",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "affine": {
+      "type": "object",
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "constant_m": {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?$"
+        },
+        "coefficients": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "string",
+                "pattern": "^-?(0|[1-9][0-9]*)(/[1-9][0-9]*)?$"
+              }
+            ],
+            "minItems": 2,
+            "maxItems": 2
+          }
+        }
+      },
+      "required": [
+        "candidate_id",
+        "constant_m",
+        "coefficients"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "title": "3FOLD contact PORT v1",
+  "description": "Structural schema. Replay and semantic guards remain required."
+}
