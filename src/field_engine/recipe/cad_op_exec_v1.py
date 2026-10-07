@@ -714,11 +714,14 @@ def _handle_pattern_circular(data: dict, ctx: dict, params: dict):
     step = (angle_total / count) if abs(angle_total - 360.0) < 1e-9 else (
         angle_total / (count - 1) if count > 1 else 0.0
     )
+    # Location's position translates; it does not set the rotation pivot.
+    # Reuse the local-origin pattern followed by one placement from formfeature_v1.
+    local_target = bd.Pos(*(-value for value in origin)) * target
     copies = []
     for i in range(count):
-        loc = bd.Location(origin, direction, step * i)
-        copies.append(loc * target)
-    return bd.Compound(copies)
+        loc = bd.Location((0, 0, 0), direction, step * i)
+        copies.append(loc * local_target)
+    return bd.Pos(*origin) * bd.Compound(copies)
 
 
 def _handle_mirror(data: dict, ctx: dict, params: dict):
